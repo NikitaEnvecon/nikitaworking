@@ -1,0 +1,1322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menuTbwMethods_menuCode__String_Completion___.Caption" xml:space="preserve">
+    <value>Code &amp;String Completion...</value>
+  </data>
+  <data name="menuTbwMethods_menu_Account___.Caption" xml:space="preserve">
+    <value>&amp;Account...</value>
+  </data>
+  <data name="menuTbwMethods_menu_Tax_Codes_per_Account___.Caption" xml:space="preserve">
+    <value>&amp;Tax Codes per Account...</value>
+  </data>
+  <data name="menuTbwMethods_menu_Code_Part_Attribute_Connection_.Caption" xml:space="preserve">
+    <value>&amp;Code Part Attribute Connection...</value>
+  </data>
+  <data name="menuTbwMethods_menu_Project_Cost_Revenue_Element_pe.Caption" xml:space="preserve">
+    <value>&amp;Project Cost/Revenue Element per Code Part Value...</value>
+  </data>
+  <data name="menuTbwMethods_menuTrans_lation___.Caption" xml:space="preserve">
+    <value>Trans&amp;lation...</value>
+  </data>
+  <data name="menuTbwMethods_menu_Notes___.Caption" xml:space="preserve">
+    <value>&amp;Notes...</value>
+  </data>
+  <data name="menuTbwMethods_menuChange__Company___.Caption" xml:space="preserve">
+    <value>Change &amp;Company...</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuItem_Code.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 22</value>
+  </data>
+  <data name="menuSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 6</value>
+  </data>
+  <data name="menuItem__Account.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 22</value>
+  </data>
+  <data name="menuItem__Tax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 22</value>
+  </data>
+  <data name="menuSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 6</value>
+  </data>
+  <data name="menuItem__Code.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 22</value>
+  </data>
+  <data name="menuItem__Project.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 22</value>
+  </data>
+  <data name="menuSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 6</value>
+  </data>
+  <data name="menuItem_Translation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 22</value>
+  </data>
+  <data name="menuSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 6</value>
+  </data>
+  <data name="menuItem__Notes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 22</value>
+  </data>
+  <data name="menuSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 6</value>
+  </data>
+  <data name="menuItem_Change.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 22</value>
+  </data>
+  <data name="menuTbwMethods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>351, 210</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods.Name" xml:space="preserve">
+    <value>menuTbwMethods</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;__colObjid.Name" xml:space="preserve">
+    <value>__colObjid</value>
+  </data>
+  <data name="&gt;&gt;__colObjid.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalTableColumn, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;__colObjid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;__colObjid.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;__colObjversion.Name" xml:space="preserve">
+    <value>__colObjversion</value>
+  </data>
+  <data name="&gt;&gt;__colObjversion.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalTableColumn, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;__colObjversion.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;__colObjversion.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="colsCompany.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colsCompany.Title" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="colsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colsCompany.Name" xml:space="preserve">
+    <value>colsCompany</value>
+  </data>
+  <data name="&gt;&gt;colsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsCompany.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsCompany.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="colsAccount.Title" xml:space="preserve">
+    <value>@A</value>
+  </data>
+  <data name="colsAccount.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;colsAccount.Name" xml:space="preserve">
+    <value>colsAccount</value>
+  </data>
+  <data name="&gt;&gt;colsAccount.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsAccount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsAccount.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="colsAccountDescription.Title" xml:space="preserve">
+    <value>@A Description</value>
+  </data>
+  <data name="colsAccountDescription.Width" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;colsAccountDescription.Name" xml:space="preserve">
+    <value>colsAccountDescription</value>
+  </data>
+  <data name="&gt;&gt;colsAccountDescription.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsAccountDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsAccountDescription.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="colsAccountType.Title" xml:space="preserve">
+    <value>@A Type</value>
+  </data>
+  <data name="colsAccountType.Width" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="&gt;&gt;colsAccountType.Name" xml:space="preserve">
+    <value>colsAccountType</value>
+  </data>
+  <data name="&gt;&gt;colsAccountType.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsAccountType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsAccountType.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="colsAccountTypeDescription.Title" xml:space="preserve">
+    <value>@A Type Description</value>
+  </data>
+  <data name="colsAccountTypeDescription.Width" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="&gt;&gt;colsAccountTypeDescription.Name" xml:space="preserve">
+    <value>colsAccountTypeDescription</value>
+  </data>
+  <data name="&gt;&gt;colsAccountTypeDescription.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsAccountTypeDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsAccountTypeDescription.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="colsAccountGroup.Title" xml:space="preserve">
+    <value>@A Group</value>
+  </data>
+  <data name="colsAccountGroup.Width" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="&gt;&gt;colsAccountGroup.Name" xml:space="preserve">
+    <value>colsAccountGroup</value>
+  </data>
+  <data name="&gt;&gt;colsAccountGroup.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsAccountGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsAccountGroup.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="colsAccountGroupDescription.Title" xml:space="preserve">
+    <value>@A Group Description</value>
+  </data>
+  <data name="colsAccountGroupDescription.Width" type="System.Int32, mscorlib">
+    <value>189</value>
+  </data>
+  <data name="&gt;&gt;colsAccountGroupDescription.Name" xml:space="preserve">
+    <value>colsAccountGroupDescription</value>
+  </data>
+  <data name="&gt;&gt;colsAccountGroupDescription.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsAccountGroupDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsAccountGroupDescription.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="colsTaxHandlingValue.Title" xml:space="preserve">
+    <value>Tax Handling</value>
+  </data>
+  <data name="&gt;&gt;colsTaxHandlingValue.Name" xml:space="preserve">
+    <value>colsTaxHandlingValue</value>
+  </data>
+  <data name="&gt;&gt;colsTaxHandlingValue.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsTaxHandlingValue.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsTaxHandlingValue.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="colsPrevTaxHandlingValue.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colsPrevTaxHandlingValue.Title" xml:space="preserve">
+    <value>Prev Tax Code Mandatory
+in Voucher Entry</value>
+  </data>
+  <data name="colsPrevTaxHandlingValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colsPrevTaxHandlingValue.Width" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="&gt;&gt;colsPrevTaxHandlingValue.Name" xml:space="preserve">
+    <value>colsPrevTaxHandlingValue</value>
+  </data>
+  <data name="&gt;&gt;colsPrevTaxHandlingValue.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsPrevTaxHandlingValue.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsPrevTaxHandlingValue.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="colsTaxCodeMandatory.Title" xml:space="preserve">
+    <value>Tax Code Mandatory
+in Voucher Entry</value>
+  </data>
+  <data name="colsTaxCodeMandatory.Width" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="&gt;&gt;colsTaxCodeMandatory.Name" xml:space="preserve">
+    <value>colsTaxCodeMandatory</value>
+  </data>
+  <data name="&gt;&gt;colsTaxCodeMandatory.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsTaxCodeMandatory.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsTaxCodeMandatory.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="coldtValidFrom.Title" xml:space="preserve">
+    <value>Valid From</value>
+  </data>
+  <data name="coldtValidFrom.Width" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;coldtValidFrom.Name" xml:space="preserve">
+    <value>coldtValidFrom</value>
+  </data>
+  <data name="&gt;&gt;coldtValidFrom.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;coldtValidFrom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;coldtValidFrom.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="coldtValiduntil.Title" xml:space="preserve">
+    <value>Valid Until</value>
+  </data>
+  <data name="coldtValiduntil.Width" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="&gt;&gt;coldtValiduntil.Name" xml:space="preserve">
+    <value>coldtValiduntil</value>
+  </data>
+  <data name="&gt;&gt;coldtValiduntil.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;coldtValiduntil.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;coldtValiduntil.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="colCurrencyBalance.Title" xml:space="preserve">
+    <value>Currency Balance</value>
+  </data>
+  <data name="colCurrencyBalance.Width" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;colCurrencyBalance.Name" xml:space="preserve">
+    <value>colCurrencyBalance</value>
+  </data>
+  <data name="&gt;&gt;colCurrencyBalance.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colCurrencyBalance.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colCurrencyBalance.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="colBudgetAccount.Title" xml:space="preserve">
+    <value>Budget Account</value>
+  </data>
+  <data name="colBudgetAccount.Width" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;colBudgetAccount.Name" xml:space="preserve">
+    <value>colBudgetAccount</value>
+  </data>
+  <data name="&gt;&gt;colBudgetAccount.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colBudgetAccount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colBudgetAccount.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="colLedgerAccount.Title" xml:space="preserve">
+    <value>Ledger Account</value>
+  </data>
+  <data name="colLedgerAccount.Width" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="&gt;&gt;colLedgerAccount.Name" xml:space="preserve">
+    <value>colLedgerAccount</value>
+  </data>
+  <data name="&gt;&gt;colLedgerAccount.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colLedgerAccount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colLedgerAccount.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="colTaxAccount.Title" xml:space="preserve">
+    <value>Tax Account</value>
+  </data>
+  <data name="colTaxAccount.Width" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="&gt;&gt;colTaxAccount.Name" xml:space="preserve">
+    <value>colTaxAccount</value>
+  </data>
+  <data name="&gt;&gt;colTaxAccount.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colTaxAccount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colTaxAccount.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="colsStatAccount.Title" xml:space="preserve">
+    <value>Exclude from Vou Balance</value>
+  </data>
+  <data name="colsStatAccount.Width" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="&gt;&gt;colsStatAccount.Name" xml:space="preserve">
+    <value>colsStatAccount</value>
+  </data>
+  <data name="&gt;&gt;colsStatAccount.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsStatAccount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsStatAccount.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="colsExcludeProjFollowup.Title" xml:space="preserve">
+    <value>Exclude From
+Project Follow-Up</value>
+  </data>
+  <data name="colsExcludeProjFollowup.Width" type="System.Int32, mscorlib">
+    <value>155</value>
+  </data>
+  <data name="&gt;&gt;colsExcludeProjFollowup.Name" xml:space="preserve">
+    <value>colsExcludeProjFollowup</value>
+  </data>
+  <data name="&gt;&gt;colsExcludeProjFollowup.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsExcludeProjFollowup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsExcludeProjFollowup.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="colsArchivingTrans.Title" xml:space="preserve">
+    <value>Archiving Options</value>
+  </data>
+  <data name="colsArchivingTrans.Width" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="&gt;&gt;colsArchivingTrans.Name" xml:space="preserve">
+    <value>colsArchivingTrans</value>
+  </data>
+  <data name="&gt;&gt;colsArchivingTrans.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsArchivingTrans.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsArchivingTrans.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="colsReqAccntB.Title" xml:space="preserve">
+    <value>@B</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntB.Name" xml:space="preserve">
+    <value>colsReqAccntB</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntB.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntB.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntB.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="colsReqAccntC.Title" xml:space="preserve">
+    <value>@C</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntC.Name" xml:space="preserve">
+    <value>colsReqAccntC</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntC.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntC.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntC.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="colsReqAccntD.Title" xml:space="preserve">
+    <value>@D</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntD.Name" xml:space="preserve">
+    <value>colsReqAccntD</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntD.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntD.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntD.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="colsReqAccntE.Title" xml:space="preserve">
+    <value>@E</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntE.Name" xml:space="preserve">
+    <value>colsReqAccntE</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntE.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntE.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntE.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="colsReqAccntF.Title" xml:space="preserve">
+    <value>@F</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntF.Name" xml:space="preserve">
+    <value>colsReqAccntF</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntF.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntF.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntF.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="colsReqAccntG.Title" xml:space="preserve">
+    <value>@G</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntG.Name" xml:space="preserve">
+    <value>colsReqAccntG</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntG.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntG.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntG.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="colsReqAccntH.Title" xml:space="preserve">
+    <value>@H</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntH.Name" xml:space="preserve">
+    <value>colsReqAccntH</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntH.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntH.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntH.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="colsReqAccntI.Title" xml:space="preserve">
+    <value>@I</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntI.Name" xml:space="preserve">
+    <value>colsReqAccntI</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntI.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntI.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntI.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="colsReqAccntJ.Title" xml:space="preserve">
+    <value>@J</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntJ.Name" xml:space="preserve">
+    <value>colsReqAccntJ</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntJ.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntJ.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqAccntJ.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="colsReqQuantity.Title" xml:space="preserve">
+    <value>Req Quantity</value>
+  </data>
+  <data name="&gt;&gt;colsReqQuantity.Name" xml:space="preserve">
+    <value>colsReqQuantity</value>
+  </data>
+  <data name="&gt;&gt;colsReqQuantity.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsReqQuantity.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqQuantity.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="colsProcessCode.Title" xml:space="preserve">
+    <value>Process Code</value>
+  </data>
+  <data name="&gt;&gt;colsProcessCode.Name" xml:space="preserve">
+    <value>colsProcessCode</value>
+  </data>
+  <data name="&gt;&gt;colsProcessCode.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsProcessCode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsProcessCode.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="colsReqText.Title" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="&gt;&gt;colsReqText.Name" xml:space="preserve">
+    <value>colsReqText</value>
+  </data>
+  <data name="&gt;&gt;colsReqText.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsReqText.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqText.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="colsCBCodeString.Title" xml:space="preserve">
+    <value>Code String
+Completion Exists</value>
+  </data>
+  <data name="colsCBCodeString.Width" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="&gt;&gt;colsCBCodeString.Name" xml:space="preserve">
+    <value>colsCBCodeString</value>
+  </data>
+  <data name="&gt;&gt;colsCBCodeString.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsCBCodeString.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsCBCodeString.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="colsCBAttribute.Title" xml:space="preserve">
+    <value>Attribute
+Exists</value>
+  </data>
+  <data name="colsCBAttribute.Width" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;colsCBAttribute.Name" xml:space="preserve">
+    <value>colsCBAttribute</value>
+  </data>
+  <data name="&gt;&gt;colsCBAttribute.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsCBAttribute.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsCBAttribute.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="colsCBText.Title" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="colsCBText.Width" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;colsCBText.Name" xml:space="preserve">
+    <value>colsCBText</value>
+  </data>
+  <data name="&gt;&gt;colsCBText.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsCBText.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsCBText.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="colsText.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colsText.Title" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="colsText.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colsText.Width" type="System.Int32, mscorlib">
+    <value>165</value>
+  </data>
+  <data name="&gt;&gt;colsText.Name" xml:space="preserve">
+    <value>colsText</value>
+  </data>
+  <data name="&gt;&gt;colsText.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsText.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsText.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="colsReqBudgetCodeB.Title" xml:space="preserve">
+    <value>Budget @B</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeB.Name" xml:space="preserve">
+    <value>colsReqBudgetCodeB</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeB.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeB.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeB.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="colsReqBudgetCodeC.Title" xml:space="preserve">
+    <value>Budget @C</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeC.Name" xml:space="preserve">
+    <value>colsReqBudgetCodeC</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeC.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeC.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeC.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="colsReqBudgetCodeD.Title" xml:space="preserve">
+    <value>Budget @D</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeD.Name" xml:space="preserve">
+    <value>colsReqBudgetCodeD</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeD.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeD.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeD.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="colsReqBudgetCodeE.Title" xml:space="preserve">
+    <value>Budget @E</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeE.Name" xml:space="preserve">
+    <value>colsReqBudgetCodeE</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeE.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeE.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeE.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="colsReqBudgetCodeF.Title" xml:space="preserve">
+    <value>Budget @F</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeF.Name" xml:space="preserve">
+    <value>colsReqBudgetCodeF</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeF.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeF.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeF.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="colsReqBudgetCodeG.Title" xml:space="preserve">
+    <value>Budget @G</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeG.Name" xml:space="preserve">
+    <value>colsReqBudgetCodeG</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeG.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeG.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeG.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="colsReqBudgetCodeH.Title" xml:space="preserve">
+    <value>Budget @H</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeH.Name" xml:space="preserve">
+    <value>colsReqBudgetCodeH</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeH.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeH.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeH.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="colsReqBudgetCodeI.Title" xml:space="preserve">
+    <value>Budget @I</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeI.Name" xml:space="preserve">
+    <value>colsReqBudgetCodeI</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeI.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeI.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeI.ZOrder" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="colsReqBudgetCodeJ.Title" xml:space="preserve">
+    <value>Budget @J</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeJ.Name" xml:space="preserve">
+    <value>colsReqBudgetCodeJ</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeJ.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeJ.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetCodeJ.ZOrder" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="colsReqBudgetQuantity.Title" xml:space="preserve">
+    <value>Req Budget Quantity</value>
+  </data>
+  <data name="colsReqBudgetQuantity.Width" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetQuantity.Name" xml:space="preserve">
+    <value>colsReqBudgetQuantity</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetQuantity.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cLookupColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetQuantity.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsReqBudgetQuantity.ZOrder" xml:space="preserve">
+    <value>48</value>
+  </data>
+  <data name="coldCompanyFinanceValid_From.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="coldCompanyFinanceValid_From.Title" xml:space="preserve">
+    <value>Valid_From</value>
+  </data>
+  <data name="coldCompanyFinanceValid_From.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;coldCompanyFinanceValid_From.Name" xml:space="preserve">
+    <value>coldCompanyFinanceValid_From</value>
+  </data>
+  <data name="&gt;&gt;coldCompanyFinanceValid_From.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;coldCompanyFinanceValid_From.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;coldCompanyFinanceValid_From.ZOrder" xml:space="preserve">
+    <value>49</value>
+  </data>
+  <data name="colsLogicalAccountTypeDb.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colsLogicalAccountTypeDb.Title" xml:space="preserve">
+    <value>LogicalAccountTypeDb</value>
+  </data>
+  <data name="colsLogicalAccountTypeDb.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colsLogicalAccountTypeDb.Name" xml:space="preserve">
+    <value>colsLogicalAccountTypeDb</value>
+  </data>
+  <data name="&gt;&gt;colsLogicalAccountTypeDb.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsLogicalAccountTypeDb.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsLogicalAccountTypeDb.ZOrder" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="colCodePart.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colCodePart.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colCodePart.Name" xml:space="preserve">
+    <value>colCodePart</value>
+  </data>
+  <data name="&gt;&gt;colCodePart.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colCodePart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colCodePart.ZOrder" xml:space="preserve">
+    <value>51</value>
+  </data>
+  <data name="colsExcludePeriodicalCap.Title" xml:space="preserve">
+    <value>Periodical Project
+Capitalization</value>
+  </data>
+  <data name="&gt;&gt;colsExcludePeriodicalCap.Name" xml:space="preserve">
+    <value>colsExcludePeriodicalCap</value>
+  </data>
+  <data name="&gt;&gt;colsExcludePeriodicalCap.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsExcludePeriodicalCap.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsExcludePeriodicalCap.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="colsConsAccnt.Title" xml:space="preserve">
+    <value>Parent Company
+@A</value>
+  </data>
+  <data name="&gt;&gt;colsConsAccnt.Name" xml:space="preserve">
+    <value>colsConsAccnt</value>
+  </data>
+  <data name="&gt;&gt;colsConsAccnt.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsConsAccnt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsConsAccnt.ZOrder" xml:space="preserve">
+    <value>52</value>
+  </data>
+  <data name="colsConsCompany.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colsConsCompany.Title" xml:space="preserve">
+    <value>Cons Company</value>
+  </data>
+  <data name="colsConsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colsConsCompany.Name" xml:space="preserve">
+    <value>colsConsCompany</value>
+  </data>
+  <data name="&gt;&gt;colsConsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsConsCompany.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsConsCompany.ZOrder" xml:space="preserve">
+    <value>54</value>
+  </data>
+  <data name="colsConsolidAccountDescription.Title" xml:space="preserve">
+    <value>Parent Company
+@A Description</value>
+  </data>
+  <data name="&gt;&gt;colsConsolidAccountDescription.Name" xml:space="preserve">
+    <value>colsConsolidAccountDescription</value>
+  </data>
+  <data name="&gt;&gt;colsConsolidAccountDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsConsolidAccountDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsConsolidAccountDescription.ZOrder" xml:space="preserve">
+    <value>53</value>
+  </data>
+  <data name="colsExcludeCurrTrans.Title" xml:space="preserve">
+    <value>Exclude from
+Currency Translation</value>
+  </data>
+  <data name="colsExcludeCurrTrans.Width" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="&gt;&gt;colsExcludeCurrTrans.Name" xml:space="preserve">
+    <value>colsExcludeCurrTrans</value>
+  </data>
+  <data name="&gt;&gt;colsExcludeCurrTrans.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsExcludeCurrTrans.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsExcludeCurrTrans.ZOrder" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="colsKeepRepCurrency.Title" xml:space="preserve">
+    <value>Keep Reported Currency 
+as Currency Balance</value>
+  </data>
+  <data name="&gt;&gt;colsKeepRepCurrency.Name" xml:space="preserve">
+    <value>colsKeepRepCurrency</value>
+  </data>
+  <data name="&gt;&gt;colsKeepRepCurrency.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsKeepRepCurrency.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsKeepRepCurrency.ZOrder" xml:space="preserve">
+    <value>56</value>
+  </data>
+  <data name="colsKeepReportingEntity.Title" xml:space="preserve">
+    <value>Keep Balances Seperated 
+by Reporting Entity</value>
+  </data>
+  <data name="&gt;&gt;colsKeepReportingEntity.Name" xml:space="preserve">
+    <value>colsKeepReportingEntity</value>
+  </data>
+  <data name="&gt;&gt;colsKeepReportingEntity.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsKeepReportingEntity.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsKeepReportingEntity.ZOrder" xml:space="preserve">
+    <value>57</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>37</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>721, 414</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 14</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Accounts</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menuCode__String_Completion___.Name" xml:space="preserve">
+    <value>menuTbwMethods_menuCode__String_Completion___</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menuCode__String_Completion___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Account___.Name" xml:space="preserve">
+    <value>menuTbwMethods_menu_Account___</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Account___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Tax_Codes_per_Account___.Name" xml:space="preserve">
+    <value>menuTbwMethods_menu_Tax_Codes_per_Account___</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Tax_Codes_per_Account___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Code_Part_Attribute_Connection_.Name" xml:space="preserve">
+    <value>menuTbwMethods_menu_Code_Part_Attribute_Connection_</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Code_Part_Attribute_Connection_.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Project_Cost_Revenue_Element_pe.Name" xml:space="preserve">
+    <value>menuTbwMethods_menu_Project_Cost_Revenue_Element_pe</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Project_Cost_Revenue_Element_pe.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menuTrans_lation___.Name" xml:space="preserve">
+    <value>menuTbwMethods_menuTrans_lation___</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menuTrans_lation___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Notes___.Name" xml:space="preserve">
+    <value>menuTbwMethods_menu_Notes___</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Notes___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menuChange__Company___.Name" xml:space="preserve">
+    <value>menuTbwMethods_menuChange__Company___</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menuChange__Company___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Code.Name" xml:space="preserve">
+    <value>menuItem_Code</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Code.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator1.Name" xml:space="preserve">
+    <value>menuSeparator1</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Account.Name" xml:space="preserve">
+    <value>menuItem__Account</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Account.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Tax.Name" xml:space="preserve">
+    <value>menuItem__Tax</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Tax.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator2.Name" xml:space="preserve">
+    <value>menuSeparator2</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Code.Name" xml:space="preserve">
+    <value>menuItem__Code</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Code.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Project.Name" xml:space="preserve">
+    <value>menuItem__Project</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Project.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator3.Name" xml:space="preserve">
+    <value>menuSeparator3</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator3.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Translation.Name" xml:space="preserve">
+    <value>menuItem_Translation</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Translation.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator4.Name" xml:space="preserve">
+    <value>menuSeparator4</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator4.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Notes.Name" xml:space="preserve">
+    <value>menuItem__Notes</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Notes.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator5.Name" xml:space="preserve">
+    <value>menuSeparator5</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator5.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change.Name" xml:space="preserve">
+    <value>menuItem_Change</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>tbwAccountOverview</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cTableWindowFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

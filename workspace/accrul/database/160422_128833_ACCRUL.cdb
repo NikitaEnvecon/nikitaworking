@@ -1,0 +1,33 @@
+-----------------------------------------------------------------------------
+--  Module : ACCRUL
+--
+--  File   : 160422_128833_ACCRUL.cdb
+--
+--  IFS Developer Studio Template Version 2.6
+--
+--  Date     Sign    History
+--  ------   ------  --------------------------------------------------
+--  160422   NuDiLK  Bug 128833, Created.
+--  ------   ------  --------------------------------------------------
+-----------------------------------------------------------------------------
+
+SET SERVEROUTPUT ON
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160422_128833_ACCRUL.cdb','Timestamp_1');
+DECLARE
+   index_name_ VARCHAR2(30) := 'EXT_CURRENCY_TASK_DETAIL_PK';
+   table_name_ VARCHAR2(30) := 'EXT_CURRENCY_TASK_DETAIL_TAB';
+   columns_    Database_SYS.ColumnTabType;
+BEGIN
+   IF NOT Database_SYS.Is_Db_Patch_Registered( 'ACCRUL', 128833 ) THEN
+      Database_SYS.Reset_Column_Table(columns_);
+      Database_SYS.Set_Table_Column(columns_, 'TASK_ID');
+      Database_SYS.Set_Table_Column(columns_, 'COMPANY');
+      Database_SYS.Set_Table_Column(columns_, 'CURRENCY_TYPE');
+      Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'P', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+      Database_SYS.Register_Db_Patch('ACCRUL', 128833, 'Modified Primary key in EXT_CURRENCY_TASK_DETAIL_TAB.');
+      COMMIT;
+   END IF;
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160422_128833_ACCRUL.cdb','Done');
+SET SERVEROUTPUT OFF

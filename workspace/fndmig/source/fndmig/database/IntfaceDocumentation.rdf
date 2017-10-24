@@ -1,0 +1,1112 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceDocumentation
+--
+--  File:         IntfaceDocumentation.rdf
+--  Version:      Foundation1 2.2.3a    
+--
+--  Date    Sign   History
+--  ------  ----   -----------------------------------------------------------
+--  110503  CHAA  EASTONE-16468 : Remove report layout definitions from RDF
+--  070802  DUWILK Modified the column comments and  procedure Documentation_Print
+--  051206  MAOL   Removed QRP
+--  050222  mesalk Convert to Report Designer and use raw data view 
+--  030708  TRLY   Prepared for new module FNDMIG
+--  011113  TRLY   Patch1 for v3.0.0 :
+--                 Added DEFAULT_VALUE to ORDER_BY in Intface_Detail cursor
+--  010110  InMu   Created
+-----------------------------------------------------------------------------
+
+define MODULE      = FNDMIG
+define LU          = IntfaceDocumentation
+define PKG         = INTFACE_DOCUMENTATION_RPI
+
+define TABLE       = INTFACE_INFO_SERVICES_RPT
+define RAWVIEW     = INTFACE_INFO_SERVICES_RPV
+define VIEW        = INTFACE_DOCUMENTATION_REP
+--INTFACE_HIST_DOC_REP
+define METHOD      = Documentation_Print
+
+define BLOCK_TYPE             = N1        
+-- Defining Header Information
+define INTFACE_NAME           = S1
+define INTFACE_DESCR          = S2        
+define INTFACE_PATH           = S3    
+define INTFACE_FILE           = S4        
+define DATE_FORMAT            = S5        
+define MINUS_POS              = N2        
+define WHERE_CLAUSE           = S6        
+define VIEW_NAME              = S7    
+define COLUMN_SEPARATOR       = S8        
+define THOUSAND_SEPARATOR     = S9       
+define DECIMAL_POINT          = S10        
+
+define COLUMN_EMBRACE         = S11
+define FILE_LOCATION          = S12        
+define FILE_LOCATION_DB       = S13        
+define DIRECTION              = S14        
+define DIRECTION_DB           = S15        
+define PROCEDURE_NAME         = S16        
+define LAST_EXECUTED          = D1        
+define EXECUTED_BY            = S17    
+define LAST_INFO              = S18        
+define SOURCE_NAME            = S19        
+define SOURCE_OWNER           = S20        
+define NOTE_TEXT_HEADER       = S21               
+define ORDER_BY_CLAUSE        = S22        
+
+-- Defining Detail Information
+define COLUMN_NAME            = S23
+define DESCR_COLUMN_NAME      = S24        
+define DATA_TYPE              = S25               
+define POS                    = N3        
+define LENGTH                 = N4        
+define DECIMAL_LENGTH         = N5    
+define AMOUNT_FACTOR          = N6        
+define DEFAULT_VALUE          = S26        
+define DEFAULT_WHERE          = S27        
+define FLAGS                  = S28        
+define PAD_CHAR_RIGHT         = S29        
+define PAD_CHAR_LEFT          = S30        
+define CHANGE_DEFAULTS        = S31        
+define ATTR_SEQ               = N7        
+define SOURCE_COLUMN          = S32        
+define NOTE_TEXT_DETAIL       = S33               
+
+-- Defining Method List Information
+define EXECUTE_SEQ            = N8
+define MET_VIEW_NAME          = S34
+define MET_METHOD_NAME        = S35
+define MET_COLUMN_NAME        = S36
+define MET_COLUMN_VALUE       = S37
+define CONVERT_ATTR           = S38
+define NOTE_TEXT_METH_LIST    = S39
+define REFERENCES             = S40
+define ACTION                 = S41
+
+-- Defining Mapping Information
+define CONV_LIST_ID           = S42
+define CONV_LIST_DESCR        = S43
+define COLS_USING_LIST        = S44
+define OLD_VALUE              = S45
+define NEW_VALUE              = S46
+define GROUP_ID               = S47
+define GROUP_DESCRIPTION      = S48
+define NOTE_TEXT_GROUP        = S49
+
+-- Defining Info texts        
+define INFO_TEXT_HEADER       = S50
+define INFO_TEXT_DETAIL       = S51
+define INFO_TEXT_METH_LIST    = S52
+
+--
+define PRINT_DOC_INFO         = S53
+
+-----------------------------------------------------------------------------
+-- PACKAGE SPECIFICATION: INTFACE_DOCUMENTATION_RPI    
+-----------------------------------------------------------------------------
+
+PROMPT Creating &PKG specification
+
+CREATE OR REPLACE PACKAGE &PKG IS
+
+module_ CONSTANT VARCHAR2(6) := '&MODULE';
+lu_name_ CONSTANT VARCHAR2(25) := '&LU';
+
+FUNCTION Get_Cols_Using_List (
+   intface_name_  IN VARCHAR2, 
+   conv_list_id_  IN VARCHAR2) RETURN VARCHAR2;
+   
+PROCEDURE &METHOD (
+   report_attr_    IN VARCHAR2,
+   parameter_attr_ IN VARCHAR2 );
+
+END &PKG;
+/
+SHOW ERROR
+
+-----------------------------------------------------------------------------
+-- REPORTS                     
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+-- VIEWS                     
+-----------------------------------------------------------------------------
+
+ CREATE OR REPLACE VIEW &RAWVIEW AS
+ SELECT *
+ FROM INTFACE_INFO_SERVICES_RPT t
+ WHERE EXISTS (SELECT 1
+              FROM allowed_report a
+              WHERE a.result_key = t.result_key)
+ WITH read only;
+ 
+ COMMENT ON TABLE &RAWVIEW
+   IS 'LU=IntfaceDocumentation^PROMPT=Intface Info Services^MODULE=FNDMIG^';
+
+-----------------------------------------------------------------------------
+-- Report:     Migration Documentation Printout
+-- Type:       PLSQL1.2
+-- Objects:    TABLE  = INTFACE_INFO_SERVICES_RPT
+--             VIEW   = INTFACE_DOCUMENTATION_REP
+--             METHOD = INTFACE_DOCUMENTATION_RPI.Documentation_Print
+-----------------------------------------------------------------------------
+
+PROMPT Creating report view &VIEW
+
+CREATE OR REPLACE VIEW &VIEW AS
+SELECT RESULT_KEY                    RESULT_KEY,
+       ROW_NO                        ROW_NO,
+       &BLOCK_TYPE                   BLOCK_TYPE,
+       &INTFACE_NAME                 INTFACE_NAME,
+       &INTFACE_DESCR                INTFACE_DESCR,
+       &INTFACE_PATH                 INTFACE_PATH,
+       &INTFACE_FILE                 INTFACE_FILE,
+       &DATE_FORMAT                  DATE_FORMAT,
+       &MINUS_POS                    MINUS_POS,
+       &WHERE_CLAUSE                 WHERE_CLAUSE,
+       &VIEW_NAME                    VIEW_NAME,
+       &COLUMN_SEPARATOR             COLUMN_SEPARATOR,
+       &THOUSAND_SEPARATOR           THOUSAND_SEPARATOR,
+       &DECIMAL_POINT                DECIMAL_POINT,
+       &COLUMN_EMBRACE               COLUMN_EMBRACE,
+       &FILE_LOCATION                FILE_LOCATION,
+       &FILE_LOCATION_DB             FILE_LOCATION_DB,
+       &DIRECTION                    DIRECTION,
+       &DIRECTION_DB                 DIRECTION_DB,
+       &PROCEDURE_NAME               PROCEDURE_NAME,
+       &LAST_EXECUTED                LAST_EXECUTED,
+       &EXECUTED_BY                  EXECUTED_BY,
+       &LAST_INFO                    LAST_INFO,
+       &SOURCE_NAME                  SOURCE_NAME,
+       &SOURCE_OWNER                 SOURCE_OWNER,
+       &NOTE_TEXT_HEADER             NOTE_TEXT_HEADER,
+       &ORDER_BY_CLAUSE              ORDER_BY_CLAUSE,
+       &GROUP_ID                     GROUP_ID,
+       &GROUP_DESCRIPTION            GROUP_DESCRIPTION,
+       &NOTE_TEXT_GROUP              NOTE_TEXT_GROUP,
+       &COLUMN_NAME                  COLUMN_NAME,
+       &DESCR_COLUMN_NAME            DESCR_COLUMN_NAME,
+       &DATA_TYPE                    DATA_TYPE,
+       &POS                          POS,
+       &LENGTH                       LENGTH,
+       &DECIMAL_LENGTH               DECIMAL_LENGTH,
+       &AMOUNT_FACTOR                AMOUNT_FACTOR,
+       &DEFAULT_VALUE                DEFAULT_VALUE,
+       &DEFAULT_WHERE                DEFAULT_WHERE,
+       &FLAGS                        FLAGS,
+       &PAD_CHAR_RIGHT               PAD_CHAR_RIGHT,
+       &PAD_CHAR_LEFT                PAD_CHAR_LEFT,
+       &CHANGE_DEFAULTS              CHANGE_DEFAULTS,
+       &ATTR_SEQ                     ATTR_SEQ,
+       &SOURCE_COLUMN                SOURCE_COLUMN,
+       &NOTE_TEXT_DETAIL             NOTE_TEXT_DETAIL,
+       &EXECUTE_SEQ                  EXECUTE_SEQ,
+       &MET_VIEW_NAME                MET_VIEW_NAME,
+       &MET_METHOD_NAME              MET_METHOD_NAME,
+       &MET_COLUMN_NAME              MET_COLUMN_NAME,
+       &MET_COLUMN_VALUE             MET_COLUMN_VALUE,
+       &CONVERT_ATTR                 CONVERT_ATTR,
+       &NOTE_TEXT_METH_LIST          NOTE_TEXT_METH_LIST,
+       &REFERENCES                   REFERENCES,
+       &ACTION                       ACTION,
+       &CONV_LIST_ID                 CONV_LIST_ID,
+       &CONV_LIST_DESCR              CONV_LIST_DESCR,
+       &COLS_USING_LIST              COLS_USING_LIST,
+       &OLD_VALUE                    OLD_VALUE,
+       &NEW_VALUE                    NEW_VALUE,
+       &INFO_TEXT_HEADER             INFO_TEXT_HEADER,
+       &INFO_TEXT_DETAIL             INFO_TEXT_DETAIL,
+       &INFO_TEXT_METH_LIST          INFO_TEXT_METH_LIST,
+       ROW_NO                        ORDER_BY_COL,
+       NULL                          INTFACE_IN,
+       &PRINT_DOC_INFO               PRINT_DOC_INFO,
+       NULL                          PRINT_HEADER,
+       NULL                          PRINT_DETAIL,
+       NULL                          PRINT_METH_LIST,
+       NULL                          PRINT_MAP_VALUE
+FROM   &RAWVIEW
+WITH   read only;
+
+
+COMMENT ON TABLE &VIEW IS
+   'LU=IntfaceDocumentation^PROMPT=Intface Info Services^MODULE=FNDMIG^';
+COMMENT ON COLUMN &VIEW..RESULT_KEY IS
+   'FLAGS=M----^DATATYPE=NUMBER^';
+COMMENT ON COLUMN &VIEW..ROW_NO IS
+   'FLAGS=M----^DATATYPE=NUMBER^';
+COMMENT ON COLUMN &VIEW..BLOCK_TYPE IS
+   'FLAGS=A----^DATATYPE=NUMBER^TITLE=Block Type^ITEM_NAME=iBlockType^';
+COMMENT ON COLUMN &VIEW..INTFACE_NAME IS
+   'FLAGS=A----^DATATYPE=STRING(30)^TITLE=Migration Job ID^ITEM_NAME=iIntfaceName^';
+COMMENT ON COLUMN &VIEW..INTFACE_DESCR IS
+   'FLAGS=A----^DATATYPE=STRING(30)^TITLE=Migration Description^ITEM_NAME=iIntfaceDescr^';
+COMMENT ON COLUMN &VIEW..INTFACE_PATH IS
+   'FLAGS=A----^DATATYPE=STRING(100)^TITLE=Path^ITEM_NAME=iIntfacePath^';
+COMMENT ON COLUMN &VIEW..INTFACE_FILE IS
+   'FLAGS=A----^DATATYPE=STRING(50)^TITLE=File^ITEM_NAME=iIntfaceFile^';
+COMMENT ON COLUMN &VIEW..DATE_FORMAT IS
+   'FLAGS=A----^DATATYPE=STRING(30)^TITLE=Date Format^ITEM_NAME=iDateFormat^';
+COMMENT ON COLUMN &VIEW..MINUS_POS IS
+   'FLAGS=A----^DATATYPE=NUMBER^TITLE=Minus Pos^ITEM_NAME=iMinusPos^';
+COMMENT ON COLUMN &VIEW..WHERE_CLAUSE IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Where^ITEM_NAME=iWhereClause^';
+COMMENT ON COLUMN &VIEW..VIEW_NAME IS
+   'FLAGS=A----^DATATYPE=STRING(100)^TITLE=Target Name^ITEM_NAME=iViewName^';
+COMMENT ON COLUMN &VIEW..COLUMN_SEPARATOR IS
+   'FLAGS=A----^DATATYPE=STRING(200)^TITLE=Column Separator^ITEM_NAME=iColumnSeparator^';
+COMMENT ON COLUMN &VIEW..THOUSAND_SEPARATOR IS
+   'FLAGS=A----^DATATYPE=STRING(200)^TITLE=Thousand Separator^ITEM_NAME=iThousandSeparator^';
+COMMENT ON COLUMN &VIEW..DECIMAL_POINT IS
+   'FLAGS=A----^DATATYPE=STRING(200)^TITLE=Desimal Point^ITEM_NAME=iDecimalPoint^';
+COMMENT ON COLUMN &VIEW..COLUMN_EMBRACE IS
+   'FLAGS=A----^DATATYPE=STRING(200)^TITLE=Column Embrace^ITEM_NAME=iColumnEmbrace^';
+COMMENT ON COLUMN &VIEW..FILE_LOCATION IS
+   'FLAGS=A----^DATATYPE=STRING(200)^TITLE=File Location^ITEM_NAME=iFileLocation^';
+COMMENT ON COLUMN &VIEW..FILE_LOCATION_DB IS
+   'FLAGS=A----^DATATYPE=STRING(20)^TITLE=File Location DB^ITEM_NAME=iFileLocationDb^';
+COMMENT ON COLUMN &VIEW..DIRECTION IS
+   'FLAGS=A----^DATATYPE=STRING(200)^TITLE=Direction^ITEM_NAME=iDirection^';
+COMMENT ON COLUMN &VIEW..DIRECTION_DB IS
+   'FLAGS=A----^DATATYPE=STRING(20)^TITLE=Direction DB^ITEM_NAME=iDirectionDb^';
+COMMENT ON COLUMN &VIEW..PROCEDURE_NAME IS
+   'FLAGS=A----^DATATYPE=STRING(100)^TITLE=Procedure Name^ITEM_NAME=iProcedureName^';
+COMMENT ON COLUMN &VIEW..LAST_EXECUTED IS
+   'FLAGS=A----^DATATYPE=DATE^TITLE=Last Executed^ITEM_NAME=iLastExecuted^';
+COMMENT ON COLUMN &VIEW..EXECUTED_BY IS
+   'FLAGS=A----^DATATYPE=STRING(30)^TITLE=Executed By^ITEM_NAME=iExecutedBy^';
+COMMENT ON COLUMN &VIEW..LAST_INFO IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Last Info^ITEM_NAME=iLastInfo^';
+COMMENT ON COLUMN &VIEW..SOURCE_NAME IS
+   'FLAGS=A----^DATATYPE=STRING(100)^TITLE=Source Name^ITEM_NAME=iSourceName^';
+COMMENT ON COLUMN &VIEW..SOURCE_OWNER IS
+   'FLAGS=A----^DATATYPE=STRING(50)^TITLE=Source Owner^ITEM_NAME=iSourceOwner^';
+COMMENT ON COLUMN &VIEW..NOTE_TEXT_HEADER IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Comments^ITEM_NAME=iNoteTextHeader^';
+COMMENT ON COLUMN &VIEW..ORDER_BY_CLAUSE IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Order By^ITEM_NAME=iOrderByClause^';
+COMMENT ON COLUMN &VIEW..GROUP_ID IS
+   'FLAGS=A----^DATATYPE=STRING(20)^TITLE=Group Id^QUERY=Group Id:^QFLAGS=----L^ITEM_NAME=iGroupId^REF=IntfaceGroup^';
+COMMENT ON COLUMN &VIEW..GROUP_DESCRIPTION IS
+   'FLAGS=A----^DATATYPE=STRING(100)^TITLE=Group Description^ITEM_NAME=iGroupDescription^';
+COMMENT ON COLUMN &VIEW..NOTE_TEXT_GROUP IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Comments^ITEM_NAME=iNoteTextGroup^';
+--
+-- Detail Information
+--
+COMMENT ON COLUMN &VIEW..COLUMN_NAME IS
+   'FLAGS=A----^DATATYPE=STRING(100)^TITLE=Target Column^ITEM_NAME=iColumnName^';
+COMMENT ON COLUMN &VIEW..DESCR_COLUMN_NAME IS
+   'FLAGS=A----^DATATYPE=STRING(100)^TITLE=Column Description^ITEM_NAME=iDescrColumnName^';
+COMMENT ON COLUMN &VIEW..DATA_TYPE IS
+   'FLAGS=A----^DATATYPE=STRING(10)^TITLE=Data Type^ITEM_NAME=iDataType^';
+COMMENT ON COLUMN &VIEW..POS IS
+   'FLAGS=A----^DATATYPE=NUMBER^TITLE=Pos^ITEM_NAME=iPos^';
+COMMENT ON COLUMN &VIEW..LENGTH IS
+   'FLAGS=A----^DATATYPE=NUMBER^TITLE=Length^ITEM_NAME=iLength^';
+COMMENT ON COLUMN &VIEW..DECIMAL_LENGTH IS
+   'FLAGS=A----^DATATYPE=NUMBER^TITLE=Decimal Length^ITEM_NAME=iDecimalLength^';
+COMMENT ON COLUMN &VIEW..AMOUNT_FACTOR IS
+   'FLAGS=A----^DATATYPE=NUMBER^TITLE=Amount Factor^ITEM_NAME=iAmountFactor^';
+COMMENT ON COLUMN &VIEW..DEFAULT_VALUE IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Default Value^ITEM_NAME=iDefaultValue^';
+COMMENT ON COLUMN &VIEW..DEFAULT_WHERE IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Default Where^ITEM_NAME=iDefaultWhere^';
+COMMENT ON COLUMN &VIEW..FLAGS IS
+   'FLAGS=A----^DATATYPE=STRING(10)^TITLE=Flags^ITEM_NAME=iFlags^';
+COMMENT ON COLUMN &VIEW..PAD_CHAR_RIGHT IS
+   'FLAGS=A----^DATATYPE=STRING(200)^TITLE=Pad Char Right^ITEM_NAME=iPadCharRight^';
+COMMENT ON COLUMN &VIEW..PAD_CHAR_LEFT IS
+   'FLAGS=A----^DATATYPE=STRING(200)^TITLE=Pad Char Left^ITEM_NAME=iPadCharLeft^';
+COMMENT ON COLUMN &VIEW..CHANGE_DEFAULTS IS
+   'FLAGS=A----^DATATYPE=STRING(200)^TITLE=Change Defaults^ITEM_NAME=iChangeDefaults^';
+COMMENT ON COLUMN &VIEW..ATTR_SEQ IS
+   'FLAGS=A----^DATATYPE=NUMBER^TITLE=Attr Seq^ITEM_NAME=iAttrSeq^';
+COMMENT ON COLUMN &VIEW..SOURCE_COLUMN IS
+   'FLAGS=A----^DATATYPE=STRING(30)^TITLE=Source Column^ITEM_NAME=iSourceColumn^';
+COMMENT ON COLUMN &VIEW..NOTE_TEXT_DETAIL IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Comments^ITEM_NAME=iNoteTextDetail^';
+--
+-- Method List Information
+--
+COMMENT ON COLUMN &VIEW..EXECUTE_SEQ IS
+   'FLAGS=A----^DATATYPE=NUMBER^TITLE=Execute Seq^ITEM_NAME=iExecuteSeq^';
+COMMENT ON COLUMN &VIEW..MET_VIEW_NAME IS
+   'FLAGS=A----^DATATYPE=STRING(100)^TITLE=View^ITEM_NAME=iMetViewName^';
+COMMENT ON COLUMN &VIEW..MET_METHOD_NAME IS
+   'FLAGS=A----^DATATYPE=STRING(100)^TITLE=Method^ITEM_NAME=iMetMethodName^';
+COMMENT ON COLUMN &VIEW..MET_COLUMN_NAME IS
+   'FLAGS=A----^DATATYPE=STRING(30)^TITLE=Rule Column^ITEM_NAME=iMetColumnName^';
+COMMENT ON COLUMN &VIEW..MET_COLUMN_VALUE IS
+   'FLAGS=A----^DATATYPE=STRING(100)^TITLE=Rule Value^ITEM_NAME=iMetColumnValue^';
+COMMENT ON COLUMN &VIEW..CONVERT_ATTR IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Convert Attr^ITEM_NAME=iConvertAttr^';
+COMMENT ON COLUMN &VIEW..NOTE_TEXT_METH_LIST IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Comments^ITEM_NAME=iNoteTextMethList^';
+COMMENT ON COLUMN &VIEW..REFERENCES IS
+   'FLAGS=A----^DATATYPE=STRING(4000)^TITLE=References^ITEM_NAME=iReferences^';
+COMMENT ON COLUMN &VIEW..ACTION IS
+   'FLAGS=A----^DATATYPE=STRING(200)^TITLE=Action^ITEM_NAME=iAction^';
+
+--
+-- Mapping Information
+--
+COMMENT ON COLUMN &VIEW..CONV_LIST_ID IS
+   'FLAGS=A----^DATATYPE=STRING(100)^TITLE=Conv. List^ITEM_NAME=iConvListId^';
+COMMENT ON COLUMN &VIEW..CONV_LIST_DESCR IS
+   'FLAGS=A----^DATATYPE=STRING(100)^TITLE=Conv. List Descr.^ITEM_NAME=iConvListDescr^';
+COMMENT ON COLUMN &VIEW..COLS_USING_LIST IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Columns Using Conversion List:^ITEM_NAME=iColsUsingList^';
+COMMENT ON COLUMN &VIEW..OLD_VALUE IS
+   'FLAGS=A----^DATATYPE=STRING(200)^TITLE=Old Value^ITEM_NAME=iOldValue^';
+COMMENT ON COLUMN &VIEW..NEW_VALUE IS
+   'FLAGS=A----^DATATYPE=STRING(200)^TITLE=New Value^ITEM_NAME=iNewValue^';
+
+--
+-- Info texts
+--
+COMMENT ON COLUMN &VIEW..INFO_TEXT_HEADER IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Info:^ITEM_NAME=iInfoTextHeader^';
+COMMENT ON COLUMN &VIEW..INFO_TEXT_DETAIL IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Info:^ITEM_NAME=iInfoTextDetail^';
+COMMENT ON COLUMN &VIEW..INFO_TEXT_METH_LIST IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^TITLE=Info:^ITEM_NAME=iInfoTextMethList^';
+
+
+--
+-- Other Input Parameters
+--
+COMMENT ON COLUMN &VIEW..ORDER_BY_COL IS
+   'FLAGS=A----^DATATYPE=NUMBER^TITLE=Order By^ITEM_NAME=iOrderByCol^';
+COMMENT ON COLUMN &VIEW..INTFACE_IN IS
+   'FLAGS=A----^DATATYPE=STRING(2000)^QUERY=Migration Job ID:^QFLAGS=M---L^QVALUE=%^REF=IntfaceHeader^ITEM_NAME=iIntfaceIn^';
+COMMENT ON COLUMN &VIEW..PRINT_DOC_INFO IS
+   'FLAGS=A----^DATATYPE=STRING(1)^QUERY=Print Document Information:^QFLAGS=--S--^QVALUE=N^ITEM_NAME=iPrintDocInfo^';
+COMMENT ON COLUMN &VIEW..PRINT_HEADER IS
+   'FLAGS=A----^DATATYPE=STRING(1)^QUERY=Print Header Info:^QFLAGS=--S--^QVALUE=Y^ITEM_NAME=iPrintHeader^';
+COMMENT ON COLUMN &VIEW..PRINT_DETAIL IS
+   'FLAGS=A----^DATATYPE=STRING(1)^QUERY=Print Column Mapping:^QFLAGS=--S--^QVALUE=Y^ITEM_NAME=iPrintDetail^';
+COMMENT ON COLUMN &VIEW..PRINT_METH_LIST IS
+   'FLAGS=A----^DATATYPE=STRING(1)^QUERY=Print Method List:^QFLAGS=--S--^QVALUE=Y^ITEM_NAME=iPrintMethList^';
+COMMENT ON COLUMN &VIEW..PRINT_MAP_VALUE IS
+   'FLAGS=A----^DATATYPE=STRING(1)^QUERY=Print Mapped Values:^QFLAGS=--S--^QVALUE=Y^ITEM_NAME=iPrintMapValue^';
+
+
+
+BEGIN
+   Report_SYS.Define_Report_(
+      '&VIEW',
+      '&MODULE',
+      '&LU', 
+      'Migration Documentation',
+      '&TABLE',
+      '&PKG..&METHOD',
+      0);     
+   --Report_SYS.Define_Report_Layout_(
+   --   '&VIEW',
+   --   'IntfaceDoc.xsl',
+   --   'Migration Document',
+   --   'DYNAMIC',
+   --   'ORDER_BY_COL',
+   --   'DESIGNER');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txHeaderTitle','Spesification of migration routines for ');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txDetailTitle','Spesification of column mapping');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txMethodListTitle','Utilized/Created methods/APIs');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txMapTitle','Spesific column value mapping');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txFileInfo','File Information');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txViewInfo','Main Source/Target Information');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txLastExecutionInfo','Last Execution Information');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txTitleDocPage', 'Definitions / Column descriptions'); 
+   Report_SYS.Define_Report_Text_('&VIEW', 'txColumnName', 'Database column in IFS where source value should be transfered to.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txDescrColumnName', 'Description of the database column');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txDataType', 'Datatype of the database column. Numeric-, alfanumeric- or date values.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txSourceColumn', 'Source column from file, table or view to put into the IFS database column');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txFlags', 'IFS attribute flags. The flags describes different attributes connected to the IFS database column. May include one or more of the following values:');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txFlagsU', 'U = Update Allowed');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txFlagsI', 'I = Insert Allowed');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txFlagsM', 'M = Mandatory');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txFlagsK', 'K = Key (Foreign Key)');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txFlagsP', 'P = Parent Key');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txDefaultValue', 'This field is used to specify a value if there is no value in the source column. If no source column is specified, the standard value will be used for all rows.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txPos', 'This field is used to specify the columns location in a specified file. If i.e. a CSV file is used this field will be 1,2,3 etc.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txLength', 'This field specifies the maximum length allowed for the IFS database column. This field is used in combination with the Pos field for reading/writing files with fixed column-width.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txDecimalLength', 'The number of decimals to use when reading/writing to file.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txAmountFactor', 'This field is used to give a denominator to re-calculate the value of the source column if needed before transfer to IFS database column.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txPadCharRight', 'This field is used to specify a character that should be trimmed off or added to the right side of a colum when reading from/writing to a file. (rtrim/rpad)');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txPadCharLeft', 'This field is used to specify a character that should be trimmed off or added to the left side of a colum when reading from/writing to a file. (ltrim/lpad)');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txChangeDefaults', 'This field specifies whether or not it is allowed to change the value of the default value when running an migration job.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txExecuteSeq', 'Specify in what order the methods in the method list should be run.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txMetMethodName', 'Specify what IFS or selfdefined method that should be run.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txMetColumnName', 'Used to specify that a method should only be run depending on the value of this source column.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txMetColumnValue', 'The method will only be run if the value of the source column equals this value. I.e. if ''%'' is entered, the method will be executed for all rows that has a value in the source column.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txAction', 'Used to specify if the method should be run before or after the selected rows from the source is handeled, or if it should be executed once for each row fetched from the source.');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txHeaderColMapping', 'Explanation of columns used in the Column Mapping');
+   Report_SYS.Define_Report_Text_('&VIEW', 'txHeaderMethodList', 'Explanation of columns used in the Method List');
+   Report_SYS.Refresh_('&VIEW');   
+END;   
+/
+
+-----------------------------------------------------------------------------
+-- PACKAGE IMPLEMENTATION     
+-----------------------------------------------------------------------------
+
+PROMPT Creating &PKG implementation
+
+CREATE OR REPLACE PACKAGE BODY &PKG IS
+
+FUNCTION Get_Cols_Using_List (
+   intface_name_  IN VARCHAR2, 
+   conv_list_id_  IN VARCHAR2) RETURN VARCHAR2
+IS
+   column_list_ VARCHAR2(2000);
+
+   CURSOR c_intface_cols_pr_list IS
+      SELECT source_column || ' -> ' || column_name column_name
+        FROM intface_detail
+       WHERE conv_list_id = conv_list_id_
+         AND intface_name = intface_name_
+       ORDER BY column_name desc;
+
+BEGIN
+   General_SYS.Init_Method(lu_name_, '&PKG', 'Get_Cols_Using_List', TRUE);
+   column_list_ := null;
+   FOR cols_ IN c_intface_cols_pr_list LOOP
+      column_list_ := cols_.column_name || chr(13) || chr(10) || column_list_ ;
+   END LOOP;
+
+   RETURN column_list_;
+
+END Get_Cols_Using_List;
+
+PROCEDURE &METHOD (
+   report_attr_    IN VARCHAR2,
+   parameter_attr_ IN VARCHAR2 )
+IS
+   result_key_        NUMBER;
+   row_no_            NUMBER := 1;
+
+   block_type_        NUMBER;
+   intface_in_        VARCHAR2(2000);
+   group_id_in_       VARCHAR2(20);
+   group_description_ VARCHAR2(100);
+   note_text_group_   VARCHAR2(2000);
+
+   next_intface_     VARCHAR2(30);
+   n0_               NUMBER;
+   n1_               NUMBER;
+   done_             BOOLEAN;
+
+   rule_value_       intface_rules_tab.rule_value%TYPE;
+
+   print_doc_info_   VARCHAR2(1);
+   print_header_     VARCHAR2(1);
+   print_detail_     VARCHAR2(1);
+   print_meth_list_  VARCHAR2(1);
+   print_map_value_  VARCHAR2(1);
+
+   info_text_header_    VARCHAR2(2000);
+   info_text_detail_    VARCHAR2(2000);
+   info_text_meth_list_ VARCHAR2(2000);
+   references_          VARCHAR2(4000);
+   max_col_length_      NUMBER;
+   msg_sep_             VARCHAR2(2) := chr(13)||chr(10);
+   
+   do_xml_  BOOLEAN := Report_SYS.Should_Generate_Xml('&VIEW');
+   do_rs_   BOOLEAN := Report_SYS.Should_Generate_Result_Set('&VIEW');
+   xml_     CLOB;
+   package_name_ VARCHAR2(100) := 'INTFACE_DOCUMENTATION_REP';
+      
+   CURSOR c_intface_header (intface_name_ IN VARCHAR2, group_id_ IN VARCHAR2) IS
+      SELECT intface_name,
+             description,
+             intface_path,
+             intface_file,
+             date_format,
+             minus_pos,
+             Intface_Header_API.Get_Complete_Where(intface_name) where_clause,
+             view_name,
+             column_separator,
+             thousand_separator,
+             decimal_point,
+             column_embrace,
+             file_location,
+             Intface_File_Location_API.Encode(file_location) file_location_db,
+             Intface_Procedures_API.Get_Direction(procedure_name) Direction,
+             Intface_Direction_API.Encode(Intface_Procedures_API.Get_Direction(procedure_name)) Direction_db,
+             procedure_name,
+             last_executed,
+             executed_by,
+             last_info,
+             source_name,
+             source_owner,
+             note_text,
+             order_by_clause,
+             group_id
+        FROM intface_header
+       WHERE intface_name LIKE intface_in_
+         AND decode(group_id_,null,'1', group_id) LIKE nvl(group_id_,'1')
+       ORDER BY nvl(group_id_,group_id),description;
+
+   CURSOR c_intface_detail (intface_name_ IN VARCHAR2) IS
+      SELECT column_name,
+             description,
+             data_type,
+             pos,
+             length,
+             decimal_length,
+             amount_factor,
+             default_value,
+             default_where,
+             flags,
+             pad_char_right,
+             pad_char_left,
+             change_defaults,
+             attr_seq,
+             source_column,
+             note_text
+        FROM intface_detail
+       WHERE intface_name = intface_name_
+       ORDER BY decode(pos,0,999999999,pos), default_value;
+
+   CURSOR c_intface_method_list (intface_name_ IN VARCHAR2) IS
+      SELECT execute_seq,
+             view_name,
+             method_name,
+             column_name,
+             column_value,
+             convert_attr, 
+             note_text,
+             references,
+             action
+        FROM intface_method_list
+       WHERE intface_name = intface_name_
+       ORDER BY execute_seq;
+
+   CURSOR c_intface_conv_list (intface_name_ IN VARCHAR2) IS
+      SELECT distinct t1.conv_list_id,
+             Intface_Conv_List_API.Get_Description(t1.conv_list_id) conv_list_descr,
+             INTFACE_DOCUMENTATION_RPI.Get_Cols_Using_List(intface_name_, t1.conv_list_id) cols_using_list,
+             t1.old_value,
+             t1.new_value
+        FROM intface_conv_list_cols t1, intface_detail t2
+       WHERE t2.intface_name = intface_name_
+         AND t1.conv_list_id = t2.conv_list_id
+       ORDER BY t1.conv_list_id, t1.old_value, t1.new_value;
+
+   -- Max-value to format output
+   CURSOR c_intface_method_list_attrib0 (intface_name_ IN VARCHAR2, exec_seq_ IN NUMBER ) IS
+      SELECT max(length(column_name )) max_length
+      FROM intface_method_list_attrib
+      WHERE intface_name = intface_name_
+      AND   execute_seq = exec_seq_
+      AND nvl(ltrim(rtrim(lu_reference)),'-') != '-'
+      AND   iid_values IS NULL;
+   -- Get refernces for basic data LU's
+   CURSOR c_intface_method_list_attrib1 (intface_name_ IN VARCHAR2, exec_seq_ IN NUMBER ) IS
+      SELECT column_name, flags, lu_reference
+      FROM intface_method_list_attrib
+      WHERE intface_name = intface_name_
+      AND   execute_seq = exec_seq_
+      AND nvl(ltrim(rtrim(lu_reference)),'-') != '-'
+      AND iid_values IS NULL;
+BEGIN
+   General_SYS.Init_Method(lu_name_, '&PKG', '&METHOD');
+
+   n0_ := 1;
+   done_ := FALSE;
+
+   result_key_   := Client_SYS.Attr_Value_To_Number(Client_SYS.Get_Item_Value('RESULT_KEY', report_attr_));
+   intface_in_   := upper(Client_SYS.Get_Item_Value('INTFACE_IN', parameter_attr_));
+   group_id_in_  := upper(Client_SYS.Get_Item_Value('GROUP_ID', parameter_attr_));
+
+   print_doc_info_:= upper(Client_SYS.Get_Item_Value('PRINT_DOC_INFO', parameter_attr_));
+   print_header_ := upper(Client_SYS.Get_Item_Value('PRINT_HEADER', parameter_attr_));
+   print_detail_ := upper(Client_SYS.Get_Item_Value('PRINT_DETAIL', parameter_attr_));
+   print_meth_list_ := upper(Client_SYS.Get_Item_Value('PRINT_METH_LIST', parameter_attr_));
+   print_map_value_ := upper(Client_SYS.Get_Item_Value('PRINT_MAP_VALUE', parameter_attr_));
+
+   -- Assigning texts into infotexts
+   info_text_header_    := Language_SYS.Translate_Constant(lu_name_, 'INFTXTHEADER: Not Used', Fnd_Session_API.Get_Language);
+   info_text_detail_    := Language_SYS.Translate_Constant(lu_name_, 'INFTXTDETAIL: Not Used', Fnd_Session_API.Get_Language);
+   info_text_meth_list_ := Language_SYS.Translate_Constant(lu_name_, 'INFTXTMETHLI: Not Used', Fnd_Session_API.Get_Language);
+
+
+   note_text_group_ := Intface_Group_API.Get_Note_Text(group_id_in_);
+
+   Trace_SYS.Message('Migration: ' || intface_in_);
+   Trace_SYS.Message('GroupID  : ' || group_id_in_);
+
+   IF (do_xml_) THEN
+      Xml_Record_Writer_SYS.Create_Report_Header(xml_,'&VIEW',package_name_);
+      Xml_Record_Writer_SYS.Start_Element(xml_, 'INTFACE_HEADERS');
+   END IF;
+
+
+   FOR head_ IN c_intface_header( intface_in_, group_id_in_ ) LOOP
+
+      group_description_ := Intface_Group_API.Get_Description(head_.group_id);
+      
+               
+      IF print_header_ = 'Y' THEN
+ 
+         -- Inserting header information (Block type 1)
+         block_type_ := 1;
+         
+         IF (do_xml_) THEN
+            Xml_Record_Writer_SYS.Start_Element(xml_, 'INTFACE_HEADER');
+            Xml_Record_Writer_SYS.Add_Element(xml_,'BLOCK_TYPE', block_type_);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'INTFACE_NAME', head_.intface_name);                
+            Xml_Record_Writer_SYS.Add_Element(xml_,'INTFACE_DESCR', head_.description);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'INTFACE_PATH', head_.intface_path);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'INTFACE_FILE', head_.intface_file);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'DATE_FORMAT', head_.date_format);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'MINUS_POS', head_.minus_pos);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'WHERE_CLAUSE', head_.where_clause);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'VIEW_NAME', head_.view_name);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'COLUMN_SEPARATOR', head_.column_separator);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'THOUSAND_SEPARATOR', head_.thousand_separator);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'DECIMAL_POINT', head_.decimal_point);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'COLUMN_EMBRACE', head_.column_embrace);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'FILE_LOCATION', head_.file_location);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'FILE_LOCATION_DB', head_.file_location_db);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'DIRECTION', head_.direction);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'DIRECTION_DB', head_.direction_db);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'PROCEDURE_NAME', head_.procedure_name);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'LAST_EXECUTED', head_.last_executed);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'EXECUTED_BY', head_.executed_by);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'LAST_INFO', head_.last_info);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'SOURCE_NAME', head_.source_name);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'SOURCE_OWNER', head_.source_owner);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'NOTE_TEXT_HEADER', head_.note_text);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'ORDER_BY_CLAUSE', head_.order_by_clause);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'GROUP_ID', head_.group_id);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'GROUP_DESCRIPTION', group_description_);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'NOTE_TEXT_GROUP', note_text_group_);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'INFO_TEXT_HEADER', info_text_header_);
+            Xml_Record_Writer_SYS.Add_Element(xml_,'PRINT_DOC_INFO', print_doc_info_);
+         END IF;
+ 
+         IF (do_rs_) THEN
+            INSERT INTO &TABLE (
+               result_key, 
+               row_no, 
+               parent_row_no,
+               &BLOCK_TYPE,
+               &INTFACE_NAME,
+               &INTFACE_DESCR,
+               &INTFACE_PATH,
+               &INTFACE_FILE,
+               &DATE_FORMAT,
+               &MINUS_POS,
+               &WHERE_CLAUSE,
+               &VIEW_NAME,
+               &COLUMN_SEPARATOR,
+               &THOUSAND_SEPARATOR,
+               &DECIMAL_POINT,
+               &COLUMN_EMBRACE,
+               &FILE_LOCATION,
+               &FILE_LOCATION_DB,
+               &DIRECTION,
+               &DIRECTION_DB,
+               &PROCEDURE_NAME,
+               &LAST_EXECUTED,
+               &EXECUTED_BY,
+               &LAST_INFO,
+               &SOURCE_NAME,
+               &SOURCE_OWNER,
+               &NOTE_TEXT_HEADER,
+               &ORDER_BY_CLAUSE,
+               &GROUP_ID,
+               &GROUP_DESCRIPTION,
+               &NOTE_TEXT_GROUP,
+               &INFO_TEXT_HEADER,
+               &PRINT_DOC_INFO)
+            VALUES (
+               result_key_,
+               row_no_,
+               0,
+               block_type_,
+               head_.intface_name,
+               head_.description,
+               head_.intface_path,
+               head_.intface_file,
+               head_.date_format,
+               head_.minus_pos,
+               head_.where_clause,
+               head_.view_name,
+               head_.column_separator,
+               head_.thousand_separator,
+               head_.decimal_point,
+               head_.column_embrace,
+               head_.file_location,
+               head_.file_location_db,
+               head_.direction,
+               head_.direction_db,
+               head_.procedure_name,
+               head_.last_executed,
+               head_.executed_by,
+               head_.last_info,
+               head_.source_name,
+               head_.source_owner,
+               head_.note_text,
+               head_.order_by_clause,
+               head_.group_id,
+               group_description_,
+               note_text_group_,
+               info_text_header_,
+               print_doc_info_ );
+  
+               row_no_ := row_no_ + 1;
+         END IF;   
+      END IF;
+
+      IF print_meth_list_ = 'Y' THEN
+      
+         IF (do_xml_) THEN
+            Xml_Record_Writer_SYS.Start_Element(xml_, 'METHOD_LISTS');
+         END IF;
+                         
+         FOR meth_ IN c_intface_method_list( head_.Intface_name ) LOOP
+            references_ := NULL;
+            IF ( meth_.references IS NOT NULL ) THEN   
+               references_ := meth_.references;
+            ELSE
+               OPEN  c_intface_method_list_attrib0(head_.Intface_name, meth_.execute_seq );
+               FETCH c_intface_method_list_attrib0 INTO max_col_length_;
+               CLOSE c_intface_method_list_attrib0;
+               FOR arec_ IN c_intface_method_list_attrib1(head_.Intface_name, meth_.execute_seq ) LOOP
+                  references_ := references_||rpad(arec_.column_name,max_col_length_,' ')||' - '||
+                                    rpad(arec_.flags,3,' ')||' - '||
+                                    arec_.lu_reference||msg_sep_;
+               END LOOP;
+            END IF;
+            -- Inserting method list information (Block type 3)
+            block_type_ := 3;
+            
+            IF (do_xml_) THEN
+               Xml_Record_Writer_SYS.Start_Element(xml_, 'METHOD_LIST');
+               Xml_Record_Writer_SYS.Add_Element(xml_,'BLOCK_TYPE', block_type_);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'EXECUTE_SEQ', meth_.execute_seq);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'MET_VIEW_NAME', meth_.view_name);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'MET_METHOD_NAME', meth_.method_name);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'MET_COLUMN_NAME', meth_.column_name);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'MET_COLUMN_VALUE', meth_.column_value);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'CONVERT_ATTR', meth_.convert_attr);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'NOTE_TEXT_METH_LIST', meth_.note_text);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'REFERENCES', references_);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'ACTION', meth_.action);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'INFO_TEXT_METH_LIST', info_text_meth_list_);
+               Xml_Record_Writer_SYS.End_Element(xml_, 'METHOD_LIST');
+            END IF;  
+            
+            IF (do_rs_) THEN
+               INSERT INTO &TABLE (
+                  result_key, 
+                  row_no, 
+                  parent_row_no,
+                  &INTFACE_NAME,
+                  &BLOCK_TYPE,
+                  &EXECUTE_SEQ,
+                  &MET_VIEW_NAME,
+                  &MET_METHOD_NAME,
+                  &MET_COLUMN_NAME,
+                  &MET_COLUMN_VALUE,
+                  &CONVERT_ATTR,
+                  &NOTE_TEXT_METH_LIST,
+                  &REFERENCES,
+                  &ACTION,
+                  &INFO_TEXT_METH_LIST,
+                  &PRINT_DOC_INFO)
+               VALUES (
+                  result_key_,
+                  row_no_,
+                  0,
+                  head_.intface_name,
+                  block_type_,
+                  meth_.execute_seq,
+                  meth_.view_name,
+                  meth_.method_name,
+                  meth_.column_name,
+                  meth_.column_value,
+                  meth_.convert_attr,
+                  meth_.note_text,
+                  references_,
+                  meth_.action,
+                  info_text_meth_list_,
+                  print_doc_info_);
+    
+               row_no_ := row_no_ + 1;
+            END IF;
+         END LOOP; -- Method List Cursor
+
+         IF (do_xml_) THEN
+            Xml_Record_Writer_SYS.End_Element(xml_, 'METHOD_LISTS');
+         END IF;
+
+      END IF;
+
+      IF print_detail_ = 'Y' THEN
+      
+         IF (do_xml_) THEN
+            Xml_Record_Writer_SYS.Start_Element(xml_, 'INTFACE_DETAILS');
+         END IF;
+         
+         FOR det_ IN c_intface_detail ( head_.intface_name ) LOOP
+
+
+            IF head_.file_location_db != '3' THEN 
+               block_type_ := 5;
+            ELSE
+               block_type_ := 2;
+            END IF;
+            
+            IF (do_xml_) THEN
+               Xml_Record_Writer_SYS.Start_Element(xml_, 'INTFACE_DETAIL');
+               Xml_Record_Writer_SYS.Add_Element(xml_,'BLOCK_TYPE', block_type_);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'FLAGS', det_.flags);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'COLUMN_NAME', det_.column_name);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'DESCR_COLUMN_NAME', det_.description);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'DATA_TYPE', det_.data_type);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'POS', det_.pos);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'LENGTH', det_.length);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'DECIMAL_LENGTH', det_.decimal_length);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'AMOUNT_FACTOR', det_.amount_factor);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'DEFAULT_VALUE', det_.default_value);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'DEFAULT_WHERE', det_.default_where);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'PAD_CHAR_RIGHT', det_.pad_char_right);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'PAD_CHAR_LEFT', det_.pad_char_left);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'CHANGE_DEFAULTS', det_.change_defaults);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'ATTR_SEQ', det_.attr_seq);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'SOURCE_COLUMN', det_.source_column);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'NOTE_TEXT_DETAIL', det_.note_text);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'INFO_TEXT_DETAIL', info_text_detail_);
+               Xml_Record_Writer_SYS.End_Element(xml_, 'INTFACE_DETAIL');
+            END IF;
+            
+            -- Inserting detail information (Block type 2 if no file, or 5 if file)
+            IF (do_rs_) THEN
+               INSERT INTO &TABLE (
+                  result_key, 
+                  row_no, 
+                  parent_row_no,
+                  &INTFACE_NAME,
+                  &BLOCK_TYPE,
+                  &COLUMN_NAME,
+                  &DESCR_COLUMN_NAME,
+                  &DATA_TYPE,
+                  &POS,
+                  &LENGTH,
+                  &DECIMAL_LENGTH,
+                  &AMOUNT_FACTOR,
+                  &DEFAULT_VALUE,
+                  &DEFAULT_WHERE,
+                  &FLAGS,
+                  &PAD_CHAR_RIGHT,
+                  &PAD_CHAR_LEFT,
+                  &CHANGE_DEFAULTS,
+                  &ATTR_SEQ,
+                  &SOURCE_COLUMN,
+                  &NOTE_TEXT_DETAIL,
+                  &INFO_TEXT_DETAIL,
+                  &PRINT_DOC_INFO)
+               VALUES (
+                  result_key_,
+                  row_no_,
+                  0,
+                  head_.intface_name,
+                  block_type_,
+                  det_.column_name,
+                  det_.description,
+                  det_.data_type,
+                  det_.pos,
+                  det_.length,
+                  det_.decimal_length,
+                  det_.amount_factor,
+                  det_.default_value,
+                  det_.default_where,
+                  det_.flags,
+                  det_.pad_char_right,
+                  det_.pad_char_left,
+                  det_.change_defaults,
+                  det_.attr_seq,
+                  det_.source_column,
+                  det_.note_text,
+                  info_text_detail_,
+                  print_doc_info_);
+   
+               row_no_ := row_no_ + 1;
+            END IF;
+         END LOOP; -- Detail Cursor
+         
+         IF (do_xml_) THEN
+            Xml_Record_Writer_SYS.End_Element(xml_, 'INTFACE_DETAILS');
+         END IF;
+         
+      END IF;
+
+      IF print_map_value_ = 'Y' THEN
+      
+         IF (do_xml_) THEN
+            Xml_Record_Writer_SYS.Start_Element(xml_, 'COLUMN_MAPPING_LISTS');
+         END IF;
+
+         FOR map_ IN c_intface_conv_list( head_.intface_name ) LOOP
+            
+            block_type_ := 4;
+
+            IF (do_xml_) THEN
+               Xml_Record_Writer_SYS.Start_Element(xml_, 'COLUMN_MAPPING_LIST');
+               Xml_Record_Writer_SYS.Add_Element(xml_,'BLOCK_TYPE', block_type_);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'CONV_LIST_ID', map_.conv_list_id);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'CONV_LIST_DESCR', map_.conv_list_descr);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'COLS_USING_LIST', map_.cols_using_list);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'OLD_VALUE', map_.old_value);
+               Xml_Record_Writer_SYS.Add_Element(xml_,'NEW_VALUE', map_.new_value);
+               Xml_Record_Writer_SYS.End_Element(xml_, 'COLUMN_MAPPING_LIST');
+            END IF;
+            
+            -- Inserting column mapping information (Block type 4)
+            IF (do_rs_) THEN
+               INSERT INTO &TABLE (
+                  result_key, 
+                  row_no, 
+                  parent_row_no,
+                  &INTFACE_NAME,
+                  &BLOCK_TYPE,
+                  &CONV_LIST_ID,
+                  &CONV_LIST_DESCR,
+                  &COLS_USING_LIST,
+                  &OLD_VALUE,
+                  &NEW_VALUE,
+                  &PRINT_DOC_INFO)
+               VALUES (
+                  result_key_,
+                  row_no_,
+                  0,
+                  head_.intface_name,
+                  block_type_,
+                  map_.conv_list_id,
+                  map_.conv_list_descr,
+                  map_.cols_using_list,
+                  map_.old_value,
+                  map_.new_value,
+                  print_doc_info_);
+   
+               row_no_ := row_no_ + 1;
+            END IF;
+         END LOOP; -- Column Mapping Cursor
+         
+         IF (do_xml_) THEN
+            Xml_Record_Writer_SYS.End_Element(xml_, 'COLUMN_MAPPING_LISTS');
+         END IF;
+         
+      END IF;
+
+      IF (do_xml_) THEN
+         Xml_Record_Writer_SYS.End_Element(xml_, 'INTFACE_HEADER');
+      END IF;
+      
+   END LOOP; -- Header Cursor
+   
+   IF (do_xml_) THEN
+      Xml_Record_Writer_SYS.End_Element(xml_, 'INTFACE_HEADERS');
+      Xml_Record_Writer_SYS.End_Element(xml_,'&VIEW');
+      Report_SYS.Finish_Xml_Report('&VIEW',result_key_,xml_);
+
+   END IF;
+
+
+EXCEPTION
+   WHEN OTHERS THEN
+      RAISE;
+
+END &METHOD;
+
+END &PKG;
+/
+SHOW ERROR
+
+-----------------------------------------------------------------------------
+-- END
+-----------------------------------------------------------------------------
+
+
+----------------------------------------------------------
+-- <UNDEFINE_SECTION>
+----------------------------------------------------------
+-- This section is reserved for undefine statements
+-- nothing should be manually written below because
+-- that would be overwritten everytime the IFS / Undefine
+-- tool is run.  
+-- Also do NOT make any changes to the above tag because
+-- this will result in duplicated code
+----------------------------------------------------------
+UNDEFINE MODULE
+UNDEFINE LU
+UNDEFINE PKG
+UNDEFINE TABLE
+UNDEFINE RAWVIEW
+UNDEFINE VIEW
+UNDEFINE METHOD
+UNDEFINE BLOCK_TYPE
+UNDEFINE INTFACE_NAME
+UNDEFINE INTFACE_DESCR
+UNDEFINE INTFACE_PATH
+UNDEFINE INTFACE_FILE
+UNDEFINE DATE_FORMAT
+UNDEFINE MINUS_POS
+UNDEFINE WHERE_CLAUSE
+UNDEFINE VIEW_NAME
+UNDEFINE COLUMN_SEPARATOR
+UNDEFINE THOUSAND_SEPARATOR
+UNDEFINE DECIMAL_POINT
+UNDEFINE COLUMN_EMBRACE
+UNDEFINE FILE_LOCATION
+UNDEFINE FILE_LOCATION_DB
+UNDEFINE DIRECTION
+UNDEFINE DIRECTION_DB
+UNDEFINE PROCEDURE_NAME
+UNDEFINE LAST_EXECUTED
+UNDEFINE EXECUTED_BY
+UNDEFINE LAST_INFO
+UNDEFINE SOURCE_NAME
+UNDEFINE SOURCE_OWNER
+UNDEFINE NOTE_TEXT_HEADER
+UNDEFINE ORDER_BY_CLAUSE
+UNDEFINE COLUMN_NAME
+UNDEFINE DESCR_COLUMN_NAME
+UNDEFINE DATA_TYPE
+UNDEFINE POS
+UNDEFINE LENGTH
+UNDEFINE DECIMAL_LENGTH
+UNDEFINE AMOUNT_FACTOR
+UNDEFINE DEFAULT_VALUE
+UNDEFINE DEFAULT_WHERE
+UNDEFINE FLAGS
+UNDEFINE PAD_CHAR_RIGHT
+UNDEFINE PAD_CHAR_LEFT
+UNDEFINE CHANGE_DEFAULTS
+UNDEFINE ATTR_SEQ
+UNDEFINE SOURCE_COLUMN
+UNDEFINE NOTE_TEXT_DETAIL
+UNDEFINE EXECUTE_SEQ
+UNDEFINE MET_VIEW_NAME
+UNDEFINE MET_METHOD_NAME
+UNDEFINE MET_COLUMN_NAME
+UNDEFINE MET_COLUMN_VALUE
+UNDEFINE CONVERT_ATTR
+UNDEFINE NOTE_TEXT_METH_LIST
+UNDEFINE REFERENCES
+UNDEFINE ACTION
+UNDEFINE CONV_LIST_ID
+UNDEFINE CONV_LIST_DESCR
+UNDEFINE COLS_USING_LIST
+UNDEFINE OLD_VALUE
+UNDEFINE NEW_VALUE
+UNDEFINE GROUP_ID
+UNDEFINE GROUP_DESCRIPTION
+UNDEFINE NOTE_TEXT_GROUP
+UNDEFINE INFO_TEXT_HEADER
+UNDEFINE INFO_TEXT_DETAIL
+UNDEFINE INFO_TEXT_METH_LIST
+UNDEFINE PRINT_DOC_INFO

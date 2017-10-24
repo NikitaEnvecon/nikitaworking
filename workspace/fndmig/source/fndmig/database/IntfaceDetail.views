@@ -1,0 +1,28 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceDetail
+--  Component:    FNDMIG
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+VIEW Intface_Detail_Col_Lov IS
+SELECT intface_name                   intface_name,
+       column_name                    column_name,
+       flags                          flags,
+       source_column                  source_column,
+       rowkey                        objkey
+FROM   intface_detail_tab;
+

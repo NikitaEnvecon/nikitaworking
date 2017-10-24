@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FndNavigator xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Legacy="false" Source="calms\client\navigator-functional.xml">
+  <FndNavigatorEntries>
+    <FndNavigatorEntry>
+      <Key>CONTAIER_EVEN_TRACKI</Key>
+      <Name>Container Event Tracking</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>NAVIGATOR_Root</ParentKey>
+      <Ordinal>90</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>CONTAIER_EVEN_TRACKI.CONTAIER_MOVE_TRACKI</Key>
+      <Name>Container Movement Tracking</Name>
+      <Url>ifsapf:frmContainerMoveTrack</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>CONTAIER_EVEN_TRACKI</ParentKey>
+      <Ordinal>200</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>CONTAIER_EVEN_TRACKI.BASI_DATA</Key>
+      <Name>Basic Data</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>CONTAIER_EVEN_TRACKI</ParentKey>
+      <Ordinal>1000</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>CONTAIER_EVEN_TRACKI.BASI_DATA.BASI_DATA</Key>
+      <Name>Basic Data</Name>
+      <Url>ifsapf:frmBasicData</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>CONTAIER_EVEN_TRACKI.BASI_DATA</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>CONTAIER_EVEN_TRACKI.EQUINT_CHARCS</Key>
+      <Name>Equipment Charecterstics</Name>
+      <Url>ifsapf:frmEquipmentCharacteristic</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>CONTAIER_EVEN_TRACKI</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+  </FndNavigatorEntries>
+  <FndShortcutItems />
+</FndNavigator>

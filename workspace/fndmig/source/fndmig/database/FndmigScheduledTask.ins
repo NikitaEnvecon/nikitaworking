@@ -1,0 +1,30 @@
+-----------------------------------------------------------------------------
+--
+--  Module:FNDMIG
+--
+--  Purpose : Register batch schedule.
+--
+--  Date    Sign   History
+--  ------  ----   -----------------------------------------------------------
+--  100505 HAYALK  Created
+-----------------------------------------------------------------------------
+
+PROMPT Register Batch Schedule Method "INTFACE_HEADER_API.START_BATCH_"
+SET SERVEROUTPUT ON
+DECLARE
+   schedule_method_id_    NUMBER;
+   seq_no_                NUMBER;
+   info_msg_              VARCHAR2(32000);
+BEGIN
+   info_msg_ := Message_SYS.Construct('');
+   Message_SYS.Add_Attribute(info_msg_, 'METHOD_NAME', 'INTFACE_HEADER_API.START_BATCH_');
+   Message_SYS.Add_Attribute(info_msg_, 'DESCRIPTION', 'Data Migration scheduled jobs');
+   Message_SYS.Add_Attribute(info_msg_, 'MODULE', 'FNDMIG');
+   Message_SYS.Add_Attribute(info_msg_, 'SINGLE_EXECUTION_DB', 'FALSE');
+   Message_SYS.Add_Attribute(info_msg_, 'ARGUMENT_TYPE_DB', 'ATTRIBUTE');
+   Message_SYS.Add_Attribute(info_msg_, 'VALIDATION_METHOD', '');
+   Batch_SYS.Register_Batch_Schedule_Method(schedule_method_id_, info_msg_);
+   Batch_SYS.Register_Schedule_Method_Param(seq_no_,schedule_method_id_,'ATTR_','');    
+END;
+/
+COMMIT;

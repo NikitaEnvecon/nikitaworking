@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menuTbwMethods_menu_Details___.Caption" xml:space="preserve">
+    <value>&amp;Details...</value>
+  </data>
+  <data name="menuTbwMethods_menu_Translation___.Caption" xml:space="preserve">
+    <value>&amp;Translation...</value>
+  </data>
+  <data name="menuTbwMethods_menu_Tax_Texts_per_Tax_Code___.Caption" xml:space="preserve">
+    <value>&amp;Tax Texts per Tax Code...</value>
+  </data>
+  <data name="menuTbwMethods_menu_Tax_Withholding___.Caption" xml:space="preserve">
+    <value>&amp;Tax Withholding...</value>
+  </data>
+  <data name="menuTbwMethods_menu_Change_Company___.Caption" xml:space="preserve">
+    <value>&amp;Change Company...</value>
+  </data>
+  <data name="menuOperations_menu_Translation___.Caption" xml:space="preserve">
+    <value>&amp;Translation...</value>
+  </data>
+  <data name="menuOperations_menu_Tax_Withholding___.Caption" xml:space="preserve">
+    <value>&amp;Tax Withholding...</value>
+  </data>
+  <data name="menuOperations_menu_Change_Company___.Caption" xml:space="preserve">
+    <value>&amp;Change Company...</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuItem__Details.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 22</value>
+  </data>
+  <data name="menuItem__Translation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 22</value>
+  </data>
+  <data name="menuItem__Tax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 22</value>
+  </data>
+  <data name="menuItem__Tax_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 22</value>
+  </data>
+  <data name="menuSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 6</value>
+  </data>
+  <data name="menuItem__Change.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 22</value>
+  </data>
+  <data name="menuTbwMethods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 120</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods.Name" xml:space="preserve">
+    <value>menuTbwMethods</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="menuItem__Translation_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="menuItem__Tax_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="menuSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 6</value>
+  </data>
+  <data name="menuItem__Change_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="menuSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 6</value>
+  </data>
+  <data name="menuOperations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 82</value>
+  </data>
+  <data name="&gt;&gt;menuOperations.Name" xml:space="preserve">
+    <value>menuOperations</value>
+  </data>
+  <data name="&gt;&gt;menuOperations.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;__colObjid.Name" xml:space="preserve">
+    <value>__colObjid</value>
+  </data>
+  <data name="&gt;&gt;__colObjid.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalTableColumn, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;__colObjid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;__colObjid.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;__colObjversion.Name" xml:space="preserve">
+    <value>__colObjversion</value>
+  </data>
+  <data name="&gt;&gt;__colObjversion.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalTableColumn, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;__colObjversion.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;__colObjversion.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="colCompany.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colCompany.Title" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="colCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colCompany.Name" xml:space="preserve">
+    <value>colCompany</value>
+  </data>
+  <data name="&gt;&gt;colCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colCompany.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colCompany.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="colFeeCode.Title" xml:space="preserve">
+    <value>Tax Code</value>
+  </data>
+  <data name="&gt;&gt;colFeeCode.Name" xml:space="preserve">
+    <value>colFeeCode</value>
+  </data>
+  <data name="&gt;&gt;colFeeCode.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colFeeCode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colFeeCode.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="colDescription.Title" xml:space="preserve">
+    <value>Tax Code Description</value>
+  </data>
+  <data name="colDescription.Width" type="System.Int32, mscorlib">
+    <value>179</value>
+  </data>
+  <data name="&gt;&gt;colDescription.Name" xml:space="preserve">
+    <value>colDescription</value>
+  </data>
+  <data name="&gt;&gt;colDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colDescription.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="colPercentage.Title" xml:space="preserve">
+    <value>Tax %</value>
+  </data>
+  <data name="&gt;&gt;colPercentage.Name" xml:space="preserve">
+    <value>colPercentage</value>
+  </data>
+  <data name="&gt;&gt;colPercentage.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colPercentage.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colPercentage.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="colValidFrom.Title" xml:space="preserve">
+    <value>Valid From</value>
+  </data>
+  <data name="&gt;&gt;colValidFrom.Name" xml:space="preserve">
+    <value>colValidFrom</value>
+  </data>
+  <data name="&gt;&gt;colValidFrom.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colValidFrom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colValidFrom.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="colValidUntil.Title" xml:space="preserve">
+    <value>Valid Until</value>
+  </data>
+  <data name="&gt;&gt;colValidUntil.Name" xml:space="preserve">
+    <value>colValidUntil</value>
+  </data>
+  <data name="&gt;&gt;colValidUntil.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colValidUntil.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colValidUntil.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="colFeeType.Title" xml:space="preserve">
+    <value>Tax Type</value>
+  </data>
+  <data name="&gt;&gt;colFeeType.Name" xml:space="preserve">
+    <value>colFeeType</value>
+  </data>
+  <data name="&gt;&gt;colFeeType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colFeeType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colFeeType.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="colsVatReceived.Title" xml:space="preserve">
+    <value>Tax Method
+Tax Received</value>
+  </data>
+  <data name="&gt;&gt;colsVatReceived.Name" xml:space="preserve">
+    <value>colsVatReceived</value>
+  </data>
+  <data name="&gt;&gt;colsVatReceived.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsVatReceived.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsVatReceived.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="colsVatDisbursed.Title" xml:space="preserve">
+    <value>Tax Method
+Tax Disbursed</value>
+  </data>
+  <data name="&gt;&gt;colsVatDisbursed.Name" xml:space="preserve">
+    <value>colsVatDisbursed</value>
+  </data>
+  <data name="&gt;&gt;colsVatDisbursed.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsVatDisbursed.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsVatDisbursed.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="colnDeductible.Title" xml:space="preserve">
+    <value>Deductible %</value>
+  </data>
+  <data name="&gt;&gt;colnDeductible.Name" xml:space="preserve">
+    <value>colnDeductible</value>
+  </data>
+  <data name="&gt;&gt;colnDeductible.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colnDeductible.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colnDeductible.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="colMultipleTax.Title" xml:space="preserve">
+    <value>Multiple Tax</value>
+  </data>
+  <data name="&gt;&gt;colMultipleTax.Name" xml:space="preserve">
+    <value>colMultipleTax</value>
+  </data>
+  <data name="&gt;&gt;colMultipleTax.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colMultipleTax.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colMultipleTax.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="colsTaxRecoverable.Title" xml:space="preserve">
+    <value>Tax
+Recoverable</value>
+  </data>
+  <data name="&gt;&gt;colsTaxRecoverable.Name" xml:space="preserve">
+    <value>colsTaxRecoverable</value>
+  </data>
+  <data name="&gt;&gt;colsTaxRecoverable.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsTaxRecoverable.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsTaxRecoverable.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="colsFeeTypeDb.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colsFeeTypeDb.Title" xml:space="preserve">
+    <value>Tax Type</value>
+  </data>
+  <data name="colsFeeTypeDb.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colsFeeTypeDb.Name" xml:space="preserve">
+    <value>colsFeeTypeDb</value>
+  </data>
+  <data name="&gt;&gt;colsFeeTypeDb.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colsFeeTypeDb.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colsFeeTypeDb.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="colTaxAmountAtInvPrint.Title" xml:space="preserve">
+    <value>Tax Amount at
+Invoice Printout</value>
+  </data>
+  <data name="colTaxAmountAtInvPrint.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;colTaxAmountAtInvPrint.Name" xml:space="preserve">
+    <value>colTaxAmountAtInvPrint</value>
+  </data>
+  <data name="&gt;&gt;colTaxAmountAtInvPrint.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colTaxAmountAtInvPrint.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colTaxAmountAtInvPrint.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="colTaxAmountLimit.Title" xml:space="preserve">
+    <value>Tax Amount Limit
+in Accounting Currency</value>
+  </data>
+  <data name="colTaxAmountLimit.Width" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
+  <data name="&gt;&gt;colTaxAmountLimit.Name" xml:space="preserve">
+    <value>colTaxAmountLimit</value>
+  </data>
+  <data name="&gt;&gt;colTaxAmountLimit.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colTaxAmountLimit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colTaxAmountLimit.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="colTaxReportingCategory.Title" xml:space="preserve">
+    <value>Tax Reporting
+Category</value>
+  </data>
+  <data name="colTaxReportingCategory.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;colTaxReportingCategory.Name" xml:space="preserve">
+    <value>colTaxReportingCategory</value>
+  </data>
+  <data name="&gt;&gt;colTaxReportingCategory.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;colTaxReportingCategory.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colTaxReportingCategory.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1328, 306</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 14</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Tax Codes</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menu_Translation___.Name" xml:space="preserve">
+    <value>menuOperations_menu_Translation___</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menu_Translation___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menu_Tax_Withholding___.Name" xml:space="preserve">
+    <value>menuOperations_menu_Tax_Withholding___</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menu_Tax_Withholding___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menu_Change_Company___.Name" xml:space="preserve">
+    <value>menuOperations_menu_Change_Company___</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menu_Change_Company___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Details___.Name" xml:space="preserve">
+    <value>menuTbwMethods_menu_Details___</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Details___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Translation___.Name" xml:space="preserve">
+    <value>menuTbwMethods_menu_Translation___</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Translation___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Tax_Texts_per_Tax_Code___.Name" xml:space="preserve">
+    <value>menuTbwMethods_menu_Tax_Texts_per_Tax_Code___</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Tax_Texts_per_Tax_Code___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Tax_Withholding___.Name" xml:space="preserve">
+    <value>menuTbwMethods_menu_Tax_Withholding___</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Tax_Withholding___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Change_Company___.Name" xml:space="preserve">
+    <value>menuTbwMethods_menu_Change_Company___</value>
+  </data>
+  <data name="&gt;&gt;menuTbwMethods_menu_Change_Company___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Details.Name" xml:space="preserve">
+    <value>menuItem__Details</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Details.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Translation.Name" xml:space="preserve">
+    <value>menuItem__Translation</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Translation.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Tax.Name" xml:space="preserve">
+    <value>menuItem__Tax</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Tax.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Tax_1.Name" xml:space="preserve">
+    <value>menuItem__Tax_1</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Tax_1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator1.Name" xml:space="preserve">
+    <value>menuSeparator1</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Change.Name" xml:space="preserve">
+    <value>menuItem__Change</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Change.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Translation_1.Name" xml:space="preserve">
+    <value>menuItem__Translation_1</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Translation_1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Tax_2.Name" xml:space="preserve">
+    <value>menuItem__Tax_2</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Tax_2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator2.Name" xml:space="preserve">
+    <value>menuSeparator2</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Change_1.Name" xml:space="preserve">
+    <value>menuItem__Change_1</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Change_1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator3.Name" xml:space="preserve">
+    <value>menuSeparator3</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator3.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>tbwStatFee</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cTableWindowFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

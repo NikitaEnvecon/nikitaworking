@@ -1,0 +1,48 @@
+-------------------------------------------------------------------
+-- Exported by:  IFS Foundation1
+-- Settings for: FNDMIG_EXCEL_ADDIN
+-- Date/Time:    2014-01-06 11:50:48
+-------------------------------------------------------------------
+SET SERVEROUTPUT ON
+
+DEFINE GRANTEE = FNDMIG_EXCEL_ADDIN
+--
+-- Role Management
+--
+BEGIN
+   Security_SYS.Create_Role('&GRANTEE', 'Grants the user access to use the IFS Data Migration Excel Addin', 'ENDUSERROLE', 'TRUE');
+   Security_SYS.Clear_Role('&GRANTEE');
+EXCEPTION
+   WHEN others THEN
+      NULL;
+END;
+/
+
+--
+-- Grants on application views 
+--
+BEGIN
+   Security_SYS.Grant_View('INTFACE_ALLOWED_JOBS', '&GRANTEE');
+   Security_SYS.Grant_View('INTFACE_DETAIL', '&GRANTEE');
+   Security_SYS.Grant_View('INTFACE_EXECUTION', '&GRANTEE');
+   Security_SYS.Grant_View('INTFACE_EXECUTION_DETAIL', '&GRANTEE');
+   Security_SYS.Grant_View('INTFACE_HEADER', '&GRANTEE');
+   Security_SYS.Grant_View('INTFACE_METHOD_LIST', '&GRANTEE');
+   Security_SYS.Grant_View('INTFACE_METHOD_LIST_ATTRIB', '&GRANTEE');
+   Security_SYS.Grant_View('INTFACE_RULES', '&GRANTEE');
+   Security_SYS.Grant_View('INTFACE_GROUP', '&GRANTEE');
+END;
+/
+
+--
+-- Grants on application packages 
+--
+BEGIN
+   Security_SYS.Grant_Package('INTFACE_EXCEL_CONNECT_API', '&GRANTEE');
+END;
+/
+
+UNDEFINE GRANTEE
+
+COMMIT;
+

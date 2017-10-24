@@ -1,0 +1,691 @@
+-----------------------------------------------------------------------------
+--
+--  Module: FNDMIG
+--
+--  Function: Upgrade database from FNDMIG 2.0.0 to 2.1.0 
+--
+--  IFS/Design Template 2.1
+--
+--  Date    Sign   History
+--  ------  ----   ----------------------------------------------------------
+--  131010  MABOSE Created.
+--  140815  PGANLK Added Type Intface_strArray.(Bug#TEBASE-461)
+--  140916  DOBESE Re-create constraint intface_repl_struct_cols_pk and remove
+--                 obsolete sequences
+--  141122  ASBALK To increase the size of columns file_string and attribute_string
+--                 in INTFACE_JOB_DETAIL_TAB and INTFACE_JOB_HIST_DETAIL_TAB
+-----------------------------------------------------------------------------
+SET SERVEROUTPUT ON
+
+
+BEGIN
+   IF NOT Installation_SYS.Is_Db_Patch_Registered ('FNDMIG','103619') THEN
+      DECLARE
+         column_miss_match EXCEPTION;
+         interface_   VARCHAR2(30);
+         table_name_  VARCHAR2(30);
+         view_name_   VARCHAR2(30);
+         view_stmt_   VARCHAR2(200);
+         grant_stmt_  VARCHAR2(100);
+         dummy_       NUMBER;
+         job_columns_ NUMBER;
+         table_cols_  NUMBER;
+
+
+         CURSOR get_interface_name IS
+            SELECT intface_name 
+              FROM INTFACE_HEADER_TAB 
+             WHERE procedure_name = 'CREATE_TABLE_FROM_FILE';
+
+         CURSOR check_ic_table(ic_table_ IN VARCHAR2) IS
+            SELECT 1
+              FROM USER_TAB_COLUMNS
+             WHERE table_name  = ic_table_ AND
+                   column_name = 'IC_ROW_NO';
+         
+         CURSOR get_intface_details(intface_name_ IN VARCHAR2) IS
+            SELECT COUNT(*) 
+            FROM INTFACE_DETAIL_TAB 
+            WHERE intface_name = intface_name_ AND 
+                  pos > 0;
+
+         CURSOR get_table_columns(ic_table_ IN VARCHAR2) IS
+            SELECT COUNT(*)
+            FROM USER_TAB_COLUMNS
+            WHERE table_name  = ic_table_ AND
+                  column_name != 'IC_ROW_NO';
+
+      BEGIN
+         FOR rec_ IN get_interface_name LOOP
+            interface_ := rec_.intface_name;
+            table_name_ := 'IC_'||interface_||'_TAB';
+            OPEN check_ic_table(table_name_);
+            FETCH check_ic_table INTO dummy_;
+            IF check_ic_table%FOUND THEN
+
+               -- Get Migration job column count which used to create IC table
+               OPEN get_intface_details(interface_);
+               FETCH get_intface_details INTO job_columns_;
+               CLOSE get_intface_details;
+
+               -- Get Container table column count without IC_ROW_NO
+               OPEN get_table_columns(table_name_);
+               FETCH get_table_columns INTO table_cols_;
+               CLOSE get_table_columns;
+
+               -- create or replace the view only if 
+               IF job_columns_ = table_cols_  THEN
+                  view_name_  := 'IC_'||interface_;
+                  view_stmt_  := 'CREATE OR REPLACE VIEW '|| view_name_ ||' AS SELECT * FROM '|| table_name_;
+                  grant_stmt_ := 'GRANT SELECT ON '|| view_name_  || ' TO IFSSYS';
+
+                  EXECUTE IMMEDIATE view_stmt_;
+
+                  EXECUTE IMMEDIATE grant_stmt_;
+               ELSE
+                  RAISE column_miss_match;
+               END IF;
+            END IF;
+            CLOSE check_ic_table;
+         END LOOP;
+         Installation_SYS.Register_Db_Patch('FNDMIG', '103619', 'Data Migration: F8 key doesn''t work in Source column  field');
+         COMMIT;
+      EXCEPTION
+         WHEN column_miss_match THEN
+            Dbms_Output.Put_Line('Number of columns in Migration job '||interface_||' does not match with Container table column.');
+         WHEN OTHERS THEN
+            Dbms_Output.Put_Line('Error in script '|| SQLERRM);
+      END;
+   END IF;
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Timestamp_1');
+PROMPT Increase size of last_info column in INTFACE_HEADER_TAB and INTFACE_JOB_HIST_HEAD_TAB.
+
+
+DECLARE
+   columns_    Installation_SYS.ColumnTabType;
+   table_name_ VARCHAR2(30) := 'INTFACE_HEADER_TAB';
+BEGIN
+   -- Fix previous patch registration if it exists.
+   IF Installation_SYS.Is_Db_Patch_Registered('FNDBAS', '103540') THEN
+      Installation_SYS.Clear_Db_Patch_Registration('FNDBAS', '103540');
+      Installation_SYS.Register_Db_Patch('FNDMIG', '103540','Increase size of last_info column in INTFACE_HEADER_TAB and INTFACE_JOB_HIST_HEAD_TAB');
+      COMMIT;
+   END IF;    
+      
+   IF NOT Installation_SYS.Is_Db_Patch_Registered('FNDMIG',  '103540') THEN
+      Installation_SYS.Set_Table_Column(columns_, 'LAST_INFO','VARCHAR2(4000)');
+      Installation_SYS.Alter_Table ( table_name_, columns_, TRUE );
+
+      table_name_ := 'INTFACE_JOB_HIST_HEAD_TAB';
+      Installation_SYS.Alter_Table ( table_name_, columns_, TRUE );
+      Installation_SYS.Register_Db_Patch('FNDMIG', '103540','Increase size of last_info column in INTFACE_HEADER_TAB and INTFACE_JOB_HIST_HEAD_TAB');
+      COMMIT;
+   END IF;
+END;
+/
+
+
+
+BEGIN
+   Installation_SYS.Register_Db_Patch('FNDMIG', '102521', 'Recompile invalid procedures');
+   COMMIT;
+END;
+/
+
+
+DECLARE
+   PROCEDURE UpdateRuleDescription (
+       rule_id_        IN VARCHAR2,
+       description_    IN VARCHAR2 )
+   IS
+   BEGIN
+      UPDATE intface_default_rules_tab
+      SET description = description_
+      WHERE rule_id = rule_id_;       
+   EXCEPTION
+      WHEN OTHERS THEN
+         NULL;
+   END UpdateRuleDescription; 
+BEGIN
+   UpdateRuleDescription('DEPLOYFILE','Make export-file for deployment with SQL tool');
+   Installation_SYS.Register_Db_Patch('FNDMIG', '107708', 'DEPLOYFILE rule description changed');
+   COMMIT;
+END;
+/
+
+
+BEGIN
+   IF NOT Installation_SYS.Is_Db_Patch_Registered ('FNDMIG','107438') THEN
+      DECLARE
+         column_miss_match  EXCEPTION;
+         interface_         VARCHAR2(30);
+         table_name_        VARCHAR2(30);
+         view_name_         VARCHAR2(30);
+         view_stmt_         VARCHAR2(200);
+         view_comment_stmt_ VARCHAR2(100);
+         grant_stmt_        VARCHAR2(100);
+         dummy_             NUMBER;
+         job_columns_       NUMBER;
+         table_cols_        NUMBER;
+
+
+         CURSOR get_interface_name IS
+            SELECT intface_name 
+              FROM INTFACE_HEADER_TAB 
+             WHERE procedure_name = 'CREATE_TABLE_FROM_FILE';
+
+         CURSOR check_ic_table(ic_table_ IN VARCHAR2) IS
+            SELECT 1
+              FROM USER_TAB_COLUMNS
+             WHERE table_name  = ic_table_ AND
+                   column_name = 'IC_ROW_NO';
+         
+         CURSOR get_intface_details(intface_name_ IN VARCHAR2) IS
+            SELECT COUNT(*) 
+            FROM INTFACE_DETAIL_TAB 
+            WHERE intface_name = intface_name_ AND 
+                  pos > 0;
+
+         CURSOR get_table_columns(ic_table_ IN VARCHAR2) IS
+            SELECT COUNT(*)
+            FROM USER_TAB_COLUMNS
+            WHERE table_name  = ic_table_ AND
+                  column_name != 'IC_ROW_NO';
+
+      BEGIN
+         FOR rec_ IN get_interface_name LOOP
+            interface_ := rec_.intface_name;
+            table_name_ := 'IC_'||interface_||'_TAB';
+            OPEN check_ic_table(table_name_);
+            FETCH check_ic_table INTO dummy_;
+            IF check_ic_table%FOUND THEN
+
+               -- Get Migration job column count which used to create IC table
+               OPEN get_intface_details(interface_);
+               FETCH get_intface_details INTO job_columns_;
+               CLOSE get_intface_details;
+
+               -- Get Container table column count without IC_ROW_NO
+               OPEN get_table_columns(table_name_);
+               FETCH get_table_columns INTO table_cols_;
+               CLOSE get_table_columns;
+
+               -- create or replace the view only if 
+               IF job_columns_ = table_cols_  THEN
+                  view_name_         := 'IC_'||interface_;
+                  view_stmt_         := 'CREATE OR REPLACE VIEW '|| view_name_ ||' AS SELECT * FROM '|| table_name_;
+                  view_comment_stmt_ := 'COMMENT ON TABLE '|| view_name_ ||' IS ''MODULE=IGNORE^''';
+                  grant_stmt_        := 'GRANT SELECT ON '|| view_name_  || ' TO IFSSYS';
+
+                  EXECUTE IMMEDIATE view_stmt_;
+
+                  EXECUTE IMMEDIATE view_comment_stmt_;
+
+                  EXECUTE IMMEDIATE grant_stmt_;
+               ELSE
+                  RAISE column_miss_match;
+               END IF;
+            END IF;
+            CLOSE check_ic_table;
+         END LOOP;
+         Installation_SYS.Register_Db_Patch('FNDMIG', '107438', 'IC views missing view comments');
+         COMMIT;
+      EXCEPTION
+         WHEN column_miss_match THEN
+            CLOSE check_ic_table;
+            Dbms_Output.Put_Line('Number of columns in Migration job '||interface_||' does not match with Container table column.');
+         WHEN OTHERS THEN
+            IF check_ic_table%ISOPEN THEN 
+               CLOSE check_ic_table;
+            END IF;
+            Dbms_Output.Put_Line('Error in script '|| SQLERRM);
+      END;
+   END IF;
+END;
+/
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Timestamp_2');
+PROMPT Converting Data Migration Server Processes in to Scheduled Tasks
+
+DEFINE MODULE         = FNDMIG
+DEFINE HEADER_TAB     = INTFACE_HEADER_TAB
+DEFINE SCH_TAB        = BATCH_SCHEDULE_TAB
+DEFINE SCH_METHOD_TAB = BATCH_SCHEDULE_METHOD_TAB
+DEFINE SCH_PAR_TAB    = BATCH_SCHEDULE_PAR_TAB
+DEFINE SETTING_TAB    = FND_SETTING_TAB
+
+DECLARE
+   intface_name_     &HEADER_TAB..intface_name%TYPE;
+   procedure_        &HEADER_TAB..procedure_name%TYPE;
+   schedule_id_      &SCH_TAB..schedule_id%TYPE;
+   schedule_name_    &SCH_TAB..schedule_name%TYPE;
+   sch_method_id_    &SCH_METHOD_TAB..schedule_method_Id%TYPE;
+   method_name_      &SCH_METHOD_TAB..method_name%TYPE := 'Intface_Header_API.Start_Batch_';
+   active_db_        VARCHAR2(5)   := 'TRUE';
+   attr_             VARCHAR2(2000);
+   exec_plan_        &SCH_TAB..execution_plan%TYPE;
+   seq_no_           NUMBER;
+   start_date_       DATE := SYSDATE;
+   stop_date_        DATE;
+   item_exists_      NUMBER;
+   attr_start_pos_   NUMBER;
+   attr_length_      NUMBER;
+   ex_pl_start_pos_  NUMBER;
+   ex_pl_length_     NUMBER;
+   def_lang_         &SETTING_TAB..value%TYPE;
+   lang_code_        &SCH_TAB..lang_code%TYPE;
+   
+   CURSOR get_server_process IS
+      SELECT intface_name,
+             job, substr(what,1,2000) action,
+             interval,
+             next_date,
+             log_user
+        FROM &HEADER_TAB, sys.dba_jobs d
+       WHERE UPPER(what) LIKE '%INTFACE_HEADER_API.START_BATCH_%'
+         AND INSTR(what,chr(30)||'INTFACE_NAME'||chr(31)||intface_name||chr(30)) != 0
+         AND EXISTS 
+         (SELECT 1 FROM fnd_user_tab f WHERE f.identity = d.priv_user);
+
+   CURSOR get_sch_method_id IS
+      SELECT schedule_method_id
+        FROM &SCH_METHOD_TAB
+       WHERE method_name = Upper(method_name_);
+
+   CURSOR exist_control IS
+      SELECT 1
+        FROM &HEADER_TAB
+       WHERE intface_name = intface_name_;
+
+   CURSOR get_def_lang IS
+      SELECT value
+        FROM &SETTING_TAB
+       WHERE parameter = 'DEFAULT_LANGUAGE';
+
+   TYPE type_process_list IS TABLE OF get_server_process%ROWTYPE INDEX BY PLS_INTEGER;
+   process_list_ type_process_list; 
+
+   TYPE type_sch_list IS TABLE OF &SCH_TAB%ROWTYPE INDEX BY PLS_INTEGER;
+   sch_list_ type_sch_list;
+
+   TYPE type_sch_par_list IS TABLE OF &SCH_PAR_TAB%ROWTYPE INDEX BY PLS_INTEGER;
+   sch_par_list_ type_sch_par_list;
+
+BEGIN
+   IF NOT (Installation_SYS.Is_Db_Patch_Registered('&MODULE', 107799)) THEN      
+      
+      OPEN get_def_lang;
+      FETCH get_def_lang INTO def_lang_;
+      CLOSE get_def_lang;
+
+      OPEN get_sch_method_id;
+      FETCH get_sch_method_id INTO sch_method_id_;
+
+      lang_code_ := NVL(Sys_Context('FNDSESSION_CTX', 'LANGUAGE'), def_lang_);
+      
+      IF get_sch_method_id%FOUND THEN
+         
+         OPEN get_server_process;
+         FETCH get_server_process BULK COLLECT INTO process_list_;
+
+         FOR index_ IN 1..process_list_.COUNT
+         LOOP
+            
+            intface_name_ := process_list_(index_).intface_name;
+
+            OPEN exist_control;
+            FETCH exist_control INTO item_exists_;
+            
+            IF (exist_control%FOUND) THEN
+               
+               attr_start_pos_ := instr(process_list_(index_).action,'INFO');
+               attr_length_ := instr(process_list_(index_).action,''')') - instr(process_list_(index_).action,'INFO') - 1;
+               attr_ := substr(process_list_(index_).action, attr_start_pos_, attr_length_);
+               
+               ex_pl_start_pos_ := instr(process_list_(index_).interval,'Batch_SYS.Update_Exec_Time__(''') + 30;
+               ex_pl_length_ := instr(process_list_(index_).interval,''')') - instr(process_list_(index_).interval,'Batch_SYS.Update_Exec_Time__(''') - 30;
+               exec_plan_ := substr(process_list_(index_).interval, ex_pl_start_pos_, ex_pl_length_);
+
+               IF exec_plan_ = 'NULL' THEN
+                  exec_plan_ := 'ON '||to_char(process_list_(index_).next_date, 'YYYY-MM-DD')||' AT '||to_char(process_list_(index_).next_date, 'HH24:MI');
+               END IF;
+
+               SELECT schedule_id_seq.NEXTVAL 
+                 INTO schedule_id_
+                 FROM dual;
+               
+               schedule_name_ := 'Execute Data Migration job: ' || intface_name_ ||'(' || USER || ')';
+               
+               sch_list_(index_).schedule_id := schedule_id_;
+               sch_list_(index_).schedule_name := schedule_name_;
+               sch_list_(index_).execution_plan := exec_plan_;
+               sch_list_(index_).next_execution_date := process_list_(index_).next_date;
+               sch_list_(index_).installation_id := to_char(schedule_id_);
+               
+               sch_par_list_(index_).schedule_id := schedule_id_;
+               sch_par_list_(index_).value :=  attr_;
+
+               DBMS_Job.Remove(process_list_(index_).job);
+
+            END IF;
+            
+            CLOSE exist_control;
+         
+         END LOOP;
+          
+         CLOSE get_server_process;
+
+         FORALL index_ IN 1..sch_list_.COUNT
+            INSERT
+               INTO &SCH_TAB (
+               schedule_id,
+               schedule_name,
+               active,
+               execution_plan,
+               next_execution_date,
+               last_execution_date,
+               modified_date,
+               username,
+               schedule_method_id,
+               start_date,
+               stop_date,
+               lang_code,
+               executions,
+               installation_id,
+               external_id,
+               batch_schedule_type,
+               rowversion)
+            VALUES (
+               sch_list_(index_).schedule_id,
+               sch_list_(index_).schedule_name,
+               'TRUE',
+               sch_list_(index_).execution_plan,
+               sch_list_(index_).next_execution_date,
+               NULL,
+               SYSDATE,
+               USER,
+               sch_method_id_,
+               start_date_,
+               stop_date_,
+               lang_code_,
+               0,
+               sch_list_(index_).installation_id,
+               NULL,
+               'TASK',
+               SYSDATE);
+
+         FORALL index_ IN 1..sch_par_list_.COUNT
+            INSERT
+               INTO &SCH_PAR_TAB (
+               schedule_id,
+               seq_no,
+               name,
+               value,
+               rowversion)
+            VALUES (
+               sch_par_list_(index_).schedule_id,
+               1,
+               'ATTR_',
+               sch_par_list_(index_).value,
+               SYSDATE);
+      END IF;
+
+      CLOSE get_sch_method_id;
+      
+      Installation_SYS.Register_Db_Patch('&MODULE', '107799', 'Convert data migration server processes in to scheduled tasks ');
+
+      COMMIT;
+
+   END IF;
+END;
+/
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Timestamp_3');
+PROMPT Modifying TABLE INTFACE_METHOD_LIST_TAB
+
+DECLARE
+   column_     Installation_SYS.ColRec;
+   table_name_ VARCHAR2(30) := 'INTFACE_METHOD_LIST_TAB';
+   CURSOR get_null_method_names IS
+      SELECT intface_name,view_name
+      FROM intface_method_list_tab
+      WHERE method_name IS NULL
+      ORDER BY intface_name;
+BEGIN
+   FOR rec IN get_null_method_names LOOP
+      Dbms_Output.Put_Line(rec.intface_name || ' - NULL METHOD_NAME changing to default: [' ||rec.view_name||'_API]');
+   END LOOP;
+   
+   UPDATE INTFACE_METHOD_LIST_TAB
+   SET METHOD_NAME = VIEW_NAME || '_API'
+   WHERE METHOD_NAME IS NULL;
+      
+   column_ := Installation_SYS.Set_Column_Values('METHOD_NAME', 'VARCHAR2(100)', 'N');
+   Installation_SYS.Alter_Table_Column(table_name_, 'MODIFY', column_, TRUE);
+END;
+/
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Timestamp_4');
+PROMPT Modifying TABLE INTFACE_REPL_STRUCTURE_TAB
+
+DECLARE
+   column_     Installation_SYS.ColRec;
+   table_name_ VARCHAR2(30) := 'INTFACE_REPL_STRUCTURE_TAB';
+   CURSOR get_null_element_types IS
+      SELECT intface_name,structure_seq
+      FROM intface_repl_structure_tab
+      WHERE element_type IS NULL
+      ORDER BY intface_name;
+BEGIN
+   
+   FOR rec IN get_null_element_types LOOP
+      Dbms_Output.Put_Line(rec.intface_name ||','||rec.structure_seq||' - NULL ELEMENT_TYPE changing to default: [Array]'); 
+   END LOOP;
+      
+   UPDATE INTFACE_REPL_STRUCTURE_TAB
+   SET ELEMENT_TYPE = 'Array'
+   WHERE ELEMENT_TYPE IS NULL;
+   
+   column_ := Installation_SYS.Set_Column_Values('ELEMENT_TYPE', 'VARCHAR2(20)', 'N');
+   Installation_SYS.Alter_Table_Column(table_name_, 'MODIFY', column_, TRUE);   
+END;
+/
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Timestamp_5');
+PROMPT Creating TABLE INTFACE_EXECUTION_TAB
+
+DECLARE
+   columns_    Database_SYS.ColumnTabType;
+   column_     Database_SYS.ColRec;
+   table_name_ VARCHAR2(30) := 'INTFACE_EXECUTION_TAB';
+   index_name_ VARCHAR2(30) := 'INTFACE_EXECUTION_PK';
+   rkidx_name_ VARCHAR2(30) := 'INTFACE_EXECUTION_RK';
+BEGIN
+   Database_SYS.Reset_Column_Table(columns_);
+   Database_SYS.Set_Table_Column(columns_, 'EXECUTION_ID', 'NUMBER', 'N');
+   Database_SYS.Set_Table_Column(columns_, 'INTFACE_NAME', 'VARCHAR2(30)', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'IC_TABLE_NAME', 'VARCHAR2(2000)', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'ROWVERSION', 'DATE', 'N');
+   Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$');
+   Database_SYS.Create_Or_Replace_Table(table_name_, columns_, '&IFSAPP_DATA', NULL, TRUE);
+
+   Database_SYS.Reset_Column_Table(columns_);
+   Database_SYS.Set_Table_Column(columns_, 'EXECUTION_ID');
+   Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'P', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+   Database_SYS.Reset_Column_Table(columns_);
+   Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+   Database_SYS.Create_Constraint(table_name_, rkidx_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Timestamp_6');
+PROMPT Creating TABLE INTFACE_EXECUTION_DETAIL_TAB
+
+DECLARE
+   columns_    Database_SYS.ColumnTabType;
+   column_     Database_SYS.ColRec;
+   table_name_ VARCHAR2(30) := 'INTFACE_EXECUTION_DETAIL_TAB';
+   index_name_ VARCHAR2(30) := 'INTFACE_EXECUTION_DETAIL_PK';
+   rkidx_name_ VARCHAR2(30) := 'INTFACE_EXECUTION_DETAIL_RK';
+BEGIN
+   Database_SYS.Reset_Column_Table(columns_);
+   Database_SYS.Set_Table_Column(columns_, 'EXECUTION_ID', 'NUMBER', 'N');
+   Database_SYS.Set_Table_Column(columns_, 'LINE_NO', 'NUMBER', 'N');
+   Database_SYS.Set_Table_Column(columns_, 'INTFACE_NAME', 'VARCHAR2(30)', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'FILE_STRING', 'VARCHAR2(4000)', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'ATTRIBUTE_STRING', 'VARCHAR2(2000)', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'ERROR_MESSAGE', 'VARCHAR2(2000)', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'DATE_EXECUTED', 'DATE', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'STATUS', 'VARCHAR2(20)', 'N');
+   Database_SYS.Set_Table_Column(columns_, 'EXECUTED_BY', 'VARCHAR2(30)', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'ROWVERSION', 'DATE', 'N');
+   Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$');
+   Database_SYS.Create_Or_Replace_Table(table_name_, columns_, '&IFSAPP_DATA', NULL, TRUE);
+   
+   Database_SYS.Reset_Column_Table(columns_);
+   Database_SYS.Set_Table_Column(columns_, 'EXECUTION_ID');
+   Database_SYS.Set_Table_Column(columns_, 'LINE_NO');
+   Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'P', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+   Database_SYS.Reset_Column_Table(columns_);
+   Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+   Database_SYS.Create_Constraint(table_name_, rkidx_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Timestamp_7');
+PROMPT Re-create constraint intface_repl_struct_cols_pk
+
+DECLARE
+   columns_     Installation_SYS.ColumnTabType;
+   table_       VARCHAR2(30) := 'intface_repl_struct_cols_tab';
+   pk_          VARCHAR2(30) := 'intface_repl_struct_cols_pk';
+BEGIN
+   IF (Database_SYS.Constraint_Exist(pk_) = TRUE) THEN
+      Database_SYS.Remove_Constraints(table_, pk_, TRUE);
+   END IF;
+   Database_SYS.Reset_Column_Table(Columns_);
+   Database_SYS.Set_Table_Column(columns_, 'intface_name');
+   Database_SYS.Set_Table_Column(columns_, 'structure_seq');
+   Database_SYS.Set_Table_Column(columns_, 'column_seq');
+   Database_SYS.Create_Constraint(table_, pk_, columns_, 'P', '&IFSAPP_INDEX', NULL, FALSE, TRUE);
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Timestamp_8');
+PROMPT Creating Sequence INTFACE_EXCEL_SEQ
+BEGIN
+   Database_SYS.Create_Sequence('INTFACE_EXCEL_SEQ', 'INCREMENT BY 1 START WITH 1 MAXVALUE 999999999999999 MINVALUE 1 CYCLE NOCACHE NOORDER');
+END;
+/
+UNDEFINE MODULE
+UNDEFINE HEADER_TAB
+UNDEFINE SCH_TAB
+UNDEFINE SCH_METHOD_TAB
+UNDEFINE SCH_PAR_TAB
+UNDEFINE SETTING_TAB
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Timestamp_9');
+PROMPT Creating OBJECT TYPE Intface_strArray
+CREATE OR REPLACE TYPE Intface_strArray AS TABLE OF VARCHAR2(2000);
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Timestamp_10');
+PROMPT Remove obselete objects.
+BEGIN
+   Database_SYS.Remove_Sequence('INTFACE_CONNECT_FILE_SEQ');
+   Database_SYS.Remove_Sequence('INTFACE_LOAD_ID_SEQ');
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Timestamp_11');
+PROMPT UPDATING INTFACE_JOB_DETAIL_TAB and INTFACE_JOB_HIST_DETAIL_TAB
+
+DECLARE
+   columns_    Installation_SYS.ColumnTabType;
+   table_name_ VARCHAR2(30) := 'INTFACE_JOB_DETAIL_TAB';
+BEGIN
+   IF NOT (Installation_SYS.Is_Db_Patch_Registered('FNDMIG', 113667)) THEN
+      Installation_SYS.Set_Table_Column(columns_, 'FILE_STRING', 'VARCHAR2(4000)');
+      Installation_SYS.Set_Table_Column(columns_, 'ATTRIBUTE_STRING', 'VARCHAR2(4000)');
+      Installation_SYS.Alter_Table(table_name_, columns_, TRUE);
+
+      table_name_ := 'INTFACE_JOB_HIST_DETAIL_TAB';
+      Installation_SYS.Alter_Table(table_name_, columns_, TRUE);
+      Installation_SYS.Register_Db_Patch('FNDMIG', '113667', 'To increase the size of columns file_string and attribute_string in INTFACE_JOB_DETAIL_TAB and INTFACE_JOB_HIST_DETAIL_TAB');
+      COMMIT;
+   END IF;
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Timestamp_12');
+PROMPT Deleting data in INTFACE_EXECUTION_DETAIL_TAB and INTFACE_EXECUTION_TAB
+
+BEGIN
+   DELETE FROM INTFACE_EXECUTION_DETAIL_TAB;
+   DELETE FROM INTFACE_EXECUTION_TAB;
+   COMMIT;
+EXCEPTION
+   WHEN OTHERS THEN
+      ROLLBACK;
+      dbms_output.put_line('Error when removing execution data. '|| SQLERRM);
+      dbms_output.put_line('Fix Error and try again.');
+END;
+/
+
+
+DECLARE
+   object_name_ VARCHAR2(30) := 'INTFACE_FILE_TYPE';
+   columns_     Database_SYS.ColumnTabType;
+BEGIN
+   Database_SYS.Set_Table_Column(columns_, 'FILE_NAME', 'VARCHAR2(100)', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'FILE_SIZE', 'VARCHAR2(30)', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'FILE_DATE', 'VARCHAR2(30)', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'DIRECTORY', 'VARCHAR2(4000)', 'Y');
+   Database_SYS.Create_Type(object_name_, columns_, TRUE);
+END;
+/
+
+
+DECLARE
+   collection_name_ VARCHAR2(30) := 'INTFACE_FILE_TYPES';
+BEGIN
+   Database_SYS.Create_Type(collection_name_, 'INTFACE_FILE_TYPE', TRUE);
+END;
+/
+
+
+DECLARE
+   object_name_ VARCHAR2(30) := 'INTFACE_DIRECTORY_TYPE';
+   columns_     Database_SYS.ColumnTabType;
+BEGIN
+   Database_SYS.Set_Table_Column(columns_, 'NAME', 'VARCHAR2(4000)', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'PATH', 'VARCHAR2(4000)', 'Y');
+   Database_SYS.Set_Table_Column(columns_, 'GRANTS', 'VARCHAR2(10)', 'Y');
+   Database_SYS.Create_Type(object_name_, columns_, TRUE);
+END;
+/
+
+
+DECLARE
+   collection_name_ VARCHAR2(30) := 'INTFACE_DIRECTORY_TYPES';
+BEGIN
+   Database_SYS.Create_Type(collection_name_, 'INTFACE_DIRECTORY_TYPE', TRUE);
+END;
+/
+
+
+DECLARE
+   collection_name_ VARCHAR2(30) := 'INTFACE_STRARRAY';
+BEGIN
+   Database_SYS.Create_Type(collection_name_, 'VARCHAR2(2000)', TRUE);
+END;
+/
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','210.upg','Done');

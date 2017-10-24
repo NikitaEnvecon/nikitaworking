@@ -1,0 +1,70 @@
+--------------------------------------------------------------------
+--
+--  Dimension:  SubsidiaryCompany
+--  Component:  ACCRUL
+--  LU:         DimSubsidiaryCompany
+--
+--  File     :  DimSubsidiaryCompanyOl.api
+--  Purpose  :  Create ON LINE dimension view DIM_SUBSIDIARY_COMPANY_OL
+--  Note     :  NOTE that NULL identity handling is not required for OL views
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  NOTE! Do not edit!! This file is completely generated and will be
+--        overwritten next time the corresponding model is saved.
+-----------------------------------------------------------------------------
+--  Date    Sign   History
+--  ------  ----   -------------------------------------------------
+--  101113  LALISE Created
+--  150507  UMDOLK Reverse Engineering
+--------------------------------------------------------------------
+
+PROMPT ********* Component ACCRUL, definition begins ***********
+
+DEFINE DIM        = DIM_SUBSIDIARY_COMPANY
+DEFINE VIEW       = DIM_SUBSIDIARY_COMPANY_OL
+DEFINE TAB        = COMPANY_FINANCE_TAB
+DEFINE MODULE     = ACCRUL
+DEFINE LU         = DimSubsidiaryCompany
+             
+PROMPT Create dimension view &VIEW
+CREATE OR REPLACE VIEW &VIEW AS
+SELECT cons_company||'^'||a.company                  id,
+       cons_company                                  company,
+       a.company                                     code,
+       SUBSTR(Company_API.Get_Name(a.company),1,200) subsidiary_company_name,
+       a.currency_code                               subsidiary_currency_code,
+       a.parallel_acc_currency                       subsidiary_parallel_curr_code
+FROM &TAB a
+WHERE a.cons_company IS NOT NULL
+AND EXISTS ( SELECT 1
+             FROM USER_PROFILE_ENTRY_SYS_TAB
+   WHERE user_name = (SELECT fnd_user FROM FND_SESSION)
+             AND entry_code = 'COMPANY'
+             AND entry_value = a.company
+           )
+WITH READ ONLY;
+
+COMMENT ON TABLE &VIEW
+   IS 'LU=&LU^PROMPT=Subsidiary Company^MODULE=&MODULE^';
+
+COMMENT ON COLUMN &VIEW..COMPANY
+   IS 'FLAGS=PMI--^DATATYPE=STRING(20)/UPPERCASE^PROMPT=Company^';
+COMMENT ON COLUMN &VIEW..CODE
+   IS 'FLAGS=KMI-L^DATATYPE=STRING(20)/UPPERCASE^PROMPT=Subsidiary Company^';
+COMMENT ON COLUMN &VIEW..SUBSIDIARY_COMPANY_NAME
+   IS 'FLAGS=AMIUL^DATATYPE=STRING(200)^PROMPT=Subsidiary Company Name^';
+   COMMENT ON COLUMN &VIEW..SUBSIDIARY_CURRENCY_CODE
+   IS 'FLAGS=AMIUL^DATATYPE=STRING(3)^PROMPT=Subsidiary Accounting Currency^';
+   COMMENT ON COLUMN &VIEW..SUBSIDIARY_PARALLEL_CURR_CODE
+   IS 'FLAGS=AMIUL^DATATYPE=STRING(3)^PROMPT=Susidiary Parallel Accounting Currency^';
+
+PROMPT ********* Component ACCRUL, definition ends ***********
+
+-------------------------------------------------------------------
+UNDEFINE DIM   
+UNDEFINE VIEW  
+UNDEFINE TAB
+UNDEFINE MODULE 
+UNDEFINE LU     
+-------------------------------------------------------------------

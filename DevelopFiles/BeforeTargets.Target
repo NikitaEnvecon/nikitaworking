@@ -1,0 +1,6 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<IFSTempAssemblyName>$(AssemblyName.Replace("Ifs.Application.",""))</IFSTempAssemblyName>
+		<BaseIntermediateOutputPath>$([System.IO.Path]::GetFullPath($(OutputPath)\..\obj\$(IFSTempAssemblyName)))</BaseIntermediateOutputPath>
+	</PropertyGroup>
+</Project>

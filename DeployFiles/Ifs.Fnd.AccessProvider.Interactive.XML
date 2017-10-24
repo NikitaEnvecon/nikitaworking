@@ -1,0 +1,585 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ifs.Fnd.AccessProvider.Interactive</name>
+    </assembly>
+    <members>
+        <member name="T:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials">
+            <summary>
+            Login credentials are username, password, server etc.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.UserName">
+            <summary>
+            Gets or sets the username
+            Username is the unique identifier of an user within a specific
+            domain.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.Password">
+            <summary>
+            Gets or sets the password
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.Domain">
+            <summary>
+            Gets or set the domain.
+            The domain is the context of which a username is defined in.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.ConnectTo">
+            <summary>
+            Gets or set the server to connect to.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.SystemName">
+            <summary>
+            Gets or set the system name.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.RememberPassword">
+            <summary>
+            Gets or set whenever password should be persisted between sessions.
+            True means that password is persisted between sessions.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.RememberPasswordDisabled">
+            <summary>
+            Gets or set whether the functionality to remember password between sessions should be enabled.
+            This is set in the .config file with an app setting named "disableRememberPassword"
+            If disableRememberUser is set to true, the password won't be remembered either.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.RememberUserDisabled">
+            <summary>
+            Reads a setting from the configuration file and decides whether last username 
+            should be remembered between sessions.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.UseProxy">
+            <summary>
+            Gets or set whether the default windows proxy should be used for connections.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.ShowLoginDialog">
+            <summary>
+            Gets or sets whenever the login dialog should be shown at startup or not.
+            True means that login dialog will be shown on startup.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.ForcedShow">
+            <summary>
+            Gets or sets whenever the login dialog should be shown at startup 
+            because of the Switch User command was invoked.
+            True means that login dialog will be shown on startup - regardless
+            of the value of ShowLoginDialog
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.ForcedShowChangePassword">
+            <summary>
+            Gets or sets whenever the change password dialog in the login dialog should be shown at startup 
+            because of the Change Password command was invoked.
+            True means that Change Password dialog will be shown on the startup of the login dialog.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.IdentifiedExternally">
+            <summary>
+            Gets or sets whenever a user is identified externally
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.ShowOptions">
+            <summary>
+            Getr or sets whenever advanced login options are visible or not.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.Identity">
+            <summary>
+            Domain\UserName if Domain has a value, else only UserName
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.Data">
+            <summary>
+            Gets or sets data used to store password using DPAPI encryption.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials.Language">
+            <summary>
+            Gets or sets the applications language
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog">
+            <summary>
+            FndLoginDialog handles the standard login dialog with the possibility
+            to persist last login, handle externally identified users, automatically
+            login etc.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.#ctor">
+            <summary>
+            Default constructor for COM visibility
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.#ctor(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Creates a new instance of FndLoginDialog
+            </summary>
+            <param name="connection">Server connection used to authenticate user credentials</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.GetStoredCredentials">
+            <summary>
+            Retrieves the latest stored login credentials from persistence storage.
+            </summary>
+            <returns>Latest login credentials</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.GetStoredCredentials(System.Boolean)">
+            <summary>
+            Retrieves the latest stored login credentials from persistence storage.
+            </summary>
+            <returns>Latest login credentials</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.StoreCredentials(Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials)">
+            <summary>
+            Stores login credentials.
+            </summary>
+            <param name="credentials">Login credentials to store.</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.StoreCredentials(Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials,System.Boolean)">
+            <summary>
+            Stores login credentials.
+            </summary>
+            <param name="credentials">Login credentials to store.</param>
+            <param name="useMachineStore">Use machine store other than user store. </param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.IsChangePasswordEnabled(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Check is password change is enabled
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.GetPasswordExpiration(System.String,System.String,System.Double@,System.Double@,System.String@,Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Check the status for a user
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="gracePeriod"></param>
+            <param name="status"></param>
+            <param name="errorInfo"></param>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.ChangePassword(System.String,System.Windows.Forms.IWin32Window,System.String,System.String@)">
+            <summary>
+            Shows the change password dialog if password change is enabled.
+            </summary>
+            <param name="username"></param>
+            <param name="owner"></param>
+            <param name="connectionString"></param>
+            <param name="newPassword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.GetEnabledLanguages(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Gets the enabled languages.
+            </summary>
+            <param name="connection">The connection.</param>
+            <returns>
+            Enabled languages. This is set in "Used Languages" feature in Solution Manager.
+            </returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.ShowDialog(Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials,System.Boolean)">
+            <summary>
+            Show the login dialog. Method will return when login dialog is closed.
+            </summary>
+            <param name="defaultCredentials">Default login credentials (see GetStoredCredentials) </param>
+            <param name="hideConnectTo">Hide "Connect To" server field</param>
+            <returns>Returns DialogResult OK, Cancel or Abort</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.IsWIA(Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials)">
+            <summary>
+            Checks whether the connection given in the credentials is configured for windows authentication.
+            </summary>
+            <param name="credentials">FndLoginCredentials login credentials object</param>
+            <returns>true if the server configured for windows authentication</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.ShowDialog(Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            Show the login dialog. Method will return when login dialog is closed.
+            </summary>
+            <param name="defaultCredentials">Default login credentials (see GetStoredCredentials) </param>
+            <param name="hideConnectTo">Hide "Connect To" server field</param>
+            <param name="showDialogAlways">Always show logon dialog</param>
+            <param name="optionalAssemblyPath">Optional path to probe for runtime files; e.g.; language files.</param>
+            <returns>Returns DialogResult OK, Cancel or Abort</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.ValidateCredentials(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Validates the users credentials. Notifies the user about gracePeriod/lockedAccount/invalidCredentials. 
+            If password is expired the user will be give the chance to change it if hi/she is applicable for changing it.
+            Returns true if validation was success or if password was changed from being expired. Otherwise false.
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.ChangeExpiredPassword(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Checks if the user is applicable for changing the password. If so, a change password dialog is 
+            shown and if correctly filled and validated, the function will return true. Otherwise false.
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.ActivateWindow">
+            <summary>
+            Activates the login dialog and put the focus on top. 
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.GetAuthenticationStatus(Ifs.Fnd.AccessProvider.Interactive.FndLoginCredentials)">
+            <summary>
+            
+            </summary>
+            <param name="loginCredentials"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, 
+            releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.Dispose(System.Boolean)">
+            <summary>
+            Disposes the resources used by this component
+            </summary>
+            <param name="disposing">true if called (directly or indirectly) by user code.
+            false if called by runtime from inside finalizer</param>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.COMConnection">
+            <summary>
+            Public variable to be used as the connection variable when accessing .NET access provider from a COM client
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.Authenticated">
+            <summary>
+            Return true if a successful authentication has been performed.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.StartDebugConsole">
+            <summary>
+            Return true if the login dialog changed the setting for debug console on/off
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.QuitRequested">
+            <summary>
+            Returns true if user requested to abort the login dialog
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.Offline">
+            <summary>
+            Returns true if user requested to run in "offline" mode
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.UserName">
+            <summary>
+            Full Username which represents the users directory id used when authenticating.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.UserDirectoryId">
+            <summary>
+            Directory id used to authenticate the user.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.UserId">
+            <summary>
+            User id (FNDUSER) which represents the users directory id used when authenticating.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.ConnectionString">
+            <summary>
+            Server to which the authentication has been performed.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.IsDisposed">
+            <summary>
+            Returns true if this has been disposed, false otherwise
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Interactive.FndLoginDialog.AuthenticationStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Interactive.frmChangePassword">
+            <summary>
+            Dialog for changing password
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmChangePassword.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Constructor for change password dialog 
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmChangePassword.Clear">
+            <summary>
+            Clears all the password fields
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmChangePassword.OnShown(System.EventArgs)">
+            <summary>
+            Set focus to the old password field when the form is shown
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.Interactive.frmChangePassword.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmChangePassword.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmChangePassword.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.frmChangePassword.NewPassword">
+            <summary>
+            Used for retriving the new password after the dialog has closed
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Interactive.frmListServers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmListServers.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmListServers.#ctor(System.String)">
+            <summary>
+            Initiates an instance of frmListServers 
+            This constructor is used in development time when teamservers may provide an optional assembly path.
+            </summary>
+            <param name="optionalAssemblyPath">Optional assembly path to probe for server.xml</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmListServers.ValidServerListExists(System.String)">
+            <summary>
+            Returns true if the server.xml file exists and if it contains server entries
+            </summary>
+            <param name="optionalAssemblyPath">Optional assembly path to probe for server.xml</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmListServers.GetServerConfigurationFile(System.String)">
+            <summary>
+            Get the server.xml file to load.
+            </summary>
+            <param name="optionalAssemblyPath">Optional assembly path to probe for server.xml</param>
+            <returns>Returns the local file if it exists, the file found in optional path or null if not found at all.</returns>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.Interactive.frmListServers.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmListServers.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmListServers.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.frmListServers.ConnectionString">
+            <summary>
+            Gets the currently selected connection string.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.frmListServers.ConnectionAlias">
+            <summary>
+            Gets the currently selected connection alias.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Interactive.frmLogin">
+            <summary>
+            Login dialog for .Net AccessProvider
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmLogin.#ctor(System.String)">
+            <summary>
+            Initiates an instance of frmLogin
+            </summary>
+            <param name="optionalAssemblyPath">Optional probing path for runtime assemblies and resources. Specify this parameter to enumerate available languages from a secondary location at login time; i.e.; team server.</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmLogin.#ctor(System.Boolean,System.Boolean,System.String)">
+            <summary>
+            Initiates an instance of frmLogin
+            </summary>
+            <param name="showDialogAlways">Show dialog even if saved credentials is available for automatic logon.</param>
+            <param name="showPasswordDialogOnStartUp">Show dialog when application starts</param>
+            <param name="optionalAssemblyPath">Optional probing path for runtime assemblies and resources. Specify this parameter to enumerate available languages from a secondary location at login time; i.e.; team server.</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Interactive.frmLogin.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.frmLogin.Language">
+            <summary>
+            Application language. ISO 639-1. Example: "en-US"
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Interactive.RTLPanel">
+            <summary>
+            Used only by the frmLogin dialog to mirror the panels when running in a RTL language (Arabic)
+            This should normally be the same panel as the FndPanel but due to not having to load the entire
+            assembly with common controls, we keep a light copy of it instead here.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.RTLPanel.CreateParams">
+            <summary>
+            Overrides the CreateParams property to ensure that the
+            correct Windows style is applied when the user control is
+            hosted in a RTL environment.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.AccountLocked">
+            <summary>
+              Looks up a localized string similar to Your account has been locked. Please contact system administrator..
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.Corporate_Layer_Connect_To">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.CreateLocalCopyOfServerConfiguration">
+            <summary>
+              Looks up a localized string similar to This action will create a copy of the server configuration file in the local deploy files. Do you want to continue?.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.CredentialsUsed">
+            <summary>
+              Looks up a localized string similar to Your current Windows credentials are used.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.EmptyPasswordNotAllowed">
+            <summary>
+              Looks up a localized string similar to Empty password not allowed.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.EnterCredentials">
+            <summary>
+              Looks up a localized string similar to Please enter your credentials to connect to IFS Applications.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.IFSApplication">
+            <summary>
+              Looks up a localized string similar to IFS Applications.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.IFSApplications">
+            <summary>
+              Looks up a localized string similar to IFS Applications.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.InvalidUsernamePassword">
+            <summary>
+              Looks up a localized string similar to Invalid username or password..
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.LayoutDirectionChanged">
+            <summary>
+              Looks up a localized string similar to You have selected a language that will mirror the layout of the IFS Applications. Are you sure you want to use that language?.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.Login">
+            <summary>
+              Looks up a localized string similar to Login.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.PasswordCannotBeReused">
+            <summary>
+              Looks up a localized string similar to The password cannot be reused..
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.PasswordChangedNotificationText">
+            <summary>
+              Looks up a localized string similar to Your password has been changed!.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.PasswordChangeFailedNotificationText">
+            <summary>
+              Looks up a localized string similar to Your password could not be changed..
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.PasswordChangeNotEnabled">
+            <summary>
+              Looks up a localized string similar to Password change is not enabled..
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.PasswordChangeRequired">
+            <summary>
+              Looks up a localized string similar to The password has expired. Please change your password..
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.PassWordExpired">
+            <summary>
+              Looks up a localized string similar to Your Password has expired. Please contact your System Administrator!.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.PasswordWillExpireNotification">
+            <summary>
+              Looks up a localized string similar to Your password will expire in {0} days. Do you want to change it now?.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.SavedPassword">
+            <summary>
+              Looks up a localized string similar to To change the saved password, click here.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.SecurityErrorDialogTitle">
+            <summary>
+              Looks up a localized string similar to Security Error - IFS Applications.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Interactive.Properties.Resources.ServerConfigurationFile">
+            <summary>
+              Looks up a localized string similar to Server Configuration File.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Interactive.ProtectData">
+            <summary>
+            Protect data using the user credentials in the system (DPAPI). 
+            </summary>  
+        </member>
+    </members>
+</doc>

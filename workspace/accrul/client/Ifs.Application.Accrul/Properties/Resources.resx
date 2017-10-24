@@ -1,0 +1,832 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TEXT_SEL_TEMPL_ArgumentNotExist" xml:space="preserve">
+    <value>Not exist</value>
+  </data>
+  <data name="WH_tbwVoucherText" xml:space="preserve">
+    <value>Voucher Texts</value>
+  </data>
+  <data name="TEXT_UsrNotReg" xml:space="preserve">
+    <value>The User &amp;0 is not Registered in any non Year End User Group</value>
+  </data>
+  <data name="TEXT_Curr_Rate_Is_Null" xml:space="preserve">
+    <value>A currency rate must be specified in the voucher postings line.</value>
+  </data>
+  <data name="VOUCHER_ErrorStateUserGroup" xml:space="preserve">
+    <value>Status Approved is not allowed for User Group</value>
+  </data>
+  <data name="TEXT_MCVoEn_RequireType" xml:space="preserve">
+    <value>Voucher Type required!</value>
+  </data>
+  <data name="WH_EntryVoucher" xml:space="preserve">
+    <value>Voucher Entry</value>
+  </data>
+  <data name="TEXT_Dup_BalTransferred" xml:space="preserve">
+    <value>Balances have already been finally transferred</value>
+  </data>
+  <data name="WH_LabelLevel" xml:space="preserve">
+    <value>Structure Level:</value>
+  </data>
+  <data name="TEXT_MCVoEn_TextVoucherCompany" xml:space="preserve">
+    <value>Company:</value>
+  </data>
+  <data name="TEXT_RemoveTransFin" xml:space="preserve">
+    <value>Remove Transactions</value>
+  </data>
+  <data name="TEXT_QueryIllegalCmdChr" xml:space="preserve">
+    <value>You can not use the &amp;0 operator for &amp;1</value>
+  </data>
+  <data name="TEXT_VoEn_NotOpenStatus" xml:space="preserve">
+    <value>There is not any Open Status within the next 6 Periods</value>
+  </data>
+  <data name="TEXT_SetIdMissing" xml:space="preserve">
+    <value>Parameter Set Exist on File Type&amp;0 cannot be empty</value>
+  </data>
+  <data name="TEXT_NoFileLineFoundExt" xml:space="preserve">
+    <value>No File Lines found</value>
+  </data>
+  <data name="TEXT_Vou_TaxAmountSign" xml:space="preserve">
+    <value>Different sign in Tax Amount</value>
+  </data>
+  <data name="TEXT_LoadTypeMissing" xml:space="preserve">
+    <value>Load Type is Missing.</value>
+  </data>
+  <data name="WH_frmExternalFileTransactions" xml:space="preserve">
+    <value>External File Transactions</value>
+  </data>
+  <data name="TEXT_Dup_NotNextYear" xml:space="preserve">
+    <value>Year to must be the year after Year from</value>
+  </data>
+  <data name="TEXT_ExtFileVoucher" xml:space="preserve">
+    <value>External Voucher Assistant</value>
+  </data>
+  <data name="TEXT_MCPeAl_AmountNotEqual" xml:space="preserve">
+    <value>Total Amount of Period Allocation must be equal to the Amount from Voucher Row!</value>
+  </data>
+  <data name="WM_UntilPeriodNotExist" xml:space="preserve">
+    <value>Until period does not exist or period is closed</value>
+  </data>
+  <data name="TEXT_ProjQryTotalBalance" xml:space="preserve">
+    <value>Total :</value>
+  </data>
+  <data name="WH_TabAccount" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="TEXT_TemplateMandatory" xml:space="preserve">
+    <value>Template must have a value</value>
+  </data>
+  <data name="TEXT_InvalidDateFormat2" xml:space="preserve">
+    <value>Invalid date format.</value>
+  </data>
+  <data name="WH_PeriodAllocation" xml:space="preserve">
+    <value>Period Allocation</value>
+  </data>
+  <data name="TEXT_SetIdError" xml:space="preserve">
+    <value>Parameter Set Id does not exist</value>
+  </data>
+  <data name="TEXT_ARInvalidNumber" xml:space="preserve">
+    <value>Invalid Number</value>
+  </data>
+  <data name="WH_MCEntryVoucher" xml:space="preserve">
+    <value>Enter Multi Company Voucher</value>
+  </data>
+  <data name="TEXT_AlreadyLoadedExt" xml:space="preserve">
+    <value>Lines are already loaded. Continue?</value>
+  </data>
+  <data name="TEXT_MCVoEn_TextBalance" xml:space="preserve">
+    <value>Balance:</value>
+  </data>
+  <data name="WM_MCSomePeriodClosed" xml:space="preserve">
+    <value>One or more Period(s) in the interval are closed</value>
+  </data>
+  <data name="TEXT_ValidUntilMandatory" xml:space="preserve">
+    <value>Valid until must have a value</value>
+  </data>
+  <data name="WM_MCFromPeriodNotExist" xml:space="preserve">
+    <value>From period does not exist or period is closed</value>
+  </data>
+  <data name="WH_frmMCEntryVoucher" xml:space="preserve">
+    <value>Multi-Company Voucher Entry</value>
+  </data>
+  <data name="WH_tbwExtFileCompanyDefault" xml:space="preserve">
+    <value>Default External File Templates</value>
+  </data>
+  <data name="TEXT_VoEn_NotOpenDate" xml:space="preserve">
+    <value>Voucher Date is not within an Open Period</value>
+  </data>
+  <data name="TEXT_Dup_Rate" xml:space="preserve">
+    <value>Conversion Rate should be specified</value>
+  </data>
+  <data name="WH_AttributeValueCon" xml:space="preserve">
+    <value>Connect Attribute</value>
+  </data>
+  <data name="TEXT_ARInvalidDate" xml:space="preserve">
+    <value>Invalid Date</value>
+  </data>
+  <data name="TEXT_MCCodePartValue" xml:space="preserve">
+    <value>Code Part Value</value>
+  </data>
+  <data name="TEXT_NotValidPackage" xml:space="preserve">
+    <value>Not a valid input package</value>
+  </data>
+  <data name="TEXT_VoEn_TextBalance" xml:space="preserve">
+    <value>Balance:</value>
+  </data>
+  <data name="TEXT_VoEn_AlertBalanceCurr" xml:space="preserve">
+    <value>Currency is not in balance. Save changes?</value>
+  </data>
+  <data name="TEXT_BGR_dlgModifyDefData1" xml:space="preserve">
+    <value>Chart of account including account groups and account types from company</value>
+  </data>
+  <data name="TEXT_InstUpdFails" xml:space="preserve">
+    <value>There are some vouchers with status Error. They cannot be approved for update</value>
+  </data>
+  <data name="WH_AttributeValue" xml:space="preserve">
+    <value>Attribute Value</value>
+  </data>
+  <data name="TEXT_MCVoEn_RequireDate" xml:space="preserve">
+    <value>Voucher Date required!</value>
+  </data>
+  <data name="TEXT_OneRowSelected" xml:space="preserve">
+    <value>Query supported for one row only</value>
+  </data>
+  <data name="WH_tbwLevelNodeBothSpecified" xml:space="preserve">
+    <value>You can query on either Level or Node at one time</value>
+  </data>
+  <data name="WH_MCInterimVoucher" xml:space="preserve">
+    <value>Interim Voucher</value>
+  </data>
+  <data name="TEXT_FinishLoadFileExt" xml:space="preserve">
+    <value>Finished Loading File</value>
+  </data>
+  <data name="WH_frmExternalFileWizard" xml:space="preserve">
+    <value>External File Assistant</value>
+  </data>
+  <data name="TEXT_ExtScheduleParam" xml:space="preserve">
+    <value>External File Batch Job Parameters</value>
+  </data>
+  <data name="TEXT_ErrorSaveAccrul" xml:space="preserve">
+    <value>It is not possible to delete a voucher row for a voucher in Status Error</value>
+  </data>
+  <data name="WH_LabelItem" xml:space="preserve">
+    <value>Structure Item:</value>
+  </data>
+  <data name="WH_InterimVoucher" xml:space="preserve">
+    <value>Interim Voucher</value>
+  </data>
+  <data name="WH_dlgCopySelectionTemplate" xml:space="preserve">
+    <value>Copy AR Selection Template</value>
+  </data>
+  <data name="TEXT_InvalidDateFormat" xml:space="preserve">
+    <value>Invalid date format.</value>
+  </data>
+  <data name="TEXT_Dup_AutoUpdate" xml:space="preserve">
+    <value>An Accounting Year must have Closing Balances set to Preliminary for Automatic Update of Preliminary Year End.</value>
+  </data>
+  <data name="TEXT_MCNotPropogated" xml:space="preserve">
+    <value>Multi Company Voucher is not transfered to Voucher !</value>
+  </data>
+  <data name="TEXT_InstUpdJournal" xml:space="preserve">
+    <value>Journal number &amp;0 is completed .</value>
+  </data>
+  <data name="TEXT_NoFileLineWritten" xml:space="preserve">
+    <value>No File Lines written</value>
+  </data>
+  <data name="TEXT_MCVoEn_NotOpenDate" xml:space="preserve">
+    <value>Voucher Date is not within an Open Period</value>
+  </data>
+  <data name="TEXT_QueryNoBetweenStmt" xml:space="preserve">
+    <value>You can not use intervals for &amp;0</value>
+  </data>
+  <data name="WH_frmExternalFileLog" xml:space="preserve">
+    <value>External File Log</value>
+  </data>
+  <data name="TEXT_MCVoEn_TextBalanceCurr" xml:space="preserve">
+    <value>Currency Balance:</value>
+  </data>
+  <data name="WH_tbwExternalFileIdentity" xml:space="preserve">
+    <value>External File Identities</value>
+  </data>
+  <data name="TEXT_DoubleEntryCorrError" xml:space="preserve">
+    <value>All voucher rows must have the same value in the Correction column in the same group &amp;0</value>
+  </data>
+  <data name="DEVIDED_BY_ZERO_Error" xml:space="preserve">
+    <value>Divided by zero error</value>
+  </data>
+  <data name="TEXT_TemplateExist" xml:space="preserve">
+    <value>Template already Exists</value>
+  </data>
+  <data name="TEXT_SEL_TEMPL_InvalidNumber" xml:space="preserve">
+    <value>Invalid Number</value>
+  </data>
+  <data name="TEXT_Dup_Factor" xml:space="preserve">
+    <value>Conversion Factor should be specified</value>
+  </data>
+  <data name="TEXT_InVo_NotGroup" xml:space="preserve">
+    <value>Voucher Type is not in Group Interim Voucher</value>
+  </data>
+  <data name="TEXT_VoEn_TextCodePartDesc" xml:space="preserve">
+    <value>Code Part Description:</value>
+  </data>
+  <data name="WM_ProcCodeValidFromTo" xml:space="preserve">
+    <value>Date of Valid Until should not less than Date of Valid From!</value>
+  </data>
+  <data name="TEXT_MCInVo_NotGroup" xml:space="preserve">
+    <value>Voucher Type is not in Group Interim Voucher</value>
+  </data>
+  <data name="WH_dlgManualIntPosting" xml:space="preserve">
+    <value>Manual Internal Postings</value>
+  </data>
+  <data name="TEXT_CurrPeriodAllocation" xml:space="preserve">
+    <value>Period range is same as the Basic Period. Period Allocation will not be created.</value>
+  </data>
+  <data name="WH_tblExternalFileTypeDefinition" xml:space="preserve">
+    <value>External File Types</value>
+  </data>
+  <data name="WH_tbwQueryVoucher" xml:space="preserve">
+    <value>Vouchers Analysis</value>
+  </data>
+  <data name="WH_frmExternalFileTypeDefinition" xml:space="preserve">
+    <value>External File Type</value>
+  </data>
+  <data name="TEXT_SEL_TEMPL_SaveChanges" xml:space="preserve">
+    <value>Do you want to save the changes in Selection Template?</value>
+  </data>
+  <data name="TEXT_ExternalTransMessage" xml:space="preserve">
+    <value>This External Voucher contains tax transactions and can not be copied</value>
+  </data>
+  <data name="TEXT_MCVoucherTextId" xml:space="preserve">
+    <value>Voucher Text Id</value>
+  </data>
+  <data name="WH_OverViewCdCompl" xml:space="preserve">
+    <value>Code String Completions Analysis</value>
+  </data>
+  <data name="TEXT_DoubleEntryPostError" xml:space="preserve">
+    <value>You cannot have multiple debit and multiple credit rows in Row Group ID &amp;0</value>
+  </data>
+  <data name="WH_frmCdCompl" xml:space="preserve">
+    <value>Code String Completion</value>
+  </data>
+  <data name="TEXT_VoEn_TextBalanceCurr" xml:space="preserve">
+    <value>Currency Balance:</value>
+  </data>
+  <data name="WH_tbwAttribute" xml:space="preserve">
+    <value>Code Part Attributes</value>
+  </data>
+  <data name="WH_frmExternalFileSeparator" xml:space="preserve">
+    <value>External File Separators</value>
+  </data>
+  <data name="ERROR_Method" xml:space="preserve">
+    <value>The method is not available</value>
+  </data>
+  <data name="TEXT_RefNo_RefSeriesNull" xml:space="preserve">
+    <value>Reference Series and Reference Number cannot be null when Reference Mandatory is checked for Voucher Type &amp;0</value>
+  </data>
+  <data name="TEXT_VoEn_RequireType" xml:space="preserve">
+    <value>Voucher Type required!</value>
+  </data>
+  <data name="ERROR_FileRead" xml:space="preserve">
+    <value>Error occured when reading input file</value>
+  </data>
+  <data name="TEXT_ExtSchedule" xml:space="preserve">
+    <value>External Files Batch Schedules</value>
+  </data>
+  <data name="TEXT_DescriptionMandatory" xml:space="preserve">
+    <value>Description must have a value</value>
+  </data>
+  <data name="TEXT_ExpiredDate" xml:space="preserve">
+    <value>Voucher date does not match the valid date interval of the &amp;0 template.</value>
+  </data>
+  <data name="TEXT_CodePartAlreadyExist" xml:space="preserve">
+    <value>Code Part Value already used</value>
+  </data>
+  <data name="ERROR_LovView" xml:space="preserve">
+    <value>The List of Values View is not available</value>
+  </data>
+  <data name="TEXT_ReadExtFileOnlineExt" xml:space="preserve">
+    <value>Reading External File Online</value>
+  </data>
+  <data name="TEXT_CodePartNotExist" xml:space="preserve">
+    <value>Code Part does not exist !</value>
+  </data>
+  <data name="TEXT_VoEn_CurrAmountEmpty" xml:space="preserve">
+    <value>Currency Amount must be entered</value>
+  </data>
+  <data name="WH_frmExternalFileDefinition" xml:space="preserve">
+    <value>External File Template</value>
+  </data>
+  <data name="QUESTION_FooterFieldUsed" xml:space="preserve">
+    <value>The Footer Field ID is used by document footer &amp;0. Do you still want to delete it?</value>
+  </data>
+  <data name="TEXT_VoEnAwait_AlertBalance" xml:space="preserve">
+    <value>Voucher with status Awaiting Approval must be in balance</value>
+  </data>
+  <data name="TEXT_IntPostNotCompleted" xml:space="preserve">
+    <value>All Manual Code Parts should have values</value>
+  </data>
+  <data name="TEXT_Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="WH_MCPeriodAllocation" xml:space="preserve">
+    <value>Period Allocation</value>
+  </data>
+  <data name="TEXT_ZeroPercent" xml:space="preserve">
+    <value>Zero or Null amounts are not allowed</value>
+  </data>
+  <data name="VOUCHER_ErrorState" xml:space="preserve">
+    <value>Status &amp;0 is not allowed for new voucher entry</value>
+  </data>
+  <data name="TEXT_MandateToPi" xml:space="preserve">
+    <value>Direct Debiting Mandate File Creation Assistant</value>
+  </data>
+  <data name="TEXT_VoEn_Total" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="TEXT_PeAl_AmountNotEqual" xml:space="preserve">
+    <value>Total Amount of Period Allocation must be equal to the Amount from Voucher Row!</value>
+  </data>
+  <data name="TEXT_VoEn_TextForRow" xml:space="preserve">
+    <value>Text for Voucher and Row:</value>
+  </data>
+  <data name="WM_MCUntilPeriodNotExist" xml:space="preserve">
+    <value>Until period does not exist or period is closed</value>
+  </data>
+  <data name="TEXT_VoEn_RequireDate" xml:space="preserve">
+    <value>Voucher Date required!</value>
+  </data>
+  <data name="ERROR_FileTemplate" xml:space="preserve">
+    <value>The File Type is not available</value>
+  </data>
+  <data name="TEXT_VoEn_AlertBalance" xml:space="preserve">
+    <value>Voucher with status approved must be in balance</value>
+  </data>
+  <data name="TEXT_MCVoEn_AlertBalanceCurr" xml:space="preserve">
+    <value>Currency is not in balance. Save changes?
+Check currency balance in company :</value>
+  </data>
+  <data name="TEXT_PeriodicalCap" xml:space="preserve">
+    <value>Only the accounts of type Revenue, Cost and Statistics can be excluded from Periodical Capitalization</value>
+  </data>
+  <data name="TEXT_Vou_TaxAmountNull" xml:space="preserve">
+    <value>Tax Amount must have a value</value>
+  </data>
+  <data name="TEXT_NoDefAuditCountry" xml:space="preserve">
+    <value>There no default audit format specified in company &amp;0.</value>
+  </data>
+  <data name="TEXT_ValidFromMandatory" xml:space="preserve">
+    <value>Valid from must have a value</value>
+  </data>
+  <data name="FINTXT_DlgLovCompanyMissing" xml:space="preserve">
+    <value>Company has not been initiated via PAM_DlgSetDataFieldValues</value>
+  </data>
+  <data name="WH_tbwExtFileBatchJobs" xml:space="preserve">
+    <value>External Files Batch Schedules</value>
+  </data>
+  <data name="TEXT_VoEn_TextForId" xml:space="preserve">
+    <value>Text Id:</value>
+  </data>
+  <data name="TEXT_AuthPeriodAllocation" xml:space="preserve">
+    <value>User Group entered must have authority to Enter and Approve.</value>
+  </data>
+  <data name="TEXT_ExtFilePathDoesNotExist" xml:space="preserve">
+    <value>The specified File Name does not exist</value>
+  </data>
+  <data name="WH_tbwQueryVoucherRow" xml:space="preserve">
+    <value>Voucher Rows Analysis</value>
+  </data>
+  <data name="TEXT_OverwriteCodeParts" xml:space="preserve">
+    <value>Existing code part information will be modified. Do you wish to continue?</value>
+  </data>
+  <data name="TEXT_MCVoEn_TextForRow" xml:space="preserve">
+    <value>Text for Row:</value>
+  </data>
+  <data name="WH_tbwExternalFileTransactions" xml:space="preserve">
+    <value>External File Load IDs</value>
+  </data>
+  <data name="TEXT_MaximumLengthFileName2" xml:space="preserve">
+    <value>The total length of File Name and File Path should be less than 260 characters</value>
+  </data>
+  <data name="TEXT_ArArgumentNotExist" xml:space="preserve">
+    <value>Not exist</value>
+  </data>
+  <data name="TEXT_MCVoEn_NotOpenStatus" xml:space="preserve">
+    <value>There is not any Open Status within the next 6 Periods</value>
+  </data>
+  <data name="TEXT_ExtRemoveSchedule" xml:space="preserve">
+    <value>Do you really want to remove the Batch Schedule ?</value>
+  </data>
+  <data name="VOUCHER_MCNoRows" xml:space="preserve">
+    <value>There are no voucher rows in current voucher</value>
+  </data>
+  <data name="TEXT_MCVoEn_AlertQuantity" xml:space="preserve">
+    <value>Amount or Quantity must have a value:</value>
+  </data>
+  <data name="TEXT_ExtSuppInvoice" xml:space="preserve">
+    <value>External Supplier Invoice Assistant</value>
+  </data>
+  <data name="TEXT_InvalidDate" xml:space="preserve">
+    <value>Valid From is greater than Valid Until</value>
+  </data>
+  <data name="TEXT_CodePartNotExistAtt" xml:space="preserve">
+    <value>The Attribute is not used by this Code Part!</value>
+  </data>
+  <data name="TEXT_MultipleTax" xml:space="preserve">
+    <value>Multiple or RDE Tax Codes are not allowed here</value>
+  </data>
+  <data name="WH_tbwAccrulQueryVoucherRow" xml:space="preserve">
+    <value>Project Voucher Rows Analysis</value>
+  </data>
+  <data name="TEXT_PeriodInfoNotCopy" xml:space="preserve">
+    <value>Period Allocation information will not be copied to the destination voucher</value>
+  </data>
+  <data name="TEXT_InvalidCharacterAccount" xml:space="preserve">
+    <value>You have entered an invalid character in this field</value>
+  </data>
+  <data name="TEXT_UsrGrpNotAss" xml:space="preserve">
+    <value>The User Grop &amp;0 is not Associated with any voucher type with function group R for the accounting Period &amp;1</value>
+  </data>
+  <data name="TEXT_AccrulLedger" xml:space="preserve">
+    <value>Ledger</value>
+  </data>
+  <data name="WH_AttributeConOvw" xml:space="preserve">
+    <value>Code Part Attribute Connection</value>
+  </data>
+  <data name="TEXT_QueryOrValueExpected" xml:space="preserve">
+    <value>The parameter &amp;0 requires values for all or expressions</value>
+  </data>
+  <data name="USER_Voucher_Notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="TEXT_MCInVo_Process" xml:space="preserve">
+    <value>Please Wait - Save Interim Voucher</value>
+  </data>
+  <data name="TEXT_TitleExternalFileExt" xml:space="preserve">
+    <value>External File Load</value>
+  </data>
+  <data name="WM_FromPeriodNotExist" xml:space="preserve">
+    <value>From period does not exist or period is closed</value>
+  </data>
+  <data name="TEXT_MCVoEnCompGroupInvalid" xml:space="preserve">
+    <value>The same Row Group Id &amp;0 cannot be used in different companies.</value>
+  </data>
+  <data name="TEXT_BGR_dlgModifyDefData2" xml:space="preserve">
+    <value>will replace existing default data.</value>
+  </data>
+  <data name="WH_AccountTaxCode" xml:space="preserve">
+    <value>Tax Codes per Account</value>
+  </data>
+  <data name="TEXT_MCVoEn_TextVoucherCurrency" xml:space="preserve">
+    <value>Currency:</value>
+  </data>
+  <data name="TEXT_ExternalProjectPca" xml:space="preserve">
+    <value>PCA not allowed for External Projects in Company &amp;0</value>
+  </data>
+  <data name="TEXT_QueryBadNumberFmt" xml:space="preserve">
+    <value>&amp;0 must be a number</value>
+  </data>
+  <data name="TEXT_QueryBadDateFmt" xml:space="preserve">
+    <value>&amp;0 must be a date or time</value>
+  </data>
+  <data name="WH_TabAccountOverview" xml:space="preserve">
+    <value>Accounts</value>
+  </data>
+  <data name="TEXT_InvalTextId" xml:space="preserve">
+    <value>Invalid TextId</value>
+  </data>
+  <data name="TEXT_QueryValueExpected" xml:space="preserve">
+    <value>&amp;0 must be specified</value>
+  </data>
+  <data name="VOUCHER_MCNoRowsAtHome" xml:space="preserve">
+    <value>At least one voucher line must exist for the original 
+Multi Company Voucher</value>
+  </data>
+  <data name="TEXT_TotalBalance" xml:space="preserve">
+    <value>Total :</value>
+  </data>
+  <data name="FIELD_ProcessCode" xml:space="preserve">
+    <value>Process Code</value>
+  </data>
+  <data name="ERROR_StringLength" xml:space="preserve">
+    <value>Too many vouchers have been selected. Decrease the number of selected vouchers and try again.</value>
+  </data>
+  <data name="TEXT_Vou_CurrTaxAmountNull" xml:space="preserve">
+    <value>Currency Tax Amount must be entered</value>
+  </data>
+  <data name="WH_frmQueryVoucherDetail" xml:space="preserve">
+    <value>Voucher Details Analysis</value>
+  </data>
+  <data name="WH_frmMCQueryVoucherDetail" xml:space="preserve">
+    <value>Multi-Company Voucher Details Analysis</value>
+  </data>
+  <data name="EXTFILELIST_ColError" xml:space="preserve">
+    <value>No file types are defined or 
+there are mismatch in description and filetypes.
+check your parameters.</value>
+  </data>
+  <data name="TEXT_QuerySingleStmtOnly" xml:space="preserve">
+    <value>You may only specify one value for &amp;0</value>
+  </data>
+  <data name="TEXT_ProjectDesc" xml:space="preserve">
+    <value>Project Description</value>
+  </data>
+  <data name="TEXT_MCPropogated" xml:space="preserve">
+    <value>Multi Company Voucher is transfered to Voucher ...</value>
+  </data>
+  <data name="TEXT_ExtCurrUpd" xml:space="preserve">
+    <value>Currency Update Assistant</value>
+  </data>
+  <data name="TEXT_FinishWriteFile" xml:space="preserve">
+    <value>Finished Write File</value>
+  </data>
+  <data name="TEXT_NotSupported" xml:space="preserve">
+    <value>Query is not supported for this Function Group</value>
+  </data>
+  <data name="TEXT_CodePartValueNotExist" xml:space="preserve">
+    <value>Code Part Value does not exist !</value>
+  </data>
+  <data name="TEXT_NoAutoTaxTrans" xml:space="preserve">
+    <value>No automatic tax transaction will be created on a voucher of function group Q</value>
+  </data>
+  <data name="TEXT_SEL_TEMPL_EmptyTemplate" xml:space="preserve">
+    <value>The Template ID must be entered or selected from the list of values. 
+If a template does not exist create a selection template in Payment Basic Data</value>
+  </data>
+  <data name="TEXT_AuditBackJobCreated" xml:space="preserve">
+    <value>Background Job &amp;0 is started.</value>
+  </data>
+  <data name="TEXT_MaximumLengthFileName" xml:space="preserve">
+    <value>The length of File Name should be less than 260 characters</value>
+  </data>
+  <data name="WM_SomePeriodClosed" xml:space="preserve">
+    <value>One or more Period(s) in the interval are closed for user group &amp;0</value>
+  </data>
+  <data name="VOUCHER_NoRows" xml:space="preserve">
+    <value>There are no voucher rows in current voucher</value>
+  </data>
+  <data name="ACC_ERROR_NegCurrRate" xml:space="preserve">
+    <value>Currency Rate cannot be zero or negative</value>
+  </data>
+  <data name="TEXT_SEL_TEMPL_ArgumentExist" xml:space="preserve">
+    <value>Exist</value>
+  </data>
+  <data name="FINTXT_DlgLovPbSetDef" xml:space="preserve">
+    <value>Add msg PAM_DlgSetDefPb in Push button instance and handle default push button</value>
+  </data>
+  <data name="ERROR_FileWrite" xml:space="preserve">
+    <value>Error occured when writing output file</value>
+  </data>
+  <data name="FINTXT_DlgLovMissInstFun" xml:space="preserve">
+    <value>Function UserMethod handling ListOfValues, Ok, Cancel etc must be written in dialog instance</value>
+  </data>
+  <data name="TEXT_FileLineExceedsLength" xml:space="preserve">
+    <value>Maximum length allowed for a File Line is 4000 characters.</value>
+  </data>
+  <data name="TEXT_BalTypeUnchecked" xml:space="preserve">
+    <value>At least one Balance Type must be selected</value>
+  </data>
+  <data name="WM_tbwProcCode" xml:space="preserve">
+    <value>Process Codes</value>
+  </data>
+  <data name="TEXT_NoManualPost" xml:space="preserve">
+    <value>Manual Internal Postings are missing</value>
+  </data>
+  <data name="FILELIST_ColError" xml:space="preserve">
+    <value>No file types are defined or
+there are mismatch in description and filetypes.
+check your parameters.</value>
+  </data>
+  <data name="WH_tbwAttributeCon" xml:space="preserve">
+    <value>Connect Attribute</value>
+  </data>
+  <data name="TEXT_ArArgumentExist" xml:space="preserve">
+    <value>Exist</value>
+  </data>
+  <data name="TEXT_ReadingExtLineExt" xml:space="preserve">
+    <value>Reading File Line &amp;0</value>
+  </data>
+  <data name="TEXT_VoEn_TextCodePartValue" xml:space="preserve">
+    <value>Code Part Value:</value>
+  </data>
+  <data name="TEXT_TitleExternalFileOutput" xml:space="preserve">
+    <value>External File Output</value>
+  </data>
+  <data name="WH_frmSelectionTemplate" xml:space="preserve">
+    <value>&amp;0 - &amp;1 Selection Template</value>
+  </data>
+  <data name="WH_Attribute" xml:space="preserve">
+    <value>Code Part Attributes</value>
+  </data>
+  <data name="TEXT_VouCurrCode" xml:space="preserve">
+    <value>Voucher row should have a currency code.</value>
+  </data>
+  <data name="TEXT_QueryNoMathingStmt" xml:space="preserve">
+    <value>&amp;0 allows no wildcard characters</value>
+  </data>
+  <data name="TEXT_MCVoEn_AlertBalance" xml:space="preserve">
+    <value>The Voucher must be in balance to save.
+Check balance in company :  &amp;1</value>
+  </data>
+  <data name="TEXT_ApproveOnlyPermission" xml:space="preserve">
+    <value>Users included in a user group with Approve Only authorization level are not allowed to enter or modify vouchers.</value>
+  </data>
+  <data name="TEXT_InVo_Process" xml:space="preserve">
+    <value>Please Wait - Save Interim Voucher</value>
+  </data>
+  <data name="WH_dlgAuditFileResult" xml:space="preserve">
+    <value>Audit File Result</value>
+  </data>
+  <data name="TEXT_ExtCustInvoice" xml:space="preserve">
+    <value>External Customer Invoice Assistant</value>
+  </data>
+  <data name="TEXT_VoEn_AlertQuantity" xml:space="preserve">
+    <value>Amount or Quantity must have a value</value>
+  </data>
+  <data name="TEXT_Vou_CurrTaxAmountSign" xml:space="preserve">
+    <value>Different sign in Currency Tax Amount</value>
+  </data>
+  <data name="TEXT_MCVoEn_Total" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="TEXT_NotValidView" xml:space="preserve">
+    <value>Not a valid view</value>
+  </data>
+  <data name="TEXT_MCVoEn_TextCodePartDesc" xml:space="preserve">
+    <value>Code Part Description:</value>
+  </data>
+  <data name="TEXT_ProjectDescOnly" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="WH_tblExternalFileDefinition" xml:space="preserve">
+    <value>External File Templates</value>
+  </data>
+  <data name="TEXT_SEL_TEMPL_InvalidDate" xml:space="preserve">
+    <value>Invalid Date</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="trashcan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trashcan.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TEXT_InvalidOutputPath" xml:space="preserve">
+    <value>The Output Path/Directory does not exist.</value>
+  </data>
+  <data name="TEXT_NegativeNetBookValue" xml:space="preserve">
+    <value>The net book value will be negative for at least one book. </value>
+  </data>
+  <data name="QUESTION_NegativeNetBookValue" xml:space="preserve">
+    <value>The net book value will be negative for at least one book. Do you want to continue?</value>
+  </data>
+  <data name="ERROR_DifferentCompanies" xml:space="preserve">
+    <value>Company must be the same in Audit Interface Assistant and order report dialog. Currently Company (&amp;0) is selected in the Audit Interface Assistant and Company (&amp;1) is selected in the order report dialog</value>
+  </data>
+  <data name="TEXT_DifferentCompaniesSelected" xml:space="preserve">
+    <value>Different companies selected</value>
+  </data>
+  <data name="TEXT_DocFooterNoofColumns" xml:space="preserve">
+    <value>It is not possible to enter more than 8 columns in the No of Columns field</value>
+  </data>
+  <data name="TEXT_InvalidLederID" xml:space="preserve">
+    <value>Invalid Ledger ID.</value>
+  </data>
+  <data name="TEXT_ParallelCurrency" xml:space="preserve">
+    <value>Parallel Currency</value>
+  </data>
+  <data name="TEXT_Vou_ParallelCurrAmountNull" xml:space="preserve">
+    <value>Amount in parallel currency cannot be zero/null when there is a value in the Currency Amount field </value>
+  </data>
+  <data name="TEXT_GLVouRowsNoCopy" xml:space="preserve">
+    <value>The selected voucher contains summarized voucher rows. Therefore, voucher rows cannot be copied.</value>
+  </data>
+  <data name="TEXT_GlUpdPostedToQueue" xml:space="preserve">
+    <value>The General Ledger update is posted to the queue with &amp;0 job ID.</value>
+  </data>
+  <data name="WH_dlgCopyAPSelectionTemplate" xml:space="preserve">
+    <value>Copy AP Selection Template</value>
+  </data>
+  <data name="TEXT_UpdJournalReadyWithErr" xml:space="preserve">
+    <value>Journal number &amp;0 is completed.
+&amp;1 voucher(s) returned to the hold table with status Error.</value>
+  </data>
+  <data name="TEXT_AccountExistRepBal" xml:space="preserve">
+    <value>The account is used in the reported balances. Therefore, the changes will not apply for already reported balances. Do you want to continue?</value>
+  </data>
+  <data name="TEXT_VoEn_NoOpenPeriods" xml:space="preserve">
+    <value>There are no open periods exist in Accounting Periods.</value>
+  </data>
+</root>

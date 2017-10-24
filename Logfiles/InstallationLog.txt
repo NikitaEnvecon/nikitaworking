@@ -1,0 +1,143 @@
+====================================================================
+Install source location:  C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment
+Local project root:       C:\Nikitha1
+Team Server project root: 
+====================================================================
+
+Create directory C:\Nikitha1\DeployFiles
+Create directory C:\Nikitha1\Workspace
+
+Copy DevelopFiles
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\AfterTargets.target
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\application.build
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\BeforeTargets.Target
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Deploy.cmd
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\DeployClickOnce.target
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\DeployPlugin.cmd
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\f1.snk
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\ICSharpCode.SharpZipLib.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Ifs.Fnd.AppDeployer.exe
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Ifs.Fnd.AppDeployer.exe.config
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Ifs.Fnd.MsBuildTasks.targets
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Ifs.Fnd.NavigatorEditor.exe
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Ifs.Fnd.NavigatorEditor.exe.config
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Ifs.Fnd.PreBuildTasks.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Ifs.Fnd.PreBuildTasks.targets
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Ifs.Fnd.TSFileSync-DeployFilesConfig.xml
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Ifs.Fnd.TSFileSync.exe
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Ifs.Fnd.TSFileSync.exe.config
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Ifs.Fnd.TSFileSync.ReferenceResolver.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\temporary.pfx
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\workspace.build
+21 File(s) copied
+
+Copy DesignFiles
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DesignFiles\Ifs.Fnd.ApplicationForms.Design.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DesignFiles\Ifs.Fnd.Data.Design.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DesignFiles\Ifs.Fnd.Windows.Forms.CommonControls.Design.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DesignFiles\Ifs.Fnd.Windows.Forms.DataBinding.Design.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DesignFiles\Ifs.Fnd.Windows.Forms.DataGrid.Design.dll
+5 File(s) copied
+
+Installing IFS VisualStudio Extensions
+Installing DevelopFiles
+Files will be copied to "C:\Nikitha1\DevelopFiles"
+
+xcopy /d /y "C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\Ifs.Fnd.DevStructureUtil.dll" "C:\Nikitha1\DevelopFiles"
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\Ifs.Fnd.DevStructureUtil.dll
+1 File(s) copied
+xcopy /d /y "C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\Ifs.Fnd.VisualStudio.Interfaces.dll" "C:\Nikitha1\DevelopFiles"
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\Ifs.Fnd.VisualStudio.Interfaces.dll
+1 File(s) copied
+
+Installation complete
+
+Installing IFS Visual Studio 2013 Addin manager.
+Files will be copied to "C:\Users\Administrator\AppData\Roaming\Microsoft\MSEnvShared\Addins"
+
+md "C:\Users\Administrator\AppData\Roaming\Microsoft\MSEnvShared\Addins"
+xcopy /d /y "C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\IFSVSAddInManager.4.Addin" "C:\Users\Administrator\AppData\Roaming\Microsoft\MSEnvShared\Addins"
+0 File(s) copied
+xcopy /d /y "C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\IFSVSAddInManager.4.dll" "C:\Users\Administrator\AppData\Roaming\Microsoft\MSEnvShared\Addins"
+0 File(s) copied
+
+Installation complete
+
+
+Installing IFS Visual Studio Project templates.
+
+
+Installing IFS Visual Studio Item templates.
+
+
+Installing IFS Visual Studio ExtensionManager.
+
+
+Installation complete
+
+Installing IFS Visual Studio Addins
+Files will be copied to "C:\Nikitha1\VSAddins"
+
+xcopy /d /y /e "C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\*.*" "C:\Nikitha1\VSAddins"
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CommandConfiguration.xml
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\DynamicToolBoxConfig.xml
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.CustomizationAddIn.AddIn
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.CustomizationAddIn.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.DataToolbox.Addin
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.DataToolbox.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.DevelopmentTasks.AddIn
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.DevelopmentTasks.config
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.DevelopmentTasks.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.DynamicToolBox.Addin
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.DynamicToolbox.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.LocalizableStringExtraction.AddIn
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.LocalizableStringExtraction.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.LocalizeForms.AddIn
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.LocalizeForms.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.TabOrderOutline.Addin
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.TabOrderOutline.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.TeamServerAssemblyResolve.AddIn
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\Ifs.Fnd.VisualStudio.TeamServerAssemblyResolve.dll
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\ClassesCustomization\Class.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\ClassesCustomization\class.vstemplate
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\ClassesCustomization\__TemplateIcon.ico
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\ControlsCustomization\control.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\ControlsCustomization\control.vstemplate
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\ControlsCustomization\frmControl.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\ControlsCustomization\frmControl.Designer.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\ControlsCustomization\windowcontrol.vstemplate
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\ControlsCustomization\__TemplateIcon.ico
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\DialogWindowCustomization\dialogwindowclass.vstemplate
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\DialogWindowCustomization\dlg.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\DialogWindowCustomization\dlg.designer.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\DialogWindowCustomization\__TemplateIcon.ico
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\FormWindowCustomization\formwindowclass.vstemplate
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\FormWindowCustomization\frm.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\FormWindowCustomization\frm.Designer.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\FormWindowCustomization\__TemplateIcon.ico
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\GlobalsCustomization\Globals.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\GlobalsCustomization\sealedclassforglobals.vstemplate
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\GlobalsCustomization\__TemplateIcon.ico
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\IfsApplicationFormsProjectCustomization\IfsApplicationFormsProjectTemplate.vstemplate
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\IfsApplicationFormsProjectCustomization\IFSProjectTemplate.csproj
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\IfsApplicationFormsProjectCustomization\__TemplateIcon.ico
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\IfsApplicationFormsProjectCustomization\Properties\AssemblyInfo.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\IfsApplicationFormsProjectCustomization\Properties\Resources.Designer.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\IfsApplicationFormsProjectCustomization\Properties\Resources.resx
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\TableWindowCustomization\tablewindowclass.vstemplate
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\TableWindowCustomization\tbw.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\TableWindowCustomization\tbw.Designer.cs
+C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\\VSAddIns\CustomizationTemplates\TableWindowCustomization\__TemplateIcon.ico
+49 File(s) copied
+
+Installation complete
+
+
+Installing IFS Visual Studio 2013 Code Snippets.
+
+md "C:\Users\Administrator\Documents\Visual Studio 2013\Code Snippets"
+xcopy /d /y /S "C:\Users\ADMINI~1\AppData\Local\Temp\APF\IFSApplicationFormsDevelopment\DevelopFiles\Setup\Code Snippets" "C:\Users\Administrator\Documents\Visual Studio 2013\Code Snippets" /i
+0 File(s) copied
+
+Installation complete
+

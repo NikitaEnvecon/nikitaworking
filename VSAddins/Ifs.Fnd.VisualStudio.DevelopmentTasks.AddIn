@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Extensibility xmlns="http://schemas.microsoft.com/AutomationExtensibility">
+	<HostApplication>
+		<Name>Microsoft Visual Studio</Name>
+		<Version>12.0</Version>
+	</HostApplication>
+	<Addin>
+		<FriendlyName>Ifs.Fnd.VisualStudio.DevelopmentTasks</FriendlyName>
+		<Description>Ifs.Fnd.VisualStudio.DevelopmentTasks</Description>
+		<Assembly>Ifs.Fnd.VisualStudio.DevelopmentTasks.dll</Assembly>
+		<FullClassName>Ifs.Fnd.VisualStudio.DevelopmentTasks.Connect</FullClassName>
+		<LoadBehavior>1</LoadBehavior>
+		<CommandPreload>1</CommandPreload>
+		<CommandLineSafe>0</CommandLineSafe>
+	</Addin>
+  <ToolsOptionsPage>
+    <Category Name="IFS AddIns">
+      <SubCategory Name="Development Tasks">
+        <Assembly>Ifs.Fnd.VisualStudio.DevelopmentTasks.dll</Assembly>
+        <FullClassName>Ifs.Fnd.VisualStudio.DevelopmentTasks.OptionsPage</FullClassName>
+      </SubCategory>
+    </Category>
+  </ToolsOptionsPage>
+</Extensibility>

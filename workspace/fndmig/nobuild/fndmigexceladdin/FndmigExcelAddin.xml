@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TextDefinition version="1.0" language="prog" module="FNDMIG" type="VC">
+  <Context name="FndmigExcelAddin" type="C# Form">
+    <Attribute name="ButtonConnect">
+      <Text>Connect</Text>
+    </Attribute>
+    <Attribute name="ButtonQuery">
+      <Text>Search</Text>
+    </Attribute>
+    <Attribute name="ButtonExecute">
+      <Text>Execute</Text>
+    </Attribute>
+    <Attribute name="ButtonValidate">
+      <Text>Validate</Text>
+    </Attribute>
+    <Attribute name="ButtonSettings">
+      <Text>Settings</Text>
+    </Attribute>
+    <Attribute name="ButtonDisconnect">
+      <Text>Disconnect</Text>
+    </Attribute>
+	  <Attribute name="ButtonAbout">
+      <Text>About</Text>
+    </Attribute>
+    <Attribute name="ButtonHelp">
+      <Text>Help</Text>
+    </Attribute>
+	  <Attribute name="ButtonSelectedRaws">
+      <Text>Selected rows only</Text>
+    </Attribute>
+	  <Attribute name="ButtonAllRows">
+      <Text>All rows</Text>
+    </Attribute>
+	  <Attribute name="ButtonCancel">
+      <Text>Cancel</Text>
+    </Attribute>
+    <Attribute name="ButtonClose">
+      <Text>Close</Text>
+    </Attribute>
+    <Attribute name="ButtonSwitchUsr">
+      <Text>Switch User</Text>
+    </Attribute>
+    <Attribute name="ButtonImport">
+      <Text>Import</Text>
+    </Attribute>
+    <Attribute name="ButtonAbtOk">
+      <Text>OK</Text>
+    </Attribute>
+    <Attribute name="ButtonAbort">
+      <Text>Abort</Text>
+    </Attribute>
+    <Attribute name="ButtonClear">
+      <Text>Clear</Text>
+    </Attribute>
+    <Attribute name="ButtonSync">
+      <Text>Rebuild Mappings</Text>
+    </Attribute>
+    <Attribute name="ButtonYes">
+      <Text>Yes</Text>
+    </Attribute>
+    <Attribute name="ButtonNo">
+      <Text>No</Text>
+    </Attribute>
+    <Attribute name="ButtonMappingOnly">
+      <Text>Load Job Details only</Text>
+    </Attribute>
+	  <Attribute name="TitlePane">
+      <Text>Migration Jobs</Text>
+    </Attribute>
+    <Attribute name="TitleRecentJobs">
+      <Text>Recent Jobs</Text>
+    </Attribute>
+	  <Attribute name="TitleFieldMappings">
+      <Text>Field Mappings</Text>
+    </Attribute>
+	  <Attribute name="TitleFieldDetails">
+      <Text>Field Details</Text>
+    </Attribute>    
+    <Attribute name="TitleDlgAbout">
+      <Text>About</Text>
+    </Attribute>
+    <Attribute name="TitleQueringData">
+      <Text>Querying data...</Text>
+    </Attribute>
+    <Attribute name="TitleQueringTabStandard">
+      <Text>Standard</Text>
+    </Attribute>
+    <Attribute name="TitleQueringTabAdvanced">
+      <Text>Advanced</Text>
+    </Attribute>
+    <Attribute name="TitleQueringGridField">
+      <Text>Field</Text>
+    </Attribute>
+    <Attribute name="TitleQueringGridCondition">
+      <Text>Condition</Text>
+    </Attribute>
+    <Attribute name="LblSearchBox">
+      <Text>Search:</Text>
+    </Attribute>
+    <Attribute name="LblLngSettings">
+      <Text>Language Options</Text>
+    </Attribute>
+    <Attribute name="LblUsrSettings">
+      <Text>User Settings</Text>
+    </Attribute>
+    <Attribute name="LblAvailLng">
+      <Text>Available Languages</Text>
+    </Attribute>
+    <Attribute name="LblImportLngFile">
+      <Text>Import language file</Text>
+    </Attribute>
+    <Attribute name="LblProductName">
+      <Text>Product Name:</Text>
+    </Attribute>
+    <Attribute name="LblProductNameValue">
+      <Text>IFS Data Migration Excel Add-in</Text>
+    </Attribute>
+    <Attribute name="LblCompany">
+      <Text>Company:</Text>
+    </Attribute>
+    <Attribute name="LblProductVersion">
+      <Text>Product Version:</Text>
+    </Attribute>
+    <Attribute name="LblComponentVersion">
+      <Text>IFS Component Version:</Text>
+    </Attribute>
+    <Attribute name="LblBuildDate">
+      <Text>Build Date:</Text>
+    </Attribute>
+    <Attribute name="LblDescriptionValue">
+      <Text>IFS Data Migration Excel Add-in: Allows the IFS users to create and update data in IFS applications through FNDMIG migration jobs with procedure type ‘Excel Migration’</Text>
+    </Attribute>
+    <Attribute name="LblUserWhere">
+      <Text>SQL User Where</Text>
+    </Attribute>
+    <Attribute name="LblDataRet">
+      <Text>Data retrieval in progress...</Text>
+    </Attribute>
+    <Attribute name="ClmnSourceColumn">
+      <Text>Source Column</Text>
+    </Attribute>
+    <Attribute name="ClmnDescription">
+      <Text>Description</Text>
+    </Attribute>
+    <Attribute name="ClmnExcelColumnHeader">
+      <Text>Excel Column</Text>
+    </Attribute>
+    <Attribute name="ClmnNoteText">
+      <Text>Note Text</Text>
+    </Attribute>
+    <Attribute name="ClmnColumnName">
+      <Text>Column Name</Text>
+    </Attribute>
+    <Attribute name="ClmnFlags">
+      <Text>Flags</Text>
+    </Attribute>
+    <Attribute name="ClmnDataType">
+      <Text>Data Type</Text>
+    </Attribute>
+    <Attribute name="ClmnLength">
+      <Text>Length</Text>
+    </Attribute>
+    <Attribute name="ClmnDefaultValue">
+      <Text>Default Value</Text>
+    </Attribute>
+    <Attribute name="ClmnDbClientValues">
+      <Text>Db Client Values</Text>
+    </Attribute>	
+	  <Attribute name="DlgSheetConfirm">
+      <Text>Do you want to open the job in a new sheet? If not, the content of the active sheet will be cleared</Text>
+    </Attribute>
+    <Attribute name="DlgExecuteConfirm">
+      <Text>What do you want to process?</Text>
+    </Attribute>
+	  <Attribute name="DlgErrorMsgInvalidSelection">
+      <Text>Invalid Selection</Text>
+    </Attribute>
+	  <Attribute name="DlgErrorMsgKeysNotMapped">
+      <Text>All fields are not mapped to process the request</Text>
+    </Attribute>
+	  <Attribute name="DlgInfoEndSession">
+      <Text>This will end your IFS Applications session</Text>
+    </Attribute>
+    <Attribute name="DlgInfoUnsupportedLanguage">
+      <Text>IFS.Fndmig.ExcelAddin has not been configured to run in selected language. Please use a different language to log in</Text>
+    </Attribute>
+    <Attribute name="DlgInfoSwitchUser">
+      <Text>IFS.Fndmig.ExcelAddin must be restarted to switch user. Are you sure you want to do this?</Text>
+    </Attribute>
+    <Attribute name="DlgInfoNoResults">
+      <Text>No results found</Text>
+    </Attribute>
+    <Attribute name="DlgErrorCellInEditMode">
+      <Text>This action cannot be performed when a cell is in edit mode</Text>
+    </Attribute>
+    <Attribute name="DlgInfoNoHelpPage">
+      <Text>IFS Data Migration Excel add-in was unable to open the help from the URL provided</Text>
+    </Attribute>
+    <Attribute name="DlgQueryConfirm">
+      <Text>Do you want to fetch the data in a new sheet? If not, the content of the active sheet will be cleared</Text>
+    </Attribute>
+    <Attribute name="DlgDeleteMappedCol">
+      <Text>A mapped Excel column mapped against an IFS field has been deleted. Please check the column mappings before proceeding</Text>
+    </Attribute>
+    <Attribute name="LblDebugSetting">
+      <Text>Debug Settings</Text>
+    </Attribute>
+    <Attribute name="CbTraceEnabled">
+      <Text>Enable Trace</Text>
+    </Attribute>
+    <Attribute name="LbFilePath">
+      <Text>File Path</Text>
+    </Attribute>
+    <Attribute name="DlgNoAccess">
+      <Text>You are not licensed to use this application. Please contact your System Administrator</Text>
+    </Attribute>
+    <Attribute name="DlgInfoErrorRows">
+      <Text>One or more rows exceed the data limit that can be handled by the IFS Data Migration Excel Add-In</Text>
+    </Attribute>
+    <Attribute name="DlgTitleJobConfigError">
+      <Text>Job configuration error</Text>
+    </Attribute>
+    <Attribute name="DlgErrorNonUniqueSourceColumns">
+      <Text>Source columns have duplicated values</Text>
+    </Attribute>
+    <Attribute name="DlgInfoNoHelpFile">
+      <Text>Help file cannot be located</Text>
+    </Attribute>
+    <Attribute name="DlgInfoDiscardQueryChanges">
+      <Text>Changes will be lost. Do you want to continue?</Text>
+    </Attribute>
+    <Attribute name="DlgMethodsNotGranted">
+      <Text>You are not granted all the database methods required to run the job</Text>
+    </Attribute>
+    <Attribute name="DlgRebuildMappingErrorText">
+      <Text>Cannot automatically rebuild mappings for this sheet. You have to manually update the Field Mappings tab</Text>
+    </Attribute>
+  </Context>
+</TextDefinition>

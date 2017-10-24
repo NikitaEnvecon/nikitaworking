@@ -1,0 +1,49 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceServerFile
+--  Component:    FNDMIG
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+VIEW Intface_Server_Files_Lov IS
+   Prompt = 'Server Files'
+   File_Name.Flags = 'AMIUL'
+   File_Name.Datatype = 'STRING(100)'
+   File_Name.Prompt = 'File Name'
+   File_Size.Flags = 'AMIUL'
+   File_Size.Datatype = 'STRING(30)/UPPERCASE'
+   File_Size.Prompt = 'File Size'
+   File_Date.Flags = 'AMIUL'
+   File_Date.Datatype = 'STRING(30)'
+   File_Date.Prompt = 'File Date'
+SELECT file_name,
+          file_size,
+          file_date
+   FROM TABLE(INTFACE_SERVER_FILE_API.File_List);
+
+VIEW Intface_Server_Dir_Lov IS
+   Prompt = 'Server Dir'
+   Name.Flags = 'AMIUL'
+   Name.Datatype = 'STRING(4000)'
+   Name.Prompt = 'Name'
+   Path.Flags = 'AMIUL'
+   Path.Datatype = 'STRING(4000)'
+   Path.Prompt = 'Path'
+SELECT name,
+          path,
+          grants
+   FROM   TABLE(INTFACE_SERVER_FILE_API.Directory_List);
+

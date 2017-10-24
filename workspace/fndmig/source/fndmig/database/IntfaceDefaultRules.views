@@ -1,0 +1,36 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceDefaultRules
+--  Component:    FNDMIG
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+@Overtake Base
+VIEW Intface_Default_Rules IS
+   Prompt = 'Intface Default Rules'
+SELECT rule_id                        rule_id,
+       nvl(language_sys.translate_constant('IntfaceDefaultRules',substr(rule_id,1,20)|| ' : '), description) description,
+       rule_value                     rule_value,
+       Intface_Rule_Flag_API.Decode(rule_flag) rule_flag,
+       rule_flag                      rule_flag_db,
+       Intface_Rule_Value_API.Decode(value_flag) value_flag,
+       value_flag                     value_flag_db,
+       procedure_name                 procedure_name,
+       rowid                         objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   intface_default_rules_tab;
+

@@ -1,0 +1,1986 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pbFinish.Location" type="System.Drawing.Point, System.Drawing">
+    <value>542, 7</value>
+  </data>
+  <data name="pbFinish.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 29</value>
+  </data>
+  <data name="&gt;&gt;pbFinish.Name" xml:space="preserve">
+    <value>pbFinish</value>
+  </data>
+  <data name="&gt;&gt;pbFinish.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbFinish.Parent" xml:space="preserve">
+    <value>ToolBar</value>
+  </data>
+  <data name="&gt;&gt;pbFinish.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="pbNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 7</value>
+  </data>
+  <data name="pbNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 29</value>
+  </data>
+  <data name="&gt;&gt;pbNext.Name" xml:space="preserve">
+    <value>pbNext</value>
+  </data>
+  <data name="&gt;&gt;pbNext.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbNext.Parent" xml:space="preserve">
+    <value>ToolBar</value>
+  </data>
+  <data name="&gt;&gt;pbNext.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pbBack.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 7</value>
+  </data>
+  <data name="pbBack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 29</value>
+  </data>
+  <data name="&gt;&gt;pbBack.Name" xml:space="preserve">
+    <value>pbBack</value>
+  </data>
+  <data name="&gt;&gt;pbBack.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbBack.Parent" xml:space="preserve">
+    <value>ToolBar</value>
+  </data>
+  <data name="&gt;&gt;pbBack.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="pbCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 7</value>
+  </data>
+  <data name="pbCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 29</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.Name" xml:space="preserve">
+    <value>pbCancel</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.Parent" xml:space="preserve">
+    <value>ToolBar</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pbList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 7</value>
+  </data>
+  <data name="pbList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 29</value>
+  </data>
+  <data name="&gt;&gt;pbList.Name" xml:space="preserve">
+    <value>pbList</value>
+  </data>
+  <data name="&gt;&gt;pbList.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbList.Parent" xml:space="preserve">
+    <value>ToolBar</value>
+  </data>
+  <data name="&gt;&gt;pbList.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;picWizard.Name" xml:space="preserve">
+    <value>picWizard</value>
+  </data>
+  <data name="&gt;&gt;picWizard.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalPicture, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;picWizard.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;picWizard.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pbRemove1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 7</value>
+  </data>
+  <data name="pbRemove1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 29</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbRemove1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="pbRemove1.Text" xml:space="preserve">
+    <value>&amp;Remove</value>
+  </data>
+  <data name="&gt;&gt;pbRemove1.Name" xml:space="preserve">
+    <value>pbRemove1</value>
+  </data>
+  <data name="&gt;&gt;pbRemove1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbRemove1.Parent" xml:space="preserve">
+    <value>ToolBar</value>
+  </data>
+  <data name="&gt;&gt;pbRemove1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pbNew1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 7</value>
+  </data>
+  <data name="pbNew1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 29</value>
+  </data>
+  <data name="pbNew1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="pbNew1.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="&gt;&gt;pbNew1.Name" xml:space="preserve">
+    <value>pbNew1</value>
+  </data>
+  <data name="&gt;&gt;pbNew1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbNew1.Parent" xml:space="preserve">
+    <value>ToolBar</value>
+  </data>
+  <data name="&gt;&gt;pbNew1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ToolBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 324</value>
+  </data>
+  <data name="ToolBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>633, 44</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Name" xml:space="preserve">
+    <value>ToolBar</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalFormToolBar, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dfCompanyDesc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 85</value>
+  </data>
+  <data name="dfCompanyDesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 21</value>
+  </data>
+  <data name="dfCompanyDesc.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;dfCompanyDesc.Name" xml:space="preserve">
+    <value>dfCompanyDesc</value>
+  </data>
+  <data name="&gt;&gt;dfCompanyDesc.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfCompanyDesc.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfCompanyDesc.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelcmbCompany.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbCompany.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labelcmbCompany.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelcmbCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 87</value>
+  </data>
+  <data name="labelcmbCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="labelcmbCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labelcmbCompany.Text" xml:space="preserve">
+    <value>Company:</value>
+  </data>
+  <data name="labelcmbCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbCompany.Name" xml:space="preserve">
+    <value>labelcmbCompany</value>
+  </data>
+  <data name="&gt;&gt;labelcmbCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbCompany.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labelcmbCompany.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cmbCompany.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 85</value>
+  </data>
+  <data name="cmbCompany.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="cmbCompany.MaxLength" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cmbCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 21</value>
+  </data>
+  <data name="cmbCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cmbCompany.Name" xml:space="preserve">
+    <value>cmbCompany</value>
+  </data>
+  <data name="&gt;&gt;cmbCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cComboBox, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cmbCompany.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cmbCompany.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cmbFunctionGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>505, 252</value>
+  </data>
+  <data name="cmbFunctionGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 21</value>
+  </data>
+  <data name="cmbFunctionGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="cmbFunctionGroup.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbFunctionGroup.Name" xml:space="preserve">
+    <value>cmbFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;cmbFunctionGroup.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbFunctionGroup.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cmbFunctionGroup.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="rbAll.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="rbAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 284</value>
+  </data>
+  <data name="rbAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 17</value>
+  </data>
+  <data name="rbAll.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="rbAll.Text" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="rbAll.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;rbAll.Name" xml:space="preserve">
+    <value>rbAll</value>
+  </data>
+  <data name="&gt;&gt;rbAll.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cRadioButton, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;rbAll.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;rbAll.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="rbSingle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="rbSingle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 252</value>
+  </data>
+  <data name="rbSingle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 17</value>
+  </data>
+  <data name="rbSingle.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="rbSingle.Text" xml:space="preserve">
+    <value>Single</value>
+  </data>
+  <data name="rbSingle.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;rbSingle.Name" xml:space="preserve">
+    <value>rbSingle</value>
+  </data>
+  <data name="&gt;&gt;rbSingle.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cRadioButton, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;rbSingle.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;rbSingle.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cmbDefaultType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbDefaultType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>505, 214</value>
+  </data>
+  <data name="cmbDefaultType.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="cmbDefaultType.MaxLength" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cmbDefaultType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 21</value>
+  </data>
+  <data name="cmbDefaultType.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="cmbDefaultType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbDefaultType.Name" xml:space="preserve">
+    <value>cmbDefaultType</value>
+  </data>
+  <data name="&gt;&gt;cmbDefaultType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cComboBox, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cmbDefaultType.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cmbDefaultType.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cmbAuthLevel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbAuthLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 214</value>
+  </data>
+  <data name="cmbAuthLevel.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="cmbAuthLevel.MaxLength" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cmbAuthLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 21</value>
+  </data>
+  <data name="cmbAuthLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="cmbAuthLevel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbAuthLevel.Name" xml:space="preserve">
+    <value>cmbAuthLevel</value>
+  </data>
+  <data name="&gt;&gt;cmbAuthLevel.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cComboBox, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cmbAuthLevel.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cmbAuthLevel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="dfUserGroupDesc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 173</value>
+  </data>
+  <data name="dfUserGroupDesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 21</value>
+  </data>
+  <data name="dfUserGroupDesc.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="dfUserGroupDesc.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfUserGroupDesc.Name" xml:space="preserve">
+    <value>dfUserGroupDesc</value>
+  </data>
+  <data name="&gt;&gt;dfUserGroupDesc.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfUserGroupDesc.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfUserGroupDesc.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="dfUserGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 173</value>
+  </data>
+  <data name="dfUserGroup.MaxLength" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="dfUserGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 21</value>
+  </data>
+  <data name="dfUserGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="dfUserGroup.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfUserGroup.Name" xml:space="preserve">
+    <value>dfUserGroup</value>
+  </data>
+  <data name="&gt;&gt;dfUserGroup.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfUserGroup.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfUserGroup.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="tblVoucherSeries_colsCompany.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblVoucherSeries_colsCompany.Title" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="tblVoucherSeries_colsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblVoucherSeries_colsCompany.Width" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colsCompany.Name" xml:space="preserve">
+    <value>tblVoucherSeries_colsCompany</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colsCompany.Parent" xml:space="preserve">
+    <value>tblVoucherSeries</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colsCompany.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tblVoucherSeries_colsVoucherType.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblVoucherSeries_colsVoucherType.Title" xml:space="preserve">
+    <value>Voucher Type</value>
+  </data>
+  <data name="tblVoucherSeries_colsVoucherType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblVoucherSeries_colsVoucherType.Width" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colsVoucherType.Name" xml:space="preserve">
+    <value>tblVoucherSeries_colsVoucherType</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colsVoucherType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colsVoucherType.Parent" xml:space="preserve">
+    <value>tblVoucherSeries</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colsVoucherType.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tblVoucherSeries_colnAccountingYear.Title" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="tblVoucherSeries_colnAccountingYear.Width" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnAccountingYear.Name" xml:space="preserve">
+    <value>tblVoucherSeries_colnAccountingYear</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnAccountingYear.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnAccountingYear.Parent" xml:space="preserve">
+    <value>tblVoucherSeries</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnAccountingYear.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tblVoucherSeries_colnPeriod.Title" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="tblVoucherSeries_colnPeriod.Width" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnPeriod.Name" xml:space="preserve">
+    <value>tblVoucherSeries_colnPeriod</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnPeriod.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnPeriod.Parent" xml:space="preserve">
+    <value>tblVoucherSeries</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnPeriod.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tblVoucherSeries_colnSerieFrom.Title" xml:space="preserve">
+    <value>From Number</value>
+  </data>
+  <data name="tblVoucherSeries_colnSerieFrom.Width" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnSerieFrom.Name" xml:space="preserve">
+    <value>tblVoucherSeries_colnSerieFrom</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnSerieFrom.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnSerieFrom.Parent" xml:space="preserve">
+    <value>tblVoucherSeries</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnSerieFrom.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tblVoucherSeries_colnSerieUntil.Title" xml:space="preserve">
+    <value>Until Number</value>
+  </data>
+  <data name="tblVoucherSeries_colnSerieUntil.Width" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnSerieUntil.Name" xml:space="preserve">
+    <value>tblVoucherSeries_colnSerieUntil</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnSerieUntil.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnSerieUntil.Parent" xml:space="preserve">
+    <value>tblVoucherSeries</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnSerieUntil.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tblVoucherSeries_colnCurrentNumber.Title" xml:space="preserve">
+    <value>Next Number</value>
+  </data>
+  <data name="tblVoucherSeries_colnCurrentNumber.Width" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnCurrentNumber.Name" xml:space="preserve">
+    <value>tblVoucherSeries_colnCurrentNumber</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnCurrentNumber.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnCurrentNumber.Parent" xml:space="preserve">
+    <value>tblVoucherSeries</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries_colnCurrentNumber.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tblVoucherSeries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 16</value>
+  </data>
+  <data name="tblVoucherSeries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 121</value>
+  </data>
+  <data name="tblVoucherSeries.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="tblVoucherSeries.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries.Name" xml:space="preserve">
+    <value>tblVoucherSeries</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cChildTableFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherSeries.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="dfsExistingVouType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 289</value>
+  </data>
+  <data name="dfsExistingVouType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 21</value>
+  </data>
+  <data name="dfsExistingVouType.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="dfsExistingVouType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfsExistingVouType.Name" xml:space="preserve">
+    <value>dfsExistingVouType</value>
+  </data>
+  <data name="&gt;&gt;dfsExistingVouType.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cDataFieldFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfsExistingVouType.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfsExistingVouType.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="cbFromExisting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 261</value>
+  </data>
+  <data name="cbFromExisting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 20</value>
+  </data>
+  <data name="cbFromExisting.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="cbFromExisting.Text" xml:space="preserve">
+    <value>Get Voucher No Series and User Groups From Existing Voucher Type</value>
+  </data>
+  <data name="cbFromExisting.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cbFromExisting.Name" xml:space="preserve">
+    <value>cbFromExisting</value>
+  </data>
+  <data name="&gt;&gt;cbFromExisting.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbFromExisting.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbFromExisting.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="dfsLabelPrint.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="dfsLabelPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 21</value>
+  </data>
+  <data name="dfsLabelPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="dfsLabelPrint.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfsLabelPrint.Name" xml:space="preserve">
+    <value>dfsLabelPrint</value>
+  </data>
+  <data name="&gt;&gt;dfsLabelPrint.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cDataFieldFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfsLabelPrint.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfsLabelPrint.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="dfsStoreOriginal.MaxLength" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dfsStoreOriginal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 21</value>
+  </data>
+  <data name="dfsStoreOriginal.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="dfsStoreOriginal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfsStoreOriginal.Name" xml:space="preserve">
+    <value>dfsStoreOriginal</value>
+  </data>
+  <data name="&gt;&gt;dfsStoreOriginal.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cDataFieldFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfsStoreOriginal.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfsStoreOriginal.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="dfsOptionalAutoBalance.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="dfsOptionalAutoBalance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 21</value>
+  </data>
+  <data name="dfsOptionalAutoBalance.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="dfsOptionalAutoBalance.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfsOptionalAutoBalance.Name" xml:space="preserve">
+    <value>dfsOptionalAutoBalance</value>
+  </data>
+  <data name="&gt;&gt;dfsOptionalAutoBalance.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cDataFieldFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfsOptionalAutoBalance.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfsOptionalAutoBalance.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="cbSimulationVoucher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 222</value>
+  </data>
+  <data name="cbSimulationVoucher.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 20</value>
+  </data>
+  <data name="cbSimulationVoucher.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="cbSimulationVoucher.Text" xml:space="preserve">
+    <value>Simulation Voucher</value>
+  </data>
+  <data name="&gt;&gt;cbSimulationVoucher.Name" xml:space="preserve">
+    <value>cbSimulationVoucher</value>
+  </data>
+  <data name="&gt;&gt;cbSimulationVoucher.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbSimulationVoucher.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbSimulationVoucher.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="cbSingleFunction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>394, 189</value>
+  </data>
+  <data name="cbSingleFunction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 20</value>
+  </data>
+  <data name="cbSingleFunction.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="cbSingleFunction.Text" xml:space="preserve">
+    <value>Single Function Group</value>
+  </data>
+  <data name="&gt;&gt;cbSingleFunction.Name" xml:space="preserve">
+    <value>cbSingleFunction</value>
+  </data>
+  <data name="&gt;&gt;cbSingleFunction.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbSingleFunction.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbSingleFunction.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="cbAutomaticAllot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 189</value>
+  </data>
+  <data name="cbAutomaticAllot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 20</value>
+  </data>
+  <data name="cbAutomaticAllot.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="cbAutomaticAllot.Text" xml:space="preserve">
+    <value>Automatic Allotment</value>
+  </data>
+  <data name="&gt;&gt;cbAutomaticAllot.Name" xml:space="preserve">
+    <value>cbAutomaticAllot</value>
+  </data>
+  <data name="&gt;&gt;cbAutomaticAllot.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbAutomaticAllot.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbAutomaticAllot.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="pbRemove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 392</value>
+  </data>
+  <data name="pbRemove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 27</value>
+  </data>
+  <data name="pbRemove.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="pbRemove.Text" xml:space="preserve">
+    <value>Re&amp;move</value>
+  </data>
+  <data name="&gt;&gt;pbRemove.Name" xml:space="preserve">
+    <value>pbRemove</value>
+  </data>
+  <data name="&gt;&gt;pbRemove.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cPushButtonDlgFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pbRemove.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;pbRemove.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="pbNew.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 392</value>
+  </data>
+  <data name="pbNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 27</value>
+  </data>
+  <data name="pbNew.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="pbNew.Text" xml:space="preserve">
+    <value>&amp;New</value>
+  </data>
+  <data name="&gt;&gt;pbNew.Name" xml:space="preserve">
+    <value>pbNew</value>
+  </data>
+  <data name="&gt;&gt;pbNew.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cPushButtonDlgFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pbNew.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;pbNew.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="tblFunctionGroup_colsCompany.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblFunctionGroup_colsCompany.Title" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="tblFunctionGroup_colsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblFunctionGroup_colsCompany.Width" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsCompany.Name" xml:space="preserve">
+    <value>tblFunctionGroup_colsCompany</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsCompany.Parent" xml:space="preserve">
+    <value>tblFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsCompany.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tblFunctionGroup_colsVoucherType.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblFunctionGroup_colsVoucherType.Title" xml:space="preserve">
+    <value>Voucher Type</value>
+  </data>
+  <data name="tblFunctionGroup_colsVoucherType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblFunctionGroup_colsVoucherType.Width" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsVoucherType.Name" xml:space="preserve">
+    <value>tblFunctionGroup_colsVoucherType</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsVoucherType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsVoucherType.Parent" xml:space="preserve">
+    <value>tblFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsVoucherType.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tblFunctionGroup_colsFunctionGroup.Title" xml:space="preserve">
+    <value>Function
+Group</value>
+  </data>
+  <data name="tblFunctionGroup_colsFunctionGroup.Width" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsFunctionGroup.Name" xml:space="preserve">
+    <value>tblFunctionGroup_colsFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsFunctionGroup.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsFunctionGroup.Parent" xml:space="preserve">
+    <value>tblFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsFunctionGroup.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tblFunctionGroup_colDescription.Title" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="tblFunctionGroup_colDescription.Width" type="System.Int32, mscorlib">
+    <value>123</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colDescription.Name" xml:space="preserve">
+    <value>tblFunctionGroup_colDescription</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colDescription.Parent" xml:space="preserve">
+    <value>tblFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colDescription.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tblFunctionGroup_colsOptionalAutoBalance.Title" xml:space="preserve">
+    <value>Optional Auto
+Balance</value>
+  </data>
+  <data name="tblFunctionGroup_colsOptionalAutoBalance.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsOptionalAutoBalance.Name" xml:space="preserve">
+    <value>tblFunctionGroup_colsOptionalAutoBalance</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsOptionalAutoBalance.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsOptionalAutoBalance.Parent" xml:space="preserve">
+    <value>tblFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsOptionalAutoBalance.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tblFunctionGroup_colsStoreOriginal.Title" xml:space="preserve">
+    <value>Store
+Original</value>
+  </data>
+  <data name="tblFunctionGroup_colsStoreOriginal.Width" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsStoreOriginal.Name" xml:space="preserve">
+    <value>tblFunctionGroup_colsStoreOriginal</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsStoreOriginal.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsStoreOriginal.Parent" xml:space="preserve">
+    <value>tblFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsStoreOriginal.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tblFunctionGroup_colsRowGrpValidation.Title" xml:space="preserve">
+    <value>Row Group
+Validation</value>
+  </data>
+  <data name="tblFunctionGroup_colsRowGrpValidation.Width" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsRowGrpValidation.Name" xml:space="preserve">
+    <value>tblFunctionGroup_colsRowGrpValidation</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsRowGrpValidation.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsRowGrpValidation.Parent" xml:space="preserve">
+    <value>tblFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsRowGrpValidation.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tblFunctionGroup_colsRefMandetory.Title" xml:space="preserve">
+    <value>Reference
+Mandatory</value>
+  </data>
+  <data name="tblFunctionGroup_colsRefMandetory.Width" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsRefMandetory.Name" xml:space="preserve">
+    <value>tblFunctionGroup_colsRefMandetory</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsRefMandetory.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsRefMandetory.Parent" xml:space="preserve">
+    <value>tblFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsRefMandetory.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tblFunctionGroup_colsSingleFunction.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblFunctionGroup_colsSingleFunction.Title" xml:space="preserve">
+    <value>Single Function
+Required</value>
+  </data>
+  <data name="tblFunctionGroup_colsSingleFunction.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblFunctionGroup_colsSingleFunction.Width" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsSingleFunction.Name" xml:space="preserve">
+    <value>tblFunctionGroup_colsSingleFunction</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsSingleFunction.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsSingleFunction.Parent" xml:space="preserve">
+    <value>tblFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsSingleFunction.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="tblFunctionGroup_colsAutomaticAllot.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblFunctionGroup_colsAutomaticAllot.Title" xml:space="preserve">
+    <value>Automatic
+Allotment Required</value>
+  </data>
+  <data name="tblFunctionGroup_colsAutomaticAllot.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblFunctionGroup_colsAutomaticAllot.Width" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsAutomaticAllot.Name" xml:space="preserve">
+    <value>tblFunctionGroup_colsAutomaticAllot</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsAutomaticAllot.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsAutomaticAllot.Parent" xml:space="preserve">
+    <value>tblFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup_colsAutomaticAllot.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="tblFunctionGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 7</value>
+  </data>
+  <data name="tblFunctionGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 155</value>
+  </data>
+  <data name="tblFunctionGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup.Name" xml:space="preserve">
+    <value>tblFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cChildTableFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;tblFunctionGroup.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="cbBalance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>412, 263</value>
+  </data>
+  <data name="cbBalance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="cbBalance.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="cbBalance.Text" xml:space="preserve">
+    <value>Balance Mandatory</value>
+  </data>
+  <data name="cbBalance.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cbBalance.Name" xml:space="preserve">
+    <value>cbBalance</value>
+  </data>
+  <data name="&gt;&gt;cbBalance.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbBalance.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbBalance.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="cbManualMethods.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 263</value>
+  </data>
+  <data name="cbManualMethods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 20</value>
+  </data>
+  <data name="cbManualMethods.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="cbManualMethods.Text" xml:space="preserve">
+    <value>Use Manual Internal Methods</value>
+  </data>
+  <data name="cbManualMethods.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cbManualMethods.Name" xml:space="preserve">
+    <value>cbManualMethods</value>
+  </data>
+  <data name="&gt;&gt;cbManualMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbManualMethods.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbManualMethods.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="dfLedgerID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>474, 222</value>
+  </data>
+  <data name="dfLedgerID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 21</value>
+  </data>
+  <data name="dfLedgerID.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="dfLedgerID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfLedgerID.Name" xml:space="preserve">
+    <value>dfLedgerID</value>
+  </data>
+  <data name="&gt;&gt;dfLedgerID.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfLedgerID.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfLedgerID.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="cmbLedger.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbLedger.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 222</value>
+  </data>
+  <data name="cmbLedger.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="cmbLedger.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 21</value>
+  </data>
+  <data name="cmbLedger.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="cmbLedger.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbLedger.Name" xml:space="preserve">
+    <value>cmbLedger</value>
+  </data>
+  <data name="&gt;&gt;cmbLedger.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cComboBox, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cmbLedger.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cmbLedger.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="dfVouTypeDesc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 140</value>
+  </data>
+  <data name="dfVouTypeDesc.MaxLength" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="dfVouTypeDesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 21</value>
+  </data>
+  <data name="dfVouTypeDesc.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="dfVouTypeDesc.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfVouTypeDesc.Name" xml:space="preserve">
+    <value>dfVouTypeDesc</value>
+  </data>
+  <data name="&gt;&gt;dfVouTypeDesc.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfVouTypeDesc.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfVouTypeDesc.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="dfVoucherType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 112</value>
+  </data>
+  <data name="dfVoucherType.MaxLength" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="dfVoucherType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 21</value>
+  </data>
+  <data name="dfVoucherType.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="dfVoucherType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherType.Name" xml:space="preserve">
+    <value>dfVoucherType</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherType.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherType.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="dfsCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 154</value>
+  </data>
+  <data name="dfsCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 21</value>
+  </data>
+  <data name="dfsCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="dfsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Name" xml:space="preserve">
+    <value>dfsCompany</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="dfHeading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 154</value>
+  </data>
+  <data name="dfHeading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 21</value>
+  </data>
+  <data name="dfHeading.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="dfHeading.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfHeading.Name" xml:space="preserve">
+    <value>dfHeading</value>
+  </data>
+  <data name="&gt;&gt;dfHeading.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfHeading.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfHeading.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="labelcmbFunctionGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbFunctionGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>403, 254</value>
+  </data>
+  <data name="labelcmbFunctionGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="labelcmbFunctionGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="labelcmbFunctionGroup.Text" xml:space="preserve">
+    <value>Function Group:</value>
+  </data>
+  <data name="labelcmbFunctionGroup.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbFunctionGroup.Name" xml:space="preserve">
+    <value>labelcmbFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;labelcmbFunctionGroup.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbFunctionGroup.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labelcmbFunctionGroup.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="labelcmbDefaultType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbDefaultType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>403, 216</value>
+  </data>
+  <data name="labelcmbDefaultType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="labelcmbDefaultType.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="labelcmbDefaultType.Text" xml:space="preserve">
+    <value>Default Type:</value>
+  </data>
+  <data name="labelcmbDefaultType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbDefaultType.Name" xml:space="preserve">
+    <value>labelcmbDefaultType</value>
+  </data>
+  <data name="&gt;&gt;labelcmbDefaultType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbDefaultType.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labelcmbDefaultType.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="labelcmbAuthLevel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbAuthLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 216</value>
+  </data>
+  <data name="labelcmbAuthLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 13</value>
+  </data>
+  <data name="labelcmbAuthLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="labelcmbAuthLevel.Text" xml:space="preserve">
+    <value>Authorization Level:</value>
+  </data>
+  <data name="labelcmbAuthLevel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbAuthLevel.Name" xml:space="preserve">
+    <value>labelcmbAuthLevel</value>
+  </data>
+  <data name="&gt;&gt;labelcmbAuthLevel.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbAuthLevel.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labelcmbAuthLevel.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="labeldfUserGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfUserGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 175</value>
+  </data>
+  <data name="labeldfUserGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="labeldfUserGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="labeldfUserGroup.Text" xml:space="preserve">
+    <value>User Group:</value>
+  </data>
+  <data name="labeldfUserGroup.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfUserGroup.Name" xml:space="preserve">
+    <value>labeldfUserGroup</value>
+  </data>
+  <data name="&gt;&gt;labeldfUserGroup.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfUserGroup.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfUserGroup.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="labeldfsExistingVouType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsExistingVouType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 294</value>
+  </data>
+  <data name="labeldfsExistingVouType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="labeldfsExistingVouType.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="labeldfsExistingVouType.Text" xml:space="preserve">
+    <value>Voucher Type:</value>
+  </data>
+  <data name="labeldfsExistingVouType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfsExistingVouType.Name" xml:space="preserve">
+    <value>labeldfsExistingVouType</value>
+  </data>
+  <data name="&gt;&gt;labeldfsExistingVouType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsExistingVouType.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfsExistingVouType.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="labeldfsLabelPrint.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsLabelPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>471, 17</value>
+  </data>
+  <data name="labeldfsLabelPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="labeldfsLabelPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="labeldfsLabelPrint.Text" xml:space="preserve">
+    <value>Label Print</value>
+  </data>
+  <data name="labeldfsLabelPrint.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfsLabelPrint.Name" xml:space="preserve">
+    <value>labeldfsLabelPrint</value>
+  </data>
+  <data name="&gt;&gt;labeldfsLabelPrint.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsLabelPrint.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfsLabelPrint.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="labeldfsStoreOriginal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsStoreOriginal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>471, 17</value>
+  </data>
+  <data name="labeldfsStoreOriginal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="labeldfsStoreOriginal.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="labeldfsStoreOriginal.Text" xml:space="preserve">
+    <value>Store Original</value>
+  </data>
+  <data name="labeldfsStoreOriginal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfsStoreOriginal.Name" xml:space="preserve">
+    <value>labeldfsStoreOriginal</value>
+  </data>
+  <data name="&gt;&gt;labeldfsStoreOriginal.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsStoreOriginal.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfsStoreOriginal.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="labeldfsOptionalAutoBalance.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsOptionalAutoBalance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>471, 17</value>
+  </data>
+  <data name="labeldfsOptionalAutoBalance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 13</value>
+  </data>
+  <data name="labeldfsOptionalAutoBalance.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="labeldfsOptionalAutoBalance.Text" xml:space="preserve">
+    <value>Optional Auto Balance</value>
+  </data>
+  <data name="labeldfsOptionalAutoBalance.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfsOptionalAutoBalance.Name" xml:space="preserve">
+    <value>labeldfsOptionalAutoBalance</value>
+  </data>
+  <data name="&gt;&gt;labeldfsOptionalAutoBalance.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsOptionalAutoBalance.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfsOptionalAutoBalance.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="labeldfLedgerID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfLedgerID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 225</value>
+  </data>
+  <data name="labeldfLedgerID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="labeldfLedgerID.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="labeldfLedgerID.Text" xml:space="preserve">
+    <value>Ledger ID:</value>
+  </data>
+  <data name="labeldfLedgerID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfLedgerID.Name" xml:space="preserve">
+    <value>labeldfLedgerID</value>
+  </data>
+  <data name="&gt;&gt;labeldfLedgerID.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfLedgerID.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfLedgerID.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="labelcmbLedger.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbLedger.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 225</value>
+  </data>
+  <data name="labelcmbLedger.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="labelcmbLedger.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="labelcmbLedger.Text" xml:space="preserve">
+    <value>Ledger:</value>
+  </data>
+  <data name="labelcmbLedger.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbLedger.Name" xml:space="preserve">
+    <value>labelcmbLedger</value>
+  </data>
+  <data name="&gt;&gt;labelcmbLedger.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbLedger.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labelcmbLedger.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="labeldfVouTypeDesc.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfVouTypeDesc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 142</value>
+  </data>
+  <data name="labeldfVouTypeDesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 13</value>
+  </data>
+  <data name="labeldfVouTypeDesc.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="labeldfVouTypeDesc.Text" xml:space="preserve">
+    <value>Voucher Type Description:</value>
+  </data>
+  <data name="labeldfVouTypeDesc.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfVouTypeDesc.Name" xml:space="preserve">
+    <value>labeldfVouTypeDesc</value>
+  </data>
+  <data name="&gt;&gt;labeldfVouTypeDesc.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfVouTypeDesc.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfVouTypeDesc.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="labeldfVoucherType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfVoucherType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 114</value>
+  </data>
+  <data name="labeldfVoucherType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="labeldfVoucherType.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labeldfVoucherType.Text" xml:space="preserve">
+    <value>Voucher Type:</value>
+  </data>
+  <data name="labeldfVoucherType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherType.Name" xml:space="preserve">
+    <value>labeldfVoucherType</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherType.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherType.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="labeldfHeading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 9</value>
+  </data>
+  <data name="labeldfHeading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>475, 88</value>
+  </data>
+  <data name="labeldfHeading.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labeldfHeading.Text" xml:space="preserve">
+    <value>Welcome to Voucher Types Wizard. 
+
+This will allow the User to create Voucher Types and connect them to User Groups. It also creates the Voucher No Series for each year that has been created.</value>
+  </data>
+  <data name="labeldfHeading.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfHeading.Name" xml:space="preserve">
+    <value>labeldfHeading</value>
+  </data>
+  <data name="&gt;&gt;labeldfHeading.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfHeading.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfHeading.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="gbUser_Group_Selection.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbUser_Group_Selection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 146</value>
+  </data>
+  <data name="gbUser_Group_Selection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>477, 163</value>
+  </data>
+  <data name="gbUser_Group_Selection.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="gbUser_Group_Selection.Text" xml:space="preserve">
+    <value>User Group Selection</value>
+  </data>
+  <data name="gbUser_Group_Selection.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;gbUser_Group_Selection.Name" xml:space="preserve">
+    <value>gbUser_Group_Selection</value>
+  </data>
+  <data name="&gt;&gt;gbUser_Group_Selection.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbUser_Group_Selection.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;gbUser_Group_Selection.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="gbVoucher_Selection.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbVoucher_Selection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 170</value>
+  </data>
+  <data name="gbVoucher_Selection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 82</value>
+  </data>
+  <data name="gbVoucher_Selection.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="gbVoucher_Selection.Text" xml:space="preserve">
+    <value>Voucher Selection</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Selection.Name" xml:space="preserve">
+    <value>gbVoucher_Selection</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Selection.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Selection.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Selection.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="gbLedger_Selection.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbLedger_Selection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 187</value>
+  </data>
+  <data name="gbLedger_Selection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 122</value>
+  </data>
+  <data name="gbLedger_Selection.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="gbLedger_Selection.Text" xml:space="preserve">
+    <value>Ledger Selection</value>
+  </data>
+  <data name="gbLedger_Selection.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;gbLedger_Selection.Name" xml:space="preserve">
+    <value>gbLedger_Selection</value>
+  </data>
+  <data name="&gt;&gt;gbLedger_Selection.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbLedger_Selection.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;gbLedger_Selection.ZOrder" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="ClientArea.Size" type="System.Drawing.Size, System.Drawing">
+    <value>633, 324</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.Name" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalFormClientArea, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="StatusBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 329</value>
+  </data>
+  <data name="StatusBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 26</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Name" xml:space="preserve">
+    <value>StatusBar</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalFormStatusBar, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="Step1.Title" xml:space="preserve">
+    <value>Create Voucher Types</value>
+  </data>
+  <data name="Step2.Title" xml:space="preserve">
+    <value>Create Voucher Types</value>
+  </data>
+  <data name="Step3.Title" xml:space="preserve">
+    <value>Create Voucher Types</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>633, 368</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Voucher Type</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;Step1.Name" xml:space="preserve">
+    <value>Step1</value>
+  </data>
+  <data name="&gt;&gt;Step1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.__cWizardStep, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;Step2.Name" xml:space="preserve">
+    <value>Step2</value>
+  </data>
+  <data name="&gt;&gt;Step2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.__cWizardStep, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;Step3.Name" xml:space="preserve">
+    <value>Step3</value>
+  </data>
+  <data name="&gt;&gt;Step3.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.__cWizardStep, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>dlgVoucherType</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cWizardDialogBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

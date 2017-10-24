@@ -1,0 +1,95 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceHeader
+--  Component:    FNDMIG
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+COLUMN Object_Name IS
+   Flags      = 'A---L'
+   Datatype   = 'STRING(100)/UPPERCASE'
+   Prompt     = 'Object Name';
+
+COLUMN Text IS
+   Flags      = 'A---L'
+   Datatype   = 'STRING(2000)'
+   Prompt     = 'Export text';
+
+COLUMN Count IS
+   Flags      = 'A---L'
+   Datatype   = 'NUMBER'
+   Prompt     = 'Export text';
+
+COLUMN Value IS
+   Flags      = 'A---L'
+   Datatype   = 'STRING(100)'
+   Prompt     = 'Character Set';
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+VIEW Intface_Table_Name_Lov IS
+   Prompt = 'Intface Header'
+   Table_Name.Flags = 'KMI-L'
+   Table_Name.Datatype = 'STRING(100)/UPPERCASE'
+SELECT table_name                     table_name,
+       'No RowId'                     objid,
+       ltrim(lpad(to_char(sysdate,'YYYYMMDDHH24MISS'),2000))         objversion
+ FROM   dba_tables
+WHERE  owner = Fnd_Session_API.Get_App_Owner;
+
+VIEW Intface_Repl_Export_Info IS
+   Prompt = 'Migration Export Info'
+   Intface_Name.Flags = 'A---L'
+   Intface_Name.Datatype = 'STRING(100)/UPPERCASE'
+SELECT '' intface_name,
+       '' object_name,
+       '' object_type,
+      RPAD('JOB_ID',30,' ')||RPAD('OBJECT_NAME',30,' ')||RPAD('OBJECT_TYPE',15,' ')||RPAD('STATUS',10,' ')||'LAST_DDL_TIME' text,
+      '0' count
+FROM dual
+UNION
+SELECT intface_name,
+       object_name,
+       object_type,
+       RPAD(intface_name ,30,' ')||RPAD(object_name,30,' ')||RPAD(object_type,15,' ')||RPAD(status,10,' ')||last_ddl_time text,
+       '1' count
+FROM   intface_header, dba_objects
+WHERE  ( object_type LIKE 'PACKAGE%' AND object_name LIKE 'RPL_'||intface_name||'__' )
+OR     ( object_type = 'TRIGGER'     AND object_name =    'RPL_'||intface_name)
+OR     ( object_type = 'TRIGGER'     AND object_name LIKE 'RPL_'||intface_name||'_T%')
+AND    owner = Fnd_Session_API.Get_App_Owner
+ORDER BY count, intface_name, object_type, object_name;
+
+VIEW Intface_Characterset_Lov IS
+   Prompt = 'Character Set'
+SELECT value
+FROM   sys.v_$nls_valid_values
+WHERE  parameter = 'CHARACTERSET';
+
+VIEW Intface_Allowed_Jobs IS
+   Prompt = 'Allowed Jobs'
+   Intface_Name.Flags = 'A---L'
+   Intface_Name.Datatype = 'STRING(100)/UPPERCASE'
+   Description.Flags = 'A---L'
+   Description.Datatype = 'STRING(100)/UPPERCASE'
+SELECT intface_name                                      intface_name,
+       description                                       description
+FROM   intface_header
+WHERE  fnd_session_API.Get_Fnd_User = Fnd_Session_API.Get_App_Owner
+UNION
+SELECT intface_name                                      intface_name,
+       Intface_Header_API.Get_Description(intface_name)  description
+FROM   intface_pr_user
+WHERE  identity = fnd_session_API.Get_Fnd_User;
+

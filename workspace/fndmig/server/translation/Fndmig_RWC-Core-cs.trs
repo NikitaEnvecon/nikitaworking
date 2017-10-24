@@ -1,0 +1,596 @@
+-------------------------------------------------------
+File Type: IFS Foundation Translation File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Language: cs
+Culture: cs-CZ
+Fittings: Standard
+Layer: Core
+Main Type: RWC
+Sub Type: All
+-------------------------------------------------------
+CS:Ifs.Application.Fndmig_.Properties.Resources^RWC
+	CS:ALERT_Title^RWC
+		A:ALERT_Title^Proveden\00ED procedury^O
+	CE:
+	CS:ALERT_TitleCopyIntface^RWC
+		A:ALERT_TitleCopyIntface^D\00E1vka zkop\00EDrov\00E1na^O
+	CE:
+	CS:ALERT_TitleEx^RWC
+		A:ALERT_TitleEx^Pl\00E1n proveden\00ED^O
+	CE:
+	CS:ALERT_TitleXsdCreated^RWC
+		A:ALERT_TitleXsdCreated^Xsd vytvo\0159eno^O
+	CE:
+	CS:FILE_All^RWC
+		A:FILE_All^V\0161echny soubory^O
+	CE:
+	CS:FILE_Dat^RWC
+		A:FILE_Dat^Datov\00E9 soubory (*.dat)^O
+	CE:
+	CS:FILE_Ins^RWC
+		A:FILE_Ins^Instala\010Dn\00ED soubory (*.ins)^O
+	CE:
+	CS:FILE_Text^RWC
+		A:FILE_Text^Textov\00E9 dokumenty (*.txt)^O
+	CE:
+	CS:FNDMIG_BatchExecInvalidDate^RWC
+		A:FNDMIG_BatchExecInvalidDate^Mus\00EDte vlo\017Eit platn\00E9 datum^O
+	CE:
+	CS:FNDMIG_BatchExecInvalidTime^RWC
+		A:FNDMIG_BatchExecInvalidTime^Mus\00EDte vlo\017Eit platn\00FD \010Das^O
+	CE:
+	CS:FNDMIG_ExportingMessage^RWC
+		A:FNDMIG_ExportingMessage^Export do souboru '&0'...^O
+	CE:
+	CS:FNDMIG_Exporting_FileTitle^RWC
+		A:FNDMIG_Exporting_FileTitle^Exportovat \0159et\011Bzec souboru^O
+	CE:
+	CS:INTF_Column^RWC
+		A:INTF_Column^Sloupec^O
+	CE:
+	CS:INTF_CopyError^RWC
+		A:INTF_CopyError^Nelze kop\00EDrovat soubor^O
+	CE:
+	CS:INTF_DeleteError^RWC
+		A:INTF_DeleteError^Nelze odstranit soubor^O
+	CE:
+	CS:INTF_ExistWin^RWC
+		A:INTF_ExistWin^neexistuje v\00A0okn\011B nebo se sloupec vyskytuje ve specifikaci zdrojov\00E9ho sloupce v\00EDce ne\017E jednou.^O
+	CE:
+	CS:INTF_FileOpenError^RWC
+		A:INTF_FileOpenError^Nelze otev\0159\00EDt soubor^O
+	CE:
+	CS:INTF_SaveFile^RWC
+		A:INTF_SaveFile^Ulo\017Eit jako^O
+	CE:
+	CS:INTF_SelectFile^RWC
+		A:INTF_SelectFile^Vybrat soubor k\00A0na\010Dten\00ED^O
+	CE:
+	CS:NAV_InterfOverviewJob^RWC
+		A:NAV_InterfOverviewJob^Historie \00FAlohy^O
+	CE:
+	CS:NAV_InterfaceBasic^RWC
+		A:NAV_InterfaceBasic^Obecn\00E1 data pro migraci dat^O
+	CE:
+	CS:NAV_InterfaceHeader^RWC
+		A:NAV_InterfaceHeader^\00DAdr\017Eba \00FAlohy migrace^O
+	CE:
+	CS:NAV_InterfaceHistory^RWC
+		A:NAV_InterfaceHistory^Historie \00FAlohy migrace^O
+	CE:
+	CS:NAV_InterfaceStart^RWC
+		A:NAV_InterfaceStart^Prov\00E9st \00FAlohu^O
+	CE:
+	CS:NAV_Interface_P^RWC
+		A:NAV_Interface_P^Migrace dat^O
+	CE:
+	CS:NAV_IntfaceReplDbObjects^RWC
+		A:NAV_IntfaceReplDbObjects^Objekty replikace^O
+	CE:
+	CS:NAV_IntfaceReplOutLog^RWC
+		A:NAV_IntfaceReplOutLog^V\00FDstupn\00ED protokol replikace^O
+	CE:
+	CS:NAV_IntfaceReplStruct^RWC
+		A:NAV_IntfaceReplStruct^\00DAdr\017Eba struktury replikace^O
+	CE:
+	CS:NAV_IntfaceServerProcesses^RWC
+		A:NAV_IntfaceServerProcesses^Serverov\00E9 procesy^O
+	CE:
+	CS:NAV_OverViewInterfaceDetail^RWC
+		A:NAV_OverViewInterfaceDetail^P\0159ehled - detaily \00FAlohy migrace^O
+	CE:
+	CS:NAV_OverViewInterfaceHeader^RWC
+		A:NAV_OverViewInterfaceHeader^P\0159ehled - \00FAloha migrace^O
+	CE:
+	CS:NAV_OverViewInterfaceHistory^RWC
+		A:NAV_OverViewInterfaceHistory^P\0159ehled - historie \00FAlohy migrace^O
+	CE:
+	CS:TAB_NAME_Detail^RWC
+		A:TAB_NAME_Detail^Detail^O
+	CE:
+	CS:TAB_NAME_DetailConversion^RWC
+		A:TAB_NAME_DetailConversion^Mapov\00E1n\00ED zdroje^O
+	CE:
+	CS:TAB_NAME_DetailFile^RWC
+		A:TAB_NAME_DetailFile^Mapov\00E1n\00ED souboru^O
+	CE:
+	CS:TAB_NAME_ExecPlan^RWC
+		A:TAB_NAME_ExecPlan^Pl\00E1n proveden\00ED^O
+	CE:
+	CS:TAB_NAME_ExecSingel^RWC
+		A:TAB_NAME_ExecSingel^Prov\00E9st^O
+	CE:
+	CS:TAB_NAME_Job_Detail^RWC
+		A:TAB_NAME_Job_Detail^Detail^O
+	CE:
+	CS:TAB_NAME_MethodList^RWC
+		A:TAB_NAME_MethodList^Seznam metod^O
+	CE:
+	CS:TAB_NAME_Rules^RWC
+		A:TAB_NAME_Rules^Pravidla^O
+	CE:
+	CS:TEXT_ConfirmRunSchedule^RWC
+		A:TEXT_ConfirmRunSchedule^Pl\00E1n '{0} - {1}' bude spu\0161t\011Bn na pozad\00ED. Chcete pokra\010Dovat?^O
+	CE:
+	CS:TEXT_ExportFile^RWC
+		A:TEXT_ExportFile^Vlo\017Eit n\00E1zev souboru pro export dat^O
+	CE:
+	CS:TEXT_ImportDone^RWC
+		A:TEXT_ImportDone^Dokon\010Den import nov\00FDch \00FAloh migrace^O
+	CE:
+	CS:TEXT_ImportError^RWC
+		A:TEXT_ImportError^Chyby p\0159i importu^O
+	CE:
+	CS:TEXT_ImportFileName^RWC
+		A:TEXT_ImportFileName^Vlo\017Eit n\00E1zev souboru pro import^O
+	CE:
+	CS:TEXT_IntfaceCopyLabel^RWC
+		A:TEXT_IntfaceCopyLabel^ID nov\00E9 \00FAlohy:^O
+	CE:
+	CS:TEXT_IntfaceCopyTitle^RWC
+		A:TEXT_IntfaceCopyTitle^Kop\00EDrovat \00FAlohu migrace^O
+	CE:
+	CS:TEXT_IntfaceShowSelectTitle^RWC
+		A:TEXT_IntfaceShowSelectTitle^P\0159\00EDkaz SQL SELECT^O
+	CE:
+	CS:TEXT_IntfaceSourceCols^RWC
+		A:TEXT_IntfaceSourceCols^Slovn\00EDkov\00E9 sloupce^O
+	CE:
+	CS:TEXT_LineLengthError^RWC
+		A:TEXT_LineLengthError^Zv\00FDrazn\011Bn\00E9 \0159\00E1dky byly zkr\00E1ceny z\00A0d\016Fvodu p\0159ekro\010Den\00ED limitu 4000 znak\016F. V\00FDsledkem m\016F\017Ee b\00FDt ne\00FApln\00E1 migrace dat. Doporu\010Duje se p\0159ed pokra\010Dov\00E1n\00EDm pr\00E1ce zkr\00E1cen\00E9 \0159\00E1dky zkontrolovat.^O
+	CE:
+	CS:TEXT_MethodListError^RWC
+		A:TEXT_MethodListError^P\0159i importu seznamu metod nastaly chyby^O
+	CE:
+	CS:TEXT_QuestionCleanUp^RWC
+		A:TEXT_QuestionCleanUp^Vymaz\00E1n\00ED odstran\00ED v\0161echny aktu\00E1ln\00ED detaily a\00A0znemo\017En\00ED restart. Chcete pokra\010Dovat?^O
+	CE:
+	CS:TEXT_TitleCleanUp^RWC
+		A:TEXT_TitleCleanUp^Odstranit v\00FDstrahu^O
+	CE:
+	CS:TITLE_ImportDone^RWC
+		A:TITLE_ImportDone^Import dokon\010Den^O
+	CE:
+	CS:TITLE_ImportError^RWC
+		A:TITLE_ImportError^Chyba p\0159i importu^O
+	CE:
+	CS:WH_IntfaceReplStructCols^RWC
+		A:WH_IntfaceReplStructCols^Definovat sloupce^O
+	CE:
+	CS:WH_MethodListAttr^RWC
+		A:WH_MethodListAttr^Atribut seznamu metod^O
+	CE:
+	CS:WH_frmIntfConvCols^RWC
+		A:WH_frmIntfConvCols^P\0159ev\00E9st - &0, &1^O
+	CE:
+	CS:WH_frmIntfConvColsClear^RWC
+		A:WH_frmIntfConvColsClear^P\0159evod sloupc\016F^O
+	CE:
+	CS:WH_frmIntfHeaderClear^RWC
+		A:WH_frmIntfHeaderClear^\00DAloha migrace^O
+	CE:
+	CS:WH_frmIntfaceHeader^RWC
+		A:WH_frmIntfaceHeader^\00DAloha migrace - &0^O
+	CE:
+	CS:WH_frmIntfaceJobHistHead^RWC
+		A:WH_frmIntfaceJobHistHead^Historie migrace - &0^O
+	CE:
+	CS:WH_frmIntfaceJobHistHeadClear^RWC
+		A:WH_frmIntfaceJobHistHeadClear^Historie migrace^O
+	CE:
+	CS:WH_frmIntfaceReplStruct^RWC
+		A:WH_frmIntfaceReplStruct^Replikace struktury^O
+	CE:
+	CS:WH_frmIntfaceStart^RWC
+		A:WH_frmIntfaceStart^Prov\00E9st \00FAlohu - &0^O
+	CE:
+	CS:WH_frmIntfaceStartClear^RWC
+		A:WH_frmIntfaceStartClear^Prov\00E9st \00FAlohu^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.dlgExecPlan^RWC
+	CS:$this.Text^RWC
+		A:Text^Pl\00E1n proveden\00ED^O
+	CE:
+	CS:gbRepeated_Execution.Text^RWC
+		A:Text^Opakovan\00E9 proveden\00ED^O
+	CE:
+	CS:gbSingle_Execution.Text^RWC
+		A:Text^Jednor\00E1zov\00E9 proveden\00ED^O
+	CE:
+	CS:pbCancel.Text^RWC
+		A:Text^Storno^O
+	CE:
+	CS:pbOk.Text^RWC
+		A:Text^OK^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.dlgExecSingel^RWC
+	CS:$this.Text^RWC
+		A:Text^Jednor\00E1zov\00E9 proveden\00ED^O
+	CE:
+	CS:gbSingle_Execution.Text^RWC
+		A:Text^Jednor\00E1zov\00E9 proveden\00ED^O
+	CE:
+	CS:pbCancel.Text^RWC
+		A:Text^Storno^O
+	CE:
+	CS:pbRestart.Text^RWC
+		A:Text^Restartovat^O
+	CE:
+	CS:pbStart.Text^RWC
+		A:Text^Spustit^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceBasic^RWC
+	CS:$this.Text^RWC
+		A:Text^Obecn\00E1 data pro migraci dat^O
+	CE:
+	CS:IntfaceConvList^RWC
+		A:IntfaceConvList^Konverzn\00ED seznamy^O
+	CE:
+	CS:IntfaceDefRules^RWC
+		A:IntfaceDefRules^V\00FDchoz\00ED pravidla^O
+	CE:
+	CS:IntfaceGroup^RWC
+		A:IntfaceGroup^Skupina^O
+	CE:
+	CS:IntfacePrUser^RWC
+		A:IntfacePrUser^Prim\00E1rn\00ED u\017Eivatel^O
+	CE:
+	CS:IntfaceProcedures^RWC
+		A:IntfaceProcedures^Procedury^O
+	CE:
+	CS:IntfaceUser^RWC
+		A:IntfaceUser^U\017Eivatel^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceConvList^RWC
+	CS:$this.Text^RWC
+		A:Text^Konverzn\00ED seznam^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceHeader^RWC
+	CS:$this.Text^RWC
+		A:Text^\00DAdr\017Eba d\00E1vky^O
+	CE:
+	CS:Format^RWC
+		A:Format^Form\00E1tov\00E1n\00ED^O
+	CE:
+	CS:Replication^RWC
+		A:Replication^Replikace^O
+	CE:
+	CS:gbCriteria.Text^RWC
+		A:Text^Krit\00E9ria^O
+	CE:
+	CS:gbDatabase_Information.Text^RWC
+		A:Text^Informace o\00A0datab\00E1zi^O
+	CE:
+	CS:gbFile_Configuration.Text^RWC
+		A:Text^Konfigurace souboru^O
+	CE:
+	CS:gbFile_Information.Text^RWC
+		A:Text^Informace o\00A0souboru^O
+	CE:
+	CS:gbTrigger.Text^RWC
+		A:Text^Trigger^O
+	CE:
+	CS:menuFrmMethods_menuCopy__Migration_Job.Caption^RWC
+		A:Caption^Kop\00EDrovat &\00FAlohu migrace^O
+	CE:
+	CS:menuFrmMethods_menuExecJob.Caption^RWC
+		A:Caption^&Spustit \00FAlohu...^O
+	CE:
+	CS:menuFrmMethods_menuHistory.Caption^RWC
+		A:Caption^&Historie d\00E1vky...^O
+	CE:
+	CS:menuFrmMethods_menuQ_uery_Source_Columns.Caption^RWC
+		A:Caption^&Dotaz na zdrojov\00E9 sloupce^O
+	CE:
+	CS:menuFrmMethods_menuSchedule_Job.Caption^RWC
+		A:Caption^Napl\00E1novat \00FAlohu^O
+	CE:
+	CS:menuFrmMethods_menuSer_ver_Processes___.Caption^RWC
+		A:Caption^Na&pl\00E1novan\00E9 d\00E1vky...^O
+	CE:
+	CS:menuFrmMethods_menuSho_w_Select_Statement.Caption^RWC
+		A:Caption^&Uk\00E1zat vybran\00FD p\0159\00EDkaz^O
+	CE:
+	CS:menuFrmMethods_menuTranslation.Caption^RWC
+		A:Caption^&P\0159eklad...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceJobHistHead^RWC
+	CS:$this.Text^RWC
+		A:Text^Historie d\00E1vky^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfacePrUser^RWC
+	CS:$this.Text^RWC
+		A:Text^Prim\00E1rn\00ED u\017Eivatel^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceReplExecPlan^RWC
+	CS:gbRepeated_Execution.Text^RWC
+		A:Text^Opakovan\00E9 proveden\00ED^O
+	CE:
+	CS:menuFrmMethods_menuCreate_Execution_Plan.Caption^RWC
+		A:Caption^Vytvo\0159it pl\00E1n proveden\00ED^O
+	CE:
+	CS:menuFrmMethods_menuSchedule_Insert_Package.Caption^RWC
+		A:Caption^Napl\00E1novat vlo\017Een\00ED bal\00ED\010Dku^O
+	CE:
+	CS:menuFrmMethods_menuSchedule_Update_Package.Caption^RWC
+		A:Caption^Napl\00E1novat aktualizaci bal\00ED\010Dku^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceReplStruct^RWC
+	CS:$this.Text^RWC
+		A:Text^\00DAdr\017Eba replika\010Dn\00ED struktury^O
+	CE:
+	CS:ExecutionPlan^RWC
+		A:ExecutionPlan^Pl\00E1n proveden\00ED^O
+	CE:
+	CS:Struct^RWC
+		A:Struct^Struktura^O
+	CE:
+	CS:cmdDefineColumns.Caption^RWC
+		A:Caption^Definovat sloupce...^O
+	CE:
+	CS:cmdShowSourceText.Caption^RWC
+		A:Caption^Zobrazit zdrojov\00FD text...^O
+	CE:
+	CS:menuFrmMethods_menuCompile__Packages.Caption^RWC
+		A:Caption^Kom&pilovat bal\00ED\010Dky^O
+	CE:
+	CS:menuFrmMethods_menuCompile__Triggers.Caption^RWC
+		A:Caption^Kompilovat &triggery^O
+	CE:
+	CS:menuFrmMethods_menuCreate__XSD_File.Caption^RWC
+		A:Caption^Vytvo\0159it soubor &XSD^O
+	CE:
+	CS:menuFrmMethods_menuShow__Log.Caption^RWC
+		A:Caption^Zobrazit protoko&l^O
+	CE:
+	CS:menuFrmMethods_menuShow__Server_Processes.Caption^RWC
+		A:Caption^Zobrazit na&pl\00E1novan\00E9 migra\010Dn\00ED d\00E1vky^O
+	CE:
+	CS:menuFrmMethods_menuStart__Insert_Package.Caption^RWC
+		A:Caption^Spust&it vlo\017Een\00ED bal\00ED\010Dku^O
+	CE:
+	CS:menuFrmMethods_menuStart__Update_Package.Caption^RWC
+		A:Caption^Sp&ustit aktualizaci bal\00ED\010Dku^O
+	CE:
+	CS:menuFrmMethods_menu_Copy_Migration_Job.Caption^RWC
+		A:Caption^&Kop\00EDrovat d\00E1vku^O
+	CE:
+	CS:menuFrmMethods_menu_Disable_Triggers.Caption^RWC
+		A:Caption^&Deaktivovat triggery^O
+	CE:
+	CS:menuFrmMethods_menu_Enable_Triggers.Caption^RWC
+		A:Caption^Povolit trigg&ery^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceStart^RWC
+	CS:$this.Text^RWC
+		A:Text^Spustit d\00E1vku^O
+	CE:
+	CS:Defaults^RWC
+		A:Defaults^V\00FDchoz\00ED^O
+	CE:
+	CS:Detail^RWC
+		A:Detail^Detail^O
+	CE:
+	CS:menuFrmMethods_menuClean_Up.Caption^RWC
+		A:Caption^Vymazat^O
+	CE:
+	CS:menuFrmMethods_menuJob.Caption^RWC
+		A:Caption^D\00E1vka...^O
+	CE:
+	CS:menuFrmMethods_menuRestart_Online.Caption^RWC
+		A:Caption^Restartovat Online^O
+	CE:
+	CS:menuFrmMethods_menuSchedule_Job.Caption^RWC
+		A:Caption^Napl\00E1novat \00FAlohu^O
+	CE:
+	CS:menuFrmMethods_menuStart_Online.Caption^RWC
+		A:Caption^Spustit Online^O
+	CE:
+	CS:menuFrmMethods_menuUnpack_File.Caption^RWC
+		A:Caption^Rozbalit soubor^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfStartDefaults^RWC
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDefaultRules^RWC
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDetail^RWC
+	CS:$this.Text^RWC
+		A:Text^Detaily migrace - Soubor^O
+	CE:
+	CS:menuTbwMethods_menuConvert_columns___.Caption^RWC
+		A:Caption^P\0159ev\00E9st sloupce...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDetailConversion^RWC
+	CS:$this.Text^RWC
+		A:Text^Detaily migrace^O
+	CE:
+	CS:menuTbwMethods_menuConvert_columns___.Caption^RWC
+		A:Caption^P\0159ev\00E9st sloupce...^O
+	CE:
+	CS:menuTbwMethods_menuTranslation.Caption^RWC
+		A:Caption^&P\0159eklad...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDetailOverview^RWC
+	CS:$this.Text^RWC
+		A:Text^Detaily d\00E1vky^O
+	CE:
+	CS:menuTbwMethods_menuConvert_columns___.Caption^RWC
+		A:Caption^P\0159ev\00E9st sloupce...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceGroup^RWC
+	CS:cmdExportGroup.Caption^RWC
+		A:Caption^&Exportovat skupinu...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceHeader^RWC
+	CS:$this.Text^RWC
+		A:Text^D\00E1vky^O
+	CE:
+	CS:menuTbwMethods_menuJob__History_Overview___.Caption^RWC
+		A:Caption^P\0159ehled &historie \00FAlohy...^O
+	CE:
+	CS:menuTbwMethods_menuS_erver_Processes___.Caption^RWC
+		A:Caption^Na&pl\00E1novan\00E9 d\00E1vky...^O
+	CE:
+	CS:menuTbwMethods_menu_Export_job___.Caption^RWC
+		A:Caption^&Export \00FAlohy...^O
+	CE:
+	CS:menuTbwMethods_menu_Job_Details___.Caption^RWC
+		A:Caption^&Detaily \00FAlohy...^O
+	CE:
+	CS:menuTbwMethods_menu_Print_Documentation___.Caption^RWC
+		A:Caption^&Tisk dokumentace...^O
+	CE:
+	CS:menuTbwMethods_menu_Start_Job___.Caption^RWC
+		A:Caption^&Spustit \00FAlohu...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceJobDetail^RWC
+	CS:$this.Text^RWC
+		A:Text^(v\00FDchoz\00ED t\0159\00EDda)^O
+	CE:
+	CS:menuTbwMethods_menuExport_to_File___.Caption^RWC
+		A:Caption^Export do souboru...^O
+	CE:
+	CS:menuTbwMethods_menuLoad_File___.Caption^RWC
+		A:Caption^Zav\00E9st soubor...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceJobHistHead^RWC
+	CS:$this.Text^RWC
+		A:Text^Historie d\00E1vky^O
+	CE:
+	CS:menuTbwMethods_menu_Job_History_Details___.Caption^RWC
+		A:Caption^&Detaily historie \00FAlohy...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceMethodList^RWC
+	CS:menuTbwMethods_menuShow_Procedure_Statement.Caption^RWC
+		A:Caption^Zobrazit p\0159\00EDkaz procedury^O
+	CE:
+	CS:menuTbwMethods_menu_Method_List_Attribute___.Caption^RWC
+		A:Caption^Atribut seznamu &metod...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceMethodListAttribute^RWC
+	CS:$this.Text^RWC
+		A:Text^Atribut seznamu metod^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceProcedures^RWC
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceReplDbObjects^RWC
+	CS:$this.Text^RWC
+		A:Text^Objekty replikace^O
+	CE:
+	CS:menuTbwMethods_menuShow_Source_Text.Caption^RWC
+		A:Caption^Zobrazit zdrojov\00FD text^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceReplOutLog^RWC
+	CS:$this.Text^RWC
+		A:Text^V\00FDstupn\00ED protokol replikace^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceReplStructCols^RWC
+	CS:$this.Text^RWC
+		A:Text^Definovat sloupce^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceRules^RWC
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceServerProcesses^RWC
+	CS:$this.Text^RWC
+		A:Text^Napl\00E1novan\00E9 migra\010Dn\00ED \00FAlohy^O
+	CE:
+	CS:menuTbwMethods_menu_Execute_Job.Caption^RWC
+		A:Caption^&Spustit^O
+	CE:
+	CS:menuTbwMethods_menu_View_Schedule.Caption^RWC
+		A:Caption^&Zobrazit pl\00E1n^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceSourceCols^RWC
+	CS:$this.Text^RWC
+		A:Text^Dotaz - zdrojov\00E9 sloupce^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceUser^RWC
+	CS:menuItemPrUser.Caption^RWC
+		A:Caption^Prim\00E1rn\00ED &u\017Eivatel...^O
+	CE:
+CE:
+CS:Ifs.Fnd.Navigator.FNDMIG^RWC
+	CS:FNDMIG_ROOT-IntfaceBasic.Text^RWC
+		A:Text^Obecn\00FD p\0159enos dat^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceHeader.Text^RWC
+		A:Text^\00DAdr\017Eba d\00E1vky^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceHistory.Text^RWC
+		A:Text^Historie d\00E1vky^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceReplOutLog.Text^RWC
+		A:Text^V\00FDstupn\00ED protokol replikace^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceReplStruct.Text^RWC
+		A:Text^\00DAdr\017Eba replikace struktury^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceServerProcesses.Text^RWC
+		A:Text^Serverov\00E9 procesy^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceStart.Text^RWC
+		A:Text^Prov\00E9st \00FAlohu^O
+	CE:
+	CS:FNDMIG_ROOT-OverviewIntfaceDetail.Text^RWC
+		A:Text^Detaily d\00E1vky^O
+	CE:
+	CS:FNDMIG_ROOT-OverviewIntfaceHeader.Text^RWC
+		A:Text^D\00E1vky^O
+	CE:
+	CS:FNDMIG_ROOT-OverviewIntfaceHistory.Text^RWC
+		A:Text^Historie d\00E1vky^O
+	CE:
+	CS:FNDMIG_ROOT-intfaceReplDbObjects.Text^RWC
+		A:Text^Objekty replikace^O
+	CE:
+	CS:FNDMIG_ROOT.Text^RWC
+		A:Text^Migrace dat^O
+	CE:
+CE:

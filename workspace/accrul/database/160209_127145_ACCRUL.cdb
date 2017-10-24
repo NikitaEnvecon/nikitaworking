@@ -1,0 +1,49 @@
+-----------------------------------------------------------------------------------------
+--
+--  Module:   ACCRUL 
+--
+--  File:     160209_127145_ACCRUL.cdb
+--
+--  Purpose:  Modify column length in POSTING_CTRL_RPT and POSTING_CTRL_DETAIL_RPT.
+--
+--  Date     Sign      History
+--  ------   ------    ---------------------------------------------------------------------------
+--  160209   CLSTLK    Bug 127145 Corrected.
+--------------------------------------------------------------------------------------------------
+ 
+PROMPT Starting 160209_127145_ACCRUL.cdb
+
+SET SERVEROUTPUT ON
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160209_127145_ACCRUL.cdb','Timestamp_1');
+PROMPT Modifying column length of CONTROL_NAME in POSTING_CTRL_RPT 
+
+DECLARE
+   table_name_ VARCHAR2(30) := 'POSTING_CTRL_RPT';
+   column_     Database_SYS.ColRec;  
+BEGIN
+   IF NOT Database_SYS.Is_Db_Patch_Registered('ACCRUL', 127145) THEN
+      column_ := Database_SYS.Set_Column_Values('CONTROL_NAME', 'VARCHAR2(200)');
+      Database_SYS.Alter_Table_Column ( table_name_ , 'M', column_ , TRUE );
+   END IF;
+END;
+/   
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160209_127145_ACCRUL','Timestamp_2');
+PROMPT Modifying column length of SPEC_CONTROL_TYPE_DESC in POSTING_CTRL_DETAIL_RPT 
+  
+DECLARE
+   table_name_ VARCHAR2(30) := 'POSTING_CTRL_DETAIL_RPT';
+   column_     Database_SYS.ColRec;
+BEGIN
+   IF NOT Database_SYS.Is_Db_Patch_Registered('ACCRUL', 127145) THEN
+      column_ := Database_SYS.Set_Column_Values('SPEC_CONTROL_TYPE_DESC', 'VARCHAR2(200)');
+      Database_SYS.Alter_Table_Column ( table_name_ , 'M', column_ , TRUE );	   
+      
+      Database_SYS.Register_Db_Patch('ACCRUL', 127145, 'Modified column length.'); 
+      COMMIT;
+   END IF;      
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160209_127145_ACCRUL','Done');
+SET SERVEROUTPUT OFF

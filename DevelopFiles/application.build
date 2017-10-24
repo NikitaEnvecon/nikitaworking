@@ -1,0 +1,572 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+	<!-- 
+		This build script expects two properties set from outside
+		$(ConfigBuilder) -	True = build using a configbuilder structure. If not set it's considered False
+		$(BuildHome) -		Top folder for a build structure. The folder that contains the topmost "source" folder
+					If not provided in a development structure this is probed using the following known locations
+						source, components, workspace
+	-->
+	<PropertyGroup
+		Condition="'$(BuildHome)'==''"
+		>
+		<BuildHome
+			Condition="Exists('$(MSBuildProjectDirectory)\..\source')"
+			>$(MSBuildProjectDirectory)\..\source</BuildHome>
+		<BuildHome
+			Condition="Exists('$(MSBuildProjectDirectory)\..\components')"
+			>$(MSBuildProjectDirectory)\..\components</BuildHome>
+		<BuildHome
+			Condition="Exists('$(MSBuildProjectDirectory)\..\workspace')"
+			>$(MSBuildProjectDirectory)\..\workspace</BuildHome>
+	</PropertyGroup>
+	<!-- 
+		IMPORTANT. Do not make any references to $(MSBuildProjectDirectory) below this line. All references should be
+		relative to $(BuildHome)
+	-->
+	<Choose>
+		<When
+			Condition=" '$(ConfigBuilder)'=='True'"
+			>
+			<PropertyGroup>
+				<FndDevRoot>$(BuildHome)\EnterpriseExplorerDevelopment</FndDevRoot>
+				<FndBuildTemp>$(BuildHome)\build\_eetemp</FndBuildTemp>
+				<FndDeployTarget>$(BuildHome)\client\runtime</FndDeployTarget>				
+				<FndDevelopRoot>$(FndDevRoot)\DevelopFiles</FndDevelopRoot>
+				<SrcModifier>source</SrcModifier>
+				<TermTranslation>$(BuildHome)\server\termtranslation</TermTranslation>
+				<TextTranslations>$(BuildHome)\server\translation</TextTranslations>
+				<FrameworkTranslations>$(BuildHome)\server\translation</FrameworkTranslations>
+			</PropertyGroup>
+			<PropertyGroup>
+				<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+				<RuntimeBinaryDeliveryFolder>$(BuildHome)\source\fndbas\framework\ee-fw</RuntimeBinaryDeliveryFolder>
+			</PropertyGroup>
+		</When>
+		<Otherwise>
+			<PropertyGroup>
+				<FndDevRoot>$(BuildHome)\..</FndDevRoot>
+				<FndBuildTemp>$(FndDevRoot)\_buildtemp</FndBuildTemp>
+				<FndDeployTarget>$(FndDevRoot)\DeployFiles</FndDeployTarget>				
+				<FndDevelopRoot>$(FndDevRoot)\DevelopFiles</FndDevelopRoot>
+				<SrcModifier>*\source</SrcModifier>
+				<TermTranslation>$(BuildHome)\terms\server\termtranslation</TermTranslation>
+				<TextTranslations>$(BuildHome)</TextTranslations>
+				<FrameworkTranslations>$(BuildHome)\fndbas\server\translation</FrameworkTranslations>
+			</PropertyGroup>
+			<PropertyGroup>
+				<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+				<RuntimeBinaryDeliveryFolder>$(BuildHome)\fndbas\source\fndbas\framework\ee-fw</RuntimeBinaryDeliveryFolder>
+			</PropertyGroup>
+		</Otherwise>
+	</Choose>
+	<PropertyGroup>
+		<BuildTimestamp>$([System.DateTime]::Now)</BuildTimestamp>
+	</PropertyGroup>
+	<Import
+		Project="$(MSBuildProjectDirectory)\Ifs.Fnd.MSBuildTasks.Targets"
+		/>
+	<PropertyGroup>
+		<FndFolders>
+			FndDevRoot=$(FndDevRoot);
+			FndBuildTemp=$(FndBuildTemp);
+			FndDeployTarget=$(FndDeployTarget);			
+			FndDevelopRoot=$(FndDevelopRoot);
+			SrcModifier=$(SrcModifier);
+			ConfigBuilder=$(ConfigBuilder)
+		</FndFolders>
+	</PropertyGroup>
+	<PropertyGroup>
+		<AfterMicrosoftCommonTargets>CustomAfterMicrosoftCommonTargets=$(FndDevelopRoot)\AfterTargets.target;CustomBeforeMicrosoftCommonTargets=$(FndDevelopRoot)\BeforeTargets.target;FndDevelopRoot=$(FndDevelopRoot);FndDeployTarget=$(FndDeployTarget);Localize=$(Localize);TermTranslation=$(TermTranslation)</AfterMicrosoftCommonTargets>
+	</PropertyGroup>
+	<ItemGroup>
+		<ApplicationComponentFiles
+			Include="$(BuildHome)\$(SrcModifier)\*\client\component.xml"
+			/>
+		<ApplicationMapSourceFiles
+			Include="$(BuildHome)\$(SrcModifier)\*\client\MapSource\*.xml"
+			/>
+		<AssemblyFiles
+			Include="$(BuildHome)\$(SrcModifier)\*\client\Assemblies\*.dll"
+			/>
+	</ItemGroup>
+	<UsingTask
+		TaskName="Ifs.Fnd.PreBuildTasks.Unzip"
+		AssemblyFile="$(FndDevelopRoot)\Ifs.Fnd.PreBuildTasks.dll"
+		/>
+	<UsingTask
+		TaskName="Ifs.Fnd.PreBuildTasks.zip"
+		AssemblyFile="$(FndDevelopRoot)\Ifs.Fnd.PreBuildTasks.dll"
+		/>
+	<UsingTask
+		TaskName="Ifs.Fnd.PreBuildTasks.FndSetEnvironmentVariable"
+		AssemblyFile="$(FndDevelopRoot)\Ifs.Fnd.PreBuildTasks.dll"
+		/>
+	<Target
+		Name="Build"
+		>
+		<CallTarget 
+			Targets="DeliveryToSource"
+			/>
+		<CallTarget
+			Targets="BuildFramework"
+			/>
+		<CallTarget
+			Targets="BuildFeatures"
+			/>
+		<CallTarget
+			Targets="GenerateMeta"
+			/>
+		<CallTarget
+			Targets="GenerateSatelliteAssemblies"
+			/>
+		<CallTarget
+			Targets="ZipSatelliteAssemblies"
+			/>
+		<CallTarget
+			Targets="MergeTermsFiles"
+			/>
+		<CallTarget
+			Targets="DeployClickOnce"
+			/>
+		<CallTarget
+			Targets="BuildToDelivery"
+			/>
+	</Target>
+	<Target 
+		Name="FindBuildFiles"
+		>
+		<ItemGroup>
+			<ApplicationBuildFiles
+			Include="$(BuildHome)\$(SrcModifier)\*\client\*\*.csproj"
+			Exclude="$(BuildHome)\$(SrcModifier)\fndbas\client\*\*.csproj"
+			/>
+		</ItemGroup>
+	</Target>
+	<Target 
+		Name="FindNavigatorFiles"
+		>
+		<ItemGroup>
+			<ApplicationNavigatorFiles
+				Include="$(BuildHome)\$(SrcModifier)\*\client\navigator-*.xml"
+				/>
+		</ItemGroup>
+	</Target>
+	<PropertyGroup
+		Condition="Exists('$(BuildHome)\..\_ee-fw-delivery')"
+		>
+		<RuntimeBinaryDeliveryFolder>$(BuildHome)\..\_ee-fw-delivery</RuntimeBinaryDeliveryFolder>
+	</PropertyGroup>
+	<Target
+		Name="GenerateSatelliteAssemblies"
+		>
+		<GenerateSatelliteAssemblies
+			DeployFiles="$(FndDeployTarget)"
+			DevelopRoot="$(FndDevelopRoot)"
+			TextTranslations="$(TextTranslations)"
+			TermLocation="$(TermTranslation)"
+			AssemblyFiles="@(AssemblyFiles)"
+			ConfigBuilder = '$(ConfigBuilder)'
+			GenerateFakeLanguage = '$(FakeLanguage)'
+			Languages = '$(Languages)'
+			Condition="Exists('$(FrameworkTranslations)')"
+			/>
+	</Target>
+
+	<Target
+		Name="ZipSatelliteAssemblies"
+		>
+		<ZipSatelliteAssemblies
+			DeployFiles="$(FndDeployTarget)"
+			/>
+	</Target>
+	<Target
+		Name="BuildFramework"
+		>
+		<CallTarget
+			Targets="UnpackFramework"
+			/>
+	</Target>
+	
+	<!-- Datalogics, This section is there for backward compatibility of the Tool disk. If some one had updated the tool disk but not taken App9 BP5 then PDF stuff remain at the Framework location. --> 	
+	<Choose>		
+		<When Condition= "'$(ConfigBuilder)'!='True' And !Exists('$(BuildHome)\fndadm\source\fndadm\client\InfoServicesFrameWork\ThirdPartyAssemblies\PDFLibrary')">
+			<Choose>	
+				<When Condition="Exists('$(BuildHome)\ee-runtime\source\fndbas\framework\fndwin\ThirdPartyAssemblies\PDFLibrary')">  <!-- EE-FW developer build structure -->
+					<PropertyGroup>				
+						<DatalogicsRoot>$(BuildHome)\ee-runtime\source\fndbas\framework\fndwin\ThirdPartyAssemblies\PDFLibrary</DatalogicsRoot>	
+					</PropertyGroup>
+				</When>
+				<Otherwise>
+					<PropertyGroup>	
+						<DatalogicsRoot>$(BuildHome)\fndbas\source\fndbas\framework\thirdparty\PDFLibrary</DatalogicsRoot>
+					</PropertyGroup>
+				</Otherwise>
+			</Choose>
+		</When>
+		<Otherwise>
+			<PropertyGroup>	
+				<DatalogicsRoot></DatalogicsRoot>
+			</PropertyGroup>
+		</Otherwise>		
+	</Choose>
+	
+
+	<Target
+		Name="UnpackFramework"
+		Inputs="$(RuntimeBinaryDeliveryFolder)\ee-runtime.zip"
+		Outputs="$(FndDeployTarget)\Ifs.Fnd.Explorer.exe"
+		>
+
+
+		<!-- Create Deployment Directories -->
+		<MakeDir
+			Directories="$(FndDevRoot)"
+			Condition = "!Exists($(FndDevRoot))"
+			/>
+		<MakeDir
+			Directories="$(FndDeployTarget)"
+			Condition = "!Exists($(FndDeployTarget))"
+			/>
+		<MakeDir
+			Directories="$(FndDevelopRoot)"
+			Condition = "!Exists($(FndDevelopRoot))"
+			/>
+			
+		<!-- Unpack datalogics dlls. This section is there for backward compatibility of the Tool disk. -->
+		<Message Text = "Unpack Datalogics Dlls in application.build"/>
+		<Message Text = "$(DatalogicsRoot)"/>
+		
+		<Unzip
+			ZipFileName="$(DatalogicsRoot)\x32.zip"
+			Condition="exists('$(DatalogicsRoot)\x32.zip')"
+			TargetFolder="$(FndDeployTarget)\"
+			Overwrite="true"
+			UseFileTimeFromZip="false"			
+		/>
+		
+		<Unzip
+			ZipFileName="$(RuntimeBinaryDeliveryFolder)\ee-runtime.zip"
+			TargetFolder="$(FndDeployTarget)"
+			Overwrite="true"
+			UseFileTimeFromZip="false"
+			/>
+	</Target>
+	<Target
+		Name="SetFndEnvironment"
+		>
+		<Message
+			Text="Setting Environment Variables"
+			/>
+		<Message
+			Text="-----------------------------"
+			/>
+		<FndSetEnvironmentVariable
+			Name="DEVROOT"
+			Value="$(FndDevRoot)"
+			/>
+		<FndSetEnvironmentVariable
+			Name="DEPLOYTARGET"
+			Value="$(FndDeployTarget)"
+			/>
+		<FndSetEnvironmentVariable
+			Name="DEVELOPROOT"
+			Value="$(FndDevelopRoot)"
+			/>
+	</Target>
+	<Target
+		Name="BuildFeatures"
+		DependsOnTargets="SetFndEnvironment;FindBuildFiles"
+		>
+
+		<!-- Copy files from {component}\client\runtime folder to deployfiles in a development structure -->
+	
+		<ItemGroup Condition=" '$(ConfigBuilder)'!='True'">
+			<ApplicationRuntimeFiles Include="$(BuildHome)\*\client\runtime\*.*" />
+		</ItemGroup>
+
+		<Copy 
+			Condition=" '$(ConfigBuilder)'!='True'" 
+			SourceFiles="@(ApplicationRuntimeFiles)"
+			DestinationFolder="$(FndDeployTarget)" 
+		/>
+
+
+		<ResolveComponentBuildOrder
+			BuildProjects="@(ApplicationBuildFiles)"
+			>
+			<Output
+				TaskParameter="SortedBuildProjects"
+				ItemName="SortedApplicationBuildFiles"
+			/>
+		</ResolveComponentBuildOrder>
+		
+		<ItemGroup>
+			<ApplicationPreBuildFiles Include="$(BuildHome)\$(SrcModifier)\*\client\PreComponents.build" />
+			<ApplicationPostBuildFiles Include="$(BuildHome)\$(SrcModifier)\*\client\PostComponents.build" />
+		</ItemGroup>
+
+		<Message Text="Execute PreBuildFiles"/>
+		<MSBuild 
+			Projects="@(ApplicationPreBuildFiles)"
+			Targets="Build"
+			Properties="ConfigBuilder=$(ConfigBuilder);BuildHome=$(BuildHome);FndDevRoot=$(FndDevRoot);FndDeployTarget=$(FndDeployTarget);FndDevelopRoot=$(FndDevelopRoot)">
+		</MSBuild>
+
+		<MSBuild
+			Projects="@(SortedApplicationBuildFiles)"
+			Properties="Batch=%(SortedApplicationBuildFiles.DependecyLevel);ReferencePath=$(FndDeployTarget);$(FndDeployTarget)\plugins;ConfigBuilder=$(ConfigBuilder);FndDevRoot=$(FndDevRoot);FndDeployTarget=$(FndDeployTarget);FndDevelopRoot=$(FndDevelopRoot);OutputPath=$(FndBuildTemp)\bin;DocumentationFile=;$(AfterMicrosoftCommonTargets)"
+			BuildInParallel="true"
+			Targets="Build"
+			>
+			<Output
+				TaskParameter="TargetOutputs"
+				ItemName="AssembliesBuiltByChildProjects"
+			/>
+		</MSBuild>
+
+		<Message Text="Execute PostBuildFiles"/>
+		<MSBuild 
+			Projects="@(ApplicationPostBuildFiles)"
+			Targets="Build"
+			Properties="ConfigBuilder=$(ConfigBuilder);BuildHome=$(BuildHome);FndDevRoot=$(FndDevRoot);FndDeployTarget=$(FndDeployTarget);FndDevelopRoot=$(FndDevelopRoot)">
+		</MSBuild>
+
+		<OnError ExecuteTargets="GenerateMeta" />
+	</Target>
+	<Target
+		Name="GenerateMeta"
+		>
+		<CallTarget
+			Targets="GenerateAssemblyList"
+			/>
+		<CallTarget
+			Targets="MergeNavigatorFiles"
+			/>
+		<CallTarget
+			Targets="GenerateDictionary"
+			/>
+		<CallTarget
+			Targets="MergeMapSourceFiles"/>
+	</Target>
+	<Target
+		Name = "GenerateAssemblyList"
+		>
+		<ItemGroup>
+			<DeployFilesAssemblies
+			Include="$(FndDeployTarget)\*.dll"
+			/>
+		</ItemGroup>	
+	</Target>
+	<Target
+		Name="MergeNavigatorFiles"
+		DependsOnTargets="FindNavigatorFiles"
+		Inputs="@(ApplicationNavigatorFiles);$(FndDeployTarget)\Ifs.Fnd.MSBuildTasks.dll"
+		Outputs="$(FndDeployTarget)\navigator.xml.gz"
+		>
+		<MergeNavigatorFiles
+			IncludeLegacy="false"
+			OutputFile="$(FndDeployTarget)\navigator.xml.gz"
+			SourceNavigatorItems="@(ApplicationNavigatorFiles)"
+			/>
+	</Target>
+	<Target
+		Name="MergeTermsFiles"
+		Inputs="$(FndDeployTarget)\*.Terms.resources.bin"
+		Outputs="$(FndDeployTarget)\Terms.resources.zip"
+		>
+		<ItemGroup>
+			<TermFiles Include="$(FndDeployTarget)\*.Terms.resources.bin"/>
+		</ItemGroup>
+		<MakeDir Directories="$(FndDeployTarget)\tmp" Condition="!Exists('$(FndDeployTarget)\tmp') And @(TermFiles)!=''" />
+		<Unzip
+			ZipFileName="$(FndDeployTarget)\Terms.resources.zip"
+			TargetFolder="$(FndDeployTarget)\tmp"
+			Overwrite="true"
+			UseFileTimeFromZip="false"
+			Condition="Exists('$(FndDeployTarget)\Terms.resources.zip') And @(TermFiles)!=''"
+			/> 
+		<copy 
+			SourceFiles="@(TermFiles)"
+			DestinationFolder="$(FndDeployTarget)\tmp"
+		/>
+		<CallTarget
+			Targets="ZipTermFiles" Condition="@(TermFiles)!=''"
+			/>
+		<Delete 
+			Files="@(TermFiles)"
+			/>
+	</Target>
+
+	<Target
+		Name="ZipTermFiles"
+		>
+		<ItemGroup>
+			<TermFilesToZip Include="$(FndDeployTarget)\tmp\*.Terms.resources.bin"/>
+		</ItemGroup>
+		<Delete
+			Files="$(FndDeployTarget)\Terms.resources.zip"
+			/>
+		<Zip 
+			SourceFiles="@(TermFilesToZip)"
+			ZipBaseDirectory="$(FndDeployTarget)\tmp"
+			AllFilesInZipRoot="true"
+			ZipFileName="$(FndDeployTarget)\Terms.resources.zip"
+		/>
+		<RemoveDir Directories="$(FndDeployTarget)\tmp"/>
+	</Target>
+
+	<Target
+		Name="GenerateDictionary"
+		DependsOnTargets="FindBuildFiles"
+		Inputs="$(FndDeployTarget)\navigator.xml.gz;
+			        @(DeployFilesAssemblies);
+			        @(ApplicationBuildFiles);
+			        @(ApplicationComponentFiles);
+                                $(FndDeployTarget)\Ifs.Fnd.MSBuildTasks.dll"
+		Outputs="$(FndDeployTarget)\dictionary.xml.gz"
+		>
+		<GenerateDictionary
+			DeployFilesFolder="$(FndDeployTarget)"
+			ApplicationProjectFiles="@(ApplicationBuildFiles)"
+			ComponentXmlFiles="@(ApplicationComponentFiles)"
+			/>
+	</Target>
+	<Target Name="MergeMapSourceFiles"
+			Inputs="@(ApplicationMapSourceFiles);$(FndDeployTarget)\Ifs.Fnd.MSBuildTasks.dll"
+			Outputs="$(FndDeployTarget)\MapSource.xml">
+		<MergeMapSourceFiles
+			DestinationPath="$(FndDeployTarget)"
+			MapSourceFiles="@(ApplicationMapSourceFiles)" />
+	</Target>
+
+	<Import
+		Project="$(MSBuildProjectDirectory)\DeployClickOnce.target"
+		/>
+	<Target
+		Name="DeployClickOnce"
+		>
+		<MSBuild
+			Projects="$(MSBuildProjectDirectory)\DeployClickOnce.target"
+			Targets="DeployClickOnce"
+			Properties="FndDeployTarget=$(FndDeployTarget);
+                              FndDevRoot=$(FndDevRoot);
+                              FndDevelopRoot=$(FndDevelopRoot);
+                              ClickOnceServer=$(ClickOnceServer);
+                              ConfigBuilder=$(ConfigBuilder);
+			      BuildDirectory=$(BuildHome)"
+			>
+		</MSBuild>
+	</Target>
+	<ItemGroup>
+		<CleanFiles
+			Include="$(FndDeployTarget)\**"
+			/>
+		<CleanFiles
+			Include="$(FndDevelopRoot)\**"
+			Exclude="Ifs.Fnd.MSBuildTasks.dll"
+			/>
+		<CleanFiles
+			Include="$(FndBuildTemp)\**"
+			/>
+	</ItemGroup>
+	<Target
+		Name="Clean"
+		DependsOnTargets="SetFndEnvironment;FindBuildFiles"
+		>
+		<MSBuild
+			Projects="@(ApplicationBuildFiles)"
+			Properties="$(FndFolders)"
+			Targets="Clean"
+			/>
+		<Delete
+			Files="@(CleanFiles)"
+			TreatErrorsAsWarnings="True"
+			/>
+		<!--
+		<RemoveDir Directories="$(FndDeployTarget);$(FndDevelopRoot);$(FndDevRoot)\DesignFiles" />
+		-->
+	</Target>
+	<Target Name="DeliveryToSource" Condition="$(DELIVERY)!=''">
+		<ItemGroup>
+			<DeliveryClientFiles Include="$(DELIVERY)\source\**\client\**"/>
+			<DeliveryFwFiles Include="$(DELIVERY)\source\fndbas\framework\ee-fw\**"/>
+			<DeliveryRuntimeFiles Include="$(DELIVERY)\runtime\**"/>
+			<DeliveryCBSFiles Include="$(DELIVERY)\win32server\Constraint Based Scheduling\execute\Server\**"/>
+			<DeliveryLanguageFiles Include="$(DELIVERY)\server\translation\**"/>
+			<DeliveryTermFiles Include="$(DELIVERY)\server\termtranslation\**"/>
+		</ItemGroup>
+	        <copy 
+			SourceFiles="@(DeliveryFwFiles)"
+			DestinationFiles="@(DeliveryFwFiles->'$(BuildHome)\source\fndbas\framework\ee-fw\%(RecursiveDir)%(Filename)%(Extension)')">
+			<Output
+				TaskParameter="CopiedFiles"
+				ItemName="CopiedFwFiles"/>
+		</copy>
+	        <copy 
+			SourceFiles="@(DeliveryClientFiles)"
+			DestinationFiles="@(DeliveryClientFiles->'$(BuildHome)\source\%(RecursiveDir)%(Filename)%(Extension)')">
+			<Output
+				TaskParameter="CopiedFiles"
+				ItemName="CopiedClientFiles"/>
+		</copy>
+				
+		<copy 
+			SourceFiles="@(DeliveryRuntimeFiles)"
+			DestinationFiles="@(DeliveryRuntimeFiles->'$(BuildHome)\runtime\%(RecursiveDir)%(Filename)%(Extension)')">
+			<Output
+				TaskParameter="CopiedFiles"
+				ItemName="CopiedRuntimeFiles"/>
+			
+		</copy>
+		<copy 
+			SourceFiles="@(DeliveryCBSFiles)"
+			DestinationFiles="@(DeliveryCBSFiles->'$(BuildHome)\win32server\Constraint Based Scheduling\execute\Server\%(RecursiveDir)%(Filename)%(Extension)')">
+			<Output
+				TaskParameter="CopiedFiles"
+				ItemName="CopiedCBSFiles"/>
+			
+		</copy>
+		<copy 
+			SourceFiles="@(DeliveryLanguageFiles)"
+			DestinationFiles="@(DeliveryLanguageFiles->'$(BuildHome)\server\translation\%(RecursiveDir)%(Filename)%(Extension)')">
+			<Output
+				TaskParameter="CopiedFiles"
+				ItemName="CopiedLanguageFiles"/>
+			
+		</copy>
+		<copy 
+			SourceFiles="@(DeliveryTermFiles)"
+			DestinationFiles="@(DeliveryTermFiles->'$(BuildHome)\server\termtranslation\%(RecursiveDir)%(Filename)%(Extension)')">
+			<Output
+				TaskParameter="CopiedFiles"
+				ItemName="CopiedTermFiles"/>
+			
+		</copy>
+		<touch 
+			Files="@(CopiedFwFiles);@(CopiedClientFiles);@(CopiedRuntimeFiles);@(CopiedCBSFiles);@(CopiedLanguageFiles);@(CopiedTermFiles)"
+			ForceTouch="true"
+		/>
+
+	</Target>
+
+
+	<Target Name="BuildToDelivery" Condition="$(DELIVERY)!=''">
+		<ItemGroup>
+			<ClientFiles Include="$(FndDeployTarget)\**"/>
+		</ItemGroup>
+		<FindNewerFiles Files="@(ClientFiles)" ModifiedDate="$(BuildTimestamp)">
+			<Output TaskParameter="MatchingFiles" ItemName="FilesToCopy"/>
+		</FindNewerFiles>
+		<Message text="newer files = @(FilesToCopy)"/>
+		<Message text="recursive dir = @(FilesToCopy->'%(RecursiveDir)')"/>
+		<Message text="old recursive = @(FilesToCopy->'%(OldRecursiveDir)')"/>
+		<copy 
+			SourceFiles="@(FilesToCopy)"
+			DestinationFiles="@(FilesToCopy->'$(DELIVERY)\client\runtime\%(OldRecursiveDir)%(Filename)%(Extension)')">
+		</copy>
+	</Target>
+
+	<Target Name="CopyAccessProviders">
+		<!-- Don't copy access providers anymore. Target left due to late change in project -->
+	</Target>
+</Project>

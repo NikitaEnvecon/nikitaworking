@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menuFrmMethods_menuC_onnect_Attribute___.Caption" xml:space="preserve">
+    <value>C&amp;onnect Attribute...</value>
+  </data>
+  <data name="menuFrmMethods_menu_Change_Company___.Caption" xml:space="preserve">
+    <value>&amp;Change Company...</value>
+  </data>
+  <data name="menuOperations_menuC_onnect_Attribute___.Caption" xml:space="preserve">
+    <value>C&amp;onnect Attribute...</value>
+  </data>
+  <data name="menuOperations_menu_Change_Company___.Caption" xml:space="preserve">
+    <value>&amp;Change Company...</value>
+  </data>
+  <data name="menuTblMethods_menuC_onnect_Attribute___.Caption" xml:space="preserve">
+    <value>C&amp;onnect Attribute...</value>
+  </data>
+  <data name="menuTblMethods_menu_Change_Company___.Caption" xml:space="preserve">
+    <value>&amp;Change Company...</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuItem_Connect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 22</value>
+  </data>
+  <data name="menuSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 6</value>
+  </data>
+  <data name="menuItem__Change.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 22</value>
+  </data>
+  <data name="menuFrmMethods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 54</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Name" xml:space="preserve">
+    <value>menuFrmMethods</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="menuItem_Connect_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 22</value>
+  </data>
+  <data name="menuSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 6</value>
+  </data>
+  <data name="menuItem__Change_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 22</value>
+  </data>
+  <data name="menuOperations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 54</value>
+  </data>
+  <data name="&gt;&gt;menuOperations.Name" xml:space="preserve">
+    <value>menuOperations</value>
+  </data>
+  <data name="&gt;&gt;menuOperations.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="menuItem_Connect_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 22</value>
+  </data>
+  <data name="menuSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 6</value>
+  </data>
+  <data name="menuItem__Change_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 22</value>
+  </data>
+  <data name="menuTblMethods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 54</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods.Name" xml:space="preserve">
+    <value>menuTblMethods</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="dfsCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 16</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dfsCompany.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="dfsCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 22</value>
+  </data>
+  <data name="dfsCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dfsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Name" xml:space="preserve">
+    <value>dfsCompany</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelcmbsAttribute.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbsAttribute.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labelcmbsAttribute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 9</value>
+  </data>
+  <data name="labelcmbsAttribute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 16</value>
+  </data>
+  <data name="labelcmbsAttribute.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelcmbsAttribute.Text" xml:space="preserve">
+    <value>Attribute:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbsAttribute.Name" xml:space="preserve">
+    <value>labelcmbsAttribute</value>
+  </data>
+  <data name="&gt;&gt;labelcmbsAttribute.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbsAttribute.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbsAttribute.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="cmbsAttribute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 29</value>
+  </data>
+  <data name="cmbsAttribute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 22</value>
+  </data>
+  <data name="cmbsAttribute.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cmbsAttribute.Name" xml:space="preserve">
+    <value>cmbsAttribute</value>
+  </data>
+  <data name="&gt;&gt;cmbsAttribute.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cRecListDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cmbsAttribute.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbsAttribute.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labeldfsDescription.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsDescription.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labeldfsDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 9</value>
+  </data>
+  <data name="labeldfsDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 16</value>
+  </data>
+  <data name="labeldfsDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labeldfsDescription.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsDescription.Name" xml:space="preserve">
+    <value>labeldfsDescription</value>
+  </data>
+  <data name="&gt;&gt;labeldfsDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsDescription.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="dfsDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 29</value>
+  </data>
+  <data name="dfsDescription.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="dfsDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 22</value>
+  </data>
+  <data name="dfsDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dfsDescription.Name" xml:space="preserve">
+    <value>dfsDescription</value>
+  </data>
+  <data name="&gt;&gt;dfsDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsDescription.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labeldfsCodePart.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsCodePart.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labeldfsCodePart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>424, 9</value>
+  </data>
+  <data name="labeldfsCodePart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 16</value>
+  </data>
+  <data name="labeldfsCodePart.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labeldfsCodePart.Text" xml:space="preserve">
+    <value>Code Part:</value>
+  </data>
+  <data name="labeldfsCodePart.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCodePart.Name" xml:space="preserve">
+    <value>labeldfsCodePart</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCodePart.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCodePart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCodePart.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="dfsCodePart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 15</value>
+  </data>
+  <data name="dfsCodePart.MaxLength" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dfsCodePart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 22</value>
+  </data>
+  <data name="dfsCodePart.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="dfsCodePart.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfsCodePart.Name" xml:space="preserve">
+    <value>dfsCodePart</value>
+  </data>
+  <data name="&gt;&gt;dfsCodePart.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsCodePart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsCodePart.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labeldfsCodePartName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsCodePartName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labeldfsCodePartName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>424, 9</value>
+  </data>
+  <data name="labeldfsCodePartName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 16</value>
+  </data>
+  <data name="labeldfsCodePartName.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labeldfsCodePartName.Text" xml:space="preserve">
+    <value>Code Part Name:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCodePartName.Name" xml:space="preserve">
+    <value>labeldfsCodePartName</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCodePartName.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCodePartName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCodePartName.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="dfsCodePartName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>426, 29</value>
+  </data>
+  <data name="dfsCodePartName.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="dfsCodePartName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 22</value>
+  </data>
+  <data name="dfsCodePartName.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;dfsCodePartName.Name" xml:space="preserve">
+    <value>dfsCodePartName</value>
+  </data>
+  <data name="&gt;&gt;dfsCodePartName.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsCodePartName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsCodePartName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tblAttValue_colsCompany.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblAttValue_colsCompany.Title" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="tblAttValue_colsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblAttValue_colsCompany.Width" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsCompany.Name" xml:space="preserve">
+    <value>tblAttValue_colsCompany</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsCompany.Parent" xml:space="preserve">
+    <value>tblAttValue</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsCompany.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tblAttValue_colsAttribute.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblAttValue_colsAttribute.Title" xml:space="preserve">
+    <value>Attribute</value>
+  </data>
+  <data name="tblAttValue_colsAttribute.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblAttValue_colsAttribute.Width" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsAttribute.Name" xml:space="preserve">
+    <value>tblAttValue_colsAttribute</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsAttribute.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsAttribute.Parent" xml:space="preserve">
+    <value>tblAttValue</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsAttribute.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tblAttValue_colsAttributeValue.Title" xml:space="preserve">
+    <value>Attribute Value</value>
+  </data>
+  <data name="tblAttValue_colsAttributeValue.Width" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsAttributeValue.Name" xml:space="preserve">
+    <value>tblAttValue_colsAttributeValue</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsAttributeValue.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsAttributeValue.Parent" xml:space="preserve">
+    <value>tblAttValue</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsAttributeValue.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tblAttValue_colsDescription.Title" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="tblAttValue_colsDescription.Width" type="System.Int32, mscorlib">
+    <value>311</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsDescription.Name" xml:space="preserve">
+    <value>tblAttValue_colsDescription</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsDescription.Parent" xml:space="preserve">
+    <value>tblAttValue</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue_colsDescription.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tblAttValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 63</value>
+  </data>
+  <data name="tblAttValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>552, 336</value>
+  </data>
+  <data name="tblAttValue.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue.Name" xml:space="preserve">
+    <value>tblAttValue</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cChildTableFinBase, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tblAttValue.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>605, 449</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 77</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Attribute Value</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods_menuC_onnect_Attribute___.Name" xml:space="preserve">
+    <value>menuTblMethods_menuC_onnect_Attribute___</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods_menuC_onnect_Attribute___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods_menu_Change_Company___.Name" xml:space="preserve">
+    <value>menuTblMethods_menu_Change_Company___</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods_menu_Change_Company___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menuC_onnect_Attribute___.Name" xml:space="preserve">
+    <value>menuOperations_menuC_onnect_Attribute___</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menuC_onnect_Attribute___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menu_Change_Company___.Name" xml:space="preserve">
+    <value>menuOperations_menu_Change_Company___</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menu_Change_Company___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuC_onnect_Attribute___.Name" xml:space="preserve">
+    <value>menuFrmMethods_menuC_onnect_Attribute___</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuC_onnect_Attribute___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menu_Change_Company___.Name" xml:space="preserve">
+    <value>menuFrmMethods_menu_Change_Company___</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menu_Change_Company___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Connect.Name" xml:space="preserve">
+    <value>menuItem_Connect</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Connect.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator1.Name" xml:space="preserve">
+    <value>menuSeparator1</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Change.Name" xml:space="preserve">
+    <value>menuItem__Change</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Change.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Connect_1.Name" xml:space="preserve">
+    <value>menuItem_Connect_1</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Connect_1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator2.Name" xml:space="preserve">
+    <value>menuSeparator2</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Change_1.Name" xml:space="preserve">
+    <value>menuItem__Change_1</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Change_1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Connect_2.Name" xml:space="preserve">
+    <value>menuItem_Connect_2</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Connect_2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator3.Name" xml:space="preserve">
+    <value>menuSeparator3</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator3.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Change_2.Name" xml:space="preserve">
+    <value>menuItem__Change_2</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Change_2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmAttValue</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cFormWindowFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

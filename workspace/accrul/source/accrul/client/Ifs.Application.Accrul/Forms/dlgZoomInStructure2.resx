@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;ToolBar.Name" xml:space="preserve">
+    <value>ToolBar</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalFormToolBar, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="dfAccYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 335</value>
+  </data>
+  <data name="dfAccYear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 21</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dfAccYear.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;dfAccYear.Name" xml:space="preserve">
+    <value>dfAccYear</value>
+  </data>
+  <data name="&gt;&gt;dfAccYear.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfAccYear.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfAccYear.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dfBGFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 335</value>
+  </data>
+  <data name="dfBGFilter.MaxLength" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dfBGFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 14</value>
+  </data>
+  <data name="dfBGFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dfBGFilter.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="dfBGFilter.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfBGFilter.Name" xml:space="preserve">
+    <value>dfBGFilter</value>
+  </data>
+  <data name="&gt;&gt;dfBGFilter.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfBGFilter.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfBGFilter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbIncludeHold.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 332</value>
+  </data>
+  <data name="cbIncludeHold.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="cbIncludeHold.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="cbIncludeHold.Text" xml:space="preserve">
+    <value>Include</value>
+  </data>
+  <data name="&gt;&gt;cbIncludeHold.Name" xml:space="preserve">
+    <value>cbIncludeHold</value>
+  </data>
+  <data name="&gt;&gt;cbIncludeHold.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbIncludeHold.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbIncludeHold.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbSimulation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 230</value>
+  </data>
+  <data name="cbSimulation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 20</value>
+  </data>
+  <data name="cbSimulation.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="cbSimulation.Text" xml:space="preserve">
+    <value>Simulation</value>
+  </data>
+  <data name="&gt;&gt;cbSimulation.Name" xml:space="preserve">
+    <value>cbSimulation</value>
+  </data>
+  <data name="&gt;&gt;cbSimulation.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbSimulation.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbSimulation.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbNormal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 197</value>
+  </data>
+  <data name="cbNormal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 20</value>
+  </data>
+  <data name="cbNormal.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="cbNormal.Text" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="&gt;&gt;cbNormal.Name" xml:space="preserve">
+    <value>cbNormal</value>
+  </data>
+  <data name="&gt;&gt;cbNormal.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbNormal.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbNormal.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="pbCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 46</value>
+  </data>
+  <data name="pbCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="pbCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.Name" xml:space="preserve">
+    <value>pbCancel</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pbOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 17</value>
+  </data>
+  <data name="pbOK.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="pbOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;pbOK.Name" xml:space="preserve">
+    <value>pbOK</value>
+  </data>
+  <data name="&gt;&gt;pbOK.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbOK.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;pbOK.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cbCode_J.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 258</value>
+  </data>
+  <data name="cbCode_J.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 20</value>
+  </data>
+  <data name="cbCode_J.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="cbCode_J.Text" xml:space="preserve">
+    <value>@J</value>
+  </data>
+  <data name="&gt;&gt;cbCode_J.Name" xml:space="preserve">
+    <value>cbCode_J</value>
+  </data>
+  <data name="&gt;&gt;cbCode_J.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbCode_J.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbCode_J.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cbCode_I.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 223</value>
+  </data>
+  <data name="cbCode_I.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="cbCode_I.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="cbCode_I.Text" xml:space="preserve">
+    <value>@I</value>
+  </data>
+  <data name="&gt;&gt;cbCode_I.Name" xml:space="preserve">
+    <value>cbCode_I</value>
+  </data>
+  <data name="&gt;&gt;cbCode_I.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbCode_I.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbCode_I.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cbCode_H.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 188</value>
+  </data>
+  <data name="cbCode_H.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="cbCode_H.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="cbCode_H.Text" xml:space="preserve">
+    <value>@H</value>
+  </data>
+  <data name="&gt;&gt;cbCode_H.Name" xml:space="preserve">
+    <value>cbCode_H</value>
+  </data>
+  <data name="&gt;&gt;cbCode_H.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbCode_H.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbCode_H.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cbCode_G.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 153</value>
+  </data>
+  <data name="cbCode_G.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="cbCode_G.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="cbCode_G.Text" xml:space="preserve">
+    <value>@G</value>
+  </data>
+  <data name="&gt;&gt;cbCode_G.Name" xml:space="preserve">
+    <value>cbCode_G</value>
+  </data>
+  <data name="&gt;&gt;cbCode_G.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbCode_G.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbCode_G.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="cbCode_F.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 118</value>
+  </data>
+  <data name="cbCode_F.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 20</value>
+  </data>
+  <data name="cbCode_F.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="cbCode_F.Text" xml:space="preserve">
+    <value>@F</value>
+  </data>
+  <data name="&gt;&gt;cbCode_F.Name" xml:space="preserve">
+    <value>cbCode_F</value>
+  </data>
+  <data name="&gt;&gt;cbCode_F.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbCode_F.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbCode_F.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="cbCode_E.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 83</value>
+  </data>
+  <data name="cbCode_E.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 20</value>
+  </data>
+  <data name="cbCode_E.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="cbCode_E.Text" xml:space="preserve">
+    <value>@E</value>
+  </data>
+  <data name="&gt;&gt;cbCode_E.Name" xml:space="preserve">
+    <value>cbCode_E</value>
+  </data>
+  <data name="&gt;&gt;cbCode_E.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbCode_E.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbCode_E.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="cbCode_D.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 258</value>
+  </data>
+  <data name="cbCode_D.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="cbCode_D.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="cbCode_D.Text" xml:space="preserve">
+    <value>@D</value>
+  </data>
+  <data name="&gt;&gt;cbCode_D.Name" xml:space="preserve">
+    <value>cbCode_D</value>
+  </data>
+  <data name="&gt;&gt;cbCode_D.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbCode_D.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbCode_D.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="cbCode_C.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 223</value>
+  </data>
+  <data name="cbCode_C.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="cbCode_C.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="cbCode_C.Text" xml:space="preserve">
+    <value>@C</value>
+  </data>
+  <data name="&gt;&gt;cbCode_C.Name" xml:space="preserve">
+    <value>cbCode_C</value>
+  </data>
+  <data name="&gt;&gt;cbCode_C.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbCode_C.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbCode_C.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="cbCode_B.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 188</value>
+  </data>
+  <data name="cbCode_B.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 20</value>
+  </data>
+  <data name="cbCode_B.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="cbCode_B.Text" xml:space="preserve">
+    <value>@B</value>
+  </data>
+  <data name="&gt;&gt;cbCode_B.Name" xml:space="preserve">
+    <value>cbCode_B</value>
+  </data>
+  <data name="&gt;&gt;cbCode_B.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbCode_B.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbCode_B.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="cbAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 153</value>
+  </data>
+  <data name="cbAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="cbAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="cbAccount.Text" xml:space="preserve">
+    <value>@A</value>
+  </data>
+  <data name="&gt;&gt;cbAccount.Name" xml:space="preserve">
+    <value>cbAccount</value>
+  </data>
+  <data name="&gt;&gt;cbAccount.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbAccount.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbAccount.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="cbStrucColomn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 83</value>
+  </data>
+  <data name="cbStrucColomn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
+  </data>
+  <data name="cbStrucColomn.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cbStrucColomn.Text" xml:space="preserve">
+    <value>Structure Node</value>
+  </data>
+  <data name="&gt;&gt;cbStrucColomn.Name" xml:space="preserve">
+    <value>cbStrucColomn</value>
+  </data>
+  <data name="&gt;&gt;cbStrucColomn.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbStrucColomn.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbStrucColomn.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="cbPeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 118</value>
+  </data>
+  <data name="cbPeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <data name="cbPeriod.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="cbPeriod.Text" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="&gt;&gt;cbPeriod.Name" xml:space="preserve">
+    <value>cbPeriod</value>
+  </data>
+  <data name="&gt;&gt;cbPeriod.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbPeriod.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbPeriod.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="dfBGHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, -1</value>
+  </data>
+  <data name="dfBGHeader.MaxLength" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dfBGHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="dfBGHeader.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="dfBGHeader.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfBGHeader.Name" xml:space="preserve">
+    <value>dfBGHeader</value>
+  </data>
+  <data name="&gt;&gt;dfBGHeader.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfBGHeader.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfBGHeader.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="labeldfAccYear.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfAccYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 337</value>
+  </data>
+  <data name="labeldfAccYear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 13</value>
+  </data>
+  <data name="labeldfAccYear.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="labeldfAccYear.Text" xml:space="preserve">
+    <value>Accounting Year</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccYear.Name" xml:space="preserve">
+    <value>labeldfAccYear</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccYear.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccYear.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccYear.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="labeldfBGFilter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfBGFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 309</value>
+  </data>
+  <data name="labeldfBGFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 13</value>
+  </data>
+  <data name="labeldfBGFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="labeldfBGFilter.Text" xml:space="preserve">
+    <value>Balances will be filtered according to:</value>
+  </data>
+  <data name="&gt;&gt;labeldfBGFilter.Name" xml:space="preserve">
+    <value>labeldfBGFilter</value>
+  </data>
+  <data name="&gt;&gt;labeldfBGFilter.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfBGFilter.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfBGFilter.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="labeldfBGHeader.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfBGHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 51</value>
+  </data>
+  <data name="labeldfBGHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 13</value>
+  </data>
+  <data name="labeldfBGHeader.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labeldfBGHeader.Text" xml:space="preserve">
+    <value>Balances will be displayed and summarized according to:</value>
+  </data>
+  <data name="&gt;&gt;labeldfBGHeader.Name" xml:space="preserve">
+    <value>labeldfBGHeader</value>
+  </data>
+  <data name="&gt;&gt;labeldfBGHeader.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfBGHeader.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfBGHeader.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="gbFiltering_Information.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbFiltering_Information.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 293</value>
+  </data>
+  <data name="gbFiltering_Information.Size" type="System.Drawing.Size, System.Drawing">
+    <value>324, 77</value>
+  </data>
+  <data name="gbFiltering_Information.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="gbFiltering_Information.Text" xml:space="preserve">
+    <value>Filtering Information</value>
+  </data>
+  <data name="&gt;&gt;gbFiltering_Information.Name" xml:space="preserve">
+    <value>gbFiltering_Information</value>
+  </data>
+  <data name="&gt;&gt;gbFiltering_Information.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbFiltering_Information.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;gbFiltering_Information.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="gbHold_Table.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbHold_Table.Location" type="System.Drawing.Point, System.Drawing">
+    <value>347, 319</value>
+  </data>
+  <data name="gbHold_Table.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 51</value>
+  </data>
+  <data name="gbHold_Table.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="gbHold_Table.Text" xml:space="preserve">
+    <value>Hold Table</value>
+  </data>
+  <data name="&gt;&gt;gbHold_Table.Name" xml:space="preserve">
+    <value>gbHold_Table</value>
+  </data>
+  <data name="&gt;&gt;gbHold_Table.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbHold_Table.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;gbHold_Table.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="gbBalance_Type.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbBalance_Type.Location" type="System.Drawing.Point, System.Drawing">
+    <value>347, 180</value>
+  </data>
+  <data name="gbBalance_Type.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 84</value>
+  </data>
+  <data name="gbBalance_Type.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="gbBalance_Type.Text" xml:space="preserve">
+    <value>Balance Type</value>
+  </data>
+  <data name="&gt;&gt;gbBalance_Type.Name" xml:space="preserve">
+    <value>gbBalance_Type</value>
+  </data>
+  <data name="&gt;&gt;gbBalance_Type.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbBalance_Type.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;gbBalance_Type.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="gbZoom_in_Information.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbZoom_in_Information.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 17</value>
+  </data>
+  <data name="gbZoom_in_Information.Size" type="System.Drawing.Size, System.Drawing">
+    <value>324, 269</value>
+  </data>
+  <data name="gbZoom_in_Information.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbZoom_in_Information.Text" xml:space="preserve">
+    <value>Zoom-in Information</value>
+  </data>
+  <data name="&gt;&gt;gbZoom_in_Information.Name" xml:space="preserve">
+    <value>gbZoom_in_Information</value>
+  </data>
+  <data name="&gt;&gt;gbZoom_in_Information.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbZoom_in_Information.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;gbZoom_in_Information.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="ClientArea.Size" type="System.Drawing.Size, System.Drawing">
+    <value>449, 371</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.Name" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalFormClientArea, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="StatusBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 371</value>
+  </data>
+  <data name="StatusBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>449, 22</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Name" xml:space="preserve">
+    <value>StatusBar</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalFormStatusBar, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>449, 393</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 127</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Zoom-in</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>dlgZoomInStructure2</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cDialogBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

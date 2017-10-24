@@ -1,0 +1,718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ToolBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 53</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Name" xml:space="preserve">
+    <value>ToolBar</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalFormToolBar, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="pbList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>742, 116</value>
+  </data>
+  <data name="pbList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbList.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="pbList.Text" xml:space="preserve">
+    <value>&amp;List</value>
+  </data>
+  <data name="&gt;&gt;pbList.Name" xml:space="preserve">
+    <value>pbList</value>
+  </data>
+  <data name="&gt;&gt;pbList.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbList.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;pbList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pbCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="pbCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>742, 42</value>
+  </data>
+  <data name="pbCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 20</value>
+  </data>
+  <data name="pbCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="pbCancel.Text" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.Name" xml:space="preserve">
+    <value>pbCancel</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pbSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="pbSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>742, 85</value>
+  </data>
+  <data name="pbSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 20</value>
+  </data>
+  <data name="pbSave.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="pbSave.Text" xml:space="preserve">
+    <value>&amp;Save</value>
+  </data>
+  <data name="&gt;&gt;pbSave.Name" xml:space="preserve">
+    <value>pbSave</value>
+  </data>
+  <data name="&gt;&gt;pbSave.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbSave.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;pbSave.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pbOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="pbOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>742, 11</value>
+  </data>
+  <data name="pbOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 20</value>
+  </data>
+  <data name="pbOK.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="pbOK.Text" xml:space="preserve">
+    <value>&amp;OK</value>
+  </data>
+  <data name="&gt;&gt;pbOK.Name" xml:space="preserve">
+    <value>pbOK</value>
+  </data>
+  <data name="&gt;&gt;pbOK.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbOK.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;pbOK.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tblCurrPseudoCode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCompany.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCompany.Title" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCompany.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCompany.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsCompany</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCompany.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCompany.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsUserId.Title" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsUserId.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsUserId.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsUserId</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsUserId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsUserId.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsUserId.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsPseudoCode.Title" xml:space="preserve">
+    <value>Pseudo Code</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsPseudoCode.Width" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsPseudoCode.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsPseudoCode.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsPseudoCode.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsPseudoCode.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsDescription.Title" xml:space="preserve">
+    <value>Pseudo Code Description</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsDescription.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsDescription.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsDescription</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsDescription.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsDescription.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsAccount.Title" xml:space="preserve">
+    <value>@A</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsAccount.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsAccount.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsAccount</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsAccount.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsAccount.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsAccount.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeB.Title" xml:space="preserve">
+    <value>@B</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeB.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeB.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsCodeB</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeB.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeB.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeB.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeC.Title" xml:space="preserve">
+    <value>@C</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeC.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeC.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsCodeC</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeC.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeC.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeC.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeD.Title" xml:space="preserve">
+    <value>@D</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeD.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeD.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsCodeD</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeD.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeD.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeD.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeE.Title" xml:space="preserve">
+    <value>@E</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeE.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeE.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsCodeE</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeE.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeE.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeE.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeF.Title" xml:space="preserve">
+    <value>@F</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeF.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeF.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsCodeF</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeF.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeF.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeF.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeG.Title" xml:space="preserve">
+    <value>@G</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeG.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeG.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsCodeG</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeG.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeG.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeG.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeH.Title" xml:space="preserve">
+    <value>@H</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeH.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeH.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsCodeH</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeH.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeH.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeH.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeI.Title" xml:space="preserve">
+    <value>@I</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeI.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeI.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsCodeI</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeI.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeI.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeI.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeJ.Title" xml:space="preserve">
+    <value>@J</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsCodeJ.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeJ.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsCodeJ</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeJ.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeJ.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsCodeJ.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsProcessCode.Title" xml:space="preserve">
+    <value>Process Code</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsProcessCode.Width" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsProcessCode.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsProcessCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsProcessCode.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsProcessCode.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsProcessCode.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="tblCurrPseudoCode_colnProjectActivityId.Title" xml:space="preserve">
+    <value>Activity Sequence 
+No.</value>
+  </data>
+  <data name="tblCurrPseudoCode_colnProjectActivityId.Width" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colnProjectActivityId.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colnProjectActivityId</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colnProjectActivityId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colnProjectActivityId.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colnProjectActivityId.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsText.Title" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsText.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsText.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsText</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsText.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsText.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsText.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="tblCurrPseudoCode_colnQuantity.Title" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="tblCurrPseudoCode_colnQuantity.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colnQuantity.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colnQuantity</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colnQuantity.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colnQuantity.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colnQuantity.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsPseudoCodeOwnership.Title" xml:space="preserve">
+    <value>Ownership</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsPseudoCodeOwnership.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsPseudoCodeOwnership.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsPseudoCodeOwnership</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsPseudoCodeOwnership.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsPseudoCodeOwnership.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsPseudoCodeOwnership.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsProjectId.Title" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsProjectId</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsProjectId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsProjectId.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsProjectId</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsProjectId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsProjectId.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsProjectId.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsProjectActivityIdEnabled.Title" xml:space="preserve">
+    <value>ProjectActivityEnabled</value>
+  </data>
+  <data name="tblCurrPseudoCode_colsProjectActivityIdEnabled.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsProjectActivityIdEnabled.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode_colsProjectActivityIdEnabled</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsProjectActivityIdEnabled.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsProjectActivityIdEnabled.Parent" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode_colsProjectActivityIdEnabled.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="tblCurrPseudoCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 12</value>
+  </data>
+  <data name="tblCurrPseudoCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>732, 336</value>
+  </data>
+  <data name="tblCurrPseudoCode.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode.Name" xml:space="preserve">
+    <value>tblCurrPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cChildTableFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;tblCurrPseudoCode.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ClientArea.Size" type="System.Drawing.Size, System.Drawing">
+    <value>825, 360</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.Name" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalFormClientArea, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="StatusBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 247</value>
+  </data>
+  <data name="StatusBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 19</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Name" xml:space="preserve">
+    <value>StatusBar</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalFormStatusBar, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>825, 360</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>417, 300</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Add Pseudo Code</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>dlgAddPseudoCode</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cDialogBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

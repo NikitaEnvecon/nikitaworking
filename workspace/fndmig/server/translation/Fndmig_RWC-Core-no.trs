@@ -1,0 +1,596 @@
+-------------------------------------------------------
+File Type: IFS Foundation Translation File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Language: no
+Culture: nb-NO
+Fittings: Standard
+Layer: Core
+Main Type: RWC
+Sub Type: All
+-------------------------------------------------------
+CS:Ifs.Application.Fndmig_.Properties.Resources^RWC
+	CS:ALERT_Title^RWC
+		A:ALERT_Title^Prosedyreutf\00F8relse^O
+	CE:
+	CS:ALERT_TitleCopyIntface^RWC
+		A:ALERT_TitleCopyIntface^Migreringsjobb kopiert^O
+	CE:
+	CS:ALERT_TitleEx^RWC
+		A:ALERT_TitleEx^Utf\00F8r plan^O
+	CE:
+	CS:ALERT_TitleXsdCreated^RWC
+		A:ALERT_TitleXsdCreated^Xsd oppr.^O
+	CE:
+	CS:FILE_All^RWC
+		A:FILE_All^Alle filer^O
+	CE:
+	CS:FILE_Dat^RWC
+		A:FILE_Dat^Dat-filer (*.dat)^O
+	CE:
+	CS:FILE_Ins^RWC
+		A:FILE_Ins^Innstallasjonsfiler (*.ins)^O
+	CE:
+	CS:FILE_Text^RWC
+		A:FILE_Text^Tekstdokument (*.txt)^O
+	CE:
+	CS:FNDMIG_BatchExecInvalidDate^RWC
+		A:FNDMIG_BatchExecInvalidDate^En gyldig dato m\00E5 angis^O
+	CE:
+	CS:FNDMIG_BatchExecInvalidTime^RWC
+		A:FNDMIG_BatchExecInvalidTime^En gyldig tid m\00E5 angis^O
+	CE:
+	CS:FNDMIG_ExportingMessage^RWC
+		A:FNDMIG_ExportingMessage^Eksporterer til fil '&0'...^O
+	CE:
+	CS:FNDMIG_Exporting_FileTitle^RWC
+		A:FNDMIG_Exporting_FileTitle^Eksporter filrekke^O
+	CE:
+	CS:INTF_Column^RWC
+		A:INTF_Column^Kolonne^O
+	CE:
+	CS:INTF_CopyError^RWC
+		A:INTF_CopyError^Kunne ikke kopiere fil^O
+	CE:
+	CS:INTF_DeleteError^RWC
+		A:INTF_DeleteError^Kunne ikke slette fil^O
+	CE:
+	CS:INTF_ExistWin^RWC
+		A:INTF_ExistWin^eksisterer ikke i vindu eller kolonne, forekommer p\00E5 mer enn 1 sted i kildekolonnespesifikasjonen.^O
+	CE:
+	CS:INTF_FileOpenError^RWC
+		A:INTF_FileOpenError^Kunne ikke \00E5pne fil^O
+	CE:
+	CS:INTF_SaveFile^RWC
+		A:INTF_SaveFile^Lagre som^O
+	CE:
+	CS:INTF_SelectFile^RWC
+		A:INTF_SelectFile^Velg fil \00E5 laste^O
+	CE:
+	CS:NAV_InterfOverviewJob^RWC
+		A:NAV_InterfOverviewJob^Jobbhistorikk^O
+	CE:
+	CS:NAV_InterfaceBasic^RWC
+		A:NAV_InterfaceBasic^Datamigrering, generelt^O
+	CE:
+	CS:NAV_InterfaceHeader^RWC
+		A:NAV_InterfaceHeader^Migreringsjobbvedlikehold^O
+	CE:
+	CS:NAV_InterfaceHistory^RWC
+		A:NAV_InterfaceHistory^Migreringsjobbhistorikk^O
+	CE:
+	CS:NAV_InterfaceStart^RWC
+		A:NAV_InterfaceStart^Utf\00F8r jobb^O
+	CE:
+	CS:NAV_Interface_P^RWC
+		A:NAV_Interface_P^Datamigrering^O
+	CE:
+	CS:NAV_IntfaceReplDbObjects^RWC
+		A:NAV_IntfaceReplDbObjects^Replikeringsobjekter^O
+	CE:
+	CS:NAV_IntfaceReplOutLog^RWC
+		A:NAV_IntfaceReplOutLog^Replikering utdatalogg^O
+	CE:
+	CS:NAV_IntfaceReplStruct^RWC
+		A:NAV_IntfaceReplStruct^Replikeringsstruktur, vedlilkehold^O
+	CE:
+	CS:NAV_IntfaceServerProcesses^RWC
+		A:NAV_IntfaceServerProcesses^Serverprosesser^O
+	CE:
+	CS:NAV_OverViewInterfaceDetail^RWC
+		A:NAV_OverViewInterfaceDetail^Oversikt - Migreringsjobbdetaljer^O
+	CE:
+	CS:NAV_OverViewInterfaceHeader^RWC
+		A:NAV_OverViewInterfaceHeader^Oversikt - Migreringsjobber^O
+	CE:
+	CS:NAV_OverViewInterfaceHistory^RWC
+		A:NAV_OverViewInterfaceHistory^Oversikt - Migreringsjobbhistorikk^O
+	CE:
+	CS:TAB_NAME_Detail^RWC
+		A:TAB_NAME_Detail^Detalj^O
+	CE:
+	CS:TAB_NAME_DetailConversion^RWC
+		A:TAB_NAME_DetailConversion^Kildefordeling^O
+	CE:
+	CS:TAB_NAME_DetailFile^RWC
+		A:TAB_NAME_DetailFile^Filfordeling^O
+	CE:
+	CS:TAB_NAME_ExecPlan^RWC
+		A:TAB_NAME_ExecPlan^Utf\00F8relsesplan^O
+	CE:
+	CS:TAB_NAME_ExecSingel^RWC
+		A:TAB_NAME_ExecSingel^Utf\00F8r^O
+	CE:
+	CS:TAB_NAME_Job_Detail^RWC
+		A:TAB_NAME_Job_Detail^Detalj^O
+	CE:
+	CS:TAB_NAME_MethodList^RWC
+		A:TAB_NAME_MethodList^Metodeliste^O
+	CE:
+	CS:TAB_NAME_Rules^RWC
+		A:TAB_NAME_Rules^Regler^O
+	CE:
+	CS:TEXT_ConfirmRunSchedule^RWC
+		A:TEXT_ConfirmRunSchedule^Tidsplan '{0} - {1}' vil bli kj\00F8rt som en bakgrunnsjobb. Vil du fortsette?^O
+	CE:
+	CS:TEXT_ExportFile^RWC
+		A:TEXT_ExportFile^Angi filnavn for dataeksport^O
+	CE:
+	CS:TEXT_ImportDone^RWC
+		A:TEXT_ImportDone^Import av nye migreringsjobber ferdig^O
+	CE:
+	CS:TEXT_ImportError^RWC
+		A:TEXT_ImportError^Feil ved import^O
+	CE:
+	CS:TEXT_ImportFileName^RWC
+		A:TEXT_ImportFileName^Angi filnavn for import^O
+	CE:
+	CS:TEXT_IntfaceCopyLabel^RWC
+		A:TEXT_IntfaceCopyLabel^Ny jobb-ID^O
+	CE:
+	CS:TEXT_IntfaceCopyTitle^RWC
+		A:TEXT_IntfaceCopyTitle^Kopier migreringsjobb^O
+	CE:
+	CS:TEXT_IntfaceShowSelectTitle^RWC
+		A:TEXT_IntfaceShowSelectTitle^SQL Velg uttalelse^O
+	CE:
+	CS:TEXT_IntfaceSourceCols^RWC
+		A:TEXT_IntfaceSourceCols^Ordbokskolonner^O
+	CE:
+	CS:TEXT_LineLengthError^RWC
+		A:TEXT_LineLengthError^De avmerkede linjene ble avkortet fordi de besto av mer enn 4000 tegn. Dette kan f\00F8re til en ufullstendig datamigrering. Det anbefales at man sjekker de avkortede linjene f\00F8r man fortsetter.^O
+	CE:
+	CS:TEXT_MethodListError^RWC
+		A:TEXT_MethodListError^Feil oppstod ved import av metodeliste^O
+	CE:
+	CS:TEXT_QuestionCleanUp^RWC
+		A:TEXT_QuestionCleanUp^Rensing vil fjerne alle aktuelle detaljer og restart vil bli umulig. Vil du fortsette?^O
+	CE:
+	CS:TEXT_TitleCleanUp^RWC
+		A:TEXT_TitleCleanUp^Opprydningsarsel^O
+	CE:
+	CS:TITLE_ImportDone^RWC
+		A:TITLE_ImportDone^Import klar^O
+	CE:
+	CS:TITLE_ImportError^RWC
+		A:TITLE_ImportError^Importfeil^O
+	CE:
+	CS:WH_IntfaceReplStructCols^RWC
+		A:WH_IntfaceReplStructCols^Definer kolonner^O
+	CE:
+	CS:WH_MethodListAttr^RWC
+		A:WH_MethodListAttr^Metodeliste, atributt^O
+	CE:
+	CS:WH_frmIntfConvCols^RWC
+		A:WH_frmIntfConvCols^Konverter - &0, &1^O
+	CE:
+	CS:WH_frmIntfConvColsClear^RWC
+		A:WH_frmIntfConvColsClear^Konverter kolonner^O
+	CE:
+	CS:WH_frmIntfHeaderClear^RWC
+		A:WH_frmIntfHeaderClear^Migreringsjobb^O
+	CE:
+	CS:WH_frmIntfaceHeader^RWC
+		A:WH_frmIntfaceHeader^Migreringsjobb - &0^O
+	CE:
+	CS:WH_frmIntfaceJobHistHead^RWC
+		A:WH_frmIntfaceJobHistHead^Migreringshistorikk - &0^O
+	CE:
+	CS:WH_frmIntfaceJobHistHeadClear^RWC
+		A:WH_frmIntfaceJobHistHeadClear^Migreringshistorikk^O
+	CE:
+	CS:WH_frmIntfaceReplStruct^RWC
+		A:WH_frmIntfaceReplStruct^Strukturreplikering^O
+	CE:
+	CS:WH_frmIntfaceStart^RWC
+		A:WH_frmIntfaceStart^Utf\00F8r jobb - &0^O
+	CE:
+	CS:WH_frmIntfaceStartClear^RWC
+		A:WH_frmIntfaceStartClear^Utf\00F8r jobb^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.dlgExecPlan^RWC
+	CS:$this.Text^RWC
+		A:Text^Utf\00F8ringsplan^O
+	CE:
+	CS:gbRepeated_Execution.Text^RWC
+		A:Text^Gjentatt utf\00F8relse^O
+	CE:
+	CS:gbSingle_Execution.Text^RWC
+		A:Text^Enkeltutf\00F8relse^O
+	CE:
+	CS:pbCancel.Text^RWC
+		A:Text^Avbryt^O
+	CE:
+	CS:pbOk.Text^RWC
+		A:Text^OK^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.dlgExecSingel^RWC
+	CS:$this.Text^RWC
+		A:Text^Enkeltutf\00F8relse^O
+	CE:
+	CS:gbSingle_Execution.Text^RWC
+		A:Text^Enkeltutf\00F8relse^O
+	CE:
+	CS:pbCancel.Text^RWC
+		A:Text^Avbryt^O
+	CE:
+	CS:pbRestart.Text^RWC
+		A:Text^Restart^O
+	CE:
+	CS:pbStart.Text^RWC
+		A:Text^Start^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceBasic^RWC
+	CS:$this.Text^RWC
+		A:Text^Datamigrering basisdata^O
+	CE:
+	CS:IntfaceConvList^RWC
+		A:IntfaceConvList^Konv.lister^O
+	CE:
+	CS:IntfaceDefRules^RWC
+		A:IntfaceDefRules^Standardregler^O
+	CE:
+	CS:IntfaceGroup^RWC
+		A:IntfaceGroup^Gruppe^O
+	CE:
+	CS:IntfacePrUser^RWC
+		A:IntfacePrUser^Per bruker^O
+	CE:
+	CS:IntfaceProcedures^RWC
+		A:IntfaceProcedures^Prosedyrer^O
+	CE:
+	CS:IntfaceUser^RWC
+		A:IntfaceUser^Bruker^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceConvList^RWC
+	CS:$this.Text^RWC
+		A:Text^Konverteringsliste^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceHeader^RWC
+	CS:$this.Text^RWC
+		A:Text^Migreringsjobb^O
+	CE:
+	CS:Format^RWC
+		A:Format^Formaterer^O
+	CE:
+	CS:Replication^RWC
+		A:Replication^Replikering^O
+	CE:
+	CS:gbCriteria.Text^RWC
+		A:Text^Kriterie^O
+	CE:
+	CS:gbDatabase_Information.Text^RWC
+		A:Text^Databaseinformasjon^O
+	CE:
+	CS:gbFile_Configuration.Text^RWC
+		A:Text^Filkonfigurasjon^O
+	CE:
+	CS:gbFile_Information.Text^RWC
+		A:Text^Filinformasjon^O
+	CE:
+	CS:gbTrigger.Text^RWC
+		A:Text^Utl\00F8ser^O
+	CE:
+	CS:menuFrmMethods_menuCopy__Migration_Job.Caption^RWC
+		A:Caption^Kopier &Migreringsjobb^O
+	CE:
+	CS:menuFrmMethods_menuExecJob.Caption^RWC
+		A:Caption^&Start jobb...^O
+	CE:
+	CS:menuFrmMethods_menuHistory.Caption^RWC
+		A:Caption^Migreringsjobb&historikk...^O
+	CE:
+	CS:menuFrmMethods_menuQ_uery_Source_Columns.Caption^RWC
+		A:Caption^Foresp&\00F8r kildekolonner^O
+	CE:
+	CS:menuFrmMethods_menuSchedule_Job.Caption^RWC
+		A:Caption^Planlegg jobb^O
+	CE:
+	CS:menuFrmMethods_menuSer_ver_Processes___.Caption^RWC
+		A:Caption^Ser&verprosesser^O
+	CE:
+	CS:menuFrmMethods_menuSho_w_Select_Statement.Caption^RWC
+		A:Caption^V&is velg uttalelse^O
+	CE:
+	CS:menuFrmMethods_menuTranslation.Caption^RWC
+		A:Caption^&Oversettelse...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceJobHistHead^RWC
+	CS:$this.Text^RWC
+		A:Text^Migreringsjobbhistorikk^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfacePrUser^RWC
+	CS:$this.Text^RWC
+		A:Text^Per bruker^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceReplExecPlan^RWC
+	CS:gbRepeated_Execution.Text^RWC
+		A:Text^Gjentatt utf\00F8relse^O
+	CE:
+	CS:menuFrmMethods_menuCreate_Execution_Plan.Caption^RWC
+		A:Caption^Opprett handlingsplan^O
+	CE:
+	CS:menuFrmMethods_menuSchedule_Insert_Package.Caption^RWC
+		A:Caption^Planlegg sett inn pakke^O
+	CE:
+	CS:menuFrmMethods_menuSchedule_Update_Package.Caption^RWC
+		A:Caption^Planlegg oppd. av pakke^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceReplStruct^RWC
+	CS:$this.Text^RWC
+		A:Text^Replikeringsstruktur^O
+	CE:
+	CS:ExecutionPlan^RWC
+		A:ExecutionPlan^Utf\00F8ringsplan^O
+	CE:
+	CS:Struct^RWC
+		A:Struct^Struktur^O
+	CE:
+	CS:cmdDefineColumns.Caption^RWC
+		A:Caption^Definer kolonner^O
+	CE:
+	CS:cmdShowSourceText.Caption^RWC
+		A:Caption^Vis kildetekst...^O
+	CE:
+	CS:menuFrmMethods_menuCompile__Packages.Caption^RWC
+		A:Caption^Sammenstill pakker^O
+	CE:
+	CS:menuFrmMethods_menuCompile__Triggers.Caption^RWC
+		A:Caption^Kompiler &Utl\00F8sere^O
+	CE:
+	CS:menuFrmMethods_menuCreate__XSD_File.Caption^RWC
+		A:Caption^Oppr. &XSD-fil^O
+	CE:
+	CS:menuFrmMethods_menuShow__Log.Caption^RWC
+		A:Caption^Vis &Logg^O
+	CE:
+	CS:menuFrmMethods_menuShow__Server_Processes.Caption^RWC
+		A:Caption^Vis &Serverprosesser^O
+	CE:
+	CS:menuFrmMethods_menuStart__Insert_Package.Caption^RWC
+		A:Caption^Start &Sett inn pakke^O
+	CE:
+	CS:menuFrmMethods_menuStart__Update_Package.Caption^RWC
+		A:Caption^Start &Oppdater pakke^O
+	CE:
+	CS:menuFrmMethods_menu_Copy_Migration_Job.Caption^RWC
+		A:Caption^&Kopier migreringsjobb^O
+	CE:
+	CS:menuFrmMethods_menu_Disable_Triggers.Caption^RWC
+		A:Caption^&Deaktiver utl\00F8sere^O
+	CE:
+	CS:menuFrmMethods_menu_Enable_Triggers.Caption^RWC
+		A:Caption^&Aktiver utl\00F8sere^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceStart^RWC
+	CS:$this.Text^RWC
+		A:Text^Utf\00F8r jobb^O
+	CE:
+	CS:Defaults^RWC
+		A:Defaults^Standard^O
+	CE:
+	CS:Detail^RWC
+		A:Detail^Detalj^O
+	CE:
+	CS:menuFrmMethods_menuClean_Up.Caption^RWC
+		A:Caption^Opprydning^O
+	CE:
+	CS:menuFrmMethods_menuJob.Caption^RWC
+		A:Caption^Migreringsjobb...^O
+	CE:
+	CS:menuFrmMethods_menuRestart_Online.Caption^RWC
+		A:Caption^Restart online^O
+	CE:
+	CS:menuFrmMethods_menuSchedule_Job.Caption^RWC
+		A:Caption^Planlegg jobb^O
+	CE:
+	CS:menuFrmMethods_menuStart_Online.Caption^RWC
+		A:Caption^Start online^O
+	CE:
+	CS:menuFrmMethods_menuUnpack_File.Caption^RWC
+		A:Caption^Pakk opp fil^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfStartDefaults^RWC
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDefaultRules^RWC
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDetail^RWC
+	CS:$this.Text^RWC
+		A:Text^Migreringsdetaljer - fil^O
+	CE:
+	CS:menuTbwMethods_menuConvert_columns___.Caption^RWC
+		A:Caption^Konv. kolonner...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDetailConversion^RWC
+	CS:$this.Text^RWC
+		A:Text^Migreringsdetaljer^O
+	CE:
+	CS:menuTbwMethods_menuConvert_columns___.Caption^RWC
+		A:Caption^Konv. kolonner...^O
+	CE:
+	CS:menuTbwMethods_menuTranslation.Caption^RWC
+		A:Caption^&Oversettelse...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDetailOverview^RWC
+	CS:$this.Text^RWC
+		A:Text^Migreringsjobbdetaljer^O
+	CE:
+	CS:menuTbwMethods_menuConvert_columns___.Caption^RWC
+		A:Caption^Konv. kolonner...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceGroup^RWC
+	CS:cmdExportGroup.Caption^RWC
+		A:Caption^&Eksporter gruppe...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceHeader^RWC
+	CS:$this.Text^RWC
+		A:Text^Migreringsjobber^O
+	CE:
+	CS:menuTbwMethods_menuJob__History_Overview___.Caption^RWC
+		A:Caption^Jobb &Historikkoversikt...^O
+	CE:
+	CS:menuTbwMethods_menuS_erver_Processes___.Caption^RWC
+		A:Caption^Ser&verprosesser^O
+	CE:
+	CS:menuTbwMethods_menu_Export_job___.Caption^RWC
+		A:Caption^&Eksporter jobb^O
+	CE:
+	CS:menuTbwMethods_menu_Job_Details___.Caption^RWC
+		A:Caption^&Jobbdetaljer...^O
+	CE:
+	CS:menuTbwMethods_menu_Print_Documentation___.Caption^RWC
+		A:Caption^&Skriv ut dokumentasjon...^O
+	CE:
+	CS:menuTbwMethods_menu_Start_Job___.Caption^RWC
+		A:Caption^&Start jobb...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceJobDetail^RWC
+	CS:$this.Text^RWC
+		A:Text^(klassestandard>^O
+	CE:
+	CS:menuTbwMethods_menuExport_to_File___.Caption^RWC
+		A:Caption^Eksporter til fil...^O
+	CE:
+	CS:menuTbwMethods_menuLoad_File___.Caption^RWC
+		A:Caption^Last fil...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceJobHistHead^RWC
+	CS:$this.Text^RWC
+		A:Text^Migreringsjobbhistorikk^O
+	CE:
+	CS:menuTbwMethods_menu_Job_History_Details___.Caption^RWC
+		A:Caption^&Jobbhistorikk, detaljer^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceMethodList^RWC
+	CS:menuTbwMethods_menuShow_Procedure_Statement.Caption^RWC
+		A:Caption^Vis prosedyreuttalelse^O
+	CE:
+	CS:menuTbwMethods_menu_Method_List_Attribute___.Caption^RWC
+		A:Caption^&Metodeliste attributter...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceMethodListAttribute^RWC
+	CS:$this.Text^RWC
+		A:Text^Metodeliste attributt^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceProcedures^RWC
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceReplDbObjects^RWC
+	CS:$this.Text^RWC
+		A:Text^Replikeringsobjekt^O
+	CE:
+	CS:menuTbwMethods_menuShow_Source_Text.Caption^RWC
+		A:Caption^Vis kildetekst^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceReplOutLog^RWC
+	CS:$this.Text^RWC
+		A:Text^Replikering Utdatalogg^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceReplStructCols^RWC
+	CS:$this.Text^RWC
+		A:Text^Definer kolonner^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceRules^RWC
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceServerProcesses^RWC
+	CS:$this.Text^RWC
+		A:Text^Server behandl.^O
+	CE:
+	CS:menuTbwMethods_menu_Execute_Job.Caption^RWC
+		A:Caption^&Kj\00F8r^O
+	CE:
+	CS:menuTbwMethods_menu_View_Schedule.Caption^RWC
+		A:Caption^&Vis tidsplan^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceSourceCols^RWC
+	CS:$this.Text^RWC
+		A:Text^Sp\00F8r - kildekolonner^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceUser^RWC
+	CS:menuItemPrUser.Caption^RWC
+		A:Caption^Per &bruker...^O
+	CE:
+CE:
+CS:Ifs.Fnd.Navigator.FNDMIG^RWC
+	CS:FNDMIG_ROOT-IntfaceBasic.Text^RWC
+		A:Text^Datamigrering basisdata^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceHeader.Text^RWC
+		A:Text^Migreringsjobb^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceHistory.Text^RWC
+		A:Text^Migreringsjobbhistorikk^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceReplOutLog.Text^RWC
+		A:Text^Replikasjon utdatalogg^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceReplStruct.Text^RWC
+		A:Text^Replikeringsstruktur^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceServerProcesses.Text^RWC
+		A:Text^Serverprosesser^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceStart.Text^RWC
+		A:Text^Utf\00F8r jobb^O
+	CE:
+	CS:FNDMIG_ROOT-OverviewIntfaceDetail.Text^RWC
+		A:Text^Migreringsjobb, detaljer^O
+	CE:
+	CS:FNDMIG_ROOT-OverviewIntfaceHeader.Text^RWC
+		A:Text^Migreringsjobber^O
+	CE:
+	CS:FNDMIG_ROOT-OverviewIntfaceHistory.Text^RWC
+		A:Text^Migreringsobbhistorikk^O
+	CE:
+	CS:FNDMIG_ROOT-intfaceReplDbObjects.Text^RWC
+		A:Text^Replikeringsobjekter^O
+	CE:
+	CS:FNDMIG_ROOT.Text^RWC
+		A:Text^Datamigrering^O
+	CE:
+CE:

@@ -1,0 +1,46 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceReplStructure
+--  Component:    FNDMIG
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+COLUMN Parent_View IS
+   Flags      = 'AMIUL'
+   Datatype   = 'STRING(100)'
+   Prompt     = 'Parent View';
+
+COLUMN Table_Name IS
+   Flags      = 'AMIUL'
+   Datatype   = 'STRING(100)'
+   Prompt     = 'Table Name';
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+VIEW Intface_Repl_Parent_Lov IS
+   Prompt = 'Intface Parent Sequence'
+   Parent_Seq.Flags = 'KMI-L'
+SELECT intface_name                   intface_name,
+       structure_seq                  parent_seq,
+       view_name                      parent_view,
+       rowkey                        objkey
+FROM   intface_repl_structure_tab;
+
+VIEW Intface_Repl_Table_Lov IS
+   Prompt = 'Intface Tables'
+SELECT table_name                  table_name
+FROM   dba_tables
+WHERE  table_name LIKE '%TAB'
+AND    owner      = Fnd_Session_API.Get_App_Owner;
+

@@ -1,0 +1,1707 @@
+-------------------------------------------------------
+File Type: IFS Foundation Translation File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Language: es
+Culture: es-ES
+Fittings: Standard
+Layer: Core
+Main Type: LU
+Sub Type: Logical Unit
+-------------------------------------------------------
+CS:IntfaceChangeDefaults^LU
+	A:Prompt^Interf Cambia Defect^O
+	CS:1^LU
+		A:Text^Permitido^O
+	CE:
+	CS:2^LU
+		A:Text^No Permitido^O
+	CE:
+	CS:3^LU
+		A:Text^Valor Fijo^O
+	CE:
+CE:
+CS:IntfaceConvList^LU
+	A:Prompt^Interf Conv Lista^O
+	CS:INTFACE_CONV_LIST^LU
+	CE:
+CE:
+CS:IntfaceConvListCols^LU
+	A:Prompt^Interf Conv Lista Colum^O
+	CS:INTFACE_CONV_LIST_COLS^LU
+	CE:
+CE:
+CS:IntfaceDefaultRules^LU
+	A:Prompt^Interf Reglas Defect^O
+	CS:ADDOBJID^LU
+		A:Text^Crear colum detall ext para OBJID^O
+	CE:
+	CS:CHECKOPTION^LU
+		A:Text^Ejecutar m\00E9todos Nuevo y Modificar con opci\00F3n CHECK^O
+	CE:
+	CS:CLEANUP^LU
+		A:Text^Borrar detalles error automat^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^N\00FAm de filas entre cada commit^O
+	CE:
+	CS:CONNJOB^LU
+		A:Text^Iniciar este trabj primero^O
+	CE:
+	CS:CREATEDET^LU
+		A:Text^Creae nueva column detall basada en las vistas en MethodList^O
+	CE:
+	CS:CRETABCONF^LU
+		A:Text^Opciones para tabla^O
+	CE:
+	CS:EVENTMESS^LU
+		A:Text^Informar al Serv de Eventos cuando trabajo finalizado^O
+	CE:
+	CS:EXITLINES^LU
+		A:Text^Iniciar lect arch luego de este n\00FAm de l\00EDnea^O
+	CE:
+	CS:FETCHCONDITION^LU
+		A:Text^Establece si se puede usar el trabajo para recuperar datos. Si se usan m\00FAltiples LU, especifique la condici\00F3n de combinaci\00F3n.^O
+	CE:
+	CS:FILEBKP^LU
+		A:Text^Copiar arch luego de completar exitosamente^O
+	CE:
+	CS:FILEHEAD^LU
+		A:Text^Crear cabecera con nombres de columna. CSV-arch solamente^O
+	CE:
+	CS:IGNOREADERROR^LU
+		A:Text^Continuar leyendo archivo aunque ocurran errores^O
+	CE:
+	CS:IGNOREXEERROR^LU
+		A:Text^Continuar proced aunque ocurran errores^O
+	CE:
+	CS:INSUPD^LU
+		A:Text^Ejecutar un INSERT o un UPDATE^O
+	CE:
+	CS:INTFACE_DEFAULT_RULES^LU
+	CE:
+	CS:NOCLEANUP^LU
+		A:Text^Mant detall trabaj para arch cliente^O
+	CE:
+	CS:SAVEJOBDAYS^LU
+		A:Text^N\00FAm de d\00EDas para guarda hist-trabj^O
+	CE:
+	CS:SAVEJOBERR^LU
+		A:Text^Guardar solamente errores en el log hist\00F3rico^O
+	CE:
+	CS:SERVFILOAD^LU
+		A:Text^Cargar serv arch antes de inic trab^O
+	CE:
+	CS:SKIPLINES^LU
+		A:Text^Iniciar lect arch luego de este n\00FAm de l\00EDnea^O
+	CE:
+	CS:SYNCDETAILS^LU
+		A:Text^Sincronizar detalles de trabj con column en arch-cabecera^O
+	CE:
+	CS:TRUNCVAL^LU
+		A:Text^Valores truncados exceden la long de la columna^O
+	CE:
+CE:
+CS:IntfaceDetail^LU
+	A:Prompt^Interf Detall^O
+	CS:CHECKERROR^LU
+		A:Text^Verificar :P1 fallo - :P2^O
+	CE:
+	CS:CLIENTVAL^LU
+		A:Text^Valores-cliente^O
+	CE:
+	CS:COLOUTDAT^LU
+		A:Text^Error al format :P1 con valor fecha :P2^O
+	CE:
+	CS:COLOUTDAT2^LU
+		A:Text^Error al formatear la columna de fecha :P1^O
+	CE:
+	CS:COLOUTNUM^LU
+		A:Text^Error al format :P1 con valor num\00E9rico :P2^O
+	CE:
+	CS:COLOUTNUM2^LU
+		A:Text^Error al formatear la columna num\00E9rica :P1^O
+	CE:
+	CS:COLUMNOUT^LU
+		A:Text^Error al format :P1 con valor :P2^O
+	CE:
+	CS:COLUMNOUT2^LU
+		A:Text^Error al formatear la columna :P1^O
+	CE:
+	CS:COMMITCNT^LU
+		A:Text^:P1 N\00FAmero de filas ejecutadas: :P2^O
+	CE:
+	CS:CREERRORATTR^LU
+		A:Text^Crear arch de :P1 fallos.^O
+	CE:
+	CS:CREFORMAT^LU
+		A:Text^Crear arch fallos - :P1^O
+	CE:
+	CS:CREINTFACEOK^LU
+		A:Text^Trabajo migraci\00F3n :P1 concluido^O
+	CE:
+	CS:DBVAL^LU
+		A:Text^BD-valores^O
+	CE:
+	CS:ERRDEFAULT^LU
+		A:Text^:P1 solo usada cuando direcci\00F3n = :P2^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Donde Predet  no se usa para direcc = :P1^O
+	CE:
+	CS:FILENOTFOUND^LU
+		A:Text^No se encuentra archivo :P1 en ruta :P2.^O
+	CE:
+	CS:FORMATERROR^LU
+		A:Text^Fallo al Formatear :P1^O
+	CE:
+	CS:INSCHECK^LU
+		A:Text^:P1 nuevas l\00EDneas cheq. OK^O
+	CE:
+	CS:INSCHECKERR^LU
+		A:Text^:P1 filas chequeadas con error^O
+	CE:
+	CS:INSERRORNEW^LU
+		A:Text^Insertar en :P1 fall\00F3 - :P2^O
+	CE:
+	CS:INSINTERR^LU
+		A:Text^:P1 filas fallidos^O
+	CE:
+	CS:INSINTINS^LU
+		A:Text^:P1 l\00EDneas insert.^O
+	CE:
+	CS:INSINTNOROWS^LU
+		A:Text^No se proces filas^O
+	CE:
+	CS:INSINTOK^LU
+		A:Text^Trabajo migraci\00F3n :P1 concluido^O
+	CE:
+	CS:INTFACE_DETAIL^LU
+		CS:SOURCE_NAME^LU
+		CE:
+		CS:SOURCE_OWNER^LU
+		CE:
+	CE:
+	CS:INTFACE_DETAIL_COL_LOV^LU
+	CE:
+	CS:LOADERR^LU
+		A:Text^Error al leer inf trab migrac :P1^O
+	CE:
+	CS:NODET^LU
+		A:Text^No se encontraron detall para :P1^O
+	CE:
+	CS:NOROWS^LU
+		A:Text^No se proces filas^O
+	CE:
+	CS:NOVAL^LU
+		A:Text^No hay valores BD/Cliente para :P1^O
+	CE:
+	CS:ROWSFAILED^LU
+		A:Text^:P1 filas fallidos^O
+	CE:
+	CS:ROWSWRITTEN^LU
+		A:Text^:P1 filas escritas^O
+	CE:
+	CS:STRINGOUT^LU
+		A:Text^Error al format :P1 con valor :P2^O
+	CE:
+	CS:STRINGOUT2^LU
+		A:Text^Error al formatear la columna :P1^O
+	CE:
+	CS:STRINGOUTCONV^LU
+		A:Text^Error al convert valor :P2 para :P1^O
+	CE:
+	CS:STRINGOUTCONV2^LU
+		A:Text^Error al convertir la columna :P1^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^Longit escif :P2 para columna :P1 se ejecuta por value :P3. Regla TRUNCVAL puede resolver esto.^O
+	CE:
+	CS:TOOLONG2^LU
+		A:Text^Se ha superado la longitud especificada :P2 de la columna :P1. La regla TRUNCVAL puede resolver esto.^O
+	CE:
+	CS:UNPACKPOS^LU
+		A:Text^Error al descomp :P1 con valor :P2^O
+	CE:
+	CS:UNPACKPOS2^LU
+		A:Text^Error al desempaquetar la columna :P1^O
+	CE:
+	CS:UNPACKPOSCONV^LU
+		A:Text^Error al convert valor :P2 para :P1^O
+	CE:
+	CS:UNPACKPOSDAT^LU
+		A:Text^Error format valor fecha :P2 para :P1^O
+	CE:
+	CS:UNPACKPOSDAT2^LU
+		A:Text^Error al formatear la columna de fecha :P1^O
+	CE:
+	CS:UNPACKPOSDEF^LU
+		A:Text^Error format valor por defect :P2 para :P1^O
+	CE:
+	CS:UNPACKPOSNUM^LU
+		A:Text^Error formato valor num\00E9rico :P2 para :P1^O
+	CE:
+	CS:UNPACKPOSNUM2^LU
+		A:Text^Error al formatear la columna num\00E9rica :P1^O
+	CE:
+	CS:UNPACKPOSSTR^LU
+		A:Text^Error al formato valor de cadena :P2 para :P1^O
+	CE:
+	CS:UNPACKPOSSTR2^LU
+		A:Text^Error al formatear la columna de cadena :P1^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Error al descomp :P1 con valor :P2^O
+	CE:
+	CS:UNPACKSEP2^LU
+		A:Text^Error al desempaquetar la columna :P1^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Error al convert valor :P2 para :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Error format valor fecha :P2 para :P1^O
+	CE:
+	CS:UNPACKSEPDAT2^LU
+		A:Text^Error al formatear la columna de fecha :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Error format valor por defect :P2 para :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Error formato valor num\00E9rico :P2 para :P1^O
+	CE:
+	CS:UNPACKSEPNUM2^LU
+		A:Text^Error al formatear la columna num\00E9rica :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Error al leer valores colum por separador columna^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Error al formato valor de cadena :P2 para :P1^O
+	CE:
+	CS:UNPACKSEPSTR2^LU
+		A:Text^Error al formatear la columna de cadena :P1^O
+	CE:
+	CS:UPDERRORCHK^LU
+		A:Text^Error :P1 al ejecutar :P2^O
+	CE:
+	CS:UPDERRORUPD^LU
+		A:Text^Actualiza de :P1 fallida - :P2^O
+	CE:
+	CS:UPDINTFACEOK^LU
+		A:Text^Trabajo migraci\00F3n :P1 concluido^O
+	CE:
+	CS:UPDINTFERR^LU
+		A:Text^:P1 filas fallidos^O
+	CE:
+	CS:UPDINTFINS^LU
+		A:Text^:P1 l\00EDneas insert.^O
+	CE:
+	CS:UPDINTFUPD^LU
+		A:Text^:P1 filas modific.^O
+	CE:
+	CS:VALFOUND^LU
+		A:Text^BD/Valores Cliente encot^O
+	CE:
+	CS:WRNOROWS^LU
+		A:Text^No se proces filas^O
+	CE:
+CE:
+CS:IntfaceDirection^LU
+	A:Prompt^Interf Direcci\00F3n^O
+	CS:1^LU
+		A:Text^File In^O
+	CE:
+	CS:2^LU
+		A:Text^File Out^O
+	CE:
+	CS:3^LU
+		A:Text^Ninguno^O
+	CE:
+	CS:4^LU
+		A:Text^Migraci\00F3n Origen^O
+	CE:
+	CS:5^LU
+		A:Text^ReplicStructure^O
+	CE:
+	CS:6^LU
+		A:Text^Migraci\00F3n a Excel^O
+	CE:
+CE:
+CS:IntfaceDocumentation^LU
+	A:Prompt^Interf Documentaci\00F3n^O
+	CS:INFTXTDETAIL^LU
+		A:Text^No Usado^O
+	CE:
+	CS:INFTXTHEADER^LU
+		A:Text^No Usado^O
+	CE:
+	CS:INFTXTMETHLI^LU
+		A:Text^No Usado^O
+	CE:
+	CS:INTFACE_DOCUMENTATION_REP^LU
+		A:Title^Documentaci\00F3n Migraci\00F3n^O
+		CS:ACTION^LU
+			A:Title^Acci\00F3n^O
+		CE:
+		CS:AMOUNT_FACTOR^LU
+			A:Title^Factor Importe^O
+		CE:
+		CS:ATTR_SEQ^LU
+			A:Title^Sec Atrib^O
+		CE:
+		CS:BLOCK_TYPE^LU
+			A:Title^Bloq Tipo^O
+		CE:
+		CS:CHANGE_DEFAULTS^LU
+			A:Title^Cambiar Predet.^O
+		CE:
+		CS:COLS_USING_LIST^LU
+			A:Title^Columnas Usando Lista Conversi\00F3n:^O
+		CE:
+		CS:COLUMN_EMBRACE^LU
+			A:Title^Ancho Columna^O
+		CE:
+		CS:COLUMN_NAME^LU
+			A:Title^Columna Objetivo^O
+		CE:
+		CS:COLUMN_SEPARATOR^LU
+			A:Title^Separador Columna^O
+		CE:
+		CS:CONVERT_ATTR^LU
+			A:Title^Convertir Attr^O
+		CE:
+		CS:CONV_LIST_DESCR^LU
+			A:Title^Descop Lista Conv^O
+		CE:
+		CS:CONV_LIST_ID^LU
+			A:Title^Lista Conv^O
+		CE:
+		CS:DATA_TYPE^LU
+			A:Title^Tipo Datos^O
+		CE:
+		CS:DATE_FORMAT^LU
+			A:Title^Formato Fecha^O
+		CE:
+		CS:DECIMAL_LENGTH^LU
+			A:Title^Long Decimal^O
+		CE:
+		CS:DECIMAL_POINT^LU
+			A:Title^Punto decimal^O
+		CE:
+		CS:DEFAULT_VALUE^LU
+			A:Title^Valor Predet.^O
+		CE:
+		CS:DEFAULT_WHERE^LU
+			A:Title^Lugar Predet.^O
+		CE:
+		CS:DESCR_COLUMN_NAME^LU
+			A:Title^Descripci\00F3n Columna^O
+		CE:
+		CS:DIRECTION^LU
+			A:Title^Direcci\00F3n^O
+		CE:
+		CS:DIRECTION_DB^LU
+			A:Title^Direcci\00F3n BD^O
+		CE:
+		CS:EXECUTED_BY^LU
+			A:Title^Ejecutado por^O
+		CE:
+		CS:EXECUTE_SEQ^LU
+			A:Title^Ejecutar Sec.^O
+		CE:
+		CS:FILE_LOCATION^LU
+			A:Title^Ubic de Arch^O
+		CE:
+		CS:FILE_LOCATION_DB^LU
+			A:Title^Ubic de Arch BD^O
+		CE:
+		CS:FLAGS^LU
+			A:Title^Indicadores^O
+		CE:
+		CS:GROUP_DESCRIPTION^LU
+			A:Title^Descripci\00F3n Grupo^O
+		CE:
+		CS:GROUP_ID^LU
+			A:Query^C\00F3d Grupo:^O
+			A:Title^C\00F3d Grupo^O
+		CE:
+		CS:INFO_TEXT_DETAIL^LU
+			A:Title^Info.:^O
+		CE:
+		CS:INFO_TEXT_HEADER^LU
+			A:Title^Info.:^O
+		CE:
+		CS:INFO_TEXT_METH_LIST^LU
+			A:Title^Info.:^O
+		CE:
+		CS:INTFACE_DESCR^LU
+			A:Title^Descripci\00F3n Migraci\00F3n^O
+		CE:
+		CS:INTFACE_FILE^LU
+			A:Title^Archivo^O
+		CE:
+		CS:INTFACE_IN^LU
+			A:Query^C\00F3d Trabj Migraci\00F3n^O
+		CE:
+		CS:INTFACE_NAME^LU
+			A:Title^C\00F3d Trabj Migraci\00F3n^O
+		CE:
+		CS:INTFACE_PATH^LU
+			A:Title^Ruta^O
+		CE:
+		CS:IntfaceDoc.rdl^LU
+			A:Title^Documento de migraci\00F3n^O
+		CE:
+		CS:LAST_EXECUTED^LU
+			A:Title^\00DAltima Ejecutada^O
+		CE:
+		CS:LAST_INFO^LU
+			A:Title^\00DAltima Info^O
+		CE:
+		CS:LENGTH^LU
+			A:Title^Longitud^O
+		CE:
+		CS:MET_COLUMN_NAME^LU
+			A:Title^Regla de columna^O
+		CE:
+		CS:MET_COLUMN_VALUE^LU
+			A:Title^Valor Regla^O
+		CE:
+		CS:MET_METHOD_NAME^LU
+			A:Title^M\00E9todo^O
+		CE:
+		CS:MET_VIEW_NAME^LU
+			A:Title^Ver^O
+		CE:
+		CS:MINUS_POS^LU
+			A:Title^Pos Negativa^O
+		CE:
+		CS:NEW_VALUE^LU
+			A:Title^Nuevo Valor^O
+		CE:
+		CS:NOTE_TEXT_DETAIL^LU
+			A:Title^Comentarios^O
+		CE:
+		CS:NOTE_TEXT_GROUP^LU
+			A:Title^Comentarios^O
+		CE:
+		CS:NOTE_TEXT_HEADER^LU
+			A:Title^Comentarios^O
+		CE:
+		CS:NOTE_TEXT_METH_LIST^LU
+			A:Title^Comentarios^O
+		CE:
+		CS:OLD_VALUE^LU
+			A:Title^Valor Antiguo^O
+		CE:
+		CS:ORDER_BY_CLAUSE^LU
+			A:Title^Orden por^O
+		CE:
+		CS:ORDER_BY_COL^LU
+			A:Title^Orden por^O
+		CE:
+		CS:PAD_CHAR_LEFT^LU
+			A:Title^Izq Pad Char^O
+		CE:
+		CS:PAD_CHAR_RIGHT^LU
+			A:Title^Der Pad Char^O
+		CE:
+		CS:POS^LU
+			A:Title^Pos^O
+		CE:
+		CS:PRINT_DETAIL^LU
+			A:Query^Imprimir Mapeo Columna:^O
+		CE:
+		CS:PRINT_DOC_INFO^LU
+			A:Query^Imp Info Documento^O
+		CE:
+		CS:PRINT_HEADER^LU
+			A:Query^Imp Info Cabecera:^O
+		CE:
+		CS:PRINT_MAP_VALUE^LU
+			A:Query^Imprimir Valores Mapeados:^O
+		CE:
+		CS:PRINT_METH_LIST^LU
+			A:Query^Imp Lista M\00E9todos:^O
+		CE:
+		CS:PROCEDURE_NAME^LU
+			A:Title^Nombre del Procedimiento^O
+		CE:
+		CS:REFERENCES^LU
+			A:Title^Referencias^O
+		CE:
+		CS:Report Constants^LU
+			A:txAction^Usado para especificar si el m\00E9todo debe ejecutarse antes o despu\00E9s de procesar los archivos seleccionados de la fuente, o si tendr\00EDan que ejecutarse una a una.^O
+			A:txAmountFactor^El campo se utiliza para dar un denominador para recalcular el valor de la columna origen si se necesita antes de transferir a la columan de la BD IFS.^O
+			A:txChangeDefaults^Este campo especifica d\00F3nde se permite o no modificar el valor del valor por defecto cuando se ejecuta un trabajo de migraci\00F3n.^O
+			A:txColumnName^Columna de BD en IFS a la cual se debe transferir el valor de origen.^O
+			A:txDataType^Tipo de dato de la columna de BD. Valor num\00E9rico-, alfanum- o fecha.^O
+			A:txDecimalLength^El n\00FAmero de decimales a usar cuando se escribe/lee en un archivo.^O
+			A:txDefaultValue^Este campo se utiliza para especificar un valor si no hay valor en la columna origen. Si no se especifica una columna origen, se utilizar\00E1 el valor estandar para todas las filas.^O
+			A:txDescrColumnName^Descrip de la columna de BD^O
+			A:txDetailTitle^Especificar el mapeo de columnas^O
+			A:txExecuteSeq^Escif en que orden se ejucatar\00E1 el m\00E9todo en la lista de m\00E9todos.^O
+			A:txFileInfo^Informaci\00F3n Archivo^O
+			A:txFlags^Flags atrib IFS. Los flags describen difetentes atributos conectados a la columna de la BD IFS. Deben incluir uno o m\00E1s de los siguientes valores:^O
+			A:txFlagsI^I - Se permite insert^O
+			A:txFlagsK^K = Clave (Clave ext)^O
+			A:txFlagsM^M = Obligatorio^O
+			A:txFlagsP^P = Clave Padre^O
+			A:txFlagsU^U = Actuliz Permitida^O
+			A:txHeaderColMapping^Explicaci\00F3n de columnas usad en el Mapeo de Columna^O
+			A:txHeaderMethodList^Definici\00F3n de columnas usadas en Lista M\00E9todo^O
+			A:txHeaderTitle^Especificar las rutinas de migraci\00F3n para^O
+			A:txLastExecutionInfo^Info \00DAltima Ejecuci\00F3n^O
+			A:txLength^Este campo especifica la lingituda m\00E1xima permitida para la columna de la BD IFS. Este campo se utiliza en convinaci\00F3n con el campo Pos para lectura/escritura en archivos con ancho de columnas fijos.^O
+			A:txMapTitle^Especificar mapeo valores de columnas^O
+			A:txMetColumnName^Utilizado para especificar que un m\00E9todo solo debe ejecutarse dependiendo del valor de esta columna fuente.^O
+			A:txMetColumnValue^El m\00E9todo solo se ejecutar\00E1 si el valor de la columna origen es igual a este valor. P. ej. si '%' es definido, el m\00E9todo ser\00E1 ejecutado para todas las filas que tienen un valor en la columna origen.^O
+			A:txMetMethodName^Especificar qu\00E9 m\00E9todo IFS se debe ejecutar.^O
+			A:txMethodListTitle^Utilizad/Creado m\00E9todos/APIs^O
+			A:txPadCharLeft^Este campo se utiliza para especificar un caracter que ser\00E1 quitado o agregado a la izquierda de la columna cuando se lea  desde o se escriba a un archivo (ltrim/lpad).^O
+			A:txPadCharRight^Este campo se utiliza para especificar un caracter que deber\00EDa ser eliminado o agregado a la derecha de una columna al leer desde o escribir a un archivo (rtrim/rpad)^O
+			A:txPos^Este campo se utilica para especificar la ubicaci\00F3n de las columnas en el archivo especificado. Si, por ejemplo, si se utiliza un archivo CSV este campo ser\00E1 1, 2, 3 etc.^O
+			A:txSourceColumn^Columna origen de archivo, tabla o vista para colocar en la col BD IFS^O
+			A:txTitleDocPage^Definiciones / Desc Columna^O
+			A:txViewInfo^Fuente Princ / Inform Objet^O
+		CE:
+		CS:SOURCE_COLUMN^LU
+			A:Title^Columna Origen^O
+		CE:
+		CS:SOURCE_NAME^LU
+			A:Title^Nombre Origen^O
+		CE:
+		CS:SOURCE_OWNER^LU
+			A:Title^Proprietario Origen^O
+		CE:
+		CS:THOUSAND_SEPARATOR^LU
+			A:Title^Separador de Miles^O
+		CE:
+		CS:VIEW_NAME^LU
+			A:Title^Nombre Objetivo^O
+		CE:
+		CS:WHERE_CLAUSE^LU
+			A:Title^Where^O
+		CE:
+	CE:
+	CS:INTFACE_INFO_SERVICES_RPV^LU
+	CE:
+CE:
+CS:IntfaceEvents^LU
+	A:Prompt^Interf Eventos^O
+CE:
+CS:IntfaceExcelConnect^LU
+	A:Prompt^Interf Excel Connect^O
+CE:
+CS:IntfaceExecIntervalType^LU
+	A:Prompt^Interf Tipo Interv Ejec^O
+	CS:1440^LU
+		A:Text^Minutos^O
+	CE:
+	CS:24^LU
+		A:Text^Horas^O
+	CE:
+	CS:86400^LU
+		A:Text^Segundos^O
+	CE:
+CE:
+CS:IntfaceExecution^LU
+	A:Prompt^Interf Ejecuci\00F3n^O
+	CS:INTFACE_EXECUTION^LU
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:IC_TABLE_NAME^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionDetail^LU
+	A:Prompt^Interf Detalle ejecuci\00F3n^O
+	CS:INTFACE_EXECUTION_DETAIL^LU
+		CS:ATTRIBUTE_STRING^LU
+		CE:
+		CS:DATE_EXECUTED^LU
+		CE:
+		CS:ERROR_MESSAGE^LU
+		CE:
+		CS:EXECUTED_BY^LU
+		CE:
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:FILE_STRING^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+		CS:LINE_NO^LU
+		CE:
+		CS:STATUS^LU
+		CE:
+		CS:STATUS_DB^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionUtil^LU
+	CS:BLANKCOLUMNS^LU
+		A:Text^La columna de origen o el valor predeterminado deben tener un valor^O
+	CE:
+	CS:CHKCOUNT^LU
+		A:Text^:P1 filas chequeadas^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Filas validadas para Regla COMMITSEQ :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^No se puede iniciar trabajo. Trabajo conectado :P1 tiene errores.^O
+	CE:
+	CS:CREIND^LU
+		A:Text^Indice :P1 creado en columna :P2^O
+	CE:
+	CS:DUPEXIST^LU
+		A:Text^Existen columnas de origen duplicadas. Resuelva los duplicados antes de la ejecuci\00F3n.^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^M\00E9todo no. :P1 - Valor para C\00F3d Trab no puede ser igual a trab princip^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Ejecutado sin errores^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^EXECUTING METHOD NO. :P1:^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^:P1 transacciones incompletas por un COMMIT o ROLLBACK en la llamada a un m\00E9todo^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Selecci\00F3n incompleta no ejecutada - :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Compr. resultados. Transacc.parcialm. ejecut. posibles^O
+	CE:
+	CS:INVALIDLENGTH^LU
+		A:Text^La columna de origen no debe superar los treinta caracteres^O
+	CE:
+	CS:JOBRUNERROR^LU
+		A:Text^Error al ejecutar el trabajo :P1^O
+	CE:
+	CS:LNGTHINVAL^LU
+		A:Text^Existen columnas de origen que superan los 30 caracteres. Resuelva la longitud de las columnas de origen antes de la ejecuci\00F3n.^O
+	CE:
+	CS:LOADERR^LU
+		A:Text^Error al leer inf trab migrac :P1^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 con opci\00F3n CHECK^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, Errores : :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Nuevas Filas : :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Filas procesadas : :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Filas actualizadas: :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^:P1 filas por minuto de media^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 filas ejecutadas^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^:P1 filas selecc.^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 filas fallidos^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Usado :P1 horas y :P2 minutos^O
+	CE:
+	CS:NODET^LU
+		A:Text^No se encontraron detall para :P1^O
+	CE:
+	CS:NONAME^LU
+		A:Text^Valor para C\00F3d Trab perdido en atrib-cadena para m\00E9todo no :P1^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^OBJID no en select, pero Regla ADDOBJID est\00E1 activa^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Reinicio imposible - :P1 no tiene rowid^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^No se especif select^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1 tiene :P2 l\00EDneas de error y no se puede iniciar^O
+	CE:
+	CS:NULLCOLS^LU
+		A:Text^Existen registros en los que faltan tanto la columna de origen como el valor predeterminado. Resu\00E9lvalo antes de continuar.^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Error al seleccionar :P1 - :P2^O
+	CE:
+	CS:SOURCEDUPLIC^LU
+		A:Text^La columna de origen debe ser \00FAnica.^O
+	CE:
+	CS:STATINSERT^LU
+		A:Text^Insertado^O
+	CE:
+	CS:STATNOOP^LU
+		A:Text^Sin operaci\00F3n^O
+	CE:
+	CS:STATNOTEXT^LU
+		A:Text^El objeto no existe^O
+	CE:
+	CS:STATOK^LU
+		A:Text^Validaci\00F3n OK^O
+	CE:
+	CS:STATPROC^LU
+		A:Text^Procesado^O
+	CE:
+	CS:STATUPDATE^LU
+		A:Text^Actualizado^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Hora inicio - :P1 :P2^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^Se ha superado la longitud especificada :P2 de la columna :P1 por el valor :P3.^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Error al descomp :P1 con valor :P2^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Error al convert valor :P2 para :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Error format valor fecha :P2 para :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Error format valor por defect :P2 para :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Error formato valor num\00E9rico :P2 para :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Error al leer valores colum por separador columna^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Error al formato valor de cadena :P2 para :P1^O
+	CE:
+CE:
+CS:IntfaceFileLocation^LU
+	A:Prompt^Interfaz Ubicaci\00F3n Archivo^O
+	CS:1^LU
+		A:Text^OnServer^O
+	CE:
+	CS:2^LU
+		A:Text^OnCliente^O
+	CE:
+	CS:3^LU
+		A:Text^NoFile^O
+	CE:
+CE:
+CS:IntfaceFormatChar^LU
+	A:Prompt^Interf Formato Caract^O
+	CS:124^LU
+		A:Text^<pipe>^O
+	CE:
+	CS:13^LU
+		A:Text^<retorno carro>^O
+	CE:
+	CS:164^LU
+		A:Text^<se\00F1al divisa>^O
+	CE:
+	CS:32^LU
+		A:Text^<espacio>^O
+	CE:
+	CS:34^LU
+		A:Text^<double quotation>^O
+	CE:
+	CS:35^LU
+		A:Text^<hash>^O
+	CE:
+	CS:39^LU
+		A:Text^<single quotation>^O
+	CE:
+	CS:42^LU
+		A:Text^<asterisco>^O
+	CE:
+	CS:44^LU
+		A:Text^<coma>^O
+	CE:
+	CS:46^LU
+		A:Text^<punto>^O
+	CE:
+	CS:48^LU
+		A:Text^<cero>^O
+	CE:
+	CS:59^LU
+		A:Text^<punto y coma>^O
+	CE:
+	CS:9^LU
+		A:Text^<tab>^O
+	CE:
+CE:
+CS:IntfaceGroup^LU
+	A:Prompt^Interf Grupo^O
+	CS:INTFACE_GROUP^LU
+	CE:
+CE:
+CS:IntfaceHeader^LU
+	A:Prompt^Interf Cabecera^O
+	CS:BATCHJOBCOMP^LU
+		A:Text^Ejecuci\00F3n del trabajo de migraci\00F3n :P1 completada.^O
+	CE:
+	CS:BATCHJOBERROR^LU
+		A:Text^La ejecuci\00F3n del trabajo de migraci\00F3n :P1 ha finalizado con errores. Consulte la ventana Hist\00F3rico de trabajos de migraci\00F3n para obtener m\00E1s informaci\00F3n.^O
+	CE:
+	CS:BCKFILE^LU
+		A:Text^Nombre fichero backup :P1^O
+	CE:
+	CS:BCKPATH^LU
+		A:Text^Ruta fich. backup :P1^O
+	CE:
+	CS:COPYERR^LU
+		A:Text^Error al crear :P1 - :P2^O
+	CE:
+	CS:COPYOK^LU
+		A:Text^Trabj Migraci\00F3n :P1 creado^O
+	CE:
+	CS:DELFILE^LU
+		A:Text^Se ha eliminado el archivo :P1^O
+	CE:
+	CS:DEPREC^LU
+		A:Text^La funci\00F3n de exportaci\00F3n de informes r\00E1pidos de migraci\00F3n de datos se ha dejado de usar. En su lugar, use la funci\00F3n de importaci\00F3n y exportaci\00F3n de Informes r\00E1pidos.^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Donde Predet  no se usa para direcc = :P1^O
+	CE:
+	CS:EXECNO^LU
+		A:Text^Ejecuci\00F3n n\00BA :P1^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Error al export :P1 - :P2^O
+	CE:
+	CS:EXPTXT1^LU
+		A:Text^Trabajos de migraci\00F3n exportados:^O
+	CE:
+	CS:EXPTXT2^LU
+		A:Text^Grupos de migraci\00F3n exportados:^O
+	CE:
+	CS:EXPTXT3^LU
+		A:Text^Listas de conversi\00F3n exportadas:^O
+	CE:
+	CS:EXPTXT4^LU
+		A:Text^Disparadores exportados:^O
+	CE:
+	CS:EXPTXT5^LU
+		A:Text^Paquete exportados:^O
+	CE:
+	CS:EXPTXT6^LU
+		A:Text^Arch creados:^O
+	CE:
+	CS:EXPTXT7^LU
+		A:Text^Listas de conversi\00F3n NO exportadas:^O
+	CE:
+	CS:IMPERR^LU
+		A:Text^Error al import :P1 - :P2^O
+	CE:
+	CS:IMPTXT1^LU
+		A:Text^Trabaj new migraci\00F3n import :^O
+	CE:
+	CS:IMPTXT10^LU
+		A:Text^Trabajos de duplicaci\00F3n que deben ser reiniciados.^O
+	CE:
+	CS:IMPTXT2^LU
+		A:Text^Nuevos grupos import :^O
+	CE:
+	CS:IMPTXT3^LU
+		A:Text^Lista convers importadas :^O
+	CE:
+	CS:IMPTXT4^LU
+		A:Text^Trabaj Migraci\00F3n NO insertada :^O
+	CE:
+	CS:IMPTXT5^LU
+		A:Text^Grupos NO insertados:^O
+	CE:
+	CS:IMPTXT6^LU
+		A:Text^Lista Convers NOT insertada:^O
+	CE:
+	CS:IMPTXT7^LU
+		A:Text^Trabj migrac importados y reemplaz :^O
+	CE:
+	CS:IMPTXT8^LU
+		A:Text^Grupos importados y reempla :^O
+	CE:
+	CS:IMPTXT9^LU
+		A:Text^Listas conv Importac y reemplaz :^O
+	CE:
+	CS:INTFACE_ALLOWED_JOBS^LU
+		CS:DESCRIPTION^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+	CS:INTFACE_CHARACTERSET_LOV^LU
+	CE:
+	CS:INTFACE_HEADER^LU
+	CE:
+	CS:INTFACE_REPL_EXPORT_INFO^LU
+	CE:
+	CS:INTFACE_TABLE_NAME_LOV^LU
+	CE:
+	CS:JOBBATERR^LU
+		A:Text^Llamada dif fall\00F3 para \00D1:P1 - :P2^O
+	CE:
+	CS:LISTERR^LU
+		A:Text^Lista Valores no debe inic con punto y coma^O
+	CE:
+	CS:LONGNAME^LU
+		A:Text^C\00F3d Trab :P1 muy largo. No debe superar 24 caract^O
+	CE:
+	CS:MOVPATH^LU
+		A:Text^Ruta de archivo movido: :P1^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Usado :P1 horas y :P2 minutos^O
+	CE:
+	CS:NAMEERR^LU
+		A:Text^Cuando el tipo = :P1, el nombre no puede superar los caracteres :P2 (:P3)^O
+	CE:
+	CS:NOCOLUMN^LU
+		A:Text^No existen colum del arch en el Trabj^O
+	CE:
+	CS:NOFILE_ERROR^LU
+		A:Text^No se puede usar la ubicaci\00F3n de archivo ":P1" para trabajos de migraci\00F3n con la direcci\00F3n establecida como ":P2" o ":P3".^O
+	CE:
+	CS:NOMAN^LU
+		A:Text^Cuando se inicia en modo Manual, debe especificar una cl\00E1usula WHERE para la vista principal en la estructura.^O
+	CE:
+	CS:NOPRIV^LU
+		A:Text^Usted (:P1) no tiene privilegios para crear nuevos trabajos de migraci\00F3n de datos^O
+	CE:
+	CS:NOREPL^LU
+		A:Text^No puedo iniciar :P1 en batch. Triggers no est\00E1 habilitados^O
+	CE:
+	CS:NOTRIG^LU
+		A:Text^Triggers generados. No puede cambiar el modo a :P1^O
+	CE:
+	CS:NOWHERE^LU
+		A:Text^Cl\00E1usula Where debe definirse para trab-replicaci\00F3n con modo=Manual^O
+	CE:
+	CS:QUICKERR^LU
+		A:Text^Nombre Proced :P1 solo puede usarse con la vista QUICK_REPORT^O
+	CE:
+	CS:RANFILE^LU
+		A:Text^Nombre de archivo renombrado: :P1^O
+	CE:
+	CS:RENPATH^LU
+		A:Text^Ruta de archivo renombrado: :P1^O
+	CE:
+	CS:SELECTOK^LU
+		A:Text^Sentencia select OK, analizada y ejecutada para un fila^O
+	CE:
+	CS:SELLENGTH^LU
+		A:Text^Long de sentencia: :P1 caracteres^O
+	CE:
+	CS:SERVOK^LU
+		A:Text^Proceso de servidor iniciado para :P1^O
+	CE:
+	CS:STARTBATERR^LU
+		A:Text^Imposible iniciar :P1 - :P2^O
+	CE:
+	CS:STARTJOBERR^LU
+		A:Text^Imposible iniciar :P1 - :P2^O
+	CE:
+	CS:STARTOK^LU
+		A:Text^Trabj Migraci\00F3n :P1 iniciado como tar secund^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Hora de fin: :P1 :P2^O
+	CE:
+	CS:TRIGDEL^LU
+		A:Text^Debe borrar los triggers antes de poder borrar este trabajo^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^Desde valor :P1 no puede ser parte de una lista de valores^O
+	CE:
+	CS:WHENERR^LU
+		A:Text^Cuando-sentencia para desencadenaro se debe mover desde columna :P1 a :P2^O
+	CE:
+	CS:WILDERR^LU
+		A:Text^Solo se pueden utilizar comdines en el nombre del arch cuando se exp datos al serv de archivos^O
+	CE:
+	CS:WRONGCOL^LU
+		A:Text^Columna :P1 no existe en trabajo :P2^O
+	CE:
+	CS:WRONGDIR^LU
+		A:Text^Regla SYNCDETAILS solo puede usarse cuando se leen archivos^O
+	CE:
+CE:
+CS:IntfaceJobDetail^LU
+	A:Prompt^Interf Det Trabaj^O
+	CS:CLIENTCLEAN^LU
+		A:Text^Regla CLEANUP con valor BEFOER no est\00E1 permitida para arch cliente^O
+	CE:
+	CS:CLOSEFILERR^LU
+		A:Text^Error al cerrar archivo :P1^O
+	CE:
+	CS:CLOSEJOBERR^LU
+		A:Text^Error al cerrar trabaj :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Trabajo conectado :P1 tiene l\00EDneas con error^O
+	CE:
+	CS:CONNJOBERR^LU
+		A:Text^Impos. com. trab.:P1^O
+	CE:
+	CS:EMPTYFILE^LU
+		A:Text^Archivo :P1 en :P2 est\00E1 vac\00EDo, el trabajo no ha comenzado^O
+	CE:
+	CS:HISTERR^LU
+		A:Text^Error al hacer histor :P1^O
+	CE:
+	CS:INITJOBERR^LU
+		A:Text^Fallo al inicializar trab :P1^O
+	CE:
+	CS:INTFACE_JOB_DETAIL^LU
+	CE:
+	CS:LOADFILERR^LU
+		A:Text^Erro al leer arch :P1 en :P2^O
+	CE:
+	CS:NOFILE^LU
+		A:Text^Archivo :P1 no existe en :P2, el trabajo no ha comenzado^O
+	CE:
+	CS:PREPERR^LU
+		A:Text^Error al prepar detalles :P1^O
+	CE:
+	CS:SERVFILEERR^LU
+		A:Text^Error en Archivo - :P1^O
+	CE:
+	CS:UNPACKEND^LU
+		A:Text^Descomp completa para Trabj :P1^O
+	CE:
+	CS:UNPACKERR^LU
+		A:Text^Error al descomprimir ==> :P1^O
+	CE:
+CE:
+CS:IntfaceJobHistDetail^LU
+	A:Prompt^Interf Det Hist Trabaj^O
+	CS:INTFACE_JOB_HIST_DETAIL^LU
+	CE:
+CE:
+CS:IntfaceJobHistHead^LU
+	A:Prompt^Interf Cabec Hist Trab^O
+	CS:INTFACE_JOB_HIST_HEAD^LU
+	CE:
+CE:
+CS:IntfaceJobStatus^LU
+	A:Prompt^Interf Estad Trabj^O
+	CS:1^LU
+		A:Text^No hay arch^O
+	CE:
+	CS:2^LU
+		A:Text^Cargado^O
+	CE:
+	CS:3^LU
+		A:Text^Error l\00EDnea^O
+	CE:
+	CS:4^LU
+		A:Text^L\00EDnea Ok^O
+	CE:
+	CS:5^LU
+		A:Text^Trabj OK^O
+	CE:
+	CS:6^LU
+		A:Text^En Ejecuci\00F3n^O
+	CE:
+	CS:7^LU
+		A:Text^Fallos Trabaj^O
+	CE:
+CE:
+CS:IntfaceMethodAction^LU
+	A:Prompt^Interf M\00E9todo Acci\00F3n^O
+	CS:1^LU
+		A:Text^BeforeLoop^O
+	CE:
+	CS:2^LU
+		A:Text^InLoop^O
+	CE:
+	CS:3^LU
+		A:Text^AfterLoop^O
+	CE:
+	CS:4^LU
+		A:Text^NoExecution^O
+	CE:
+CE:
+CS:IntfaceMethodList^LU
+	A:Prompt^Interf M\00E9todo List^O
+	CS:CHKCOUNT^LU
+		A:Text^:P1 filas chequeadas^O
+	CE:
+	CS:CLREMAP^LU
+		A:Text^movido a  BD-columna^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Filas validadas para Regla COMMITSEQ :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^No se puede iniciar trabajo. Trabajo conectado :P1 tiene errores.^O
+	CE:
+	CS:CREATEERROR^LU
+		A:Text^Error al crear tabla :P1 - :P2^O
+	CE:
+	CS:CREATEVIEWERR^LU
+		A:Text^Error al crear vista :P1 - :P2^O
+	CE:
+	CS:CREIND^LU
+		A:Text^Indice :P1 creado en columna :P2^O
+	CE:
+	CS:CRETAB^LU
+		A:Text^Tabla creada :P1 (^O
+	CE:
+	CS:DATEVAL^LU
+		A:Text^Valor predet fecha sist de PREPARE^O
+	CE:
+	CS:DBREMAP^LU
+		A:Text^Remapeado desde valor-cliente^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^M\00E9todo no. :P1 - Valor para C\00F3d Trab no puede ser igual a trab princip^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Ejecutado sin errores^O
+	CE:
+	CS:GRANTERROR^LU
+		A:Text^Error al conceder la vista :P1 al usuario del sistema de IFS (IFSSYS) - :P2^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^EXECUTING METHOD NO. :P1:^O
+	CE:
+	CS:ILLARGTYPE^LU
+		A:Text^Argumento :P1 tiene tipo ilegal. Solamente se permite tipo de dato DATE VARCHAR2 NUMBER^O
+	CE:
+	CS:ILLMETH^LU
+		A:Text^M\00E9todo :P1 es una funci\00F3n. Solo se permiten procedem.^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^:P1 transacciones incompletas por un COMMIT o ROLLBACK en la llamada a un m\00E9todo^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Select incompleta no ejecutada  - :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Compr. resultados. Transacc.parcialm. ejecut. posibles^O
+	CE:
+	CS:INDEXERROR^LU
+		A:Text^Error al crear \00EDndice :P1 - :P2^O
+	CE:
+	CS:INSTAB^LU
+		A:Text^Insertar en tabla :P1 con filas :P2^O
+	CE:
+	CS:INTFACE_EXCEL_INPUT_DEFAULT^LU
+	CE:
+	CS:INTFACE_EXCEL_INPUT_FORMAT^LU
+	CE:
+	CS:INTFACE_METHOD_LIST^LU
+	CE:
+	CS:KEEPALL^LU
+		A:Text^Regla KEEPALL no se puede usar cuando otro trabajo est\00E1 conectado a :P1 (:P2)^O
+	CE:
+	CS:KEEPERR^LU
+		A:Text^Regla KEEPERR solo puede usarse cuando otro trabajo est\00E9 conectado a :P1^O
+	CE:
+	CS:MAKEOTHER^LU
+		A:Text^Error al hacer atributo y referencias :P1^O
+	CE:
+	CS:MANDDEF^LU
+		A:Text^<MISSING MANDATORY DEFAULT_VALUE>^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 con opci\00F3n CHECK^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, Errores : :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Nuevas Filas : :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Filas procesadas : :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Filas actualizadas: :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^:P1 filas por minuto de media^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 filas ejecutadas^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^:P1 filas selecc.^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 filas fallidos^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Usado :P1 horas y :P2 minutos^O
+	CE:
+	CS:NONAME^LU
+		A:Text^Valor para C\00F3d Trab perdido en atrib-cadena para m\00E9todo no :P1^O
+	CE:
+	CS:NONBASEVIEW^LU
+		A:Text^Fallo al identificar m\00E9todo est\00E1nd para vista ":P1" al generar la Lista M\00E9todo. El [Nomb Vista] debe basarse en la vista de una IFS Logical Unit.^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^OBJID no en select, pero Regla ADDOBJID est\00E1 activa^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Reinicio imposible - :P1 no tiene rowid^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^No se especif select^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1 tiene :P2 l\00EDneas de error y no se puede iniciar^O
+	CE:
+	CS:NOTEDEF^LU
+		A:Text^Por favor decida el uso de valors por defecto. OPCIONAL pueden quitarse^O
+	CE:
+	CS:NOTINLOOP^LU
+		A:Text^Procedimiento :P1 no puede iniciarse dentro del loop^O
+	CE:
+	CS:NOTOUTLOOP^LU
+		A:Text^Procedimiento :P1 no puede iniciarse dentro del loop^O
+	CE:
+	CS:NOVIEW^LU
+		A:Text^Especif view_name solo dentro del loop.^O
+	CE:
+	CS:OPTDEF^LU
+		A:Text^<MISSING OPTIONAL DEFAULT_VALUE>^O
+	CE:
+	CS:PREPVAL^LU
+		A:Text^Valor predet :p1 desde PREPARE^O
+	CE:
+	CS:RENAMTAB^LU
+		A:Text^Tabla renomb :P1 con :P2 registros a :P3^O
+	CE:
+	CS:RESTART^LU
+		A:Text^Reiniciar insertar en tabla :P1^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Error al seleccionar :P1 - :P2^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^Nombre Columna :P1 est\00E1 definida ambiguamente^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Hora inicio - :P1^O
+	CE:
+CE:
+CS:IntfaceMethodListAttrib^LU
+	A:Prompt^Intef M\00E9todo List Attrib^O
+	CS:INTFACE_METHOD_LIST_ATTRIB^LU
+	CE:
+	CS:WRONGSEQ1^LU
+		A:Text^EXECUTE_SEQ :P1 no existe^O
+	CE:
+	CS:WRONGSEQ2^LU
+		A:Text^Referencia EXECUTE_SEQ debe ser anterior a esta^O
+	CE:
+CE:
+CS:IntfaceMode^LU
+	A:Prompt^Interf Modo^O
+	CS:1^LU
+		A:Text^Manual^O
+	CE:
+	CS:2^LU
+		A:Text^Autom\00E1tico^O
+	CE:
+	CS:3^LU
+		A:Text^Lote^O
+	CE:
+CE:
+CS:IntfacePrUser^LU
+	A:Prompt^Interf Pr Usuar^O
+	CS:INTFACE_PR_USER^LU
+	CE:
+CE:
+CS:IntfacePrefixOption^LU
+	A:Prompt^Interf Opc Prefijo^O
+	CS:1^LU
+		A:Text^NombreVista^O
+	CE:
+	CS:2^LU
+		A:Text^NombreVistaUnico^O
+	CE:
+	CS:3^LU
+		A:Text^NoPrefix^O
+	CE:
+CE:
+CS:IntfacePrivilege^LU
+	A:Prompt^Interf Privilegio^O
+	CS:1^LU
+		A:Text^NoUpdateAllowed^O
+	CE:
+	CS:2^LU
+		A:Text^PermiteActualizar^O
+	CE:
+CE:
+CS:IntfaceProcedures^LU
+	A:Prompt^Interf Procedimient^O
+	CS:CHECK_BY_METHOD_NEW^LU
+		A:Text^Verificar filas del archivo de acuerdo a Business Logic^O
+	CE:
+	CS:CREATE_OUTPUT_FILE^LU
+		A:Text^Escribir datos a archivo^O
+	CE:
+	CS:CREATE_TABLE_FROM_FI^LU
+		A:Text^Crear tabla desde arch^O
+	CE:
+	CS:EXCEL_MIGRATION^LU
+		A:Text^Migraci\00F3n de datos de archivo Excel^O
+	CE:
+	CS:FNDMIG_EXPORT^LU
+		A:Text^Exportar defi Migraci\00F3n Datos a archivo^O
+	CE:
+	CS:FNDMIG_IMPORT^LU
+		A:Text^Importar definici\00F3n de Migraci\00F3n de Datos desde fichero^O
+	CE:
+	CS:INSERT_BY_METHOD_NEW^LU
+		A:Text^Insert filas desde arch^O
+	CE:
+	CS:INSERT_OR_UPDATE^LU
+		A:Text^Insert o Actualiz filas desde arch^O
+	CE:
+	CS:INTFACE_PROCEDURES^LU
+	CE:
+	CS:INTFACE_PROC_LOV_EXCL_REPL^LU
+	CE:
+	CS:INTFACE_PROC_LOV_INCL_REPL^LU
+	CE:
+	CS:MIGRATE_SOURCE_DATA^LU
+		A:Text^Migraci\00F3n datos desde tabla/vista^O
+	CE:
+	CS:REPLICATION^LU
+		A:Text^Duplicaci\00F3n^O
+	CE:
+	CS:REPL_DATA_OUT^LU
+		A:Text^Replicar Estuct de Datos^O
+	CE:
+CE:
+CS:IntfaceQuickReportUtil^LU
+	A:Prompt^Interf Util Report R\00E1pido^O
+	CS:DEPREC^LU
+		A:Text^Esta funci\00F3n se ha dejado de usar. En su lugar, use la funci\00F3n de importaci\00F3n y exportaci\00F3n de Informes r\00E1pidos.^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Error al export :P1 - :P2^O
+	CE:
+	CS:EXPOK^LU
+		A:Text^Informes :P1 exportados^O
+	CE:
+CE:
+CS:IntfaceReplElemType^LU
+	A:Prompt^Interf Repl Tipo Elem^O
+	CS:AGGREGATE^LU
+		A:Text^Agregar^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Matriz^O
+	CE:
+CE:
+CS:IntfaceReplMaintUtil^LU
+	A:Prompt^Interf Repl Util Mant^O
+	CS:EXECERR^LU
+		A:Text^Ocurri\00F3 el error - :P1^O
+	CE:
+	CS:INTFACE_REPL_DB_OBJECTS^LU
+	CE:
+	CS:INTFACE_SERVER_PROCESSES^LU
+	CE:
+	CS:LOGOK^LU
+		A:Text^Log tabla con :P1 filas porc exitosam para :P2^O
+	CE:
+	CS:NOUPDATE^LU
+		A:Text^No puede actualizar :P1 porque la replic est\00E1 en proceso. Todos los triggers est\00E1n habilit.^O
+	CE:
+	CS:REPLFAIL^LU
+		A:Text^Trab Replic :P1 fallo - :P2^O
+	CE:
+	CS:REPLOK^LU
+		A:Text^Procedimiento :P1 procesado con \00E9xito^O
+	CE:
+CE:
+CS:IntfaceReplMessType^LU
+	A:Prompt^Interf Repl Tipo^O
+	CS:BIZAPI^LU
+		A:Text^BizApi^O
+	CE:
+	CS:TRACE^LU
+		A:Text^MostrarTraza^O
+	CE:
+CE:
+CS:IntfaceReplOutLog^LU
+	A:Prompt^Interf Repl Desconex^O
+	CS:INTFACE_REPL_OUT_LOG^LU
+	CE:
+CE:
+CS:IntfaceReplPackageUtil^LU
+	A:Prompt^Interf Repl Util Paquete^O
+	CS:COMPERR^LU
+		A:Text^Error al compil paquete - :P1^O
+	CE:
+	CS:ERR1PAR^LU
+		A:Text^Filas individuales no debe tener valor en la columna Parent Sequence^O
+	CE:
+	CS:ERR2PAR^LU
+		A:Text^Una fila debe ser padre = sin valor en columna Secuencia Padre^O
+	CE:
+	CS:ERRLONG^LU
+		A:Text^Origen demasiado grande, no se puede escribir a Intface_Job_Detail - :P1^O
+	CE:
+	CS:KEYERR^LU
+		A:Text^Clave Padre :P1 no existe en la estructura ant a :P2^O
+	CE:
+	CS:LONGSRC^LU
+		A:Text^Origen demasiado grande. Exportar archivo desde ventana ExecuteJob y desplegar desde Admin.^O
+	CE:
+	CS:NODATA^LU
+		A:Text^Al menos una fila debe ser marcada con Insertar o Actualizar^O
+	CE:
+	CS:OTHERS^LU
+		A:Text^Error al compil paquete - :P1^O
+	CE:
+CE:
+CS:IntfaceReplRecType^LU
+	A:Prompt^Interf Repl Tipo Grab^O
+	CS:AGGREGATE^LU
+		A:Text^Agregar^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Matriz^O
+	CE:
+CE:
+CS:IntfaceReplStructCols^LU
+	A:Prompt^Interf Repl Estruct Colum^O
+	CS:INTFACE_REPL_STRUCT_COLS^LU
+	CE:
+CE:
+CS:IntfaceReplStructure^LU
+	A:Prompt^Interf Repl Estructura^O
+	CS:ERRSEQ^LU
+		A:Text^Secuencia Padre no puede ser igual a Seq^O
+	CE:
+	CS:INSERR^LU
+		A:Text^Todas las filas del Punto Inicio y ascendentes deben tener la columna OnInsert marcada y definida la columna TriggerTable^O
+	CE:
+	CS:INTFACE_REPL_PARENT_LOV^LU
+	CE:
+	CS:INTFACE_REPL_STRUCTURE^LU
+	CE:
+	CS:INTFACE_REPL_TABLE_LOV^LU
+	CE:
+	CS:MULTIPLESTART^LU
+		A:Text^Solo puede definir un Punto Inicial para un trabj^O
+	CE:
+	CS:NONUNIQUE^LU
+		A:Text^El master :P1 definido no es \00FAnico. Solo un elemento debe tener ParentSeq igual a NULO^O
+	CE:
+	CS:NOSEQ^LU
+		A:Text^No se puede utilizar esta Sec Padre. No l\00EDneas con Sec :P1^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^:P1 = :P2, el valor no puede ser mayor que 99^O
+	CE:
+CE:
+CS:IntfaceReplTriggersUtil^LU
+	A:Prompt^Interf Repl Util Triggers^O
+	CS:ALTERR^LU
+		A:Text^Error al hace Alter de Trigger :P1 - :P2^O
+	CE:
+	CS:COMPERR^LU
+		A:Text^Error en trigger :P1^O
+	CE:
+	CS:DROPERR^LU
+		A:Text^Error al elim trigger :P1 - :P2^O
+	CE:
+	CS:NODEF^LU
+		A:Text^Debe definir un TableName y verif OnInsert o OnUpdate de al menos un element de estruct^O
+	CE:
+CE:
+CS:IntfaceReplicCriteria^LU
+	A:Prompt^Interf Criterio Replic^O
+	CS:1^LU
+		A:Text^Planta^O
+	CE:
+	CS:2^LU
+		A:Text^Compa\00F1\00EDa^O
+	CE:
+CE:
+CS:IntfaceReplicationLog^LU
+	A:Prompt^Interf Replicaci\00F3n Log^O
+	CS:INTFACE_REPLICATION_LOG^LU
+	CE:
+CE:
+CS:IntfaceRuleFlag^LU
+	A:Prompt^Interf Regla Flag^O
+	CS:1^LU
+		A:Text^Activo^O
+	CE:
+	CS:2^LU
+		A:Text^Inactivo^O
+	CE:
+CE:
+CS:IntfaceRuleValue^LU
+	A:Prompt^Interf Valor Regla^O
+	CS:1^LU
+		A:Text^Sin valores^O
+	CE:
+	CS:2^LU
+		A:Text^N\00FAmero Obligatorio^O
+	CE:
+	CS:3^LU
+		A:Text^Cadena Obligatoria^O
+	CE:
+	CS:4^LU
+		A:Text^Fecha Obligatoria^O
+	CE:
+	CS:5^LU
+		A:Text^Opcional^O
+	CE:
+CE:
+CS:IntfaceRules^LU
+	A:Prompt^Interf Reglas^O
+	CS:CHECKRULEERROR^LU
+		A:Text^La regla :P1 no es v\00E1lida para el nombre de procedimiento :P2.^O
+	CE:
+	CS:ERRCONN^LU
+		A:Text^Trabaj :P1 ya est\00E1 conectado a :P2^O
+	CE:
+	CS:ERRCONN2^LU
+		A:Text^El trabajo :P1 debe estar usando el procedimiento CREATE_TABLE_FROM_FILE^O
+	CE:
+	CS:ERRORVAL1^LU
+		A:Text^Valores v\00E1lidos KEEPALL o KEEPERR^O
+	CE:
+	CS:ERRORVAL2^LU
+		A:Text^Valores v\00E1lidos INSERT o UPDATE^O
+	CE:
+	CS:ERRORVAL3^LU
+		A:Text^Valores v\00E1lidos BEFORE o AFTER^O
+	CE:
+	CS:FILERULEERR^LU
+		A:Text^Regla :P1 no puede ser activa mientras :P2 este activa^O
+	CE:
+	CS:INTFACE_RULES^LU
+	CE:
+	CS:INTFACE_RULES_LOV^LU
+	CE:
+	CS:REPLUSR1^LU
+		A:Text^Esta regla solo puede usarse para trabajos de REPLICATION^O
+	CE:
+	CS:REPLUSR2^LU
+		A:Text^Usuario alternativo no definido en los par\00E1metros del sistema de Admin.exe^O
+	CE:
+	CS:REPLUSR3^LU
+		A:Text^El usuario alternativo no puede definirse como Appowner en los par\00E1metros del sistema de Admin.exe^O
+	CE:
+CE:
+CS:IntfaceServerFile^LU
+	A:Prompt^Archivo Intface^O
+	CS:CNTERR^LU
+		A:Text^Ocurri\00F3 un error al contar los registros.^O
+	CE:
+	CS:CREERR^LU
+		A:Text^Se rechazaon registros. Compruebe el archivo de log^O
+	CE:
+	CS:INTFACE_SERVER_DIR_LOV^LU
+		CS:NAME^LU
+		CE:
+		CS:PATH^LU
+		CE:
+	CE:
+	CS:INTFACE_SERVER_FILES_LOV^LU
+		CS:FILE_DATE^LU
+		CE:
+		CS:FILE_NAME^LU
+		CE:
+		CS:FILE_SIZE^LU
+		CE:
+	CE:
+	CS:NOFILE^LU
+		A:Text^Archivo :P1 no existe en :P2^O
+	CE:
+	CS:NOICTAB^LU
+		A:Text^No existe la tabla :P1^O
+	CE:
+	CS:NOINS^LU
+		A:Text^Inserci\00F3n en tabla IC fall\00F3. RMB Unpack file en Ventana Ejecutar Trabajo visualizar\00E1 los errores :P1^O
+	CE:
+	CS:NOSERV^LU
+		A:Text^Ubicaci\00F3n del archivo debe ser :P1, no :P2. Actualizaci\00F3n cabecera del trabajo^O
+	CE:
+	CS:NOTAB^LU
+		A:Text^Tabla externa no creada. :P1^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^Nombre Columna :P1 est\00E1 def ambiguamente^O
+	CE:
+CE:
+CS:IntfaceTableMigrations^LU
+	A:Prompt^Par\00E1metros Migraci\00F3n Tabla^O
+	CS:INTFACE_TABLE_MIGRATIONS^LU
+	CE:
+	CS:NOCOL^LU
+		A:Text^No hay columnas para act^O
+	CE:
+	CS:PROCERR^LU
+		A:Text^Error :P1 ocurri\00F3 en :P2^O
+	CE:
+	CS:TABERR^LU
+		A:Text^Impos. actual. :P2:P!^O
+	CE:
+CE:
+CS:IntfaceUser^LU
+	A:Prompt^Interf Usuario^O
+	CS:INTFACE_USER^LU
+	CE:
+CE:
+CS:IntfaceUtil^LU
+	A:Prompt^Interf Utilidad^O
+	CS:COMPILE_ERRORS^LU
+		A:Text^Errores de compilaci\00F3n para los disparadores :P1^O
+	CE:
+	CS:UPDERR^LU
+		A:Text^No puede actualizar tablas que no sean IC^O
+	CE:
+CE:
+CS:IntfaceViews^LU
+	A:Prompt^Interf Vistas^O
+	CS:INTFACE_SOURCE_COL_LOV^LU
+	CE:
+	CS:INTFACE_VIEWS^LU
+	CE:
+	CS:INTFACE_VIEWS_COL_INFO^LU
+	CE:
+CE:
+CS:IntfaceXsdUtil^LU
+	CS:XSDCRE^LU
+		A:Text^XSD creado como archivo cliente, :P1 l\00EDneas^O
+	CE:
+CE:

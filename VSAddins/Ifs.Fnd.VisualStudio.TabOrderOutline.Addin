@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Extensibility xmlns="http://schemas.microsoft.com/AutomationExtensibility">
+	<HostApplication>
+		<Name>Microsoft Visual Studio</Name>
+		<Version>12.0</Version>
+	</HostApplication>
+	<Addin>
+		<FriendlyName>Tab Order Outline</FriendlyName>
+		<Description>Tab Order Outline</Description>
+		<Assembly>Ifs.Fnd.VisualStudio.TabOrderOutline.dll</Assembly>
+		<FullClassName>Ifs.Fnd.VisualStudio.TabOrderOutline.Connect</FullClassName>
+		<LoadBehavior>1</LoadBehavior>
+		<CommandPreload>1</CommandPreload>
+		<CommandLineSafe>0</CommandLineSafe>
+	</Addin>
+</Extensibility>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LogicalUnits version="1.0" module="MDMGT" type="LU" layer="Cust">
+   <LogicalUnit name="MdmBasicDataHeader">
+      <Text><![CDATA[Mdm Basic Data Header]]></Text>
+      <View ID="MdmBasicDataHeader.MDM_BASIC_DATA_HEADER">
+         <Text><![CDATA[Mdm Basic Data Header]]></Text>
+         <Column ID="MdmBasicDataHeader.MDM_BASIC_DATA_HEADER.TEMPLATE_ID">
+            <Text><![CDATA[Template Id]]></Text>
+         </Column>
+         <Column ID="MdmBasicDataHeader.MDM_BASIC_DATA_HEADER.REVISION">
+            <Text><![CDATA[Revision]]></Text>
+         </Column>
+         <Column ID="MdmBasicDataHeader.MDM_BASIC_DATA_HEADER.DESCRIPTION">
+            <Text><![CDATA[Description]]></Text>
+         </Column>
+         <Column ID="MdmBasicDataHeader.MDM_BASIC_DATA_HEADER.CREATED_BY">
+            <Text><![CDATA[Created By]]></Text>
+         </Column>
+         <Column ID="MdmBasicDataHeader.MDM_BASIC_DATA_HEADER.CREATED_DATE">
+            <Text><![CDATA[Created Date]]></Text>
+         </Column>
+         <Column ID="MdmBasicDataHeader.MDM_BASIC_DATA_HEADER.PROFILE_ID">
+            <Text><![CDATA[Approval Template Id]]></Text>
+         </Column>
+         <Column ID="MdmBasicDataHeader.MDM_BASIC_DATA_HEADER.NOTES">
+            <Text><![CDATA[Notes]]></Text>
+         </Column>
+         <Column ID="MdmBasicDataHeader.MDM_BASIC_DATA_HEADER.STATE">
+            <Text><![CDATA[State]]></Text>
+         </Column>
+      </View>
+      <State ID="New">
+         <Position>1</Position>
+         <Text><![CDATA[New]]></Text>
+      </State>
+      <State ID="Active">
+         <Position>2</Position>
+         <Text><![CDATA[Active]]></Text>
+      </State>
+      <State ID="Obsolete">
+         <Position>3</Position>
+         <Text><![CDATA[Obsolete]]></Text>
+      </State>
+   </LogicalUnit>
+</LogicalUnits>

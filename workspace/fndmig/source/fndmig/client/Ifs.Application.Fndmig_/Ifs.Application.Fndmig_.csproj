@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B79D193D-A47E-4CAC-AB11-2E17BA1A8327}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Ifs.Application.Fndmig_</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Ifs.Application.Fndmig_</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ifs.Fnd.ApplicationForms">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.ApplicationForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Core">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Explorer.Interfaces">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Explorer.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Feature">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Feature.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.CommonControls">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Windows.Forms.CommonControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.Interfaces">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Windows.Forms.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PPJ.Runtime.4">
+      <HintPath>..\..\..\..\..\..\DeployFiles\PPJ.Runtime.4.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PPJ.Runtime.Vis.4">
+      <HintPath>..\..\..\..\..\..\DeployFiles\PPJ.Runtime.Vis.4.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+
+    <Reference Include="System.Data" />
+
+    <Reference Include="System.Drawing" />
+
+    <Reference Include="System.Windows.Forms" />
+
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\cIntfLight.cs" />
+    <Compile Include="Forms\dlgExecPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgExecPlan.Designer.cs">
+      <DependentUpon>dlgExecPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgExecSingel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgExecSingel.Designer.cs">
+      <DependentUpon>dlgExecSingel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceBasic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceBasic.Designer.cs">
+      <DependentUpon>frmIntfaceBasic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceConvList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceConvList.Designer.cs">
+      <DependentUpon>frmIntfaceConvList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceHeader.Designer.cs">
+      <DependentUpon>frmIntfaceHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceJobHistHead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceJobHistHead.Designer.cs">
+      <DependentUpon>frmIntfaceJobHistHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIntfacePrUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIntfacePrUser.Designer.cs">
+      <DependentUpon>frmIntfacePrUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceReplExecPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceReplExecPlan.Designer.cs">
+      <DependentUpon>frmIntfaceReplExecPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceReplStruct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceReplStruct.Designer.cs">
+      <DependentUpon>frmIntfaceReplStruct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIntfaceStart.Designer.cs">
+      <DependentUpon>frmIntfaceStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceDefaultRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceDefaultRules.Designer.cs">
+      <DependentUpon>tbwIntfaceDefaultRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceDetail.Designer.cs">
+      <DependentUpon>tbwIntfaceDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceDetailConversion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceDetailConversion.Designer.cs">
+      <DependentUpon>tbwIntfaceDetailConversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceDetailOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceDetailOverview.Designer.cs">
+      <DependentUpon>tbwIntfaceDetailOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceGroup.Designer.cs">
+      <DependentUpon>tbwIntfaceGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceHeader.Designer.cs">
+      <DependentUpon>tbwIntfaceHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceJobDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceJobDetail.Designer.cs">
+      <DependentUpon>tbwIntfaceJobDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceJobHistHead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceJobHistHead.Designer.cs">
+      <DependentUpon>tbwIntfaceJobHistHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceMethodList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceMethodList.Designer.cs">
+      <DependentUpon>tbwIntfaceMethodList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceMethodListAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceMethodListAttribute.Designer.cs">
+      <DependentUpon>tbwIntfaceMethodListAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceProcedures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceProcedures.Designer.cs">
+      <DependentUpon>tbwIntfaceProcedures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceReplDbObjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceReplDbObjects.Designer.cs">
+      <DependentUpon>tbwIntfaceReplDbObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceReplOutLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceReplOutLog.Designer.cs">
+      <DependentUpon>tbwIntfaceReplOutLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceReplStructCols.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceReplStructCols.Designer.cs">
+      <DependentUpon>tbwIntfaceReplStructCols.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceRules.Designer.cs">
+      <DependentUpon>tbwIntfaceRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceServerProcesses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceServerProcesses.Designer.cs">
+      <DependentUpon>tbwIntfaceServerProcesses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceSourceCols.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceSourceCols.Designer.cs">
+      <DependentUpon>tbwIntfaceSourceCols.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfaceUser.Designer.cs">
+      <DependentUpon>tbwIntfaceUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwIntfStartDefaults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwIntfStartDefaults.Designer.cs">
+      <DependentUpon>tbwIntfStartDefaults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\dlgExecPlan.resx">
+      <DependentUpon>dlgExecPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgExecSingel.resx">
+      <DependentUpon>dlgExecSingel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIntfaceBasic.resx">
+      <DependentUpon>frmIntfaceBasic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIntfaceConvList.resx">
+      <DependentUpon>frmIntfaceConvList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIntfaceHeader.resx">
+      <DependentUpon>frmIntfaceHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIntfaceJobHistHead.resx">
+      <DependentUpon>frmIntfaceJobHistHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIntfacePrUser.resx">
+      <DependentUpon>frmIntfacePrUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIntfaceReplExecPlan.resx">
+      <DependentUpon>frmIntfaceReplExecPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIntfaceReplStruct.resx">
+      <DependentUpon>frmIntfaceReplStruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIntfaceStart.resx">
+      <DependentUpon>frmIntfaceStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceDefaultRules.resx">
+      <DependentUpon>tbwIntfaceDefaultRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceDetail.resx">
+      <DependentUpon>tbwIntfaceDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceDetailConversion.resx">
+      <DependentUpon>tbwIntfaceDetailConversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceDetailOverview.resx">
+      <DependentUpon>tbwIntfaceDetailOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceGroup.resx">
+      <DependentUpon>tbwIntfaceGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceHeader.resx">
+      <DependentUpon>tbwIntfaceHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceJobDetail.resx">
+      <DependentUpon>tbwIntfaceJobDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceJobHistHead.resx">
+      <DependentUpon>tbwIntfaceJobHistHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceMethodList.resx">
+      <DependentUpon>tbwIntfaceMethodList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceMethodListAttribute.resx">
+      <DependentUpon>tbwIntfaceMethodListAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceProcedures.resx">
+      <DependentUpon>tbwIntfaceProcedures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceReplDbObjects.resx">
+      <DependentUpon>tbwIntfaceReplDbObjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceReplOutLog.resx">
+      <DependentUpon>tbwIntfaceReplOutLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceReplStructCols.resx">
+      <DependentUpon>tbwIntfaceReplStructCols.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceRules.resx">
+      <DependentUpon>tbwIntfaceRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceServerProcesses.resx">
+      <DependentUpon>tbwIntfaceServerProcesses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceSourceCols.resx">
+      <DependentUpon>tbwIntfaceSourceCols.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfaceUser.resx">
+      <DependentUpon>tbwIntfaceUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwIntfStartDefaults.resx">
+      <DependentUpon>tbwIntfStartDefaults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>%25DEVELOPROOT%25\Ifs.Fnd.AppDeployer.exe sourcefile=$(TargetPath) destdir=%25DEPLOYTARGET%25</PostBuildEvent>
+  </PropertyGroup>
+</Project>

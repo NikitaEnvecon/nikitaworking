@@ -1,0 +1,5405 @@
+﻿<?xml version="1.0"?>
+<TextTranslation version="1.0" language="ja" module="CBS" type="VC" layer="Core">
+  <Context name="AllTextFields">
+    <Attribute name="IDM_HELP_ABOUT">
+      <Text>ﾊﾞｰｼﾞｮﾝ情報(&amp;A)...</Text>
+    </Attribute>
+    <Attribute name="IDM_WINDOW_ARRANGE">
+      <Text>&amp;整列ｱｲｺﾝ(&amp;A)</Text>
+    </Attribute>
+    <Attribute name="IDM_CBS">
+      <Text>CBSｻｰﾊﾞ(&amp;C)</Text>
+    </Attribute>
+    <Attribute name="IDM_WINDOW_CASCADE">
+      <Text>重ねて表示(&amp;C) Shift+F5</Text>
+    </Attribute>
+    <Attribute name="IDM_FILE_NEW">
+      <Text>ｸﾘｰﾝ(&amp;C)</Text>
+    </Attribute>
+    <Attribute name="IDM_COMPRESS">
+      <Text>圧縮(&amp;C)</Text>
+    </Attribute>
+    <Attribute name="IDM_HELP_CONTENTS">
+      <Text>内容(&amp;C)...</Text>
+    </Attribute>
+    <Attribute name="IDM_WINDOW_TREE">
+      <Text>ﾃﾞｰﾀﾂﾘｰ表示(&amp;D)</Text>
+    </Attribute>
+    <Attribute name="IDM_CBS_GET_SCHEDULE">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽｵｰﾌﾟﾝ(&amp;D)...</Text>
+    </Attribute>
+    <Attribute name="IDM_DELETE">
+      <Text>削除(&amp;D)...</Text>
+    </Attribute>
+    <Attribute name="IDM_EXPORT">
+      <Text>ｴｸｽﾎﾟｰﾄ(&amp;E)...</Text>
+    </Attribute>
+    <Attribute name="IDM_FILE">
+      <Text>ﾌｧｲﾙ(&amp;F)</Text>
+    </Attribute>
+    <Attribute name="IDM_SETTINGS_FONT">
+      <Text>ﾌｫﾝﾄ(&amp;F)...</Text>
+    </Attribute>
+    <Attribute name="IDM_TIME">
+      <Text>ｶﾞﾝﾄﾁｬｰﾄ(&amp;G)</Text>
+    </Attribute>
+    <Attribute name="IDM_WINDOW_SCHEDULE">
+      <Text>ｶﾞﾝﾄﾁｬｰﾄ(&amp;G)</Text>
+    </Attribute>
+    <Attribute name="IDM_HELP">
+      <Text>ﾍﾙﾌﾟ(&amp;H)</Text>
+    </Attribute>
+    <Attribute name="IDM_HIGHGLIGHT">
+      <Text>ﾊｲﾗｲﾄ(&amp;H)</Text>
+    </Attribute>
+    <Attribute name="IDM_JIT">
+      <Text>ｼﾞｬｽﾄｲﾝﾀｲﾑ(&amp;J)</Text>
+    </Attribute>
+    <Attribute name="IDM_CREATE">
+      <Text>新しい子(&amp;N)...</Text>
+    </Attribute>
+    <Attribute name="IDM_PAIRWISE_EXCHANGE">
+      <Text>一対の交換(&amp;P)</Text>
+    </Attribute>
+    <Attribute name="IDM_SETTINGS_PALETTE">
+      <Text>ﾊﾟﾚｯﾄ(&amp;P)...</Text>
+    </Attribute>
+    <Attribute name="IDM_CBS_RELEASE">
+      <Text>ﾘﾘｰｽCBS(&amp;R)</Text>
+    </Attribute>
+    <Attribute name="IDM_PRECEDENCE_DEL">
+      <Text>先行を削除(&amp;R)</Text>
+    </Attribute>
+    <Attribute name="IDM_RESCHEDULE">
+      <Text>再計画する(&amp;R)...</Text>
+    </Attribute>
+    <Attribute name="IDM_SETTINGS_TIME">
+      <Text>ｽｹｼﾞｭｰﾙ設定(&amp;S)...</Text>
+    </Attribute>
+    <Attribute name="IDI_BATCH_JOB_SCHEDULE">
+      <Text>ｽｹｼﾞｭｰﾙ(&amp;S)...</Text>
+    </Attribute>
+    <Attribute name="IDM_SCHEDULE_OLD">
+      <Text>ｽｹｼﾞｭｰﾙ(&amp;S)...</Text>
+    </Attribute>
+    <Attribute name="IDM_SCHEDULE">
+      <Text>作業ｵｰﾀﾞ対話型ｽｹｼﾞｭｰﾙ(&amp;S)...</Text>
+    </Attribute>
+    <Attribute name="IDM_AUTOTIME">
+      <Text>ｽｹｰﾙを設定(&amp;S)</Text>
+    </Attribute>
+    <Attribute name="IDM_SETTINGS">
+      <Text>設定(&amp;S)</Text>
+    </Attribute>
+    <Attribute name="IDM_SETTINGS_PLOT">
+      <Text>設定(&amp;S)...</Text>
+    </Attribute>
+    <Attribute name="IDM_SETTINGS_SYMBOLS">
+      <Text>記号(&amp;S)...</Text>
+    </Attribute>
+    <Attribute name="IDM_WINDOW_SYSTREE">
+      <Text>ｼｽﾃﾑﾂﾘｰﾋﾞｭｰ(&amp;S)</Text>
+    </Attribute>
+    <Attribute name="IDM_TOOLS">
+      <Text>ﾂｰﾙ(&amp;T)</Text>
+    </Attribute>
+    <Attribute name="IDM_UNSCHEDULE">
+      <Text>ｽｹｼﾞｭｰﾙ取消(&amp;U)...</Text>
+    </Attribute>
+    <Attribute name="IDM_WINDOW">
+      <Text>ｳｲﾝﾄﾞｳ(&amp;W)</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_15">
+      <Text>(%d)日;時:分</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_16">
+      <Text>(%d)月/(%d)日;時:分</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_11">
+      <Text>(%d)月/日;時</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_17">
+      <Text>(%d)年/(%d)日;時:分</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_12">
+      <Text>(%d)年/日;時</Text>
+    </Attribute>
+    <Attribute name="IDI_FINISH_TIME_CHANGE">
+      <Text>+/-変更</Text>
+    </Attribute>
+    <Attribute name="IDI_MENU_SEPARATOR">
+      <Text>---</Text>
+    </Attribute>
+    <Attribute name="IDA_LOV">
+      <Text>...</Text>
+    </Attribute>
+    <Attribute name="1">
+      <Text>1</Text>
+    </Attribute>
+    <Attribute name="1109">
+      <Text>1109</Text>
+    </Attribute>
+    <Attribute name="1110">
+      <Text>1110</Text>
+    </Attribute>
+    <Attribute name="61536">
+      <Text>61536</Text>
+    </Attribute>
+    <Attribute name="61728">
+      <Text>61728</Text>
+    </Attribute>
+    <Attribute name="IDI_COMU_2">
+      <Text>:ﾗｲﾝ=</Text>
+    </Attribute>
+    <Attribute name="IDO_RES_CONSTR">
+      <Text>???</Text>
+    </Attribute>
+    <Attribute name="IDA_HELP_ABOUT">
+      <Text>IFSｽｹｼﾞｭｰﾙについて</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_IDA_HELP_ABOUT">
+      <Text>IFSｽｹｼﾞｭｰﾙについて</Text>
+    </Attribute>
+    <Attribute name="IDA_ABOUT">
+      <Text>ｽｹｼﾞｭｰﾙについて</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_ACC_SETUPTIME_AFTERSEQ">
+      <Text>累計設定後</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_ACC_SETUPTIME_BEFORESEQ">
+      <Text>累計設定前</Text>
+    </Attribute>
+    <Attribute name="IDA_ACCEL">
+      <Text>ｱｸｾﾗﾚｰﾀｷｰ</Text>
+    </Attribute>
+    <Attribute name="IDS_ADJUSTQUEST">
+      <Text>現在の進捗値を受け入れますか?</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_LABORCAP_ACCUMULATED">
+      <Text>累積能力</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_LABRESCAP_ACCUMULATED">
+      <Text>累積能力</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_MACHCAP_ACCUMULATED">
+      <Text>累積能力</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_MACHRESCAP_ACCUMULATED">
+      <Text>累積能力</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_TOOLCAP_ACCUMULATED">
+      <Text>累積能力</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_TOOLINSTCAP_ACCUMULATED">
+      <Text>累積能力</Text>
+    </Attribute>
+    <Attribute name="IDO_RESCAPLIST_NODE">
+      <Text>累積能力</Text>
+    </Attribute>
+    <Attribute name="IDI_ACCUMULATECAP_AVAILUTIL_3">
+      <Text>累積作業者能力/稼働率</Text>
+    </Attribute>
+    <Attribute name="IDI_ACCUMULATECAP_AVAILUTIL_4">
+      <Text>累積作業資源能力/稼働率</Text>
+    </Attribute>
+    <Attribute name="IDI_ACCUMULATECAP_AVAILUTIL">
+      <Text>累積資源能力/稼働率ﾉｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_ACCUMULATECAP_AVAILUTIL_5">
+      <Text>累積ﾂｰﾙ能力/稼働率</Text>
+    </Attribute>
+    <Attribute name="IDI_ACCUMULATECAP_AVAILUTIL_6">
+      <Text>累積ﾂｰﾙｲﾝｽﾀﾝｽ能力/稼働率</Text>
+    </Attribute>
+    <Attribute name="IDI_ACCUMULATECAP_AVAILUTIL_1">
+      <Text>累積ﾜｰｸｾﾝﾀ能力/稼働率</Text>
+    </Attribute>
+    <Attribute name="IDI_ACCUMULATECAP_AVAILUTIL_2">
+      <Text>累積ﾜｰｸｾﾝﾀ資源能力/稼働率</Text>
+    </Attribute>
+    <Attribute name="IDI_PROJECT_RELATIONS">
+      <Text>ｱｸﾃｨﾋﾞﾃｨ</Text>
+    </Attribute>
+    <Attribute name="IDO_ACTIVITY_ROOT">
+      <Text>ｱｸﾃｨﾋﾞﾃｨ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_430">
+      <Text>負荷ｱｸﾃｨﾋﾞﾃｨ</Text>
+    </Attribute>
+    <Attribute name="IDO_ACTIVITY">
+      <Text>ｱｸﾃｨﾋﾞﾃｨ</Text>
+    </Attribute>
+    <Attribute name="IDA_ACTIVITY_SO_DISTRIBUTION">
+      <Text>ｱｸﾃｨﾋﾞﾃｨに接続する製造ｵｰﾀﾞ配賦</Text>
+    </Attribute>
+    <Attribute name="IDI_ACTIVITY_DESC">
+      <Text>ｱｸﾃｨﾋﾞﾃｨ名称</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHED_PROJECT_CONNECTED_ALAP_2">
+      <Text>ｱｸﾃｨﾋﾞﾃｨ最早終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHED_PROJECT_CONNECTED_2">
+      <Text>ｱｸﾃｨﾋﾞﾃｨ最早開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_ACTIVITY_ID">
+      <Text>ｱｸﾃｨﾋﾞﾃｨID</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHED_PROJECT_CONNECTED_ALAP_3">
+      <Text>ｱｸﾃｨﾋﾞﾃｨ遅延終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHED_PROJECT_CONNECTED_3">
+      <Text>ｱｸﾃｨﾋﾞﾃｨ遅延開始日</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_459">
+      <Text>ｱｸﾃｨﾋﾞﾃｨ連番</Text>
+    </Attribute>
+    <Attribute name="IDI_TIMEPLOT_AFTER">
+      <Text>ｽｹｼﾞｭｰﾙの追加ﾃｷｽﾄ</Text>
+    </Attribute>
+    <Attribute name="IDM_ADJUST_SCHEDULE">
+      <Text>ｽｹｼﾞｭｰﾙ調整</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_426">
+      <Text>作業実績管理のためｽｹｼﾞｭｰﾙを調整</Text>
+    </Attribute>
+    <Attribute name="IDI_ADJ_SCHEDULE_ENABLED">
+      <Text>作業実績管理のためｽｹｼﾞｭｰﾙを調整</Text>
+    </Attribute>
+    <Attribute name="IDM_ADJUST_SCHED_KEEP_SEQ">
+      <Text>工程順序を保持してｽｹｼﾞｭｰﾙを調整</Text>
+    </Attribute>
+    <Attribute name="IDM_ADJUST_SCHED_PRIORITIZE_REPORTED">
+      <Text>報告済工程を優先してｽｹｼﾞｭｰﾙを調整</Text>
+    </Attribute>
+    <Attribute name="IDS_ADJUST">
+      <Text>実際の進捗にｽｹｼﾞｭｰﾙを調整</Text>
+    </Attribute>
+    <Attribute name="IDI_ADJUSTED_TIME_ENTERED">
+      <Text>調整日付入力</Text>
+    </Attribute>
+    <Attribute name="IDI_ADJUSTED_TIME_START_LATEST">
+      <Text>調整済LPST</Text>
+    </Attribute>
+    <Attribute name="IDI_ADJUSTED_TIME_NEED">
+      <Text>調整済要求日</Text>
+    </Attribute>
+    <Attribute name="IDI_ADJUSTMENT_FACTOR">
+      <Text>調整率</Text>
+    </Attribute>
+    <Attribute name="IDI_ADJUSTMENT_WEIGHT">
+      <Text>調整係数荷重</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_RESULT_2">
+      <Text>後</Text>
+    </Attribute>
+    <Attribute name="IDS_ALERTWND">
+      <Text>ｱﾗｰﾄｳｨﾝﾄﾞｳ</Text>
+    </Attribute>
+    <Attribute name="IDO_SCENARIO_BATCH_BALANCE">
+      <Text>全ﾊﾞｯﾁﾊﾞﾗﾝｽID</Text>
+    </Attribute>
+    <Attribute name="IDS_ALL_FILES">
+      <Text>全ﾌｧｲﾙ</Text>
+    </Attribute>
+    <Attribute name="IDS_ALL_ITEMS">
+      <Text>全ｱｲﾃﾑ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_405">
+      <Text>全てのｵﾌﾞｼﾞｪｸﾄが削除されます。</Text>
+    </Attribute>
+    <Attribute name="IDO_SCENARIO_PROJECTS">
+      <Text>全ﾌﾟﾛｼﾞｪｸﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_LOAD_1">
+      <Text>全製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_SCENARIO_ALLSO">
+      <Text>全製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_NEW_SCENARIO_9">
+      <Text>全ての利用可能なｿｰﾄ方法が既に選択されています。</Text>
+    </Attribute>
+    <Attribute name="IDO_ALLOCATION">
+      <Text>割当</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_ALLOW_OPER_TO">
+      <Text>順序計画ﾛｼﾞｯｸを許可</Text>
+    </Attribute>
+    <Attribute name="IDI_ALPHANUM_1">
+      <Text>英字</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_SORT_TYPE_1">
+      <Text>英字</Text>
+    </Attribute>
+    <Attribute name="IDI_ALPHANUM">
+      <Text>英/数字</Text>
+    </Attribute>
+    <Attribute name="IDS_ALREADY_ADD">
+      <Text>既に追加されています。</Text>
+    </Attribute>
+    <Attribute name="IDS_ALREADY_DEL">
+      <Text>既に削除されています。</Text>
+    </Attribute>
+    <Attribute name="IDS_ALREADY_SCHEDULED">
+      <Text>既にｽｹｼﾞｭｰﾙ済です。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_IFSAP_LOAD_2">
+      <Text>関連する保管場所で次のDLLﾌｧｲﾙが利用可能であり、必要なｾｷｭﾘﾃｨ設定が設定されていることも確認してください。</Text>
+    </Attribute>
+    <Attribute name="IDI_ALWAYS_FINITE">
+      <Text>常に有限</Text>
+    </Attribute>
+    <Attribute name="IDS_ANCHORLEFT_COMPRESSRIGHT">
+      <Text>左に固定、右から圧縮</Text>
+    </Attribute>
+    <Attribute name="IDS_ANCHORLEFT_STRETCHRIGHT">
+      <Text>左に固定、右に伸長</Text>
+    </Attribute>
+    <Attribute name="IDS_ANCHORRIGHT_COMPRESSLEFT">
+      <Text>右に固定、左から圧縮</Text>
+    </Attribute>
+    <Attribute name="IDS_ANCHORRIGHT_STRETCHLEFT">
+      <Text>右に固定、左に伸長</Text>
+    </Attribute>
+    <Attribute name="IDA_APPL">
+      <Text>ｱﾌﾟﾘｹｰｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDA_ARRANGE">
+      <Text>整列ｱｲｺﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_MODE_2">
+      <Text>最遅(Alap)</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_MODE_3">
+      <Text>圧縮最遅(Alap)</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_MODE_1">
+      <Text>最早(Asap)</Text>
+    </Attribute>
+    <Attribute name="IDS_LOAD_DIALOG_OK_BATCH_2">
+      <Text>その結果、ﾊﾞｯﾁﾛｰﾄﾞの次回実行では 全製造ｵｰﾀﾞ がﾛｰﾄﾞｵﾌﾟｼｮﾝとして使用されます。</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_ASCENDING_DESCENDING_1">
+      <Text>昇順</Text>
+    </Attribute>
+    <Attribute name="IDI_SORT_TYPE_1">
+      <Text>昇順</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_BOOKED">
+      <Text>割当済</Text>
+    </Attribute>
+    <Attribute name="IDIS_RESOURCE_BOOKERS">
+      <Text>割当済工程</Text>
+    </Attribute>
+    <Attribute name="IDI_ASSIGNED_PLOT">
+      <Text>割当済ﾌﾟﾛｯﾄ設定</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_BOOKED">
+      <Text>割当済資源</Text>
+    </Attribute>
+    <Attribute name="IDA_GANTT_RES_ASSIGNED">
+      <Text>割当済資源</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_DETECT_STARTCOND">
+      <Text>連番開始条件を自動検出</Text>
+    </Attribute>
+    <Attribute name="IDA_STANDALONE_AUTO_SCHED">
+      <Text>自動ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_AUTOEXPAND_ITEMS">
+      <Text>ﾌﾟﾛｯﾄ項目を自動展開</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTO_SCHED_SELECTION">
+      <Text>自動ｽｹｼﾞｭｰﾙ...</Text>
+    </Attribute>
+    <Attribute name="IDO_TIMERULE_ROOT">
+      <Text>ｱﾍﾞｲﾗﾋﾞﾘﾃｨ</Text>
+    </Attribute>
+    <Attribute name="IDI_AVAIL">
+      <Text>ｱﾍﾞｲﾗﾋﾞﾘﾃｨ</Text>
+    </Attribute>
+    <Attribute name="IDO_TIMERULE">
+      <Text>ｱﾍﾞｲﾗﾋﾞﾘﾃｨ</Text>
+    </Attribute>
+    <Attribute name="IDI_AVAILABILITY_PER_DAY">
+      <Text>ｱﾍﾞｲﾗﾋﾞﾘﾃｨ/日</Text>
+    </Attribute>
+    <Attribute name="IDI_ACCUMULATERESCAP_AVAILABLE">
+      <Text>有効</Text>
+    </Attribute>
+    <Attribute name="IDS_RESINFO_TEXT_1">
+      <Text>保有能力</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_QUEUE_AVERAGE">
+      <Text>平均待ち時間</Text>
+    </Attribute>
+    <Attribute name="IDS_OPTWND_TARDINESS">
+      <Text>平均遅延:</Text>
+    </Attribute>
+    <Attribute name="IDI_EARLINESS_AVERAGE">
+      <Text>早期/定刻ｵｰﾀﾞの平均</Text>
+    </Attribute>
+    <Attribute name="IDI_EARLINESS_AVERAGE_TOTAL">
+      <Text>計画ｵｰﾀﾞの平均</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDINESS_AVERAGE_TOTAL">
+      <Text>計画ｵｰﾀﾞの平均</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDINESS_AVERAGE">
+      <Text>遅延ｵｰﾀﾞの平均</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULING_DIRECTION_2">
+      <Text>ﾊﾞｯｸﾜｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_9">
+      <Text>ﾊﾞｯｸﾜｰﾄﾞｽｹｼﾞｭｰﾙ工程...</Text>
+    </Attribute>
+    <Attribute name="IDA_BALANCE">
+      <Text>ﾊﾞﾗﾝｽﾂﾘｰ</Text>
+    </Attribute>
+    <Attribute name="IDI_REQUISITION_QTY">
+      <Text>ﾊﾞﾗﾝｽ済要求数量</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_LABORCAP_TOOLTIP_2">
+      <Text>棒ｸﾞﾗﾌﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_LABRESCAP_TOOLTIP_2">
+      <Text>棒ｸﾞﾗﾌﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_MACHCAP_TOOLTIP_2">
+      <Text>棒ｸﾞﾗﾌﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_MACHRESCAP_TOOLTIP_2">
+      <Text>棒ｸﾞﾗﾌﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_TOOLCAP_TOOLTIP_2">
+      <Text>棒ｸﾞﾗﾌﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_TOOLINSTCAP_TOOLTIP_2">
+      <Text>棒ｸﾞﾗﾌﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_BASE_REMTIME_ON">
+      <Text>残作業時間計算方法</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_428">
+      <Text>基本情報</Text>
+    </Attribute>
+    <Attribute name="IDA_BATCH_DISTRIBUTION">
+      <Text>ﾊﾞｯﾁﾊﾞﾗﾝｽ製造ｵｰﾀﾞ配賦</Text>
+    </Attribute>
+    <Attribute name="IDA_BATCH_DISTRIBUTION_1">
+      <Text>ﾊﾞｯﾁﾊﾞﾗﾝｽ製造ｵｰﾀﾞ配賦ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDI_BATCH_BALANCING_ID">
+      <Text>ﾊﾞｯﾁﾊﾞﾗﾝｽID</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_BATCH_BALANCE_ID">
+      <Text>ﾊﾞｯﾁﾊﾞﾗﾝｽID</Text>
+    </Attribute>
+    <Attribute name="IDO_BATCH_BALANCE_ID">
+      <Text>ﾊﾞｯﾁﾊﾞﾗﾝｽID</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_BATCH_BALANCING_IDS">
+      <Text>ﾊﾞｯﾁﾊﾞﾗﾝｽID</Text>
+    </Attribute>
+    <Attribute name="IDO_BATCH_BALANCING_IDS">
+      <Text>ﾊﾞｯﾁﾊﾞﾗﾝｽID</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_457">
+      <Text>ﾊﾞｯﾁﾊﾞﾗﾝｽ開始点情報</Text>
+    </Attribute>
+    <Attribute name="IDI_TIMEPLOT_BATCH">
+      <Text>ﾊﾞｯﾁ名称</Text>
+    </Attribute>
+    <Attribute name="IDA_STANDALONE_BATCH_LOAD_SETUP">
+      <Text>ﾊﾞｯﾁﾛｰﾄﾞ設定</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_BATCH_LOAD_ENABLED">
+      <Text>ﾊﾞｯﾁﾛｰﾄﾞ有効</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_423">
+      <Text>ﾊﾞｯﾁ処理詳細</Text>
+    </Attribute>
+    <Attribute name="IDS_LOAD_DIALOG_OK_BATCH">
+      <Text>ﾊﾞｯﾁ処理ﾌｨﾙﾀ基準</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_424">
+      <Text>ﾊﾞｯﾁ処理ﾊﾟﾗﾒｰﾀ</Text>
+    </Attribute>
+    <Attribute name="IDM_BATCH_PROCESSING">
+      <Text>ﾊﾞｯﾁ処理中...</Text>
+    </Attribute>
+    <Attribute name="IDI_MTRL_BATCH_QTY">
+      <Text>ﾊﾞｯﾁｻｲｽﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_BATCH_UOM">
+      <Text>ﾊﾞｯﾁｻｲｽﾞ単位</Text>
+    </Attribute>
+    <Attribute name="IDI_BATCH_JOB_TEXT_1">
+      <Text>ﾊﾞｯﾁﾛｰﾄﾞはｽｹｼﾞｭｰﾙされていません。</Text>
+    </Attribute>
+    <Attribute name="IDI_BATCH_JOB_TEXT_2">
+      <Text>ﾊﾞｯﾁﾛｰﾄﾞは %s 時間ごとに実行するようにｽｹｼﾞｭｰﾙされています。</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_RESULT_1">
+      <Text>前</Text>
+    </Attribute>
+    <Attribute name="IDI_AVAILABILITY_BEGIN_DATE">
+      <Text>開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_BEGIN_DATE_RANGE">
+      <Text>開始日範囲</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_421">
+      <Text>動作</Text>
+    </Attribute>
+    <Attribute name="IDI_ACCUMULATERESCAP_BOOKED">
+      <Text>予約済</Text>
+    </Attribute>
+    <Attribute name="IDI_UTILIZATION_1">
+      <Text>予約時間ﾛｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_BREAK_DESCRIPTION">
+      <Text>超過名称</Text>
+    </Attribute>
+    <Attribute name="IDI_BREAK_DURATION">
+      <Text>超過期間</Text>
+    </Attribute>
+    <Attribute name="IDI_AVAILABILITY_BREAKS">
+      <Text>超過時間</Text>
+    </Attribute>
+    <Attribute name="IDI_BREAK_TYPE">
+      <Text>超過ﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_BREAKDOWN">
+      <Text>分析</Text>
+    </Attribute>
+    <Attribute name="IDI_BUFFER">
+      <Text>ﾊﾞｯﾌｧ</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_BUFFOVFL">
+      <Text>ﾊﾞｯﾌｧｵｰﾊﾞｰﾌﾛｰ</Text>
+    </Attribute>
+    <Attribute name="IDI_GROUP_BUTTON">
+      <Text>ﾎﾞﾀﾝ</Text>
+    </Attribute>
+    <Attribute name="IDM_WINDOW_CLOSEALL">
+      <Text>全て閉じる(&amp;L)</Text>
+    </Attribute>
+    <Attribute name="IDA_CBS_CONNECTION_INFO">
+      <Text>CBS接続情報...</Text>
+    </Attribute>
+    <Attribute name="IDA_CBS_CONNECTION_STAT">
+      <Text>CBS接続統計...</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_GETSCHEDULE_DLG">
+      <Text>CBSｽｹｼﾞｭｰﾙ取得</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_GET_AND_LOCK">
+      <Text>CBSｻｰﾊﾞをﾛｯｸ</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_LOCKED">
+      <Text>CBSはﾛｯｸされています。</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SITE_TIMELOCKED">
+      <Text>CBSﾛｯｸ時間</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SAVE_RELEASE">
+      <Text>CBSﾘﾘｰｽｻｰﾊﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SAVEDLG">
+      <Text>CBSｽｹｼﾞｭｰﾙ保存</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SCHEDLOADED">
+      <Text>CBSｽｹｼﾞｭｰﾙがﾛｰﾄﾞされました。</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_RELEASED">
+      <Text>CBSｻｰﾊﾞがﾘﾘｰｽされました。</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_NOTLOCKED">
+      <Text>CBSｻｰﾊﾞはﾛｯｸされていません。</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SITE_HOST">
+      <Text>CBSｻｲﾄﾎｽﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SITE_NAME">
+      <Text>CBSｻｲﾄ名</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SITE_PORT">
+      <Text>CBSｻｲﾄﾎﾟｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_ACTIONABORTED">
+      <Text>CBSｱｸｼｮﾝは中止されました!</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_GET_AND_NOLOCK">
+      <Text>CBSはｻｰﾊﾞをﾛｯｸしません。</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SAVE_NORELEASE">
+      <Text>CBSはｻｰﾊﾞをﾘﾘｰｽしません。</Text>
+    </Attribute>
+    <Attribute name="IDI_CALENDAR">
+      <Text>ｶﾚﾝﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_WORK_TIME_CALENDAR">
+      <Text>ｶﾚﾝﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_CALENDAR_DESC">
+      <Text>ｶﾚﾝﾀﾞ名称</Text>
+    </Attribute>
+    <Attribute name="IDI_DEF_CALENDAR_END">
+      <Text>ｶﾚﾝﾀﾞ 終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_INFO_CALFILE">
+      <Text>ｶﾚﾝﾀﾞﾌｧｲﾙ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_HOURS_2">
+      <Text>ｶﾚﾝﾀﾞ時間</Text>
+    </Attribute>
+    <Attribute name="IDIS_CALENDAR_USERS">
+      <Text>ｶﾚﾝﾀﾞを含む:</Text>
+    </Attribute>
+    <Attribute name="IDI_DEF_CALENDAR_START">
+      <Text>ｶﾚﾝﾀﾞ 開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_CALENDAR_STATE">
+      <Text>ｶﾚﾝﾀﾞは 生成済 ｽﾃｰﾀｽです。</Text>
+    </Attribute>
+    <Attribute name="IDO_WORK_TIME_CALENDARS">
+      <Text>ｶﾚﾝﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_208">
+      <Text>一部を実行できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_BOOKONLY">
+      <Text>予約された工程でのみ実行できます。</Text>
+    </Attribute>
+    <Attribute name="IDA_CANCEL">
+      <Text>取消</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_200">
+      <Text>取消</Text>
+    </Attribute>
+    <Attribute name="IDM_CANCEL">
+      <Text>取消</Text>
+    </Attribute>
+    <Attribute name="IDS_OPTWND_CANCEL">
+      <Text>取消</Text>
+    </Attribute>
+    <Attribute name="IDS_NOADD">
+      <Text>追加できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_JIT">
+      <Text>最遅調整できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_ALL">
+      <Text>一部を実行できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_PRECEDENCE">
+      <Text>先行制約のため実行できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_COMPRESS">
+      <Text>ｵｰﾀﾞを圧縮できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_FUNCRE">
+      <Text>作成できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_FUNDEL">
+      <Text>削除できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_DELREFTO">
+      <Text>削除できません。他のｵﾌﾞｼﾞｪｸﾄが参照しています。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_DROP">
+      <Text>ここにはﾄﾞﾛｯﾌﾟできません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_FOPEN">
+      <Text>ﾌｧｲﾙを開けません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_UNFIRM">
+      <Text>計画できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_FUNREAD">
+      <Text>読み込めません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_FREAD">
+      <Text>ﾌｧｲﾙから読み込めません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_FIRM">
+      <Text>ﾘﾘｰｽできません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_REMOVE">
+      <Text>削除できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_SCHEDULE">
+      <Text>ｽｹｼﾞｭｰﾙできません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_SORT">
+      <Text>ｿｰﾄできません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_UNBOOK">
+      <Text>予約取消できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_UNSCHEDULE">
+      <Text>ｽｹｼﾞｭｰﾙ取消できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_UNSCHEDULE_THIS">
+      <Text>ｽｹｼﾞｭｰﾙ取消できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_UNSCHEDULE_BEF">
+      <Text>先行工程をｽｹｼﾞｭｰﾙ取消できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_FUNWRITE">
+      <Text>書き込めません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_FWRITE">
+      <Text>ﾌｧｲﾙに書き込めません。</Text>
+    </Attribute>
+    <Attribute name="IDI_CAPACITY">
+      <Text>能力</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_CAP">
+      <Text>能力</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_NRNEED">
+      <Text>必要能力</Text>
+    </Attribute>
+    <Attribute name="IDIS_CAPACITY_RESOURCE">
+      <Text>能力資源</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_LOAD_FACTOR">
+      <Text>能力使用率(%)</Text>
+    </Attribute>
+    <Attribute name="IDO_RES_CAP">
+      <Text>能力資源</Text>
+    </Attribute>
+    <Attribute name="IDI_ACC_CAPUTIL_INFO">
+      <Text>能力/稼働率</Text>
+    </Attribute>
+    <Attribute name="IDI_ACC_CAP_GRAPH">
+      <Text>能力/稼働率ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDA_CASCADE">
+      <Text>ｶｽｹｰﾄﾞｳｨﾝﾄﾞｳ</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_IFSAP_LOAD_4">
+      <Text>Cbs.AccessProviderWrapperBridge.dll</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_GRAPH_LOAD_3">
+      <Text>Cbs.GraphWrapperBridge.dll</Text>
+    </Attribute>
+    <Attribute name="IDA_FONT">
+      <Text>ﾌｫﾝﾄ変更</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_306">
+      <Text>ｽｹｼﾞｭｰﾙ変更</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_407">
+      <Text>変更</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_USERDEF_QUERY_ERRCOMA">
+      <Text>保存した設定名に文字「,」は使用できません。</Text>
+    </Attribute>
+    <Attribute name="IDO_CHARACTERISTIC">
+      <Text>特性</Text>
+    </Attribute>
+    <Attribute name="IDI_MATRIX_CODE">
+      <Text>特性ｺｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_CHARACTERISTIC_CODE">
+      <Text>特性ｺｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPERCOLOR_FROM_CHAR">
+      <Text>特性ｺｰﾄﾞ値</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPERCOLOR_FROM_CHAR_1">
+      <Text>特性ｺｰﾄﾞ値</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_SORT_ORDER">
+      <Text>特性ｿｰﾄ順</Text>
+    </Attribute>
+    <Attribute name="IDO_CHARACTERISTIC_VALUE">
+      <Text>特性値</Text>
+    </Attribute>
+    <Attribute name="IDI_TYPE_OF_SEQ_1">
+      <Text>特性値</Text>
+    </Attribute>
+    <Attribute name="IDI_SETUP_CHARACTERISTIC">
+      <Text>ﾜｰｸｾﾝﾀ段取作業ﾏﾄﾘｯｸｽに特性が含まれています。</Text>
+    </Attribute>
+    <Attribute name="IDI_CHARACTERISTICS">
+      <Text>特性</Text>
+    </Attribute>
+    <Attribute name="IDO_CHARACTERISTICS">
+      <Text>特性</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_CONNECTCHECK">
+      <Text>CBSｻｰﾊﾞ接続をﾁｪｯｸしています...</Text>
+    </Attribute>
+    <Attribute name="IDS_SELECTION_MISSING">
+      <Text>OK を押す前に1つ以上選択してください。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_CIRCULAR_RELATION">
+      <Text>次の作成時に、製造ｵｰﾀﾞで循環参照が見つかりました:</Text>
+    </Attribute>
+    <Attribute name="IDI_CLASSNAME">
+      <Text>ｸﾗｽ名</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_1_2">
+      <Text>新規ｽｹｼﾞｭｰﾙをｸﾘｰﾝｱｯﾌﾟ中...</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_14">
+      <Text>選択をｸﾘｰﾝｱｯﾌﾟ中...</Text>
+    </Attribute>
+    <Attribute name="IDA_QUERY_CLEAR">
+      <Text>消去</Text>
+    </Attribute>
+    <Attribute name="IDA_CLEAR">
+      <Text>すべてｸﾘｱ</Text>
+    </Attribute>
+    <Attribute name="IDA_HIGHLIGHT_CLEAN">
+      <Text>ﾊｲﾗｲﾄをｸﾘｱ</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_16">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽから受信した取消ﾌﾗｸﾞをｸﾘｱ中...</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_210">
+      <Text>完了</Text>
+    </Attribute>
+    <Attribute name="IDS_ALERTWND_CLOSE">
+      <Text>完了</Text>
+    </Attribute>
+    <Attribute name="IDS_BATCH_LOAD_ALERT_3">
+      <Text>完了</Text>
+    </Attribute>
+    <Attribute name="IDS_OPTWND_CLOSE">
+      <Text>完了</Text>
+    </Attribute>
+    <Attribute name="IDA_EXTTABS_CLOSE_ALL">
+      <Text>全てのｵﾌﾞｼﾞｪｸﾄ詳細ﾀﾌﾞを閉じる</Text>
+    </Attribute>
+    <Attribute name="IDM_EXTTABS_CLOSE_ALL">
+      <Text>全てのｵﾌﾞｼﾞｪｸﾄ詳細ﾀﾌﾞを閉じる</Text>
+    </Attribute>
+    <Attribute name="IDA_EXTTABS_CLOSE_REST">
+      <Text>これ以外の全てのｵﾌﾞｼﾞｪｸﾄ詳細ﾀﾌﾞを閉じる</Text>
+    </Attribute>
+    <Attribute name="IDM_EXTTABS_CLOSE_REST">
+      <Text>これ以外の全てのｵﾌﾞｼﾞｪｸﾄ詳細ﾀﾌﾞを閉じる</Text>
+    </Attribute>
+    <Attribute name="IDA_CLOSEALL">
+      <Text>全てのｳｨﾝﾄﾞｳを閉じる</Text>
+    </Attribute>
+    <Attribute name="IDA_HIDE_DETAIL_TAB">
+      <Text>ｵﾌﾞｼﾞｪｸﾄ詳細 ﾀﾌﾞを閉じる</Text>
+    </Attribute>
+    <Attribute name="IDM_HIDE_DETAIL_TAB">
+      <Text>ｵﾌﾞｼﾞｪｸﾄ詳細 ﾀﾌﾞを閉じる</Text>
+    </Attribute>
+    <Attribute name="IDA_EXTTABS_CLOSE_THIS">
+      <Text>この ｵﾌﾞｼﾞｪｸﾄ詳細 ﾀﾌﾞを閉じる</Text>
+    </Attribute>
+    <Attribute name="IDM_EXTTABS_CLOSE_THIS">
+      <Text>この ｵﾌﾞｼﾞｪｸﾄ詳細 ﾀﾌﾞを閉じる</Text>
+    </Attribute>
+    <Attribute name="IDA_CLOSE">
+      <Text>ｳｨﾝﾄﾞｳを閉じる</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPERCOLOR_CHARCODE">
+      <Text>ｺｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDA_COLLAPSE">
+      <Text>閉じる</Text>
+    </Attribute>
+    <Attribute name="IDM_COLLAPSE">
+      <Text>閉じる</Text>
+    </Attribute>
+    <Attribute name="IDO_TIMERULE_ORG">
+      <Text>ｱﾍﾞｲﾗﾋﾞﾘﾃｨのｺﾚｸｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDO_COMP_ORG">
+      <Text>能力のｺﾚｸｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDO_BREAK_ORG">
+      <Text>資源超過のｺﾚｸｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDO_PROJ">
+      <Text>工程のｺﾚｸｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDO_ORDER_GRP">
+      <Text>ｵｰﾀﾞのｺﾚｸｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDO_RES_ORG">
+      <Text>資源のｺﾚｸｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_COLOR">
+      <Text>色</Text>
+    </Attribute>
+    <Attribute name="IDA_PALETTE">
+      <Text>色ﾊﾟﾚｯﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_PALETTE">
+      <Text>色ﾊﾟﾚｯﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_COMPARE">
+      <Text>比較</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPCOMPARE_CHANGES">
+      <Text>変更を比較</Text>
+    </Attribute>
+    <Attribute name="IDO_COMP">
+      <Text>能力</Text>
+    </Attribute>
+    <Attribute name="IDIS_COMPETENCES">
+      <Text>能力</Text>
+    </Attribute>
+    <Attribute name="IDO_COMP_ROOT">
+      <Text>能力</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_448">
+      <Text>完了</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_MODE_4">
+      <Text>圧縮</Text>
+    </Attribute>
+    <Attribute name="IDA_COMPRESS">
+      <Text>工程を圧縮</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_10">
+      <Text>工程を圧縮しています...</Text>
+    </Attribute>
+    <Attribute name="IDM_CBS_CONNECTION_INFO">
+      <Text>接続情報(&amp;I)...</Text>
+    </Attribute>
+    <Attribute name="IDM_CBS_CONNECTION_STAT">
+      <Text>接続統計(&amp;S)...</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_CONNECTION_INFO">
+      <Text>接続情報</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_IDI_CBS_CONNECTION_INFO">
+      <Text>接続情報</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_CONNECTION_INFO">
+      <Text>接続情報</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_427">
+      <Text>接続統計</Text>
+    </Attribute>
+    <Attribute name="IDI_CONSTRAINT_NAME">
+      <Text>制約名</Text>
+    </Attribute>
+    <Attribute name="IDI_CONSTRAINT_TYPE">
+      <Text>制約ﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_CONSTRAINT">
+      <Text>制約</Text>
+    </Attribute>
+    <Attribute name="IDI_CONSUMER_ROLE">
+      <Text>消費者</Text>
+    </Attribute>
+    <Attribute name="IDS_CONTENTS">
+      <Text>内容:</Text>
+    </Attribute>
+    <Attribute name="IDI_CONVERT_TOORDER">
+      <Text>ｵｰﾀﾞに変換</Text>
+    </Attribute>
+    <Attribute name="IDI_CONVERT_TOTEMPLATE">
+      <Text>ﾃﾝﾌﾟﾚｰﾄに変換</Text>
+    </Attribute>
+    <Attribute name="IDA_COPY">
+      <Text>ｺﾋﾟｰ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_205">
+      <Text>ｺﾋﾟｰ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_206">
+      <Text>参照としてｺﾋﾟｰ</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NORELATE">
+      <Text>ｵﾌﾞｼﾞｪｸﾄ関係を追加できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOCAL">
+      <Text>ｶﾚﾝﾀﾞ情報を構築できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOPUTBETWEEN">
+      <Text>順序を変更できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOCREATE">
+      <Text>ｵﾌﾞｼﾞｪｸﾄを作成できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOFIND">
+      <Text>ｵﾌﾞｼﾞｪｸﾄが見つかりません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOFINDPARENT">
+      <Text>親が見つかりません。</Text>
+    </Attribute>
+    <Attribute name="IDS_COULD_NOT_FIND_CONSTR">
+      <Text>制約 %s がﾏｽﾀﾃﾞｰﾀに見つからないため、ﾛｰﾙ %s に接続できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_COULD_NOT_FIND_MTRL_1">
+      <Text>資材 %s がﾏｽﾀﾃﾞｰﾀに見つからないため、ﾛｰﾙ %s に接続できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_COULD_NOT_FIND_MTRL_2">
+      <Text>資材 %s がﾏｽﾀﾃﾞｰﾀに見つかりません。</Text>
+    </Attribute>
+    <Attribute name="IDS_COULD_NOT_FIND_RES">
+      <Text>資源 %s がﾏｽﾀﾃﾞｰﾀに見つからないため、ﾛｰﾙ %s に接続できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOMODIFY">
+      <Text>値を変更できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOMOVE">
+      <Text>ｵﾌﾞｼﾞｪｸﾄを移動できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOACTION">
+      <Text>ｽｹｼﾞｭｰﾙｱｸｼｮﾝを実行できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOPUT">
+      <Text>工程をｽｹｼﾞｭｰﾙに挿入できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_REGISTRY">
+      <Text>Windowsﾚｼﾞｽﾄﾘから情報を読み込めません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NO_PROC_NAME">
+      <Text>Windowsﾚｼﾞｽﾄﾘから情報を読み込めません。更新ﾌﾟﾛｼｰｼﾞｬ名がありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NO_PROCPARAM">
+      <Text>Windowsﾚｼﾞｽﾄﾘから情報を読み込めません。更新ﾌﾟﾛｼｰｼﾞｬﾊﾟﾗﾒｰﾀ名がありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOREAD">
+      <Text>ﾌｧｲﾙから情報を読み込めません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOREMOVE">
+      <Text>ｵﾌﾞｼﾞｪｸﾄを削除できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOUNRELATE">
+      <Text>ｵﾌﾞｼﾞｪｸﾄ関係を削除できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NORENAME">
+      <Text>ｵﾌﾞｼﾞｪｸﾄの名称を変更できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOSAVE">
+      <Text>ﾌｧｲﾙに情報を保存できません。</Text>
+    </Attribute>
+    <Attribute name="IDA_QUERY_COUNT_HITS">
+      <Text>件数</Text>
+    </Attribute>
+    <Attribute name="IDS_COUNT_HITS">
+      <Text>件数</Text>
+    </Attribute>
+    <Attribute name="IDS_WO_NO_CRAFT_OR_TOOL_REQUIREMENT">
+      <Text>機能/ﾂｰﾙ要件がありません。</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_301">
+      <Text>作成</Text>
+    </Attribute>
+    <Attribute name="IDM_CREATEORDER">
+      <Text>ｵｰﾀﾞ作成(&amp;O)</Text>
+    </Attribute>
+    <Attribute name="IDA_CREATE_CAPACITY">
+      <Text>能力で割当を作成</Text>
+    </Attribute>
+    <Attribute name="IDA_CREATE">
+      <Text>子を作成</Text>
+    </Attribute>
+    <Attribute name="IDA_CREATEORDER">
+      <Text>ｵｰﾀﾞ作成</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_308">
+      <Text>ｵｰﾀﾞ作成</Text>
+    </Attribute>
+    <Attribute name="IDI_CREATEORDER">
+      <Text>ｵｰﾀﾞ作成</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_IDI_NEW_PLOT">
+      <Text>ﾕｰｻﾞ定義ﾌﾟﾛｯﾄ設定の作成</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_NEW_SCENARIO_1">
+      <Text>ﾕｰｻﾞ定義ｼﾅﾘｵの作成</Text>
+    </Attribute>
+    <Attribute name="IDI_CUMULATED_COST">
+      <Text>累積原価</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_NOW">
+      <Text>現在時間</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_408">
+      <Text>現在時間</Text>
+    </Attribute>
+    <Attribute name="IDS_LOAD_NOT_INCLUDED">
+      <Text>現在のﾛｰﾄﾞ基準はAPBに&apos;%s&apos;が含まれていません。この問題は、新規及び変更済製造ｵｰﾀﾞ/全ての製造ｵｰﾀﾞを再ﾛｰﾄﾞすることで解決する可能性があります。</Text>
+    </Attribute>
+    <Attribute name="IDI_CUSTOMER_ID">
+      <Text>顧客</Text>
+    </Attribute>
+    <Attribute name="IDI_CUSTOMER_DESC">
+      <Text>顧客名称</Text>
+    </Attribute>
+    <Attribute name="IDI_DEMAND_TYPE_3">
+      <Text>受注ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_SUPPLY_TYPE_1">
+      <Text>受注ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_STATSTRING">
+      <Text>DOBPFSALi</Text>
+    </Attribute>
+    <Attribute name="IDO_DYN_STATBAR_1">
+      <Text>DOBPFSALi</Text>
+    </Attribute>
+    <Attribute name="IDI_ACTIVITY_DOP_RELATIONS">
+      <Text>一覧 - 割当</Text>
+    </Attribute>
+    <Attribute name="IDO_DEMANDORDERS">
+      <Text>一覧 - 需要ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_DOP_HEADRES">
+      <Text>一覧 - 製番ﾍｯﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_TREEHEAD">
+      <Text>ﾃﾞｰﾀﾂﾘｰ</Text>
+    </Attribute>
+    <Attribute name="IDA_TREE">
+      <Text>ﾃﾞｰﾀﾂﾘｰ表示</Text>
+    </Attribute>
+    <Attribute name="IDM_CBS_SAVE_SCHEDULE">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽ保存(&amp;B)...</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_DATABASE">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽ</Text>
+    </Attribute>
+    <Attribute name="IDA_CBS_GET_SCHEDULE">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽｵｰﾌﾟﾝ...</Text>
+    </Attribute>
+    <Attribute name="IDA_CBS_SAVE_SCHEDULE">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽ保存...</Text>
+    </Attribute>
+    <Attribute name="IDS_DB_CONNECTED">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽ接続が確立されました。</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SAVE_NOTALLOW">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽ保存はできません!</Text>
+    </Attribute>
+    <Attribute name="IDI_EXCEPTION_DATE">
+      <Text>日付</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_ENTERED">
+      <Text>登録日</Text>
+    </Attribute>
+    <Attribute name="IDI_TIMESTART_QTYCHANGED">
+      <Text>変更日</Text>
+    </Attribute>
+    <Attribute name="IDI_DAYTYPE_NO">
+      <Text>日付番号</Text>
+    </Attribute>
+    <Attribute name="IDI_DAYTYPE_NAME">
+      <Text>日付ﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDO_WORK_TIME_DAY_TYPE">
+      <Text>日付ﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_DAYTYPE_DESC">
+      <Text>日付ﾀｲﾌﾟ名称</Text>
+    </Attribute>
+    <Attribute name="IDIS_DAYTYPE_USERS">
+      <Text>含まれる日付ﾀｲﾌﾟ:</Text>
+    </Attribute>
+    <Attribute name="IDI_DAY_TYPE">
+      <Text>日付ﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDO_WORK_TIME_DAY_TYPES">
+      <Text>日付ﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_DAYS">
+      <Text>日数</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_6">
+      <Text>日数</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_10">
+      <Text>日;時</Text>
+    </Attribute>
+    <Attribute name="IDM_DELETE_UNDER">
+      <Text>以下を削除(&amp;L)...</Text>
+    </Attribute>
+    <Attribute name="IDS_DEFAULT">
+      <Text>既定</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_LANG_OPENDEF">
+      <Text>規定の言語がﾛｰﾄﾞされます!</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_441">
+      <Text>定義済</Text>
+    </Attribute>
+    <Attribute name="IDI_DELAYS">
+      <Text>遅延</Text>
+    </Attribute>
+    <Attribute name="IDA_DELETE">
+      <Text>削除</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_202">
+      <Text>削除</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_302">
+      <Text>削除</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_402">
+      <Text>削除</Text>
+    </Attribute>
+    <Attribute name="IDA_DELETE_ALL">
+      <Text>全て削除</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_304">
+      <Text>全て削除</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_203">
+      <Text>可能な全てを削除</Text>
+    </Attribute>
+    <Attribute name="IDA_DELETE_FINISHED">
+      <Text>完了した工程を削除</Text>
+    </Attribute>
+    <Attribute name="IDA_SCENARIO_BUTTON_4">
+      <Text>選択したｼﾅﾘｵを削除</Text>
+    </Attribute>
+    <Attribute name="IDA_DELETE_UNDER">
+      <Text>以下を削除</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SCHEDINTERNDEL">
+      <Text>内部ｽｹｼﾞｭｰﾙを削除中...</Text>
+    </Attribute>
+    <Attribute name="IDO_DOPHEADER">
+      <Text>需要ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_DEMAND_TYPE">
+      <Text>需要ﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_DEPT_NO">
+      <Text>部門番号</Text>
+    </Attribute>
+    <Attribute name="IDI_DETAIL_PANE_PLOT">
+      <Text>ｶﾞﾝﾄ一覧からｶﾞﾝﾄ詳細ﾌﾟﾛｯﾄ設定を取得</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_422">
+      <Text>工程色を取得</Text>
+    </Attribute>
+    <Attribute name="IDI_PRODUCERCONSUMER_DESC">
+      <Text>名称 仕入先/消費者</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_ASCENDING_DESCENDING_2">
+      <Text>降順</Text>
+    </Attribute>
+    <Attribute name="IDI_SORT_TYPE_2">
+      <Text>降順</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPERCOLOR_CHARCODEDESCR">
+      <Text>名称</Text>
+    </Attribute>
+    <Attribute name="IDI_DESCRIPTION">
+      <Text>名称</Text>
+    </Attribute>
+    <Attribute name="IDI_PERIODNOTES">
+      <Text>名称</Text>
+    </Attribute>
+    <Attribute name="IDA_GANTT_DETAIL">
+      <Text>詳細</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTO_SCHED_DISPATCH_RULE">
+      <Text>差立てﾙｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_RESBRK_DRDR_SETTING">
+      <Text>資源超過で次のｽﾃｰﾀｽの工程の再計画を許可しない:</Text>
+    </Attribute>
+    <Attribute name="IDI_RESCHEDULE_CLEANUP_1">
+      <Text>必要でない限り他の工程を再計画しない</Text>
+    </Attribute>
+    <Attribute name="IDS_COUNT_HITS_MSG_2">
+      <Text>これらの製造ｵｰﾀﾞを計画担当者別ｽｹｼﾞｭｰﾗにﾛｰﾄﾞしますか?</Text>
+    </Attribute>
+    <Attribute name="IDS_LOAD_DIALOG_OK_BATCH_3">
+      <Text>続けますか?</Text>
+    </Attribute>
+    <Attribute name="IDS_LOAD_DIALOG_OK_LOAD_2">
+      <Text>ｽｹｼﾞｭｰﾙされたﾊﾞｯﾁﾛｰﾄﾞのﾌｨﾙﾀ基準をこのﾌｨﾙﾀ基準で更新しますか?</Text>
+    </Attribute>
+    <Attribute name="IDS_ALERTWND_SHOWNOMORE">
+      <Text>今後、このﾒｯｾｰｼﾞを表示しない!</Text>
+    </Attribute>
+    <Attribute name="IDO_BREAK_OPER">
+      <Text>休止時間工程</Text>
+    </Attribute>
+    <Attribute name="IDS_PROMISE_OPER_NO_DRDR">
+      <Text>確定工程のﾄﾞﾗｯｸﾞ&amp;ﾄﾞﾛｯﾌﾟはできません。確定ｵｰﾀﾞ又は仮需要ﾍｯﾀﾞ全体をﾄﾞﾗｯｸﾞ&amp;ﾄﾞﾛｯﾌﾟして、ｽｹｼﾞｭｰﾙの確定ｵｰﾀﾞに移動してください。</Text>
+    </Attribute>
+    <Attribute name="IDA_AUTOTIME">
+      <Text>自動ﾀｲﾑｽｹｰﾙをﾄﾞﾗｯｸﾞ&amp;ﾄﾞﾛｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDA_REMOVE">
+      <Text>ﾄﾞﾗｯｸﾞ&amp;ﾄﾞﾛｯﾌﾟしてﾘｽﾄから削除</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_LABORCAP_DRAGDROP">
+      <Text>ﾄﾞﾗｯｸﾞ&amp;ﾄﾞﾛｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_LABRESCAP_DRAGDROP">
+      <Text>ﾄﾞﾗｯｸﾞ&amp;ﾄﾞﾛｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_MACHCAP_DRAGDROP">
+      <Text>ﾄﾞﾗｯｸﾞ&amp;ﾄﾞﾛｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_MACHRESCAP_DRAGDROP">
+      <Text>ﾄﾞﾗｯｸﾞ&amp;ﾄﾞﾛｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_TOOLCAP_DRAGDROP">
+      <Text>ﾄﾞﾗｯｸﾞ&amp;ﾄﾞﾛｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_TOOLINSTCAP_DRAGDROP">
+      <Text>ﾄﾞﾗｯｸﾞ&amp;ﾄﾞﾛｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDA_DRDR_SETTINGS">
+      <Text>ｽｹｼﾞｭｰﾙ設定をﾄﾞﾗｯｸﾞ&amp;ﾄﾞﾛｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDM_SETTINGS_DRDR">
+      <Text>ｽｹｼﾞｭｰﾙ設定をﾄﾞﾗｯｸﾞ&amp;ﾄﾞﾛｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_452">
+      <Text>完了予定</Text>
+    </Attribute>
+    <Attribute name="IDI_DT_NEED">
+      <Text>継続時間</Text>
+    </Attribute>
+    <Attribute name="IDI_DEMAND_TYPE_1">
+      <Text>製番管理</Text>
+    </Attribute>
+    <Attribute name="IDM_FILE_EXIT">
+      <Text>終了(&amp;X)</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_START_EARLIEST">
+      <Text>EPST</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_GRAPH_LOAD">
+      <Text>ｴﾗｰ: ｸﾞﾗﾌﾗｲﾌﾞﾗﾘをﾛｰﾄﾞできませんでした。</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTO_SCHED_DISPATCH_RULE_4">
+      <Text>製造ｵｰﾀﾞ要求日</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_BATCH_LOAD_EPST">
+      <Text>最早可能実行時間</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_MINSCHED">
+      <Text>最早可能開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_SEL_SEQOPERS_BASED_ON_2">
+      <Text>最早可能開始時刻(EPST)</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_MINSCHED_OFFSET">
+      <Text>最早可能開始時刻ｵﾌｾｯﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_START_EARLIEST">
+      <Text>最早連番開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_OPERS_BASED_ON_2">
+      <Text>最早開始日(EPST)</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_MINADJUST">
+      <Text>調整時最早時刻</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_410">
+      <Text>早期日数</Text>
+    </Attribute>
+    <Attribute name="IDI_EARLINESS">
+      <Text>早期日数</Text>
+    </Attribute>
+    <Attribute name="IDI_EARLY_FINISH">
+      <Text>早期終了</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_GRAPH_SELECTION_1_3">
+      <Text>早期ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_GRAPH_SELECTION_3">
+      <Text>早期ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_EARLY_START">
+      <Text>早期開始</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_EARLYTOLESSEARLY">
+      <Text>遅延からより遅く/定刻</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_EARLYTOMOREEARLY">
+      <Text>早期からより早期</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_EARLYTOTARDY">
+      <Text>早期/定刻から遅延</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_EARLY">
+      <Text>早期/定刻</Text>
+    </Attribute>
+    <Attribute name="IDI_EARLY_DETAIL">
+      <Text>早期/定刻ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_EARLY_1">
+      <Text>早期/定刻ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_450">
+      <Text>効率</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPER_COLOR_FROM_LCRES_1">
+      <Text>従業員</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_SELECTION_2">
+      <Text>従業員</Text>
+    </Attribute>
+    <Attribute name="IDO_LABORRESOURCE">
+      <Text>従業員</Text>
+    </Attribute>
+    <Attribute name="IDI_LABOR_RESOURCES">
+      <Text>従業員</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_RTO_EMPTY">
+      <Text>ｲﾝﾀｰﾌﾟﾘﾀからの応答が空です。</Text>
+    </Attribute>
+    <Attribute name="IDI_AVAILABILITY_END_DATE">
+      <Text>終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_AVAILABILITY_END_TIME">
+      <Text>終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_BREAKDOWN_ENDTIME">
+      <Text>終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_END_DATE">
+      <Text>終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER_FINISHDATE_END">
+      <Text>終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER_NEEDDATE_END">
+      <Text>終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_TIMEEND_QTYCHANGED">
+      <Text>数量変更の終了時間</Text>
+    </Attribute>
+    <Attribute name="IDI_END_DATE_RANGE">
+      <Text>終了日範囲</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_END_MAKESPAN">
+      <Text>ﾒｲｸｽﾊﾟﾝの終了</Text>
+    </Attribute>
+    <Attribute name="IDI_ENGINEERING_REVISION">
+      <Text>設計ﾘﾋﾞｼﾞｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_COMPARISON_OPERATOR_3">
+      <Text>に等しい:</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_IDI_ERRMSG">
+      <Text>ｴﾗｰ</Text>
+    </Attribute>
+    <Attribute name="IDS_ERROR">
+      <Text>ｴﾗｰ</Text>
+    </Attribute>
+    <Attribute name="IDI_ERROR_LIST">
+      <Text>ｴﾗｰﾘｽﾄ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_417">
+      <Text>ｴﾗｰﾒｯｾｰｼﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_ERROR_MESSAGE">
+      <Text>ｴﾗｰﾒｯｾｰｼﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_ERROR_MESSAGE_WRAP">
+      <Text>ｴﾗｰﾒｯｾｰｼﾞ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_415">
+      <Text>ｴﾗｰﾒｯｾｰｼﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_ERROR_OBJECT_NAME">
+      <Text>ｴﾗｰｵﾌﾞｼﾞｪｸﾄ名</Text>
+    </Attribute>
+    <Attribute name="IDI_COMU_18">
+      <Text>ｵﾌﾞｼﾞｪｸﾄﾃﾞｰﾀにｴﾗｰあり</Text>
+    </Attribute>
+    <Attribute name="IDI_COMU_1">
+      <Text>ﾌｧｲﾙ読み込み中にｴﾗｰ。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_DCOM">
+      <Text>ORACLE又はCOMｵﾌﾞｼﾞｪｸﾄからｴﾗｰ応答</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_CBS_UPDATES">
+      <Text>ﾒﾓﾘ内ｻｽｹｼﾞｭｰﾙを更新しようとしてｴﾗｰ。</Text>
+    </Attribute>
+    <Attribute name="IDI_ERRMSG">
+      <Text>ｴﾗｰ:</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_CONNECTED">
+      <Text>CBS接続確立</Text>
+    </Attribute>
+    <Attribute name="IDA_ESTTIME">
+      <Text>見積時間</Text>
+    </Attribute>
+    <Attribute name="IDI_DT_ESTIMATED">
+      <Text>見積時間</Text>
+    </Attribute>
+    <Attribute name="IDS_EXP_EXCELCD_TYPE">
+      <Text>Excel -- ｶﾝﾏ区切りﾌｧｲﾙ</Text>
+    </Attribute>
+    <Attribute name="IDO_WORK_TIME_EXCEPTION">
+      <Text>例外</Text>
+    </Attribute>
+    <Attribute name="IDIS_EXCEPTION_USERS">
+      <Text>含まれる例外:</Text>
+    </Attribute>
+    <Attribute name="IDI_EXCEPTION">
+      <Text>例外ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_EXCEPTION_DESC">
+      <Text>例外ｽｹｼﾞｭｰﾙ名称</Text>
+    </Attribute>
+    <Attribute name="IDS_BATCH_LOAD_ALERT_5">
+      <Text>今すぐ実行</Text>
+    </Attribute>
+    <Attribute name="IDA_EXIT">
+      <Text>終了</Text>
+    </Attribute>
+    <Attribute name="IDA_EXPAND">
+      <Text>展開</Text>
+    </Attribute>
+    <Attribute name="IDM_EXPAND">
+      <Text>展開</Text>
+    </Attribute>
+    <Attribute name="IDA_EXPORT">
+      <Text>ｴｸｽﾎﾟｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDA_STATS_EXPORT">
+      <Text>ｴｸｽﾎﾟｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_EXPORT">
+      <Text>ｴｸｽﾎﾟｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_EXP_OPTIONS_DLG">
+      <Text>ｴｸｽﾎﾟｰﾄｵﾌﾟｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_EXTINFODLG">
+      <Text>ｴｸｽﾎﾟｰﾄ設定</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_EXT_EXPORT_SETTING">
+      <Text>ｴｸｽﾎﾟｰﾄ設定</Text>
+    </Attribute>
+    <Attribute name="IDM_SHOW_EXTINFODLG">
+      <Text>ｴｸｽﾎﾟｰﾄ設定...</Text>
+    </Attribute>
+    <Attribute name="IDI_SUPPLY_TYPE_23">
+      <Text>外部受注ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDM_SHOW_EXT_EXPORT_SETTING">
+      <Text>外部ｴｸｽﾎﾟｰﾄ設定:</Text>
+    </Attribute>
+    <Attribute name="IDM_SHOW_EXT_GANTTPLOT_SETTING">
+      <Text>外部ﾌﾟﾛｯﾄ設定:</Text>
+    </Attribute>
+    <Attribute name="IDI_SUPPLY_TYPE_24">
+      <Text>外部供給ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDM_SHOW_EXT_TOOLTIP_SETTING">
+      <Text>外部ﾂｰﾙﾁｯﾌﾟ設定:</Text>
+    </Attribute>
+    <Attribute name="IDI_EXPAND_SHOP_ORDER">
+      <Text>ﾛｯﾄｻｲｽﾞが変更されたときに製造ｵｰﾀﾞを拡張</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_SETTINGS_EXT">
+      <Text>拡張情報</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SCHEDEXTRACT">
+      <Text>変更を抽出中...</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_LOCKFAILED">
+      <Text>CBSｻｰﾊﾞをﾛｯｸできませんでした。</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_RELEASEFAILED">
+      <Text>CBSｻｰﾊﾞをﾘﾘｰｽできませんでした。</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SCHEDSAVEFAILED">
+      <Text>計画変更を保存できませんでした。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_IFSAP_LOAD">
+      <Text>IFS .Netｱｸｾｽﾌﾟﾛﾊﾞｲﾀﾞﾗｲﾌﾞﾗﾘをﾛｰﾄﾞできませんでした。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_IPC_LOAD">
+      <Text>IFS Enterprise Explorerから接続設定をﾛｰﾄﾞできませんでした。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOSEQUENCE">
+      <Text>順序計画を実行できませんでした。</Text>
+    </Attribute>
+    <Attribute name="IDA_FETCH">
+      <Text>取得</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPCOMPARE_LABELS">
+      <Text>ﾌｨｰﾙﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDM_FILE_OPEN">
+      <Text>ﾌｧｲﾙｵｰﾌﾟﾝ(&amp;O)...</Text>
+    </Attribute>
+    <Attribute name="IDM_FILE_SAVE">
+      <Text>ﾌｧｲﾙ保存(&amp;S)</Text>
+    </Attribute>
+    <Attribute name="IDA_FILE_OPEN">
+      <Text>ﾌｧｲﾙｵｰﾌﾟﾝ...</Text>
+    </Attribute>
+    <Attribute name="IDA_FILE_SAVE">
+      <Text>ﾌｧｲﾙ保存</Text>
+    </Attribute>
+    <Attribute name="IDM_FILE_SAVEAS">
+      <Text>ﾌｧｲﾙを別名保存(&amp;A)...</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER">
+      <Text>ｵｰﾀﾞをﾌｨﾙﾀ...</Text>
+    </Attribute>
+    <Attribute name="IDS_LOAD_DIALOG_OK_BATCH_1">
+      <Text>ﾊﾞｯﾁ処理ﾊﾟﾗﾒｰﾀで定義されたﾌｨﾙﾀ基準は、APBｸﾗｲｱﾝﾄで設定された現行ﾃﾞｰﾀのﾛｰﾄﾞに使用されたﾌｨﾙﾀ基準と異なります。</Text>
+    </Attribute>
+    <Attribute name="IDS_COUNT_HITS_MSG_1">
+      <Text>ﾌｨﾙﾀ基準が %s 製造ｵｰﾀﾞと一致します。</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_414">
+      <Text>ｵｰﾀﾞのﾌｨﾙﾀ</Text>
+    </Attribute>
+    <Attribute name="IDI_COMPARISON_OPERATOR">
+      <Text>ﾛｰﾄﾞされた資源を検索...</Text>
+    </Attribute>
+    <Attribute name="IDS_EXP_FINDAPP">
+      <Text>ｴｸｽﾎﾟｰﾄｱﾌﾟﾘｹｰｼｮﾝの検索</Text>
+    </Attribute>
+    <Attribute name="IDI_END_DATE">
+      <Text>完了予定日</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_END">
+      <Text>完了予定日</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER_2">
+      <Text>完了予定日指定範囲</Text>
+    </Attribute>
+    <Attribute name="IDS_FINISHED">
+      <Text>終了</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_FINISHEDTO">
+      <Text>定刻に終了</Text>
+    </Attribute>
+    <Attribute name="IDS_FINITE">
+      <Text>有限</Text>
+    </Attribute>
+    <Attribute name="IDI_INFINITE_1">
+      <Text>有限資源能力</Text>
+    </Attribute>
+    <Attribute name="IDI_FINITE">
+      <Text>ﾘｰﾄﾞﾀｲﾑを含む有限</Text>
+    </Attribute>
+    <Attribute name="IDS_FIRMED">
+      <Text>確定</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTO_SCHED_DISPATCH_RULE_2">
+      <Text>先着順</Text>
+    </Attribute>
+    <Attribute name="IDI_GROUP_FIRST">
+      <Text>第1ｸﾞﾙｰﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_445">
+      <Text>固定</Text>
+    </Attribute>
+    <Attribute name="IDI_DT_FIX">
+      <Text>固定処理時間</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_RUN_FIXED">
+      <Text>固定実行時間</Text>
+    </Attribute>
+    <Attribute name="IDI_FLOW">
+      <Text>ﾌﾛｰ</Text>
+    </Attribute>
+    <Attribute name="IDIS_BUFFER">
+      <Text>ﾌﾛｰ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_416">
+      <Text>ﾃﾞｰﾀのﾛｰﾄﾞ/保存中に次のｴﾗｰが発生しました。</Text>
+    </Attribute>
+    <Attribute name="IDI_FONT">
+      <Text>ﾌｫﾝﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_FOR_PART">
+      <Text>品目</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHED_PROJECT_CONNECTED">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄに接続した製造ｵｰﾀﾞで使用</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHED_PROJECT_CONNECTED_ALAP">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄに接続した製造ｵｰﾀﾞで使用</Text>
+    </Attribute>
+    <Attribute name="IDS_FILE_EXT">
+      <Text>ﾌｫｰﾏｯﾄされた状況</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SCHEDFORMAT">
+      <Text>ﾃﾞｰﾀのﾌｫｰﾏｯﾄ中...</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SCHEDFORMATFAILED">
+      <Text>ﾌｫｰﾏｯﾄできませんでした!</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULING_DIRECTION_1">
+      <Text>転送</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NO_UPDATES">
+      <Text>要求に更新情報がありません。</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_FRAGMENTATION">
+      <Text>断片化時間</Text>
+    </Attribute>
+    <Attribute name="IDI_GROUP_BUTTON_5">
+      <Text>金曜日</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_403">
+      <Text>開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_EPST_START_RANGE">
+      <Text>開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_START_RANGE">
+      <Text>開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_MATRIX_FROM">
+      <Text>開始値</Text>
+    </Attribute>
+    <Attribute name="IDS_EXTGANTT">
+      <Text>ｶﾞﾝﾄﾁｬｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_TIMEHEAD">
+      <Text>ｶﾞﾝﾄﾁｬｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDA_EXT_GANTT">
+      <Text>ｶﾞﾝﾄﾁｬｰﾄ表示</Text>
+    </Attribute>
+    <Attribute name="IDA_TIME">
+      <Text>ｶﾞﾝﾄﾁｬｰﾄ表示</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_418">
+      <Text>基本情報</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_SETTINGS_GENERAL">
+      <Text>基本情報</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_SYNTAX">
+      <Text>一般文法ｴﾗｰ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_IDI_CBS_GETSCHEDULE_DLG">
+      <Text>ｽｹｼﾞｭｰﾙ取得</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_GET_AND_NOLOCK">
+      <Text>ｽｹｼﾞｭｰﾙ取得</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_GET_AND_LOCK">
+      <Text>ｽｹｼﾞｭｰﾙを取得し、ｻｰﾊﾞをﾛｯｸ</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_GETSCHEDULE_DLG">
+      <Text>ｻｰﾊﾞからｽｹｼﾞｭｰﾙを取得</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_IDA_SCHEDSERVCONN">
+      <Text>ｽｹｼﾞｭｰﾙｻｰﾊﾞﾃﾞｰﾀを取得</Text>
+    </Attribute>
+    <Attribute name="IDM_SCHEDSERVCONN">
+      <Text>ｻｰﾊﾞﾃﾞｰﾀを取得...</Text>
+    </Attribute>
+    <Attribute name="IDI_COLOR_IDS_GRAB">
+      <Text>色を取得</Text>
+    </Attribute>
+    <Attribute name="IDI_COLOR_IDS_GRAB_SPACE">
+      <Text>既定値を取得</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPSHOT_COMPARE_A">
+      <Text>ｸﾞﾗﾌ1</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPSHOT_COMPARE_B">
+      <Text>ｸﾞﾗﾌ2</Text>
+    </Attribute>
+    <Attribute name="IDI_GRAPH_TITLE">
+      <Text>ｸﾞﾗﾌﾀｲﾄﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_GRAPH_TYPE">
+      <Text>ｸﾞﾗﾌﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_COMPARISON_OPERATOR_4">
+      <Text>大きいか等しい:</Text>
+    </Attribute>
+    <Attribute name="IDA_GREATER_THAN">
+      <Text>大きい:</Text>
+    </Attribute>
+    <Attribute name="IDI_COMPARISON_OPERATOR_1">
+      <Text>大きい:</Text>
+    </Attribute>
+    <Attribute name="IDA_PRINT">
+      <Text>ﾊｰﾄﾞｺﾋﾟｰ</Text>
+    </Attribute>
+    <Attribute name="IDA_HELP">
+      <Text>ﾍﾙﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_201">
+      <Text>ﾍﾙﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDS_BATCH_LOAD_ALERT_7">
+      <Text>ﾍﾙﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDA_HELP_CONTENTS">
+      <Text>ﾍﾙﾌﾟ内容</Text>
+    </Attribute>
+    <Attribute name="IDM_HIGHGLIGHT_CONT">
+      <Text>ﾊｲﾗｲﾄ(&amp;G)</Text>
+    </Attribute>
+    <Attribute name="IDA_HIGHLIGHT_CONT">
+      <Text>ﾊｲﾗｲﾄ</Text>
+    </Attribute>
+    <Attribute name="IDA_HIGHLIGHT">
+      <Text>ﾊｲﾗｲﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_TIMEPLOT_STAIR">
+      <Text>ﾋｽﾄｸﾞﾗﾑ</Text>
+    </Attribute>
+    <Attribute name="IDI_HOLDING_COST">
+      <Text>維持原価</Text>
+    </Attribute>
+    <Attribute name="IDI_HOLDING_RATE">
+      <Text>維持率</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_SITE_HOST">
+      <Text>ﾎｽﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDSERV_SITE_HOST">
+      <Text>ﾎｽﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHED_HOST">
+      <Text>ﾎｽﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_HOURS_1">
+      <Text>時間</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_9">
+      <Text>時間</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_443">
+      <Text>時間/単位</Text>
+    </Attribute>
+    <Attribute name="IDI_HOURSPERUNIT">
+      <Text>時間/単位</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_14">
+      <Text>時:分</Text>
+    </Attribute>
+    <Attribute name="IDA_TIMEPLOT_BATCH">
+      <Text>IDA&gt;TIMEPLOT&gt;BATCH</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_START_1">
+      <Text>IDI_TIME_START_1</Text>
+    </Attribute>
+    <Attribute name="IDO_MTRL_ROLE_IDI_MTRL_QTY">
+      <Text>IDO_MTRL_ROLE_IDI_MTRL_QTY</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_GRAPH_LOAD_6">
+      <Text>IDS_ERR_GRAPH_LOAD_6</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_INTERNAL_INFO">
+      <Text>IFS - 内部ｱﾌﾟﾘｹｰｼｮﾝ情報</Text>
+    </Attribute>
+    <Attribute name="IDS_FRAME_TITLE_6">
+      <Text>IFS計画担当者別ｽｹｼﾞｭｰﾗ - ｼﾐｭﾚｰｼｮﾝ[ｻｲﾄ= %s]</Text>
+    </Attribute>
+    <Attribute name="IDS_FRAME_TITLE_2">
+      <Text>IFS計画担当者別ｽｹｼﾞｭｰﾗ[ｻｲﾄ= %s]</Text>
+    </Attribute>
+    <Attribute name="IDS_APPLNAME">
+      <Text>IFSｽｹｼﾞｭｰﾘﾝｸﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_FRAME_TITLE_4">
+      <Text>IFSｽｹｼﾞｭｰﾘﾝｸﾞ - 計画担当者[ｻｲﾄ= %s、ﾎｽﾄ= %s]</Text>
+    </Attribute>
+    <Attribute name="IDS_FRAME_TITLE_3">
+      <Text>IFSｽｹｼﾞｭｰﾘﾝｸﾞ - ｼﾐｭﾚｰｼｮﾝ[ｻｲﾄ= %s、ﾎｽﾄ= %s]</Text>
+    </Attribute>
+    <Attribute name="IDS_FRAME_TITLE_5">
+      <Text>IFSｽｹｼﾞｭｰﾘﾝｸﾞ - ViewOnly [ｻｲﾄ= %s]</Text>
+    </Attribute>
+    <Attribute name="IDS_FRAME_TITLE_1">
+      <Text>IFSｽｹｼﾞｭｰﾘﾝｸﾞ[ｻｲﾄ= %s]</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_OPER_BITMAP">
+      <Text>ｱｲｺﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_PURCH_ORD">
+      <Text>ID1</Text>
+    </Attribute>
+    <Attribute name="IDI_PURCH_ORD_LINE">
+      <Text>ID2</Text>
+    </Attribute>
+    <Attribute name="IDI_PURCH_ORD_REL">
+      <Text>ID3</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_IDLE">
+      <Text>ｱｲﾄﾞﾙ時間</Text>
+    </Attribute>
+    <Attribute name="IDS_RELOAD_ALL_DATA_TOFIX_1">
+      <Text>このｽｹｼﾞｭｰﾙｾｯｼｮﾝの開始後にﾃﾞｰﾀﾍﾞｰｽでこのｵﾌﾞｼﾞｪｸﾄが作成された場合、全ての製造ｵｰﾀﾞを再ﾛｰﾄﾞすると、新規及び変更済のﾏｽﾀﾃﾞｰﾀが全てﾛｰﾄﾞされます。</Text>
+    </Attribute>
+    <Attribute name="IDS_RELOAD_ALL_DATA_TOFIX_2">
+      <Text>このｽｹｼﾞｭｰﾙｾｯｼｮﾝの開始後にﾃﾞｰﾀﾍﾞｰｽでこのｵﾌﾞｼﾞｪｸﾄが作成又は有限に設定された場合、全ての製造ｵｰﾀﾞを再ﾛｰﾄﾞすると、新規及び変更済のﾏｽﾀﾃﾞｰﾀが全てﾛｰﾄﾞされます。</Text>
+    </Attribute>
+    <Attribute name="IDS_LOAD_DIALOG_OK_LOAD_3">
+      <Text>いいえ を選択した場合、ﾊﾞｯﾁﾛｰﾄﾞの次回実行では 全製造ｵｰﾀﾞ がﾛｰﾄﾞｵﾌﾟｼｮﾝとして使用されます。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_GRAPH_LOAD_4">
+      <Text>Ifs.Application.Cbs.GraphWrapper.dll</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_IFSAP_LOAD_3">
+      <Text>Ifs.Application.Cbs.IFSAPWrapper.dll</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_PACKORDER">
+      <Text>断片化を最小限に抑えるため、選択したｵｰﾀﾞは圧縮されます。</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_INCLUDE_RELEASED_OPERS">
+      <Text>ﾘﾘｰｽ済工程を順序計画ｱｸｼｮﾝに含める</Text>
+    </Attribute>
+    <Attribute name="IDI_EXPORTABLE">
+      <Text>ｴｸｽﾎﾟｰﾄに含める</Text>
+    </Attribute>
+    <Attribute name="IDI_DAYTYPE_USERS">
+      <Text>含まれる</Text>
+    </Attribute>
+    <Attribute name="IDIS_SORT_ORDER">
+      <Text>ｿｰﾄ順に含まれる</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_INCOMPLETE">
+      <Text>定義中</Text>
+    </Attribute>
+    <Attribute name="IDI_INFINITE">
+      <Text>無限</Text>
+    </Attribute>
+    <Attribute name="IDI_INFINITE_2">
+      <Text>無限資源能力</Text>
+    </Attribute>
+    <Attribute name="IDI_OPERATION_STRUCTURE_PLOT_OPT_3">
+      <Text>無限納品計画明細</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_INFSCHED">
+      <Text>無限負荷ｽｹｼﾞｭｰﾙ済</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTO_SCHED_SELECTION_5">
+      <Text>無限負荷ｽｹｼﾞｭｰﾙ済工程</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_OPER_SHOW_INFINITE">
+      <Text>無限負荷ｽｹｼﾞｭｰﾙ済工程</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTO_SCHED_SELECTION_4">
+      <Text>無限負荷ｽｹｼﾞｭｰﾙ済確定工程</Text>
+    </Attribute>
+    <Attribute name="IDI_INFO">
+      <Text>情報</Text>
+    </Attribute>
+    <Attribute name="IDI_INIFILE">
+      <Text>初期化ﾌｧｲﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_COMU">
+      <Text>入力/出力</Text>
+    </Attribute>
+    <Attribute name="IDO_PROMISEDEMANDORDER">
+      <Text>仮需要ﾍｯﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_INTERIMDEMANDHEADERS">
+      <Text>仮需要ﾍｯﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_INTERIM_DEMAND_HEADERS">
+      <Text>仮需要ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_WORK_CENTER_CODE_1">
+      <Text>内部ﾜｰｸｾﾝﾀ</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_BATCH_LOAD_INTERVAL">
+      <Text>間隔(分で入力)</Text>
+    </Attribute>
+    <Attribute name="IDI_NEW_PLOT_4">
+      <Text>形式が不正です。新しい設定を保存できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_RTO_NOSTART">
+      <Text>ﾄﾗﾝｻﾞｸｼｮﾝを開始するﾒｯｾｰｼﾞが不正です。</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_USERDEF_QUERY_ERRILLEGAL">
+      <Text>保存した設定の名称に&apos;%s&apos;は使用できません。</Text>
+    </Attribute>
+    <Attribute name="IDI_OUTSIDE_OP_ITEM">
+      <Text>ｱｲﾃﾑ</Text>
+    </Attribute>
+    <Attribute name="IDI_PROJECT_ITEM_NO">
+      <Text>明細番号</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_ITEM_PRECEDENCE_LINE">
+      <Text>品目先行</Text>
+    </Attribute>
+    <Attribute name="IDI_ADJ_SCHED_KEEP_SEQUENCE_2">
+      <Text>ｽｹｼﾞｭｰﾙ済工程順序を保持</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTOSCHED_ADJSCHED_KEEPSEQ_2">
+      <Text>ｽｹｼﾞｭｰﾙ済工程順序を保持</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_START_LATEST">
+      <Text>LPST</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_440">
+      <Text>作業者</Text>
+    </Attribute>
+    <Attribute name="IDI_LABOR_CLASES">
+      <Text>作業者ｸﾗｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPER_COLOR_FROM_LC_1">
+      <Text>作業者ｸﾗｽ</Text>
+    </Attribute>
+    <Attribute name="IDO_LABORCLASS">
+      <Text>作業者ｸﾗｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_LABOR_CLASSES">
+      <Text>作業者ｸﾗｽ</Text>
+    </Attribute>
+    <Attribute name="IDO_LABORCLASSES">
+      <Text>作業者ｸﾗｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_RES_ROLE_TYPE">
+      <Text>作業者ﾛｰﾙﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_LABOR_SETUP">
+      <Text>作業者段取時間</Text>
+    </Attribute>
+    <Attribute name="IDO_LANG_MANAGER">
+      <Text>言語</Text>
+    </Attribute>
+    <Attribute name="IDO_LANG_NODE">
+      <Text>言語入力</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_LANG_OPEN">
+      <Text>言語ﾛｰﾄﾞｴﾗｰ!</Text>
+    </Attribute>
+    <Attribute name="IDI_MSGLOG_IN">
+      <Text>最終入力</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_LAST_LOAD">
+      <Text>最終ﾛｰﾄﾞ[時刻]</Text>
+    </Attribute>
+    <Attribute name="IDI_MSGLOG_OUT">
+      <Text>最終出力</Text>
+    </Attribute>
+    <Attribute name="IDI_SEL_SEQOPERS_BASED_ON_3">
+      <Text>最終可能開始時刻(LPST)</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_OPERS_BASED_ON_3">
+      <Text>最終可能開始時刻(LPST)</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_LAST_SAVED">
+      <Text>最終保存[時刻]</Text>
+    </Attribute>
+    <Attribute name="IDI_LAST_SCHEDULED_OPER">
+      <Text>最終ｽｹｼﾞｭｰﾙ工程</Text>
+    </Attribute>
+    <Attribute name="IDI_MSGLOG_LAST">
+      <Text>前回</Text>
+    </Attribute>
+    <Attribute name="IDI_STARTUP_SCENARIO_1">
+      <Text>最終使用日</Text>
+    </Attribute>
+    <Attribute name="IDI_LATE_FINISH">
+      <Text>最遅終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_LATE_START">
+      <Text>最遅開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_ACTIVITY_LATE_START_FINISH">
+      <Text>最遅開始日/終了日</Text>
+    </Attribute>
+    <Attribute name="IDS_LAUNCH_ABORT">
+      <Text>起動を中止されました。</Text>
+    </Attribute>
+    <Attribute name="IDA_EXP_CHOICE_LAUNCH">
+      <Text>ｴｸｽﾎﾟｰﾄｱﾌﾟﾘｹｰｼｮﾝを起動</Text>
+    </Attribute>
+    <Attribute name="IDI_LEADTIME">
+      <Text>ﾘｰﾄﾞﾀｲﾑ</Text>
+    </Attribute>
+    <Attribute name="IDI_PURCH_LEADTIME">
+      <Text>ﾘｰﾄﾞﾀｲﾑ</Text>
+    </Attribute>
+    <Attribute name="IDO_MTRL_IDI_PURCH_LEADTIME">
+      <Text>ﾘｰﾄﾞﾀｲﾑ</Text>
+    </Attribute>
+    <Attribute name="IDI_TYPE_OF_SEQ_2">
+      <Text>最小累積CBS段取時間</Text>
+    </Attribute>
+    <Attribute name="IDI_UNSCHEDULE_CLEANUP_1">
+      <Text>影響を受ける資源時間を未予約のままにします。</Text>
+    </Attribute>
+    <Attribute name="IDI_COMPARISON_OPERATOR_5">
+      <Text>小さいか等しい:</Text>
+    </Attribute>
+    <Attribute name="IDA_LESS_THAN">
+      <Text>小さい:</Text>
+    </Attribute>
+    <Attribute name="IDI_COMPARISON_OPERATOR_2">
+      <Text>小さい:</Text>
+    </Attribute>
+    <Attribute name="IDI_DOP_LINE_ITEM">
+      <Text>明細品目</Text>
+    </Attribute>
+    <Attribute name="IDI_DOP_LINE_NUM">
+      <Text>明細番号</Text>
+    </Attribute>
+    <Attribute name="IDI_OBJLIST">
+      <Text>ｵﾌﾞｼﾞｪｸﾄの一覧</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_425">
+      <Text>値の一覧</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPERCOLOR_NEW_CHARCODE">
+      <Text>一覧...</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_NEW_SORT_COND">
+      <Text>一覧...</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_LOAD">
+      <Text>負荷山積</Text>
+    </Attribute>
+    <Attribute name="IDA_STANDALONE_LOAD_OPTIONS">
+      <Text>ﾛｰﾄﾞｵﾌﾟｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_413">
+      <Text>製造ｵｰﾀﾞをﾛｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_LOAD_DIALOG_OK_LOAD">
+      <Text>製造ｵｰﾀﾞﾌｨﾙﾀ基準をﾛｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDA_ACTIVATE_SNAPSHOT">
+      <Text>ｽﾅｯﾌﾟｼｮｯﾄをﾛｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDM_ACTIVATE_SNAPSHOT">
+      <Text>ｽﾅｯﾌﾟｼｮｯﾄをﾛｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_THRESHHOLD">
+      <Text>しきい値をﾛｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_UTILIZATION_TIME_END">
+      <Text>ﾀｲﾑﾌﾚｰﾑ終了をﾛｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_UTILIZATION_TIME_START">
+      <Text>ﾀｲﾑﾌﾚｰﾑ開始をﾛｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_UTILIZATION">
+      <Text>負荷ﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SCHEDLOADFAILED">
+      <Text>ｽｹｼﾞｭｰﾙをﾛｰﾄﾞできませんでした。</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SCHEDLOAD">
+      <Text>ｽｹｼﾞｭｰﾙﾛｰﾄﾞ中...</Text>
+    </Attribute>
+    <Attribute name="IDI_LOAD_TIME_PREPARE">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽにﾃﾞｰﾀをﾛｰﾄﾞ及び準備します。</Text>
+    </Attribute>
+    <Attribute name="IDS_WORKSPACE_INFO_LOADED">
+      <Text>ﾚｼﾞｽﾄﾘからﾜｰｸｽﾍﾟｰｽ情報のﾛｰﾄﾞが完了しました。</Text>
+    </Attribute>
+    <Attribute name="IDS_WORKSPACE_INFO_LOADING">
+      <Text>ﾚｼﾞｽﾄﾘからﾜｰｸｽﾍﾟｰｽ情報をﾛｰﾄﾞ中...</Text>
+    </Attribute>
+    <Attribute name="IDS_FREEZ_TIME">
+      <Text>ｽﾞｰﾑﾚﾍﾞﾙをﾛｯｸ</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_LOCKED">
+      <Text>入出庫禁止中</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_NOWVIRTUAL">
+      <Text>凍結済現在時間</Text>
+    </Attribute>
+    <Attribute name="IDI_MSGLOG_NR">
+      <Text>ﾛｸﾞ済要求</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_313">
+      <Text>ﾛｸﾞｵﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_UNITS_MIN_LIM">
+      <Text>下限</Text>
+    </Attribute>
+    <Attribute name="IDI_UNITS_MIN">
+      <Text>最下位ﾚﾍﾞﾙ</Text>
+    </Attribute>
+    <Attribute name="IDS_TIMESTR">
+      <Text>MTWTFSSwqJANFEBMARAPRMAYJUNJULAUGSEPOCTNOVDEC</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_439">
+      <Text>ﾏｼﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_SETUP">
+      <Text>機械段取時間</Text>
+    </Attribute>
+    <Attribute name="IDA_MAIL_DIR">
+      <Text>ﾒｰﾙﾎﾞｯｸｽﾃﾞｨﾚｸﾄﾘ</Text>
+    </Attribute>
+    <Attribute name="IDA_MAIL_SWITCH_ON">
+      <Text>ﾒｰﾙﾎﾞｯｸｽはｵﾝです。</Text>
+    </Attribute>
+    <Attribute name="IDA_MAIL_SWITCH">
+      <Text>ﾒｰﾙﾎﾞｯｸｽ ｵﾝ/ｵﾌ</Text>
+    </Attribute>
+    <Attribute name="IDA_JITCOMP_NOUNBOOK">
+      <Text>資源割当を保持</Text>
+    </Attribute>
+    <Attribute name="IDA_RESCHEDULE_NOUNBOOK">
+      <Text>資源割当を保持</Text>
+    </Attribute>
+    <Attribute name="IDA_SCHEDULE_NOUNBOOK">
+      <Text>資源割当を保持</Text>
+    </Attribute>
+    <Attribute name="IDA_UNSCHEDULE_NOUNBOOK">
+      <Text>資源割当を保持</Text>
+    </Attribute>
+    <Attribute name="IDI_BREAK_REASSIGN_1">
+      <Text>資源割当を保持</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_RESOURCE_ASSIGN_1">
+      <Text>資源割当を保持</Text>
+    </Attribute>
+    <Attribute name="IDI_UNSCHEDULE_RESOURCE_ASSIGN_1">
+      <Text>資源割当を保持</Text>
+    </Attribute>
+    <Attribute name="IDS_OPTWND_NOUNBOOK">
+      <Text>資源割当を保持</Text>
+    </Attribute>
+    <Attribute name="IDS_UNPLAN_NOUNBOOK">
+      <Text>資源割当を保持</Text>
+    </Attribute>
+    <Attribute name="IDI_BREAK_TYPE_2">
+      <Text>保守</Text>
+    </Attribute>
+    <Attribute name="IDI_MAINTENANCE_WO">
+      <Text>保守作業ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_COPY_NUM">
+      <Text>ｺﾋﾟｰ作成</Text>
+    </Attribute>
+    <Attribute name="IDI_MAKESPAN_CALENDAR_DAYS">
+      <Text>ﾒｲｸｽﾊﾟﾝ暦日</Text>
+    </Attribute>
+    <Attribute name="IDI_MAKESPAN_WORKING_DAYS">
+      <Text>ﾒｲｸｽﾊﾟﾝ稼働日</Text>
+    </Attribute>
+    <Attribute name="IDI_PROJECT_MANAGER">
+      <Text>ﾏﾈｰｼﾞｬ</Text>
+    </Attribute>
+    <Attribute name="IDI_PROJECT_MANAGER_NAME">
+      <Text>ﾏﾈｰｼﾞｬ名</Text>
+    </Attribute>
+    <Attribute name="IDI_BREAK_TYPE_1">
+      <Text>ﾏﾆｭｱﾙ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_461">
+      <Text>製造順序:</Text>
+    </Attribute>
+    <Attribute name="IDO_BASIC_ROOT">
+      <Text>ﾏｽﾀﾃﾞｰﾀ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_431">
+      <Text>ﾏｽﾀﾃﾞｰﾀ読込済</Text>
+    </Attribute>
+    <Attribute name="IDI_MTRL">
+      <Text>材料費</Text>
+    </Attribute>
+    <Attribute name="IDO_MTRL">
+      <Text>材料費</Text>
+    </Attribute>
+    <Attribute name="IDI_MTRLROLE_DROPDOWNLIST">
+      <Text>資材制約</Text>
+    </Attribute>
+    <Attribute name="IDI_MTRL_QTY">
+      <Text>資材数量</Text>
+    </Attribute>
+    <Attribute name="IDI_SUPPLY_TYPE_3">
+      <Text>資材払出要求</Text>
+    </Attribute>
+    <Attribute name="IDO_MTRL_ROLE">
+      <Text>資材ﾛｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDIS_MTRL">
+      <Text>資材ﾕｰｻﾞ</Text>
+    </Attribute>
+    <Attribute name="IDA_GANTT_MTRL">
+      <Text>材料費</Text>
+    </Attribute>
+    <Attribute name="IDI_MTRLLIST">
+      <Text>材料費</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_MATERIALS">
+      <Text>材料費</Text>
+    </Attribute>
+    <Attribute name="IDO_MTRL_ROOT">
+      <Text>材料費</Text>
+    </Attribute>
+    <Attribute name="IDO_MTRL_ORG">
+      <Text>資材組織</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER_PASTDUE_END">
+      <Text>最大過去納期</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER_TARDINESS_END">
+      <Text>最大遅延</Text>
+    </Attribute>
+    <Attribute name="IDI_EARLINESS_MAX">
+      <Text>最大(日;時間:分)</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDINESS_MAX">
+      <Text>最大(日;時間:分)</Text>
+    </Attribute>
+    <Attribute name="IDI_EARLINESS_MAX_1">
+      <Text>最大早期日数(日;時間:分)</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDINESS_MAX_1">
+      <Text>最大遅延(日;時間:分)</Text>
+    </Attribute>
+    <Attribute name="IDS_RESINFO_TEXT_2">
+      <Text>最大稼働率</Text>
+    </Attribute>
+    <Attribute name="IDS_OPTWND_MAXTIME">
+      <Text>処理が自動的に停止するまでの最大時間:</Text>
+    </Attribute>
+    <Attribute name="IDI_BREAK_REASSIGN_2">
+      <Text>資源を再割当できます。</Text>
+    </Attribute>
+    <Attribute name="IDI_UNITS_ACTUAL">
+      <Text>計測ﾚﾍﾞﾙ</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_MEMOVFL">
+      <Text>ﾒﾓﾘｵｰﾊﾞｰﾌﾛｰ</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER_PASTDUE_START">
+      <Text>最小過去納期</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER_TARDINESS_START">
+      <Text>最小遅延</Text>
+    </Attribute>
+    <Attribute name="IDI_DT_MINSPLIT">
+      <Text>最小分割時間</Text>
+    </Attribute>
+    <Attribute name="IDI_OPER_MINSPLIT">
+      <Text>最小分割時間</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_MINUTES">
+      <Text>分</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_0">
+      <Text>分</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_13">
+      <Text>分</Text>
+    </Attribute>
+    <Attribute name="IDS_OPTWND_MINUTES">
+      <Text>分(1-90)</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOPARAM">
+      <Text>要求にﾊﾟﾗﾒｰﾀ値がないか、間違っています。</Text>
+    </Attribute>
+    <Attribute name="IDI_GROUP_BUTTON_1">
+      <Text>月曜日</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_MONTHS">
+      <Text>月</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_2">
+      <Text>月</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_7">
+      <Text>月/日</Text>
+    </Attribute>
+    <Attribute name="IDA_MOVE">
+      <Text>移動</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_204">
+      <Text>移動又は変更</Text>
+    </Attribute>
+    <Attribute name="IDI_MOMENT_MTRLLEVEL">
+      <Text>資材ﾚﾍﾞﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_LOCKED_NO">
+      <Text>番号</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_LOCKED_NO">
+      <Text>番号</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_401">
+      <Text>名前</Text>
+    </Attribute>
+    <Attribute name="IDI_MTRLROLE_NAME_DEFINED">
+      <Text>名前</Text>
+    </Attribute>
+    <Attribute name="IDI_OBJNAME">
+      <Text>名前</Text>
+    </Attribute>
+    <Attribute name="IDI_OBJNAME_DISPLAY">
+      <Text>名前</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_USERDEF_QUERY_OVERWRITE">
+      <Text>名前&apos;%s&apos; は既に使用されています。上書きしますか?</Text>
+    </Attribute>
+    <Attribute name="IDI_MTRLROLE_NAME">
+      <Text>名称 資材制約</Text>
+    </Attribute>
+    <Attribute name="IDI_PRODUCERCONSUMER_NAME">
+      <Text>名称 仕入先/消費者</Text>
+    </Attribute>
+    <Attribute name="IDI_PRODUCERCONSUMER_NAME_DISPLAY">
+      <Text>名称 仕入先/消費者</Text>
+    </Attribute>
+    <Attribute name="IDI_NEW_PLOT_5">
+      <Text>名前は既に存在します。新しい設定を保存できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NAME_CONFLICT">
+      <Text>名前衝突</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NAME">
+      <Text>名前ｴﾗｰ</Text>
+    </Attribute>
+    <Attribute name="IDS_NAME_OK">
+      <Text>名前はOKです。</Text>
+    </Attribute>
+    <Attribute name="IDS_NAME_MISSING">
+      <Text>名前がありません。</Text>
+    </Attribute>
+    <Attribute name="IDA_SEARCH_STRING">
+      <Text>検索対象の名前</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_OPER_NAME">
+      <Text>名前</Text>
+    </Attribute>
+    <Attribute name="IDI_SEL_SEQOPERS_BASED_ON_1">
+      <Text>要求日</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_OPERS_BASED_ON_1">
+      <Text>要求日</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_NEED">
+      <Text>要求日</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER_1">
+      <Text>要求日指定範囲</Text>
+    </Attribute>
+    <Attribute name="IDI_DT_NEED_PART">
+      <Text>必要作業時間/単位</Text>
+    </Attribute>
+    <Attribute name="IDA_SCHEDSERVCONN">
+      <Text>ﾈｯﾄﾜｰｸ設定</Text>
+    </Attribute>
+    <Attribute name="IDI_NEW_PLOT">
+      <Text>新規</Text>
+    </Attribute>
+    <Attribute name="IDI_NEW_SORTMODE">
+      <Text>新規</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_311">
+      <Text>新規割当</Text>
+    </Attribute>
+    <Attribute name="IDI_NEW_FINISH_TIME">
+      <Text>新規終了日</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_312">
+      <Text>新規ﾌﾛｰ</Text>
+    </Attribute>
+    <Attribute name="IDA_NEWGANNT">
+      <Text>新規ｶﾞﾝﾄｳｨﾝﾄﾞｳ</Text>
+    </Attribute>
+    <Attribute name="IDA_CREATE_FLOWS">
+      <Text>新規資材</Text>
+    </Attribute>
+    <Attribute name="IDA_CREATE_ROLES">
+      <Text>新規ﾛｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_IDS_SAVE_NEW_SCENARIO">
+      <Text>新規ﾕｰｻﾞ定義ｼﾅﾘｵ</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_LOAD_2">
+      <Text>新規及び変更済製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_BATCH_LOAD_TIME">
+      <Text>次回日/時</Text>
+    </Attribute>
+    <Attribute name="IDI_BATCH_JOB_TEXT_3">
+      <Text>次回実行は %s に開始するようにｽｹｼﾞｭｰﾙされています。</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_CONNECTIONNO">
+      <Text>CBS接続がありません!</Text>
+    </Attribute>
+    <Attribute name="IDI_HITCOUNT">
+      <Text>ｵｰﾀﾞ数</Text>
+    </Attribute>
+    <Attribute name="IDI_SETUPOPT_USEOPNAME_3">
+      <Text>最適化設定なし</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_TIME_FREE">
+      <Text>利用可能な時間がありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SAVE_NODATACHANGED">
+      <Text>ｽｹｼﾞｭｰﾙは変更されていません!</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOCHARROOT">
+      <Text>特性ﾙｰﾄがありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOSORTCHAR">
+      <Text>特性ｿｰﾄ順がありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_DOUBLE">
+      <Text>浮動小数点値がありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_VALIDATE_PARAMS_ERROR_MSG_7">
+      <Text>一致するﾊﾞｯﾁﾊﾞﾗﾝｽIDがありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_VALIDATE_PARAMS_ERROR_MSG_5">
+      <Text>一致する部門がありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_VALIDATE_PARAMS_ERROR_MSG_1">
+      <Text>一致する品目がありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_VALIDATE_PARAMS_ERROR_MSG_2">
+      <Text>一致する計画担当者がありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_VALIDATE_PARAMS_ERROR_MSG_6">
+      <Text>一致する製品ﾌｧﾐﾘがありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_VALIDATE_PARAMS_ERROR_MSG_4">
+      <Text>一致する製造ﾗｲﾝがありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_VALIDATE_PARAMS_ERROR_MSG_8">
+      <Text>一致するﾌﾟﾛｼﾞｪｸﾄがありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_VALIDATE_PARAMS_ERROR_MSG_3">
+      <Text>一致するﾜｰｸｾﾝﾀがありません。</Text>
+    </Attribute>
+    <Attribute name="IDI_NO_OF_ORDERS">
+      <Text>ｵｰﾀﾞ数</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_TIME_OPER">
+      <Text>作業時間なし</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_TIME_YET">
+      <Text>まだ作業時間がありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_SEQ_NOSELECTED_OPERS">
+      <Text>順序計画に工程が選択されていません! 定義済「順序計画日付」範囲内の選択した日付ﾀｲﾌﾟを持つ工程のみが選択されます!</Text>
+    </Attribute>
+    <Attribute name="IDS_WO_NO_PLANNED_HOURS_DEFINED">
+      <Text>計画時間が定義されていません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_RESOURCE_COMB">
+      <Text>可能な資源の組合せがありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_RESOURCE">
+      <Text>資源なし</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOTIMES">
+      <Text>ｵﾌﾞｼﾞｪｸﾄにｽｹｼﾞｭｰﾙ時刻がありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_TIME_SETUP">
+      <Text>段取時間なし</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOCLASSID">
+      <Text>そのようなｸﾗｽIDはありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOPENDTRANS">
+      <Text>保留中のﾄﾗﾝｻﾞｸｼｮﾝはありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOTREEOBJ">
+      <Text>ﾂﾘｰｵﾌﾞｼﾞｪｸﾄなし</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NONAME">
+      <Text>有効なｵﾌﾞｼﾞｪｸﾄ名がありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_Y_LABEL">
+      <Text>ｵｰﾀﾞ数</Text>
+    </Attribute>
+    <Attribute name="IDI_ACC_CAPNODE_TIMES">
+      <Text>ﾉｰﾄﾞﾀｲﾑﾌﾚｰﾑ</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTO_SCHED_DISPATCH_RULE_1">
+      <Text>なし</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOPRELPLAN">
+      <Text>仮計画作業ではありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NORES">
+      <Text>資源ではありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NODATE">
+      <Text>有効な日付ではありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NODAY">
+      <Text>有効日ではありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_FLOAT">
+      <Text>有効な浮動小数点値ではありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_INT">
+      <Text>有効な整数値ではありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_EDIT_TIME">
+      <Text>有効な時間値ではありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_EDIT_DTIME">
+      <Text>有効な期間値ではありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_SMALL_HORIZ">
+      <Text>既存の作業負荷の品目がｽｹｼﾞｭｰﾙ期間外に終了するため、許可されません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOOPER">
+      <Text>工程ではありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_BOOKED">
+      <Text>予約されていません。</Text>
+    </Attribute>
+    <Attribute name="IDS_WO_LACK_OF_CAPACITY_TO_GET_SCHEDULED">
+      <Text>工程のｽｹｼﾞｭｰﾙに利用可能な機能又はﾂｰﾙが十分にありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_ENOUGH">
+      <Text>十分なﾃﾞｰﾀがありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_ENOUGH_BEF">
+      <Text>工程を進めるために十分なﾃﾞｰﾀがありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_PLANABLE">
+      <Text>ｽｹｼﾞｭｰﾙ不可</Text>
+    </Attribute>
+    <Attribute name="IDS_NOT_SCHEDULED">
+      <Text>ｽｹｼﾞｭｰﾙされていません。</Text>
+    </Attribute>
+    <Attribute name="IDI_NOTE_TEXT">
+      <Text>注釈</Text>
+    </Attribute>
+    <Attribute name="IDI_NOTIFICATION_INFO">
+      <Text>通知</Text>
+    </Attribute>
+    <Attribute name="IDI_NAME_NR">
+      <Text>番号</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_412">
+      <Text>ｺﾋﾟｰ数</Text>
+    </Attribute>
+    <Attribute name="IDI_EARLINESS_NUMBER">
+      <Text>早期/定刻ｵｰﾀﾞ数</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_INFSCHED_SHOPORDERS">
+      <Text>無限負荷計画ｵｰﾀﾞ数</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_NUMBEROFORDERS">
+      <Text>ｵｰﾀﾞ数</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_SCHEDULED_SHOPORDERS">
+      <Text>計画ｵｰﾀﾞ数</Text>
+    </Attribute>
+    <Attribute name="IDI_SETUPS">
+      <Text>段取数</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDINESS_NUMBER">
+      <Text>遅延ｵｰﾀﾞ数</Text>
+    </Attribute>
+    <Attribute name="IDS_WO_NO_PLANNED_MEN_OR_TOOLS">
+      <Text>計画作業者の数又はﾂｰﾙの数量がありません。</Text>
+    </Attribute>
+    <Attribute name="IDI_ALPHANUM_2">
+      <Text>数値</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_SORT_TYPE_2">
+      <Text>数値</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_SORT_TYPE">
+      <Text>数字/英字</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_209">
+      <Text>OK</Text>
+    </Attribute>
+    <Attribute name="IDI_OFFSET">
+      <Text>ｵﾌｾｯﾄ日数</Text>
+    </Attribute>
+    <Attribute name="IDI_SUPPLY_TYPE_99">
+      <Text>手持在庫</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_ONTIME">
+      <Text>定刻</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_ONLYTREEOBJ">
+      <Text>ﾂﾘｰｵﾌﾞｼﾞｪｸﾄのみ</Text>
+    </Attribute>
+    <Attribute name="IDM_WORKSPACE_OPEN">
+      <Text>ﾜｰｸｽﾍﾟｰｽを開く(&amp;W)</Text>
+    </Attribute>
+    <Attribute name="IDA_OPEN_FORMATTED">
+      <Text>ﾌｫｰﾏｯﾄされたﾌｧｲﾙを開く</Text>
+    </Attribute>
+    <Attribute name="IDA_OPEN_LANGUAGE">
+      <Text>翻訳ﾌｧｲﾙを開く</Text>
+    </Attribute>
+    <Attribute name="IDA_OPEN">
+      <Text>開く...</Text>
+    </Attribute>
+    <Attribute name="IDM_OPEN">
+      <Text>開く...</Text>
+    </Attribute>
+    <Attribute name="IDO_OPER">
+      <Text>工程</Text>
+    </Attribute>
+    <Attribute name="IDO_OPERATION">
+      <Text>工程</Text>
+    </Attribute>
+    <Attribute name="IDO_OPER_DTN">
+      <Text>工程(固定時間及びｵｰﾊﾞｰﾗｯﾌﾟ)</Text>
+    </Attribute>
+    <Attribute name="IDO_OPER_DT">
+      <Text>工程(固定時間)</Text>
+    </Attribute>
+    <Attribute name="IDI_OPERATION_EFFICIENCY">
+      <Text>工程効率</Text>
+    </Attribute>
+    <Attribute name="IDI_OPERATION_OVERLAP">
+      <Text>工程ｵｰﾊﾞｰﾗｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_RESOURCE_ASSIGN">
+      <Text>工程資源割当</Text>
+    </Attribute>
+    <Attribute name="IDI_UNSCHEDULE_RESOURCE_ASSIGN">
+      <Text>工程資源割当</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_MODE">
+      <Text>工程ｽｹｼﾞｭｰﾙﾓｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_OP_SEQUENCE_NO">
+      <Text>工程連番</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_460">
+      <Text>工程分割:</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPER_COLOR_FROM_OPERSTATUS_1">
+      <Text>工程ｽﾃｰﾀｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_OPERATION_STRUCTURE_PLOT_OPT">
+      <Text>工程構成</Text>
+    </Attribute>
+    <Attribute name="IDI_SHOP_FLOOR_INFO_90">
+      <Text>工程のｽﾃｰﾀｽは 全数報告 です。</Text>
+    </Attribute>
+    <Attribute name="IDI_SHOP_FLOOR_INFO_85">
+      <Text>工程のｽﾃｰﾀｽは 仕掛 です。</Text>
+    </Attribute>
+    <Attribute name="IDI_SHOP_FLOOR_INFO_1">
+      <Text>工程のｽﾃｰﾀｽは 未開始 です。</Text>
+    </Attribute>
+    <Attribute name="IDI_SHOP_FLOOR_INFO_81">
+      <Text>工程のｽﾃｰﾀｽは 段取完了 です。</Text>
+    </Attribute>
+    <Attribute name="IDI_SHOP_FLOOR_INFO_80">
+      <Text>工程のｽﾃｰﾀｽは 段取開始 です。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_OPER_COMPLET">
+      <Text>ｽﾃｰﾀｽ 完了 の工程が含まれています。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_OPER_STARTED">
+      <Text>ｽﾃｰﾀｽ 開始 の工程が含まれています。</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_419">
+      <Text>工程</Text>
+    </Attribute>
+    <Attribute name="IDI_OPERATIONS">
+      <Text>工程</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_INCLUDED_OPERS">
+      <Text>工程が順序付けされました。</Text>
+    </Attribute>
+    <Attribute name="IDI_ACC_CAP_OPERS">
+      <Text>工程利用能力</Text>
+    </Attribute>
+    <Attribute name="IDI_OPER_DETAILS">
+      <Text>工程:</Text>
+    </Attribute>
+    <Attribute name="IDS_OPTWND">
+      <Text>最適化</Text>
+    </Attribute>
+    <Attribute name="IDS_OPTWND_OPTIMIZE">
+      <Text>最適化</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_OPTION_OPTSETUP">
+      <Text>冗長段取最適化</Text>
+    </Attribute>
+    <Attribute name="IDI_NAME_ORDER">
+      <Text>製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_ORDER_N">
+      <Text>製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_GRAPH_SELECTION_5">
+      <Text>ｵｰﾀﾞ比較</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_ORDER_COMPARISON">
+      <Text>ｵｰﾀﾞ比較</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPSHOT_COMP_SEL_4">
+      <Text>ｵｰﾀﾞ比較</Text>
+    </Attribute>
+    <Attribute name="IDI_ORDER_DETAILS">
+      <Text>ｵｰﾀﾞ詳細</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPDEVIATE_A">
+      <Text>ｵｰﾀﾞ偏差</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPDEVIATE_B">
+      <Text>ｵｰﾀﾞ偏差</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPSHOT_COMP_SEL_3">
+      <Text>ｵｰﾀﾞ偏差</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_EARLINESS">
+      <Text>ｵｰﾀﾞ早期日数ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_EARLINESS_2">
+      <Text>ｵｰﾀﾞ早期日数ｸﾞﾗﾌ - ﾊﾞｯﾁﾊﾞﾗﾝｽ製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_EARLINESS_1">
+      <Text>ｵｰﾀﾞ早期日数ｸﾞﾗﾌ - ﾌﾟﾛｼﾞｪｸﾄに接続した製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_EARLINESS_TARDINESS">
+      <Text>ｵｰﾀﾞ早期日数/遅延ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_EARLINESS_TARDINESS_2">
+      <Text>ｵｰﾀﾞ早期日数/遅延ｸﾞﾗﾌ - ﾊﾞｯﾁﾊﾞﾗﾝｽ製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_EARLINESS_TARDINESS_1">
+      <Text>ｵｰﾀﾞ早期日数/遅延ｸﾞﾗﾌ - ﾌﾟﾛｼﾞｪｸﾄに接続した製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_DOP_ORDER_NUM">
+      <Text>ｵｰﾀﾞ番号</Text>
+    </Attribute>
+    <Attribute name="IDA_STATUS_DISTR">
+      <Text>ｵｰﾀﾞｽﾃｰﾀｽ配賦</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_GRAPH_SELECTION_1_5">
+      <Text>ｵｰﾀﾞｽﾃｰﾀｽ配賦</Text>
+    </Attribute>
+    <Attribute name="IDA_STATUS_DISTR_1">
+      <Text>ｵｰﾀﾞｽﾃｰﾀｽ配賦ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDA_STATUS_DISTR_3">
+      <Text>ｵｰﾀﾞｽﾃｰﾀｽ配賦ｸﾞﾗﾌ - ﾊﾞｯﾁﾊﾞﾗﾝｽ製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDA_STATUS_DISTR_2">
+      <Text>ｵｰﾀﾞｽﾃｰﾀｽ配賦ｸﾞﾗﾌ - ﾌﾟﾛｼﾞｪｸﾄに接続した製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_ORDER_STRUCTURES">
+      <Text>ｵｰﾀﾞ構成</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_TARDINESS">
+      <Text>ｵｰﾀﾞ遅延ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_TARDINESS_2">
+      <Text>ｵｰﾀﾞ遅延ｸﾞﾗﾌ - ﾊﾞｯﾁﾊﾞﾗﾝｽ製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_TARDINESS_1">
+      <Text>ｵｰﾀﾞ遅延ｸﾞﾗﾌ - ﾌﾟﾛｼﾞｪｸﾄに接続した製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDINESS_DISTR">
+      <Text>ｵｰﾀﾞ遅延配賦</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDINESS_DISTR_2">
+      <Text>ｵｰﾀﾞ遅延配賦</Text>
+    </Attribute>
+    <Attribute name="IDO_TEMPLATE_ROOT">
+      <Text>ｵｰﾀﾞﾃﾝﾌﾟﾚｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDO_ORDER">
+      <Text>ｵｰﾀﾞ基準ｵﾌﾞｼﾞｪｸﾄ</Text>
+    </Attribute>
+    <Attribute name="IDO_ORDER_ROOT">
+      <Text>ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_ORIG_FINISH_TIME">
+      <Text>当初終了日</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_462">
+      <Text>外注工程</Text>
+    </Attribute>
+    <Attribute name="IDI_WORK_CENTER_CODE_2">
+      <Text>外注ﾜｰｸｾﾝﾀ</Text>
+    </Attribute>
+    <Attribute name="IDI_ACCUMULATERESCAP_OVERBOOKED">
+      <Text>予約超過</Text>
+    </Attribute>
+    <Attribute name="IDI_OVERLAP_QUANTITY">
+      <Text>ｵｰﾊﾞﾗｯﾌﾟ数量</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_OVERLAP">
+      <Text>ｵｰﾊﾞﾗｯﾌﾟ時間</Text>
+    </Attribute>
+    <Attribute name="IDI_OVERLAP_TYPE">
+      <Text>ｵｰﾊﾞﾗｯﾌﾟ単位</Text>
+    </Attribute>
+    <Attribute name="IDI_OVERLOAD_FACTOR">
+      <Text>過負荷係数</Text>
+    </Attribute>
+    <Attribute name="IDI_OVERLOAD_MAX">
+      <Text>過負荷最大値</Text>
+    </Attribute>
+    <Attribute name="IDI_OVERLOAD_MIN">
+      <Text>過負荷最小値</Text>
+    </Attribute>
+    <Attribute name="IDI_OVERLOAD_ABSOLUTE">
+      <Text>過負荷時間</Text>
+    </Attribute>
+    <Attribute name="IDA_OVERVIEW">
+      <Text>一覧</Text>
+    </Attribute>
+    <Attribute name="IDA_PAIRWISE_EXCHANGE">
+      <Text>一対の交換</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPER_COLOR_FROM_PALETTE_1">
+      <Text>ﾊﾟﾚｯﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_PARALLELL">
+      <Text>ｵｰﾊﾞｰﾗｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDA_SEARCH_PARENT">
+      <Text>親</Text>
+    </Attribute>
+    <Attribute name="IDI_PARENT_OBJNAME">
+      <Text>親名</Text>
+    </Attribute>
+    <Attribute name="IDI_PARENT_OBJNAME_DISPLAY">
+      <Text>親名</Text>
+    </Attribute>
+    <Attribute name="IDI_PARENT_CALNAME">
+      <Text>親のｶﾚﾝﾀﾞ名</Text>
+    </Attribute>
+    <Attribute name="IDI_PARK_REASON">
+      <Text>保留理由</Text>
+    </Attribute>
+    <Attribute name="IDI_PART_DESC">
+      <Text>品目名称</Text>
+    </Attribute>
+    <Attribute name="IDI_PART_NO">
+      <Text>品目番号</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_FOR_PART_NO">
+      <Text>品目番号</Text>
+    </Attribute>
+    <Attribute name="IDI_PART_QTY_SHIPPED">
+      <Text>出荷済数量</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPER_COLOR_FROM_OPSTLIST_3">
+      <Text>部分報告</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_STARTED">
+      <Text>部分報告</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_STARTED_1">
+      <Text>部分報告ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_RESBRK_DRDR_SETTING_3">
+      <Text>部分報告又は全数報告</Text>
+    </Attribute>
+    <Attribute name="IDS_PARTSCHEDULED">
+      <Text>部分ｽｹｼﾞｭｰﾙ済</Text>
+    </Attribute>
+    <Attribute name="IDI_PAST_DUE_LOAD">
+      <Text>過去納期負荷</Text>
+    </Attribute>
+    <Attribute name="IDI_PAST_DUE_ORDERS">
+      <Text>過去納期ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_PASTDUE_TIME">
+      <Text>過去納期時間</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDINESS_DISTR_8">
+      <Text>過去納期ｵｰﾀﾞ詳細</Text>
+    </Attribute>
+    <Attribute name="IDA_PASTDUE_DISTR">
+      <Text>過去納期ｵｰﾀﾞ配賦</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDINESS_DISTR_7">
+      <Text>過去納期ｵｰﾀﾞ配賦</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_GRAPH_TYPE_2_1">
+      <Text>過去納期ｵｰﾀﾞ配賦ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDINESS_DISTR_6">
+      <Text>過去納期ｵｰﾀﾞｽﾃｰﾀｽ詳細</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDINESS_DISTR_5">
+      <Text>過去納期ｵｰﾀﾞｽﾃｰﾀｽ配賦</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_GRAPH_TYPE_2_2">
+      <Text>過去納期ｵｰﾀﾞｽﾃｰﾀｽ配賦ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER_4">
+      <Text>過去納期ｵｰﾀﾞ間時間</Text>
+    </Attribute>
+    <Attribute name="IDI_OVERLAP_TYPE_2">
+      <Text>比率(%)</Text>
+    </Attribute>
+    <Attribute name="IDS_PERCENT">
+      <Text>比率(%)</Text>
+    </Attribute>
+    <Attribute name="IDI_EARLINESS_PERCENT">
+      <Text>早期/定刻ｵｰﾀﾞに対する比率</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDINESS_PERCENT">
+      <Text>遅延ｵｰﾀﾞに対する比率</Text>
+    </Attribute>
+    <Attribute name="IDI_SETUP_MATRIX_OPTIONS_2">
+      <Text>段取を並行して実行</Text>
+    </Attribute>
+    <Attribute name="IDI_SETUP_MATRIX_OPTIONS_1">
+      <Text>段取を順番に実行</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_1_5">
+      <Text>取消後のｸﾘｰﾝｱｯﾌﾟを実行しています...</Text>
+    </Attribute>
+    <Attribute name="IDI_PERSON_ID">
+      <Text>個人ID</Text>
+    </Attribute>
+    <Attribute name="IDI_PERSON_NAME">
+      <Text>個人名</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_LABORCAP_TOOLTIP_1">
+      <Text>円ｸﾞﾗﾌﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_LABRESCAP_TOOLTIP_1">
+      <Text>円ｸﾞﾗﾌﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_MACHCAP_TOOLTIP_1">
+      <Text>円ｸﾞﾗﾌﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_MACHRESCAP_TOOLTIP_1">
+      <Text>円ｸﾞﾗﾌﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_TOOLCAP_TOOLTIP_1">
+      <Text>円ｸﾞﾗﾌﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_TOOLINSTCAP_TOOLTIP_1">
+      <Text>円ｸﾞﾗﾌﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDA_UNFIRM">
+      <Text>計画</Text>
+    </Attribute>
+    <Attribute name="IDI_RESBRK_DRDR_SETTING_1">
+      <Text>計画</Text>
+    </Attribute>
+    <Attribute name="IDI_PLANNED_FINISH">
+      <Text>計画終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_OPERATION_STRUCTURE_PLOT_OPT_1">
+      <Text>計画明細</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_OPER_PRELIMINARY_LINE">
+      <Text>計画明細</Text>
+    </Attribute>
+    <Attribute name="IDI_PLANNED_START">
+      <Text>計画開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_PLANNER">
+      <Text>計画担当者</Text>
+    </Attribute>
+    <Attribute name="IDI_PLANNER_NAME">
+      <Text>計画担当者名</Text>
+    </Attribute>
+    <Attribute name="IDS_FILE_IN_USE_2">
+      <Text>ﾌｧｲﾙを閉じてｴｸｽﾎﾟｰﾄ操作を再度行ってください。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_GRAPH_LOAD_2">
+      <Text>.Netﾗﾝﾀｲﾑがｲﾝｽﾄｰﾙされていること、次のDLLﾌｧｲﾙがCBSｸﾗｲｱﾝﾄと同じﾃﾞｨﾚｸﾄﾘで利用可能であること、及び必要なｾｷｭﾘﾃｨ設定が設定されていることを確認してください。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_IFSAP_LOAD_1">
+      <Text>IFS .NetｱｸｾｽﾌﾟﾛﾊﾞｲﾀﾞDLLﾌｧｲﾙが関連ﾃﾞｨﾚｸﾄﾘで利用可能であることを確認してください。</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_USERDEF_QUERY_NAME">
+      <Text>保存した設定の名称を入力してください。</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_NEW_SCENARIO">
+      <Text>新規ｼﾅﾘｵの名称を入力してください。</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_RES_LOAD_TEXT">
+      <Text>ﾌﾟﾛｯﾄ資源稼働率</Text>
+    </Attribute>
+    <Attribute name="IDA_PLOT_SETTINGS">
+      <Text>ﾌﾟﾛｯﾄ設定</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_EXT_GANTTPLOT_SETTING">
+      <Text>ﾌﾟﾛｯﾄ設定</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_IDA_PLOT_SETTINGS">
+      <Text>ﾌﾟﾛｯﾄ設定</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_SITE_PORT">
+      <Text>ﾎﾟｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDSERV_SITE_PORT">
+      <Text>ﾎﾟｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_SOCKET_LISTENING_PORT">
+      <Text>ﾎﾟｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDA_GANTT_RES">
+      <Text>可能資源</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_POSSIBLE">
+      <Text>可能資源</Text>
+    </Attribute>
+    <Attribute name="IDO_SCENARIOS_1">
+      <Text>設定ｼﾅﾘｵ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_ACTIVITY_PRECEDENCE_LINE">
+      <Text>先行明細</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_PRECEDENCE_LINE">
+      <Text>先行明細</Text>
+    </Attribute>
+    <Attribute name="IDI_PRECEDING">
+      <Text>先行ｱｸﾃｨﾋﾞﾃｨ</Text>
+    </Attribute>
+    <Attribute name="IDI_PRECEDING_ITEM_NO">
+      <Text>先行明細</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHEDULE_BEF">
+      <Text>先行工程ｽｹｼﾞｭｰﾙ済</Text>
+    </Attribute>
+    <Attribute name="IDS_UNSCHEDULE_BEF">
+      <Text>先行工程未ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_DT_PRELIMINARY">
+      <Text>仮作業時間</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_1_1">
+      <Text>取消を準備しています...</Text>
+    </Attribute>
+    <Attribute name="IDS_DOCK_MSG">
+      <Text>ｳｨﾝﾄﾞｳの結合を防ぐにはCTRLﾎﾞﾀﾝを押したままにします。</Text>
+    </Attribute>
+    <Attribute name="IDI_PREV_TIME_START">
+      <Text>前回開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTO_SCHED_DISPATCH_RULE_5">
+      <Text>前回納品計画順序を優先</Text>
+    </Attribute>
+    <Attribute name="IDI_ADJ_SCHED_KEEP_SEQUENCE_1">
+      <Text>報告済工程を優先</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTOSCHED_ADJSCHED_KEEPSEQ_1">
+      <Text>報告済工程を優先</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_RUN_CALC">
+      <Text>処理時間</Text>
+    </Attribute>
+    <Attribute name="IDI_PRODUCTIVE_LT_FACTOR">
+      <Text>製造LT係数</Text>
+    </Attribute>
+    <Attribute name="IDI_PRODUCER_ROLE">
+      <Text>ﾌﾟﾛﾃﾞｭｰｻ</Text>
+    </Attribute>
+    <Attribute name="IDI_PROD_FAMILY">
+      <Text>製品ﾌｧﾐﾘID</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_PROD_FAMILY_NAME">
+      <Text>製品ﾌｧﾐﾘID</Text>
+    </Attribute>
+    <Attribute name="IDI_PROD_FAMILY_DESC">
+      <Text>製品ﾌｧﾐﾘ名称</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_PROD_LINE_NO">
+      <Text>製造ﾗｲﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_SUPPLY_TYPE_16">
+      <Text>繰返生産要求</Text>
+    </Attribute>
+    <Attribute name="IDI_SUPPLY_TYPE_15">
+      <Text>製造ﾗｲﾝ計画供給</Text>
+    </Attribute>
+    <Attribute name="IDI_PRODUCTIVE_LEADTIME">
+      <Text>変動ﾘｰﾄﾞﾀｲﾑ</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_PROGERR">
+      <Text>Progerror(連絡先ﾍﾞﾝﾀﾞ)</Text>
+    </Attribute>
+    <Attribute name="IDI_PROGRAM_DESC">
+      <Text>ﾌﾟﾛｸﾞﾗﾑ名称</Text>
+    </Attribute>
+    <Attribute name="IDS_PROGRAM_FILE">
+      <Text>ﾌﾟﾛｸﾞﾗﾑﾌｧｲﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_PROGRAM_ID">
+      <Text>ﾌﾟﾛｸﾞﾗﾑID</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_REALADJUST">
+      <Text>調整時進捗</Text>
+    </Attribute>
+    <Attribute name="IDO_PROJECT">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_ACTIVITY_LINE">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄｱｸﾃｨﾋﾞﾃｨ期間</Text>
+    </Attribute>
+    <Attribute name="IDA_PROJECT_SO_DISTRIBUTION">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄに接続する製造ｵｰﾀﾞ配賦</Text>
+    </Attribute>
+    <Attribute name="IDA_PROJECT_SO_DISTRIBUTION_1">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄに接続する製造ｵｰﾀﾞ配賦ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDI_PROJECT_DESC">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄ名称</Text>
+    </Attribute>
+    <Attribute name="IDI_PROJECT_ID">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄID</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_PROJECT_ID">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄID</Text>
+    </Attribute>
+    <Attribute name="IDI_PROJECT_NAME">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄ名称</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_PROJECTS">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄ</Text>
+    </Attribute>
+    <Attribute name="IDO_PROJECTS">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄ</Text>
+    </Attribute>
+    <Attribute name="IDO_PROMISEPURCHASEORDER">
+      <Text>確約購買ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_PROMISEPURCHASEORDERS">
+      <Text>確約購買ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_PROMISESHOPORDER">
+      <Text>確約製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_PROMISESHOPORDERS">
+      <Text>確約製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_PROMISE_SHOP_ORDERS">
+      <Text>確定製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_PROPERTY_LIST">
+      <Text>ﾌﾟﾛﾊﾟﾃｨﾘｽﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_PROPERTY_NAME">
+      <Text>ﾌﾟﾛﾊﾟﾃｨ名</Text>
+    </Attribute>
+    <Attribute name="IDI_PROPERTY_VALUE">
+      <Text>ﾌﾟﾛﾊﾟﾃｨ値</Text>
+    </Attribute>
+    <Attribute name="IDI_PURCH_ORD_REQ_NO">
+      <Text>購買ｵｰﾀﾞ/要求番号</Text>
+    </Attribute>
+    <Attribute name="IDI_SUPPLY_TYPE_4">
+      <Text>購買ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_SUPPLY_TYPE_2">
+      <Text>購買ｵｰﾀﾞ引当</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_438">
+      <Text>数量</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_454">
+      <Text>数量</Text>
+    </Attribute>
+    <Attribute name="IDI_QUANTITY">
+      <Text>数量</Text>
+    </Attribute>
+    <Attribute name="IDI_QTY_COMPLETE">
+      <Text>完了数量</Text>
+    </Attribute>
+    <Attribute name="IDI_QTY_DUE">
+      <Text>手配数量</Text>
+    </Attribute>
+    <Attribute name="IDI_QUANTITY_DUE">
+      <Text>手配数量</Text>
+    </Attribute>
+    <Attribute name="IDI_QTY_ONHAND">
+      <Text>手持在庫数量</Text>
+    </Attribute>
+    <Attribute name="IDI_QTY_REMAINING">
+      <Text>残数量</Text>
+    </Attribute>
+    <Attribute name="IDI_QTY_SCRAPPED">
+      <Text>廃棄済数量</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_314">
+      <Text>検索</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_QUEUE">
+      <Text>待時間</Text>
+    </Attribute>
+    <Attribute name="IDS_QUIT">
+      <Text>終了ｽｹｼﾞｭｰﾘﾝｸﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_RAMP">
+      <Text>Ramp</Text>
+    </Attribute>
+    <Attribute name="IDM_REMOVE">
+      <Text>削除(&amp;M)</Text>
+    </Attribute>
+    <Attribute name="IDA_JITCOMP_UNBOOK">
+      <Text>資源再割当</Text>
+    </Attribute>
+    <Attribute name="IDA_RESCHEDULE_UNBOOK">
+      <Text>資源再割当</Text>
+    </Attribute>
+    <Attribute name="IDA_SCHEDULE_UNBOOK">
+      <Text>資源再割当</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_RESOURCE_ASSIGN_2">
+      <Text>資源再割当</Text>
+    </Attribute>
+    <Attribute name="IDA_READ_BASICDATA">
+      <Text>基本情報読込</Text>
+    </Attribute>
+    <Attribute name="IDA_READ_ORDERS">
+      <Text>ｵｰﾀﾞ読込</Text>
+    </Attribute>
+    <Attribute name="IDI_BREAKDOWN_REASON">
+      <Text>理由</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_REASSIGN_LABOR_RES">
+      <Text>従業員再割当</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_REASSIGN_TOOL_INST">
+      <Text>ﾂｰﾙｲﾝｽﾀﾝｽ再割当</Text>
+    </Attribute>
+    <Attribute name="IDI_BATCH_SIZE">
+      <Text>ﾚｼﾋﾟﾊﾞｯﾁｻｲｽﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_4">
+      <Text>ﾘﾘｰｽされた工程の情報を記録しています...</Text>
+    </Attribute>
+    <Attribute name="IDA_SCENARIO_BUTTON_1">
+      <Text>ｶﾞﾝﾄﾁｬｰﾄのﾃﾞｰﾀを更新</Text>
+    </Attribute>
+    <Attribute name="IDA_REFRESH_GRAPH">
+      <Text>ｸﾞﾗﾌ再表示</Text>
+    </Attribute>
+    <Attribute name="IDI_DOP_REL_NUM">
+      <Text>連番</Text>
+    </Attribute>
+    <Attribute name="IDIS_BATCH_BALANCE_RELATIONS">
+      <Text>関連ﾊﾞｯﾁﾊﾞﾗﾝｽID</Text>
+    </Attribute>
+    <Attribute name="IDIS_DOP_RELATIONS">
+      <Text>関連手配ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDIS_AVAIL">
+      <Text>関連ｵﾌﾞｼﾞｪｸﾄ</Text>
+    </Attribute>
+    <Attribute name="IDIS_ACTIVITY_DOP_RELATIONS">
+      <Text>関連ﾌﾟﾛｼﾞｪｸﾄｱｸﾃｨﾋﾞﾃｨ</Text>
+    </Attribute>
+    <Attribute name="IDIS_ACTIVITY_RELATIONS">
+      <Text>関連ﾌﾟﾛｼﾞｪｸﾄｱｸﾃｨﾋﾞﾃｨ</Text>
+    </Attribute>
+    <Attribute name="IDIS_PROJECT_RELATIONS">
+      <Text>関連ﾌﾟﾛｼﾞｪｸﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_PROMISE_DOP_RELATIONS">
+      <Text>関連確約需要ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_DEPT">
+      <Text>関連部門</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_PLANNER">
+      <Text>関連計画担当者</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_PROD_FAMILY">
+      <Text>関連製品ﾌｧﾐﾘ</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_PROD_LINE">
+      <Text>関連製造ﾗｲﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_WORK_CENTER">
+      <Text>関連ﾜｰｸｾﾝﾀ</Text>
+    </Attribute>
+    <Attribute name="IDIS_SETUP_WORKCENTER">
+      <Text>関連ﾜｰｸｾﾝﾀ</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_BATCH_BALANCE">
+      <Text>関連ﾊﾞｯﾁﾊﾞﾗﾝｽID</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_PROJECT">
+      <Text>関連ﾌﾟﾛｼﾞｪｸﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_RELATIONS">
+      <Text>関連:</Text>
+    </Attribute>
+    <Attribute name="IDA_FIRM">
+      <Text>ﾘﾘｰｽ</Text>
+    </Attribute>
+    <Attribute name="IDA_CBS_RELEASE">
+      <Text>ﾘﾘｰｽｻｰﾊﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_FIRMTO">
+      <Text>ﾘﾘｰｽ先</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPER_COLOR_FROM_OPSTLIST_2">
+      <Text>ﾘﾘｰｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_RESBRK_DRDR_SETTING_2">
+      <Text>ﾘﾘｰｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_FIRM">
+      <Text>ﾘﾘｰｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_RELEASED">
+      <Text>ﾘﾘｰｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTO_SCHED_SELECTION_3">
+      <Text>ﾘﾘｰｽ済工程</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_OPER_FIRM_MARK">
+      <Text>ﾘﾘｰｽ済工程にﾏｰｸされています。</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_RELEASED_1">
+      <Text>ﾘﾘｰｽ済ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_12">
+      <Text>工程をﾘﾘｰｽしています...</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_15">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽでﾘﾘｰｽ済ｽﾃｰﾀｽのｵｰﾀﾞをﾘﾘｰｽしています...</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_453">
+      <Text>残数量</Text>
+    </Attribute>
+    <Attribute name="IDI_BASE_REMTIME_ON_1">
+      <Text>入庫残数量</Text>
+    </Attribute>
+    <Attribute name="IDS_ALERTWND_REMTIME">
+      <Text>残ｾｯｼｮﾝ時間</Text>
+    </Attribute>
+    <Attribute name="IDA_QUERY_REMOVE">
+      <Text>削除</Text>
+    </Attribute>
+    <Attribute name="IDA_REMOVE_MTRLROLE">
+      <Text>削除</Text>
+    </Attribute>
+    <Attribute name="IDA_REMOVE_ROLE">
+      <Text>削除</Text>
+    </Attribute>
+    <Attribute name="IDS_YESDEL">
+      <Text>削除</Text>
+    </Attribute>
+    <Attribute name="IDA_PRECEDENCE_DEL_ALL">
+      <Text>既定の全先行制約を削除</Text>
+    </Attribute>
+    <Attribute name="IDA_PRECEDENCE_DEL">
+      <Text>既定の先行制約を削除</Text>
+    </Attribute>
+    <Attribute name="IDM_PRECEDENCE_DEL_ALL">
+      <Text>先行を全て削除(&amp;A)</Text>
+    </Attribute>
+    <Attribute name="IDI_NEW_PLOT_2">
+      <Text>ﾕｰｻﾞ定義ﾌﾟﾛｯﾄ設定を削除中</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_NEW_SCENARIO_4">
+      <Text>ﾕｰｻﾞ定義ｼﾅﾘｵを削除中</Text>
+    </Attribute>
+    <Attribute name="IDA_RENAME">
+      <Text>名称変更</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_411">
+      <Text>名称変更</Text>
+    </Attribute>
+    <Attribute name="IDA_REORGANIZE">
+      <Text>再編成</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_303">
+      <Text>再編成</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPER_COLOR_FROM_OPSTLIST_4">
+      <Text>報告日</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_REPORTED">
+      <Text>報告日</Text>
+    </Attribute>
+    <Attribute name="IDI_LABOR_REPORTED">
+      <Text>作業者作業時間累計</Text>
+    </Attribute>
+    <Attribute name="IDI_LABOR_SETUP_REPORTED">
+      <Text>作業者段取時間累計</Text>
+    </Attribute>
+    <Attribute name="IDI_MACH_REPORTED">
+      <Text>機械稼動時間累計</Text>
+    </Attribute>
+    <Attribute name="IDI_MACH_SETUP_REPORTED">
+      <Text>機械段取時間累計</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_REPORTED_1">
+      <Text>報告ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_BASE_REMTIME_ON_2">
+      <Text>報告時間</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_451">
+      <Text>報告</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NORESBOOKER">
+      <Text>要求された資源を予約しない工程が要求にあります。</Text>
+    </Attribute>
+    <Attribute name="IDA_RESCHEDULE">
+      <Text>再計画する</Text>
+    </Attribute>
+    <Attribute name="IDI_RESCHEDULE_CLEANUP_2">
+      <Text>解放された資源時間を活用するために他の工程を再計画します。</Text>
+    </Attribute>
+    <Attribute name="IDI_UNSCHEDULE_CLEANUP_2">
+      <Text>解放された資源時間を活用するために他の工程を再計画します。</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_SELECTION_3">
+      <Text>選択したﾘﾘｰｽ済ｵﾌﾞｼﾞｪｸﾄを再計画します。</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_SELECTION_2">
+      <Text>選択したｽｹｼﾞｭｰﾙ済ｵﾌﾞｼﾞｪｸﾄを再計画します。</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_RESCHEDULE_1">
+      <Text>選択したｽｹｼﾞｭｰﾙ済ｵﾌﾞｼﾞｪｸﾄを再計画します。</Text>
+    </Attribute>
+    <Attribute name="IDI_BREAK_REASSIGN">
+      <Text>再計画済工程</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_3_2">
+      <Text>影響を受ける工程を再計画中...</Text>
+    </Attribute>
+    <Attribute name="IDI_RESCHEDULE_CLEANUP">
+      <Text>資源超過を再計画中です。</Text>
+    </Attribute>
+    <Attribute name="IDA_RESET">
+      <Text>ﾘｾｯﾄ</Text>
+    </Attribute>
+    <Attribute name="IDO_RESOURCE">
+      <Text>資源</Text>
+    </Attribute>
+    <Attribute name="IDO_RES_1">
+      <Text>資源</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_BOOKED_3">
+      <Text>資源(3)</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_BOOKED_4">
+      <Text>資源(4)</Text>
+    </Attribute>
+    <Attribute name="IDO_RES_ADJUST">
+      <Text>資源(調整可能)</Text>
+    </Attribute>
+    <Attribute name="IDO_RES_N">
+      <Text>資源(ﾌﾟｰﾙﾀｲﾌﾟ)</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_AVAILABILITY">
+      <Text>資源ｱﾍﾞｲﾗﾋﾞﾘﾃｨ</Text>
+    </Attribute>
+    <Attribute name="IDO_RESOURCE_BREAK">
+      <Text>資源超過</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_RESOURCE_BREAKS">
+      <Text>資源超過一覧</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_BREAKDOWN">
+      <Text>資源超過一覧</Text>
+    </Attribute>
+    <Attribute name="IDO_BREAK_ROOT">
+      <Text>資源超過一覧</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_CAPACITY">
+      <Text>資源能力</Text>
+    </Attribute>
+    <Attribute name="IDI_COMBOGENERATOR_OPTION">
+      <Text>資源組合せ</Text>
+    </Attribute>
+    <Attribute name="IDI_EFFICIENCY">
+      <Text>資源効率</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_UTILIZATION">
+      <Text>資源負荷</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_MODE">
+      <Text>資源ﾓｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_RESOURCE_ORG">
+      <Text>資源組織</Text>
+    </Attribute>
+    <Attribute name="IDO_RESOURCE_ROOT">
+      <Text>資源ﾙｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_SELECTION">
+      <Text>資源選択</Text>
+    </Attribute>
+    <Attribute name="IDS_RESOURCE_SELECTION">
+      <Text>資源選択</Text>
+    </Attribute>
+    <Attribute name="IDO_RES_ROLE_CONSTR">
+      <Text>資源割当</Text>
+    </Attribute>
+    <Attribute name="IDO_RES_ROLE_FREE">
+      <Text>資源割当</Text>
+    </Attribute>
+    <Attribute name="IDO_RES_ROLE_CAP">
+      <Text>資源割当(能力)</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCES">
+      <Text>資源</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_NR">
+      <Text>資源</Text>
+    </Attribute>
+    <Attribute name="IDO_RES_ROOT">
+      <Text>資源</Text>
+    </Attribute>
+    <Attribute name="IDI_RESPONSIBLE_ID">
+      <Text>責任者ID</Text>
+    </Attribute>
+    <Attribute name="IDI_RESPONSIBLE_NAME">
+      <Text>責任者名</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_13">
+      <Text>ﾘﾘｰｽｽﾃｰﾀｽを回復中...</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_1_3">
+      <Text>前の資源割当を回復中...</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_1_4">
+      <Text>前回納品計画を回復中...</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOTIMEMATCH">
+      <Text>結果の終了時間が一致しません。</Text>
+    </Attribute>
+    <Attribute name="IDS_DATA_BLOCKS_GET">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽから %d ﾃﾞｰﾀﾌﾞﾛｯｸを取得中...</Text>
+    </Attribute>
+    <Attribute name="IDS_DATA_BLOCK_GET">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽからﾃﾞｰﾀﾌﾞﾛｯｸ %d を取得中...</Text>
+    </Attribute>
+    <Attribute name="IDI_LOAD_TIME_READ">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽからﾃﾞｰﾀを取得中です。</Text>
+    </Attribute>
+    <Attribute name="IDS_DATA_BLOCK_COUNT_GET">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽからﾃﾞｰﾀﾌﾞﾛｯｸ数を取得中...</Text>
+    </Attribute>
+    <Attribute name="IDI_ROLE_DROPDOWNLIST">
+      <Text>ﾛｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_ROLE_DETAIL">
+      <Text>ﾛｰﾙ詳細</Text>
+    </Attribute>
+    <Attribute name="IDI_ROLE_NAME_DEFINED">
+      <Text>ﾛｰﾙ名</Text>
+    </Attribute>
+    <Attribute name="IDS_ROLES">
+      <Text>ﾛｰﾙ:</Text>
+    </Attribute>
+    <Attribute name="IDI_OUTSIDE_OP_RPT_LEVEL">
+      <Text>みなし処理</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_447">
+      <Text>実行</Text>
+    </Attribute>
+    <Attribute name="IDI_RES_ROLE_TYPE_1">
+      <Text>実行</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTOSCHED_ADJSCHED">
+      <Text>次を使用してｽｹｼﾞｭｰﾙ調整を実行...</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_435">
+      <Text>実行係数</Text>
+    </Attribute>
+    <Attribute name="IDA_ADJUST_SCHED_KEEP_SEQ">
+      <Text>工程順序を保持ｵﾌﾟｼｮﾝを使用してｽｹｼﾞｭｰﾙ調整ﾌﾟﾛｾｽを実行。</Text>
+    </Attribute>
+    <Attribute name="IDA_ADJUST_SCHED_PRIORITIZE_REPORTED">
+      <Text>報告済工程を優先ｵﾌﾟｼｮﾝを使用してｽｹｼﾞｭｰﾙ調整ﾌﾟﾛｾｽを実行。</Text>
+    </Attribute>
+    <Attribute name="IDM_SORT">
+      <Text>ｿｰﾄ(&amp;O)</Text>
+    </Attribute>
+    <Attribute name="IDI_DEMAND_TYPE_2">
+      <Text>販売見積</Text>
+    </Attribute>
+    <Attribute name="IDI_SUPPLY_TYPE_21">
+      <Text>販売見積</Text>
+    </Attribute>
+    <Attribute name="IDI_GROUP_BUTTON_6">
+      <Text>土曜日</Text>
+    </Attribute>
+    <Attribute name="IDA_QUERY_SAVE">
+      <Text>保存</Text>
+    </Attribute>
+    <Attribute name="IDM_WORKSPACE_SAVE">
+      <Text>ﾜｰｸｽﾍﾟｰｽを保存(&amp;W)</Text>
+    </Attribute>
+    <Attribute name="IDA_SCENARIO_BUTTON_2">
+      <Text>新規ｼﾅﾘｵとして保存</Text>
+    </Attribute>
+    <Attribute name="IDS_EXP_SAVE_DLG">
+      <Text>ｴｸｽﾎﾟｰﾄに名前を付けて保存...</Text>
+    </Attribute>
+    <Attribute name="IDA_EXP_CHOICE_SAVE">
+      <Text>ｴｸｽﾎﾟｰﾄﾃﾞｰﾀをﾌｧｲﾙに保存</Text>
+    </Attribute>
+    <Attribute name="IDA_SAVE_FORMATTED">
+      <Text>ﾌｫｰﾏｯﾄされたﾌｧｲﾙを保存</Text>
+    </Attribute>
+    <Attribute name="IDA_SAVE_LANGUAGE">
+      <Text>言語ﾌｧｲﾙを保存</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_IDI_CBS_SAVEDLG">
+      <Text>ｽｹｼﾞｭｰﾙを保存</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_SAVE_NORELEASE">
+      <Text>ｽｹｼﾞｭｰﾙを保存</Text>
+    </Attribute>
+    <Attribute name="IDS_BATCH_LOAD_ALERT_6">
+      <Text>ｽｹｼﾞｭｰﾙを保存</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_SAVE_RELEASE">
+      <Text>ｽｹｼﾞｭｰﾙを保存し、ｻｰﾊﾞをﾘﾘｰｽ</Text>
+    </Attribute>
+    <Attribute name="IDM_WORKSPACE_SAVEAS">
+      <Text>ﾜｰｸｽﾍﾟｰｽに名前を付けて保存(&amp;K)...</Text>
+    </Attribute>
+    <Attribute name="IDA_FILE_SAVEAS">
+      <Text>ﾌｧｲﾙとして保存</Text>
+    </Attribute>
+    <Attribute name="IDS_QUIT_3">
+      <Text>終了する前にﾃﾞｰﾀﾍﾞｰｽに変更を保存しますか?</Text>
+    </Attribute>
+    <Attribute name="IDS_QUIT_4">
+      <Text>切り替える前にﾃﾞｰﾀﾍﾞｰｽに変更を保存しますか?</Text>
+    </Attribute>
+    <Attribute name="IDS_QUIT_1">
+      <Text>終了する前にﾌｧｲﾙに保存しますか?</Text>
+    </Attribute>
+    <Attribute name="IDS_QUIT_5">
+      <Text>切り替える前にﾌｧｲﾙに保存しますか?</Text>
+    </Attribute>
+    <Attribute name="IDA_SAVE">
+      <Text>保存...</Text>
+    </Attribute>
+    <Attribute name="IDM_SAVE">
+      <Text>保存...</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_OP_DROPDOWN">
+      <Text>保存したﾌﾟﾛｯﾄｵﾌﾟｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_STARTUP_SCENARIO_2">
+      <Text>保存したｼﾅﾘｵ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_IDS_SAVE_USERDEF_QUERY_NAME">
+      <Text>保存した設定</Text>
+    </Attribute>
+    <Attribute name="IDI_SAVED_QUERIES_DROPDOWN">
+      <Text>保存した設定</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_USERDEF_QUERY">
+      <Text>保存した設定</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_USERDEF_QUERY_DELETE">
+      <Text>名称&apos;%s&apos;で保存した設定は削除されます。続けますか?</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SCHEDSAVE">
+      <Text>計画変更を保存中...</Text>
+    </Attribute>
+    <Attribute name="IDS_DATA_BLOCK_SAVING">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽにﾃﾞｰﾀﾌﾞﾛｯｸ %d を保存中...</Text>
+    </Attribute>
+    <Attribute name="IDM_WINDOW_SCHEDULINGSTATISTICS">
+      <Text>ｽｹｼﾞｭｰﾙ統計(&amp;H)</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_NEW_SCENARIO_8">
+      <Text>ｼﾅﾘｵにｵﾌﾞｼﾞｪｸﾄがありません。</Text>
+    </Attribute>
+    <Attribute name="IDO_SCENARIOS">
+      <Text>ｼﾅﾘｵ</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_SETUPTIME_AFTERSEQ">
+      <Text>段取時間後</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_SETUPTIME_BEFORESEQ">
+      <Text>段取時間前</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHEDULABLE">
+      <Text>ｽｹｼﾞｭｰﾙ可能</Text>
+    </Attribute>
+    <Attribute name="IDA_SCHEDULE">
+      <Text>ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_NAME">
+      <Text>ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDO_APPL">
+      <Text>ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDO_SCHEDULE">
+      <Text>ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDO_WORK_TIME_SCHEDULE">
+      <Text>ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDA_ADJUST_SWITCH">
+      <Text>ｽｹｼﾞｭｰﾙ調整</Text>
+    </Attribute>
+    <Attribute name="IDA_ADJUST_SWITCH_ON">
+      <Text>ｽｹｼﾞｭｰﾙ調整</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SCHEDSAVED">
+      <Text>ｽｹｼﾞｭｰﾙ変更は正常に保存されました。</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_DESC">
+      <Text>ｽｹｼﾞｭｰﾙ名称</Text>
+    </Attribute>
+    <Attribute name="IDO_WORK_TIME_EXCEPTIONS">
+      <Text>ｽｹｼﾞｭｰﾙ例外</Text>
+    </Attribute>
+    <Attribute name="IDIS_SCHEDULE_USERS">
+      <Text>含まれるｽｹｼﾞｭｰﾙ:</Text>
+    </Attribute>
+    <Attribute name="IDA_SCHED_OVERVIEW">
+      <Text>ｽｹｼﾞｭｰﾙ一覧</Text>
+    </Attribute>
+    <Attribute name="IDA_SCHED_PERFORMANCE">
+      <Text>ｽｹｼﾞｭｰﾙ効率</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_GRAPH_SELECTION_1_1">
+      <Text>ｽｹｼﾞｭｰﾙ効率</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_SCHED_PERF">
+      <Text>ｽｹｼﾞｭｰﾙ効率ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_SCHED_PERF_2">
+      <Text>ｽｹｼﾞｭｰﾙ効率ｸﾞﾗﾌ - ﾊﾞｯﾁﾊﾞﾗﾝｽ製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_SCHED_PERF_1">
+      <Text>ｽｹｼﾞｭｰﾙ効率ｸﾞﾗﾌ - ﾌﾟﾛｼﾞｪｸﾄに接続した製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDA_SCHEDSETTINGS">
+      <Text>ｽｹｼﾞｭｰﾙ設定</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_305">
+      <Text>ｽｹｼﾞｭｰﾙ設定</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_406">
+      <Text>ｽｹｼﾞｭｰﾙ設定</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPSHOTS">
+      <Text>ｽｹｼﾞｭｰﾙｽﾅｯﾌﾟｼｮｯﾄ</Text>
+    </Attribute>
+    <Attribute name="IDO_DYN_STATBAR">
+      <Text>ｽｹｼﾞｭｰﾙｽﾃｰﾀｽ</Text>
+    </Attribute>
+    <Attribute name="IDO_PLSTAT">
+      <Text>ｽｹｼﾞｭｰﾙｽﾃｰﾀｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_TRANS_TIME">
+      <Text>運搬時間をｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHEDULE_ALL">
+      <Text>全てｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDA_JIT">
+      <Text>最遅ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHCOST">
+      <Text>ｽｹｼﾞｭｰﾙ原価</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SAVE_NOTPLANNED">
+      <Text>ｽｹｼﾞｭｰﾙに未計画作業があります!</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHEDULE_VALIDATED">
+      <Text>ｽｹｼﾞｭｰﾙの整合性検証が完了しました。</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_SELECTION_4">
+      <Text>選択した無限負荷ｽｹｼﾞｭｰﾙ済ｵﾌﾞｼﾞｪｸﾄをｽｹｼﾞｭｰﾙします。</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_SELECTION_1">
+      <Text>選択した未ｽｹｼﾞｭｰﾙｵﾌﾞｼﾞｪｸﾄをｽｹｼﾞｭｰﾙします。</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_SCHEDULE_1">
+      <Text>選択した未ｽｹｼﾞｭｰﾙｵﾌﾞｼﾞｪｸﾄをｽｹｼﾞｭｰﾙします。</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_442">
+      <Text>ｽｹｼﾞｭｰﾙ済</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPER_COLOR_FROM_OPSTLIST_1">
+      <Text>ｽｹｼﾞｭｰﾙ済</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_SCHEDULED">
+      <Text>ｽｹｼﾞｭｰﾙ済</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHEDULED">
+      <Text>ｽｹｼﾞｭｰﾙ済</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_429">
+      <Text>ｽｹｼﾞｭｰﾙ済ﾊﾞｯﾁﾛｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_BATCH_LOAD_ALERT_1">
+      <Text>ｽｹｼﾞｭｰﾙ済ﾊﾞｯﾁﾛｰﾄﾞ処理中...</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTO_SCHED_SELECTION_2">
+      <Text>ｽｹｼﾞｭｰﾙ済工程</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_GRAPH_SELECTION_1_4">
+      <Text>計画ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_GRAPH_SELECTION_4">
+      <Text>計画ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_SCHEDULED_1">
+      <Text>計画ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_SETUP_ACTUAL">
+      <Text>段取時間</Text>
+    </Attribute>
+    <Attribute name="IDI_SEL_SEQOPERS_BASED_ON_4">
+      <Text>開始/終了予定日</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_SCHEDTOUNSCHED">
+      <Text>ｽｹｼﾞｭｰﾙ済から未ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDS_BATCH_LOAD_ALERT_2">
+      <Text>ｽｹｼﾞｭｰﾙ済ﾊﾞｯﾁﾛｰﾄﾞ処理を %d 秒後に開始します。</Text>
+    </Attribute>
+    <Attribute name="IDO_WORK_TIME_SCHEDULES">
+      <Text>ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_LOAD_4">
+      <Text>作業ｵｰﾀﾞ対話型ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_1">
+      <Text>ｽｹｼﾞｭｰﾘﾝｸﾞ完了</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULING_DIRECTION">
+      <Text>計画方式</Text>
+    </Attribute>
+    <Attribute name="IDI_HORIZON">
+      <Text>ｽｹｼﾞｭｰﾙ期間</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_8">
+      <Text>工程ｽｹｼﾞｭｰﾙ中...</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_RESULT">
+      <Text>ｽｹｼﾞｭｰﾙ結果</Text>
+    </Attribute>
+    <Attribute name="IDI_STARTUP_SCENARIO">
+      <Text>ｼﾅﾘｵをｽｹｼﾞｭｰﾙして開始時にﾛｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_SERVER_CONTROL">
+      <Text>ｽｹｼﾞｭｰﾙｻｰﾊﾞｺﾝﾄﾛｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDSERV_SITE">
+      <Text>ｽｹｼﾞｭｰﾙｻｰﾊﾞｻｲﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_RTO_BUSY">
+      <Text>ｽｹｼﾞｭｰﾙｻｰﾊﾞがﾋﾞｼﾞｰです。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_RTO_IDLEOUT">
+      <Text>ｽｹｼﾞｭｰﾙｻｰﾊﾞの待機時間が長すぎます。ﾛｯｸが解放されました。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_RTO_WAITOUT">
+      <Text>ｽｹｼﾞｭｰﾙｻｰﾊﾞは他のﾕｰｻﾞがﾛｯｸしています。</Text>
+    </Attribute>
+    <Attribute name="IDI_SETUP_MATRIX_OPTIONS">
+      <Text>段取時間のｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDM_SETTINGS_SCHEDULING">
+      <Text>ｽｹｼﾞｭｰﾙ統計...</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDSTAT">
+      <Text>ｽｹｼﾞｭｰﾙｽﾃｰﾀｽ</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_RESCHEDULE">
+      <Text>ｽｹｼﾞｭｰﾙｱｸｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_SCHEDULE">
+      <Text>ｽｹｼﾞｭｰﾙｱｸｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_SELECTION">
+      <Text>ｽｹｼﾞｭｰﾙｱｸｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_SCHEDULINGSTATISTICS">
+      <Text>ｽｹｼﾞｭｰﾙ統計</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_NOVERSION">
+      <Text>ｽｹｼﾞｭｰﾙﾊﾞｰｼﾞｮﾝが変更されました。</Text>
+    </Attribute>
+    <Attribute name="IDS_QUIT_2">
+      <Text>ｽｹｼﾞｭｰﾙは終了します。</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_449">
+      <Text>廃棄</Text>
+    </Attribute>
+    <Attribute name="IDM_TIME_LEFT">
+      <Text>左にｽｸﾛｰﾙ(&amp;L) Ctrl+左</Text>
+    </Attribute>
+    <Attribute name="IDM_TIME_RIGHT">
+      <Text>右にｽｸﾛｰﾙ(&amp;R) Ctrl+右</Text>
+    </Attribute>
+    <Attribute name="IDS_SCROLLBACKWARD">
+      <Text>後方にｽｸﾛｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDS_SCROLLFORWARD">
+      <Text>前方にｽｸﾛｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDA_SCROLL_LEFT">
+      <Text>左にｽｸﾛｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDA_SCROLL_RIGHT">
+      <Text>右にｽｸﾛｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_309">
+      <Text>検索</Text>
+    </Attribute>
+    <Attribute name="IDM_SEARCH">
+      <Text>ﾂﾘｰを検索(&amp;T)...</Text>
+    </Attribute>
+    <Attribute name="IDA_SEARCH">
+      <Text>ﾂﾘｰを検索</Text>
+    </Attribute>
+    <Attribute name="IDI_GROUP_SECOND">
+      <Text>第2ｸﾞﾙｰﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPSHOT_COMP_SEL">
+      <Text>比較を選択</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_GRAPH_SELECTION">
+      <Text>ｸﾞﾗﾌを選択</Text>
+    </Attribute>
+    <Attribute name="IDI_SEL_SEQOPERS_BASED_ON">
+      <Text>関連に基づいて工程を選択</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_OPERS_BASED_ON">
+      <Text>関連に基づいて工程を選択</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_BACKPLAN">
+      <Text>選択したｵｰﾀﾞは最遅計画されます。</Text>
+    </Attribute>
+    <Attribute name="IDS_RESOURCE_NOT_AVAILABLE_1">
+      <Text>選択した資源は、この資源超過の最早開始時刻と要求日の間の期間に利用できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_3">
+      <Text>工程を選択しています...</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPLIST_SEL_CHANGE">
+      <Text>選択変更</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SENDFAILED">
+      <Text>ﾃﾞｰﾀを送信できませんでした!</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_SEND">
+      <Text>ﾃﾞｰﾀを送信中...</Text>
+    </Attribute>
+    <Attribute name="IDA_SEQUENCE_DO">
+      <Text>連番</Text>
+    </Attribute>
+    <Attribute name="IDI_TYPE_OF_SEQ">
+      <Text>順序工程基準</Text>
+    </Attribute>
+    <Attribute name="IDA_SEQUENCE">
+      <Text>連番作業負荷</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_456">
+      <Text>順序計画ｳｨｻﾞｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_SEQ_WINDOW">
+      <Text>順序計画ｳｨｻﾞｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_ASCENDING_DESCENDING">
+      <Text>順序計画方式</Text>
+    </Attribute>
+    <Attribute name="IDI_BATCHHOR">
+      <Text>順序計画期間</Text>
+    </Attribute>
+    <Attribute name="IDI_MAKESPAN">
+      <Text>順序計画期間</Text>
+    </Attribute>
+    <Attribute name="IDS_SEQ_DATES">
+      <Text>順代計画選択日付</Text>
+    </Attribute>
+    <Attribute name="IDS_SEQ_STATISTICS">
+      <Text>順序計画統計</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_IDO_SERVER_CONTROL">
+      <Text>ｻｰﾊﾞﾛｸﾞｳｨﾝﾄﾞｳ</Text>
+    </Attribute>
+    <Attribute name="IDI_MSGLOG_NOTIF">
+      <Text>ｻｰﾊﾞ通知</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_TIMEOUT">
+      <Text>ｾｯｼｮﾝﾀｲﾑｱｳﾄ</Text>
+    </Attribute>
+    <Attribute name="IDM_PRECEDENCE">
+      <Text>先行を設定(&amp;P)</Text>
+    </Attribute>
+    <Attribute name="IDA_PRECEDENCE_ALL">
+      <Text>既定の全先行制約を設定</Text>
+    </Attribute>
+    <Attribute name="IDA_SET_APP_MODE">
+      <Text>ｱﾌﾟﾘｹｰｼｮﾝ実行ﾓｰﾄﾞ設定</Text>
+    </Attribute>
+    <Attribute name="IDA_PRECEDENCE">
+      <Text>既定の先行制約を設定</Text>
+    </Attribute>
+    <Attribute name="IDM_PRECEDENCE_ALL">
+      <Text>先行を全て設定(&amp;A)</Text>
+    </Attribute>
+    <Attribute name="IDA_SETTINGS">
+      <Text>設定</Text>
+    </Attribute>
+    <Attribute name="IDI_SETTINGS">
+      <Text>設定</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_446">
+      <Text>設定</Text>
+    </Attribute>
+    <Attribute name="IDI_RES_ROLE_TYPE_2">
+      <Text>設定</Text>
+    </Attribute>
+    <Attribute name="IDA_BATCH_PROCESSING">
+      <Text>ﾊﾞｯﾁ処理設定...</Text>
+    </Attribute>
+    <Attribute name="IDI_UTILIZATION_SETUP">
+      <Text>段取負荷</Text>
+    </Attribute>
+    <Attribute name="IDI_SETUP_MATRIX">
+      <Text>ﾜｰｸｾﾝﾀ段取作業ﾏﾄﾘｯｸｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_SETUPOPT_USEOPNAME">
+      <Text>最適化設定</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_434">
+      <Text>段取時間</Text>
+    </Attribute>
+    <Attribute name="IDI_UTILIZATION_2">
+      <Text>段取時間負荷</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_OPER_SETUP">
+      <Text>段取時間</Text>
+    </Attribute>
+    <Attribute name="IDI_RES_ROLE_TYPE_3">
+      <Text>段取及び実行</Text>
+    </Attribute>
+    <Attribute name="IDI_AVAILABILITY_SHIFTS">
+      <Text>ｼﾌﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_SHOP_FLOOR_INFO">
+      <Text>作業実績情報</Text>
+    </Attribute>
+    <Attribute name="IDI_SHOP_FLOOR_INFO_COMBO">
+      <Text>作業実績情報</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_LOAD_3">
+      <Text>作業実績管理</Text>
+    </Attribute>
+    <Attribute name="IDO_SHOPORDER">
+      <Text>製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_ACTIVITY_RELATIONS">
+      <Text>製造ｵｰﾀﾞ割当</Text>
+    </Attribute>
+    <Attribute name="IDI_BATCH_BALANCE_RELATIONS">
+      <Text>製造ｵｰﾀﾞ割当</Text>
+    </Attribute>
+    <Attribute name="IDI_DOP_RELATIONS">
+      <Text>製造ｵｰﾀﾞ割当</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHED_PROJECT_CONNECTED_1">
+      <Text>製造ｵｰﾀﾞEPST</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHED_PROJECT_CONNECTED_ALAP_1">
+      <Text>製造ｵｰﾀﾞ要求日</Text>
+    </Attribute>
+    <Attribute name="IDI_SHOP_ORD_STATE">
+      <Text>製造ｵｰﾀﾞｽﾃｰﾀｽ</Text>
+    </Attribute>
+    <Attribute name="IDIS_SHOPORDERS">
+      <Text>製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_SHOP_ORDERS">
+      <Text>製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_SHOPORDERS">
+      <Text>製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_SHOPORDER_DETAIL">
+      <Text>製造ｵｰﾀﾞ詳細</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_420">
+      <Text>表示</Text>
+    </Attribute>
+    <Attribute name="IDM_SHOWPARENT">
+      <Text>親を表示(&amp;P)...</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_ROLES">
+      <Text>割当を表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_ROLES_1">
+      <Text>割当を表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOWBATCH">
+      <Text>特性を表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_CONTENTS">
+      <Text>内容を表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_EACH">
+      <Text>それぞれ表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_EARLY">
+      <Text>早期/定刻を表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_FLOWS">
+      <Text>ﾌﾛｰを表示</Text>
+    </Attribute>
+    <Attribute name="IDA_HIGHLIGHT_SHOW">
+      <Text>ﾊｲﾗｲﾄされたｵﾌﾞｼﾞｪｸﾄを表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_FLOWS_1">
+      <Text>資材を表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_DETAIL_TAB">
+      <Text>ｵﾌﾞｼﾞｪｸﾄ詳細ﾀﾌﾞを表示</Text>
+    </Attribute>
+    <Attribute name="IDM_SHOW_DETAIL_TAB">
+      <Text>ｵﾌﾞｼﾞｪｸﾄ詳細ﾀﾌﾞを表示</Text>
+    </Attribute>
+    <Attribute name="IDA_NEW_DETAIL_TAB">
+      <Text>ｵﾌﾞｼﾞｪｸﾄ詳細を新しいﾀﾌﾞに表示</Text>
+    </Attribute>
+    <Attribute name="IDM_NEW_DETAIL_TAB">
+      <Text>ｵﾌﾞｼﾞｪｸﾄ詳細を新しいﾀﾌﾞに表示</Text>
+    </Attribute>
+    <Attribute name="IDA_NEW_DETAIL_TABS">
+      <Text>ｵﾌﾞｼﾞｪｸﾄ詳細を個別のﾀﾌﾞに表示</Text>
+    </Attribute>
+    <Attribute name="IDM_NEW_DETAIL_TABS">
+      <Text>ｵﾌﾞｼﾞｪｸﾄ詳細を個別のﾀﾌﾞに表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_ORDERS">
+      <Text>ｵｰﾀﾞの表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOWPARENT">
+      <Text>親を表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_PROJECT_INFO">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄ情報を表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_RELATIONS">
+      <Text>関連を表示</Text>
+    </Attribute>
+    <Attribute name="IDA_RESOURCE_UTILIZATION">
+      <Text>資源負荷を表示...</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_SETUPMATRIX">
+      <Text>ﾜｰｸｾﾝﾀ段取作業ﾏﾄﾘｯｸｽを表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_SNAPSHOTS">
+      <Text>ｽﾅｯﾌﾟｼｮｯﾄを表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_STATUS">
+      <Text>ｽﾃｰﾀｽを表示</Text>
+    </Attribute>
+    <Attribute name="IDI_TV_SHOW_STATUS">
+      <Text>ｽﾃｰﾀｽをﾂﾘｰﾋﾞｭｰに表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SYSTREE">
+      <Text>ｼｽﾃﾑﾂﾘｰﾋﾞｭｰを表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_TARDY">
+      <Text>遅延を表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_UNSCHEDULED">
+      <Text>未ｽｹｼﾞｭｰﾙを表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_ROLES_2">
+      <Text>割当を表示(2)</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_ROLES_3">
+      <Text>割当を表示(3)</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_ROLES_4">
+      <Text>割当を表示(4)</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_ROLES_5">
+      <Text>割当を表示(5)</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_ERR_MESSAGE">
+      <Text>ｴﾗｰﾒｯｾｰｼﾞ全体を表示</Text>
+    </Attribute>
+    <Attribute name="IDI_ENTIRE_ERRMSG">
+      <Text>ｴﾗｰﾒｯｾｰｼﾞ全体を表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_FLOWS_4">
+      <Text>ﾌﾛｰを表示(4)</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_FLOWS_5">
+      <Text>ﾌﾛｰを表示(5)</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_FLOWS_2">
+      <Text>ﾌﾛｰを表示(2)</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_FLOWS_3">
+      <Text>ﾌﾛｰを表示(3)</Text>
+    </Attribute>
+    <Attribute name="IDI_LOV_SHOW_SELECT">
+      <Text>選択ﾚｺｰﾄﾞのみ表示</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOWOBJ">
+      <Text>表示...</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPCOMPARE_SIDEBYSIDE">
+      <Text>対照比較</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_SITE_NAME">
+      <Text>ｻｲﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_BATCH_LOAD_ALERT_4">
+      <Text>今回はｽｷｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPCOMPARE_A">
+      <Text>ｽﾅｯﾌﾟｼｮｯﾄA</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPCOMPARE_B">
+      <Text>ｽﾅｯﾌﾟｼｮｯﾄB</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPSHOT_NAME">
+      <Text>ｽﾅｯﾌﾟｼｮｯﾄ名</Text>
+    </Attribute>
+    <Attribute name="IDM_TAKE_SNAPSHOT">
+      <Text>ｽﾅｯﾌﾟｼｮｯﾄｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDS_SOME_DONE">
+      <Text>一部は既に実行済です。</Text>
+    </Attribute>
+    <Attribute name="IDS_SOME_SCHEDULED">
+      <Text>一部は既にｽｹｼﾞｭｰﾙ済です。</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTO_SCHED_DISPATCH_RULE_3">
+      <Text>LPSTでｿｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_SORT_ORDER">
+      <Text>ｿｰﾄ順</Text>
+    </Attribute>
+    <Attribute name="IDI_SORT_PRIORITY">
+      <Text>ｿｰﾄ優先度</Text>
+    </Attribute>
+    <Attribute name="IDI_SORT_TYPE">
+      <Text>ｿｰﾄ順</Text>
+    </Attribute>
+    <Attribute name="IDM_SORT_EDD">
+      <Text>EDDでｿｰﾄ(&amp;E)</Text>
+    </Attribute>
+    <Attribute name="IDM_SORT_FCFS">
+      <Text>FCFSでｿｰﾄ(&amp;F)</Text>
+    </Attribute>
+    <Attribute name="IDM_SORT_LPST">
+      <Text>LPSTでｿｰﾄ(&amp;L)</Text>
+    </Attribute>
+    <Attribute name="IDA_SORT">
+      <Text>特性でｿｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_SORT_MODE_1">
+      <Text>特性でｿｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDA_SORT_EDD">
+      <Text>EDDでｿｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_SORT_MODE_3">
+      <Text>EDDでｿｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDA_SORT_FCFS">
+      <Text>FCFSでｿｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_SORT_MODE_4">
+      <Text>FCFSでｿｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDA_SORT_LPST">
+      <Text>LPSTでｿｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_SORT_MODE_2">
+      <Text>LPSTでｿｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDA_SORT_WO_PRIORITY">
+      <Text>作業ｵｰﾀﾞ優先度でｿｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_SORT_MODE">
+      <Text>ｿｰﾄ方法</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_7">
+      <Text>工程をｿｰﾄしています...</Text>
+    </Attribute>
+    <Attribute name="IDI_SORT_ORDER_GANTT">
+      <Text>ｶﾞﾝﾄﾁｬｰﾄのｼﾅﾘｵｵﾌﾞｼﾞｪｸﾄのｿｰﾄｵﾌﾟｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_SUPPLY_TYPE_25">
+      <Text>供給ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_NEW_SCENARIO_2">
+      <Text>指定したﾕｰｻﾞ定義ｼﾅﾘｵ名は無効です。</Text>
+    </Attribute>
+    <Attribute name="IDS_LOAD_DIALOG_OK_LOAD_1">
+      <Text>製造ｵｰﾀﾞのﾛｰﾄﾞに指定したﾌｨﾙﾀ基準は、現在ｽｹｼﾞｭｰﾙされているﾊﾞｯﾁﾛｰﾄﾞに定義されたﾌｨﾙﾀ基準と異なります。</Text>
+    </Attribute>
+    <Attribute name="IDS_VALIDATE_PARAMS_ERROR_MSG">
+      <Text>次の理由により、指定したﾌｨﾙﾀ基準ではﾃﾞｰﾀは見つかりません...</Text>
+    </Attribute>
+    <Attribute name="IDI_SUB_SPLIT_OPERATION">
+      <Text>分割工程</Text>
+    </Attribute>
+    <Attribute name="IDI_SPLIT_OVER_BREAK">
+      <Text>超過分割</Text>
+    </Attribute>
+    <Attribute name="IDI_SPLIT_OVER_OPER">
+      <Text>工程分割</Text>
+    </Attribute>
+    <Attribute name="IDI_SPLIT_FROM_OPERATION_NO">
+      <Text>分割元工程番号</Text>
+    </Attribute>
+    <Attribute name="IDI_PARENT_SPLIT_OPERATION">
+      <Text>分割元工程</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_OPER_SPLITTED">
+      <Text>分割済</Text>
+    </Attribute>
+    <Attribute name="IDS_START_APPL">
+      <Text>開始</Text>
+    </Attribute>
+    <Attribute name="IDI_AVAILABILITY_BEGIN_TIME">
+      <Text>開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_BREAKDOWN_STARTTIME">
+      <Text>開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_START_DATE">
+      <Text>開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_START_DATE">
+      <Text>開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER_FINISHDATE_START">
+      <Text>開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER_NEEDDATE_START">
+      <Text>開始日</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_START">
+      <Text>開始日</Text>
+    </Attribute>
+    <Attribute name="IDA_EXCEL">
+      <Text>Excelを起動</Text>
+    </Attribute>
+    <Attribute name="IDA_SPOTFIRE">
+      <Text>Spotfireを起動</Text>
+    </Attribute>
+    <Attribute name="IDS_STARTED">
+      <Text>開始</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPSHOT_COMP_SEL_1">
+      <Text>統計</Text>
+    </Attribute>
+    <Attribute name="IDI_ACTIVITY_STATUS">
+      <Text>ｽﾃｰﾀｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_MSGLOG_STATUS">
+      <Text>ｽﾃｰﾀｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_PROJECT_STATUS">
+      <Text>ｽﾃｰﾀｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUSSTRING">
+      <Text>ｽﾃｰﾀｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_GRAPH_SELECTION_1">
+      <Text>ｽﾃｰﾀｽ円ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDI_SNAPSHOT_COMP_SEL_2">
+      <Text>ｽﾃｰﾀｽ円ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDS_STATUS">
+      <Text>ｽﾃｰﾀｽ:</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_455">
+      <Text>標準時間</Text>
+    </Attribute>
+    <Attribute name="IDI_STD_HOURS">
+      <Text>標準時間期日</Text>
+    </Attribute>
+    <Attribute name="IDI_STD_HOURS_REM">
+      <Text>標準時間残</Text>
+    </Attribute>
+    <Attribute name="IDA_MAIL_STEP">
+      <Text>ｽﾃｯﾌﾟｽﾙｰﾒｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDA_MAIL_STEP_ON">
+      <Text>ｽﾃｯﾌﾟｽﾙｰﾒｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDS_OPTWND_STOP">
+      <Text>停止</Text>
+    </Attribute>
+    <Attribute name="IDI_SUB_PROJECT_DESC">
+      <Text>ｻﾌﾞﾌﾟﾛｼﾞｪｸﾄ名称</Text>
+    </Attribute>
+    <Attribute name="IDI_SUB_PROJECT_ID">
+      <Text>ｻﾌﾞﾌﾟﾛｼﾞｪｸﾄID</Text>
+    </Attribute>
+    <Attribute name="IDI_SUCCEEDING">
+      <Text>後続ｱｸﾃｨﾋﾞﾃｨ</Text>
+    </Attribute>
+    <Attribute name="IDI_SUCCEEDING_ITEM_NO">
+      <Text>後続明細</Text>
+    </Attribute>
+    <Attribute name="IDI_GROUP_BUTTON_7">
+      <Text>日曜日</Text>
+    </Attribute>
+    <Attribute name="IDI_OUTSIDE_OP_SUPPLY">
+      <Text>供給</Text>
+    </Attribute>
+    <Attribute name="IDI_SUPPLY_TYPE">
+      <Text>供給ﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDA_SET_APP_MODE_SCHEDULER">
+      <Text>ｽｹｼﾞｭｰﾗﾓｰﾄﾞに切替</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_458">
+      <Text>ｽｹｼﾞｭｰﾗﾓｰﾄﾞに切替 - 製造ｵｰﾀﾞﾘﾛｰﾄﾞ</Text>
+    </Attribute>
+    <Attribute name="IDA_SET_APP_MODE_SIMULATION">
+      <Text>ｼﾐｭﾚｰｼｮﾝﾓｰﾄﾞに切替</Text>
+    </Attribute>
+    <Attribute name="IDA_SYMBOL">
+      <Text>記号</Text>
+    </Attribute>
+    <Attribute name="IDI_SYMBOL">
+      <Text>記号</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_310">
+      <Text>記号</Text>
+    </Attribute>
+    <Attribute name="IDI_SYNCHRONIZED_SETUP">
+      <Text>同期済</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_TIMESYNCH">
+      <Text>CBSｻｰﾊﾞと時間を同期しています...</Text>
+    </Attribute>
+    <Attribute name="IDO_SYS_ROOT">
+      <Text>ｼｽﾃﾑ</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_CBS_RESTART">
+      <Text>ﾃﾞｰﾀの不整合を回避するためにこのCBSｻｰﾊﾞを再起動します。</Text>
+    </Attribute>
+    <Attribute name="IDA_TAKE_SNAPSHOT">
+      <Text>このｽｹｼﾞｭｰﾙのｽﾅｯﾌﾟｼｮｯﾄを撮ります。</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_409">
+      <Text>遅延</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDINESS">
+      <Text>遅延</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_FILTER_3">
+      <Text>遅延間</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDINESS_COST">
+      <Text>遅延原価</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDINESS_DISTR_1">
+      <Text>遅延配賦詳細</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDINESS_FACTOR">
+      <Text>遅延係数</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_TARDY">
+      <Text>遅延</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_TARDY">
+      <Text>遅延</Text>
+    </Attribute>
+    <Attribute name="IDS_WO_TARDY_OPER">
+      <Text>遅延 - 工程は最遅完了日に間に合いません。</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDY_LABORRES">
+      <Text>遅延従業員</Text>
+    </Attribute>
+    <Attribute name="IDI_OPERATION_STRUCTURE_PLOT_OPT_2">
+      <Text>遅延明細</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_OPER_TARDINESS_LINE">
+      <Text>遅延明細</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDINESS_LOAD">
+      <Text>遅延負荷</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDY_MTRL">
+      <Text>遅延資材</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_GRAPH_TYPE_1_1">
+      <Text>遅延ｵｰﾀﾞ配賦ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDINESS_DISTR_4">
+      <Text>遅延ｵｰﾀﾞｽﾃｰﾀｽ詳細</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDINESS_DISTR_3">
+      <Text>遅延ｵｰﾀﾞｽﾃｰﾀｽ配賦</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_GRAPH_TYPE_1_2">
+      <Text>遅延ｵｰﾀﾞｽﾃｰﾀｽ配賦ｸﾞﾗﾌ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_GRAPH_SELECTION_1_2">
+      <Text>遅延ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDULE_GRAPH_SELECTION_2">
+      <Text>遅延ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDY_DETAIL">
+      <Text>遅延ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_TARDY_1">
+      <Text>遅延ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_SCENARIO_TARDYSO">
+      <Text>遅延製造ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_TARDYTOEARLY">
+      <Text>遅延から早期/定刻</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_TARDYTOLESSTARDY">
+      <Text>遅延からより早期</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_TARDYTOMORETARDY">
+      <Text>遅延からより遅延</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDY_TOOLRES">
+      <Text>遅延ﾂｰﾙｲﾝｽﾀﾝｽ</Text>
+    </Attribute>
+    <Attribute name="IDA_TARDY_WCRES">
+      <Text>遅延ﾜｰｸｾﾝﾀ資源</Text>
+    </Attribute>
+    <Attribute name="IDS_EXP_TEXTCD_TYPE">
+      <Text>ﾃｷｽﾄ -- ｶﾝﾏ区切りﾌｧｲﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_LABORCAP_TOOLTIP_3">
+      <Text>ﾃｷｽﾄ情報ﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_LABRESCAP_TOOLTIP_3">
+      <Text>ﾃｷｽﾄ情報ﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_MACHCAP_TOOLTIP_3">
+      <Text>ﾃｷｽﾄ情報ﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_MACHRESCAP_TOOLTIP_3">
+      <Text>ﾃｷｽﾄ情報ﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_TOOLCAP_TOOLTIP_3">
+      <Text>ﾃｷｽﾄ情報ﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_TOOLINSTCAP_TOOLTIP_3">
+      <Text>ﾃｷｽﾄ情報ﾂｰﾙﾁｯﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDI_TIMEPLOT">
+      <Text>ｽｹｼﾞｭｰﾙのﾃｷｽﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_OPER_FINISH_AFTER_ACT_FINISH">
+      <Text>終了日は、ｱｸﾃｨﾋﾞﾃｨ最早終了日より後になっています。</Text>
+    </Attribute>
+    <Attribute name="IDS_OPER_FINISH_BEFORE_ACT_START">
+      <Text>終了日は、ｱｸﾃｨﾋﾞﾃｨ最早開始日より前になっています。</Text>
+    </Attribute>
+    <Attribute name="IDS_OPER_START_AFTER_ACT_FINISH">
+      <Text>開始日は、ｱｸﾃｨﾋﾞﾃｨ最早終了日より後になっています。</Text>
+    </Attribute>
+    <Attribute name="IDS_OPER_START_BEFORE_ACT_START">
+      <Text>開始日は、ｱｸﾃｨﾋﾞﾃｨ最早開始日より前になっています。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_ERRORS">
+      <Text>表示するｴﾗｰﾒｯｾｰｼﾞはありません。</Text>
+    </Attribute>
+    <Attribute name="IDI_NEW_PLOT_1">
+      <Text>&apos;%s&apos;という名称の既存のﾌﾟﾛｯﾄ設定があります。保存できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_NEW_SCENARIO_3">
+      <Text>&apos;%s&apos;という名称の既存のﾕｰｻﾞ定義ｼﾅﾘｵがあります。それを置換しますか。</Text>
+    </Attribute>
+    <Attribute name="IDA_MAIL_EXIST">
+      <Text>ﾒｰﾙがあります。</Text>
+    </Attribute>
+    <Attribute name="IDS_NO_EXPORT_DATA">
+      <Text>ｴｸｽﾎﾟｰﾄするﾃﾞｰﾀがありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_LAUNCH_ERR">
+      <Text>ｴｸｽﾎﾟｰﾄｱﾌﾟﾘｹｰｼｮﾝの起動時にｴﾗｰが発生しました。</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAB_FINISHED">
+      <Text>完了した工程があります。</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAB_FIRM">
+      <Text>確定済工程があります。</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAB_LATE">
+      <Text>遅延工程があります。</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAB_DBNOTEXIST">
+      <Text>ﾛｰｶﾙ工程があります。</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAB_BOOKED">
+      <Text>予約済資源を含む工程があります。</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAB_INCOMPLETE">
+      <Text>不完全なﾃﾞｰﾀを含む工程があります。</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAB_UNBOOKED">
+      <Text>予約されていない資源を含む工程があります。</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAB_SCHEDULED">
+      <Text>ｽｹｼﾞｭｰﾙ済工程があります。</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAB_STARTED">
+      <Text>開始工程があります。</Text>
+    </Attribute>
+    <Attribute name="IDI_THIS">
+      <Text>これ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_SETTINGS_LOCAL">
+      <Text>このｶﾞﾝﾄﾁｬｰﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_IFSAP_LOAD_5">
+      <Text>このｱﾌﾟﾘｹｰｼｮﾝは終了します。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_IPC_LOAD_1">
+      <Text>このｱﾌﾟﾘｹｰｼｮﾝは終了します。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_GRAPH_LOAD_1">
+      <Text>これは、DLLﾌｧｲﾙの欠落、ｾｷｭﾘﾃｨ設定、又は.Netﾗﾝﾀｲﾑｲﾝｽﾄｰﾙの問題の結果である可能性があります。</Text>
+    </Attribute>
+    <Attribute name="IDS_MAX_TEXT_LIMIT">
+      <Text>このﾌｨｰﾙﾄﾞには %d 文字まで入力できます。</Text>
+    </Attribute>
+    <Attribute name="IDS_FILE_IN_USE_1">
+      <Text>このﾌｧｲﾙは既に他のﾕｰｻﾞが使用しています。</Text>
+    </Attribute>
+    <Attribute name="IDS_OPTWND_INFO">
+      <Text>この処理では、一対の交換ｱﾙｺﾞﾘｽﾞﾑを使用してｽｹｼﾞｭｰﾙの最適化が試行されます。</Text>
+    </Attribute>
+    <Attribute name="IDI_GROUP_BUTTON_4">
+      <Text>木曜日</Text>
+    </Attribute>
+    <Attribute name="IDM_WINDOW_TILE">
+      <Text>上下に並べて表示(&amp;H) Shift+F4</Text>
+    </Attribute>
+    <Attribute name="IDA_TILE">
+      <Text>ｳｨﾝﾄﾞｳを並べて表示</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_437">
+      <Text>時刻</Text>
+    </Attribute>
+    <Attribute name="IDI_MATRIX_VALUE">
+      <Text>時刻</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_432">
+      <Text>最終ﾃﾞｰﾀﾛｰﾄﾞにかかった時間[h:mm:ss.ms]</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_FROM">
+      <Text>開始時刻</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_SITE_TIMELOCKED">
+      <Text>凍結時刻</Text>
+    </Attribute>
+    <Attribute name="IDS_TIMESPAN">
+      <Text>期間</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_TO">
+      <Text>終了時刻</Text>
+    </Attribute>
+    <Attribute name="IDI_SETUP_COMPLETION_TIME">
+      <Text>段取が完了する時間</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_SCHEDADJUST">
+      <Text>調整時間</Text>
+    </Attribute>
+    <Attribute name="IDI_UNITS_MIN_TIME">
+      <Text>最下位ﾚﾍﾞﾙの時間</Text>
+    </Attribute>
+    <Attribute name="IDI_UNITS_ACTUAL_TIME">
+      <Text>計測ﾚﾍﾞﾙの時間</Text>
+    </Attribute>
+    <Attribute name="IDI_UNITS_MAX_TIME">
+      <Text>上位ﾚﾍﾞﾙの時間</Text>
+    </Attribute>
+    <Attribute name="IDI_SCHEDSERV_SITE_TIMEOUT">
+      <Text>ﾀｲﾑｱｳﾄ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_404">
+      <Text>終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_END_RANGE">
+      <Text>終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_EPST_END_RANGE">
+      <Text>終了日</Text>
+    </Attribute>
+    <Attribute name="IDI_MATRIX_TO">
+      <Text>終了値</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPER_COLOR_FROM_TOOL_1">
+      <Text>ﾂｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPER_COLOR_FROM_TOOLRES_1">
+      <Text>ﾂｰﾙｲﾝｽﾀﾝｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_SELECTION_3">
+      <Text>ﾂｰﾙｲﾝｽﾀﾝｽ</Text>
+    </Attribute>
+    <Attribute name="IDO_TOOLINSTANCE">
+      <Text>ﾂｰﾙｲﾝｽﾀﾝｽ</Text>
+    </Attribute>
+    <Attribute name="IDI_TOOL_INSTANCIES">
+      <Text>ﾂｰﾙｲﾝｽﾀﾝｽ</Text>
+    </Attribute>
+    <Attribute name="IDO_TOOLSET">
+      <Text>ﾂｰﾙｾｯﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_TOOL_SETS">
+      <Text>ﾂｰﾙｾｯﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_TOOL_SETS">
+      <Text>ﾂｰﾙｾｯﾄ</Text>
+    </Attribute>
+    <Attribute name="IDO_TOOLSETS">
+      <Text>ﾂｰﾙｾｯﾄ</Text>
+    </Attribute>
+    <Attribute name="IDA_SHOW_EXT_TOOLTIP_SETTING">
+      <Text>ﾂｰﾙﾁｯﾌﾟ設定</Text>
+    </Attribute>
+    <Attribute name="IDI_TOP_PART_DESC">
+      <Text>最上位品目名称</Text>
+    </Attribute>
+    <Attribute name="IDI_TOP_PART_NO">
+      <Text>最上位品目番号</Text>
+    </Attribute>
+    <Attribute name="IDI_TOTAL_NUM_BATCH_BALANCE_IDS">
+      <Text>合計ﾊﾞｯﾁﾊﾞﾗﾝｽID</Text>
+    </Attribute>
+    <Attribute name="IDI_TOTAL_COST">
+      <Text>合計原価</Text>
+    </Attribute>
+    <Attribute name="IDI_TOTAL_NUM_SHOPORDERS">
+      <Text>ｵｰﾀﾞ合計</Text>
+    </Attribute>
+    <Attribute name="IDI_TOTAL_NUM_PROJECTS">
+      <Text>ﾌﾟﾛｼﾞｪｸﾄ合計</Text>
+    </Attribute>
+    <Attribute name="IDI_TARDINESS_TOTALCOST">
+      <Text>合計遅延原価</Text>
+    </Attribute>
+    <Attribute name="IDI_LOAD_TIME_TOTAL">
+      <Text>合計時間</Text>
+    </Attribute>
+    <Attribute name="IDIS_TRANS_CALENDAR">
+      <Text>ﾄﾗﾝｻﾞｸｼｮﾝｶﾚﾝﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_TRANSACTION_DATE">
+      <Text>ﾄﾗﾝｻﾞｸｼｮﾝ日付</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_RTO_EXIT">
+      <Text>ｲﾝﾀｰﾌﾟﾘﾀからの終了ｺﾏﾝﾄﾞのため、ﾄﾗﾝｻﾞｸｼｮﾝは取消されました。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_RTO_INTRPT">
+      <Text>ｼｽﾃﾑ中断了ｺﾏﾝﾄﾞのため、ﾄﾗﾝｻﾞｸｼｮﾝは取消されました。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_RTO_RESTART">
+      <Text>ｼｽﾃﾑ再起動ｺﾏﾝﾄﾞのため、ﾄﾗﾝｻﾞｸｼｮﾝは取消されました。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_PENDTRANS">
+      <Text>ﾄﾗﾝｻﾞｸｼｮﾝ保留</Text>
+    </Attribute>
+    <Attribute name="IDI_LANGSTR">
+      <Text>翻訳</Text>
+    </Attribute>
+    <Attribute name="IDO_LANG_NODE_IDI_LANGSTR">
+      <Text>翻訳</Text>
+    </Attribute>
+    <Attribute name="IDI_TRANS_CALENDAR">
+      <Text>運搬ｶﾚﾝﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_436">
+      <Text>運搬時間</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_TRANSPORT">
+      <Text>運搬時間</Text>
+    </Attribute>
+    <Attribute name="IDO_TREEOBJ">
+      <Text>ﾂﾘｰｵﾌﾞｼﾞｪｸﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_CONNECTTRY">
+      <Text>CBS接続を確立しようとしています...</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_LOCK">
+      <Text>CBSｻｰﾊﾞをﾛｯｸしようとしています...</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_RELEASE">
+      <Text>CBSｻｰﾊﾞをﾘﾘｰｽしようとしています...</Text>
+    </Attribute>
+    <Attribute name="IDS_DB_CONNECTTRY">
+      <Text>ﾃﾞｰﾀﾍﾞｰｽ接続を確立しようとしています...</Text>
+    </Attribute>
+    <Attribute name="IDI_GROUP_BUTTON_2">
+      <Text>火曜日</Text>
+    </Attribute>
+    <Attribute name="IDI_AVAIL_TYPE">
+      <Text>ﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_CONNECTFAILED">
+      <Text>CBS接続を確立できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_CANT_EXPORT">
+      <Text>ｴｸｽﾎﾟｰﾄを実行できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_FILE_IN_USE_TITLE">
+      <Text>ﾌｧｲﾙに書込みできません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_DCOM_INITBUF">
+      <Text>COMｵﾌﾞｼﾞｪｸﾄﾊﾞｯﾌｧを構築できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_LANG_OPENFILE">
+      <Text>言語ﾌｧｲﾙが見つかりません。</Text>
+    </Attribute>
+    <Attribute name="IDS_INVALID_WS_FILE">
+      <Text>ﾜｰｸｽﾍﾟｰｽを開けません。ﾌｧｲﾙが不正であるか、壊れています。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_CONSTRERROR">
+      <Text>制約により工程をｿｰﾄできません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_SEQ_NOITEM">
+      <Text>工程をｿｰﾄできません。ｵﾌﾞｼﾞｪｸﾄが見つかりません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_SEQ_NORES">
+      <Text>工程をｿｰﾄできません。資源が見つかりません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_SEQ_NOOPER">
+      <Text>工程をｿｰﾄできません。ｵﾌﾞｼﾞｪｸﾄが工程ではありません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_ORA_UPDATES">
+      <Text>ORACLEﾃﾞｰﾀﾍﾞｰｽﾃｰﾌﾞﾙを更新できません。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_CBS_UPD_MISS">
+      <Text>ﾒﾓﾘ内ｻｽｹｼﾞｭｰﾙを更新できません。</Text>
+    </Attribute>
+    <Attribute name="IDA_UNBOOK">
+      <Text>未割当</Text>
+    </Attribute>
+    <Attribute name="IDA_UNSCHEDULE_UNBOOK">
+      <Text>未割当資源</Text>
+    </Attribute>
+    <Attribute name="IDI_UNSCHEDULE_RESOURCE_ASSIGN_2">
+      <Text>未割当資源</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_11">
+      <Text>工程資源を割当取消しています...</Text>
+    </Attribute>
+    <Attribute name="IDS_UNPLAN_UNBOOK">
+      <Text>資源の予約取消</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_300">
+      <Text>未定義</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_400">
+      <Text>下</Text>
+    </Attribute>
+    <Attribute name="IDA_UNDO">
+      <Text>元に戻す</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_1_6">
+      <Text>取消完了</Text>
+    </Attribute>
+    <Attribute name="IDI_UNIT">
+      <Text>単位</Text>
+    </Attribute>
+    <Attribute name="IDI_OVERLAP_TYPE_1">
+      <Text>単位</Text>
+    </Attribute>
+    <Attribute name="IDI_UNITS_REPORTED">
+      <Text>単位が報告されました。</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_444">
+      <Text>単位/時間</Text>
+    </Attribute>
+    <Attribute name="IDI_UNITSPERHOUR">
+      <Text>単位/時間</Text>
+    </Attribute>
+    <Attribute name="IDS_UNKNOWN">
+      <Text>不明</Text>
+    </Attribute>
+    <Attribute name="IDI_COMU_19">
+      <Text>ﾌｧｲﾙに不明なﾃﾞｰﾀがあります(ev #ENDがありません)。</Text>
+    </Attribute>
+    <Attribute name="IDI_UNKNOWN_ERRMSG">
+      <Text>不明のｴﾗｰﾒｯｾｰｼﾞです。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_UNKNOWN_ITEM">
+      <Text>不明の項目名です。</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_UNKNOWN">
+      <Text>不明の要求又は検索です。</Text>
+    </Attribute>
+    <Attribute name="IDS_UN_FREEZ_TIME">
+      <Text>ｽﾞｰﾑﾚﾍﾞﾙをｱﾝﾛｯｸ</Text>
+    </Attribute>
+    <Attribute name="IDS_UNPACKING_DATA">
+      <Text>ｽｹｼﾞｭｰﾙ情報をﾊﾟｯｸ解除中...</Text>
+    </Attribute>
+    <Attribute name="IDI_LOAD_TIME_UNPACK">
+      <Text>計画担当者別ｽｹｼﾞｭｰﾗのﾃﾞｰﾀをﾊﾟｯｸ解除中...</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_5">
+      <Text>工程をﾘﾘｰｽ取消しています...</Text>
+    </Attribute>
+    <Attribute name="IDA_UNSCHEDULE">
+      <Text>ｽｹｼﾞｭｰﾙ取消</Text>
+    </Attribute>
+    <Attribute name="IDI_UNSCHEDULE_SELECTION_2">
+      <Text>選択したﾘﾘｰｽ済ｵﾌﾞｼﾞｪｸﾄのｽｹｼﾞｭｰﾙを取消します。</Text>
+    </Attribute>
+    <Attribute name="IDI_UNSCHEDULE_SELECTION_1">
+      <Text>選択したｽｹｼﾞｭｰﾙ済ｵﾌﾞｼﾞｪｸﾄのｽｹｼﾞｭｰﾙを取消します。</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_UNSCHEDULE_1">
+      <Text>選択したｽｹｼﾞｭｰﾙ済ｵﾌﾞｼﾞｪｸﾄのｽｹｼﾞｭｰﾙを取消します。</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_UNSCHEDULED">
+      <Text>未ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_INCOMPLETE">
+      <Text>未ｽｹｼﾞｭｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_AUTO_SCHED_SELECTION_1">
+      <Text>未ｽｹｼﾞｭｰﾙ工程</Text>
+    </Attribute>
+    <Attribute name="IDI_INCOMPLETE_NUMBER">
+      <Text>未計画ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_STATUS_UNSCHEDULED_1">
+      <Text>未計画ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_UNSCHEDULED_DETAIL">
+      <Text>未計画ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_INCOMPLETE_1">
+      <Text>未計画ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_UNSCHEDTOSCHED">
+      <Text>未ｽｹｼﾞｭｰﾙからｽｹｼﾞｭｰﾙ済</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_3_1">
+      <Text>影響を受ける工程のｽｹｼﾞｭｰﾙを取消中...</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_2">
+      <Text>ｽｹｼﾞｭｰﾙ取消完了</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHED_PROGRESS_2_6">
+      <Text>工程のｽｹｼﾞｭｰﾙを取消中...</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_UNSCHEDULE">
+      <Text>ｽｹｼﾞｭｰﾙ取消ｱｸｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_UNSCHEDULE_SELECTION">
+      <Text>ｽｹｼﾞｭｰﾙ取消ｱｸｼｮﾝ</Text>
+    </Attribute>
+    <Attribute name="IDI_UNSCHEDULE_CLEANUP">
+      <Text>資源超過のｽｹｼﾞｭｰﾙ取消</Text>
+    </Attribute>
+    <Attribute name="IDI_ROLE_NAME">
+      <Text>無題ﾛｰﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_UOM">
+      <Text>単位</Text>
+    </Attribute>
+    <Attribute name="IDA_SCENARIO_BUTTON_3">
+      <Text>選択したｼﾅﾘｵを更新</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_NEW_SCENARIO_6">
+      <Text>選択したﾕｰｻﾞ定義ｼﾅﾘｵを更新中</Text>
+    </Attribute>
+    <Attribute name="IDI_UNITS_MAX">
+      <Text>上位ﾚﾍﾞﾙ</Text>
+    </Attribute>
+    <Attribute name="IDI_UNITS_MAX_LIM">
+      <Text>上限</Text>
+    </Attribute>
+    <Attribute name="IDI_COMBOGENERATOR_OPTION_2">
+      <Text>ComboGeneratorを使用</Text>
+    </Attribute>
+    <Attribute name="IDA_USE_DEFAULTS">
+      <Text>既定値を使用</Text>
+    </Attribute>
+    <Attribute name="IDI_COMBOGENERATOR_OPTION_1">
+      <Text>計画ﾉｰﾄﾞﾘｽﾄを使用</Text>
+    </Attribute>
+    <Attribute name="IDI_SETUPOPT_USEOPNAME_2">
+      <Text>品目番号と工程名を使用</Text>
+    </Attribute>
+    <Attribute name="IDI_SETUPOPT_USEOPNAME_1">
+      <Text>品目番号のみを使用</Text>
+    </Attribute>
+    <Attribute name="IDI_NEW_PLOT_3">
+      <Text>ﾕｰｻﾞ定義ﾌﾟﾛｯﾄ設定&apos;%s&apos;は削除されます。続けますか?</Text>
+    </Attribute>
+    <Attribute name="IDO_USER_SCENARIO">
+      <Text>ﾕｰｻﾞ定義ｼﾅﾘｵ</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_NEW_SCENARIO_5">
+      <Text>ﾕｰｻﾞ定義ｼﾅﾘｵ&apos;%s&apos;は削除されます。続けますか?</Text>
+    </Attribute>
+    <Attribute name="IDS_SAVE_NEW_SCENARIO_7">
+      <Text>ﾕｰｻﾞ定義ｼﾅﾘｵ&apos;%s&apos;は現在のｵﾌﾞｼﾞｪｸﾄﾘｽﾄで更新されます。続けますか?</Text>
+    </Attribute>
+    <Attribute name="IDO_SCENARIOS_2">
+      <Text>ﾕｰｻﾞ定義ｼﾅﾘｵ</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_USER_NAME">
+      <Text>ﾕｰｻﾞ名</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_UTIL_CAPACITY_GAPS">
+      <Text>能力ｷﾞｬｯﾌﾟを活用(希望する順序が変更される可能性があります)</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_START_AVAIL">
+      <Text>有効開始日</Text>
+    </Attribute>
+    <Attribute name="IDS_SELECTION_OK">
+      <Text>有効な選択が行われました。</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_END_AVAIL">
+      <Text>有効終了日</Text>
+    </Attribute>
+    <Attribute name="IDS_VALIDATE_PARAMS">
+      <Text>ﾌｨﾙﾀ基準の検証中</Text>
+    </Attribute>
+    <Attribute name="IDS_SCHEDULE_VALIDATING">
+      <Text>ｽｹｼﾞｭｰﾙ整合性の検証中...</Text>
+    </Attribute>
+    <Attribute name="IDI_TIME_END_AVAIL_TYPE">
+      <Text>有効ﾀｲﾌﾟ</Text>
+    </Attribute>
+    <Attribute name="IDM_MOST_RECENT_ERRORS">
+      <Text>最新のｴﾗｰﾒｯｾｰｼﾞを表示...</Text>
+    </Attribute>
+    <Attribute name="IDA_MOST_RECENT_ERRORS">
+      <Text>現在のｽｹｼﾞｭｰﾙｾｯｼｮﾝ中に発生した最新のｴﾗｰﾒｯｾｰｼﾞを表示</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_WAITINGFORDATA">
+      <Text>ﾃﾞｰﾀを % 秒待ちました...強制終了[ESC]</Text>
+    </Attribute>
+    <Attribute name="IDS_CLEAR_SNAPSHOTS_WARNING">
+      <Text>警告: ﾃﾞｰﾀﾍﾞｰｽに保存した場合、全てのｽﾅｯﾌﾟｼｮｯﾄが消去されます。</Text>
+    </Attribute>
+    <Attribute name="IDI_GROUP_BUTTON_3">
+      <Text>水曜日</Text>
+    </Attribute>
+    <Attribute name="IDI_GROUP_WEEK">
+      <Text>平日</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_WEEKS">
+      <Text>週数</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_4">
+      <Text>週数</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_433">
+      <Text>ALTｷｰを押した場合、次の再割当を許可しない:</Text>
+    </Attribute>
+    <Attribute name="IDS_YESADD">
+      <Text>追加します。</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_JIT">
+      <Text>最遅調整します。</Text>
+    </Attribute>
+    <Attribute name="IDG_WORD_207">
+      <Text>削除されます。</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_COMPRESS">
+      <Text>ｵｰﾀﾞを圧縮します。</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_FIRM">
+      <Text>ｽｹｼﾞｭｰﾙ済工程をﾘﾘｰｽします。</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_RESCHEDULE_OLD_DESCRIPTION">
+      <Text>ｽｹｼﾞｭｰﾙ済工程を再計画します。</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_SCHEDULE_OLD_DESCRIPTION">
+      <Text>未ｽｹｼﾞｭｰﾙ工程を計画します。</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_SORT">
+      <Text>工程をｿｰﾄします。</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_UNBOOK">
+      <Text>工程を割当取消します。</Text>
+    </Attribute>
+    <Attribute name="IDS_WILL_UNFIRM">
+      <Text>確定済工程を確定取消します。</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_WITH_EPST_RANGE">
+      <Text>最早開始日あり</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_WITH_DATE_RANGE">
+      <Text>要求日あり</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPER_COLOR_FROM_WC_1">
+      <Text>ﾜｰｸｾﾝﾀ</Text>
+    </Attribute>
+    <Attribute name="IDI_STANDALONE_REL_WORK_CENTER_NO">
+      <Text>ﾜｰｸｾﾝﾀ</Text>
+    </Attribute>
+    <Attribute name="IDO_WORKCENTER">
+      <Text>ﾜｰｸｾﾝﾀ</Text>
+    </Attribute>
+    <Attribute name="IDI_WORK_CENTER_CODE">
+      <Text>ﾜｰｸｾﾝﾀ区分</Text>
+    </Attribute>
+    <Attribute name="IDI_WORK_CENTER_CODE_COMBO">
+      <Text>ﾜｰｸｾﾝﾀ区分</Text>
+    </Attribute>
+    <Attribute name="IDI_DERIVE_OPER_COLOR_FROM_WCRES_1">
+      <Text>ﾜｰｸｾﾝﾀ資源</Text>
+    </Attribute>
+    <Attribute name="IDI_RESOURCE_SELECTION_1">
+      <Text>ﾜｰｸｾﾝﾀ資源</Text>
+    </Attribute>
+    <Attribute name="IDI_SEQ_POBJ">
+      <Text>ﾜｰｸｾﾝﾀ資源</Text>
+    </Attribute>
+    <Attribute name="IDO_WORKCENTERRESOURCE">
+      <Text>ﾜｰｸｾﾝﾀ資源</Text>
+    </Attribute>
+    <Attribute name="IDI_WC_RESOURCES">
+      <Text>ﾜｰｸｾﾝﾀ資源</Text>
+    </Attribute>
+    <Attribute name="IDI_NUM_WORK_CENTERS">
+      <Text>ﾜｰｸｾﾝﾀ</Text>
+    </Attribute>
+    <Attribute name="IDI_WORK_CENTERS">
+      <Text>ﾜｰｸｾﾝﾀ</Text>
+    </Attribute>
+    <Attribute name="IDO_WORKCENTERS">
+      <Text>ﾜｰｸｾﾝﾀ</Text>
+    </Attribute>
+    <Attribute name="IDI_DEMAND_TYPE_4">
+      <Text>作業ｵｰﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDO_WORK_TIME">
+      <Text>稼働日ｶﾚﾝﾀﾞ</Text>
+    </Attribute>
+    <Attribute name="IDI_WORKBOX">
+      <Text>処理中</Text>
+    </Attribute>
+    <Attribute name="IDI_WORKTIME_HOURS">
+      <Text>稼働時間</Text>
+    </Attribute>
+    <Attribute name="IDS_WORKSPACE_EXT">
+      <Text>ﾜｰｸｽﾍﾟｰｽ</Text>
+    </Attribute>
+    <Attribute name="IDS_WS_FAILURE">
+      <Text>ﾜｰｸｽﾍﾟｰｽ故障</Text>
+    </Attribute>
+    <Attribute name="IDA_WORKSPACE_OPEN">
+      <Text>ﾜｰｸｽﾍﾟｰｽｵｰﾌﾟﾝ</Text>
+    </Attribute>
+    <Attribute name="IDA_WORKSPACE_SAVE">
+      <Text>ﾜｰｸｽﾍﾟｰｽ保存</Text>
+    </Attribute>
+    <Attribute name="IDA_WORKSPACE_SAVEAS">
+      <Text>ﾜｰｸｽﾍﾟｰｽを別名保存</Text>
+    </Attribute>
+    <Attribute name="IDA_WRPLAN">
+      <Text>ｽｹｼﾞｭｰﾙ書込み</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_WRONGCLASSID">
+      <Text>不正ｸﾗｽID</Text>
+    </Attribute>
+    <Attribute name="IDI_CBS_LOCKED_YES">
+      <Text>はい</Text>
+    </Attribute>
+    <Attribute name="IDS_CBS_LOCKED_YES">
+      <Text>はい</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_YEARS">
+      <Text>年</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_1">
+      <Text>年</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_8">
+      <Text>年/日</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_3">
+      <Text>年/月</Text>
+    </Attribute>
+    <Attribute name="IDS_TARDINESS_XLAB_5">
+      <Text>年/週</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAB_SPACE">
+      <Text>何も選択されていません。</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAB">
+      <Text>何が選択されています。</Text>
+    </Attribute>
+    <Attribute name="IDS_ALERTWND_INFO">
+      <Text>CBSｾｯｼｮﾝ時間は間もなく終了します! 未保存のｽｹｼﾞｭｰﾙ変更は失われます!</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_GRAPH_LOAD_5">
+      <Text>ZedGraph.dll</Text>
+    </Attribute>
+    <Attribute name="IDM_TIME_OUT">
+      <Text>ｽﾞｰﾑｱｳﾄ(&amp;O) Ctrl+上</Text>
+    </Attribute>
+    <Attribute name="IDM_TIME_IN">
+      <Text>ｽﾞｰﾑｲﾝ(&amp;I) Ctrl+下</Text>
+    </Attribute>
+    <Attribute name="IDA_ZOOM_IN">
+      <Text>ｽﾞｰﾑｲﾝ</Text>
+    </Attribute>
+    <Attribute name="IDS_ZOOMIN">
+      <Text>ｽﾞｰﾑｲﾝ</Text>
+    </Attribute>
+    <Attribute name="IDA_ZOOM_OUT">
+      <Text>ｽﾞｰﾑｱｳﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_LABRESCAP_TOOLTIP">
+      <Text>ｽﾞｰﾑｱｳﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_MACHRESCAP_TOOLTIP">
+      <Text>ｽﾞｰﾑｱｳﾄ</Text>
+    </Attribute>
+    <Attribute name="IDI_PLOT_TOOLINSTCAP_TOOLTIP">
+      <Text>ｽﾞｰﾑｱｳﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_ZOOMOUT">
+      <Text>ｽﾞｰﾑｱｳﾄ</Text>
+    </Attribute>
+    <Attribute name="IDS_BATCHLOAD_QUERY">
+      <Text>[ﾊﾞｯﾁﾛｰﾄﾞ検索]</Text>
+    </Attribute>
+    <Attribute name="IDS_PREVIOUS_QUERY">
+      <Text>[前回検索]</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_ARG">
+      <Text>ids_err_arg</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_CBREAD">
+      <Text>ids_err_cbread</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_CBWRITE">
+      <Text>ids_err_cbwrite</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_FUNCOM">
+      <Text>ids_err_funcom</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_ONLYTREEOBJL">
+      <Text>ids_onlytreeobjl</Text>
+    </Attribute>
+    <Attribute name="IDS_ERR_CIRCULAR_RELATION_1">
+      <Text>先</Text>
+    </Attribute>
+    <Attribute name="IDS_GRAPH_VS">
+      <Text>vs.</Text>
+    </Attribute>
+  </Context>
+</TextTranslation>

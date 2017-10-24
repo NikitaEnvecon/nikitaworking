@@ -1,0 +1,2788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menuFrmMethods_menu_Notes___.Caption" xml:space="preserve">
+    <value>&amp;Notes...</value>
+  </data>
+  <data name="menuFrmMethods_menuView__Multi_Company_Voucher___.Caption" xml:space="preserve">
+    <value>View &amp;Multi Company Voucher...</value>
+  </data>
+  <data name="menuFrmMethods_menuChange__Company___.Caption" xml:space="preserve">
+    <value>Change &amp;Company...</value>
+  </data>
+  <data name="menuOperations_menu_Notes___.Caption" xml:space="preserve">
+    <value>&amp;Notes...</value>
+  </data>
+  <data name="menuOperations_menuView__Multi_Company_Voucher___.Caption" xml:space="preserve">
+    <value>View &amp;Multi Company Voucher...</value>
+  </data>
+  <data name="menuOperations_menuChange__Company___.Caption" xml:space="preserve">
+    <value>Change &amp;Company...</value>
+  </data>
+  <data name="menuTblMethods_menu_Notes___.Caption" xml:space="preserve">
+    <value>&amp;Notes...</value>
+  </data>
+  <data name="menuTblMethods_menuView__Multi_Company_Voucher___.Caption" xml:space="preserve">
+    <value>View &amp;Multi Company Voucher...</value>
+  </data>
+  <data name="menuTblMethods_menuChange__Company___.Caption" xml:space="preserve">
+    <value>Change &amp;Company...</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuItem__Notes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="menuItem_View.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="menuSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 6</value>
+  </data>
+  <data name="menuItem_Change.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="menuFrmMethods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 76</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Name" xml:space="preserve">
+    <value>menuFrmMethods</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="menuItem__Notes_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="menuItem_View_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="menuSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 6</value>
+  </data>
+  <data name="menuItem_Change_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="menuOperations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 76</value>
+  </data>
+  <data name="&gt;&gt;menuOperations.Name" xml:space="preserve">
+    <value>menuOperations</value>
+  </data>
+  <data name="&gt;&gt;menuOperations.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="menuItem__Notes_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="menuItem_View_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="menuSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 6</value>
+  </data>
+  <data name="menuItem_Change_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="menuTblMethods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 76</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods.Name" xml:space="preserve">
+    <value>menuTblMethods</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labeldfCompany.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
+  </data>
+  <data name="labeldfCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="labeldfCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labeldfCompany.Text" xml:space="preserve">
+    <value>Company:</value>
+  </data>
+  <data name="labeldfCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfCompany.Name" xml:space="preserve">
+    <value>labeldfCompany</value>
+  </data>
+  <data name="&gt;&gt;labeldfCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfCompany.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfCompany.ZOrder" xml:space="preserve">
+    <value>53</value>
+  </data>
+  <data name="dfCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 16</value>
+  </data>
+  <data name="dfCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 21</value>
+  </data>
+  <data name="dfCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dfCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfCompany.Name" xml:space="preserve">
+    <value>dfCompany</value>
+  </data>
+  <data name="&gt;&gt;dfCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfCompany.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfCompany.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="dfVoucherType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 175</value>
+  </data>
+  <data name="dfVoucherType.MaxLength" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="dfVoucherType.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="dfVoucherType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherType.Name" xml:space="preserve">
+    <value>dfVoucherType</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherType.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="labelccVoucherType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelccVoucherType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
+  </data>
+  <data name="labelccVoucherType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="labelccVoucherType.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelccVoucherType.Text" xml:space="preserve">
+    <value>Voucher Type:</value>
+  </data>
+  <data name="&gt;&gt;labelccVoucherType.Name" xml:space="preserve">
+    <value>labelccVoucherType</value>
+  </data>
+  <data name="&gt;&gt;labelccVoucherType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelccVoucherType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelccVoucherType.ZOrder" xml:space="preserve">
+    <value>52</value>
+  </data>
+  <data name="ccVoucherType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 29</value>
+  </data>
+  <data name="ccVoucherType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 21</value>
+  </data>
+  <data name="ccVoucherType.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ccVoucherType.Name" xml:space="preserve">
+    <value>ccVoucherType</value>
+  </data>
+  <data name="&gt;&gt;ccVoucherType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cRecListDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;ccVoucherType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ccVoucherType.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="labeldfVoucherNo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfVoucherNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 9</value>
+  </data>
+  <data name="labeldfVoucherNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 13</value>
+  </data>
+  <data name="labeldfVoucherNo.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labeldfVoucherNo.Text" xml:space="preserve">
+    <value>Voucher No:</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherNo.Name" xml:space="preserve">
+    <value>labeldfVoucherNo</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherNo.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherNo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherNo.ZOrder" xml:space="preserve">
+    <value>51</value>
+  </data>
+  <data name="dfVoucherNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 29</value>
+  </data>
+  <data name="dfVoucherNo.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="dfVoucherNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="dfVoucherNo.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherNo.Name" xml:space="preserve">
+    <value>dfVoucherNo</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherNo.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherNo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherNo.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="labeldfVoucherDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfVoucherDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 9</value>
+  </data>
+  <data name="labeldfVoucherDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
+  </data>
+  <data name="labeldfVoucherDate.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labeldfVoucherDate.Text" xml:space="preserve">
+    <value>Voucher Date:</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherDate.Name" xml:space="preserve">
+    <value>labeldfVoucherDate</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherDate.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherDate.ZOrder" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="dfVoucherDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 29</value>
+  </data>
+  <data name="dfVoucherDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="dfVoucherDate.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherDate.Name" xml:space="preserve">
+    <value>dfVoucherDate</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherDate.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherDate.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="labeldfVoucherStatus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfVoucherStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 9</value>
+  </data>
+  <data name="labeldfVoucherStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="labeldfVoucherStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="labeldfVoucherStatus.Text" xml:space="preserve">
+    <value>Voucher Status:</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherStatus.Name" xml:space="preserve">
+    <value>labeldfVoucherStatus</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherStatus.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherStatus.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherStatus.ZOrder" xml:space="preserve">
+    <value>49</value>
+  </data>
+  <data name="dfVoucherStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>366, 29</value>
+  </data>
+  <data name="dfVoucherStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 21</value>
+  </data>
+  <data name="dfVoucherStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherStatus.Name" xml:space="preserve">
+    <value>dfVoucherStatus</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherStatus.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherStatus.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherStatus.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="labeldfDateReg.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfDateReg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 87</value>
+  </data>
+  <data name="labeldfDateReg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="labeldfDateReg.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="labeldfDateReg.Text" xml:space="preserve">
+    <value>Entry Date:</value>
+  </data>
+  <data name="&gt;&gt;labeldfDateReg.Name" xml:space="preserve">
+    <value>labeldfDateReg</value>
+  </data>
+  <data name="&gt;&gt;labeldfDateReg.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfDateReg.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfDateReg.ZOrder" xml:space="preserve">
+    <value>48</value>
+  </data>
+  <data name="dfDateReg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>543, 105</value>
+  </data>
+  <data name="dfDateReg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 21</value>
+  </data>
+  <data name="dfDateReg.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;dfDateReg.Name" xml:space="preserve">
+    <value>dfDateReg</value>
+  </data>
+  <data name="&gt;&gt;dfDateReg.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfDateReg.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfDateReg.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="cbNotes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>531, 235</value>
+  </data>
+  <data name="cbNotes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="cbNotes.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="cbNotes.Text" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="&gt;&gt;cbNotes.Name" xml:space="preserve">
+    <value>cbNotes</value>
+  </data>
+  <data name="&gt;&gt;cbNotes.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbNotes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbNotes.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="gbAccounting_Period.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbAccounting_Period.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 63</value>
+  </data>
+  <data name="gbAccounting_Period.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 81</value>
+  </data>
+  <data name="gbAccounting_Period.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="gbAccounting_Period.Text" xml:space="preserve">
+    <value>Accounting Period</value>
+  </data>
+  <data name="&gt;&gt;gbAccounting_Period.Name" xml:space="preserve">
+    <value>gbAccounting_Period</value>
+  </data>
+  <data name="&gt;&gt;gbAccounting_Period.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbAccounting_Period.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbAccounting_Period.ZOrder" xml:space="preserve">
+    <value>57</value>
+  </data>
+  <data name="labeldfAccountingYear.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfAccountingYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 87</value>
+  </data>
+  <data name="labeldfAccountingYear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 13</value>
+  </data>
+  <data name="labeldfAccountingYear.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="labeldfAccountingYear.Text" xml:space="preserve">
+    <value>Accounting Year:</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccountingYear.Name" xml:space="preserve">
+    <value>labeldfAccountingYear</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccountingYear.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccountingYear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccountingYear.ZOrder" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="dfAccountingYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 105</value>
+  </data>
+  <data name="dfAccountingYear.MaxLength" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="dfAccountingYear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 21</value>
+  </data>
+  <data name="dfAccountingYear.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;dfAccountingYear.Name" xml:space="preserve">
+    <value>dfAccountingYear</value>
+  </data>
+  <data name="&gt;&gt;dfAccountingYear.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfAccountingYear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfAccountingYear.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="labeldfAccountingPeriod.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfAccountingPeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 87</value>
+  </data>
+  <data name="labeldfAccountingPeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="labeldfAccountingPeriod.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="labeldfAccountingPeriod.Text" xml:space="preserve">
+    <value>Period:</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccountingPeriod.Name" xml:space="preserve">
+    <value>labeldfAccountingPeriod</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccountingPeriod.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccountingPeriod.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccountingPeriod.ZOrder" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="dfAccountingPeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 105</value>
+  </data>
+  <data name="dfAccountingPeriod.MaxLength" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="dfAccountingPeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 21</value>
+  </data>
+  <data name="dfAccountingPeriod.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;dfAccountingPeriod.Name" xml:space="preserve">
+    <value>dfAccountingPeriod</value>
+  </data>
+  <data name="&gt;&gt;dfAccountingPeriod.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfAccountingPeriod.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfAccountingPeriod.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="gbVoucher_Reference.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbVoucher_Reference.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 63</value>
+  </data>
+  <data name="gbVoucher_Reference.Size" type="System.Drawing.Size, System.Drawing">
+    <value>330, 81</value>
+  </data>
+  <data name="gbVoucher_Reference.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="gbVoucher_Reference.Text" xml:space="preserve">
+    <value>Voucher Reference</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Reference.Name" xml:space="preserve">
+    <value>gbVoucher_Reference</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Reference.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Reference.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Reference.ZOrder" xml:space="preserve">
+    <value>56</value>
+  </data>
+  <data name="labeldfVoucherTypeReference.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfVoucherTypeReference.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 87</value>
+  </data>
+  <data name="labeldfVoucherTypeReference.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="labeldfVoucherTypeReference.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="labeldfVoucherTypeReference.Text" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherTypeReference.Name" xml:space="preserve">
+    <value>labeldfVoucherTypeReference</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherTypeReference.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherTypeReference.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherTypeReference.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="dfVoucherTypeReference.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 105</value>
+  </data>
+  <data name="dfVoucherTypeReference.MaxLength" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="dfVoucherTypeReference.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 21</value>
+  </data>
+  <data name="dfVoucherTypeReference.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherTypeReference.Name" xml:space="preserve">
+    <value>dfVoucherTypeReference</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherTypeReference.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherTypeReference.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherTypeReference.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="labeldfVoucherNoReference.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfVoucherNoReference.Location" type="System.Drawing.Point, System.Drawing">
+    <value>346, 87</value>
+  </data>
+  <data name="labeldfVoucherNoReference.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="labeldfVoucherNoReference.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="labeldfVoucherNoReference.Text" xml:space="preserve">
+    <value>Number:</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherNoReference.Name" xml:space="preserve">
+    <value>labeldfVoucherNoReference</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherNoReference.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherNoReference.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfVoucherNoReference.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="dfVoucherNoReference.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 105</value>
+  </data>
+  <data name="dfVoucherNoReference.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 21</value>
+  </data>
+  <data name="dfVoucherNoReference.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherNoReference.Name" xml:space="preserve">
+    <value>dfVoucherNoReference</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherNoReference.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherNoReference.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfVoucherNoReference.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="labeldfAccountingYearReference.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfAccountingYearReference.Location" type="System.Drawing.Point, System.Drawing">
+    <value>436, 87</value>
+  </data>
+  <data name="labeldfAccountingYearReference.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="labeldfAccountingYearReference.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="labeldfAccountingYearReference.Text" xml:space="preserve">
+    <value>Voucher Year:</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccountingYearReference.Name" xml:space="preserve">
+    <value>labeldfAccountingYearReference</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccountingYearReference.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccountingYearReference.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfAccountingYearReference.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="dfAccountingYearReference.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 105</value>
+  </data>
+  <data name="dfAccountingYearReference.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="dfAccountingYearReference.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;dfAccountingYearReference.Name" xml:space="preserve">
+    <value>dfAccountingYearReference</value>
+  </data>
+  <data name="&gt;&gt;dfAccountingYearReference.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfAccountingYearReference.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfAccountingYearReference.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="gbVoucher_Entry_By_User.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbVoucher_Entry_By_User.Location" type="System.Drawing.Point, System.Drawing">
+    <value>531, 63</value>
+  </data>
+  <data name="gbVoucher_Entry_By_User.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 81</value>
+  </data>
+  <data name="gbVoucher_Entry_By_User.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="gbVoucher_Entry_By_User.Text" xml:space="preserve">
+    <value>Voucher Entry By User</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Entry_By_User.Name" xml:space="preserve">
+    <value>gbVoucher_Entry_By_User</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Entry_By_User.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Entry_By_User.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Entry_By_User.ZOrder" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="labeldfUserid.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfUserid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>641, 87</value>
+  </data>
+  <data name="labeldfUserid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="labeldfUserid.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="labeldfUserid.Text" xml:space="preserve">
+    <value>Entered By:</value>
+  </data>
+  <data name="&gt;&gt;labeldfUserid.Name" xml:space="preserve">
+    <value>labeldfUserid</value>
+  </data>
+  <data name="&gt;&gt;labeldfUserid.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfUserid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfUserid.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="dfUserid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 105</value>
+  </data>
+  <data name="dfUserid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 21</value>
+  </data>
+  <data name="dfUserid.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;dfUserid.Name" xml:space="preserve">
+    <value>dfUserid</value>
+  </data>
+  <data name="&gt;&gt;dfUserid.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfUserid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfUserid.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="labeldfUserGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfUserGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>725, 87</value>
+  </data>
+  <data name="labeldfUserGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
+  </data>
+  <data name="labeldfUserGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="labeldfUserGroup.Text" xml:space="preserve">
+    <value>Entered By User Group:</value>
+  </data>
+  <data name="&gt;&gt;labeldfUserGroup.Name" xml:space="preserve">
+    <value>labeldfUserGroup</value>
+  </data>
+  <data name="&gt;&gt;labeldfUserGroup.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfUserGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfUserGroup.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="dfUserGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 105</value>
+  </data>
+  <data name="dfUserGroup.MaxLength" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="dfUserGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 21</value>
+  </data>
+  <data name="dfUserGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;dfUserGroup.Name" xml:space="preserve">
+    <value>dfUserGroup</value>
+  </data>
+  <data name="&gt;&gt;dfUserGroup.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfUserGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfUserGroup.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="labeldfUpdateError.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfUpdateError.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 153</value>
+  </data>
+  <data name="labeldfUpdateError.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="labeldfUpdateError.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="labeldfUpdateError.Text" xml:space="preserve">
+    <value>Update Error:</value>
+  </data>
+  <data name="&gt;&gt;labeldfUpdateError.Name" xml:space="preserve">
+    <value>labeldfUpdateError</value>
+  </data>
+  <data name="&gt;&gt;labeldfUpdateError.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfUpdateError.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfUpdateError.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="dfUpdateError.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 173</value>
+  </data>
+  <data name="dfUpdateError.Size" type="System.Drawing.Size, System.Drawing">
+    <value>499, 21</value>
+  </data>
+  <data name="dfUpdateError.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;dfUpdateError.Name" xml:space="preserve">
+    <value>dfUpdateError</value>
+  </data>
+  <data name="&gt;&gt;dfUpdateError.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfUpdateError.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfUpdateError.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="cbMultiCompanyId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>627, 235</value>
+  </data>
+  <data name="cbMultiCompanyId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 20</value>
+  </data>
+  <data name="cbMultiCompanyId.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="cbMultiCompanyId.Text" xml:space="preserve">
+    <value>Multi Company Voucher</value>
+  </data>
+  <data name="&gt;&gt;cbMultiCompanyId.Name" xml:space="preserve">
+    <value>cbMultiCompanyId</value>
+  </data>
+  <data name="&gt;&gt;cbMultiCompanyId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbMultiCompanyId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbMultiCompanyId.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="labeldfMultiCompanyId.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfMultiCompanyId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>548, 137</value>
+  </data>
+  <data name="labeldfMultiCompanyId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 13</value>
+  </data>
+  <data name="labeldfMultiCompanyId.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="labeldfMultiCompanyId.Text" xml:space="preserve">
+    <value>Multi Company Id:</value>
+  </data>
+  <data name="labeldfMultiCompanyId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfMultiCompanyId.Name" xml:space="preserve">
+    <value>labeldfMultiCompanyId</value>
+  </data>
+  <data name="&gt;&gt;labeldfMultiCompanyId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfMultiCompanyId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfMultiCompanyId.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="dfMultiCompanyId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>581, 135</value>
+  </data>
+  <data name="dfMultiCompanyId.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="dfMultiCompanyId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 21</value>
+  </data>
+  <data name="dfMultiCompanyId.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="dfMultiCompanyId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfMultiCompanyId.Name" xml:space="preserve">
+    <value>dfMultiCompanyId</value>
+  </data>
+  <data name="&gt;&gt;dfMultiCompanyId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfMultiCompanyId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfMultiCompanyId.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="labeldfCodePartValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfCodePartValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 211</value>
+  </data>
+  <data name="labeldfCodePartValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="labeldfCodePartValue.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="labeldfCodePartValue.Text" xml:space="preserve">
+    <value>Code Part Value:</value>
+  </data>
+  <data name="&gt;&gt;labeldfCodePartValue.Name" xml:space="preserve">
+    <value>labeldfCodePartValue</value>
+  </data>
+  <data name="&gt;&gt;labeldfCodePartValue.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfCodePartValue.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfCodePartValue.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="dfCodePartValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 231</value>
+  </data>
+  <data name="dfCodePartValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 21</value>
+  </data>
+  <data name="dfCodePartValue.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;dfCodePartValue.Name" xml:space="preserve">
+    <value>dfCodePartValue</value>
+  </data>
+  <data name="&gt;&gt;dfCodePartValue.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cDataFieldFinContent, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfCodePartValue.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfCodePartValue.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="labeldfCodePartDescription.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfCodePartDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 211</value>
+  </data>
+  <data name="labeldfCodePartDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 13</value>
+  </data>
+  <data name="labeldfCodePartDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="labeldfCodePartDescription.Text" xml:space="preserve">
+    <value>Code Part Description:</value>
+  </data>
+  <data name="&gt;&gt;labeldfCodePartDescription.Name" xml:space="preserve">
+    <value>labeldfCodePartDescription</value>
+  </data>
+  <data name="&gt;&gt;labeldfCodePartDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfCodePartDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfCodePartDescription.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="dfCodePartDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 231</value>
+  </data>
+  <data name="dfCodePartDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 21</value>
+  </data>
+  <data name="dfCodePartDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;dfCodePartDescription.Name" xml:space="preserve">
+    <value>dfCodePartDescription</value>
+  </data>
+  <data name="&gt;&gt;dfCodePartDescription.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cDataFieldFinDescription, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfCodePartDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfCodePartDescription.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labeldfsVoucherText2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsVoucherText2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>477, 9</value>
+  </data>
+  <data name="labeldfsVoucherText2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="labeldfsVoucherText2.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="labeldfsVoucherText2.Text" xml:space="preserve">
+    <value>Voucher Text:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsVoucherText2.Name" xml:space="preserve">
+    <value>labeldfsVoucherText2</value>
+  </data>
+  <data name="&gt;&gt;labeldfsVoucherText2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsVoucherText2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsVoucherText2.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="dfsVoucherText2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>480, 29</value>
+  </data>
+  <data name="dfsVoucherText2.MaxLength" type="System.Int32, mscorlib">
+    <value>2000</value>
+  </data>
+  <data name="dfsVoucherText2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 21</value>
+  </data>
+  <data name="dfsVoucherText2.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;dfsVoucherText2.Name" xml:space="preserve">
+    <value>dfsVoucherText2</value>
+  </data>
+  <data name="&gt;&gt;dfsVoucherText2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsVoucherText2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsVoucherText2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labeldfdApprovalDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfdApprovalDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 173</value>
+  </data>
+  <data name="labeldfdApprovalDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="labeldfdApprovalDate.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="labeldfdApprovalDate.Text" xml:space="preserve">
+    <value>Approved Date:</value>
+  </data>
+  <data name="&gt;&gt;labeldfdApprovalDate.Name" xml:space="preserve">
+    <value>labeldfdApprovalDate</value>
+  </data>
+  <data name="&gt;&gt;labeldfdApprovalDate.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfdApprovalDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfdApprovalDate.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="dfdApprovalDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>543, 192</value>
+  </data>
+  <data name="dfdApprovalDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 21</value>
+  </data>
+  <data name="dfdApprovalDate.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;dfdApprovalDate.Name" xml:space="preserve">
+    <value>dfdApprovalDate</value>
+  </data>
+  <data name="&gt;&gt;dfdApprovalDate.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfdApprovalDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfdApprovalDate.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="labeldfsApprovedByUserid.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsApprovedByUserid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>641, 173</value>
+  </data>
+  <data name="labeldfsApprovedByUserid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="labeldfsApprovedByUserid.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="labeldfsApprovedByUserid.Text" xml:space="preserve">
+    <value>Approved By:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApprovedByUserid.Name" xml:space="preserve">
+    <value>labeldfsApprovedByUserid</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApprovedByUserid.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApprovedByUserid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApprovedByUserid.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="dfsApprovedByUserid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 192</value>
+  </data>
+  <data name="dfsApprovedByUserid.MaxLength" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="dfsApprovedByUserid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 21</value>
+  </data>
+  <data name="dfsApprovedByUserid.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;dfsApprovedByUserid.Name" xml:space="preserve">
+    <value>dfsApprovedByUserid</value>
+  </data>
+  <data name="&gt;&gt;dfsApprovedByUserid.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsApprovedByUserid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsApprovedByUserid.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labeldfsApprovedByUserGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsApprovedByUserGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>725, 173</value>
+  </data>
+  <data name="labeldfsApprovedByUserGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 13</value>
+  </data>
+  <data name="labeldfsApprovedByUserGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="labeldfsApprovedByUserGroup.Text" xml:space="preserve">
+    <value>Approved By User Group:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApprovedByUserGroup.Name" xml:space="preserve">
+    <value>labeldfsApprovedByUserGroup</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApprovedByUserGroup.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApprovedByUserGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApprovedByUserGroup.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="dfsApprovedByUserGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 192</value>
+  </data>
+  <data name="dfsApprovedByUserGroup.MaxLength" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="dfsApprovedByUserGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 21</value>
+  </data>
+  <data name="dfsApprovedByUserGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;dfsApprovedByUserGroup.Name" xml:space="preserve">
+    <value>dfsApprovedByUserGroup</value>
+  </data>
+  <data name="&gt;&gt;dfsApprovedByUserGroup.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsApprovedByUserGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsApprovedByUserGroup.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="gbVoucher_Approval_By_User.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbVoucher_Approval_By_User.Location" type="System.Drawing.Point, System.Drawing">
+    <value>531, 149</value>
+  </data>
+  <data name="gbVoucher_Approval_By_User.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 81</value>
+  </data>
+  <data name="gbVoucher_Approval_By_User.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="gbVoucher_Approval_By_User.Text" xml:space="preserve">
+    <value>Voucher Approval By User</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Approval_By_User.Name" xml:space="preserve">
+    <value>gbVoucher_Approval_By_User</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Approval_By_User.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Approval_By_User.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbVoucher_Approval_By_User.ZOrder" xml:space="preserve">
+    <value>54</value>
+  </data>
+  <data name="dfRefCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 105</value>
+  </data>
+  <data name="dfRefCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="dfRefCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;dfRefCompany.Name" xml:space="preserve">
+    <value>dfRefCompany</value>
+  </data>
+  <data name="&gt;&gt;dfRefCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfRefCompany.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfRefCompany.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labeldfMCId.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfMCId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 87</value>
+  </data>
+  <data name="labeldfMCId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="labeldfMCId.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="labeldfMCId.Text" xml:space="preserve">
+    <value>Company:</value>
+  </data>
+  <data name="&gt;&gt;labeldfMCId.Name" xml:space="preserve">
+    <value>labeldfMCId</value>
+  </data>
+  <data name="&gt;&gt;labeldfMCId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfMCId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfMCId.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="dfMCId.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="dfMCId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfMCId.Name" xml:space="preserve">
+    <value>dfMCId</value>
+  </data>
+  <data name="&gt;&gt;dfMCId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfMCId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfMCId.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labeldfFunctionGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfFunctionGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 9</value>
+  </data>
+  <data name="labeldfFunctionGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="labeldfFunctionGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="labeldfFunctionGroup.Text" xml:space="preserve">
+    <value>Function Group:</value>
+  </data>
+  <data name="&gt;&gt;labeldfFunctionGroup.Name" xml:space="preserve">
+    <value>labeldfFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;labeldfFunctionGroup.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfFunctionGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfFunctionGroup.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="dfFunctionGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 29</value>
+  </data>
+  <data name="dfFunctionGroup.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="dfFunctionGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 21</value>
+  </data>
+  <data name="dfFunctionGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;dfFunctionGroup.Name" xml:space="preserve">
+    <value>dfFunctionGroup</value>
+  </data>
+  <data name="&gt;&gt;dfFunctionGroup.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfFunctionGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfFunctionGroup.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tblVoucherDetail_colCompany.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblVoucherDetail_colCompany.Title" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="tblVoucherDetail_colCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCompany.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCompany</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCompany.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCompany.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tblVoucherDetail_colAccountingYear.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblVoucherDetail_colAccountingYear.Title" xml:space="preserve">
+    <value>Accounting year</value>
+  </data>
+  <data name="tblVoucherDetail_colAccountingYear.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAccountingYear.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colAccountingYear</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAccountingYear.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAccountingYear.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAccountingYear.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tblVoucherDetail_colVoucherType.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblVoucherDetail_colVoucherType.Title" xml:space="preserve">
+    <value>Voucher type</value>
+  </data>
+  <data name="tblVoucherDetail_colVoucherType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colVoucherType.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colVoucherType</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colVoucherType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colVoucherType.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colVoucherType.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tblVoucherDetail_colVoucherNo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblVoucherDetail_colVoucherNo.Title" xml:space="preserve">
+    <value>Voucher no</value>
+  </data>
+  <data name="tblVoucherDetail_colVoucherNo.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colVoucherNo.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colVoucherNo</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colVoucherNo.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colVoucherNo.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colVoucherNo.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tblVoucherDetail_colRowNo.Title" xml:space="preserve">
+    <value>Row No</value>
+  </data>
+  <data name="tblVoucherDetail_colRowNo.Width" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colRowNo.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colRowNo</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colRowNo.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colRowNo.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colRowNo.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tblVoucherDetail_colAccount.Title" xml:space="preserve">
+    <value>@A</value>
+  </data>
+  <data name="tblVoucherDetail_colAccount.Width" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAccount.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colAccount</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAccount.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAccount.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAccount.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tblVoucherDetail_colsAccountDesc.Title" xml:space="preserve">
+    <value>@A
+Description</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsAccountDesc.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colsAccountDesc</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsAccountDesc.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartDescFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsAccountDesc.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsAccountDesc.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeB.Title" xml:space="preserve">
+    <value>@B</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeB.Width" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeB.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCodeB</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeB.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeB.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeB.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tblVoucherDetail_colsCodeBDesc.Title" xml:space="preserve">
+    <value>@B
+Description</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeBDesc.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colsCodeBDesc</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeBDesc.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartDescFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeBDesc.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeBDesc.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeC.Title" xml:space="preserve">
+    <value>@C</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeC.Width" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeC.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCodeC</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeC.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeC.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeC.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="tblVoucherDetail_colsCodeCDesc.Title" xml:space="preserve">
+    <value>@C
+Description</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeCDesc.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colsCodeCDesc</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeCDesc.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartDescFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeCDesc.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeCDesc.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeD.Title" xml:space="preserve">
+    <value>@D</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeD.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeD.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCodeD</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeD.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeD.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeD.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="tblVoucherDetail_colsCodeDDesc.Title" xml:space="preserve">
+    <value>@D
+Description</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeDDesc.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colsCodeDDesc</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeDDesc.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartDescFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeDDesc.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeDDesc.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeE.Title" xml:space="preserve">
+    <value>@E</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeE.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeE.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCodeE</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeE.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeE.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeE.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="tblVoucherDetail_colsCodeEDesc.Title" xml:space="preserve">
+    <value>@E
+Description</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeEDesc.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colsCodeEDesc</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeEDesc.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartDescFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeEDesc.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeEDesc.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeF.Title" xml:space="preserve">
+    <value>@F</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeF.Width" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeF.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCodeF</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeF.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeF.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeF.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="tblVoucherDetail_colsCodeFDesc.Title" xml:space="preserve">
+    <value>@F
+Description</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeFDesc.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colsCodeFDesc</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeFDesc.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartDescFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeFDesc.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeFDesc.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeG.Title" xml:space="preserve">
+    <value>@G</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeG.Width" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeG.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCodeG</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeG.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeG.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeG.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="tblVoucherDetail_colsCodeGDesc.Title" xml:space="preserve">
+    <value>@G
+Description</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeGDesc.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colsCodeGDesc</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeGDesc.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartDescFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeGDesc.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeGDesc.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeH.Title" xml:space="preserve">
+    <value>@H</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeH.Width" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeH.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCodeH</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeH.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeH.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeH.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="tblVoucherDetail_colsCodeHDesc.Title" xml:space="preserve">
+    <value>@H
+Description</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeHDesc.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colsCodeHDesc</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeHDesc.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartDescFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeHDesc.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeHDesc.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeI.Title" xml:space="preserve">
+    <value>@I</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeI.Width" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeI.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCodeI</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeI.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeI.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeI.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="tblVoucherDetail_colsCodeIDesc.Title" xml:space="preserve">
+    <value>@I
+Description</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeIDesc.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colsCodeIDesc</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeIDesc.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartDescFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeIDesc.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeIDesc.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeJ.Title" xml:space="preserve">
+    <value>@J</value>
+  </data>
+  <data name="tblVoucherDetail_colCodeJ.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeJ.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCodeJ</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeJ.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeJ.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCodeJ.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="tblVoucherDetail_colsCodeJDesc.Title" xml:space="preserve">
+    <value>@J
+Description</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeJDesc.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colsCodeJDesc</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeJDesc.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnCodePartDescFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeJDesc.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsCodeJDesc.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="tblVoucherDetail_colMultiCompanyId.Title" xml:space="preserve">
+    <value>Multi Company
+Voucher</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colMultiCompanyId.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colMultiCompanyId</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colMultiCompanyId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colMultiCompanyId.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colMultiCompanyId.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="tblVoucherDetail_colCorrection.Title" xml:space="preserve">
+    <value>Correction</value>
+  </data>
+  <data name="tblVoucherDetail_colCorrection.Width" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCorrection.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCorrection</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCorrection.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCorrection.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCorrection.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="tblVoucherDetail_colCurrencyCode.Title" xml:space="preserve">
+    <value>Currency
+Code</value>
+  </data>
+  <data name="tblVoucherDetail_colCurrencyCode.Width" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyCode.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCurrencyCode</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyCode.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyCode.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyCode.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="tblVoucherDetail_colCurrencyRate.Title" xml:space="preserve">
+    <value>Currency
+Rate</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyRate.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCurrencyRate</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyRate.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyRate.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyRate.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="tblVoucherDetail_colConversionFactor.Title" xml:space="preserve">
+    <value>Conversion
+Factor</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colConversionFactor.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colConversionFactor</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colConversionFactor.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colConversionFactor.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colConversionFactor.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="tblVoucherDetail_colDebetAmount.Title" xml:space="preserve">
+    <value>Debit Amount</value>
+  </data>
+  <data name="tblVoucherDetail_colDebetAmount.Width" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colDebetAmount.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colDebetAmount</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colDebetAmount.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colDebetAmount.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colDebetAmount.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="tblVoucherDetail_colCreditAmount.Title" xml:space="preserve">
+    <value>Credit Amount</value>
+  </data>
+  <data name="tblVoucherDetail_colCreditAmount.Width" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCreditAmount.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCreditAmount</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCreditAmount.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCreditAmount.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCreditAmount.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="tblVoucherDetail_colAmount.Title" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="tblVoucherDetail_colAmount.Width" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAmount.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colAmount</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAmount.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAmount.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAmount.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="tblVoucherDetail_colCurrencyDebetAmount.Title" xml:space="preserve">
+    <value>Currency
+Debit Amount</value>
+  </data>
+  <data name="tblVoucherDetail_colCurrencyDebetAmount.Width" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyDebetAmount.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCurrencyDebetAmount</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyDebetAmount.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyDebetAmount.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyDebetAmount.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="tblVoucherDetail_colCurrencyCreditAmount.Title" xml:space="preserve">
+    <value>Currency
+Credit Amount</value>
+  </data>
+  <data name="tblVoucherDetail_colCurrencyCreditAmount.Width" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyCreditAmount.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCurrencyCreditAmount</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyCreditAmount.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyCreditAmount.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyCreditAmount.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="tblVoucherDetail_colCurrencyAmount.Title" xml:space="preserve">
+    <value>Currency
+Amount</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyAmount.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCurrencyAmount</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyAmount.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyAmount.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCurrencyAmount.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="tblVoucherDetail_colnThirdCurrencyRate.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblVoucherDetail_colnThirdCurrencyRate.Title" xml:space="preserve">
+    <value>Rate @RATE</value>
+  </data>
+  <data name="tblVoucherDetail_colnThirdCurrencyRate.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblVoucherDetail_colnThirdCurrencyRate.Width" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyRate.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colnThirdCurrencyRate</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyRate.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFinEuro, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyRate.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyRate.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="tblVoucherDetail_colnThirdCurrencyDebitAmount.Title" xml:space="preserve">
+    <value>Debit Amount 
+in @EU</value>
+  </data>
+  <data name="tblVoucherDetail_colnThirdCurrencyDebitAmount.Width" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyDebitAmount.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colnThirdCurrencyDebitAmount</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyDebitAmount.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFinEuro, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyDebitAmount.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyDebitAmount.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="tblVoucherDetail_colnThirdCurrencyCreditAmount.Title" xml:space="preserve">
+    <value>Credit Amount 
+in @EU</value>
+  </data>
+  <data name="tblVoucherDetail_colnThirdCurrencyCreditAmount.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyCreditAmount.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colnThirdCurrencyCreditAmount</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyCreditAmount.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFinEuro, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyCreditAmount.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyCreditAmount.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="tblVoucherDetail_colnThirdCurrencyAmount.Title" xml:space="preserve">
+    <value>Amount 
+in @EU</value>
+  </data>
+  <data name="tblVoucherDetail_colnThirdCurrencyAmount.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyAmount.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colnThirdCurrencyAmount</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyAmount.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cColumnFinEuro, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyAmount.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnThirdCurrencyAmount.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="tblVoucherDetail_colnParallelCurrencyRate.Title" xml:space="preserve">
+    <value>Parallel Currency
+Rate</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnParallelCurrencyRate.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colnParallelCurrencyRate</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnParallelCurrencyRate.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnParallelCurrencyRate.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnParallelCurrencyRate.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="tblVoucherDetail_colnParallelConversionFactor.Title" xml:space="preserve">
+    <value>Parallel Currency
+Conversion Factor</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnParallelConversionFactor.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colnParallelConversionFactor</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnParallelConversionFactor.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnParallelConversionFactor.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnParallelConversionFactor.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="tblVoucherDetail_colText.Title" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="tblVoucherDetail_colText.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colText.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colText</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colText.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colText.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colText.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="tblVoucherDetail_colQuantity.Title" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="tblVoucherDetail_colQuantity.Width" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colQuantity.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colQuantity</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colQuantity.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colQuantity.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colQuantity.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="tblVoucherDetail_colProcessCode.Title" xml:space="preserve">
+    <value>Process
+Code</value>
+  </data>
+  <data name="tblVoucherDetail_colProcessCode.Width" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colProcessCode.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colProcessCode</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colProcessCode.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colProcessCode.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colProcessCode.ZOrder" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="tblVoucherDetail_colsDeliveryTypeId.Title" xml:space="preserve">
+    <value>Delivery Type ID</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsDeliveryTypeId.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colsDeliveryTypeId</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsDeliveryTypeId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsDeliveryTypeId.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsDeliveryTypeId.ZOrder" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="tblVoucherDetail_colsDeliveryTypeDescription.Title" xml:space="preserve">
+    <value>Delivery Type
+Description</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsDeliveryTypeDescription.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colsDeliveryTypeDescription</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsDeliveryTypeDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsDeliveryTypeDescription.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colsDeliveryTypeDescription.ZOrder" xml:space="preserve">
+    <value>48</value>
+  </data>
+  <data name="tblVoucherDetail_colOptionalCode.Title" xml:space="preserve">
+    <value>Tax
+Code</value>
+  </data>
+  <data name="tblVoucherDetail_colOptionalCode.Width" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colOptionalCode.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colOptionalCode</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colOptionalCode.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colOptionalCode.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colOptionalCode.ZOrder" xml:space="preserve">
+    <value>49</value>
+  </data>
+  <data name="tblVoucherDetail_colProjActivityId.Title" xml:space="preserve">
+    <value>Activity Sequence 
+No.</value>
+  </data>
+  <data name="tblVoucherDetail_colProjActivityId.Width" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colProjActivityId.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colProjActivityId</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colProjActivityId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colProjActivityId.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colProjActivityId.ZOrder" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="tblVoucherDetail_colPartyTypeId.Title" xml:space="preserve">
+    <value>Ledger No</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colPartyTypeId.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colPartyTypeId</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colPartyTypeId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colPartyTypeId.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colPartyTypeId.ZOrder" xml:space="preserve">
+    <value>51</value>
+  </data>
+  <data name="tblVoucherDetail_colTransCode.Title" xml:space="preserve">
+    <value>Transaction
+Code</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colTransCode.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colTransCode</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colTransCode.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colTransCode.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colTransCode.ZOrder" xml:space="preserve">
+    <value>52</value>
+  </data>
+  <data name="tblVoucherDetail_colTransferId.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblVoucherDetail_colTransferId.Title" xml:space="preserve">
+    <value>Transfer
+Id</value>
+  </data>
+  <data name="tblVoucherDetail_colTransferId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblVoucherDetail_colTransferId.Width" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colTransferId.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colTransferId</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colTransferId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colTransferId.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colTransferId.ZOrder" xml:space="preserve">
+    <value>53</value>
+  </data>
+  <data name="tblVoucherDetail_colUpdateError.Title" xml:space="preserve">
+    <value>Update
+Error</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colUpdateError.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colUpdateError</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colUpdateError.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colUpdateError.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colUpdateError.ZOrder" xml:space="preserve">
+    <value>54</value>
+  </data>
+  <data name="tblVoucherDetail_colCorrected.Title" xml:space="preserve">
+    <value>Corrected</value>
+  </data>
+  <data name="tblVoucherDetail_colCorrected.Width" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCorrected.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colCorrected</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCorrected.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCorrected.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colCorrected.ZOrder" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="tblVoucherDetail_colPeriodical_Allocation.Title" xml:space="preserve">
+    <value>Period
+Allocation</value>
+  </data>
+  <data name="tblVoucherDetail_colPeriodical_Allocation.Width" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colPeriodical_Allocation.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colPeriodical_Allocation</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colPeriodical_Allocation.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colPeriodical_Allocation.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colPeriodical_Allocation.ZOrder" xml:space="preserve">
+    <value>56</value>
+  </data>
+  <data name="tblVoucherDetail_colReferenceSerie.Title" xml:space="preserve">
+    <value>Reference
+Serie</value>
+  </data>
+  <data name="tblVoucherDetail_colReferenceSerie.Width" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colReferenceSerie.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colReferenceSerie</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colReferenceSerie.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colReferenceSerie.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colReferenceSerie.ZOrder" xml:space="preserve">
+    <value>57</value>
+  </data>
+  <data name="tblVoucherDetail_colReferenceNumber.Title" xml:space="preserve">
+    <value>Reference
+Number</value>
+  </data>
+  <data name="tblVoucherDetail_colReferenceNumber.Width" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colReferenceNumber.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colReferenceNumber</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colReferenceNumber.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colReferenceNumber.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colReferenceNumber.ZOrder" xml:space="preserve">
+    <value>58</value>
+  </data>
+  <data name="tblVoucherDetail_colAutoTaxVouEntry.Title" xml:space="preserve">
+    <value>Automatic
+Tax Transaction</value>
+  </data>
+  <data name="tblVoucherDetail_colAutoTaxVouEntry.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAutoTaxVouEntry.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colAutoTaxVouEntry</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAutoTaxVouEntry.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAutoTaxVouEntry.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colAutoTaxVouEntry.ZOrder" xml:space="preserve">
+    <value>59</value>
+  </data>
+  <data name="tblVoucherDetail_colnRowGroupId.Title" xml:space="preserve">
+    <value>Row 
+Group Id</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnRowGroupId.Name" xml:space="preserve">
+    <value>tblVoucherDetail_colnRowGroupId</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnRowGroupId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnRowGroupId.Parent" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail_colnRowGroupId.ZOrder" xml:space="preserve">
+    <value>61</value>
+  </data>
+  <data name="tblVoucherDetail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 269</value>
+  </data>
+  <data name="tblVoucherDetail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>854, 192</value>
+  </data>
+  <data name="tblVoucherDetail.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail.Name" xml:space="preserve">
+    <value>tblVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cChildTableFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tblVoucherDetail.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>878, 473</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 48</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Voucher Details Analysis</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods_menu_Notes___.Name" xml:space="preserve">
+    <value>menuTblMethods_menu_Notes___</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods_menu_Notes___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods_menuView__Multi_Company_Voucher___.Name" xml:space="preserve">
+    <value>menuTblMethods_menuView__Multi_Company_Voucher___</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods_menuView__Multi_Company_Voucher___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods_menuChange__Company___.Name" xml:space="preserve">
+    <value>menuTblMethods_menuChange__Company___</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods_menuChange__Company___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menu_Notes___.Name" xml:space="preserve">
+    <value>menuOperations_menu_Notes___</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menu_Notes___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menuView__Multi_Company_Voucher___.Name" xml:space="preserve">
+    <value>menuOperations_menuView__Multi_Company_Voucher___</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menuView__Multi_Company_Voucher___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menuChange__Company___.Name" xml:space="preserve">
+    <value>menuOperations_menuChange__Company___</value>
+  </data>
+  <data name="&gt;&gt;menuOperations_menuChange__Company___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menu_Notes___.Name" xml:space="preserve">
+    <value>menuFrmMethods_menu_Notes___</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menu_Notes___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuView__Multi_Company_Voucher___.Name" xml:space="preserve">
+    <value>menuFrmMethods_menuView__Multi_Company_Voucher___</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuView__Multi_Company_Voucher___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuChange__Company___.Name" xml:space="preserve">
+    <value>menuFrmMethods_menuChange__Company___</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuChange__Company___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Notes.Name" xml:space="preserve">
+    <value>menuItem__Notes</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Notes.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_View.Name" xml:space="preserve">
+    <value>menuItem_View</value>
+  </data>
+  <data name="&gt;&gt;menuItem_View.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator1.Name" xml:space="preserve">
+    <value>menuSeparator1</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change.Name" xml:space="preserve">
+    <value>menuItem_Change</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Notes_1.Name" xml:space="preserve">
+    <value>menuItem__Notes_1</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Notes_1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_View_1.Name" xml:space="preserve">
+    <value>menuItem_View_1</value>
+  </data>
+  <data name="&gt;&gt;menuItem_View_1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator2.Name" xml:space="preserve">
+    <value>menuSeparator2</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change_1.Name" xml:space="preserve">
+    <value>menuItem_Change_1</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change_1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Notes_2.Name" xml:space="preserve">
+    <value>menuItem__Notes_2</value>
+  </data>
+  <data name="&gt;&gt;menuItem__Notes_2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_View_2.Name" xml:space="preserve">
+    <value>menuItem_View_2</value>
+  </data>
+  <data name="&gt;&gt;menuItem_View_2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator3.Name" xml:space="preserve">
+    <value>menuSeparator3</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator3.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change_2.Name" xml:space="preserve">
+    <value>menuItem_Change_2</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change_2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmQueryVoucherDetail</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cFormWindowFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

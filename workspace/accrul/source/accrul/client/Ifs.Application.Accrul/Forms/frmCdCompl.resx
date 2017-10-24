@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menuFrmMethods_menuChange__Company___.Caption" xml:space="preserve">
+    <value>Change &amp;Company...</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuItem_Change.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuItem_Change.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 22</value>
+  </data>
+  <data name="menuFrmMethods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 26</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Name" xml:space="preserve">
+    <value>menuFrmMethods</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="dfsCdPart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 55</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dfsCdPart.MaxLength" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dfsCdPart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="dfsCdPart.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dfsCdPart.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfsCdPart.Name" xml:space="preserve">
+    <value>dfsCdPart</value>
+  </data>
+  <data name="&gt;&gt;dfsCdPart.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsCdPart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsCdPart.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="dfsCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 71</value>
+  </data>
+  <data name="dfsCompany.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="dfsCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dfsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Name" xml:space="preserve">
+    <value>dfsCompany</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelcmbsCdPartValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbsCdPartValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
+  </data>
+  <data name="labelcmbsCdPartValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="labelcmbsCdPartValue.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelcmbsCdPartValue.Text" xml:space="preserve">
+    <value>Code Part Value:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbsCdPartValue.Name" xml:space="preserve">
+    <value>labelcmbsCdPartValue</value>
+  </data>
+  <data name="&gt;&gt;labelcmbsCdPartValue.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbsCdPartValue.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbsCdPartValue.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cmbsCdPartValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 29</value>
+  </data>
+  <data name="cmbsCdPartValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 21</value>
+  </data>
+  <data name="cmbsCdPartValue.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cmbsCdPartValue.Name" xml:space="preserve">
+    <value>cmbsCdPartValue</value>
+  </data>
+  <data name="&gt;&gt;cmbsCdPartValue.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cRecListDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cmbsCdPartValue.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbsCdPartValue.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labeldfsCdPartDesc.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsCdPartDesc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>153, 8</value>
+  </data>
+  <data name="labeldfsCdPartDesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 13</value>
+  </data>
+  <data name="labeldfsCdPartDesc.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labeldfsCdPartDesc.Text" xml:space="preserve">
+    <value>Code Part Description:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCdPartDesc.Name" xml:space="preserve">
+    <value>labeldfsCdPartDesc</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCdPartDesc.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCdPartDesc.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCdPartDesc.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="dfsCdPartDesc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 29</value>
+  </data>
+  <data name="dfsCdPartDesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 21</value>
+  </data>
+  <data name="dfsCdPartDesc.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dfsCdPartDesc.Name" xml:space="preserve">
+    <value>dfsCdPartDesc</value>
+  </data>
+  <data name="&gt;&gt;dfsCdPartDesc.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsCdPartDesc.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsCdPartDesc.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labeldfsCdPartName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsCdPartName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 9</value>
+  </data>
+  <data name="labeldfsCdPartName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 13</value>
+  </data>
+  <data name="labeldfsCdPartName.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labeldfsCdPartName.Text" xml:space="preserve">
+    <value>Code Part Name:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCdPartName.Name" xml:space="preserve">
+    <value>labeldfsCdPartName</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCdPartName.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCdPartName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCdPartName.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="dfsCdPartName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 29</value>
+  </data>
+  <data name="dfsCdPartName.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="dfsCdPartName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 21</value>
+  </data>
+  <data name="dfsCdPartName.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;dfsCdPartName.Name" xml:space="preserve">
+    <value>dfsCdPartName</value>
+  </data>
+  <data name="&gt;&gt;dfsCdPartName.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsCdPartName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsCdPartName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tblCdCompl_colsCompany.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblCdCompl_colsCompany.Title" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="tblCdCompl_colsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCompany.Name" xml:space="preserve">
+    <value>tblCdCompl_colsCompany</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCompany.Parent" xml:space="preserve">
+    <value>tblCdCompl</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCompany.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tblCdCompl_colsCdPart.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblCdCompl_colsCdPart.Title" xml:space="preserve">
+    <value>Code Part</value>
+  </data>
+  <data name="tblCdCompl_colsCdPart.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblCdCompl_colsCdPart.Width" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPart.Name" xml:space="preserve">
+    <value>tblCdCompl_colsCdPart</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPart.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPart.Parent" xml:space="preserve">
+    <value>tblCdCompl</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPart.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartValue.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartValue.Title" xml:space="preserve">
+    <value>Code Part Value</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartValue.Width" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartValue.Name" xml:space="preserve">
+    <value>tblCdCompl_colsCdPartValue</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartValue.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartValue.Parent" xml:space="preserve">
+    <value>tblCdCompl</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartValue.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartFill.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartFill.Title" xml:space="preserve">
+    <value>Code Part Fill</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartFill.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartFill.Width" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartFill.Name" xml:space="preserve">
+    <value>tblCdCompl_colsCdPartFill</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartFill.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartFill.Parent" xml:space="preserve">
+    <value>tblCdCompl</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartFill.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartFillName.Title" xml:space="preserve">
+    <value>Code Fill Name</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartFillName.Width" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartFillName.Name" xml:space="preserve">
+    <value>tblCdCompl_colsCdPartFillName</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartFillName.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartFillName.Parent" xml:space="preserve">
+    <value>tblCdCompl</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartFillName.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartBlocked.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartBlocked.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartBlocked.Name" xml:space="preserve">
+    <value>tblCdCompl_colsCdPartBlocked</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartBlocked.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartBlocked.Parent" xml:space="preserve">
+    <value>tblCdCompl</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartBlocked.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tblCdCompl_colsFillValue.Title" xml:space="preserve">
+    <value>Code String Value</value>
+  </data>
+  <data name="tblCdCompl_colsFillValue.Width" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsFillValue.Name" xml:space="preserve">
+    <value>tblCdCompl_colsFillValue</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsFillValue.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsFillValue.Parent" xml:space="preserve">
+    <value>tblCdCompl</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsFillValue.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tblCdCompl_colsFillValueDesc.Title" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="tblCdCompl_colsFillValueDesc.Width" type="System.Int32, mscorlib">
+    <value>267</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsFillValueDesc.Name" xml:space="preserve">
+    <value>tblCdCompl_colsFillValueDesc</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsFillValueDesc.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsFillValueDesc.Parent" xml:space="preserve">
+    <value>tblCdCompl</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsFillValueDesc.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartFillNameStr.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartFillNameStr.Title" xml:space="preserve">
+    <value>(Untitled)</value>
+  </data>
+  <data name="tblCdCompl_colsCdPartFillNameStr.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartFillNameStr.Name" xml:space="preserve">
+    <value>tblCdCompl_colsCdPartFillNameStr</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartFillNameStr.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalTableColumn, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartFillNameStr.Parent" xml:space="preserve">
+    <value>tblCdCompl</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl_colsCdPartFillNameStr.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="tblCdCompl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 67</value>
+  </data>
+  <data name="tblCdCompl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>545, 288</value>
+  </data>
+  <data name="tblCdCompl.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl.Name" xml:space="preserve">
+    <value>tblCdCompl</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cChildTableFinBase, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tblCdCompl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>573, 417</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 72</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Cd Compl</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuChange__Company___.Name" xml:space="preserve">
+    <value>menuFrmMethods_menuChange__Company___</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuChange__Company___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change.Name" xml:space="preserve">
+    <value>menuItem_Change</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmCdCompl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cFormWindowFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

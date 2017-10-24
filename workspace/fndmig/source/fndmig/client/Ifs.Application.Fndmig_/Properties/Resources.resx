@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NAV_Interface_P" xml:space="preserve">
+    <value>Data Migration</value>
+  </data>
+  <data name="NAV_InterfaceStart" xml:space="preserve">
+    <value>Execute Job</value>
+  </data>
+  <data name="NAV_InterfOverviewJob" xml:space="preserve">
+    <value>Job History</value>
+  </data>
+  <data name="NAV_InterfaceHeader" xml:space="preserve">
+    <value>Migration Job Maintenance</value>
+  </data>
+  <data name="NAV_OverViewInterfaceHeader" xml:space="preserve">
+    <value>Overview - Migration Jobs</value>
+  </data>
+  <data name="NAV_OverViewInterfaceDetail" xml:space="preserve">
+    <value>Overview - Migration Job Details</value>
+  </data>
+  <data name="NAV_InterfaceHistory" xml:space="preserve">
+    <value>Migration Job History</value>
+  </data>
+  <data name="NAV_OverViewInterfaceHistory" xml:space="preserve">
+    <value>Overview - Migration Job History</value>
+  </data>
+  <data name="NAV_InterfaceBasic" xml:space="preserve">
+    <value>Data Migration General</value>
+  </data>
+  <data name="NAV_IntfaceReplStruct" xml:space="preserve">
+    <value>Replication Structure Maintenance</value>
+  </data>
+  <data name="NAV_IntfaceReplDbObjects" xml:space="preserve">
+    <value>Replication Objects</value>
+  </data>
+  <data name="NAV_IntfaceReplOutLog" xml:space="preserve">
+    <value>Replication Output Log</value>
+  </data>
+  <data name="NAV_IntfaceServerProcesses" xml:space="preserve">
+    <value>Server Processes</value>
+  </data>
+  <data name="TAB_NAME_Job_Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="TAB_NAME_Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="TAB_NAME_DetailFile" xml:space="preserve">
+    <value>File Mapping</value>
+  </data>
+  <data name="TAB_NAME_DetailConversion" xml:space="preserve">
+    <value>Source Mapping</value>
+  </data>
+  <data name="TAB_NAME_Rules" xml:space="preserve">
+    <value>Rules</value>
+  </data>
+  <data name="TAB_NAME_ExecSingel" xml:space="preserve">
+    <value>Execute</value>
+  </data>
+  <data name="TAB_NAME_ExecPlan" xml:space="preserve">
+    <value>Execution Plan</value>
+  </data>
+  <data name="TAB_NAME_MethodList" xml:space="preserve">
+    <value>Method List</value>
+  </data>
+  <data name="WH_frmIntfaceStart" xml:space="preserve">
+    <value>Execute Job - &amp;0</value>
+  </data>
+  <data name="WH_frmIntfaceStartClear" xml:space="preserve">
+    <value>Execute Job</value>
+  </data>
+  <data name="INTF_SelectFile" xml:space="preserve">
+    <value>Select File to Load</value>
+  </data>
+  <data name="INTF_SaveFile" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="ALERT_Title" xml:space="preserve">
+    <value>Procedure Execution</value>
+  </data>
+  <data name="FILE_All" xml:space="preserve">
+    <value>All Files</value>
+  </data>
+  <data name="FILE_Text" xml:space="preserve">
+    <value>Text Documents (*.txt)</value>
+  </data>
+  <data name="FILE_Dat" xml:space="preserve">
+    <value>Dat Files (*.dat)</value>
+  </data>
+  <data name="FILE_Ins" xml:space="preserve">
+    <value>Installation Files (*.ins)</value>
+  </data>
+  <data name="FNDMIG_Exporting_FileTitle" xml:space="preserve">
+    <value>Export File String</value>
+  </data>
+  <data name="FNDMIG_ExportingMessage" xml:space="preserve">
+    <value>Exporting to file '&amp;0'...</value>
+  </data>
+  <data name="INTF_CopyError" xml:space="preserve">
+    <value>Could not copy file</value>
+  </data>
+  <data name="INTF_DeleteError" xml:space="preserve">
+    <value>Could not delete file</value>
+  </data>
+  <data name="TEXT_QuestionCleanUp" xml:space="preserve">
+    <value>Cleaning up will remove all current details and Restart will not be possible. Do you want to continue?</value>
+  </data>
+  <data name="TEXT_TitleCleanUp" xml:space="preserve">
+    <value>Clean Warning</value>
+  </data>
+  <data name="FNDMIG_BatchExecInvalidTime" xml:space="preserve">
+    <value>A valid time must be entered</value>
+  </data>
+  <data name="FNDMIG_BatchExecInvalidDate" xml:space="preserve">
+    <value>A valid date must be entered</value>
+  </data>
+  <data name="WH_frmIntfaceHeader" xml:space="preserve">
+    <value>Migration Job - &amp;0</value>
+  </data>
+  <data name="WH_frmIntfHeaderClear" xml:space="preserve">
+    <value>Migration Job</value>
+  </data>
+  <data name="WH_frmIntfConvCols" xml:space="preserve">
+    <value>Convert - &amp;0, &amp;1</value>
+  </data>
+  <data name="WH_frmIntfConvColsClear" xml:space="preserve">
+    <value>Convert Columns</value>
+  </data>
+  <data name="WH_frmIntfaceReplStruct" xml:space="preserve">
+    <value>Strucure replication</value>
+  </data>
+  <data name="ALERT_TitleEx" xml:space="preserve">
+    <value>Execute Plan</value>
+  </data>
+  <data name="ALERT_TitleCopyIntface" xml:space="preserve">
+    <value>Migration Job Copied</value>
+  </data>
+  <data name="ALERT_TitleXsdCreated" xml:space="preserve">
+    <value>Xsd Created</value>
+  </data>
+  <data name="TEXT_IntfaceCopyTitle" xml:space="preserve">
+    <value>Copy Migration Job</value>
+  </data>
+  <data name="TEXT_IntfaceCopyLabel" xml:space="preserve">
+    <value>New Job ID:</value>
+  </data>
+  <data name="TEXT_IntfaceSourceCols" xml:space="preserve">
+    <value>Dictionary Columns</value>
+  </data>
+  <data name="TEXT_IntfaceShowSelectTitle" xml:space="preserve">
+    <value>Sql Select Statement</value>
+  </data>
+  <data name="TEXT_ImportFileName" xml:space="preserve">
+    <value>Enter name of file to import</value>
+  </data>
+  <data name="TEXT_ImportDone" xml:space="preserve">
+    <value>Finished importing new migration jobs</value>
+  </data>
+  <data name="TITLE_ImportDone" xml:space="preserve">
+    <value>Import Ready</value>
+  </data>
+  <data name="TEXT_ExportFile" xml:space="preserve">
+    <value>Enter filename to export data to</value>
+  </data>
+  <data name="TEXT_MethodListError" xml:space="preserve">
+    <value>Errors occured during import of Method List</value>
+  </data>
+  <data name="TITLE_ImportError" xml:space="preserve">
+    <value>Import Error</value>
+  </data>
+  <data name="TEXT_ImportError" xml:space="preserve">
+    <value>Errors during Import</value>
+  </data>
+  <data name="WH_MethodListAttr" xml:space="preserve">
+    <value>Method List Attribute</value>
+  </data>
+  <data name="WH_IntfaceReplStructCols" xml:space="preserve">
+    <value>Define Columns</value>
+  </data>
+  <data name="WH_frmIntfaceJobHistHead" xml:space="preserve">
+    <value>Migration History - &amp;0</value>
+  </data>
+  <data name="WH_frmIntfaceJobHistHeadClear" xml:space="preserve">
+    <value>Migration History</value>
+  </data>
+  <data name="INTF_Column" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="INTF_ExistWin" xml:space="preserve">
+    <value>does not eksists in window or column apears more than 1 time in source column spesification.</value>
+  </data>
+  <data name="INTF_FileOpenError" xml:space="preserve">
+    <value>Could not Open file</value>
+  </data>
+  <data name="TEXT_ConfirmRunSchedule" xml:space="preserve">
+    <value>The schedule '{0} - {1}' will be run as a background job. Do you want to continue?</value>
+  </data>
+  <data name="TEXT_LineLengthError" xml:space="preserve">
+    <value>Highlighted lines were truncated due to exceeding the line limit of 4000 characters. This may result in incomplete migration of data. It is recommended to check the truncated lines before proceeding.</value>
+  </data>
+</root>

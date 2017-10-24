@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <IfsPreBuildTasksDll>$(FndDevelopRoot)\Ifs.Fnd.PreBuildTasks.dll</IfsPreBuildTasksDll>
+  </PropertyGroup>
+  <UsingTask AssemblyFile="$(IfsPreBuildTasksDll)" TaskName="Ifs.Fnd.PreBuildTasks.FndSetEnvironmentVariable" />
+  <UsingTask AssemblyFile="$(IfsPreBuildTasksDll)" TaskName="Ifs.Fnd.PreBuildTasks.ListZip" />
+  <UsingTask AssemblyFile="$(IfsPreBuildTasksDll)" TaskName="Ifs.Fnd.PreBuildTasks.Zip" />
+  <UsingTask AssemblyFile="$(IfsPreBuildTasksDll)" TaskName="Ifs.Fnd.PreBuildTasks.Unzip" />
+</Project>

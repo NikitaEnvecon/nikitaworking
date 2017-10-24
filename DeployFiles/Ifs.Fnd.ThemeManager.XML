@@ -1,0 +1,3557 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ifs.Fnd.ThemeManager</name>
+    </assembly>
+    <members>
+        <member name="T:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKey">
+            <summary>
+            Represents an image resource key that matches with current device's DPI.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ImageResourceKey">
+             <summary>
+             Represents a resource key of an image.
+             </summary>
+             <remarks>
+             An image resource key, naturally expressed as a string, should follow the following format:
+             <![CDATA[
+            
+                    <resource-name>[_<width>x<height>]
+                    
+             ]]>
+             <list type="bullet">
+             <ul>
+                 <item><term>resource-name</term><description>Name of the resource.</description></item>
+                 <item><term>width</term><description>Width of the resource.</description></item>
+                 <item><term>height</term><description>Height of the resource.</description></item>
+             </ul>
+             </list>
+             <br/>
+             Consider the following 3 image resource keys:
+             <ul>
+                 <li>Save_16x16</li>
+                 <li>Save_32x32</li>
+                 <li>Save_64x64</li>
+             </ul>
+             All of them have been designed to render a "Save" button. 
+             <br/>
+             There are 3 sizes. At runtime, framework will select the image resource 
+             that matches best with the device's current DPI value from the above resource key set.
+             </remarks>
+             <seealso cref="T:Ifs.Fnd.ThemeManager.ImageResourceKeyParser"/>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.ImageResourceKey.DescendingComparer">
+            <summary>
+            Gets a comparer that can be used to sort a list of <see cref="T:Ifs.Fnd.ThemeManager.ImageResourceKey"/>s in descending order.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ImageResourceKey.#ctor(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ImageResourceKey"/> object.
+            <seealso cref="T:Ifs.Fnd.ThemeManager.ImageResourceKey"/>
+            </summary>
+            <param name="key">Source image resource key</param>
+            <param name="name">Name of the resource.</param>
+            <param name="width">Width of the resource.</param>
+            <param name="height">Height of the resource.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ImageResourceKey.ToString">
+            <summary>
+            A string representation of this <see cref="T:Ifs.Fnd.ThemeManager.ImageResourceKey"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKey.#ctor(Ifs.Fnd.ThemeManager.ImageResourceKey,System.Single,System.Single)">
+            <summary>
+            Constructs a <see cref="T:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKey"/> object from an <see cref="T:Ifs.Fnd.ThemeManager.ImageResourceKey"/>.
+            </summary>
+            <param name="source">Source <see cref="T:Ifs.Fnd.ThemeManager.ImageResourceKey"/>.</param>
+            <param name="renderWidth">Exact width this image should be scaled when rendering.</param>
+            <param name="renderHeight">Exact height this image should be scaled when rendering.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKey.#ctor(System.String,System.String,System.Int32,System.Int32,System.Single,System.Single)">
+            <summary>
+            Constructs a <see cref="T:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKey"/> object.
+            </summary>
+            <param name="key">Source image resource key</param>
+            <param name="name">Name of the resource.</param>
+            <param name="width">Width of the resource.</param>
+            <param name="height">Height of the resource.</param>
+            <param name="renderWidth">Exact width this image should be scaled when rendering.</param>
+            <param name="renderHeight">Exact height this image should be scaled when rendering.</param>
+            <seealso cref="T:Ifs.Fnd.ThemeManager.ImageResourceKey"/>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKey.ToString">
+            <summary>
+            A string representation of this <see cref="T:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKey"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKey.RenderWidth">
+            <summary>
+            Gets the exact width this resource is expected to be rendered.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKey.RenderHeight">
+            <summary>
+            Gets the exact height this resource is expected to be rendered.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKey.ShouldScale">
+            <summary>
+            Gets whether this image should be scaled when being rendered.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.Properties.Resources.NotFoundIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.DefaultPaletteFonts">
+            <summary>
+            Defines default values for <see cref="T:Ifs.Fnd.ThemeManager.PaletteFonts"/>.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.DefaultPaletteFonts.Item(Ifs.Fnd.ThemeManager.PaletteFonts)">
+            <summary>
+            Gets default value for given palette font.
+            </summary>
+            <param name="font">Palette font.</param>
+            <returns>The default font value of given palette font.</returns>
+            <exception cref="T:System.ArgumentException">If a default value has not been defined for given palette font.</exception>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles">
+            <summary>
+            Provides a single point of access for all themed values.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles.Common">
+            <summary>
+            Common styles.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles.ExplorerTop">
+            <summary>
+            Styles used in Explorer window's top area.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles.ExplorerBottom">
+            <summary>
+            Styles used in Explorer window's bottom area.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles.Navigator">
+            <summary>
+            Styles used in Explorer window's Navigator area.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles.Feature">
+            <summary>
+            Styles used in Explorer window's Feature area.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndThemedStyles.Feature.PaddingLeft">
+            <summary>
+            This represents the gap every feature should maintain at the left hand side, so that
+            all elements at the left hand side are aligned nicely, close to the navigator container.            
+            </summary>            
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles.TabControl">
+            <summary>
+            Styles used by Tab Control
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles.DataGrid">
+            <summary>
+            Styles used by Data Grid.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles.Graph">
+            <summary>
+            Styles used by the graph controls (XyChart, PieChart, etc).
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles.XGantt">
+            <summary>
+            Styles used by the XGantt.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles.IndexList">
+            <summary>
+            Styles used by the Index List.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles.Matrix">
+            <summary>
+            Styles used by the FndMatrix
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemedStyles.Streams">
+            <summary>
+            Styles used by Streams.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ThemedStylesControlAttribute">
+            <summary>
+            Decoration attribute used by Theme Control Editor to map with <see cref="T:Ifs.Fnd.ThemeManager.FndThemedStyles"/> nested classes.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndChartColors">
+            <summary>
+            FndChartColors holds the application wide supported chart colors for IFS Themes.
+            </summary>	
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndChartColors.FromName(System.String)">
+            <summary>
+            Creates a Color structure from the specified name of a predefined color.
+            </summary>
+            <param name="name">A string that is the name of a predefined color.</param>
+            <returns>The Color that this method creates.</returns>
+            <remarks>If the name parameter is not the valid name of a predefined color, the FromName method creates a Color structure that has an ARGB value of 0 (that is, all ARGB components are 0).</remarks>
+            <example>FndChartColors.FromName("Series01Color01")</example>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series01Color01">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 1 in the chart series 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series01Color02">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 2 in the chart series 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series01Color03">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 3 in the chart series 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series01Color04">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 4 in the chart series 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series01Color05">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 5 in the chart series 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series01Color06">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 6 in the chart series 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series01Color07">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 7 in the chart series 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series01Color08">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 8 in the chart series 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series01Color09">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 9 in the chart series 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series01Color10">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 10 in the chart series 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series01Color11">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 11 in the chart series 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series01Color12">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 12 in the chart series 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series02Color01">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 1 in the chart series 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series02Color02">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 2 in the chart series 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series02Color03">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 3 in the chart series 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series02Color04">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 4 in the chart series 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series02Color05">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 5 in the chart series 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series02Color06">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 6 in the chart series 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series02Color07">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 7 in the chart series 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series02Color08">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 8 in the chart series 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series02Color09">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 9 in the chart series 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series02Color10">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 10 in the chart series 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series02Color11">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 11 in the chart series 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series02Color12">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 12 in the chart series 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series03Color01">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 1 in the chart series 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series03Color02">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 2 in the chart series 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series03Color03">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 3 in the chart series 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series03Color04">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 4 in the chart series 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series03Color05">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 5 in the chart series 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series03Color06">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 6 in the chart series 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series03Color07">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 7 in the chart series 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series03Color08">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 8 in the chart series 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series03Color09">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 9 in the chart series 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series03Color10">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 10 in the chart series 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series03Color11">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 11 in the chart series 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series03Color12">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 12 in the chart series 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series04Color01">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 1 in the chart series 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series04Color02">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 2 in the chart series 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series04Color03">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 3 in the chart series 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series04Color04">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 4 in the chart series 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series04Color05">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 5 in the chart series 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series04Color06">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 6 in the chart series 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series04Color07">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 7 in the chart series 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series04Color08">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 8 in the chart series 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series04Color09">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 9 in the chart series 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series04Color10">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 10 in the chart series 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series04Color11">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 11 in the chart series 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series04Color12">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 12 in the chart series 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series05Color01">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 1 in the chart series 5.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series05Color02">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 2 in the chart series 5.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series05Color03">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 3 in the chart series 5.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series05Color04">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 4 in the chart series 5.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series05Color05">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 5 in the chart series 5.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series05Color06">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 6 in the chart series 5.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series05Color07">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 7 in the chart series 5.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series05Color08">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 8 in the chart series 5.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series05Color09">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 9 in the chart series 5.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series05Color10">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 10 in the chart series 5.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series05Color11">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 11 in the chart series 5.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series05Color12">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 12 in the chart series 5.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series06Color01">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 1 in the chart series 6.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series06Color02">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 2 in the chart series 6.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series06Color03">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 3 in the chart series 6.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series06Color04">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 4 in the chart series 6.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series06Color05">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 5 in the chart series 6.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series06Color06">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 6 in the chart series 6.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series06Color07">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 7 in the chart series 6.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series06Color08">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 8 in the chart series 6.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series06Color09">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 9 in the chart series 6.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series06Color10">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 10 in the chart series 6.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series06Color11">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 11 in the chart series 6.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series06Color12">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 12 in the chart series 6.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color01">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 1 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color02">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 2 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color03">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 3 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color04">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 4 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color05">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 5 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color06">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 6 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color07">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 7 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color08">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 8 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color09">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 9 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color10">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 10 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color11">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 11 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color12">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 12 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color13">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 13 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color14">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 14 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color15">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 15 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color16">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 16 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color17">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 17 in the chart series 7.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndChartColors.Series07Color18">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is color 18 in the chart series 7.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndBaseColors">
+            <summary>
+            FndBaseColors holds the application wide supported base colors for IFS Themes.
+            </summary>	
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndBaseColors.FromHex(System.String)">
+            <summary>
+            Creates a Color structure from the specified hexadecimal string
+            </summary>
+            <param name="hex">A string representing a RGB value in hexadecimal format</param>
+            <returns>The Color that this method creates.</returns>
+            <remarks>If the hex parameter is not valid this method throws an exception</remarks>
+            <example>FndBaseColors.FromHex("4D3452")</example>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndBaseColors.FromHex(System.String,System.String,System.String)">
+            <summary>
+            Creates a Color structure from the specified hexadecimal string
+            </summary>
+            <param name="red">2 chars long string for the red part</param>
+            <param name="green">2 chars long string for the green part</param>
+            <param name="blue">2 chars long string for the blue part</param>
+            <returns>The Color that this method creates.</returns>
+            <remarks>If the hex parameter is not valid this method throws an exception</remarks>
+            <example>FndBaseColors.FromHex("4D", "34", "52")</example>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndBaseColors.FromName(System.String)">
+            <summary>
+            Creates a Color structure from the specified name of a predefined color.
+            </summary>
+            <param name="name">A string that is the name of a predefined color.</param>
+            <returns>The Color that this method creates.</returns>
+            <remarks>If the name parameter is not the valid name of a predefined color, the FromName method creates a Color structure that has an ARGB value of 0 (that is, all ARGB components are 0).</remarks>
+            <example>FndBaseColors.FromName("BaseColor01Purple")</example>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndBaseColors.CheckHexFormat(System.String@)">
+            <summary>
+            Checks for valid hexformat such as "11FF00" or "AA0199"
+            </summary>
+            <param name="hex">The string to check</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndBaseColors.CheckHexFormat(System.String@,System.String@,System.String@)">
+            <summary>
+            Checks for valid hexformat such as "11" "FF" "00" or "AA" "01" "99"
+            </summary>
+            <param name="red">2 chars long string for the red part</param>
+            <param name="green">2 chars long string for the green part</param>
+            <param name="blue">2 chars long string for the blue part</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndBaseColors.StripNumberSign(System.String@)">
+            <summary>
+            Strips number signs and also spaces, commas, semicolons or colons from the string
+            </summary>
+            <param name="s">The string to search and modify</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndBaseColors.FillConstants(System.Collections.Hashtable,System.Type)">
+            <summary>
+            Create a hashtable of all defined color properties in this class using Reflection
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor01Purple">
+            <summary>
+            IFS Base Color 1
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor02VioletRed">
+            <summary>
+            IFS Base Color 2
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor03DarkRed">
+            <summary>
+            IFS Base Color 3
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor04OrangeRed">
+            <summary>
+            IFS Base Color 4
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor05DarkOrange">
+            <summary>
+            IFS Base Color 5
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor06Orange">
+            <summary>
+            IFS Base Color 6
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor07GoldenKhaki">
+            <summary>
+            IFS Base Color 7
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor08LightOlive">
+            <summary>
+            IFS Base Color 8
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor09LightOliveDrab">
+            <summary>
+            IFS Base Color 9
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor10DarkSeaGreen">
+            <summary>
+            IFS Base Color 10
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor11DarkCyan">
+            <summary>
+            IFS Base Color 11
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor12DarkSteelBlue">
+            <summary>
+            IFS Base Color 12
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor13NewRed">
+            <summary>
+            IFS Base Color 13
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor14NewYellow">
+            <summary>
+            IFS Base Color 14
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor15NewLightGreen">
+            <summary>
+            IFS Base Color 15
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor16NewLightBlue">
+            <summary>
+            IFS Base Color 16
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor17NewGreen">
+            <summary>
+            IFS Base Color 17
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor18NewBrown">
+            <summary>
+            IFS Base Color 18
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor19NewOrange">
+            <summary>
+            IFS Base Color 19
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor20NewDarkRed">
+            <summary>
+            IFS Base Color 20
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.BaseColor1">
+            <summary>
+            IFS Base Color 1x
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Black">
+            <summary>
+            IFS Identity Color 1
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_White">
+            <summary>
+            IFS Identity Color 2
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Blue">
+            <summary>
+            IFS Identity Color 3
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Green">
+            <summary>
+            IFS Identity Color 4
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Orange">
+            <summary>
+            IFS Identity Color 5
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Pink">
+            <summary>
+            IFS Identity Color 6
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Purple">
+            <summary>
+            IFS Identity Color 7
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Red">
+            <summary>
+            IFS Identity Color 8
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Yellow">
+            <summary>
+            IFS Identity Color 9
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Dark_Blue">
+            <summary>
+            IFS Identity Color 10
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Dark_Green">
+            <summary>
+            IFS Identity Color 11
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Dark_Orange">
+            <summary>
+            IFS Identity Color 12
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Light_Blue">
+            <summary>
+            IFS Identity Color 13
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Light_Green">
+            <summary>
+            IFS Identity Color 14
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Light_Pink">
+            <summary>
+            IFS Identity Color 15
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Light_Purple">
+            <summary>
+            IFS Identity Color 16
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Dark_Gray">
+            <summary>
+            IFS Identity Color 17
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.IFS_Light_Gray">
+            <summary>
+            IFS Identity Color 18
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.WorkAreaColor01">
+            <summary>
+            Work area color 1
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.WorkAreaColor02">
+            <summary>
+            Work area color 2
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.WorkAreaColor03">
+            <summary>
+            Work area color 3
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.WorkAreaColor04">
+            <summary>
+            Work area color 4
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.WorkAreaColor05">
+            <summary>
+            Work area color 5
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.WorkAreaColor06">
+            <summary>
+            Work area color 6
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.WorkAreaColor07">
+            <summary>
+            Work area color 7
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.WorkAreaColor08">
+            <summary>
+            Work area color 8
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.WorkAreaColor09">
+            <summary>
+            Work area color 9
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.WorkAreaColor10">
+            <summary>
+            Work area color 10
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.WorkAreaColor11">
+            <summary>
+            Work area color 11
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor01">
+            <summary>
+            Chrome color 1
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor02">
+            <summary>
+            Chrome color 2
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor03">
+            <summary>
+            Chrome color 3
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor04">
+            <summary>
+            Chrome color 4
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor05">
+            <summary>
+            Chrome color 5
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor06">
+            <summary>
+            Chrome color 6
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor07">
+            <summary>
+            Chrome color 7
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor08">
+            <summary>
+            Chrome color 8
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor09">
+            <summary>
+            Chrome color 9
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor10">
+            <summary>
+            Chrome color 10
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor11">
+            <summary>
+            Chrome color 11
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor12">
+            <summary>
+            Chrome color 12
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor13">
+            <summary>
+            Chrome color 13
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor14">
+            <summary>
+            Chrome color 14
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.ChromeColor15">
+            <summary>
+            Chrome color 15
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.SignalAlarm">
+            <summary>
+            Alarm signal color (typically red)
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.SignalWarning">
+            <summary>
+            Warning signal color (typically yellow)
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndBaseColors.SignalOK">
+            <summary>
+            OK signal color (typically green)
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndColors">
+            <summary>
+            FndColors holds the application wide supported colors for IFS Themes.
+            Controls and features shall be using this to set colors.
+            </summary>	
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndColors.FromName(System.String)">
+            <summary>
+            Creates a Color structure from the specified name of a predefined color.
+            </summary>
+            <param name="name">A string that is the name of a predefined color.</param>
+            <returns>The Color that this method creates.</returns>
+            <remarks>If the name parameter is not the valid name of a predefined color, the FromName method creates a Color structure that has an ARGB value of 0 (that is, all ARGB components are 0).</remarks>
+            <example>FndColors.FromName("ReadOnlyControlText")</example>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.EditedControlText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of the text in a read only control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.MandatoryControl">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of the background in a mandatory control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ReadOnlyControl">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of the background in a read only control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ReadOnlyControlText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of text in a read only control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.HighlightSignal">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color to send a highlight signal.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.CustomizedControlMarker">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of the border or label of a control that is being customized.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ActiveNotes">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of the background in an active note.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ArchivedNotes">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of the background in an archived note.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NotesButtonHover">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the button hover color used in notes.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.AddressBarText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the fore color of the address bar caption.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.TabControlBackColor">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the background color of a Tab Control
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.TabControlBorder">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the Border color of a Tab Control
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.TabControlActiveMarker">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of the Active tab of a Tab Control
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.TabControlText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of a Tab Control's header text
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.TabControlInactiveHoverUpper">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the hover upper color of an inactive Tab of a Tab Control
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.TabControlTextDisabled">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of a disabled tab page's header text of a  Tab Control
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.GroupBoxBorder">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of the border of a Group Box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.FeatureBackground">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of the background in a feature.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.FeatureBackgroundDark">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of the dark background in a feature.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StartPageHeader">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the header color of the start page.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StartPageIntroText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the introduction text color of the start page.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StartPageLinkText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the link text color of the start page.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorBoxBorder">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the border color used for navigator box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorBoxGradientBegin">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the starting gradient color used in navigator box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorBoxGradientEnd">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the end gradient color used in navigator box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorBoxHoverDark">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the hover dark color used in navigator box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorBoxHoverLight">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the hover light color used in navigator box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorBoxText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text color used in navigator box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorBoxTextShadow">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text shadow color used in navigator box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorTreeBackColor">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the background color used in navigator tree.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorTreeText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text color used in navigator tree.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorTreeFilterBoxBackColor">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the background color used in navigator tree filter box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorTreeFilterBoxText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text color used in navigator tree filter box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorTreeFilterBoxLabelText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text color used for filter box label in navigator tree.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorTreeFilterBoxBorder">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the border color used in navigator tree filter box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorTreeFilteredNodeText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text color used for filtered nodes in navigator tree.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorTreeSelectedNodeBackColor">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the background color used for selected node in navigator tree.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.NavigatorTreeSelectedNodeText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text color used for selected node in navigator tree.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.BreadCrumbBorder">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the border color used in bread crumb.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.BreadCrumbBorderAlias">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the alias border color used in bread crumb.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.BreadCrumbUpperHoverBegin">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the starting upper hover color used in bread crumb.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.BreadCrumbUpperHoverEnd">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the end upper hover color used in bread crumb.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.BreadCrumbLowerHoverBegin">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the starting lower hover color used in bread crumb.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.BreadCrumbLowerHoverEnd">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the end lower hover color used in bread crumb.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.BreadCrumbText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text color used in bread crumb.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.RibbonControlHoverLight">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the hover light color used in ribbon control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.RibbonControlHoverDark">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the hover dark color used in ribbon control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.RibbonControlGradientBegin">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the gradient begin color color used in ribbon control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.RibbonControlGradientEnd">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the gradient end color color used in ribbon control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.RibbonControlHighlightBegin">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the starting highlight color used in ribbon control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.RibbonControlHighlightEnd">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the end highlight color used in ribbon control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.RibbonControlHighlightFade">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the fade highlight color used in ribbon control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.RibbonControlText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text color used in ribbon control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.FeatureToolBarButtonChecked">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color used when the feature toolbar button is checked.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.FeatureToolBarButtonPressed">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color used when the feature toolbar button is pressed.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.FeatureToolBarButtonSelected">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color used when the feature toolbar button is selected.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.FeatureToolBarButtonSelectedBorder">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color used for the feature toolbar button border when the button is selected.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.FeatureToolBarOverflowButtonGradientBegin">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the starting color of the gradient used in feature toolbar overflow button.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.FeatureToolBarOverflowButtonGradientEnd">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the end color of the gradient used in feature toolbar overflow button.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.FeatureToolBarOverflowButtonGradientMiddle">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the middle color of the gradient used in feature toolbar overflow button.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.FeatureToolBarSeparatorDark">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color used for shadow effects in feature toolbar separator.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.FeatureToolBarSeparatorLight">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color used for highlight effects in feature toolbar separator.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.SearchFieldBackColor">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the background color for search filds in search pane.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.SearchFieldText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text color for search filds in search pane.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ApplicationSearchBoxBackColor">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the background color of the application search box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ApplicationSearchBoxBorder">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the boarder color of the application search box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ApplicationSearchBoxText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of text in the application search box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ApplicationSearchBoxGrayText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of gray text in the application search box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ApplicationSearchHighlight">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the higlight color in the application search box.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ContextPaneBackColor">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of a context pane background.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.PageToolBarLightText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of page toolbar menu item forecolor (light).
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.PageToolBarDarkText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of page toolbar menu item forecolor (dark).
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StreamItemReadBackColor">
+            <summary>
+            Gets StreamItemReadBackColor color.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StreamItemUnReadBackColor">
+            <summary>
+            Gets StreamItemUnReadBackColor color.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StreamItemNameForeColor">
+            <summary>
+            Gets StreamItemNameForeColor color.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StreamItemDateForeColor">
+            <summary>
+            Gets StreamItemDateForeColor color.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StreamItemTitleForeColor">
+            <summary>
+            Gets StreamItemTitleForeColor color.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StreamItemNotesForeColor">
+            <summary>
+            Gets StreamItemNotesForeColor color.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StreamItemMessageForeColor">
+            <summary>
+            Gets StreamItemMessageForeColor color.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StreamItemMessageBoldForeColor">
+            <summary>
+            Gets StreamItemMessageBoldForeColor color.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StreamPanelBackColor">
+            <summary>
+            Gets StreamPanelBackColor color.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.StreamPanelTemplateBackColor">
+            <summary>
+            Gets StreamPanelTemplateBackColor color.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.BusySpinnerFillColor">
+            <summary>
+            Gets BusySpinnerFillColor color.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerBannerGradientBegin">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the starting color of the gradient used in explorer banner.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerBannerGradientEnd">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the end color of the gradient used in explorer banner.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerBannerText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the color of the explorer banner text.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerControlDark">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the dark color of a explorer control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerControlLight">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the light color of a explorer control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerControlLightLight">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the light light color of a explorer control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerControlText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text color of a explorer control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerControlTextShadow">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text shadow color of a explorer control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerControlThinLine">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the control thin line color of a explorer control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerFormBackColor">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the background color of explorer form.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerHeaderLowerGradientBegin">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the starting color of the gradient used in lower part of the explorer header.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerHeaderLowerGradientEnd">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the end color of the gradient used in lower part of the explorer header.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerHeaderUpperGradientBegin">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the starting color of the gradient used in upper part of the explorer header.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerHeaderUpperGradientEnd">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the end color of the gradient used in upper part of the explorer header.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerMainMenuText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text color used in explorer main menu.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerNavigatorPanelText">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the text color used in navigator panel.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerToolBarHoverDark">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the dark color to used for hover effects on the explorer toolbar.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerToolBarHoverLight">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the light color to used for hover effects on the explorer toolbar.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerToolBarSeparatorDark">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the dark color used for shadow effects on explorer toolbar.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndColors.ExplorerToolBarSeparatorLight">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Color"/> structure that is the light color used for shadow effects on explorer toolbar.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndControl">
+            <summary>
+            A representation of FndControls in a FndTheme.
+            </summary>	
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControl.#ctor">
+            <summary>
+            Creates a virtual representation of a FndControl to be held by a FndTheme.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControl.#ctor(System.String)">
+            <summary>
+            Creates a virtual representation of a FndControl to be held by a FndTheme.
+            </summary>
+            <param name="controlName">The Class Name of the Control e.g. FndBanner, FndTabControl etc.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControl.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a virtual representation of a FndControl to be held by a FndTheme.
+            </summary>
+            <param name="controlName">The Name of the Control e.g. FndBanner, FndTabControl etc.</param>
+            <param name="assemblyName">The Name of the assembly where the control resides</param>
+            <param name="className">The fully qualified class name of the control e.g. Ifs.Fnd.Windows.Forms.Banner.Banner</param>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndControl.ControlName">
+            <summary>
+            Get or set the name of the control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndControl.AssemblyName">
+            <summary>
+            Get or set the assembly name of the control.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndControl.ClassName">
+            <summary>
+            Get or set the fully qualified class name of the control
+            e.g. Ifs.Fnd.Windows.Forms.Banner.Banner
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndControl.ControlProperties">
+            <summary>
+            Get or set a collection of FndProperties belonging to this theme.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndControlCollection">
+            <summary>
+            A Collection of FndControls used by FndTheme.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.#ctor">
+            <summary>
+            A collection of FndControls used by FndTheme. Should not be directly created by programmer.
+            FndTheme uses this automatically when adding controls to a theme.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.Add(Ifs.Fnd.ThemeManager.FndControl)">
+            <summary>
+            Adds a FndControl to the FndControl Collection
+            </summary>
+            <param name="value">The FndControl to be added.</param>
+            <returns>Returns the index number in the collection holding the FndControl</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.AddRange(Ifs.Fnd.ThemeManager.FndControl[])">
+            <summary>
+            Adds a range of FndControl to the FndControl Collection
+            </summary>
+            <param name="array">The array of FndControls to be added.</param>		
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.Contains(Ifs.Fnd.ThemeManager.FndControl)">
+            <summary>
+            Determines whether this collection of FndControls has the specified FndControl in it.
+            </summary>
+            <param name="item">The FndControl to be checked if it is contained.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.IndexOf(Ifs.Fnd.ThemeManager.FndControl)">
+            <summary>
+            Gets the index of the FndControl in the FndControlCollection
+            </summary>
+            <param name="value">FndControl</param>
+            <returns>Index of FndControl</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.Insert(System.Int32,Ifs.Fnd.ThemeManager.FndControl)">
+            <summary>
+            Inserts a new FndControl into FndControlCollection at the specified place.
+            </summary>
+            <param name="index">The place to add the FndControl in the FndControlCollection.</param>
+            <param name="value">The FndControl to be added.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.Remove(Ifs.Fnd.ThemeManager.FndControl)">
+            <summary>
+            Removes a specified FndControl
+            </summary>
+            <param name="obj">The FndControl to remove.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.ToArray">
+            <summary>
+            Returns an array of FndControls.
+            </summary>
+            <returns>FndControls array.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.Clear">
+            <summary>
+            Clears the FndControlCollection.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.Remove(System.String)">
+            <summary>
+            Remove a FndControl from the FndControlCollection.
+            </summary>
+            <param name="name">The name of the FndControl</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.RemoveAt(System.Int32)">
+            <summary>
+            Remove a specific FndControl from the FndControlCollection.
+            </summary>
+            <param name="index">The index of the FndControl in the FndControlCollection</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.IndexOf(System.String)">
+            <summary>
+            Gets the index of the specified FndControl in the FndControlCollection.
+            </summary>
+            <param name="name">Name of the FndControl.</param>
+            <returns>Index of the specified FndControl.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.Contains(System.String)">
+            <summary>
+            Determines whether this collection of FndControls has the specified FndControl.
+            </summary>
+            <param name="name">Name of the FndControl</param>
+            <returns>Returns true if the specified FndControl is in collection</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.CopyTo(Ifs.Fnd.ThemeManager.FndControl[])">
+            <summary>
+            Copies the collection to an array, starting at the specified index.
+            </summary>
+            <param name="array">An array of FndControls.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.CopyTo(Ifs.Fnd.ThemeManager.FndControl[],System.Int32)">
+            <summary>
+            Copies the collection to an array, starting at the specified index.
+            </summary>
+            <param name="array">An array of FndControls.</param>
+            <param name="index">The index of the FndControl.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndControlCollection.GetEnumerator">
+            <summary>
+            Returns an IEnumerator. Use to enumerate the FndControls in FndControlCollection.
+            </summary>
+            <returns>IEnumerator</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndControlCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the FndControl at the specified index.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndControlCollection.Item(System.String)">
+            <summary>
+            Gets or sets the FndControl with the specified name.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndControlCollection.IsReadOnly">
+            <summary>
+            Returns true if FndControlCollection is read-only.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndControlCollection.IsFixedSize">
+            <summary>
+            Returns true if FndControlCollection is of fixed size.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndControlCollection.IsSynchronized">
+            <summary>
+            Returns true if collection is synchronized.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndControlCollection.Count">
+            <summary>
+            Gets the number of FndControls in Collection.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndFonts">
+            <summary>
+            Summary description for FndFonts.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndFonts.defaultAddressBar">
+            <summary>
+            The default font that is used for address bar.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndFonts.defaultNavigatorTree">
+            <summary>
+            The default font that is used for explorer navigator tree.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndFonts.archivedNotesFont">
+            <summary>
+            The font used by archived notes.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndFonts.activeNotesFont">
+            <summary>
+            The font used by active notes.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndFonts.startPageHeader">
+            <summary>
+            The font used by start Page Header.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndFonts.startPageIntroText">
+            <summary>
+            The font used by start Page Intro Text.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndFonts.startPageLink">
+            <summary>
+            The font used by start Page Link Text.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndFonts.AddressBar">
+            <summary>
+            Gets the <see cref="T:System.Drawing.Font"/> that is used for address bar.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndFonts.NavigatorTree">
+            <summary>
+            Gets the <see cref="T:System.Drawing.Font"/> that is used for explorer navigator tree.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndFonts.ArchivedNotes">
+            <summary>
+            Use as font for archived notes.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndFonts.ActiveNotes">
+            <summary>
+            Use as font for active notes.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndFonts.StartPageHeader">
+            <summary>
+            Use as font for Start Page Header.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndFonts.StartPageIntroText">
+            <summary>
+            Use as font for Start Page Intro Text.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndFonts.StartPageLink">
+            <summary>
+            Use as font for Start Page Link Text.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndGradientModes">
+            <summary>
+            FndGradientMode holds the application wide supported LinearGradientModes for IFS Themes.
+            Controls and features shall be using this to set GradientModes.
+            If you need PathGradientModes you need to code them in your control.
+            </summary>	
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndPaletteColor">
+            <summary>
+            Represents a <see cref="T:System.Drawing.Color"/> that resides in a color palette.
+            </summary>
+            <seealso cref="T:Ifs.Fnd.ThemeManager.FndPaletteElement"/>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndPaletteElement">
+            <summary>
+            Represents an element in a palette that is used in theming.
+            </summary>
+            <remarks>
+            For example, this may represent an element in a 'color palette' of a theme.
+            In that case, the color palette would comprise of a set of elements,
+            each representing a unique color, identified by a unique name.
+            
+            Whenever you want to use a color in the palette, you refer to it by name.
+            </remarks>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPaletteElement.#ctor(System.String)">
+            <summary>
+            Constructs a <see cref="T:Ifs.Fnd.ThemeManager.FndPaletteElement"/> object.
+            </summary>
+            <param name="name">Unique name of this palette element.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPaletteElement.Equals(System.Object)">
+            <summary>
+            Determines whether the given object is equal to the current palette element
+            </summary>
+            <param name="obj">the object to compare with the current palette element</param>
+            <returns><code>true</code> if given object is a <see cref="T:Ifs.Fnd.ThemeManager.FndPaletteElement"/> and it has the same <see cref="P:Ifs.Fnd.ThemeManager.FndPaletteElement.Name"/> as this element. 
+            Otherwise, <code>false</code>.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPaletteElement.GetHashCode">
+            <summary>
+            Overrides <see cref="M:System.Object.GetHashCode"/>.
+            </summary>
+            <returns>A hashcode for the current palette element.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPaletteElement.ToString">
+            <summary>
+            Returns a string representation of the palette element.
+            </summary>
+            <returns>A string representation of the palette element.</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndPaletteElement.Name">
+            <summary>
+            Gets the unique name of this palette element.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPaletteColor.#ctor(System.String)">
+            <summary>
+            Constructs a <see cref="T:Ifs.Fnd.ThemeManager.FndPaletteColor"/> object.
+            </summary>
+            <param name="name">Name used to uniquely identify this color in the color palette</param>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndPaletteElementTypeConverter`1">
+            <summary>
+            Provides a <see cref="T:System.ComponentModel.TypeConverter"/> implementation for type <see cref="T:Ifs.Fnd.ThemeManager.FndPaletteFont"/>.
+            </summary>
+            <typeparam name="TPaletteElement">The <see cref="T:Ifs.Fnd.ThemeManager.FndPaletteElement"/> type this converter converts.</typeparam>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPaletteElementTypeConverter`1.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns whether this converter can convert an object of the given type to the type of this converter, using the specified context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="sourceType">A <see cref="T:System.Type"/> that represents the type you want to convert to.</param>
+            <returns><code>true</code> if this converter can perform the conversion; otherwise, <code>false</code>.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPaletteElementTypeConverter`1.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts the given object to the type of this converter, using the specified context and culture information.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="culture">The <see cref="T:System.Globalization.CultureInfo"/> to use as the current culture.</param>
+            <param name="value">The <see cref="T:System.Object"/> to convert.</param>
+            <returns>An <see cref="T:System.Object"/> that represents the converted value.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPaletteElementTypeConverter`1.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts the given value object to the specified type, using the specified context and culture information.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="culture">A <see cref="T:System.Globalization.CultureInfo"/>. If <code>null</code> is passed, the current culture is assumed.</param>
+            <param name="value">The <see cref="T:System.Object"/> to convert.</param>
+            <param name="destinationType">The <see cref="T:System.Type"/> to convert the value parameter to.</param>
+            <returns>An <see cref="T:System.Object"/> that represents the converted value.</returns>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndPaletteFont">
+            <summary>
+            Represents a <see cref="T:System.Drawing.Font"/> that resides in a font palette.
+            </summary>
+            <seealso cref="T:Ifs.Fnd.ThemeManager.FndPaletteElement"/>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPaletteFont.#ctor(System.String)">
+            <summary>
+            Constructs a <see cref="T:Ifs.Fnd.ThemeManager.FndPaletteFont"/> object.
+            </summary>
+            <param name="name">Name used to uniquely identify this font in the font palette</param>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndProperty">
+            <summary>
+            A virtual representation of a property belonging to a control.
+            </summary>	
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndProperty.#ctor(System.String,System.Object)">
+            <summary>
+            Creates an instance of FndProperty. A virtual representation of 
+            a property of an FndControl.
+            </summary>
+            <param name="propertyName">The property name. Will be used as name in FndTheme.</param>
+            <param name="propertyValue">The object value of the property.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndProperty.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates an instance of FndProperty. A virtual representation of 
+            a property of an FndControl.
+            </summary>
+            <param name="propertyName">The property name. Will be used as name in FndTheme.</param>
+            <param name="propertyXmlTag">The string representation of the value of the property.</param>
+            <param name="propertyType">The type of the property value.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndProperty.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates an instance of FndProperty. A virtual representation of 
+            a property of an FndControl.
+            </summary>
+            <param name="propertyName">The property name. Will be used as name in FndTheme.</param>
+            <param name="propertyXmlTag">The string representation of the value of the property.</param>
+            <param name="propertyType">The type of the property value.</param>
+            <param name="typeAssembly">Assembly that contains the property type definition.</param>	
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndProperty.Name">
+            <summary>
+            The name of the property.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndProperty.PropertyType">
+            <summary>
+            The Type of the property value.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndProperty.Value">
+            <summary>
+            The object value of the property.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndProperty.XmlString">
+            <summary>
+            The string representation of the object value of the property.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndProperty.TypeAssembly">
+            <summary>
+            Gets the assembly name that contains the property type definition.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndPropertyCollection">
+            <summary>
+            A Collection of FndProperties used by FndPropertys in FndTheme.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.#ctor">
+            <summary>
+            A collection of FndPropertys used by FndTheme. Should not be directly created by programmer.
+            FndTheme uses this automatically when adding Propertys to a theme.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.Add(Ifs.Fnd.ThemeManager.FndProperty)">
+            <summary>
+            Adds a FndProperty to the FndProperty Collection
+            </summary>
+            <param name="value">The FndProperty to be added.</param>
+            <returns>Returns the index number in the collection holding the FndProperty</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.AddRange(Ifs.Fnd.ThemeManager.FndProperty[])">
+            <summary>
+            Adds a range of FndProperty to the FndProperty Collection
+            </summary>
+            <param name="array">The array of FndPropertys to be added.</param>		
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.Contains(Ifs.Fnd.ThemeManager.FndProperty)">
+            <summary>
+            Determines whether this collection of FndPropertys has the specified FndProperty in it.
+            </summary>
+            <param name="item">The FndProperty to be checked if it is contained.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.IndexOf(Ifs.Fnd.ThemeManager.FndProperty)">
+            <summary>
+            Gets the index of the FndProperty in the FndPropertyCollection
+            </summary>
+            <param name="value">FndProperty</param>
+            <returns>Index of FndProperty</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.Insert(System.Int32,Ifs.Fnd.ThemeManager.FndProperty)">
+            <summary>
+            Inserts a new FndProperty into FndPropertyCollection at the specified place.
+            </summary>
+            <param name="index">The place to add the FndProperty in the FndPropertyCollection.</param>
+            <param name="value">The FndProperty to be added.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.Remove(Ifs.Fnd.ThemeManager.FndProperty)">
+            <summary>
+            Removes a specified FndProperty
+            </summary>
+            <param name="obj">The FndProperty to remove.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.ToArray">
+            <summary>
+            Returns an array of FndPropertys.
+            </summary>
+            <returns>FndPropertys array.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.Clear">
+            <summary>
+            Clears the FndPropertyCollection.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.Remove(System.String)">
+            <summary>
+            Remove a FndProperty from the FndPropertyCollection.
+            </summary>
+            <param name="name">The name of the FndProperty</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.RemoveAt(System.Int32)">
+            <summary>
+            Remove a specific FndProperty from the FndPropertyCollection.
+            </summary>
+            <param name="index">The index of the FndProperty in the FndPropertyCollection</param>			
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.IndexOf(System.String)">
+            <summary>
+            Gets the index of the specified FndProperty in the FndPropertyCollection.
+            </summary>
+            <param name="name">Name of the FndProperty.</param>
+            <returns>Index of the specified FndProperty.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.Contains(System.String)">
+            <summary>
+            Determines whether this collection of FndPropertys has the specified FndProperty.
+            </summary>
+            <param name="name">Name of the FndProperty</param>
+            <returns>Returns true if the specified FndProperty is in collection</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.CopyTo(Ifs.Fnd.ThemeManager.FndProperty[])">
+            <summary>
+            Copies the collection to an array.
+            </summary>
+            <param name="array">An array of FndPropertys.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.CopyTo(Ifs.Fnd.ThemeManager.FndProperty[],System.Int32)">
+            <summary>
+            Copies the collection to an array, starting at the specified index.
+            </summary>
+            <param name="array">An array of FndPropertys.</param>
+            <param name="index">The index of the FndProperty</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndPropertyCollection.GetEnumerator">
+            <summary>
+            Returns an IEnumerator. Use to enumerate the FndPropertys in FndPropertyCollection.
+            </summary>
+            <returns>IEnumerator</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndPropertyCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the FndProperty at the specified index.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndPropertyCollection.IsReadOnly">
+            <summary>
+            Returns true if FndPropertyCollection is read-only.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndPropertyCollection.IsFixedSize">
+            <summary>
+            Returns true if FndPropertyCollection is of fixed size.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndPropertyCollection.IsSynchronized">
+            <summary>
+            Returns true if collection is synchronized.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndPropertyCollection.Count">
+            <summary>
+            Gets the number of FndPropertys in Collection.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndResource">
+            <summary>
+            A resource to be used in FndThemes. Currently supported types 
+            are Icons, Images, Flashobjects, and AVI's.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResource.#ctor(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Creates a new FndResource.
+            </summary>
+            <param name="name">The name given to the resource. This is the name to use when 
+            requesting it from FndThemeManager.</param>
+            <param name="description">The resource description.</param>
+            <param name="filePath">The fully qualified path where the resource is currently stored.</param>
+            <param name="resourceOwner">The owner identification of the resource.</param>
+            <param name="common">The boolean value to indicate whether this resource is common or not.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResource.#ctor(System.String,System.String,System.String,System.String,System.Boolean,Ifs.Fnd.ThemeManager.FndResourceType)">
+            <summary>
+            Creates a new FndResource.
+            </summary>
+            <param name="name">The name given to the resource. This is the name to use when 
+            requesting it from FndThemeManager.</param>
+            <param name="description">The resource description.</param>
+            <param name="filePath">The fully qualified path where the resource is currently stored.</param>
+            <param name="resourceOwner">The owner identification of the resource.</param>
+            <param name="common">The boolean value to indicate whether this resource is common or not.</param>
+            <param name="resourceType">The type of resource as given by the FndResourceType enumeration.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResource.GetResourceType(System.String)">
+            <summary>
+            Takes a resource file as in parameter and returns the <see cref="T:Ifs.Fnd.ThemeManager.FndResourceType"/> of that file.
+            </summary>
+            <param name="fileName">Name of the resource file.</param>
+            <returns>A <see cref="T:Ifs.Fnd.ThemeManager.FndResourceType"/> that represents the resource file type.</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResource.HashKey">
+            <summary>
+            Gets the Hashtable Key of the resource.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResource.Name">
+            <summary>
+            Gets or sets the Name of the resource as used in FndTheme.
+            When an resource is fetched from FndThemeManager this is the name to use.		
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResource.Description">
+            <summary>
+            Gets or sets the resource description.
+            </summary>
+            <value>
+            Description
+            </value>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResource.LocalFilePath">
+            <summary>
+            Gets or sets the filepath of the unsaved image i.e. the source path on a disk of the user
+            adding the image.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResource.FilePath">
+            <summary>
+            Gets the filepath where the representation of this image is stored.
+            This is always set by the ThemeManager.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResource.ResourceOwner">
+            <summary>
+            Gets the Owner name of the resource.
+            </summary>	
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResource.ResourceType">
+            <summary>
+            Gets the filetype for the resource.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResource.IsCommon">
+            <summary>
+            Gets or sets the property about this resourse is common for all themes or not.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResource.ImportResourceFile">
+            <summary>
+            Gets or sets a value indicating whether to import the physical resource file.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndResourceType">
+            <summary>
+            Enumerates the available FndResourceTypes.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndResourceType.Bitmap">
+            <summary>
+            Resource of type Bitmap
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndResourceType.Icon">
+            <summary>
+            Resource of type Icon
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndResourceType.Avi">
+            <summary>
+            Resource of type AVI
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndResourceType.FlashObject">
+            <summary>
+            Resource of type SWF
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndResourceType.VectorImage">
+            <summary>
+            Resource of type XAML
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndResourceType.Unknown">
+            <summary>
+            Unkown resource type
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndResourceCollection">
+            <summary>
+            A Collection of FndResources used by FndTheme.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.#ctor">
+            <summary>
+            A collection of FndResources used by FndTheme. Should not be directly created by programmer.
+            FndTheme uses this automatically when adding resources to a theme.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.Add(Ifs.Fnd.ThemeManager.FndResource)">
+            <summary>
+            Adds a FndResource to the FndResource Collection
+            </summary>
+            <param name="value">The FndResource to be added.</param>
+            <returns>Returns the index number in the collection holding the FndResource</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.AddRange(Ifs.Fnd.ThemeManager.FndResource[])">
+            <summary>
+            Adds a range of FndResource to the FndResource Collection
+            </summary>
+            <param name="array">The array of FndResources to be added.</param>		
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.Contains(Ifs.Fnd.ThemeManager.FndResource)">
+            <summary>
+            Determines whether this collection of FndResources has the specified FndResource in it.
+            </summary>
+            <param name="item">The FndResource to be checked if it is contained.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.IndexOf(Ifs.Fnd.ThemeManager.FndResource)">
+            <summary>
+            Gets the index of the FndResource in the FndResourceCollection
+            </summary>
+            <param name="value">FndResource</param>
+            <returns>Index of FndResource</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.Insert(System.Int32,Ifs.Fnd.ThemeManager.FndResource)">
+            <summary>
+            Inserts a new FndResource into FndResourceCollection at the specified place.
+            </summary>
+            <param name="index">The place to add the FndResource in the FndResourceCollection.</param>
+            <param name="value">The FndResource to be added.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.Remove(Ifs.Fnd.ThemeManager.FndResource)">
+            <summary>
+            Removes a specified FndResource
+            </summary>
+            <param name="obj">The FndResource to remove.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.ToArray">
+            <summary>
+            Returns an array of FndResources.
+            </summary>
+            <returns>FndResources array.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.Clear">
+            <summary>
+            Clears the FndResourceCollection.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.Remove(System.String,System.String)">
+            <summary>
+            Remove a FndResource from the FndResourceCollection.
+            </summary>
+            <param name="name">The name of the FndResource</param>
+            <param name="resourceOwner">Name of the resource owner.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.RemoveAt(System.Int32)">
+            <summary>
+            Remove a specific FndResource from the FndResourceCollection.
+            </summary>
+            <param name="index">The index of the FndResource in the FndResourceCollection</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.IndexOf(System.String,System.String)">
+            <summary>
+            Gets the index of the specified FndResource in the FndResourceCollection.
+            </summary>
+            <param name="name">Name of the FndResource.</param>
+            <param name="resourceOwner">Name of the resource owner.</param>
+            <returns>Index of the specified FndResource.</returns> 		
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.Contains(System.String,System.String)">
+            <summary>
+            Determines whether this collection of FndResources has the specified FndResource.
+            </summary>
+            <param name="name">Name of the FndResource</param>
+            <param name="resourceOwner">Name of the resource owner.</param>
+            <returns>Returns true if the specified FndResource is in collection</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.CopyTo(Ifs.Fnd.ThemeManager.FndResource[])">
+            <summary>
+            Copies the collection to an array, starting at the specified index.
+            </summary>
+            <param name="array">An array of FndResources.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.CopyTo(Ifs.Fnd.ThemeManager.FndResource[],System.Int32)">
+            <summary>
+            Copies the collection to an array, starting at the specified index.
+            </summary>
+            <param name="array">An array of FndResources.</param>
+            <param name="index">The index of the FndResource.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndResourceCollection.GetEnumerator">
+            <summary>
+            Returns an IEnumerator. Use to enumerate the FndResources in FndResourceCollection.
+            </summary>
+            <returns>IEnumerator</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResourceCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the FndResource at the specified index.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResourceCollection.IsReadOnly">
+            <summary>
+            Returns true if FndResourceCollection is read-only.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResourceCollection.IsFixedSize">
+            <summary>
+            Returns true if FndResourceCollection is of fixed size.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResourceCollection.IsSynchronized">
+            <summary>
+            Returns true if collection is synchronized.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndResourceCollection.Count">
+            <summary>
+            Gets the number of FndResources in Collection.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.DefaultPaletteColors">
+            <summary>
+            Defines default values for <see cref="T:Ifs.Fnd.ThemeManager.PaletteColors"/>.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.DefaultPaletteColors.Item(Ifs.Fnd.ThemeManager.PaletteColors)">
+            <summary>
+            Gets default value for given palette color.
+            </summary>
+            <param name="color">Palette color.</param>
+            <returns>The default color value of given palette color.</returns>
+            <exception cref="T:System.ArgumentException">If a default value has not been defined for given palette color.</exception>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndTheme">
+            <summary>
+            FndTheme holds the controls and properties of all 
+            themeable visual controls in IFS Applications.
+            </summary>	
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndTheme.#ctor(System.String)">
+            <summary>
+            Create a new instance of FndTheme.
+            </summary>
+            <param name="themeName">The name of the theme.</param>		
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndTheme.#ctor(System.String,System.Boolean)">
+            <summary>
+            Create a new instance of FndTheme. 
+            </summary>
+            <param name="themeName">The name of the theme.</param>
+            <param name="startingTheme">Decides wheter this theme is used when IFS Applications starts. 
+            Value of true implies all other themes are automatically set to false</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndTheme.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Create a new instance of FndTheme. 
+            </summary>
+            <param name="themeName">The name of the theme.</param>
+            <param name="startingTheme">Decides wheter this theme is used when IFS Applications starts. 
+            Value of true implies all other themes are automatically set to false</param>
+            <param name="themeAuthor">The author of the theme typically IFS Research and Development.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndTheme.Load">
+            <summary>
+            Loads the theme from disk.
+            </summary>
+            <returns>Returns true if load was successful.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndTheme.Load(System.String)">
+            <summary>
+            Loads the theme with the given theme name from the default Theme Folder
+            </summary>
+            <param name="name">The name of the theme.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndTheme.LoadFromExistingTheme(System.String)">
+            <summary>
+            Loads the values of an existing theme into this theme and sets the Modified flag of all theme resources to <b>true</b>.
+            Also sets the ImportResourceFile flag of all theme resources (<see cref="T:Ifs.Fnd.ThemeManager.FndResource"/> instances) so that the physical resource files 
+            are copied to correct destinations.
+            </summary>
+            <param name="name">The name of an existing theme.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndTheme.Save">
+            <summary>
+            Saves the theme as XML-File to disk (deployment folder) using default name.
+            </summary>
+            <returns>Returns true if save was successful.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndTheme.SaveThemeResources">
+            <summary>
+            Saves the theme resources to disk (deployment folder) using default name.
+            </summary>
+            <returns>Returns true if save was successful.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndTheme.ModifyPropertyValue(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Modifies the value of any give property within a control within the theme.
+            </summary>
+            <param name="controlName">The name of the control.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyType">The type of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndTheme.GetPropertyValue(System.String,System.String)">
+            <summary>
+            Gets the value (object) of the given property of a given control.
+            </summary>
+            <param name="controlName">The name of the control.</param>
+            <param name="propertyName">The name of the property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndTheme.ThemeAsXml">
+            <summary>
+            Gets theme as an XmlDocument.
+            </summary>
+            <returns>XmlDocument (The current theme as XML)</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndTheme.ThemeAsHashtable">
+            <summary>
+            Gets theme as a Hashtable
+            </summary>
+            <returns>Hashtable (The current theme as Hashtable)</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndTheme.Name">
+            <summary>
+            Gets or sets name of the theme
+            </summary>		
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndTheme.StartingTheme">
+            <summary>
+            Gets or sets whether this theme shall be the theme used when starting IFS Applications. 
+            </summary>		
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndTheme.Author">
+            <summary>
+            Gets or sets the author of the theme.
+            </summary>		
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndTheme.Created">
+            <summary>
+            Gets or sets the creation date of the theme.
+            </summary>		
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndTheme.Modified">
+            <summary>
+            Gets or sets the date when theme was last modified.
+            </summary>		
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndTheme.FndControls">
+            <summary>
+            Gets the collection of FndControls belonging to this theme.
+            </summary>		
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndTheme.FndResources">
+            <summary>
+            Gets the collection of FndResources belonging to this theme.
+            </summary>		
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndTheme.ResourceCategories">
+            <summary>
+            Gets the available resource categories for a theme.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.FndThemeManager">
+            <summary>
+            FndThemeManager controls the active FndTheme used by all visual FndControls.
+            </summary>		
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndThemeManager.ColorPaletteControlName">
+            <summary>
+            Control name that defines the colors in the color palette.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndThemeManager.FontPaletteControlName">
+            <summary>
+            Control name that defines the fonts in the font palette.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndThemeManager.startingTheme">
+            <summary>
+            The starting theme held at all times. This is necessary as it plays a vital role for showing the correct theme.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndThemeManager.availableThemes">
+            <summary>
+            A list of available themes.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndThemeManager.themeTable">
+            <summary>
+            Holds all values that are themed. 
+            </summary>        
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndThemeManager.lockObject">
+            <summary>
+            property used for locking.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndThemeManager.colorPalette">
+            <summary>
+            The color palette of the current theme.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndThemeManager.fontPalette">
+            <summary>
+            The font palette of the current theme.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.FndThemeManager.dpiImageResources">
+            <summary>
+            Contains mappings of the image resources that best suite for the device's current DPI.
+            </summary>
+            <see cref="T:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKeySet"/>.
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.CleanupBitmapCacheForCurrentThread(System.Collections.Generic.Dictionary{System.Threading.Thread,System.Collections.Generic.Dictionary{System.String,System.Drawing.Bitmap}})">
+            <summary>
+            Dispose ALL cached bitmaps in the cache, for the Current thread
+            </summary>
+            <param name="cache">The static cache that holds bitmaps per thread</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.DisposeBitmapCache(System.Collections.Generic.Dictionary{System.String,System.Drawing.Bitmap})">
+            <summary>
+            Disposes all bitmaps inside the cache
+            </summary>
+            <param name="keyValueCache">Dictionary with key value pairs</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.CleanupIconCacheForCurrentThread(System.Collections.Generic.Dictionary{System.Threading.Thread,System.Collections.Generic.Dictionary{System.String,System.Drawing.Icon}})">
+            <summary>
+            Dispose ALL cached icons in the cache, for the Current thread
+            </summary>
+            <param name="cache">The static cache that holds icons per thread</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.DisposeIconCache(System.Collections.Generic.Dictionary{System.String,System.Drawing.Icon})">
+            <summary>
+            Disposes all icons inside the cache
+            </summary>
+            <param name="keyValueCache">Dictionary with key value pairs</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.CleanupVectorImageCacheForCurrentThread(System.Collections.Generic.Dictionary{System.Threading.Thread,System.Collections.Generic.Dictionary{System.String,System.Windows.Controls.Canvas}})">
+            <summary>
+            Removes ALL cached vector images in the cache, for the Current thread
+            </summary>
+            <param name="cache">The static cache that holds vector images  per thread</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.SetThemeToFndMessageBox">
+            <summary>
+            FndMessageBox need a special treatment, since Ifs.Fnd.Core cannot have a reference to FndThemeManager assembly,
+            since .Net Access Provider can be redistributed as a stand alone package.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.IsApplicableForThemeing(System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            Checks if the control is applicable for themeing.
+            </summary>
+            <param name="ctrl"></param>
+            <param name="renderedControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ApplyThemeOnControl(System.Windows.Forms.Control)">
+            <summary>
+            Applies a theme on the control if the control is applicable for themeing.
+            </summary>
+            <param name="ctrl"></param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.InitiateThemeManager(System.String,Ifs.Fnd.Windows.Forms.Interfaces.IFndThemeables)">
+            <summary>
+            Initializes Theme Manager. Should only be called once per session.
+            Registers root IFndThemeables. This must also implement
+            System.ComponentModel.ISynchronizedInvoke to support
+            cross-thread invokations.
+            </summary>
+            <param name="themePath">Path to the CodeBase</param>
+            <param name="root">Root IFndThemeables</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.InitiateThemeManagerForDesignTime">
+            <summary>
+            Initializes Theme Manager for use within Visual Studio Designer.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.RefreshThemeLocations">
+            <summary>
+            Refreshes the physical location of the themes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.SetActiveTheme(System.String)">
+            <summary>
+            Sets the active theme. To set startup theme use SetStartingTheme.
+            </summary>
+            <param name="themeName">Name of the theme</param>
+            <returns>True if successful</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.SetActiveTheme(System.String,Ifs.Fnd.ThemeManager.FndTheme)">
+            <summary>
+            Sets the active theme to the current configuration of the theme sent as parameter.
+            This should only be used if you have changed your theme and whish for it to be tested
+            without saving it to XML to disk.
+            </summary>
+            <param name="themeName">The name of the theme. If name is null, the name of the theme will be used.</param>
+            <param name="theme">The FndTheme to set as active.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetDefaultThemeName(System.String)">
+            <summary>
+            App9UI: This is an ugly code written to load the new theme corresponding to an old theme saved in the user profile
+            old dark theme names must return new dark theme name (Aurora)
+            old light theme names must return new light theme name (IFS)
+            this code must be removed once we make sure all the customer profiles are having new theme names (IFS/Aurora) 
+            saved as the selected theme
+            </summary>
+            <param name="themeName">Name of the old theme</param>
+            <returns>Name of the corresponding theme</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ExportTheme">
+            <summary>
+            Export the theme to a directory
+            Will display a FolderBrowserDialog
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ThemeManagerRunning">
+            <summary>
+            Returns true if theme manager is running. Should always be true. If not, something very strange has happened.
+            </summary>
+            <returns>returns true if theme manager is running</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetBoolean(System.String,System.String,System.Boolean)">
+            <summary>
+            Retrieves the themed boolean value for the specified property in a given control.
+            </summary>
+            <param name="controlName">The name of the control.</param>
+            <param name="propertyName">The name of the boolean property.</param>
+            <param name="defaultValue">The boolean value that should be used as the default value in case there was no themed value.</param>
+            <returns>A System.Boolean value that represents the themed value for the specified property if a themed value exists, otherwise the specified default value.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetColor(System.String,System.String,System.Drawing.Color)">
+            <summary>
+            Retrieves the themed color for a specified property in a given control.
+            </summary>
+            <param name="controlName">The name of the control.</param>
+            <param name="propertyName">The name of the color property.</param>
+            <param name="defaultValue">The color value that should be used as the default color in case there was no themed color.</param>
+            <returns>A System.Drawing.Color that represents the themed color for the specified property if a themed color exists, otherwise the specified default color.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetPaletteColor(System.String,System.String,System.Drawing.Color)">
+            <summary>
+            Retrieves the themed color for a specified property in a given control from the color palette.
+            </summary>
+            <param name="controlName">The name of the control.</param>
+            <param name="propertyName">The name of the color property.</param>
+            <param name="defaultValue">The color value that should be used as the default color in case there was no themed color.</param>
+            <returns>A System.Drawing.Color that represents the themed color for the specified property if a themed color exists in color palette, otherwise the specified default color.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetPaletteFont(System.String,System.String,System.Drawing.Font)">
+            <summary>
+            Retrieves the themed font for a specified property in a given control from the font palette.
+            </summary>
+            <param name="controlName">The name of the control.</param>
+            <param name="propertyName">The name of the font property.</param>
+            <param name="defaultValue">The font value that should be used as the default font in case there was no themed font.</param>
+            <returns>A System.Drawing.Font that represents the themed font for the specified property if a themed font exists in font palette, otherwise the specified default font.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ColorToMediaColor(System.Drawing.Color)">
+            <summary>
+            Converts a System.Windows.Forms.Color to a (WPF) System.Window.Media.Color
+            </summary>
+            <param name="color">The WinForms color to convert</param>
+            <returns>The WPF color converted to</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.BitmapToMediaBitmap(System.Drawing.Bitmap)">
+            <summary>
+            Converts a (WinForms) System.Drawing.Bitmap to a (WPF) System.Windows.Media.Imaging.BitmapSource.
+            </summary>
+            <param name="bitmap">The WinForms bitmap to convert from.</param>
+            <returns>The WPF bitmap source to converted to.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.MediaBitmapToBitmap(System.Windows.Media.Imaging.BitmapSource)">
+            <summary>
+            Converts a (WPF) System.Windows.Media.Imaging.BitmapSource to a (WinForms) System.Drawing.Bitmap.
+            </summary>
+            <param name="mediaBitmap">The WPF bitmap source to convert from.</param>
+            <returns>The WinForms bitmap to converted to.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ToWpfFontFamily(System.Drawing.FontFamily)">
+            <summary>
+            Converts from WinForms font family to WPF font family.
+            </summary>
+            <param name="fontFamily">WinForms font family.</param>
+            <returns>WPF font family.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ToWpfFontSize(System.Single)">
+            <summary>
+            Converts from WinForms font size to WPF font size.
+            </summary>
+            <param name="fontSize">WinForms font size.</param>
+            <returns>WPF font size.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ToWpfFontStyle(System.Drawing.FontStyle)">
+            <summary>
+            Converts from WinForms font style to WPF font style.
+            </summary>
+            <param name="fontStyle">WinForms font style.</param>
+            <returns>WPF font style.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ToWpfFontWeight(System.Drawing.FontStyle)">
+            <summary>
+            Converts from WinForms font weight to WPF font weight.
+            </summary>
+            <param name="fontStyle">WinForms font style.</param>
+            <returns>WPF font weight.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ToWpfTextDecorations(System.Drawing.Font)">
+            <summary>
+            Converts from WinForms font style to WPF text decorations.
+            </summary>
+            <param name="font">WinForms font to extract the styles related to WPF text decorations.</param>
+            <returns>Matching WPF text decorations to the style of given font.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetEnumeration(System.String,System.String,System.Object)">
+            <summary>
+            Retrieves the themed enumeration value for a specified property in a given control.
+            </summary>
+            <param name="controlName">The name of the control.</param>
+            <param name="propertyName">The name of the enumeration property.</param>
+            <param name="defaultValue">The enumeration value that should be used as the default value in case there was no themed value.</param>
+            <returns>A value that represents the themed value for the specified property if a themed value exists, otherwise the specified default value.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetInt(System.String,System.String,System.Int32)">
+            <summary>
+            Retrieves the themed int value for a specified property in a given control.
+            </summary>
+            <param name="controlName">The name of the control.</param>
+            <param name="propertyName">The name of the int property.</param>
+            <param name="defaultValue">The int value that should be used as the default value in case there was no themed value.</param>
+            <returns>A value that represents the themed value for the specified property if a themed value exists, otherwise the specified default value.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetFloat(System.String,System.String,System.Single)">
+            <summary>
+            Retrieves the themed float value for a specified property in a given control.
+            </summary>
+            <param name="controlName">The name of the control.</param>
+            <param name="propertyName">The name of the float property.</param>
+            <param name="defaultValue">The float value that should be used as the default value in case there was no themed value.</param>
+            <returns>A value that represents the themed value for the specified property if a themed value exists, otherwise the specified default value.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetFont(System.String,System.String,System.Drawing.Font)">
+            <summary>
+            Retrieves the themed font value for a specified property in a given control.
+            </summary>
+            <param name="controlName">The name of the control.</param>
+            <param name="propertyName">The name of the font property.</param>
+            <param name="defaultValue">The font value that should be used as the default value in case there was no themed value.</param>
+            <returns>A System.Drawing.Font that represents the themed value for the specified property if a themed value exists, otherwise the specified default value.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetLinearGradientMode(System.String,System.String,System.Drawing.Drawing2D.LinearGradientMode)">
+            <summary>
+            Retrieves the themed LinearGradientMode value for a specified property in a given control.
+            </summary>
+            <param name="controlName">The name of the control.</param>
+            <param name="propertyName">The name of the LinearGradientMode property.</param>
+            <param name="defaultValue">The LinearGradientMode value that should be used as the default value in case there was no themed value.</param>
+            <returns>A System.Drawing.Drawing2D.LinearGradientMode that represents the themed value for the specified property if a themed value exists, otherwise the specified default value.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetString(System.String,System.String,System.String)">
+            <summary>
+            Retrieves the themed string value for a specified property in a given control.
+            </summary>
+            <param name="controlName">The name of the control.</param>
+            <param name="propertyName">The name of the string property.</param>
+            <param name="defaultValue">The string value that should be used as the default value in case there was no themed value.</param>
+            <returns>A System.String that represents the themed value for the specified property if a themed value exists, otherwise the specified default value.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.RegisterCustomBitmap(System.Drawing.Bitmap,System.String)">
+            <summary>
+            Should be used for registering custom bitmaps. The customBitmapCache is 
+            the first cache that is matched against the resourceKey
+            Note: Throws an InvalidDataException if specified resource key is already in use.
+            </summary>
+            <param name="bitmap">The custom bitmap.</param>        
+            <param name="resourceKey">Resourcekey to assigned to the bitmap</param>        
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.RegisterCustomIcon(System.Drawing.Icon,System.String)">
+            <summary>
+            Should be used for registering custom icons. The customIconCache is 
+            the first cache that is matched against the resourceKey. 
+            Note: Throws an InvalidDataException if specified resource key is already in use.
+            </summary>
+            <param name="icon">The custom icon.</param>
+            <param name="resourceKey">Resourcekey to assigned to the icon</param>        
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetIcon(System.String)">
+            <summary>
+            Overloaded. Should be used by Controls. Takes a resource key i.e. resource owner + "/" + resource name,
+            as in parameter and returns a Icon represented by that resource key.
+            When this method is called for the first time for a particular resource key,
+            resulting Icon object is cached in memory for fast reference in future.        
+            </summary>
+            <param name="resourceKey">The resource key of the Icon.</param>
+            <returns>Icon or null if resource not found</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetIcon(System.String,System.Boolean)">
+            <summary>
+            Overloaded. Should be used by Controls. Takes resource key i.e. resource owner + "/" + resource name,
+            and cacheResource as in parameters and returns a Icon represented by that resource key.
+            When this method is called for the first time for a particular resource key, resulting
+            Icon object is optionally cached in memory for fast reference in future.        
+            </summary>
+            <param name="resourceKey">The resource key of the Icon.</param>
+            <param name="cacheResource"><b>true</b> to add resulting Icon in resource cache; otherwise, <b>false</b>.</param>
+            <returns>Icon or null if resource not found</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetVectorImage(System.String,System.Windows.Controls.Canvas)">
+            <summary>
+            Overloaded. Should be used by Controls. Takes a resource key i.e. resource owner + "/" + resource name,
+            as in parameter and returns a Vector Image represented by that resource key.
+            When this method is called for the first time for a particular resource key,
+            resulting Vector Image object is cached in memory for fast reference in future.        
+            </summary>
+            <param name="resourceKey">The resource key of the Vector Image.</param>
+            <param name="defaultValue">Image to be returned if a vector image that matches with given resourceKey cannot be found</param>
+            <returns>Vector Image or <code>defalutValue</code> if resource not found</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetVectorImage(System.String)">
+            <summary>
+            Overloaded. Should be used by Controls. Takes a resource key i.e. resource owner + "/" + resource name,
+            as in parameter and returns a Vector Image represented by that resource key.
+            When this method is called for the first time for a particular resource key,
+            resulting Vector Image object is cached in memory for fast reference in future.        
+            </summary>
+            <param name="resourceKey">The resource key of the Vector Image.</param>
+            <returns>Vector Image, if found. A placeholder image if resource was not found</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetVectorImage(System.String,System.Boolean)">
+            <summary>
+            Overloaded. Should be used by Controls. Takes resource key i.e. resource owner + "/" + resource name,
+            and cacheResource as in parameters and returns a Vector Image represented by that resource key.
+            When this method is called for the first time for a particular resource key, resulting
+            Vector Image object is optionally cached in memory for fast reference in future.        
+            </summary>
+            <param name="resourceKey">The resource key of the Vector Image.</param>
+            <param name="cacheResource"><code>true</code> to add resulting Vector Image in resource cache; otherwise, <code>false</code>.</param>
+            <returns>Vector Image, if found. A placeholder image if resource was not found</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetVectorImage(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Overloaded. Should be used by Controls. Takes resource key i.e. resource owner + "/" + resource name,
+            and cacheResource as in parameters and returns a Vector Image represented by that resource key.
+            When this method is called for the first time for a particular resource key, resulting
+            Vector Image object is optionally cached in memory for fast reference in future.        
+            </summary>
+            <param name="resourceKey">The resource key of the Vector Image.</param>
+            <param name="cacheResource"><code>true</code> to add resulting Vector Image in resource cache; otherwise, <code>false</code>.</param>
+            <param name="suppressNotFoundImage">Determines how to handle the situation when the vector image designated by given <code>resourceKey</code> is not found. 
+            In such case, if <code>suppressNotFoundImage</code> is <code>true</code>, <code>null</code> will be returned. 
+            If <code>false</code>, a built-in placeholder image is returned.</param>
+            <returns>Vector Image or <code>null</code>/a built-in place holder image if resource not found</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetBitmap(System.String,System.Boolean)">
+            <summary>
+            Overloaded. Should be used by Controls. Takes a resource key i.e. resource owner + "/" + resource name,
+            as in parameter and returns a Bitmap represented by that resource key.
+            When this method is called for the first time for a particular resource key,
+            resulting Bitmap object is cached in memory for fast reference in future.        
+            
+            If bitmap is cached (default) the caller should not dispose it (or call in a using-statement)
+            since that will leave a Disposed Bitmap object in the cache.
+            Since the cache is per UI thread / per Explorer, when the Explorer closes,
+            it will clean up the cache and dispose all Bitmaps.
+            </summary>
+            <param name="resourceKey">The resource key of the Bitmap.</param>
+            <param name="useCache">False to dismiss the caching of the bitmap. Use this if you want to Dispose the Bitmap explicitly. Default is true, and Bitmap is cached</param>
+            <returns>Requested bitmap, if found. If not, a placeholder bitmap.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetBitmap(System.String,System.Drawing.Bitmap,System.Boolean)">
+            <summary>
+            See GetBitmap(string)
+            </summary>
+            <param name="resourceKey">The resource key of the Bitmap.</param>
+            <param name="defaultValue">Defaultvalue used if no themed bitmap is found</param>
+            <param name="useCache">False to dismiss the caching of the bitmap. Use this if you want to Dispose the Bitmap explicitly. Default is true, and Bitmap is cached</param>
+            <returns>Requested bitmap, if found. If not, the <code>defaultValue</code> given.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetBitmap(System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Overloaded. Should be used by Controls. Takes resource key i.e. resource owner + "/" + resource name,
+            and cacheResource as in parameters and returns a Bitmap represented by that resource key.
+            When this method is called for the first time for a particular resource key, resulting
+            Bitmap object is optionally cached in memory for fast reference in future.        
+            </summary>
+            <param name="resourceKey">The resource key of the Bitmap.</param>
+            <param name="cacheResource"><b>true</b> to add resulting Bitmap in resource cache; otherwise, <b>false</b>.</param>
+            <param name="matchDPI">If <code>true</code>, returns the size that fits best with the device's current DPI; <code>false</code> returns the exact size specified by the resource key.</param>
+            <param name="suppressNotFoundImage">Determines how to handle the situation when the bitmap designated by given <code>resourceKey</code> is not found. 
+            In such case, if <code>suppressNotFoundImage</code> is <code>true</code>, <code>null</code> will be returned. 
+            If <code>false</code>, a built-in placeholder image is returned.</param>
+            <returns>Bitmap that suites the device's current DPI level the best, out of all versions present, of different sizes. 
+            <code>null</code> / a built-in placeholder image, if no resource matching the given resource key can be found. 
+            If <code>matchDPI</code> is set to <code>false</code>, DPI matching is not performed and the image that corresponds to given <code>resourceKey</code> is returned.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetBitmapExactDPIInternal(System.String)">
+            <summary>
+            Overloaded. Only to be used by the framework. Takes resource key i.e. resource owner + "/" + resource name and returns the Bitmap represented by that resource key.
+            Calling this method does not result in getting the return bitmap to be cached.
+            </summary>
+            <param name="resourceKey">The resource key of the Bitmap.</param>
+            <returns>Bitmap that matches with given resource key. <code>null</code> if no resource matching the given resource key can be found.</returns>         
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ColorBitmapFromThemeColor(System.String,System.Drawing.Bitmap)">
+            <summary>
+            Returns a bitmap where all R,G,B values are replaced by a single color, but the alpha channel is untouched.
+            This is used to render bitmap images for Shortcuts
+            </summary>
+            <param name="resourceKey">The resource key of the Bitmap.</param>
+            <param name="originalBitmap">The bitmap to colorize</param>
+            <returns>Colorized bitmap if the resourceKey begins with USERITEMS, else the orignalBitmap</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ConvertFromBitmapToBitmapSource(System.Drawing.Image)">
+            <summary>
+            Convert from Bitmap to WPF BitmapSource
+            </summary>
+            <param name="bitmap">The System.Drawing.Image to convert</param>
+            <returns>A WPF BitmapSource</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ConvertFromBitmapToBitmapSource(System.Drawing.Image,System.Boolean)">
+            <summary>
+            Convert from Bitmap to WPF BitmapSource
+            </summary>
+            <param name="bitmap">The System.Drawing.Image to convert</param>
+            <param name="disposeBitmap">True to dispose the Bitmap when converting. Use this if you will not use the Bitmap object again</param>
+            <returns>A WPF BitmapSource</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ConvertFromVectorImageToBitmap(System.Windows.Controls.Canvas,System.String,System.Double,System.Double)">
+            <summary>
+            Convert from Vector Image to Bitmap
+            </summary>
+            <param name="vectorImage">Vector Image to convert</param>
+            <param name="resourceKey">Resource Key</param>
+            <param name="expectedWidth">Expected width of return bitmap</param>
+            <param name="expectedHeight">Expected height of return bitmap</param>
+            <returns>Bitmap converted from given Vector Image, scaled to given size</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ScaleBitmapToFit(System.Drawing.Bitmap,System.Single,System.Single)">
+            <summary>
+            Scales given bitmap to fit to given bounding box maintaining its aspect ratio.
+            </summary>
+            <param name="bitmap">Bitmap containing the image to be scaled</param>
+            <param name="targetWidth">Width of bounding box</param>
+            <param name="targetHeight">Height of bounding box</param>
+            <returns>A new bitmap object containing the original image scaled to fit and centered.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetResourceFilePath(System.String)">
+            <summary>
+            Should be used by Controls. Takes a resource key i.e. resource owner + "/" + resource name,
+            as in parameter and returns full path to the actual resource file.
+            </summary>
+            <param name="resourceKey">The resource key of the Resource.</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ResourceKeys">
+            <summary>
+            Obtains the resourceKeys in the hash table
+            </summary>
+            <returns>an object of <see cref="T:System.Collections.IEnumerable"/> containing resourceKeys</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.GetResource(System.String)">
+            <summary>
+            Get a resource object when resourcekey is given
+            </summary>
+            <param name="resourceKey">key of the resource</param>
+            <returns>Object matching the resourceKey</returns>
+            <remarks>This method will search the internal resource hash table in the
+            following order. If a resource is located then searching stops and that 
+            resource is returned.</remarks>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.CropBitmapToFit(System.Drawing.Bitmap,System.Single,System.Single)">
+            <summary>
+            Fits given image into given size, in such a way that the contents are
+            extracted from center, by cropping, if necessary, the either sides, so that
+            the aspect ration is maintained and no padding added.
+            </summary>
+            <param name="source">Image to fit</param>
+            <param name="targetWidth">Expected width</param>
+            <param name="targetHeight">Expected height</param>
+            <returns>Image resized/cropped to fit the given size.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ApplyGrayScaleColor(System.Drawing.Image)">
+            <summary>
+            Makes the image grayscaled
+            </summary>
+            <param name="originalImage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ChangeImageOpacity(System.Drawing.Image,System.Double)">
+            <summary>
+            Change the opacity of an image
+            </summary>
+            <param name="originalImage">The original image</param>
+            <param name="opacity">Opacity, where 1.0 is no opacity, 0.0 is full transparency</param>
+            <returns>The changed image</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ApplyHighLightColoring(System.Drawing.Image)">
+            <summary>
+            Apply the FndColors.HighlightSignal onto an Image with the Alpha channel values kept intact
+            This will color the supplied image with the highlight color, but keep the transparent pixels
+            Original image is kept intact, the return value is a new image object instance
+            
+            Note: Images with Indexed PixelFormat is not supported, and will remain unmodified
+            </summary>
+            <param name="originalImage">The image to color</param>
+            <returns>The new image (original image is not changed)</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.FndThemeManager.ApplyHighLightColoring(System.Drawing.Image,System.Drawing.Color)">
+            <summary>
+            Apply a custom highligt color onto an Image with the Alpha channel values kept intact
+            This will color the supplied image with the highlight color, but keep the transparent pixels
+            Original image is kept intact, the return value is a new image object instance
+            
+            Note: Images with Indexed PixelFormat is not supported, and will remain unmodified
+            </summary>
+            <param name="originalImage">The image to color</param>
+            <param name="highLightColor">The color to use as highlight</param>
+            <returns>The new image (original image is not changed)</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndThemeManager.ThemeNames">
+            <summary>
+            Gets the names of the available themes.
+            </summary>
+            <returns>Gets an ArrayList of theme names</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndThemeManager.ActiveThemeName">
+            <summary>
+            Gets the name of the active theme.
+            </summary>
+            <returns>Name of the active theme</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndThemeManager.ActiveThemeAuthor">
+            <summary>
+            Gets the active theme author name.
+            </summary>
+            <returns>Active Theme Author</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndThemeManager.ActiveThemeCreatedDate">
+            <summary>
+            Gets the created date of the active theme.
+            </summary>
+            <returns>Active Theme Created Date</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndThemeManager.ActiveThemeModifiedDate">
+            <summary>
+            Gets the date the active theme was last modified.
+            </summary>
+            <returns>Active Theme Modified Date</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndThemeManager.StartingThemeName">
+            <summary>
+            Gets the name of the starting theme.
+            </summary>
+            <returns>String with name of the starting theme</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.FndThemeManager.IsDesignMode">
+            <summary>
+            Gets if current runtime is in design mode.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ThemeNamesEnum">
+            <summary>
+            Enum that contains the old and new theme names
+            Must be removed when all the users are having the new themes saved in their profile as the selected theme
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.ThemeNamesEnum.IFS">
+            <summary>
+            New default theme in Apps9.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.ThemeNamesEnum.Aurora">
+            <summary>
+            New dark theme in Apps9.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.ThemeNamesEnum.Glacier">
+            <summary>
+            DO NOT USE. Backward compatibility only!
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.ThemeNamesEnum.Lavender">
+            <summary>
+            DO NOT USE. Backward compatibility only!
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.ThemeNamesEnum.Spring">
+            <summary>
+            DO NOT USE. Backward compatibility only!
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.ThemeNamesEnum.Starlight">
+            <summary>
+            DO NOT USE. Backward compatibility only!
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.ThemeNamesEnum.Sunset">
+            <summary>
+            DO NOT USE. Backward compatibility only!
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ImageResourceKeyParser">
+             <summary>
+             Parses given image resource key.
+             </summary>
+             <remarks>
+             Image resource keys that support the following format are supported:<br/>
+             <![CDATA[
+            
+                    <resource-name>[_<width>x<height>]
+                    
+             ]]>
+             For example, the following resource key formats are supported:
+             <list type="bullet">
+             </list>
+             <ul>
+                 <item><term>FNDWIN/Save_40x40</term><description>Resource with the size (width and height) specified.</description></item>
+                 <item><term>FNDWIN/Save</term><description>Resource without any size (width and height) specified. Note, this is mainly to provide backward compatibility.</description></item>
+             </ul>
+             <code>Width</code> and <code>Height</code> must be digits.
+             </remarks>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ImageResourceKeyParser.ExtractName(System.String)">
+            <summary>
+            Extracts the <code>resource-name</code> component from given resource key.
+            </summary>
+            <param name="resourceKey">resource key</param>
+            <returns><code>resource-name</code> of given resource key.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ImageResourceKeyParser.Parse(System.String,System.String@)">
+            <summary>
+            Parses given resource key so that we know the elements that it is composed of.
+            </summary>
+            <seealso cref="T:Ifs.Fnd.ThemeManager.ImageResourceKeyParser"/>.
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKeySet">
+            <summary>
+            This class is used to store "design time image resource key" -> "runtime image resource key for current device's DPI" mappings.
+            
+            </summary>
+            <remarks>
+            This class is meant only for internal DPI related calculations in the framework and not intended to be used elsewhere.
+            </remarks>
+        </member>
+        <member name="F:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKeySet.resourceKeysForCurrentDPI">
+            <summary>
+            Stores "design time bitmap resource key" -> "runtime bitmap resource key for current device's DPI" mappings.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKeySet.Update(System.Collections.Hashtable)">
+            <summary>
+            Updates this <see cref="T:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKeySet"/> instance from the given theme table.
+            </summary>
+            <remarks>This method <strong>never</strong> modifies the source theme table.</remarks>
+            <param name="sourceThemeTable">Source theming table to extract the image resorce keys from</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.DPIMatchedImageResourceKeySet.GetResourceKeyForCurrentDPI(System.String)">
+            <summary>
+            Given any image resource key of any size, returns the resource key that "best matches" with the device's current DPI.
+            </summary>
+            <param name="resourceKey">Resource Key with any stete of any size</param>
+            <returns>Info of the resource key that matches best with the device's current DPI.</returns>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.PaletteColors">
+            <summary>
+            Defines a Color Palette to be used in theming.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.PaletteFonts">
+            <summary>
+            Defines a Font Palette to be used in theming.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ThemeableAttribute">
+            <summary>
+            An attribute to be used for fields that shall be themeable.
+            This will be used by the theme editor feature to easier find
+            the themeable fields and automaitcally adding them to a theme.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemeableAttribute.#ctor">
+            <summary>
+            When used within brackets [] for attributes the attribute is tagged as themeable. 
+            Used for easier theming of controls.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ThemeStorage">
+            <summary>
+            Controls loading of themes. Support class for ThemeManager and Themes.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ThemeXmlFormat">
+            <summary>
+            Provides a unified way of converting objects to strings and vice versa.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemeXmlFormat.ToObject(System.String,System.String)">
+            <summary>
+            Converts a string to an object of the type given.		
+            </summary>
+            <param name="type">The type of the object.</param>
+            <param name="xmlString">The string representation of the object</param>
+            <returns>An object of the type given in type in-parameter.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemeXmlFormat.ToObject(System.String,System.String,System.String)">
+            <summary>
+            Converts a string to an object of the type given.
+            </summary>
+            <param name="type">The type of the object.</param>
+            <param name="xmlString">The string representation of the object.</param>
+            <param name="assemblyName">Assembly that contains the property type definition.</param>
+            <returns>An object of the type given in type in-parameter.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemeXmlFormat.ToObject(System.Type,System.String)">
+            <summary>
+            Converts a string to an object of the type given.		
+            </summary>
+            <param name="type">The type of the object.</param>
+            <param name="xmlString">The string representation of the object</param>
+            <returns>An object of the type given in type in-parameter.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemeXmlFormat.ToString(System.Object)">
+            <summary>
+            Converts an object to a string representation.
+            </summary>
+            <param name="objValue">The object to convert.</param>
+            <returns>string representation of the object in-parameter</returns>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ThemedBrushExtension">
+            <summary>
+            Provides markup to specify a themed brush in XAML.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ThemedStyleExtension`1">
+            <summary>
+            Provides markup for theming to be used in XAML.
+            </summary>    
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedStyleExtension`1.#ctor">
+            <summary>
+            Constructs an empty <see cref="T:Ifs.Fnd.ThemeManager.ThemedStyleExtension`1"/> object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedStyleExtension`1.#ctor(System.String)">
+            <summary>
+            Constructs a <see cref="T:Ifs.Fnd.ThemeManager.ThemedStyleExtension`1"/> object 
+            to connect to the themed style designated by given <code>name</code>.
+            </summary>
+            <param name="name">Theme key</param>
+            <seealso cref="P:Ifs.Fnd.ThemeManager.ThemedStyleExtension`1.Name"/>        
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedStyleExtension`1.CreateAdapter(Ifs.Fnd.ThemeManager.WinFormsStyle)">
+            <summary>
+            Creates a <see cref="T:Ifs.Fnd.ThemeManager.WPFStyleAdapter`1"/> that translates the value in given <see cref="T:Ifs.Fnd.ThemeManager.WinFormsStyle"/> into WPF. /&gt;
+            </summary>
+            <param name="source">Source style which contains a WinForms value</param>
+            <returns>An adapter that can convert the value of source WinForms style into WPF at runtime.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedStyleExtension`1.ProvideValue(System.IServiceProvider)">
+            <summary>
+            Returns an object that is provided as the value of the target property for this markup extension.
+            </summary>
+            <param name="serviceProvider">A service provider helper that can provide services for the markup extension.</param>
+            <returns>The object value to set on the property where the extension is applied.</returns>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.ThemedStyleExtension`1.Name">
+            <summary>
+            Gets or sets the key that designates the theme resource.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedBrushExtension.#ctor">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ThemedBrushExtension"/> object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedBrushExtension.#ctor(System.String)">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ThemedBrushExtension"/> object.
+            </summary>
+            <param name="name">Name of the themed brush.</param>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.WPFStyleAdapter`1">
+            <summary>
+            Provides a WPF adapter to a <see cref="T:Ifs.Fnd.ThemeManager.WinFormsStyle"/>.
+            </summary>
+            <typeparam name="T">Type of the WPF value that this adapter returns.</typeparam>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.WPFStyleAdapter`1.#ctor(Ifs.Fnd.ThemeManager.WinFormsStyle)">
+            <summary>
+            Creates a <see cref="T:Ifs.Fnd.ThemeManager.WPFStyleAdapter`1"/> object.
+            </summary>
+            <param name="source">Source <see cref="T:Ifs.Fnd.ThemeManager.WinFormsStyle"/> that this adapter connects.</param>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.WPFStyleAdapter`1.GetWpfValue(System.Object)">
+            <summary>
+            Overriding classes should implement the conversion of given <code>winFormsValue</code> 
+            to the target WPF value.
+            </summary>
+            <param name="winFormsValue">Win Forms value to be converted.</param>
+            <returns>Win Forms value converted to WPF.</returns>
+        </member>
+        <member name="E:Ifs.Fnd.ThemeManager.WPFStyleAdapter`1.PropertyChanged">
+            <summary>
+            Notifies current value has changed.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.WPFStyleAdapter`1.Value">
+            <summary>
+            Gets converted WPF value from the <see cref="T:Ifs.Fnd.ThemeManager.WinFormsStyle"/>.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ThemedColorExtension">
+            <summary>
+            Provides markup to specify a themed color in XAML.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedColorExtension.#ctor">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ThemedColorExtension"/> object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedColorExtension.#ctor(System.String)">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ThemedColorExtension"/> object.
+            </summary>
+            <param name="name">Name of the themed color.</param>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ThemedFontFamilyExtension">
+            <summary>
+            Provides markup to specify the font family of a themed font in XAML.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedFontFamilyExtension.#ctor">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ThemedFontFamilyExtension"/> object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedFontFamilyExtension.#ctor(System.String)">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ThemedFontFamilyExtension"/> object.
+            </summary>
+            <param name="name">Name of the themed font.</param>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ThemedFontSizeExtension">
+            <summary>
+            Provides markup to specify the font size of a themed font in XAML.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedFontSizeExtension.#ctor">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ThemedFontSizeExtension"/> object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedFontSizeExtension.#ctor(System.String)">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ThemedFontSizeExtension"/> object.
+            </summary>
+            <param name="name">Name of the themed font.</param>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ThemedFontWeightExtension">
+            <summary>
+            Provides markup to specify the font weight of a themed font in XAML.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedFontWeightExtension.#ctor">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ThemedFontWeightExtension"/> object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedFontWeightExtension.#ctor(System.String)">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ThemedFontWeightExtension"/> object.
+            </summary>
+            <param name="name">Name of the themed font.</param>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.ThemedTextDecorationsExtension">
+            <summary>
+            Provides markup to specify the text decoration of a themed font in XAML.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedTextDecorationsExtension.#ctor">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ThemedTextDecorationsExtension"/> object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.ThemedTextDecorationsExtension.#ctor(System.String)">
+            <summary>
+            Constructs a new <see cref="T:Ifs.Fnd.ThemeManager.ThemedTextDecorationsExtension"/> object.
+            </summary>
+            <param name="name">Name of the themed font.</param>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.WinFormsStyle">
+            <summary>
+            Represents a themed style. 
+            This would encapsulate a WinForms theme value that essentially comes from <see cref="T:Ifs.Fnd.ThemeManager.FndThemedStyles"/>.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.WinFormsStyle.#ctor(System.Object)">
+            <summary>
+            Creates a <see cref="T:Ifs.Fnd.ThemeManager.WinFormsStyle"/> object.
+            </summary>
+            <param name="value">The value that this <see cref="T:Ifs.Fnd.ThemeManager.WinFormsStyle"/> instance encapsulates.</param>
+        </member>
+        <member name="E:Ifs.Fnd.ThemeManager.WinFormsStyle.PropertyChanged">
+            <summary>
+            Notifies current value has changed.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.ThemeManager.WinFormsStyle.Value">
+            <summary>
+            Gets the current value of this themed style.
+            </summary>
+            <remarks>
+            This would be a WinForms theme value that essentially comes from <see cref="T:Ifs.Fnd.ThemeManager.FndThemedStyles"/>.
+            </remarks>
+        </member>
+        <member name="T:Ifs.Fnd.ThemeManager.WinFormsStylesSource">
+            <summary>
+            Provides <see cref="T:Ifs.Fnd.ThemeManager.WinFormsStyle"/>'s for styles defined in <see cref="T:Ifs.Fnd.ThemeManager.FndThemedStyles"/>.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.WinFormsStylesSource.#ctor">
+            <summary>
+            Private default constructor to prevent compiler from creating a public one
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.WinFormsStylesSource.#cctor">
+            <summary>
+            Static constructor.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.WinFormsStylesSource.Update">
+            <summary>
+            Updates all styles from latest values in <see cref="T:Ifs.Fnd.ThemeManager.FndThemedStyles"/>.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.WinFormsStylesSource.GetStyle(System.String)">
+            <summary>
+            Returns style having given name.
+            </summary>
+            <param name="name">Name of style as in <see cref="T:Ifs.Fnd.ThemeManager.FndThemedStyles"/>.</param>
+            <returns>Style for given name.</returns>
+            <remarks>
+            <code>Name</code> is comprised of the control name and property name.<br/>
+            Ex: <strong>'ExplorerTop.Background'</strong>
+            </remarks>
+        </member>
+        <member name="M:Ifs.Fnd.ThemeManager.WinFormsStylesSource.Update(System.Windows.Threading.Dispatcher)">
+            <summary>
+            Updates all styles of given dispatcher from latest values in <see cref="T:Ifs.Fnd.ThemeManager.FndThemedStyles"/>.
+            </summary>
+            <param name="dispatcher">Dispatcher whose styles to be updated.</param>
+        </member>
+    </members>
+</doc>

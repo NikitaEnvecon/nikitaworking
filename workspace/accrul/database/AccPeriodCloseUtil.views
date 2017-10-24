@@ -1,0 +1,37 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: AccPeriodCloseUtil
+--  Component:    ACCRUL
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+--  140812  Samllk  PRFI-229,  Added view Acc_Per_Ext_Trans_Type_Lobby
+--  150916  Samllk  AFT-4960,  Added view Acc_Per_Trans_Type_Lobby
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+VIEW Acc_Per_Ext_Trans_Type_Lobby IS
+   Prompt = 'Accounting Period External Transaction Types'
+SELECT REGEXP_SUBSTR(REPLACE(Acc_Period_Close_Util_API.Get_Ext_Trans_Types_Db(), '^', ','),'[^,]+', 1, LEVEL) 
+                                               ext_trans_type_db,
+       REGEXP_SUBSTR(REPLACE(Acc_Period_Close_Util_API.Get_Ext_Trans_Types(), '^', ','),'[^,]+', 1, LEVEL) 
+                                               ext_trans_type                                        
+FROM DUAL
+CONNECT BY REGEXP_SUBSTR(REPLACE(Acc_Period_Close_Util_API.Get_Ext_Trans_Types_Db(), '^', ','), '[^,]+', 1, LEVEL) IS NOT NULL;
+
+VIEW Acc_Per_Trans_Type_Lobby IS
+   Prompt = 'Accounting Period Transaction Types'
+SELECT REGEXP_SUBSTR(REPLACE(Acc_Period_Close_Util_API.Get_GL_Trans_Types_Db(), '^', ','),'[^,]+', 1, LEVEL) 
+                                               trans_type_db,
+       REGEXP_SUBSTR(REPLACE(Acc_Period_Close_Util_API.Get_GL_Trans_Types(), '^', ','),'[^,]+', 1, LEVEL) 
+                                               trans_type                                        
+FROM DUAL
+CONNECT BY REGEXP_SUBSTR(REPLACE(Acc_Period_Close_Util_API.Get_GL_Trans_Types_Db(), '^', ','), '[^,]+', 1, LEVEL) IS NOT NULL;
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+

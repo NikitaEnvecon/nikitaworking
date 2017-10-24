@@ -1,0 +1,596 @@
+-------------------------------------------------------
+File Type: IFS Foundation Translation File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Language: pt
+Culture: pt-PT
+Fittings: Standard
+Layer: Core
+Main Type: RWC
+Sub Type: All
+-------------------------------------------------------
+CS:Ifs.Application.Fndmig_.Properties.Resources^RWC
+	CS:ALERT_Title^RWC
+		A:ALERT_Title^Execu\00E7\00E3o Procedimento^O
+	CE:
+	CS:ALERT_TitleCopyIntface^RWC
+		A:ALERT_TitleCopyIntface^Trabalho Migra\00E7\00E3o Copiado^O
+	CE:
+	CS:ALERT_TitleEx^RWC
+		A:ALERT_TitleEx^Executar Plano^O
+	CE:
+	CS:ALERT_TitleXsdCreated^RWC
+		A:ALERT_TitleXsdCreated^Xsd Criado^O
+	CE:
+	CS:FILE_All^RWC
+		A:FILE_All^Todos Ficheiros^O
+	CE:
+	CS:FILE_Dat^RWC
+		A:FILE_Dat^Ficheiros Dat (*.dat)^O
+	CE:
+	CS:FILE_Ins^RWC
+		A:FILE_Ins^Ficheiros de Instala\00E7\00E3o (*.ins)^O
+	CE:
+	CS:FILE_Text^RWC
+		A:FILE_Text^Documentos Texto (*.txt)^O
+	CE:
+	CS:FNDMIG_BatchExecInvalidDate^RWC
+		A:FNDMIG_BatchExecInvalidDate^Tem que ser introduzida data v\00E1lida^O
+	CE:
+	CS:FNDMIG_BatchExecInvalidTime^RWC
+		A:FNDMIG_BatchExecInvalidTime^Tem que introduzir uma hora v\00E1lida^O
+	CE:
+	CS:FNDMIG_ExportingMessage^RWC
+		A:FNDMIG_ExportingMessage^Exportar para o ficheiro '&0'...^O
+	CE:
+	CS:FNDMIG_Exporting_FileTitle^RWC
+		A:FNDMIG_Exporting_FileTitle^Exportar Sequ\00EAncia de Ficheiros^O
+	CE:
+	CS:INTF_Column^RWC
+		A:INTF_Column^Coluna^O
+	CE:
+	CS:INTF_CopyError^RWC
+		A:INTF_CopyError^N\00E3o \00E9 poss\00EDvel copiar ficheiro^O
+	CE:
+	CS:INTF_DeleteError^RWC
+		A:INTF_DeleteError^N\00E3o \00E9 poss\00EDvel apagar ficheiro^O
+	CE:
+	CS:INTF_ExistWin^RWC
+		A:INTF_ExistWin^n\00E3o existe na janela, ou a coluna aparece mais que uma vez na especifica\00E7\00E3o de colunas da origem.^O
+	CE:
+	CS:INTF_FileOpenError^RWC
+		A:INTF_FileOpenError^N\00E3o \00E9 poss\00EDvel Abrir ficheiro^O
+	CE:
+	CS:INTF_SaveFile^RWC
+		A:INTF_SaveFile^Guardar como^O
+	CE:
+	CS:INTF_SelectFile^RWC
+		A:INTF_SelectFile^Selecionar Ficheiro a Carregar^O
+	CE:
+	CS:NAV_InterfOverviewJob^RWC
+		A:NAV_InterfOverviewJob^Hist\00F3rico Trabalho^O
+	CE:
+	CS:NAV_InterfaceBasic^RWC
+		A:NAV_InterfaceBasic^Migra\00E7\00E3o Geral Dados^O
+	CE:
+	CS:NAV_InterfaceHeader^RWC
+		A:NAV_InterfaceHeader^Manuten\00E7\00E3o Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:NAV_InterfaceHistory^RWC
+		A:NAV_InterfaceHistory^Hist\00F3rico Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:NAV_InterfaceStart^RWC
+		A:NAV_InterfaceStart^Executar Trabalho^O
+	CE:
+	CS:NAV_Interface_P^RWC
+		A:NAV_Interface_P^Migra\00E7\00E3o Dados^O
+	CE:
+	CS:NAV_IntfaceReplDbObjects^RWC
+		A:NAV_IntfaceReplDbObjects^Objetos Replica\00E7\00E3o^O
+	CE:
+	CS:NAV_IntfaceReplOutLog^RWC
+		A:NAV_IntfaceReplOutLog^Registo Sa\00EDda Replica\00E7\00E3o^O
+	CE:
+	CS:NAV_IntfaceReplStruct^RWC
+		A:NAV_IntfaceReplStruct^Manuten\00E7\00E3o Replica\00E7\00E3o Estrutura^O
+	CE:
+	CS:NAV_IntfaceServerProcesses^RWC
+		A:NAV_IntfaceServerProcesses^Processos Servidor^O
+	CE:
+	CS:NAV_OverViewInterfaceDetail^RWC
+		A:NAV_OverViewInterfaceDetail^Resumo - Detalhes Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:NAV_OverViewInterfaceHeader^RWC
+		A:NAV_OverViewInterfaceHeader^Resumo - Trabalhos Migra\00E7\00E3o^O
+	CE:
+	CS:NAV_OverViewInterfaceHistory^RWC
+		A:NAV_OverViewInterfaceHistory^Resumo - Hist\00F3rico Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:TAB_NAME_Detail^RWC
+		A:TAB_NAME_Detail^Detalhe^O
+	CE:
+	CS:TAB_NAME_DetailConversion^RWC
+		A:TAB_NAME_DetailConversion^Mapeamento Origem^O
+	CE:
+	CS:TAB_NAME_DetailFile^RWC
+		A:TAB_NAME_DetailFile^Mapeamento Ficheiro^O
+	CE:
+	CS:TAB_NAME_ExecPlan^RWC
+		A:TAB_NAME_ExecPlan^Plano Execu\00E7\00E3o^O
+	CE:
+	CS:TAB_NAME_ExecSingel^RWC
+		A:TAB_NAME_ExecSingel^Executar^O
+	CE:
+	CS:TAB_NAME_Job_Detail^RWC
+		A:TAB_NAME_Job_Detail^Detalhe^O
+	CE:
+	CS:TAB_NAME_MethodList^RWC
+		A:TAB_NAME_MethodList^Lista M\00E9todo^O
+	CE:
+	CS:TAB_NAME_Rules^RWC
+		A:TAB_NAME_Rules^Regras^O
+	CE:
+	CS:TEXT_ConfirmRunSchedule^RWC
+		A:TEXT_ConfirmRunSchedule^O programa '{0} - {1}' ser\00E1 executado como trabalho de fundo. Pretende continuar?^O
+	CE:
+	CS:TEXT_ExportFile^RWC
+		A:TEXT_ExportFile^Introduzir nome ficheiro para exportar dados para^O
+	CE:
+	CS:TEXT_ImportDone^RWC
+		A:TEXT_ImportDone^Importa\00E7\00E3o novos trabalhos migra\00E7\00E3o conclu\00EDda^O
+	CE:
+	CS:TEXT_ImportError^RWC
+		A:TEXT_ImportError^Erros durante a Importa\00E7\00E3o^O
+	CE:
+	CS:TEXT_ImportFileName^RWC
+		A:TEXT_ImportFileName^Introduzir nome ou ficheiro a importar^O
+	CE:
+	CS:TEXT_IntfaceCopyLabel^RWC
+		A:TEXT_IntfaceCopyLabel^Novo C\00F3d. Trabalho:^O
+	CE:
+	CS:TEXT_IntfaceCopyTitle^RWC
+		A:TEXT_IntfaceCopyTitle^Copiar Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:TEXT_IntfaceShowSelectTitle^RWC
+		A:TEXT_IntfaceShowSelectTitle^Comando Select Sql^O
+	CE:
+	CS:TEXT_IntfaceSourceCols^RWC
+		A:TEXT_IntfaceSourceCols^Colunas Dicion\00E1rio^O
+	CE:
+	CS:TEXT_LineLengthError^RWC
+		A:TEXT_LineLengthError^As linhas real\00E7adas foram truncadas porque excederam o limite de linha de 4000 carateres. Poder\00E1 resultar na migra\00E7\00E3o incompleta dos dados. \00C9 aconselh\00E1vel verificar as linhas truncadas antes de continuar.^O
+	CE:
+	CS:TEXT_MethodListError^RWC
+		A:TEXT_MethodListError^Ocorreram erros durante importa\00E7\00E3o Lista M\00E9todos^O
+	CE:
+	CS:TEXT_QuestionCleanUp^RWC
+		A:TEXT_QuestionCleanUp^Apagar ir\00E1 remover todos detalhes atuais e Reiniciar^O
+	CE:
+	CS:TEXT_TitleCleanUp^RWC
+		A:TEXT_TitleCleanUp^Limpar Aviso^O
+	CE:
+	CS:TITLE_ImportDone^RWC
+		A:TITLE_ImportDone^Importa\00E7\00E3o Pronta^O
+	CE:
+	CS:TITLE_ImportError^RWC
+		A:TITLE_ImportError^Erro Importa\00E7\00E3o^O
+	CE:
+	CS:WH_IntfaceReplStructCols^RWC
+		A:WH_IntfaceReplStructCols^Definir Colunas^O
+	CE:
+	CS:WH_MethodListAttr^RWC
+		A:WH_MethodListAttr^Atributo Lista M\00E9todo^O
+	CE:
+	CS:WH_frmIntfConvCols^RWC
+		A:WH_frmIntfConvCols^Converter - &0, &1^O
+	CE:
+	CS:WH_frmIntfConvColsClear^RWC
+		A:WH_frmIntfConvColsClear^Converter Colunas^O
+	CE:
+	CS:WH_frmIntfHeaderClear^RWC
+		A:WH_frmIntfHeaderClear^Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:WH_frmIntfaceHeader^RWC
+		A:WH_frmIntfaceHeader^Trabalho Migra\00E7\00E3o - &0^O
+	CE:
+	CS:WH_frmIntfaceJobHistHead^RWC
+		A:WH_frmIntfaceJobHistHead^Hist\00F3rico Migra\00E7\00E3o - &0^O
+	CE:
+	CS:WH_frmIntfaceJobHistHeadClear^RWC
+		A:WH_frmIntfaceJobHistHeadClear^Hist\00F3rico Migra\00E7\00E3o^O
+	CE:
+	CS:WH_frmIntfaceReplStruct^RWC
+		A:WH_frmIntfaceReplStruct^Replica\00E7\00E3o Estrutura^O
+	CE:
+	CS:WH_frmIntfaceStart^RWC
+		A:WH_frmIntfaceStart^Executar Trabalho - &0^O
+	CE:
+	CS:WH_frmIntfaceStartClear^RWC
+		A:WH_frmIntfaceStartClear^Executar Trabalho^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.dlgExecPlan^RWC
+	CS:$this.Text^RWC
+		A:Text^Plano Execu\00E7\00E3o^O
+	CE:
+	CS:gbRepeated_Execution.Text^RWC
+		A:Text^Execu\00E7\00E3o Repetida^O
+	CE:
+	CS:gbSingle_Execution.Text^RWC
+		A:Text^Execu\00E7\00E3o \00DAnica^O
+	CE:
+	CS:pbCancel.Text^RWC
+		A:Text^Cancelar^O
+	CE:
+	CS:pbOk.Text^RWC
+		A:Text^OK^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.dlgExecSingel^RWC
+	CS:$this.Text^RWC
+		A:Text^Execu\00E7\00E3o \00DAnica^O
+	CE:
+	CS:gbSingle_Execution.Text^RWC
+		A:Text^Execu\00E7\00E3o \00DAnica^O
+	CE:
+	CS:pbCancel.Text^RWC
+		A:Text^Cancelar^O
+	CE:
+	CS:pbRestart.Text^RWC
+		A:Text^Reiniciar^O
+	CE:
+	CS:pbStart.Text^RWC
+		A:Text^Iniciar^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceBasic^RWC
+	CS:$this.Text^RWC
+		A:Text^Dados Gerais para Migra\00E7\00E3o Dados^O
+	CE:
+	CS:IntfaceConvList^RWC
+		A:IntfaceConvList^Listas Convers\00E3o^O
+	CE:
+	CS:IntfaceDefRules^RWC
+		A:IntfaceDefRules^Regras Padr\00E3o^O
+	CE:
+	CS:IntfaceGroup^RWC
+		A:IntfaceGroup^Grupo^O
+	CE:
+	CS:IntfacePrUser^RWC
+		A:IntfacePrUser^Util. Pr.^O
+	CE:
+	CS:IntfaceProcedures^RWC
+		A:IntfaceProcedures^Procedimentos^O
+	CE:
+	CS:IntfaceUser^RWC
+		A:IntfaceUser^Utilizador^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceConvList^RWC
+	CS:$this.Text^RWC
+		A:Text^Lista Convers\00E3o^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceHeader^RWC
+	CS:$this.Text^RWC
+		A:Text^Manuten\00E7\00E3o Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:Format^RWC
+		A:Format^A formatar^O
+	CE:
+	CS:Replication^RWC
+		A:Replication^Replica\00E7\00E3o^O
+	CE:
+	CS:gbCriteria.Text^RWC
+		A:Text^Crit\00E9rio^O
+	CE:
+	CS:gbDatabase_Information.Text^RWC
+		A:Text^Informa\00E7\00E3o Base Dados^O
+	CE:
+	CS:gbFile_Configuration.Text^RWC
+		A:Text^Configura\00E7\00E3o Ficheiro^O
+	CE:
+	CS:gbFile_Information.Text^RWC
+		A:Text^Informa\00E7\00E3o Ficheiro^O
+	CE:
+	CS:gbTrigger.Text^RWC
+		A:Text^Trigger^O
+	CE:
+	CS:menuFrmMethods_menuCopy__Migration_Job.Caption^RWC
+		A:Caption^Copiar Trabalho &Migra\00E7\00E3o^O
+	CE:
+	CS:menuFrmMethods_menuExecJob.Caption^RWC
+		A:Caption^Iniciar Trabalho...^O
+	CE:
+	CS:menuFrmMethods_menuHistory.Caption^RWC
+		A:Caption^&Hist\00F3rico Trabalho Migra\00E7\00E3o...^O
+	CE:
+	CS:menuFrmMethods_menuQ_uery_Source_Columns.Caption^RWC
+		A:Caption^Colunas de Origem de Consulta^O
+	CE:
+	CS:menuFrmMethods_menuSchedule_Job.Caption^RWC
+		A:Caption^Programar Trabalho^O
+	CE:
+	CS:menuFrmMethods_menuSer_ver_Processes___.Caption^RWC
+		A:Caption^Trabalhos de Migra\00E7\00E3o Programados...^O
+	CE:
+	CS:menuFrmMethods_menuSho_w_Select_Statement.Caption^RWC
+		A:Caption^Mostrar Afirma\00E7\00E3o Selecionada^O
+	CE:
+	CS:menuFrmMethods_menuTranslation.Caption^RWC
+		A:Caption^&Tradu\00E7\00E3o...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceJobHistHead^RWC
+	CS:$this.Text^RWC
+		A:Text^Visualiza\00E7\00E3o - Hist\00F3rico Trabalho Migra\00E7\00E3o^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfacePrUser^RWC
+	CS:$this.Text^RWC
+		A:Text^Util. Pr^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceReplExecPlan^RWC
+	CS:gbRepeated_Execution.Text^RWC
+		A:Text^Execu\00E7\00E3o Repetida^O
+	CE:
+	CS:menuFrmMethods_menuCreate_Execution_Plan.Caption^RWC
+		A:Caption^Criar Plano Execu\00E7\00E3o^O
+	CE:
+	CS:menuFrmMethods_menuSchedule_Insert_Package.Caption^RWC
+		A:Caption^Agendar Inserir Pacote^O
+	CE:
+	CS:menuFrmMethods_menuSchedule_Update_Package.Caption^RWC
+		A:Caption^Agendar Atualizar Pacote^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceReplStruct^RWC
+	CS:$this.Text^RWC
+		A:Text^Manuten\00E7\00E3o Estrutura Replica\00E7\00E3o^O
+	CE:
+	CS:ExecutionPlan^RWC
+		A:ExecutionPlan^Plano Execu\00E7\00E3o^O
+	CE:
+	CS:Struct^RWC
+		A:Struct^Estrutura^O
+	CE:
+	CS:cmdDefineColumns.Caption^RWC
+		A:Caption^Definir Colunas...^O
+	CE:
+	CS:cmdShowSourceText.Caption^RWC
+		A:Caption^Mostrar Texto Origem...^O
+	CE:
+	CS:menuFrmMethods_menuCompile__Packages.Caption^RWC
+		A:Caption^Compilar &Pacotes^O
+	CE:
+	CS:menuFrmMethods_menuCompile__Triggers.Caption^RWC
+		A:Caption^Compilar A&tivadores^O
+	CE:
+	CS:menuFrmMethods_menuCreate__XSD_File.Caption^RWC
+		A:Caption^Criar Ficheiro &XSD^O
+	CE:
+	CS:menuFrmMethods_menuShow__Log.Caption^RWC
+		A:Caption^Mostrar Registo^O
+	CE:
+	CS:menuFrmMethods_menuShow__Server_Processes.Caption^RWC
+		A:Caption^Mostrar Trabalho&s de Migra\00E7\00E3o Programados^O
+	CE:
+	CS:menuFrmMethods_menuStart__Insert_Package.Caption^RWC
+		A:Caption^Iniciar &Inser\00E7\00E3o de Pacote^O
+	CE:
+	CS:menuFrmMethods_menuStart__Update_Package.Caption^RWC
+		A:Caption^Iniciar At&ualiza\00E7\00E3o de Pacote^O
+	CE:
+	CS:menuFrmMethods_menu_Copy_Migration_Job.Caption^RWC
+		A:Caption^&Copiar Trabalho de Migra\00E7\00E3o^O
+	CE:
+	CS:menuFrmMethods_menu_Disable_Triggers.Caption^RWC
+		A:Caption^&Desativar Ativadores^O
+	CE:
+	CS:menuFrmMethods_menu_Enable_Triggers.Caption^RWC
+		A:Caption^Ativar Ativador&es^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceStart^RWC
+	CS:$this.Text^RWC
+		A:Text^Iniciar Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:Defaults^RWC
+		A:Defaults^Padr\00F5es^O
+	CE:
+	CS:Detail^RWC
+		A:Detail^Detalhe^O
+	CE:
+	CS:menuFrmMethods_menuClean_Up.Caption^RWC
+		A:Caption^Limpar^O
+	CE:
+	CS:menuFrmMethods_menuJob.Caption^RWC
+		A:Caption^Trabalho de Migra\00E7\00E3o...^O
+	CE:
+	CS:menuFrmMethods_menuRestart_Online.Caption^RWC
+		A:Caption^Reiniciar Online^O
+	CE:
+	CS:menuFrmMethods_menuSchedule_Job.Caption^RWC
+		A:Caption^Programar Trabalho^O
+	CE:
+	CS:menuFrmMethods_menuStart_Online.Caption^RWC
+		A:Caption^Iniciar Online^O
+	CE:
+	CS:menuFrmMethods_menuUnpack_File.Caption^RWC
+		A:Caption^Descompactar Ficheiro^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfStartDefaults^RWC
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDefaultRules^RWC
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDetail^RWC
+	CS:$this.Text^RWC
+		A:Text^Detalhes Migra\00E7\00E3o - Ficheiro^O
+	CE:
+	CS:menuTbwMethods_menuConvert_columns___.Caption^RWC
+		A:Caption^Converter colunas...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDetailConversion^RWC
+	CS:$this.Text^RWC
+		A:Text^Detalhes Migra\00E7\00E3o^O
+	CE:
+	CS:menuTbwMethods_menuConvert_columns___.Caption^RWC
+		A:Caption^Converter colunas...^O
+	CE:
+	CS:menuTbwMethods_menuTranslation.Caption^RWC
+		A:Caption^&Tradu\00E7\00E3o...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDetailOverview^RWC
+	CS:$this.Text^RWC
+		A:Text^Visualiza\00E7\00E3o - Detalhes Migra\00E7\00E3o^O
+	CE:
+	CS:menuTbwMethods_menuConvert_columns___.Caption^RWC
+		A:Caption^Converter colunas...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceGroup^RWC
+	CS:cmdExportGroup.Caption^RWC
+		A:Caption^&Exportar Grupo...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceHeader^RWC
+	CS:$this.Text^RWC
+		A:Text^Visualiza\00E7\00E3o - Trabalhos Migra\00E7\00E3o^O
+	CE:
+	CS:menuTbwMethods_menuJob__History_Overview___.Caption^RWC
+		A:Caption^Resumo &Hist. Trabalho...^O
+	CE:
+	CS:menuTbwMethods_menuS_erver_Processes___.Caption^RWC
+		A:Caption^Trabalhos de Migra\00E7\00E3o Programados...^O
+	CE:
+	CS:menuTbwMethods_menu_Export_job___.Caption^RWC
+		A:Caption^&Exportar Trabalho...^O
+	CE:
+	CS:menuTbwMethods_menu_Job_Details___.Caption^RWC
+		A:Caption^&Detalhes Trabalho...^O
+	CE:
+	CS:menuTbwMethods_menu_Print_Documentation___.Caption^RWC
+		A:Caption^Im&primir Documenta\00E7\00E3o...^O
+	CE:
+	CS:menuTbwMethods_menu_Start_Job___.Caption^RWC
+		A:Caption^&Iniciar Trabalho...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceJobDetail^RWC
+	CS:$this.Text^RWC
+		A:Text^(classe padr\00E3o)^O
+	CE:
+	CS:menuTbwMethods_menuExport_to_File___.Caption^RWC
+		A:Caption^Exportar para Ficheiro...^O
+	CE:
+	CS:menuTbwMethods_menuLoad_File___.Caption^RWC
+		A:Caption^Carregar Ficheiro...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceJobHistHead^RWC
+	CS:$this.Text^RWC
+		A:Text^Hist\00F3rico Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:menuTbwMethods_menu_Job_History_Details___.Caption^RWC
+		A:Caption^&Detalhes Hist\00F3rico Trabalho...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceMethodList^RWC
+	CS:menuTbwMethods_menuShow_Procedure_Statement.Caption^RWC
+		A:Caption^Mostrar Comando Procedimento^O
+	CE:
+	CS:menuTbwMethods_menu_Method_List_Attribute___.Caption^RWC
+		A:Caption^Atributo Lista &M\00E9todo...^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceMethodListAttribute^RWC
+	CS:$this.Text^RWC
+		A:Text^Atributo Lista M\00E9todos^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceProcedures^RWC
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceReplDbObjects^RWC
+	CS:$this.Text^RWC
+		A:Text^Objectos Replica\00E7\00E3o^O
+	CE:
+	CS:menuTbwMethods_menuShow_Source_Text.Caption^RWC
+		A:Caption^Mostrar Texto Origem^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceReplOutLog^RWC
+	CS:$this.Text^RWC
+		A:Text^Log Sa\00EDda Replica\00E7\00E3o^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceReplStructCols^RWC
+	CS:$this.Text^RWC
+		A:Text^Definir Colunas^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceRules^RWC
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceServerProcesses^RWC
+	CS:$this.Text^RWC
+		A:Text^Processos Servidor^O
+	CE:
+	CS:menuTbwMethods_menu_Execute_Job.Caption^RWC
+		A:Caption^Executa&r^O
+	CE:
+	CS:menuTbwMethods_menu_View_Schedule.Caption^RWC
+		A:Caption^&Ver Programa^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceSourceCols^RWC
+	CS:$this.Text^RWC
+		A:Text^Consulta - Colunas Iniciais^O
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceUser^RWC
+	CS:menuItemPrUser.Caption^RWC
+		A:Caption^&Util. Pr...^O
+	CE:
+CE:
+CS:Ifs.Fnd.Navigator.FNDMIG^RWC
+	CS:FNDMIG_ROOT-IntfaceBasic.Text^RWC
+		A:Text^Migra\00E7\00E3o Dados B\00E1sicos Geral^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceHeader.Text^RWC
+		A:Text^Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceHistory.Text^RWC
+		A:Text^Hist\00F3rico Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceReplOutLog.Text^RWC
+		A:Text^Log Sa\00EDda C\00F3pia^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceReplStruct.Text^RWC
+		A:Text^Estrutura C\00F3pia^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceServerProcesses.Text^RWC
+		A:Text^Processos Servidor^O
+	CE:
+	CS:FNDMIG_ROOT-IntfaceStart.Text^RWC
+		A:Text^Executar Trabalho^O
+	CE:
+	CS:FNDMIG_ROOT-OverviewIntfaceDetail.Text^RWC
+		A:Text^Detalhes Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:FNDMIG_ROOT-OverviewIntfaceHeader.Text^RWC
+		A:Text^Trabalhos Migra\00E7\00E3o^O
+	CE:
+	CS:FNDMIG_ROOT-OverviewIntfaceHistory.Text^RWC
+		A:Text^ Hist\00F3rico Trabalho Migra\00E7\00E3o^O
+	CE:
+	CS:FNDMIG_ROOT-intfaceReplDbObjects.Text^RWC
+		A:Text^Objetos C\00F3pia^O
+	CE:
+	CS:FNDMIG_ROOT.Text^RWC
+		A:Text^Migra\00E7\00E3o Dados^O
+	CE:
+CE:

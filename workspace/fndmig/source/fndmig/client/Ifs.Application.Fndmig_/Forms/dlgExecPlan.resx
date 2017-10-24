@@ -1,0 +1,857 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pbCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>468, 49</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="pbCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.Name" xml:space="preserve">
+    <value>pbCancel</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;pbCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pbOk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>468, 14</value>
+  </data>
+  <data name="pbOk.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="pbOk.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;pbOk.Name" xml:space="preserve">
+    <value>pbOk</value>
+  </data>
+  <data name="&gt;&gt;pbOk.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cPushButton, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;pbOk.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;pbOk.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Name" xml:space="preserve">
+    <value>ToolBar</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalFormToolBar, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbInterval.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="cmbInterval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 29</value>
+  </data>
+  <data name="cmbInterval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 21</value>
+  </data>
+  <data name="cmbInterval.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;cmbInterval.Name" xml:space="preserve">
+    <value>cmbInterval</value>
+  </data>
+  <data name="&gt;&gt;cmbInterval.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalComboBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;cmbInterval.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cmbInterval.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dfnInterval.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="dfnInterval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 29</value>
+  </data>
+  <data name="dfnInterval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 21</value>
+  </data>
+  <data name="dfnInterval.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;dfnInterval.Name" xml:space="preserve">
+    <value>dfnInterval</value>
+  </data>
+  <data name="&gt;&gt;dfnInterval.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalDataField, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;dfnInterval.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfnInterval.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dfRepeatedTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="dfRepeatedTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 55</value>
+  </data>
+  <data name="dfRepeatedTime.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="dfRepeatedTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="dfRepeatedTime.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;dfRepeatedTime.Name" xml:space="preserve">
+    <value>dfRepeatedTime</value>
+  </data>
+  <data name="&gt;&gt;dfRepeatedTime.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalDataField, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;dfRepeatedTime.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfRepeatedTime.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbSunday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbSunday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="cbSunday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 167</value>
+  </data>
+  <data name="cbSunday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 17</value>
+  </data>
+  <data name="cbSunday.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="cbSunday.Text" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="&gt;&gt;cbSunday.Name" xml:space="preserve">
+    <value>cbSunday</value>
+  </data>
+  <data name="&gt;&gt;cbSunday.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalCheckBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;cbSunday.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbSunday.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cbSaturday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbSaturday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="cbSaturday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>371, 139</value>
+  </data>
+  <data name="cbSaturday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 17</value>
+  </data>
+  <data name="cbSaturday.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="cbSaturday.Text" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="&gt;&gt;cbSaturday.Name" xml:space="preserve">
+    <value>cbSaturday</value>
+  </data>
+  <data name="&gt;&gt;cbSaturday.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalCheckBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;cbSaturday.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbSaturday.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cbFriday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbFriday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="cbFriday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 139</value>
+  </data>
+  <data name="cbFriday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 17</value>
+  </data>
+  <data name="cbFriday.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="cbFriday.Text" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="&gt;&gt;cbFriday.Name" xml:space="preserve">
+    <value>cbFriday</value>
+  </data>
+  <data name="&gt;&gt;cbFriday.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalCheckBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;cbFriday.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbFriday.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cbThursday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbThursday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="cbThursday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 139</value>
+  </data>
+  <data name="cbThursday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
+  </data>
+  <data name="cbThursday.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="cbThursday.Text" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="&gt;&gt;cbThursday.Name" xml:space="preserve">
+    <value>cbThursday</value>
+  </data>
+  <data name="&gt;&gt;cbThursday.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalCheckBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;cbThursday.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbThursday.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cbWednesday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbWednesday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="cbWednesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>371, 111</value>
+  </data>
+  <data name="cbWednesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 17</value>
+  </data>
+  <data name="cbWednesday.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="cbWednesday.Text" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="&gt;&gt;cbWednesday.Name" xml:space="preserve">
+    <value>cbWednesday</value>
+  </data>
+  <data name="&gt;&gt;cbWednesday.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalCheckBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;cbWednesday.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbWednesday.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cbTuesday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbTuesday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="cbTuesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 111</value>
+  </data>
+  <data name="cbTuesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 17</value>
+  </data>
+  <data name="cbTuesday.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="cbTuesday.Text" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="&gt;&gt;cbTuesday.Name" xml:space="preserve">
+    <value>cbTuesday</value>
+  </data>
+  <data name="&gt;&gt;cbTuesday.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalCheckBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;cbTuesday.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbTuesday.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="cbMonday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbMonday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="cbMonday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 111</value>
+  </data>
+  <data name="cbMonday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 17</value>
+  </data>
+  <data name="cbMonday.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="cbMonday.Text" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="&gt;&gt;cbMonday.Name" xml:space="preserve">
+    <value>cbMonday</value>
+  </data>
+  <data name="&gt;&gt;cbMonday.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalCheckBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;cbMonday.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;cbMonday.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="dfScheduledTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="dfScheduledTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 139</value>
+  </data>
+  <data name="dfScheduledTime.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="dfScheduledTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="dfScheduledTime.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;dfScheduledTime.Name" xml:space="preserve">
+    <value>dfScheduledTime</value>
+  </data>
+  <data name="&gt;&gt;dfScheduledTime.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalDataField, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;dfScheduledTime.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfScheduledTime.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="dfScheduledDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="dfScheduledDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 111</value>
+  </data>
+  <data name="dfScheduledDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="dfScheduledDate.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;dfScheduledDate.Name" xml:space="preserve">
+    <value>dfScheduledDate</value>
+  </data>
+  <data name="&gt;&gt;dfScheduledDate.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalDataField, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;dfScheduledDate.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;dfScheduledDate.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="rbWeekly.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbWeekly.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="rbWeekly.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 84</value>
+  </data>
+  <data name="rbWeekly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 17</value>
+  </data>
+  <data name="rbWeekly.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="rbWeekly.Text" xml:space="preserve">
+    <value>&amp;Weekly on</value>
+  </data>
+  <data name="&gt;&gt;rbWeekly.Name" xml:space="preserve">
+    <value>rbWeekly</value>
+  </data>
+  <data name="&gt;&gt;rbWeekly.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalRadioButton, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;rbWeekly.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;rbWeekly.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="rbDaily.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbDaily.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="rbDaily.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 56</value>
+  </data>
+  <data name="rbDaily.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="rbDaily.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="rbDaily.Text" xml:space="preserve">
+    <value>&amp;Daily at</value>
+  </data>
+  <data name="&gt;&gt;rbDaily.Name" xml:space="preserve">
+    <value>rbDaily</value>
+  </data>
+  <data name="&gt;&gt;rbDaily.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalRadioButton, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;rbDaily.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;rbDaily.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="rbInterval.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbInterval.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="rbInterval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 28</value>
+  </data>
+  <data name="rbInterval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 17</value>
+  </data>
+  <data name="rbInterval.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="rbInterval.Text" xml:space="preserve">
+    <value>&amp;Interval of</value>
+  </data>
+  <data name="&gt;&gt;rbInterval.Name" xml:space="preserve">
+    <value>rbInterval</value>
+  </data>
+  <data name="&gt;&gt;rbInterval.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalRadioButton, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;rbInterval.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;rbInterval.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="rbScheduled.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbScheduled.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="rbScheduled.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 84</value>
+  </data>
+  <data name="rbScheduled.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 17</value>
+  </data>
+  <data name="rbScheduled.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="rbScheduled.Text" xml:space="preserve">
+    <value>&amp;Scheduled at</value>
+  </data>
+  <data name="&gt;&gt;rbScheduled.Name" xml:space="preserve">
+    <value>rbScheduled</value>
+  </data>
+  <data name="&gt;&gt;rbScheduled.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalRadioButton, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;rbScheduled.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;rbScheduled.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="rbAsap.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbAsap.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="rbAsap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 56</value>
+  </data>
+  <data name="rbAsap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 17</value>
+  </data>
+  <data name="rbAsap.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="rbAsap.Text" xml:space="preserve">
+    <value>&amp;Background</value>
+  </data>
+  <data name="&gt;&gt;rbAsap.Name" xml:space="preserve">
+    <value>rbAsap</value>
+  </data>
+  <data name="&gt;&gt;rbAsap.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalRadioButton, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;rbAsap.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;rbAsap.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="rbOnline.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbOnline.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="rbOnline.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 28</value>
+  </data>
+  <data name="rbOnline.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 17</value>
+  </data>
+  <data name="rbOnline.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="rbOnline.Text" xml:space="preserve">
+    <value>&amp;Online</value>
+  </data>
+  <data name="&gt;&gt;rbOnline.Name" xml:space="preserve">
+    <value>rbOnline</value>
+  </data>
+  <data name="&gt;&gt;rbOnline.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalRadioButton, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;rbOnline.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;rbOnline.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="labeldfScheduledTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfScheduledTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labeldfScheduledTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 147</value>
+  </data>
+  <data name="labeldfScheduledTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="labeldfScheduledTime.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="labeldfScheduledTime.Text" xml:space="preserve">
+    <value>Time:</value>
+  </data>
+  <data name="&gt;&gt;labeldfScheduledTime.Name" xml:space="preserve">
+    <value>labeldfScheduledTime</value>
+  </data>
+  <data name="&gt;&gt;labeldfScheduledTime.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalBackgroundText, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;labeldfScheduledTime.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfScheduledTime.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="labeldfScheduledDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfScheduledDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labeldfScheduledDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 119</value>
+  </data>
+  <data name="labeldfScheduledDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="labeldfScheduledDate.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labeldfScheduledDate.Text" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="&gt;&gt;labeldfScheduledDate.Name" xml:space="preserve">
+    <value>labeldfScheduledDate</value>
+  </data>
+  <data name="&gt;&gt;labeldfScheduledDate.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalBackgroundText, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;labeldfScheduledDate.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;labeldfScheduledDate.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="gbRepeated_Execution.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbRepeated_Execution.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 6</value>
+  </data>
+  <data name="gbRepeated_Execution.Size" type="System.Drawing.Size, System.Drawing">
+    <value>276, 189</value>
+  </data>
+  <data name="gbRepeated_Execution.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="gbRepeated_Execution.Text" xml:space="preserve">
+    <value>Repeated Execution</value>
+  </data>
+  <data name="&gt;&gt;gbRepeated_Execution.Name" xml:space="preserve">
+    <value>gbRepeated_Execution</value>
+  </data>
+  <data name="&gt;&gt;gbRepeated_Execution.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbRepeated_Execution.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;gbRepeated_Execution.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="gbSingle_Execution.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbSingle_Execution.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 7</value>
+  </data>
+  <data name="gbSingle_Execution.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 188</value>
+  </data>
+  <data name="gbSingle_Execution.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbSingle_Execution.Text" xml:space="preserve">
+    <value>Single Execution</value>
+  </data>
+  <data name="&gt;&gt;gbSingle_Execution.Name" xml:space="preserve">
+    <value>gbSingle_Execution</value>
+  </data>
+  <data name="&gt;&gt;gbSingle_Execution.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbSingle_Execution.Parent" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;gbSingle_Execution.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="ClientArea.Size" type="System.Drawing.Size, System.Drawing">
+    <value>546, 206</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.Name" xml:space="preserve">
+    <value>ClientArea</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalFormClientArea, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ClientArea.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Name" xml:space="preserve">
+    <value>StatusBar</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalFormStatusBar, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>546, 206</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Execution Plan</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>dlgExecPlan</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDialogBox, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+</root>

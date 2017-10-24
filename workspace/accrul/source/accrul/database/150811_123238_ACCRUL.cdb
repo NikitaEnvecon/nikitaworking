@@ -1,0 +1,54 @@
+-----------------------------------------------------------------------------
+--  Module : ACCRUL
+--
+--  File   : 150811_123238_ACCRUL.cdb
+--
+--  IFS Developer Studio Template Version 2.6
+--
+--  Date     Sign    History
+--  ------   ------  --------------------------------------------------
+--  150811   Thpelk  Bug 123238, Created.
+--  ------   ------  --------------------------------------------------
+-----------------------------------------------------------------------------
+
+SET SERVEROUTPUT ON
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL', '150811_123238_ACCRUL.cdb', 'Timestamp_1');
+
+
+DECLARE
+   table_name_    VARCHAR2(30) := 'POST_CTRL_NO_CODEPART_VAL_TMP'; 
+   columns_       Database_SYS.ColumnTabType;
+BEGIN
+   IF NOT Database_SYS.Is_Db_Patch_Registered('ACCRUL', 123238) THEN  
+      
+      
+      Database_SYS.Set_Table_Column(columns_, 'COMPANY', 'VARCHAR2(20)');
+      Database_SYS.Set_Table_Column(columns_, 'POSTING_TYPE', 'VARCHAR2(10)');
+      Database_SYS.Set_Table_Column(columns_, 'VOUCHER_TYPE', 'VARCHAR2(5)');
+      Database_SYS.Set_Table_Column(columns_, 'CODE_A', 'VARCHAR2(5)');
+      Database_SYS.Set_Table_Column(columns_, 'CODE_B', 'VARCHAR2(5)');
+      Database_SYS.Set_Table_Column(columns_, 'CODE_C', 'VARCHAR2(5)');
+      Database_SYS.Set_Table_Column(columns_, 'CODE_D', 'VARCHAR2(5)');
+      Database_SYS.Set_Table_Column(columns_, 'CODE_E', 'VARCHAR2(5)');
+      Database_SYS.Set_Table_Column(columns_, 'CODE_F', 'VARCHAR2(5)');
+      Database_SYS.Set_Table_Column(columns_, 'CODE_G', 'VARCHAR2(5)');
+      Database_SYS.Set_Table_Column(columns_, 'CODE_H', 'VARCHAR2(5)');
+      Database_SYS.Set_Table_Column(columns_, 'CODE_I', 'VARCHAR2(5)');
+      Database_SYS.Set_Table_Column(columns_, 'CODE_J', 'VARCHAR2(5)');
+
+      IF (Database_SYS.Table_Exist(table_name_)) THEN
+         Database_SYS.Alter_Table (table_name_, columns_ );
+      ELSE
+         Database_SYS.Create_Temporary_Table(table_name_, columns_, TRUE);
+      END IF;
+
+      Database_SYS.Register_Db_Patch('ACCRUL', 123238, 'Posting Control incorrectly overridden by Code String Completion');
+      COMMIT;
+   END IF;
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL', '150811_123238_ACCRUL.cdb', 'Done');
+
+SET SERVEROUTPUT OFF

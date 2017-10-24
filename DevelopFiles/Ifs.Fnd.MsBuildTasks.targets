@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+     <IfsFndMSBuildTasksDll>$(FndDeployTarget)\Ifs.Fnd.MSBuildTasks.dll</IfsFndMSBuildTasksDll>
+  </PropertyGroup>
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.SatelliteAssemblyGroupingTask" />
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.ChangeVersionBasedOnTime" />
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.GenerateDictionary" />
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.ResolveComponentBuildOrder" />
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.DeployTask" />
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.LocateFndHomeTask" />
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.MergeMapSourceFiles" />
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.MergeNavigatorFiles" />
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.MergeSearchFiles" />
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.ExtractLocalizedResources" />
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.GenerateSatelliteAssemblies" />
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.FindNewerFiles" />
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.ZipSatelliteAssemblies"/>
+  <UsingTask AssemblyFile="$(IfsFndMSBuildTasksDll)" TaskName="Ifs.Fnd.MSBuildTasks.CopyOverReadOnly" />
+</Project>

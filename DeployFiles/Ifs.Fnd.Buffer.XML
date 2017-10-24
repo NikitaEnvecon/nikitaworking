@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ifs.Fnd.Buffer</name>
+    </assembly>
+    <members>
+        <member name="T:Ifs.Fnd.Buffer.FndBinaryWriter">
+            <summary>
+            Special version of BinaryWriter which writes strings
+            without length prefix.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBinaryWriter.#ctor(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            Initializes a new instance of the System.IO.BinaryWriter class based on the
+            supplied stream and a specific character encoding.
+            </summary>
+            <param name="s">The character encoding</param>
+            <param name="e">The supplied stream</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBinaryWriter.Write(System.Byte)">
+            <summary>
+            Write a byte only if NOT called from Write(string) overload.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBinaryWriter.Write(System.String)">
+            <summary>
+            Writes a string without length prefix
+            </summary>
+            <param name="value">String value to write to the stream</param>
+        </member>
+        <member name="T:Ifs.Fnd.Buffer.FndMarshalFormat">
+            <summary>
+            Format for marshaled buffer
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndMarshalFormat.Binary">
+            <summary>
+            Format is Encoding.UTF8
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndMarshalFormat.DebugOutput">
+            <summary>
+            Used for readable output. Format is Encoding.Unicode
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Buffer.FndBuffer">
+            <summary>
+            Represents a reader that can read a serialized IFS Buffer sequence of characters.
+            </summary>
+            <remarks>
+            TokenReader is designed specifically for the IFS Buffer format. It can not be used
+            to read any other formats. 
+            </remarks>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.ActionMarker">
+            <summary>
+            Row action marker
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.BeginBufferMarker">
+            <summary>
+            Marker for buffer begin
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.EndBufferMarker">
+            <summary>
+            Marker for buffer end
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.HeadMarker">
+            <summary>
+            Marker for buffer head
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.NameMarker">
+            <summary>
+            Name marker
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.TypeMarker">
+            <summary>
+            Data type marker
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.StatusMarker">
+            <summary>
+            Status marker
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.ValueMarker">
+            <summary>
+            Value marker
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.NullValueMarker">
+            <summary>
+            Null value marker
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.NoValueMarker">
+            <summary>
+            Marker for not sent value (attributes with status but no value)
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.InvalidValueMarker">
+            <summary>
+            Invalid value marker (FndInvalidValue)
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.CountMarker">
+            <summary>
+            Count marker
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.ChangedValueMarker">
+            <summary>
+            Changed value marker
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.UnchangedValueMarker">
+            <summary>
+            Unchanged value marker
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.RowIdentityMarker">
+            <summary>
+            Marker for row identity, used for prepare calls to unmarshal prepared rows into detail arrays
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.DebugBeginBufferMarker">
+            <summary>
+            Debug representation for buffer begin
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.DebugEndBufferMarker">
+            <summary>
+            Debug representation for buffer end
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Buffer.FndBuffer.DebugHeadMarker">
+            <summary>
+            Debug representation for buffer head
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.#ctor">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.Buffer.FndBuffer class 
+            that is empty and has the default initial capacity. 
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.Buffer.FndBuffer class 
+            that is empty and has the specified initial capacity. 
+            </summary>
+            <param name="capacity">The number of elements that the new buffer is initially capable of storing.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.Buffer.FndBuffer class 
+            that is empty and has the default initial capacity. 
+            </summary>
+            <param name="headerArgument">A buffer header</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.ToString">
+            <summary>
+            Overrides ToString() method
+            </summary>
+            <returns>Text representation of the Buffer object</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.Reset">
+            <summary>
+            Resets the buffer
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.Add(Ifs.Fnd.Buffer.FndItem)">
+            <summary>
+            Adds an item to the buffer items.
+            </summary>
+            <param name="item">Item to add</param>
+            <returns>Item added</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.IsItemInBuffer(System.String)">
+            <summary>
+            Check if an item is in the buffer
+            </summary>
+            <param name="name">Item name to check</param>
+            <returns>true or false depending on the items existance</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.TryGetItemValue(System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="name">Item value to find and get</param>
+            <param name="value">If found, the actual item value, otherwise an empty string is returned.</param>
+            <returns>True or false depending on the items existance</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.TryGetBufferValue(System.String,Ifs.Fnd.Buffer.FndBuffer@)">
+            <summary>
+            
+            </summary>
+            <param name="name">Buffer to find and get</param>
+            <param name="value">If found, the actual FndBuffer value, otherwise an empty FndBuffer object is returned.
+            NOTE! There's always an FndBuffer returned due to being a struct, for why the return value of must be changed first.</param>
+            <returns>True or false depending on the items existance</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.Marshal(System.IO.Stream,Ifs.Fnd.Buffer.FndMarshalFormat)">
+            <summary>
+            Marshals the stream
+            </summary>
+            <param name="stream">Stream to marshal</param>
+            <param name="format">Format to marshal to</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.Unmarshal(System.IO.Stream,Ifs.Fnd.Buffer.FndMarshalFormat)">
+            <summary>
+            Unmarshal can only happen from from binary format
+            </summary>
+            <param name="stream">Stream to unmarshal</param>
+            <param name="format">Format to unmarshal from, must be MarshalFormat.Binary at this time</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.SaveFile(System.String)">
+            <summary>
+            Save a file
+            </summary>
+            <param name="path">Name of the file</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.LoadFile(System.String)">
+            <summary>
+            Load a file
+            </summary>
+            <param name="path">Name of the file to load</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.SaveString">
+            <summary>
+            Save as string
+            </summary>
+            <returns>The string</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.SaveBytes">
+            <summary>
+            Save as bytes
+            </summary>
+            <returns>A byte array</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.LoadBytes(System.Byte[])">
+            <summary>
+            Load bytes
+            </summary>
+            <param name="data">Data to load</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndBuffer.LoadString(System.String)">
+            <summary>
+            Load string
+            </summary>
+            <param name="data">string to load</param>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndBuffer.Capacity">
+            <summary>
+            Buffer capacity
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndBuffer.Count">
+            <summary>
+            Buffer count
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndBuffer.Header">
+            <summary>
+            Buffer header
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndBuffer.Item(System.Int32)">
+            <summary>
+            Buffer item based on index access
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndBuffer.Item(System.String)">
+            <summary>
+            Buffer item based on name access
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Buffer.FndItem">
+            <summary>
+            Summary description for FndItem.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndItem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.Buffer.FndItem class 
+            </summary>
+            <param name="nameArgument">Name of the item</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndItem.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.Buffer.FndItem class 
+            </summary>
+            <param name="nameArgument"></param>
+            <param name="typeArgument"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndItem.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.Buffer.FndItem class 
+            </summary>
+            <param name="nameArgument"></param>
+            <param name="typeArgument"></param>
+            <param name="statusArgument"></param>
+            <param name="valueArgument"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndItem.#ctor(System.String,System.String,System.String,Ifs.Fnd.Buffer.FndBuffer)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.Buffer.FndItem class 
+            </summary>
+            <param name="nameArgument"></param>
+            <param name="typeArgument"></param>
+            <param name="statusArgument"></param>
+            <param name="valueArgument"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndItem.ToString">
+            <summary>
+            Converts this Ifs.Fnd.Buffer.FndItem to a human-readable string.  
+            </summary>
+            <returns>A readable string with Unicode encoding</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndItem.Marshal(System.IO.Stream,Ifs.Fnd.Buffer.FndMarshalFormat)">
+            <summary>
+            Marshalls (serializes) the buffer item to a string.  
+            </summary>
+            <param name="stream">The stream to write to</param>
+            <param name="format">The format to write. Can be Binary or DebugOutput (Readable string).</param>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndItem.Name">
+            <summary>
+            Gets or sets the name of the item
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndItem.Type">
+            <summary>
+            Gets or sets the type of the item
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndItem.Status">
+            <summary>
+            Gets or sets the status of the item
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndItem.Value">
+            <summary>
+            Gets or sets the value of the item. Cannot retrieve value from compound (Ifs.Fnd.Buffer.FndBuffer) items.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndItem.BufferValue">
+            <summary>
+            Gets or sets the value of the item. Cannot only retrieve compound (Ifs.Fnd.Buffer.FndBuffer) values.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndItem.NoValue">
+            <summary>
+            Gets or sets a value indicating that the item has no value set
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndItem.IsCompound">
+            <summary>
+            Gets a value indicating whether this item a Ifs.Fnd.Buffer.FndBuffer
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Buffer.FndLengthPrefixedTextUtil">
+            <summary>
+            An abstract class containing static methods used for encoding/decoding length prefixes.
+            Used for writing and reading LPA and LPT types (string types with a length prefix).
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndLengthPrefixedTextUtil.WriteValue(System.IO.BinaryWriter,System.Object)">
+            <summary>
+            Encodes with length prefix (for LPA/LPT) and writes a value to a writer.
+            </summary>
+            <param name="writer">BinaryWriter to write to</param>
+            <param name="value">Value to be written</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndLengthPrefixedTextUtil.EncodeLength(System.Int32)">
+            <summary>
+            Encode the integer length to a length prefix to be ready to marshal
+            </summary>
+            <param name="val"></param>
+            <returns>Returns a byte array containing the length prefix</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndLengthPrefixedTextUtil.ReadAndDecodeLength(Ifs.Fnd.Buffer.FndTokenReader)">
+            <summary>
+            Read and decode the length from a length prefix
+            </summary>
+            <param name="tr">FndTokenReader to read from</param>
+            <returns>returns the length</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndLengthPrefixedTextUtil.ReadValue(Ifs.Fnd.Buffer.FndTokenReader,System.Object@)">
+            <summary>
+            Decodes a length prefix and reads the value.
+            </summary>
+            <param name="tr">FndTokenReader to read from</param>
+            <param name="value">ref value to store the value</param>
+        </member>
+        <member name="T:Ifs.Fnd.Buffer.FndTokenReader">
+            <summary>
+            Summary description for TokenReader.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndTokenReader.#ctor(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            Initializes a new instance of the FndTokenReader class
+            </summary>
+            <param name="s">Stream to read</param>
+            <param name="e">Encoding to use</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndTokenReader.GetToken">
+            <summary>
+            Advance the reader position and read new value
+            </summary>
+            <returns>Current value after advancing</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndTokenReader.MatchDelimiter(System.Char)">
+            <summary>
+            Make sure that the current delimiter equals the sent parameter and advance to next item. Throws an exception on non match.
+            </summary>
+            <param name="delimiter">Expected delimiter</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndTokenReader.CheckDelimiter(System.Char)">
+            <summary>
+            Make sure that the current delimiter equals the sent parameter. Throws an exception on non match.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndTokenReader.ForwardToDelimiter(System.Char)">
+            <summary>
+            Advance reader until wanted delimiter is reached
+            </summary>
+            <param name="delimiter">Wanted delimiter</param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndTokenReader.PushChar(System.Byte)">
+            <summary>
+            Pushes one char back so it will be read once again
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Buffer.FndTokenReader.Advance">
+            <summary>
+            Advances reader to next delimiter
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Buffer.FndTokenReader.Delimiter">
+            <summary>
+            Returns current delimiter
+            </summary>
+        </member>
+    </members>
+</doc>

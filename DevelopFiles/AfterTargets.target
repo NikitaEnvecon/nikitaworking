@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<UsingTask 
+		TaskName="Ifs.Fnd.MSBuildTasks.ExtractLocalizedResources" 
+		AssemblyFile="$(FndDeployTarget)\Ifs.Fnd.MSBuildTasks.dll"/>
+	<UsingTask 
+		AssemblyFile="$(FndDevelopRoot)\Ifs.Fnd.PreBuildTasks.dll" 
+		TaskName="Ifs.Fnd.PreBuildTasks.FndSetEnvironmentVariable" />
+
+	<Target Name="BeforeBuild">
+		<Message Text="Setting environment variables" />
+		<FndSetEnvironmentVariable Name="DEVROOT" Value="$(FndDevRoot)"/>
+		<FndSetEnvironmentVariable Name="DEPLOYTARGET" Value="$(FndDeployTarget)"/>
+		<FndSetEnvironmentVariable Name="DEVELOPROOT" Value="$(FndDevelopRoot)"/>
+	</Target>
+
+	<Target Name="AfterBuild"
+		Condition="'$(Localize)' == 'true'" >
+		<Message Text="ExtractLocalizedResources" />
+		<ExtractLocalizedResources AssemblyItems="$(TargetPath)"  ProjectDirItems="$(ProjectDir)" DeployFilesLocation="$(FndDeployTarget)" OutputFolder="$(LocalizeOutputFolder)" /> 
+	</Target>
+</Project>

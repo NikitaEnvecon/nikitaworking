@@ -1,0 +1,48 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceTableMigrations
+--  Component:    FNDMIG
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+VIEW Intface_Table_Migrations IS
+   Prompt = 'Table Migration Parametres'
+   Dm_Operation.Flags = 'A-IUL'
+   Dm_Operation.Datatype = 'STRING(100)'
+   Dm_Operation.Prompt = 'Operation on Table'
+   Dm_Table_Owner.Flags = 'A-IUL'
+   Dm_Table_Owner.Datatype = 'STRING(100)'
+   Dm_Table_Owner.Prompt = 'Table Owner'
+   Dm_Table_Name.Flags = 'A-IUL'
+   Dm_Table_Name.Datatype = 'STRING(100)'
+   Dm_Table_Name.Prompt = 'Table Name'
+   Dm_Db_Link.Flags = 'A-IUL'
+   Dm_Db_Link.Datatype = 'STRING(100)'
+   Dm_Db_Link.Prompt = 'Database Link Name'
+   Dm_Date_Format.Flags = 'A-IUL'
+   Dm_Date_Format.Datatype = 'STRING(100)'
+   Dm_Date_Format.Prompt = 'Date Format'
+   Dm_Key_Columns.Flags = 'A-IUL'
+   Dm_Key_Columns.Datatype = 'STRING(100)'
+   Dm_Key_Columns.Prompt = 'Key Columns on Table'
+SELECT lpad(' ',6,' ')        dm_operation,
+       lpad(' ',30,' ')       dm_table_owner,
+       lpad(' ',60,' ')       dm_table_name,
+       lpad(' ',30,' ')       dm_db_link,
+       lpad(' ',30,' ')       dm_date_format,
+       lpad(' ',2000,' ')     dm_key_columns
+FROM sys.dual;
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FndNavigator xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Legacy="false" Source="trnord\client\navigator-functional.xml">
+  <FndNavigatorEntries>
+    <FndNavigatorEntry>
+      <Key>Customer</Key>
+      <Name>Manage Customers and Orders</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>NAVIGATOR_Root</ParentKey>
+      <Ordinal>600</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>Customer.CustomerOrderDetail</Key>
+      <Name>Customer Order</Name>
+      <Url>ifsapf:frmCustomerOrderDetail</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>Customer</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>Customer.CUSTER_INVOCE</Key>
+      <Name>Customer Invoice</Name>
+      <Url>ifsapf:frmCustomerInvoiceDetail</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>Customer</ParentKey>
+      <Ordinal>300</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>Customer.CUSTER_INVOES</Key>
+      <Name>Customer Invoices</Name>
+      <Url>ifsapf:tbwCustomerInvoiceOverview</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>Customer</ParentKey>
+      <Ordinal>400</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>Customer.CUSTER_ORDE</Key>
+      <Name>Customer Orders</Name>
+      <Url>ifsapf:tbwCustomerOrderOverview</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>Customer</ParentKey>
+      <Ordinal>200</Ordinal>
+    </FndNavigatorEntry>
+  </FndNavigatorEntries>
+  <FndShortcutItems />
+</FndNavigator>

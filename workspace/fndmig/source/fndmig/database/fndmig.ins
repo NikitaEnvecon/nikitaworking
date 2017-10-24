@@ -1,0 +1,277 @@
+-----------------------------------------------------------------------------
+--  Module : FNDMIG
+--
+--  Purpose: Insert basic data and pre-defined jobs
+--
+--  File   : fndmig.ins
+--
+--  IFS Developer Studio Template Version 2.5
+--
+--  Date           Sign    History
+--  ------------   ------  --------------------------------------------------
+--  2014-sep-12    dobese  Created. Contents moved from fndmig.cre
+--  ------------   ------  --------------------------------------------------
+-----------------------------------------------------------------------------
+SET SERVEROUT ON
+
+PROMPT INSERT INTO intface_user_tab
+DECLARE
+BEGIN
+   INSERT INTO intface_user_tab (IDENTITY, PRIVILEGE, ROWVERSION )
+   VALUES (Fnd_Session_API.Get_App_Owner, '2', sysdate);
+EXCEPTION
+   WHEN OTHERS THEN NULL; -- May be there already
+END;
+/
+
+PROMPT INSERT INTO intface_default_rules_tab
+DECLARE
+   PROCEDURE InsertRules (
+       rule_id_        IN VARCHAR2,
+       description_    IN VARCHAR2,
+       procedure_name_ IN VARCHAR2,
+       rule_flag_      IN VARCHAR2,
+       value_flag_     IN VARCHAR2,
+       rule_value_     IN VARCHAR2 DEFAULT NULL )
+   IS
+   BEGIN
+      INSERT INTO intface_default_rules_tab (rule_id, description,
+         procedure_name, rule_flag, value_flag, rule_value, rowversion)
+      VALUES (rule_id_, description_,
+         procedure_name_, rule_flag_, value_flag_, rule_value_, sysdate);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+   END InsertRules;
+BEGIN
+   InsertRules('ADDOBJID', 'Create extra column detail for OBJID', 'MIGRATE%', '1', '1');
+   InsertRules('ADDOBJID', 'Create extra column detail for OBJID', 'REPLICATION', '1', '1');
+   InsertRules('ALTREPLUSER', 'Execute replication with alternate user','REPLICATION','2','1');
+   InsertRules('BUILDTRIGGERIF', 'Build IF-statement for updateable columns', 'REPLICATION', '1', '1');
+   InsertRules('CALLEXTPROC',' Call external procedure after each row ', 'CREATE_OUTPUT_FILE', '2', '3');     
+   InsertRules('CHECKOPTION', 'Perform methods New and Modify with CHECK option', 'MIGRATE%', '2', '1');
+   InsertRules('CHKSERVERFILE', 'Execute job only if serverfile exists', '*', '2', '5');
+   InsertRules('CLEANUP', 'Clear errordetails automatically', 'REPLICATION', '1', '5', 'BEFORE');
+   InsertRules('CLEANUP', 'Clear error details automatically', '*', '2', '5');
+   InsertRules('COMMITSEQ', 'Number of rows between each commit', '*', '2', '2');
+   InsertRules('CONNJOB', 'Start this job first', 'MIGRATE%', '2', '3');
+   InsertRules('CREATEDET', 'Create new column details based on views in MethodList', 'MIGRATE%', '1', '5', '1');
+   InsertRules('CREATEDET', 'Create new column details based on views in MethodList', 'REPLICATION', '1', '5', '3');
+   InsertRules('CREINDEX', 'Create index for key columns', 'CREATE_TABLE%', '2', '5');
+   InsertRules('CRETABCONF', 'Options for container table', 'CREATE_TABLE%', '2', '3');
+   InsertRules('DEPLOYFILE','Make export-file for deployment in Admin.exe', 'FNDMIG_EXPORT', '2', '5');
+   InsertRules('EVENTMESS', 'Notify Event Server when job is finished', '*', '2', '1');
+   InsertRules('EXITLINES', 'Stop reading file after this line number', '*', '2', '2');
+   InsertRules('EXTTABLE', 'Create External Table and insert directly into IC-table', 'CREATE_TABLE%', '2', '5');
+   InsertRules('FILEBKP', 'Backup file after successful completion', '*', '2', '5');
+   InsertRules('FILEDEL', 'Delete file after successful completion', '*', '2', '1');
+   InsertRules('FILEHEAD', 'Create fileheader with column names. CSV-files only', 'CREATE_OUTPUT_FILE', '2', '1');
+   InsertRules('FILEMOV', 'Move file after successful completion', '*', '2', '3');
+   InsertRules('FILERENAM', 'Rename file after successful completion', '*', '2', '5');
+   InsertRules('IGNOREADERROR', 'Continue reading file even if errors occur', '*', '2', '1');
+   InsertRules('IGNOREXEERROR', 'Continue procedure even if errors occur', 'INSERT%', '2', '1');
+   InsertRules('IGNOREXEERROR', 'Continue procedure even if errors occur', 'MIGRATE%', '1', '1');
+   InsertRules('IGNOREXEERROR', 'Continue procedure even if errors occur', 'CREATE_TABLE%', '1', '1');
+   InsertRules('IGNOREXEERROR', 'Continue procedure even if errors occur', 'REPLICATION', '1', '1');
+   InsertRules('IGNOREXEERROR', 'Continue procedure even if errors occur', 'CHECK_BY%', '2', '1');
+   InsertRules('INSUPD',' Execute either INSERT or UPDATE', 'INSERT_OR_UPDATE', '2', '3');
+   InsertRules('KEEPBLANKS', 'Do NOT trim off leading or trailing blanks from input file', '*', '2', '1');
+   InsertRules('KEEPDYNAMPROC', 'Do not DROP dynamic created procedures', 'MIGRATE%', '2', '1');
+   InsertRules('KEEPTRIGGER', 'Do NOT generate standard trigger-code', 'REPLICATION%', '2', '1');
+   InsertRules('MAPDBCOL', 'Remap IIDs client-default to DB-default', 'REPLICATION', '2', '1');
+   InsertRules('MAPDBCOL', 'Remap IIDs client-default to DB-default', 'MIGRATE%', '2', '1');
+   InsertRules('NOCLEANUP','Keep all job details for client files', '*', '2', '1');
+   InsertRules('NONULLVAL','Do not include selected items with null-value in attr-string', 'MIGRATE%', '2', '1');
+   InsertRules('NONULLVAL','Do not include selected items with null-value in attr-string', 'REPLICATION', '2', '1');
+   InsertRules('REMLOG', 'Remove logfile if External Table was created OK', 'CREATE_TABLE%', '1', '1');
+   InsertRules('SAVEJOBDAYS', 'Number of days to save job-history', '*', '2', '2');
+   InsertRules('SAVEJOBDAYS', 'Number of days to save job-history', 'REPLICATION', '1', '2', '30');
+   InsertRules('SAVEJOBERR', 'Save only errors in history log', 'REPLICATION', '1', '1');
+   InsertRules('SAVEJOBERR', 'Save only errors in history log', '*', '2', '1');
+   InsertRules('SERVFILOAD', 'Load serverfile before job starts', '*', '2', '1');
+   InsertRules('SKIPLINES', 'Start reading file after this line number', '*', '2', '2');
+   InsertRules('SYNCDETAILS', 'Synchronize job details with columns in file-header', 'INSERT%', '2', '5');
+   InsertRules('SYNCDETAILS', 'Synchronize job details with columns in file-header', 'CHECK_BY%', '2', '5');
+   InsertRules('SYNCDETAILS', 'Synchronize job details with columns in file-header', 'CREATE_TABLE%', '2', '5');
+   InsertRules('TRUNCVAL', 'Truncate file values exceeding column length', '*', '2', '1');
+END;
+/
+
+PROMPT INSERT export/import job
+-- Insert pre-defined job for EXPORT and IMPORT of Migration definitions
+-- EXPORT:
+DECLARE
+BEGIN
+   INSERT INTO intface_header_tab (
+      INTFACE_NAME, DESCRIPTION,  FILE_LOCATION, PROCEDURE_NAME,
+      NOTE_TEXT,
+      ROWVERSION)
+   VALUES ('FNDMIG_EXPORT', 'Export of Migration definitions', '2', 'FNDMIG_EXPORT',
+      '======================================================' || chr(13) || chr(10) ||
+      'Used to export definitions of one or more Migration Jobs to file.' || chr(13) || chr(10) ||
+      'Connected groups and conversion lists are also exported.' || chr(13) || chr(10) || chr(13) || chr(10) ||
+      'You can use this job when you want to move Data Migration jobs between for instance test and production databases.' || chr(13) || chr(10) || chr(13) || chr(10) ||
+      'You can choose if conversion lists used by the job should be exported or not ' || 
+      'with the EXP_LIST_FLAG. Default value is Y, export conversion lists.' || chr(13) || chr(10) || chr(13) || chr(10) ||
+      '======================================================' || chr(13) || chr(10) ||
+      'When EXPORTING data , you may specify which jobs to include in window ''Execute Job'', column ''DEFAULT WHERE''. Remember that the statement must be a valid SQL statement.' || chr(13) || chr(10) ||
+      'Here are a few excamples :' || chr(13) || chr(10) || '' || chr(13) || chr(10) ||
+      '1. Export 1 job : ' || chr(13) || chr(10) || '= ''<Job ID>''' || chr(13) || chr(10) || chr(13) || chr(10) ||
+      '2. Export multiple jobs : ' || chr(13) || chr(10) || 'in (''<Job1>'',''<Job2>'')' || chr(13) || chr(10) || chr(13) || chr(10) ||
+      '3. Export all jobs in a group :' || chr(13) || chr(10) || 'in (select intface_name from intface_header where group_id = ''<group_id>'')' || chr(13) || chr(10) || chr(13) || chr(10) ||chr(13) || chr(10) ||
+      'For export to server-file, you may use wildcards in File Name, like *.ins.' || chr(13) || chr(10) ||
+      'In this case one file per job will be created, alla with same suffix, ins.' || chr(13) || chr(10) ||
+      'If Job_ID = CUSTOMER_ORDER data will be exported to file CustomerOrder.ins' || chr(13) || chr(10) ||
+      '======================================================' ,
+      sysdate);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+END;
+/
+
+DECLARE
+BEGIN
+   INSERT INTO intface_detail_tab (
+      INTFACE_NAME, COLUMN_NAME, DESCRIPTION, DATA_TYPE, POS, LENGTH,
+      FLAGS, ATTR_SEQ, CHANGE_DEFAULTS,
+      NOTE_TEXT, ROWVERSION)
+   VALUES (
+      'FNDMIG_EXPORT', 'INTFACE_NAME', 'Migration name', 'VARCHAR2', 1, 30,
+      'IU', 1, '1',
+      'Help column for entering DefaultWhere from Start window', sysdate);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+END;
+/
+DECLARE
+BEGIN
+   INSERT INTO intface_detail_tab (
+      INTFACE_NAME, COLUMN_NAME, DESCRIPTION, DATA_TYPE, POS, LENGTH,
+      decimal_length, amount_factor, default_value, default_where, FLAGS, ATTR_SEQ, pad_char_right, pad_char_left, CHANGE_DEFAULTS, source_column, conv_list_id,
+      NOTE_TEXT, db_client_values, ROWVERSION)
+   VALUES (
+      'FNDMIG_EXPORT', 'EXP_LIST_FLAG', 'Export existing conversion lists (Y/N) ', 'VARCHAR2', 2, 1,
+      null, null, 'Y', null, 'IU', 1, null, null, '1', null, null,
+      'If default_value is set to N, Conversion Lists will NOT be exported.'|| chr(13) || chr(10) ||
+      'Default is Y.', null, sysdate);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+END;
+/
+-- IMPORT
+DECLARE
+BEGIN
+   INSERT INTO intface_header_tab (
+      INTFACE_NAME, DESCRIPTION,  FILE_LOCATION, PROCEDURE_NAME, COLUMN_EMBRACE,
+      NOTE_TEXT,
+      ROWVERSION)
+   VALUES ('FNDMIG_IMPORT', 'Import of Migration definitions', '2', 'FNDMIG_IMPORT', '34',
+      '======================================================' || chr(13) || chr(10) ||
+      'Used to import job definitions from a file generated by FNDMIG_EXPORT.' || chr(13) || chr(10) ||chr(13) || chr(10) ||
+      'You can use this job when you want to move Data Migration jobs between for instance test and production databases.' || chr(13) || chr(10) || chr(13) || chr(10) ||
+      '======================================================' || chr(13) || chr(10) ||
+      'When IMPORTING data , you can choose to overwrite existing job definitions, ' ||
+      'with the DEL_JOB_FLAG. Default is N, do NOT overwrite data.' || chr(13) || chr(10) || chr(13) || chr(10) ||
+      'If Default Value is set to Y, definitions on the file will replace data on jobs with same ID.' || chr(13) || chr(10) ||chr(13) || chr(10) ||
+      'You can choose if you want to import conversion lists or not ' || 
+      'with the DEL_LIST_FLAG. Default is N, do NOT import conversion lists.' || chr(13) || chr(10) || chr(13) || chr(10) ||
+      '======================================================' ,
+      sysdate);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+END;
+/
+DECLARE
+BEGIN
+   INSERT INTO intface_detail_tab (
+      INTFACE_NAME, COLUMN_NAME, DESCRIPTION, DATA_TYPE, POS, LENGTH,
+      DEFAULT_VALUE, FLAGS, ATTR_SEQ, CHANGE_DEFAULTS,
+      NOTE_TEXT, ROWVERSION)
+   VALUES (
+      'FNDMIG_IMPORT', 'DEL_JOB_FLAG', 'Overwrite data (Y/N) ',  'VARCHAR2', 1, 1,
+      'N', 'IU', 1, '1',
+      'If default_value is set to Y, existing Migration Jobs will be replaced by the IMPORT.'|| chr(13) || chr(10) ||
+      'Default is N.', sysdate);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+END;
+/
+DECLARE
+BEGIN
+   INSERT INTO intface_detail_tab (
+      INTFACE_NAME, COLUMN_NAME, DESCRIPTION, DATA_TYPE, POS, LENGTH,
+      decimal_length, amount_factor, default_value, default_where, FLAGS, ATTR_SEQ, pad_char_right, pad_char_left, CHANGE_DEFAULTS, source_column, conv_list_id,
+      NOTE_TEXT, db_client_values, ROWVERSION)
+   VALUES (
+      'FNDMIG_IMPORT', 'DEL_LIST_FLAG', 'Overwrite existing conversion lists (Y/N) ',  'VARCHAR2', 2, 1,
+      null, null, 'N', null, 'IU', 1, null, null, '1', null, null,
+      'If default_value is set to Y, existing Conversion Lists will be replaced by the IMPORT.'|| chr(13) || chr(10) ||
+      'Default is N.', null, sysdate);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+END;
+/
+-- Insert Rule
+DECLARE
+BEGIN
+   INSERT INTO intface_rules_tab (
+      INTFACE_NAME, RULE_ID, RULE_VALUE, RULE_FLAG, ROWVERSION )
+   VALUES (
+      'FNDMIG_EXPORT','DEPLOYFILE',NULL, '2', sysdate);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+END;
+/
+
+-- Insert User
+PROMPT INSERT INTO intface_user_tab
+DECLARE
+BEGIN
+   INSERT INTO intface_pr_user_tab 
+      (INTFACE_NAME, IDENTITY, ROWVERSION )
+   VALUES (
+      'FNDMIG_IMPORT', Fnd_Session_API.Get_App_Owner, sysdate);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+END;
+/
+DECLARE
+BEGIN
+   INSERT INTO intface_pr_user_tab 
+      (INTFACE_NAME, IDENTITY, ROWVERSION )
+   VALUES (
+      'FNDMIG_EXPORT', Fnd_Session_API.Get_App_Owner, sysdate);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+END;
+/
+

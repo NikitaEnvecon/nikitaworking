@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87DEB169-CC81-4545-AE2C-86B12E557FD4}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Ifs.Application.Accrul_</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Ifs.Application.Accrul_</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ifs.Application.Accrul">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Application.Accrul.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Application.Appsrv">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Application.Appsrv.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Application.Enterp">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Application.Enterp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.ApplicationForms">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.ApplicationForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Core">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Explorer.Interfaces">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Explorer.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Feature">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Feature.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.CommonControls">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Windows.Forms.CommonControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.Interfaces">
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Windows.Forms.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PPJ.Runtime.4">
+      <HintPath>..\..\..\..\..\..\DeployFiles\PPJ.Runtime.4.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PPJ.Runtime.Vis.4">
+      <HintPath>..\..\..\..\..\..\DeployFiles\PPJ.Runtime.Vis.4.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\cColumnAC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cDataFieldAC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cPictureListBoxResizableFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cRadioListBoxResizableFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cTableWindowCodePart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cTableWindowCodePart.Designer.cs">
+      <DependentUpon>cTableWindowCodePart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgPSheetCleanupAuditSourceInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgPSheetCleanupAuditSourceInfo.Designer.cs">
+      <DependentUpon>dlgPSheetCleanupAuditSourceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgRpdMapAccPeriods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgRpdMapAccPeriods.Designer.cs">
+      <DependentUpon>dlgRpdMapAccPeriods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgRpdGenOnCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgRpdGenOnCalendar.Designer.cs">
+      <DependentUpon>dlgRpdGenOnCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgAddPseudoCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgAddPseudoCode.Designer.cs">
+      <DependentUpon>dlgAddPseudoCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgCreateFileTypeTemplFromView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgCreateFileTypeTemplFromView.Designer.cs">
+      <DependentUpon>dlgCreateFileTypeTemplFromView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgCreatePeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgCreatePeriod.Designer.cs">
+      <DependentUpon>dlgCreatePeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgCreateRecDetFromView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgCreateRecDetFromView.Designer.cs">
+      <DependentUpon>dlgCreateRecDetFromView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgCreateTemplateFromType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgCreateTemplateFromType.Designer.cs">
+      <DependentUpon>dlgCreateTemplateFromType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgCreateYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgCreateYear.Designer.cs">
+      <DependentUpon>dlgCreateYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgExtFileCopyFileTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgExtFileCopyFileTemplate.Designer.cs">
+      <DependentUpon>dlgExtFileCopyFileTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgExtFileCopyFileType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgExtFileCopyFileType.Designer.cs">
+      <DependentUpon>dlgExtFileCopyFileType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgExtFileTemplDetFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgExtFileTemplDetFunc.designer.cs">
+      <DependentUpon>dlgExtFileTemplDetFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgExtNewUserData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgExtNewUserData.Designer.cs">
+      <DependentUpon>dlgExtNewUserData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgInclude.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgInclude.Designer.cs">
+      <DependentUpon>dlgInclude.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgPaymentTermDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgPaymentTermDetails.Designer.cs">
+      <DependentUpon>dlgPaymentTermDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgPostingCtrlCopyDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgPostingCtrlCopyDetails.Designer.cs">
+      <DependentUpon>dlgPostingCtrlCopyDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgRpdGenOnAccPeriods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgRpdGenOnAccPeriods.Designer.cs">
+      <DependentUpon>dlgRpdGenOnAccPeriods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgTransactionsInProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgTransactionsInProgress.Designer.cs">
+      <DependentUpon>dlgTransactionsInProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgVoucherType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgVoucherType.Designer.cs">
+      <DependentUpon>dlgVoucherType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAccountTaxCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAccountTaxCode.Designer.cs">
+      <DependentUpon>frmAccountTaxCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAccountType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAccountType.Designer.cs">
+      <DependentUpon>frmAccountType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAccPer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAccPer.Designer.cs">
+      <DependentUpon>frmAccPer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAttributeConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAttributeConnection.Designer.cs">
+      <DependentUpon>frmAttributeConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAttValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAttValue.Designer.cs">
+      <DependentUpon>frmAttValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAutoUpdateCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAutoUpdateCurrency.Designer.cs">
+      <DependentUpon>frmAutoUpdateCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCodeParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCodeParts.Designer.cs">
+      <DependentUpon>frmCodeParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCreateCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCreateCompany.Designer.cs">
+      <DependentUpon>frmCreateCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCurrencyRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCurrencyRate.Designer.cs">
+      <DependentUpon>frmCurrencyRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCurrencyTypeBasic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCurrencyTypeBasic.Designer.cs">
+      <DependentUpon>frmCurrencyTypeBasic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExcludeFromIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExcludeFromIL.Designer.cs">
+      <DependentUpon>frmExcludeFromIL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileLog.Designer.cs">
+      <DependentUpon>frmExternalFileLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileLogDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileLogDetail.Designer.cs">
+      <DependentUpon>frmExternalFileLogDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileParam.Designer.cs">
+      <DependentUpon>frmExternalFileParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileParamSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileParamSet.Designer.cs">
+      <DependentUpon>frmExternalFileParamSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTemplateControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTemplateControl.Designer.cs">
+      <DependentUpon>frmExternalFileTemplateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTemplateIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTemplateIn.Designer.cs">
+      <DependentUpon>frmExternalFileTemplateIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTemplateOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTemplateOut.Designer.cs">
+      <DependentUpon>frmExternalFileTemplateOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTypeDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTypeDefinition.Designer.cs">
+      <DependentUpon>frmExternalFileTypeDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTypeRecColumn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTypeRecColumn.Designer.cs">
+      <DependentUpon>frmExternalFileTypeRecColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMCQueryVoucherDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMCQueryVoucherDetail.Designer.cs">
+      <DependentUpon>frmMCQueryVoucherDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPaymentTermDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPaymentTermDetails.Designer.cs">
+      <DependentUpon>frmPaymentTermDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPostCtrlDet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPostCtrlDet.Designer.cs">
+      <DependentUpon>frmPostCtrlDet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPostCtrlDetSpec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPostCtrlDetSpec.Designer.cs">
+      <DependentUpon>frmPostCtrlDetSpec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPostCtrlNavigator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPostCtrlNavigator.Designer.cs">
+      <DependentUpon>frmPostCtrlNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPostingCtrlCombDet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPostingCtrlCombDet.Designer.cs">
+      <DependentUpon>frmPostingCtrlCombDet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPostingCtrlCombDetSpec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPostingCtrlCombDetSpec.Designer.cs">
+      <DependentUpon>frmPostingCtrlCombDetSpec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRpdCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRpdCompany.Designer.cs">
+      <DependentUpon>frmRpdCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRpdCompanyPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRpdCompanyPeriod.Designer.cs">
+      <DependentUpon>frmRpdCompanyPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRpdYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRpdYear.Designer.cs">
+      <DependentUpon>frmRpdYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStatFeeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStatFeeDetail.Designer.cs">
+      <DependentUpon>frmStatFeeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTaxBookStructure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTaxBookStructure.Designer.cs">
+      <DependentUpon>frmTaxBookStructure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTaxBookStructureView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTaxBookStructureView.Designer.cs">
+      <DependentUpon>frmTaxBookStructureView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTaxCodePerTaxBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTaxCodePerTaxBook.Designer.cs">
+      <DependentUpon>frmTaxCodePerTaxBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTaxCodesPerTaxClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTaxCodesPerTaxClass.Designer.cs">
+      <DependentUpon>frmTaxCodesPerTaxClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTaxLiabilityDateCtrl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTaxLiabilityDateCtrl.Designer.cs">
+      <DependentUpon>frmTaxLiabilityDateCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserFin.Designer.cs">
+      <DependentUpon>frmUserFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserGrMem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserGrMem.Designer.cs">
+      <DependentUpon>frmUserGrMem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserGrpPer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserGrpPer.Designer.cs">
+      <DependentUpon>frmUserGrpPer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVoucherType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVoucherType.Designer.cs">
+      <DependentUpon>frmVoucherType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVouNoSerial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVouNoSerial.Designer.cs">
+      <DependentUpon>frmVouNoSerial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVouTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVouTemplate.Designer.cs">
+      <DependentUpon>frmVouTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVouTyUG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVouTyUG.Designer.cs">
+      <DependentUpon>frmVouTyUG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwAccountGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwAccountGroup.Designer.cs">
+      <DependentUpon>tbwAccountGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwAccrulAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwAccrulAttribute.Designer.cs">
+      <DependentUpon>tbwAccrulAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCdCompl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCdCompl.Designer.cs">
+      <DependentUpon>tbwCdCompl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCodeB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCodeB.Designer.cs">
+      <DependentUpon>tbwCodeB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCodeC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCodeC.Designer.cs">
+      <DependentUpon>tbwCodeC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCodeD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCodeD.Designer.cs">
+      <DependentUpon>tbwCodeD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCodeE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCodeE.Designer.cs">
+      <DependentUpon>tbwCodeE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCodeF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCodeF.Designer.cs">
+      <DependentUpon>tbwCodeF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCodeG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCodeG.Designer.cs">
+      <DependentUpon>tbwCodeG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCodeH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCodeH.Designer.cs">
+      <DependentUpon>tbwCodeH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCodeI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCodeI.Designer.cs">
+      <DependentUpon>tbwCodeI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCodeJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCodeJ.Designer.cs">
+      <DependentUpon>tbwCodeJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCodePart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCodePart.Designer.cs">
+      <DependentUpon>tbwCodePart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCombControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCombControl.Designer.cs">
+      <DependentUpon>tbwCombControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCombControlType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCombControlType.Designer.cs">
+      <DependentUpon>tbwCombControlType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCostElementToAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCostElementToAccount.Designer.cs">
+      <DependentUpon>tbwCostElementToAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCostEleToAccntSecmap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCostEleToAccntSecmap.Designer.cs">
+      <DependentUpon>tbwCostEleToAccntSecmap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCtrlTypePostTypeOvw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCtrlTypePostTypeOvw.Designer.cs">
+      <DependentUpon>tbwCtrlTypePostTypeOvw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCurrencyCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCurrencyCode.Designer.cs">
+      <DependentUpon>tbwCurrencyCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwCurrencyType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwCurrencyType.Designer.cs">
+      <DependentUpon>tbwCurrencyType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExternalFileDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExternalFileDetail.Designer.cs">
+      <DependentUpon>tbwExternalFileDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExternalFileIdentity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExternalFileIdentity.Designer.cs">
+      <DependentUpon>tbwExternalFileIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExternalFileSeparator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExternalFileSeparator.Designer.cs">
+      <DependentUpon>tbwExternalFileSeparator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExternalFileTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExternalFileTemplate.Designer.cs">
+      <DependentUpon>tbwExternalFileTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExternalFileTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExternalFileTransactions.Designer.cs">
+      <DependentUpon>tbwExternalFileTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExternalFileTypeDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExternalFileTypeDefinition.Designer.cs">
+      <DependentUpon>tbwExternalFileTypeDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExtFileBatchJobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExtFileBatchJobs.Designer.cs">
+      <DependentUpon>tbwExtFileBatchJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExtFileCompanyDefault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExtFileCompanyDefault.Designer.cs">
+      <DependentUpon>tbwExtFileCompanyDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExtFileTypeParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExtFileTypeParam.Designer.cs">
+      <DependentUpon>tbwExtFileTypeParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExtLoadParams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExtLoadParams.Designer.cs">
+      <DependentUpon>tbwExtLoadParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExtParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExtParameters.Designer.cs">
+      <DependentUpon>tbwExtParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExtTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExtTransactions.Designer.cs">
+      <DependentUpon>tbwExtTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwExtTypeParamSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwExtTypeParamSet.Designer.cs">
+      <DependentUpon>tbwExtTypeParamSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwOverviewVouTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwOverviewVouTemplate.Designer.cs">
+      <DependentUpon>tbwOverviewVouTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwPaymentTerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwPaymentTerm.Designer.cs">
+      <DependentUpon>tbwPaymentTerm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwPaymentVacationPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwPaymentVacationPeriod.Designer.cs">
+      <DependentUpon>tbwPaymentVacationPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwPostingCtrl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwPostingCtrl.Designer.cs">
+      <DependentUpon>tbwPostingCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwProcCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwProcCode.Designer.cs">
+      <DependentUpon>tbwProcCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwProjectCostElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwProjectCostElement.Designer.cs">
+      <DependentUpon>tbwProjectCostElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwPseudoCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwPseudoCode.Designer.cs">
+      <DependentUpon>tbwPseudoCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwQueryVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwQueryVoucher.Designer.cs">
+      <DependentUpon>tbwQueryVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwQueryVoucherType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwQueryVoucherType.Designer.cs">
+      <DependentUpon>tbwQueryVoucherType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwRpdIdentity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwRpdIdentity.Designer.cs">
+      <DependentUpon>tbwRpdIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwStatFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwStatFee.Designer.cs">
+      <DependentUpon>tbwStatFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwTaxBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwTaxBook.Designer.cs">
+      <DependentUpon>tbwTaxBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwTaxBookStructureCPValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwTaxBookStructureCPValue.Designer.cs">
+      <DependentUpon>tbwTaxBookStructureCPValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwTaxBookStructureLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwTaxBookStructureLevel.Designer.cs">
+      <DependentUpon>tbwTaxBookStructureLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwTaxBookStructureNode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwTaxBookStructureNode.Designer.cs">
+      <DependentUpon>tbwTaxBookStructureNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwTaxClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwTaxClass.Designer.cs">
+      <DependentUpon>tbwTaxClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwTaxCodeTexts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwTaxCodeTexts.Designer.cs">
+      <DependentUpon>tbwTaxCodeTexts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwTaxWithhold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwTaxWithhold.Designer.cs">
+      <DependentUpon>tbwTaxWithhold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwUserGrFi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwUserGrFi.Designer.cs">
+      <DependentUpon>tbwUserGrFi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwVoucherApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwVoucherApproval.Designer.cs">
+      <DependentUpon>tbwVoucherApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwVoucherRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwVoucherRow.Designer.cs">
+      <DependentUpon>tbwVoucherRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwVoucherText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwVoucherText.Designer.cs">
+      <DependentUpon>tbwVoucherText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals\Const.cs" />
+    <Compile Include="Globals\Ext.cs" />
+    <Compile Include="Globals\Int.cs" />
+    <Compile Include="Globals\Var.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\cTableWindowCodePart.resx">
+      <DependentUpon>cTableWindowCodePart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgPSheetCleanupAuditSourceInfo.resx">
+      <DependentUpon>dlgPSheetCleanupAuditSourceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgRpdMapAccPeriods.resx">
+      <DependentUpon>dlgRpdMapAccPeriods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgRpdGenOnCalendar.resx">
+      <DependentUpon>dlgRpdGenOnCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgAddPseudoCode.resx">
+      <DependentUpon>dlgAddPseudoCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgCreateFileTypeTemplFromView.resx">
+      <DependentUpon>dlgCreateFileTypeTemplFromView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgCreatePeriod.resx">
+      <DependentUpon>dlgCreatePeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgCreateRecDetFromView.resx">
+      <DependentUpon>dlgCreateRecDetFromView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgCreateTemplateFromType.resx">
+      <DependentUpon>dlgCreateTemplateFromType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgCreateYear.resx">
+      <DependentUpon>dlgCreateYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgExtFileCopyFileTemplate.resx">
+      <DependentUpon>dlgExtFileCopyFileTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgExtFileCopyFileType.resx">
+      <DependentUpon>dlgExtFileCopyFileType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgExtFileTemplDetFunc.resx">
+      <DependentUpon>dlgExtFileTemplDetFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgExtNewUserData.resx">
+      <DependentUpon>dlgExtNewUserData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgInclude.resx">
+      <DependentUpon>dlgInclude.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgPaymentTermDetails.resx">
+      <DependentUpon>dlgPaymentTermDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgPostingCtrlCopyDetails.resx">
+      <DependentUpon>dlgPostingCtrlCopyDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgRpdGenOnAccPeriods.resx">
+      <DependentUpon>dlgRpdGenOnAccPeriods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgTransactionsInProgress.resx">
+      <DependentUpon>dlgTransactionsInProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgVoucherType.resx">
+      <DependentUpon>dlgVoucherType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAccountTaxCode.resx">
+      <DependentUpon>frmAccountTaxCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAccountType.resx">
+      <DependentUpon>frmAccountType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAccPer.resx">
+      <DependentUpon>frmAccPer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAttributeConnection.resx">
+      <DependentUpon>frmAttributeConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAttValue.resx">
+      <DependentUpon>frmAttValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAutoUpdateCurrency.resx">
+      <DependentUpon>frmAutoUpdateCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCodeParts.resx">
+      <DependentUpon>frmCodeParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCreateCompany.resx">
+      <DependentUpon>frmCreateCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCurrencyRate.resx">
+      <DependentUpon>frmCurrencyRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCurrencyTypeBasic.resx">
+      <DependentUpon>frmCurrencyTypeBasic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExcludeFromIL.resx">
+      <DependentUpon>frmExcludeFromIL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExternalFileLog.resx">
+      <DependentUpon>frmExternalFileLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExternalFileLogDetail.resx">
+      <DependentUpon>frmExternalFileLogDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExternalFileParam.resx">
+      <DependentUpon>frmExternalFileParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExternalFileParamSet.resx">
+      <DependentUpon>frmExternalFileParamSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExternalFileTemplateControl.resx">
+      <DependentUpon>frmExternalFileTemplateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExternalFileTemplateIn.resx">
+      <DependentUpon>frmExternalFileTemplateIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExternalFileTemplateOut.resx">
+      <DependentUpon>frmExternalFileTemplateOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExternalFileTypeDefinition.resx">
+      <DependentUpon>frmExternalFileTypeDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExternalFileTypeRecColumn.resx">
+      <DependentUpon>frmExternalFileTypeRecColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMCQueryVoucherDetail.resx">
+      <DependentUpon>frmMCQueryVoucherDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPaymentTermDetails.resx">
+      <DependentUpon>frmPaymentTermDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPostCtrlDet.resx">
+      <DependentUpon>frmPostCtrlDet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPostCtrlDetSpec.resx">
+      <DependentUpon>frmPostCtrlDetSpec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPostCtrlNavigator.resx">
+      <DependentUpon>frmPostCtrlNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPostingCtrlCombDet.resx">
+      <DependentUpon>frmPostingCtrlCombDet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPostingCtrlCombDetSpec.resx">
+      <DependentUpon>frmPostingCtrlCombDetSpec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRpdCompany.resx">
+      <DependentUpon>frmRpdCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRpdCompanyPeriod.resx">
+      <DependentUpon>frmRpdCompanyPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRpdYear.resx">
+      <DependentUpon>frmRpdYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStatFeeDetail.resx">
+      <DependentUpon>frmStatFeeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTaxBookStructure.resx">
+      <DependentUpon>frmTaxBookStructure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTaxBookStructureView.resx">
+      <DependentUpon>frmTaxBookStructureView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTaxCodePerTaxBook.resx">
+      <DependentUpon>frmTaxCodePerTaxBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTaxCodesPerTaxClass.resx">
+      <DependentUpon>frmTaxCodesPerTaxClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTaxLiabilityDateCtrl.resx">
+      <DependentUpon>frmTaxLiabilityDateCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserFin.resx">
+      <DependentUpon>frmUserFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserGrMem.resx">
+      <DependentUpon>frmUserGrMem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserGrpPer.resx">
+      <DependentUpon>frmUserGrpPer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVoucherType.resx">
+      <DependentUpon>frmVoucherType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVouNoSerial.resx">
+      <DependentUpon>frmVouNoSerial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVouTemplate.resx">
+      <DependentUpon>frmVouTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVouTyUG.resx">
+      <DependentUpon>frmVouTyUG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwAccountGroup.resx">
+      <DependentUpon>tbwAccountGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwAccrulAttribute.resx">
+      <DependentUpon>tbwAccrulAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCdCompl.resx">
+      <DependentUpon>tbwCdCompl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCodeB.resx">
+      <DependentUpon>tbwCodeB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCodeC.resx">
+      <DependentUpon>tbwCodeC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCodeD.resx">
+      <DependentUpon>tbwCodeD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCodeE.resx">
+      <DependentUpon>tbwCodeE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCodeF.resx">
+      <DependentUpon>tbwCodeF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCodeG.resx">
+      <DependentUpon>tbwCodeG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCodeH.resx">
+      <DependentUpon>tbwCodeH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCodeI.resx">
+      <DependentUpon>tbwCodeI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCodeJ.resx">
+      <DependentUpon>tbwCodeJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCodePart.resx">
+      <DependentUpon>tbwCodePart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCombControl.resx">
+      <DependentUpon>tbwCombControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCombControlType.resx">
+      <DependentUpon>tbwCombControlType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCostElementToAccount.resx">
+      <DependentUpon>tbwCostElementToAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCostEleToAccntSecmap.resx">
+      <DependentUpon>tbwCostEleToAccntSecmap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCtrlTypePostTypeOvw.resx">
+      <DependentUpon>tbwCtrlTypePostTypeOvw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCurrencyCode.resx">
+      <DependentUpon>tbwCurrencyCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwCurrencyType.resx">
+      <DependentUpon>tbwCurrencyType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExternalFileDetail.resx">
+      <DependentUpon>tbwExternalFileDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExternalFileIdentity.resx">
+      <DependentUpon>tbwExternalFileIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExternalFileSeparator.resx">
+      <DependentUpon>tbwExternalFileSeparator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExternalFileTemplate.resx">
+      <DependentUpon>tbwExternalFileTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExternalFileTransactions.resx">
+      <DependentUpon>tbwExternalFileTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExternalFileTypeDefinition.resx">
+      <DependentUpon>tbwExternalFileTypeDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExtFileBatchJobs.resx">
+      <DependentUpon>tbwExtFileBatchJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExtFileCompanyDefault.resx">
+      <DependentUpon>tbwExtFileCompanyDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExtFileTypeParam.resx">
+      <DependentUpon>tbwExtFileTypeParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExtLoadParams.resx">
+      <DependentUpon>tbwExtLoadParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExtParameters.resx">
+      <DependentUpon>tbwExtParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExtTransactions.resx">
+      <DependentUpon>tbwExtTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwExtTypeParamSet.resx">
+      <DependentUpon>tbwExtTypeParamSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwOverviewVouTemplate.resx">
+      <DependentUpon>tbwOverviewVouTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwPaymentTerm.resx">
+      <DependentUpon>tbwPaymentTerm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwPaymentVacationPeriod.resx">
+      <DependentUpon>tbwPaymentVacationPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwPostingCtrl.resx">
+      <DependentUpon>tbwPostingCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwProcCode.resx">
+      <DependentUpon>tbwProcCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwProjectCostElement.resx">
+      <DependentUpon>tbwProjectCostElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwPseudoCode.resx">
+      <DependentUpon>tbwPseudoCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwQueryVoucher.resx">
+      <DependentUpon>tbwQueryVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwQueryVoucherType.resx">
+      <DependentUpon>tbwQueryVoucherType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwRpdIdentity.resx">
+      <DependentUpon>tbwRpdIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwStatFee.resx">
+      <DependentUpon>tbwStatFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwTaxBook.resx">
+      <DependentUpon>tbwTaxBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwTaxBookStructureCPValue.resx">
+      <DependentUpon>tbwTaxBookStructureCPValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwTaxBookStructureLevel.resx">
+      <DependentUpon>tbwTaxBookStructureLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwTaxBookStructureNode.resx">
+      <DependentUpon>tbwTaxBookStructureNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwTaxClass.resx">
+      <DependentUpon>tbwTaxClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwTaxCodeTexts.resx">
+      <DependentUpon>tbwTaxCodeTexts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwTaxWithhold.resx">
+      <DependentUpon>tbwTaxWithhold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwUserGrFi.resx">
+      <DependentUpon>tbwUserGrFi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwVoucherApproval.resx">
+      <DependentUpon>tbwVoucherApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwVoucherRow.resx">
+      <DependentUpon>tbwVoucherRow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwVoucherText.resx">
+      <DependentUpon>tbwVoucherText.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>%25DEVELOPROOT%25\Ifs.Fnd.AppDeployer.exe sourcefile=$(TargetPath) destdir=%25DEPLOYTARGET%25</PostBuildEvent>
+  </PropertyGroup>
+</Project>

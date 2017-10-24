@@ -1,0 +1,1360 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ifs.Fnd.Diagnostics</name>
+    </assembly>
+    <members>
+        <member name="F:Ifs.Fnd.Diagnostics.CheckDownloadCache.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.CheckDownloadCache.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.CheckDownloadCache.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.ProfileServerInvokesControl">
+            <summary>
+            Control for turning on/off remote debugging
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.ProfileServerInvokesControl.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.ProfileServerInvokesControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.ProfileServerInvokesControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.ProfileServerInvokesControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Diagnostics.ProfileServerInvokesControl.ProfileServerInvokes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.ProfileServerInvokesControl.IsProfileServerInvokesStarted">
+            <summary>
+            True if profiling of Server Invokes is currently started
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.ProfileServerInvokesControl.ProfileServerInvokesEventHandler">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.ProfileServerInvokesEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.SQLTraceControl">
+            <summary>
+            Control for turning on/off SQL Trace
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.SQLTraceControl.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.SQLTraceControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.SQLTraceControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.SQLTraceControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Diagnostics.SQLTraceControl.SQLTrace">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.SQLTraceControl.IsSQLTraceStarted">
+            <summary>
+            True if SQL Trace is currently started
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.SQLTraceControl.TraceDirectory">
+            <summary>
+            The trace directory, where the database server keeps the trace files.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.SQLTraceControl.ClientId">
+            <summary>
+            The Client ID, uniquely identifying the machine.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.SQLTraceControl.SQLTraceEventHandler">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.SQLTraceEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.DebugConsoleControllerSettings">
+            <summary>
+            Stores the settings that applies for the controller responsible for controlling the debug console view.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugConsoleControllerSettings.#ctor">
+            <summary>
+            Default Constructor. Necesarry for Serialization
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleControllerSettings.Modes">
+            <summary>
+            All the debug modes currently available.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleControllerSettings.AlwaysOnTop">
+            <summary>
+            Gets or sets whether debug monotor should be displayed on top of all windows or not. 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleControllerSettings.SelectedDebugModeIndex">
+            <summary>
+            Gets or sets the index of the currently selected debug mode. 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleControllerSettings.WriteTraceLogFile">
+            <summary>
+            Gets or set whether debug monitor should write trace log file.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleControllerSettings.TraceLogFilePath">
+            <summary>
+            Gets or sets the TraceLogFilePath.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleControllerSettings.RowsInDisplay">
+            <summary>
+            Gets or sets the number of rows to display in the console.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleControllerSettings.RowsInBuffer">
+            <summary>
+            Gets or sets the number of rows to display in the console buffer. 
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.TraceMode">
+            <summary>
+            Trace modes
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.TraceMode.Framework">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.TraceMode.Application">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.TraceMode.Custom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.DebugConsoleHelpSettings">
+            <summary>
+            Class containing navigation help information for the debug monitor form.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugConsoleHelpSettings.GetFullHelpURL(System.String,System.String)">
+            <summary>
+            Get the full url to the help site.
+            </summary>
+            <returns>The full url to the help site</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugConsoleHelpSettings.#ctor(System.String,System.String)">
+            <summary>
+            Intializes a instance of FndDebugHelpSettings
+            </summary>
+            <param name="baseUrl"></param>
+            <param name="languageCode"></param>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleHelpSettings.BaseURL">
+            <summary>
+            Get or Set the base url for help.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleHelpSettings.LanguageCode">
+            <summary>
+            Get or Set the languange code.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.AppFormsClientCategories">
+            <summary>
+            Flags for what kind of Application Forms Client Output is needed
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.AppFormsClientCategories.None">
+            <summary>
+            No category
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.AppFormsClientCategories.AppForms">
+            <summary>
+            ApplicationForms generated messages
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.AppFormsClientCategories.DatabaseCalls">
+            <summary>
+            Client database calls
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.AppFormsClientCategories.Security">
+            <summary>
+            Security messages
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.AppFormsClientCategories.OtherFramework">
+            <summary>
+            Other framework messages
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.AppFormsClientCategories.User">
+            <summary>
+            User messages
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings">
+            <summary>
+            Summary description for DebugConsoleSettings.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.#ctor">
+            <summary>
+            Constructor. Initializes a new instance of DebugConsoleSettings. 
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.SetFlag(Ifs.Fnd.Diagnostics.AppFormsClientCategories,System.Boolean)">
+            <summary>
+            Helper method for setting Application Forms Client categories
+            </summary>
+            <param name="category"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.CheckFlag(Ifs.Fnd.Diagnostics.AppFormsClientCategories)">
+            <summary>
+            Helper method for checking if categories are set
+            </summary>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.DiffSettings(Ifs.Fnd.Diagnostics.DebugConsoleModeSettings,Ifs.Fnd.Diagnostics.TraceMode)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.DisplayColumns">
+            <summary>
+            Gets or sets the selected list items
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.DetailPanels">
+            <summary>
+            Collection of visisble detail panels in the mode
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.ServerCalls">
+            <summary>
+            Gets or sets whether server calls should be displayed or not. 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.RWCFrameworkMessages">
+            <summary>
+            Gets or sets the whether framework messages should be shown or not. 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.APFFrameworkMessages">
+            <summary>
+            Gets or sets the whether framework messages should be shown or not. 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.RWCFeatureMessages">
+            <summary>
+            Gets or sets the 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.APFFeatureMessages">
+            <summary>
+            Gets or sets the 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.ServerTraceEnabled">
+            <summary>
+            Gets or sets whether server traces should be enabled or not. 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.CallSequenceLogLevel">
+            <summary>
+            Call sequence log level
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.DBAccessSequenceLogLevel">
+            <summary>
+            Database access sequence log level
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.SkeletonArgumentsLogLevel">
+            <summary>
+            Skeleton arguments log level
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.StubArgumentsLogLevel">
+            <summary>
+            Stub arguments log level
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.ApplicationCodeLogLevel">
+            <summary>
+            Application code Log level
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.PLSQLServerCalls">
+            <summary>
+            Gets or sets the 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.AppFormsClientCategories">
+            <summary>
+            Gets or sets the 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.ColumnsWidths">
+            <summary>
+            Gets or sets the width of the columns. 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.PlsqlDebugger">
+            <summary>
+            Gets or sets the PlsqlDebugger.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.ListSplitterDistance">
+            <summary>
+            Gets or sets the list splitter distance
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.SelectedListItemValues">
+            <summary>
+            Gets or sets the selected list item values
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.DefaultFrameworkSettings">
+            <summary>
+            Defaiult settings for framework developers
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.DefaultApplicationSettings">
+            <summary>
+            Default settings for application forms developers
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleModeSettings.DefaultTranslationSettings">
+            <summary>
+            Default settings for translation debugging
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.DebugItemCollection">
+            <summary>
+            Collection of DebugItem objects.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemCollection.#ctor">
+            <summary>
+            Initializes a new instance of the DebugItemCollection class
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemCollection.Insert(System.Int32,Ifs.Fnd.Diagnostics.DebugItem)">
+            <summary>
+            Inserts an element into the DebugItemCollection at the specified index.  
+            </summary>
+            <param name="index">The zero-based index at which value should be inserted.</param>
+            <param name="debugItem">The DebugItem to insert.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemCollection.CopyTo(Ifs.Fnd.Diagnostics.DebugItemCollection,System.Int32)">
+            <summary>
+            The CopyTo method copies all elements of the collection to the specified <see cref="T:Ifs.Fnd.Diagnostics.DebugItemCollection"/>, beginning at the specified index.
+            </summary>
+            <param name="debugItems">Contains an <see cref="T:Ifs.Fnd.Diagnostics.DebugItemCollection"/> that receives the elements of the collections</param>
+            <param name="index">Contains the zero-based index in array where the CopyTo method starts copying the collection. </param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemCollection.Add(Ifs.Fnd.Diagnostics.DebugItem)">
+            <summary>
+            Add a new DebugItem to collection
+            </summary>
+            <param name="debugItem">The new DebugItem</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemCollection.Contains(Ifs.Fnd.Diagnostics.DebugItem)">
+            <summary>
+            Determines whether the collection contains a specific value.
+            </summary>
+            <param name="item">The object to locate in the collection.</param>
+            <returns>true if the object is found in the collection; otherwise, false. </returns>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemCollection.Remove(System.Int32)">
+            <summary>
+            Removes an item from this collection
+            </summary>
+            <param name="index">Index of the item to remove</param>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugItemCollection.Item(System.Int32)">
+            <summary>
+            Gets a Debug Item from this collection
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.DebugItemViewer">
+            <summary>
+            Summary description for DebugItemViewer.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DebugItemViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.VScrollChangedEventHandler">
+            <summary>
+            Eventhandler for change in scrollbar
+            </summary>
+            <param name="scrollPosition"></param>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.DebugMainTraceView">
+            <summary>
+            Subclass of a standard ListView. Used to catch column resizing and implement sort in DebugConsole
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugMainTraceView.OnColumnClick(System.Windows.Forms.ColumnClickEventArgs)">
+            <summary>
+            Performs sorting on the clicked column.
+            Also raises the System.Windows.Forms.ListView.ColumnClick event. 
+            </summary>
+            <param name="e">A System.Windows.Forms.ColumnClickEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugMainTraceView.OnResize(System.EventArgs)">
+            <summary>
+            Override OnResize
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugMainTraceView.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Overrides the message loop handling 
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugMainTraceView.Sort(System.Int32)">
+            <summary>
+            Sort the list view
+            </summary>
+            <param name="index">index of the column to be sorted</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugMainTraceView.SetColumnDataType(System.Int32,Ifs.Fnd.Data.FndAttributeType)">
+            <summary>
+            Set column datatype for sorting purposes
+            </summary>
+            <param name="index">The column index</param>
+            <param name="dataType">The sort datatype</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugMainTraceView.ClearColumnDataTypes">
+            <summary>
+            Set column datatype for sorting purposes
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugMainTraceView.ScrollPosition">
+            <summary>
+            Scroll offset
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.FndListViewItemSortType">
+            <summary>
+            An enumeration for the datatype that a list view column will be treated as, for the purpose of sorting.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.FndListViewItemSortType.String">
+            <summary>
+            Sort the FndIndexList treating the selected column as a String column
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.FndListViewItemSortType.Numeric">
+            <summary>
+            Sort the FndIndexList treating the selected column as a Numeric column
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.FndListViewItemSortType.DateTime">
+            <summary>
+            Sort the FndIndexList treating the selected column as a DateTime column
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.FndListViewItemSorter">
+            <summary>
+            Provides the implementation that allows a listview column to be sorted. 
+            This is DUPLICATE code from Controls\Ifs.Fnd.Windows.Forms.CommonControls\FndListViewItemSorter.cs
+            But we do not want to reference Ifs.Fnd.Windows.Forms.CommonControls.dll from the stand alone .NET AP
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndListViewItemSorter.Compare(System.Object,System.Object)">
+            <summary>
+            Required Implementation: Returns the result of the sort
+            </summary>
+            <param name="object1">Left side of the comparison</param>
+            <param name="object2">Right side of the the comparison</param>
+            <returns>
+            Less than zero if Object1 is less than Object2. 
+            Zero if Object1 equals Object2. 
+            Greater than zero if Object1 is greater than Object2.
+            </returns>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.FndListViewItemSorter.Column">
+            <summary>
+            Gets column that is sorted
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.ListViewExtensions">
+            <summary>
+            Utility class providing Win32 helper methods.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.ListViewExtensions.SetSortIcon(System.Windows.Forms.ListView,System.Int32,System.Windows.Forms.SortOrder)">
+            <summary>
+            Sets the 'arrow head' icon on the listview column indicating the sort order.
+            </summary>
+            <param name="ListViewControl"><see cref="T:System.Windows.Forms.ListView"/> control hosting the column.</param>
+            <param name="ColumnIndex">Zero based index of the column.</param>
+            <param name="Order"><see cref="T:System.Windows.Forms.SortOrder"/> value indicating the sort order.</param>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.DetailTab">
+            <summary>
+            Detail tabs
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DetailTab.Info">
+            <summary>
+            Info tab
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DetailTab.PLSQLDetails">
+            <summary>
+            PLSQL Details tab
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DetailTab.PLSQLTrace">
+            <summary>
+            PLSQL Details tab
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DetailTab.BodyBufferRRString">
+            <summary>
+            Body buffer request and response (String) tab
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DetailTab.BodyBufferRRNative">
+            <summary>
+            Body bugger request and response (Native) tab
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DetailTab.HeaderBufferRR">
+            <summary>
+            Header buffer request and response tab
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DetailTab.ServerTrace">
+            <summary>
+            Server trace tab
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DetailTab.ClientCallStack">
+            <summary>
+            Client call stack tab
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DetailTab.Exception">
+            <summary>
+            Exceptions tab
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DetailTab.RecordRR">
+            <summary>
+            Record Request response tab
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.DebugConsoleMode">
+            <summary>
+            Debug console mode. Contains settings for a specific debug mode.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugConsoleMode.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugConsoleMode.#ctor(System.String,Ifs.Fnd.Diagnostics.TraceMode,Ifs.Fnd.Diagnostics.DebugConsoleModeSettings)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="displayName"></param>
+            <param name="mode"></param>
+            <param name="consoleSettings"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugConsoleMode.ToString">
+            <summary>
+            Returns the display name for the mode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugConsoleMode.DefaultSettings">
+            <summary>
+            Resets the debug console mode the the default settings
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugConsoleMode.CreateCustomMode(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="displayName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleMode.DisplayName">
+            <summary>
+            The display name for the mode
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleMode.DisplayNameWithEditState">
+            <summary>
+            The display name for the mode
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleMode.TraceMode">
+            <summary>
+            The trace mode category for the mode
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugConsoleMode.Settings">
+            <summary>
+            Debug console settings
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.FndDebugMonitor">
+            <summary>
+            FndDebugMonitor is a singleton handling all debug output in the framework
+            Even though several Explorer forms can be open, only one DebugMonitor is allowed.
+            The FndDebugMonitor is multi threaded, and can therefore be used even if a specific
+            explorer for is not responding.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.StartDebugMonitor(Ifs.Fnd.AccessProvider.FndDebugSettings)">
+            <summary>
+            Start the debug monitor. Opens the DebugMonitor window.
+            </summary>
+            <param name="settings">Debug settings for FndTrace </param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.StartDebugMonitor(Ifs.Fnd.AccessProvider.FndDebugSettings,Ifs.Fnd.Diagnostics.DebugConsoleHelpSettings)">
+            <summary>
+            Start the debug monitor. Opens the DebugMonitor window.
+            </summary>
+            <param name="settings"></param>
+            <param name="consoleHelpSettings"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.StartDebugMonitor(Ifs.Fnd.AccessProvider.FndConnection,Ifs.Fnd.Diagnostics.DebugConsoleHelpSettings)">
+            <summary>
+            Start the debug monitor. Opens the DebugMonitor window.
+            </summary>
+            <param name="connection"></param>
+            <param name="consoleHelpSettings"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.StopDebugMonitor">
+            <summary>
+            Terminate the Debug monitor. Closes the debug monitor window.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.IsDebugMonitorAlive">
+            <summary>
+            Determines whenever the debug monitor is running or not.
+            </summary>
+            <returns>true means that the debug monitor is alive and healthy</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.AddMenuItem(System.Windows.Forms.ToolStripMenuItem)">
+            <summary>
+            Add a Menu Item to the Tools menu
+            </summary>
+            <param name="item">Menu item to add</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.RemoveMenuItem(System.Windows.Forms.ToolStripMenuItem)">
+            <summary>
+            Remove a menu item from the Tools menu
+            </summary>
+            <param name="item">Menu item to remove</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.OnHandleCreated(System.EventArgs)">
+            <summary>
+            Subscribes to static trace events when handle is created.
+            </summary>
+            <param name="e">Event Arguments</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.OnHandleDestroyed(System.EventArgs)">
+            <summary>
+            Unsubscribes to static trace events when handle is destroyed.
+            </summary>
+            <param name="e">Event Arguments</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.FindRequestItem(Ifs.Fnd.FndTraceEventArgs)">
+            <summary>
+            Find the source debug item by searching with the trace item's event argument.
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.SetVisibleColumns">
+            <summary>
+            Set the visible columns according to debug console settings on load
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.FndDebugMonitor.CheckVisibleColumns">
+            <summary>
+            Check the context menu items according to the visible columns
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.FndDebugMonitor.DetailTabPanel">
+            <summary>
+            Instance to the detail tab panel located in the bottom of the debug console
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.FndDebugMonitor.SelectedDebugMode">
+            <summary>
+            Current selected debug mode
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.FndDebugMonitor.DebugModesDatasource">
+            <summary>
+            Collection of all debug modes currently available / loaded
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.ToolStripEx.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Fix standard MS WinForms Toolstrip behaviour not support "ClickThrough" when container window 
+            does not have input focus (window is not active).
+            
+            http://blogs.msdn.com/rickbrew/archive/2006/01/09/511003.aspx
+            </summary>
+            <param name="m">Message</param>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DownloadAllFileGroups.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DownloadAllFileGroups.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DownloadAllFileGroups.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.frmLoadedAssemblies">
+            <summary>
+            Summary description for frmLoadedAssemblies.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.frmLoadedAssemblies.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.frmLoadedAssemblies.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.frmLoadedAssemblies.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.frmLoadedAssemblies.ExtractPPJFileVersion(System.Reflection.AssemblyName)">
+            <summary>
+            This check is made expecially for the PPJ framework assemblies due to being versioned, compared to all the others.
+            AssemblyVersion version is unchanged due to in the requirement of being backward compatibly within the current track.
+            AssemblyFileVersion is instead changed to reflect the current PPJ version.
+            Therefore, the AssemblyFileVersion is extracted here and added to the assembly information.
+            </summary>
+            <param name="asmName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.frmOptions">
+            <summary>
+            Options dialog for the debug console
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.frmOptions.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.frmOptions.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.frmSystemInfo">
+            <summary>
+            Summary description for frmSystemInfo.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.frmSystemInfo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.frmSystemInfo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.frmSystemInfo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.DebugItemViewPanel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewPanel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewPanel.UpdateMode(Ifs.Fnd.Diagnostics.DebugConsoleMode)">
+            <summary>
+            Updates the tab control with all visible tabs
+            </summary>
+            <param name="mode"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewPanel.ShowItemInfo(System.Windows.Forms.ListViewItem)">
+            <summary>
+            Populate the tab pages with the information of the selected item.
+            </summary>
+            <param name="selectedItem"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewPanel.ConvertToPlsqlDataType(Ifs.Fnd.Data.FndAttributeType)">
+            <summary>
+            Converts from FndAttributeType to the corresponding datatype in PLSQL.
+            </summary>
+            <param name="dataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewPanel.AnalyzePlSqlCommand">
+            <summary>
+            Analyses the plsql command. Returns the type of command it is.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewPanel.CopyCommandToClipboard(System.Boolean)">
+            <summary>
+            Copies the Plsql command to the clipboard after being formatted so that it can 
+            be executable in an sql editor.
+            </summary>
+            <param name="includeTraceOutput"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewPanel.BuildDbmsOutputSection(System.Text.StringBuilder)">
+            <summary>
+            Adds a Dbms output section. Section consist of traces for the values of the bind variables.
+            </summary>
+            <param name="sb"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewPanel.BuildBlockCommand(System.Text.StringBuilder)">
+            <summary>
+            Builds the command block from a Begin/End statement surrounded call.
+            </summary>
+            <param name="sb"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewPanel.BuildSelectCommand(System.Text.StringBuilder)">
+            <summary>
+            Builds the command block by just copying the select statement.
+            </summary>
+            <param name="sb"></param>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.DebugItemViewPanel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewPanel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.DebugItemViewPanel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.DebugItemViewPanel.View">
+            <summary>
+            Instance to the main debug window.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.TranslationsAdditionalInfoRequestedEventHandler">
+            <summary>
+            Represents the method that will fetch additional debug information about translation traces. 
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A TranslationsDebugInfoRequestedEventArgs that contains the data. </param>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.TranslationsAdditionalInfoRequestedEventArgs">
+            <summary>
+            Raise an event that allows the TranslationManager to provide additional information about
+            this translations trace.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.TranslationsAdditionalInfoRequestedEventArgs.#ctor(Ifs.Fnd.TranslationsTraceEventInfo)">
+            <summary>
+            Create a new instance of TranslationsDebugInfoRequestedEventArgs with an associated
+            translation info object.
+            </summary>
+            <param name="translationInfo"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.TranslationsAdditionalInfoRequestedEventArgs.#ctor(System.String)">
+            <summary>
+            Create a new instance of TranslationsDebugInfoRequestedEventArgs with an associated
+            translation info object that has the given path.
+            </summary>
+            <param name="translationPath"></param>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.TranslationsAdditionalInfoRequestedEventArgs.TranslationInfo">
+            <summary>
+            Get or set the associated TranslationTraceEventInfo data
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.GeneralOptionsDialog">
+            <summary>
+            General options dialog
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.GeneralOptionsDialog.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.GeneralOptionsDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.GeneralOptionsDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.GeneralOptionsDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.GeneralOptionsDialog.RowsInDisplay">
+            <summary>
+            Gets or sets the number of rows to display in the console.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.GeneralOptionsDialog.RowsInBuffer">
+            <summary>
+            Gets or sets the number of rows to display in the console buffer. 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.GeneralOptionsDialog.WriteTraceLogFile">
+            <summary>
+            Gets or sets the whether log files should be written or not.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.GeneralOptionsDialog.TraceLogFilePath">
+            <summary>
+            Gets or sets the TraceLogFilePath.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.NameNewModeDialog">
+            <summary>
+            Dialog for inserting name
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.NameNewModeDialog.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.NameNewModeDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.NameNewModeDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.NameNewModeDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.NameNewModeDialog.ModeName">
+            <summary>
+            Gets or sets the default display name for the new mode
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.Properties.Resources.DumpFileCreated">
+            <summary>
+              Looks up a localized string similar to Dump file created at:\n{0}.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.Properties.Resources.SpecifyLogFileLocation">
+            <summary>
+              Looks up a localized string similar to Specify a location for the log files:.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.Properties.Resources.Success">
+            <summary>
+              Looks up a localized string similar to Success.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.AttributeTypeHelper">
+            <summary>
+            Summary description for AttributeTypeHelper.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.DragDataObject">
+            <summary>
+            Summary description for MyDataObject.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndDataRowDescriptor">
+            <summary>
+            Summary description for FndDataViewListItem.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.RecordEditor.FndNewDataRowRequestEventHandler">
+            <summary>
+            Represents the method that will handle the NewDataRowRequest of a FndRecordEditor
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.RecordEditor.FndNewDataRowRequestEventArgs">
+            <summary>
+            Provides data for the FndRecordEditor.NewDataRowRequest event
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.RecordEditor.FndNewDataRowRequestEventArgs.#ctor(Ifs.Fnd.Data.FndDataColumnCollection,Ifs.Fnd.Data.FndDataColumn)">
+            <summary>
+            Initializes a new instance of the FndNewDataRowRequestEventArgs class
+            </summary>
+            <param name="rowMeta">Data Columns</param>
+            <param name="column">Data Column</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.RecordEditor.FndNewDataRowRequestEventArgs.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the FndNewDataRowRequestEventArgs class
+            </summary>
+            <param name="tag">Row descriptor tag</param>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.RecordEditor.FndNewDataRowRequestEventArgs.Column">
+            <summary>
+            Data Column
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.RecordEditor.FndNewDataRowRequestEventArgs.RowMeta">
+            <summary>
+            Data Columns
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.RecordEditor.FndNewDataRowRequestEventArgs.DataRow">
+            <summary>
+            Return data row
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.RecordEditor.FndNewDataRowRequestEventArgs.Tag">
+            <summary>
+            Row descriptor tag
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndRecordTreeNodeData">
+            <summary>
+            Summary description for FndNodeData.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndRecordEditor">
+            <summary>
+            Summary description for RecordEditor.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndRecordEditor.RowDescriptorRecordType">
+            <summary>
+            Type of record for row descriptors
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndRecordEditor.RowDescriptorTagName">
+            <summary>
+            Name of attribute for the tag in a row descriptor
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndRecordEditor.RowDescriptorRowName">
+            <summary>
+            Name of attribute for the row in a row descriptor
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndRecordEditor.RowDescriptorOperationPrefix">
+            <summary>
+            Tag prefix for an operation in a row descriptor
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndRecordEditor.RowDescriptorViewPrefix">
+            <summary>
+            Tag prefix for a view in a row descriptor
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndRecordEditor.#ctor">
+            <summary>
+            Initializes a new instance of the FndRecordEditor class
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndRecordEditor.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndRecordEditor.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Windows.Forms.FndRecordEditor.NewDataRowRequest">
+            <summary>
+            Occurs when a new array or aggregate row needs to be created
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Windows.Forms.FndRecordEditor.DataRowChanged">
+            <summary>
+            Occurs when any attribute within the datarow is changed.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndRecordEditor.DataRow">
+            <summary>
+            Gets or sets the datarow being displayed
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndRecordEditor.TreeView">
+            <summary>
+            Gets the tree view
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndRecordEditor.Editable">
+            <summary>
+            Gets or sets a value indicating if row should be editable
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.RemoteDebugControl">
+            <summary>
+            Control for turning on/off remote debugging
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.RemoteDebugControl.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.RemoteDebugControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.RemoteDebugControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.RemoteDebugControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Diagnostics.RemoteDebugControl.RemoteDebug">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Diagnostics.RemoteDebugControl.IsRemoteDebugStarted">
+            <summary>
+            True if remote debugging is currently started
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.RemoteDebugControl.RemoteDebugEventHandler">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.RemoteDebugEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.SerializableDictionary`2">
+            <summary>
+            
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.SerializableDictionary`2.GetSchema">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.SerializableDictionary`2.#ctor">
+            <summary>
+            Default constuctor
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.SerializableDictionary`2.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.SerializableDictionary`2.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Read data form XML  
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.SerializableDictionary`2.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Write XML from data
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:Ifs.Fnd.Diagnostics.frmBindVariableDataViewer">
+            <summary>
+             This form uses a WebBrowser to display the value.
+             It means, if the data is XML it will display XML in a structured way
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Diagnostics.frmBindVariableDataViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.frmBindVariableDataViewer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Diagnostics.frmBindVariableDataViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

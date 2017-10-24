@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B87D85F8-EF5C-44D8-904F-A40BE5BADE2A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ifs.Application.ExternalDemo</RootNamespace>
+    <AssemblyName>Ifs.Application.ExternalDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ifs.Application.Appsrv, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Deploy files for vs 2013 U5\Ifs.Application.Appsrv.dll</HintPath>
+    </Reference>
+    <Reference Include="Ifs.Application.Enterp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Deploy files for vs 2013 U5\Ifs.Application.Enterp.dll</HintPath>
+    </Reference>
+    <Reference Include="Ifs.Fnd.ApplicationForms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Explorer.Interfaces">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Feature">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.CommonControls">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.Interfaces">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PPJ.Runtime.4">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PPJ.Runtime.Vis.4">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\cCalculateFinAmount.cs" />
+    <Compile Include="Classes\cFinlibServices.cs" />
+    <Compile Include="Controls\cCheckBoxColumnFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cCheckBoxFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cChildTableFin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cChildTableFin.Designer.cs">
+      <DependentUpon>cChildTableFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cChildTableFinBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cChildTableFinBase.Designer.cs">
+      <DependentUpon>cChildTableFinBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cChildTableObjectSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cChildTableObjectSelection.Designer.cs">
+      <DependentUpon>cChildTableObjectSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cColumnCodePartDescFin.cs" />
+    <Compile Include="Controls\cColumnCodePartFin.cs" />
+    <Compile Include="Controls\cColumnCodePartInt.cs" />
+    <Compile Include="Controls\cColumnExtFileLoad.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cColumnFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cColumnFinEuro.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cColumnFinWithUserProfile.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cComboBoxFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cContainerTabFormWindowFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cContainerTabFormWindowFin.Designer.cs">
+      <DependentUpon>cContainerTabFormWindowFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cDataFieldDlgFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cDataFieldFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cDataFieldFinContent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cDataFieldFinDescription.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cDataFieldFinEuro.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cDialogBoxFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cDialogBoxFin.Designer.cs">
+      <DependentUpon>cDialogBoxFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cFormWindowFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cFormWindowFin.Designer.cs">
+      <DependentUpon>cFormWindowFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cFormWindowSelTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cFormWindowSelTemplate.Designer.cs">
+      <DependentUpon>cFormWindowSelTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cLookupColumnFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cMasterDetailTabFormWindowFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cMasterDetailTabFormWindowFin.Designer.cs">
+      <DependentUpon>cMasterDetailTabFormWindowFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cMasterDetailTabFormWindowVou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cMasterDetailTabFormWindowVou.Designer.cs">
+      <DependentUpon>cMasterDetailTabFormWindowVou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cPushButtonDlgFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cRadioButtonFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cRecSelComboBoxFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cRecSelExtComboBoxFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cTabDialogBoxFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cTabDialogBoxFin.Designer.cs">
+      <DependentUpon>cTabDialogBoxFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cTabFormWindowFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cTabFormWindowFin.Designer.cs">
+      <DependentUpon>cTabFormWindowFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cTableWindowFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cTableWindowFin.Designer.cs">
+      <DependentUpon>cTableWindowFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cTableWindowFinBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cTableWindowFinBase.Designer.cs">
+      <DependentUpon>cTableWindowFinBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cWizardDialogBoxFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cWizardDialogBoxFin.Designer.cs">
+      <DependentUpon>cWizardDialogBoxFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgCreateRevision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgCreateRevision.Designer.cs">
+      <DependentUpon>dlgCreateRevision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExtDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExtDemo.Designer.cs">
+      <DependentUpon>frmExtDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals\Const.cs" />
+    <Compile Include="Globals\Ext.cs" />
+    <Compile Include="Globals\Int.cs" />
+    <Compile Include="Globals\Var.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\cChildTableFin.resx">
+      <DependentUpon>cChildTableFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cChildTableFinBase.resx">
+      <DependentUpon>cChildTableFinBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cChildTableObjectSelection.resx">
+      <DependentUpon>cChildTableObjectSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cContainerTabFormWindowFin.resx">
+      <DependentUpon>cContainerTabFormWindowFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cDialogBoxFin.resx">
+      <DependentUpon>cDialogBoxFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cFormWindowFin.resx">
+      <DependentUpon>cFormWindowFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cFormWindowSelTemplate.resx">
+      <DependentUpon>cFormWindowSelTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cMasterDetailTabFormWindowFin.resx">
+      <DependentUpon>cMasterDetailTabFormWindowFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cMasterDetailTabFormWindowVou.resx">
+      <DependentUpon>cMasterDetailTabFormWindowVou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cTabDialogBoxFin.resx">
+      <DependentUpon>cTabDialogBoxFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cTabFormWindowFin.resx">
+      <DependentUpon>cTabFormWindowFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cTableWindowFin.resx">
+      <DependentUpon>cTableWindowFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cTableWindowFinBase.resx">
+      <DependentUpon>cTableWindowFinBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cWizardDialogBoxFin.resx">
+      <DependentUpon>cWizardDialogBoxFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgCreateRevision.resx">
+      <DependentUpon>dlgCreateRevision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExtDemo.resx">
+      <DependentUpon>frmExtDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"%25DEVELOPROOT%25\Ifs.Fnd.AppDeployer.exe" sourcefile="$(TargetPath)" destdir="%25DEPLOYTARGET%25"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

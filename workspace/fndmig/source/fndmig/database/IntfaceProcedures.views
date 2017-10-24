@@ -1,0 +1,56 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceProcedures
+--  Component:    FNDMIG
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+@Overtake Base
+VIEW Intface_Procedures IS
+   Prompt = 'Intface Procedures'
+SELECT procedure_name                 procedure_name,
+       nvl(language_sys.translate_constant('IntfaceProcedures',substr(procedure_name,1,20)|| ' : '), description) description,
+       Intface_Direction_API.Decode(direction) direction,
+       direction                      direction_db,
+       rowid                         objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   intface_procedures_tab;
+
+VIEW Intface_Proc_Lov_Incl_Repl IS
+   Prompt = 'Intface Procedures'
+SELECT procedure_name                 procedure_name,
+       nvl(language_sys.translate_constant('IntfaceProcedures',substr(procedure_name,1,20)|| ' : '), description) description,
+       substr(Intface_Direction_API.Decode(direction),1,200) direction,
+       direction                      direction_db,
+       rowid                         objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   intface_procedures_tab
+WHERE  direction = '5';
+
+VIEW Intface_Proc_Lov_Excl_Repl IS
+   Prompt = 'Intface Procedures'
+SELECT procedure_name                 procedure_name,
+       nvl(language_sys.translate_constant('IntfaceProcedures',substr(procedure_name,1,20)|| ' : '), description) description,
+       substr(Intface_Direction_API.Decode(direction),1,200) direction,
+       direction                      direction_db,
+       rowid                         objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   intface_procedures_tab
+WHERE  direction != '5';
+

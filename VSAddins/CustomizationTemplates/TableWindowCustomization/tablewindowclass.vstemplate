@@ -1,0 +1,55 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>tbwNewCustom</DefaultName>
+    <Name>Custom Table Window</Name>
+    <Description>IFS Aplication Forms table window for customizations</Description>
+    <ProjectType>CSharp</ProjectType>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Ifs.Fnd.ApplicationForms</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Ifs.Fnd.Core</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Ifs.Fnd.Explorer.Interfaces</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Ifs.Fnd.Feature</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Ifs.Fnd.Windows.Forms.Interfaces</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>PPJ.Runtime.4</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>PPJ.Runtime.Vis.4</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Drawing</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Windows.Forms</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem SubType="Form" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">tbw.cs</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$.Designer.cs" ReplaceParameters="true">tbw.Designer.cs</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Ifs.Fnd.VisualStudio.TemplateWizard, Version=90.452.0.0, Culture=neutral, PublicKeyToken=8a9f5cd46bdf8683</Assembly>
+    <FullClassName>Ifs.Fnd.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

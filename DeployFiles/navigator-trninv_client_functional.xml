@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FndNavigator xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Legacy="false" Source="trninv\client\navigator-functional.xml">
+  <FndNavigatorEntries>
+    <FndNavigatorEntry>
+      <Key>BasicDetails</Key>
+      <Name>Manage Products</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>NAVIGATOR_Root</ParentKey>
+      <Ordinal>500</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>BasicDetails.UnitOverview</Key>
+      <Name>Units of Measure</Name>
+      <Url>ifsapf:tbwUnitOverview</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>BasicDetails</ParentKey>
+      <Ordinal>300</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>BasicDetails.BrandOverview</Key>
+      <Name>Brands</Name>
+      <Url>ifsapf:tbwBrandOverview</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>BasicDetails</ParentKey>
+      <Ordinal>500</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>BasicDetails.ProductCatagoryOverview</Key>
+      <Name>Product Catagories</Name>
+      <Url>ifsapf:tbwProductCategory</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>BasicDetails</ParentKey>
+      <Ordinal>400</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>BasicDetails.CatagoryDetail</Key>
+      <Name>Brand Catagories</Name>
+      <Url>ifsapf:tbwCategoryBrand</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>BasicDetails</ParentKey>
+      <Ordinal>200</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>BasicDetails.ProductOverview</Key>
+      <Name>Products</Name>
+      <Url>ifsapf:tbwProduct</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>BasicDetails</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>InventoryControl</Key>
+      <Name>Manage Inventories</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>NAVIGATOR_Root</ParentKey>
+      <Ordinal>400</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>InventoryControl.InventoryProductOverview</Key>
+      <Name>Inventory - Product Quantities</Name>
+      <Url>ifsapf:tbwInventoryProductOverview</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>InventoryControl</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>BasicDetails.MODE</Key>
+      <Name>Models</Name>
+      <Url>ifsapf:tbwModel</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>BasicDetails</ParentKey>
+      <Ordinal>600</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>InventoryControl.INVERY_DETALS</Key>
+      <Name>Inventory Details</Name>
+      <Url>ifsapf:frmInventoryDetails</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>InventoryControl</ParentKey>
+      <Ordinal>50</Ordinal>
+    </FndNavigatorEntry>
+  </FndNavigatorEntries>
+  <FndShortcutItems />
+</FndNavigator>

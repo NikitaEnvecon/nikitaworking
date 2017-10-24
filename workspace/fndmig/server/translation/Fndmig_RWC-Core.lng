@@ -1,0 +1,1585 @@
+-------------------------------------------------------
+File Type: IFS Foundation Language File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Fittings: Standard
+Module File Types: LNG^TRUE^TRS^TRUE^
+Layer: Core
+Main Type: RWC
+Sub Type: All
+-------------------------------------------------------
+CS:Ifs.Application.Fndmig_.Properties.Resources^RWC^Global Data^N^N
+	CS:ALERT_Title^RWC^Message^N^N
+		A:ALERT_Title^Procedure Execution^N^M^N^N^^^0^0^0
+	CE:
+	CS:ALERT_TitleCopyIntface^RWC^Message^N^N
+		A:ALERT_TitleCopyIntface^Migration Job Copied^N^M^N^N^^^0^0^0
+	CE:
+	CS:ALERT_TitleEx^RWC^Message^N^N
+		A:ALERT_TitleEx^Execute Plan^N^M^N^N^^^0^0^0
+	CE:
+	CS:ALERT_TitleXsdCreated^RWC^Message^N^N
+		A:ALERT_TitleXsdCreated^Xsd Created^N^M^N^N^^^0^0^0
+	CE:
+	CS:FILE_All^RWC^Message^N^N
+		A:FILE_All^All Files^N^M^N^N^^^0^0^0
+	CE:
+	CS:FILE_Dat^RWC^Message^N^N
+		A:FILE_Dat^Dat Files (*.dat)^N^M^N^N^^^0^0^0
+	CE:
+	CS:FILE_Ins^RWC^Message^N^N
+		A:FILE_Ins^Installation Files (*.ins)^N^M^N^N^^^0^0^0
+	CE:
+	CS:FILE_Text^RWC^Message^N^N
+		A:FILE_Text^Text Documents (*.txt)^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_BatchExecInvalidDate^RWC^Message^N^N
+		A:FNDMIG_BatchExecInvalidDate^A valid date must be entered^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_BatchExecInvalidTime^RWC^Message^N^N
+		A:FNDMIG_BatchExecInvalidTime^A valid time must be entered^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_ExportingMessage^RWC^Message^N^N
+		A:FNDMIG_ExportingMessage^Exporting to file '&0'...^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_Exporting_FileTitle^RWC^Message^N^N
+		A:FNDMIG_Exporting_FileTitle^Export File String^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTF_Column^RWC^Message^N^N
+		A:INTF_Column^Column^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTF_CopyError^RWC^Message^N^N
+		A:INTF_CopyError^Could not copy file^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTF_DeleteError^RWC^Message^N^N
+		A:INTF_DeleteError^Could not delete file^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTF_ExistWin^RWC^Message^N^N
+		A:INTF_ExistWin^does not eksists in window or column apears more than 1 time in source column spesification.^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTF_FileOpenError^RWC^Message^N^N
+		A:INTF_FileOpenError^Could not Open file^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTF_SaveFile^RWC^Message^N^N
+		A:INTF_SaveFile^Save As^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTF_SelectFile^RWC^Message^N^N
+		A:INTF_SelectFile^Select File to Load^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_InterfOverviewJob^RWC^Message^N^N
+		A:NAV_InterfOverviewJob^Job History^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_InterfaceBasic^RWC^Message^N^N
+		A:NAV_InterfaceBasic^Data Migration General^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_InterfaceHeader^RWC^Message^N^N
+		A:NAV_InterfaceHeader^Migration Job Maintenance^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_InterfaceHistory^RWC^Message^N^N
+		A:NAV_InterfaceHistory^Migration Job History^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_InterfaceStart^RWC^Message^N^N
+		A:NAV_InterfaceStart^Execute Job^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_Interface_P^RWC^Message^N^N
+		A:NAV_Interface_P^Data Migration^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_IntfaceReplDbObjects^RWC^Message^N^N
+		A:NAV_IntfaceReplDbObjects^Replication Objects^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_IntfaceReplOutLog^RWC^Message^N^N
+		A:NAV_IntfaceReplOutLog^Replication Output Log^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_IntfaceReplStruct^RWC^Message^N^N
+		A:NAV_IntfaceReplStruct^Replication Structure Maintenance^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_IntfaceServerProcesses^RWC^Message^N^N
+		A:NAV_IntfaceServerProcesses^Server Processes^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_OverViewInterfaceDetail^RWC^Message^N^N
+		A:NAV_OverViewInterfaceDetail^Overview - Migration Job Details^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_OverViewInterfaceHeader^RWC^Message^N^N
+		A:NAV_OverViewInterfaceHeader^Overview - Migration Jobs^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAV_OverViewInterfaceHistory^RWC^Message^N^N
+		A:NAV_OverViewInterfaceHistory^Overview - Migration Job History^N^M^N^N^^^0^0^0
+	CE:
+	CS:TAB_NAME_Detail^RWC^Message^N^N
+		A:TAB_NAME_Detail^Detail^N^M^N^N^^^0^0^0
+	CE:
+	CS:TAB_NAME_DetailConversion^RWC^Message^N^N
+		A:TAB_NAME_DetailConversion^Source Mapping^N^M^N^N^^^0^0^0
+	CE:
+	CS:TAB_NAME_DetailFile^RWC^Message^N^N
+		A:TAB_NAME_DetailFile^File Mapping^N^M^N^N^^^0^0^0
+	CE:
+	CS:TAB_NAME_ExecPlan^RWC^Message^N^N
+		A:TAB_NAME_ExecPlan^Execution Plan^N^M^N^N^^^0^0^0
+	CE:
+	CS:TAB_NAME_ExecSingel^RWC^Message^N^N
+		A:TAB_NAME_ExecSingel^Execute^N^M^N^N^^^0^0^0
+	CE:
+	CS:TAB_NAME_Job_Detail^RWC^Message^N^N
+		A:TAB_NAME_Job_Detail^Detail^N^M^N^N^^^0^0^0
+	CE:
+	CS:TAB_NAME_MethodList^RWC^Message^N^N
+		A:TAB_NAME_MethodList^Method List^N^M^N^N^^^0^0^0
+	CE:
+	CS:TAB_NAME_Rules^RWC^Message^N^N
+		A:TAB_NAME_Rules^Rules^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_ConfirmRunSchedule^RWC^Message^N^N
+		A:TEXT_ConfirmRunSchedule^The schedule '{0} - {1}' will be run as a background job. Do you want to continue?^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_ExportFile^RWC^Message^N^N
+		A:TEXT_ExportFile^Enter filename to export data to^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_ImportDone^RWC^Message^N^N
+		A:TEXT_ImportDone^Finished importing new migration jobs^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_ImportError^RWC^Message^N^N
+		A:TEXT_ImportError^Errors during Import^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_ImportFileName^RWC^Message^N^N
+		A:TEXT_ImportFileName^Enter name of file to import^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_IntfaceCopyLabel^RWC^Message^N^N
+		A:TEXT_IntfaceCopyLabel^New Job ID:^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_IntfaceCopyTitle^RWC^Message^N^N
+		A:TEXT_IntfaceCopyTitle^Copy Migration Job^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_IntfaceShowSelectTitle^RWC^Message^N^N
+		A:TEXT_IntfaceShowSelectTitle^Sql Select Statement^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_IntfaceSourceCols^RWC^Message^N^N
+		A:TEXT_IntfaceSourceCols^Dictionary Columns^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_LineLengthError^RWC^Message^N^N
+		A:TEXT_LineLengthError^Highlighted lines were truncated due to exceeding the line limit of 4000 characters. This may result in incomplete migration of data. It is recommended to check the truncated lines before proceeding.^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_MethodListError^RWC^Message^N^N
+		A:TEXT_MethodListError^Errors occured during import of Method List^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_QuestionCleanUp^RWC^Message^N^N
+		A:TEXT_QuestionCleanUp^Cleaning up will remove all current details and Restart will not be possible. Do you want to continue?^N^M^N^N^^^0^0^0
+	CE:
+	CS:TEXT_TitleCleanUp^RWC^Message^N^N
+		A:TEXT_TitleCleanUp^Clean Warning^N^M^N^N^^^0^0^0
+	CE:
+	CS:TITLE_ImportDone^RWC^Message^N^N
+		A:TITLE_ImportDone^Import Ready^N^M^N^N^^^0^0^0
+	CE:
+	CS:TITLE_ImportError^RWC^Message^N^N
+		A:TITLE_ImportError^Import Error^N^M^N^N^^^0^0^0
+	CE:
+	CS:WH_IntfaceReplStructCols^RWC^Message^N^N
+		A:WH_IntfaceReplStructCols^Define Columns^N^M^N^N^^^0^0^0
+	CE:
+	CS:WH_MethodListAttr^RWC^Message^N^N
+		A:WH_MethodListAttr^Method List Attribute^N^M^N^N^^^0^0^0
+	CE:
+	CS:WH_frmIntfConvCols^RWC^Message^N^N
+		A:WH_frmIntfConvCols^Convert - &0, &1^N^M^N^N^^^0^0^0
+	CE:
+	CS:WH_frmIntfConvColsClear^RWC^Message^N^N
+		A:WH_frmIntfConvColsClear^Convert Columns^N^M^N^N^^^0^0^0
+	CE:
+	CS:WH_frmIntfHeaderClear^RWC^Message^N^N
+		A:WH_frmIntfHeaderClear^Migration Job^N^M^N^N^^^0^0^0
+	CE:
+	CS:WH_frmIntfaceHeader^RWC^Message^N^N
+		A:WH_frmIntfaceHeader^Migration Job - &0^N^M^N^N^^^0^0^0
+	CE:
+	CS:WH_frmIntfaceJobHistHead^RWC^Message^N^N
+		A:WH_frmIntfaceJobHistHead^Migration History - &0^N^M^N^N^^^0^0^0
+	CE:
+	CS:WH_frmIntfaceJobHistHeadClear^RWC^Message^N^N
+		A:WH_frmIntfaceJobHistHeadClear^Migration History^N^M^N^N^^^0^0^0
+	CE:
+	CS:WH_frmIntfaceReplStruct^RWC^Message^N^N
+		A:WH_frmIntfaceReplStruct^Strucure replication^N^M^N^N^^^0^0^0
+	CE:
+	CS:WH_frmIntfaceStart^RWC^Message^N^N
+		A:WH_frmIntfaceStart^Execute Job - &0^N^M^N^N^^^0^0^0
+	CE:
+	CS:WH_frmIntfaceStartClear^RWC^Message^N^N
+		A:WH_frmIntfaceStartClear^Execute Job^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.dlgExecPlan^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Dialog Box^N^N
+		A:Text^Execution Plan^N^M^N^N^^^0^0^0
+	CE:
+	CS:cbFriday.Text^RWC^Data Field^N^N
+		A:Text^Friday^N^M^N^N^7db276d5-5b13-4c46-ab42-79e551b29f69^SHORT_NAME^1^0^0
+	CE:
+	CS:cbMonday.Text^RWC^Data Field^N^N
+		A:Text^Monday^N^M^N^N^bececc8e-ed21-4e86-8dd8-ac36c922a0b6^SHORT_NAME^1^0^0
+	CE:
+	CS:cbSaturday.Text^RWC^Data Field^N^N
+		A:Text^Saturday^N^M^N^N^6a04aea1-fbb9-4ffe-8d4c-743aa0d03096^SHORT_NAME^1^0^0
+	CE:
+	CS:cbSunday.Text^RWC^Data Field^N^N
+		A:Text^Sunday^N^M^N^N^2637fee5-eb2a-4936-9f7d-2119b8719372^SHORT_NAME^1^0^0
+	CE:
+	CS:cbThursday.Text^RWC^Data Field^N^N
+		A:Text^Thursday^N^M^N^N^dac295d7-7ac7-4b98-8f9e-7e4ac7b1e923^SHORT_NAME^1^0^0
+	CE:
+	CS:cbTuesday.Text^RWC^Data Field^N^N
+		A:Text^Tuesday^N^M^N^N^a7408742-bc41-445c-8a84-a56a41216cb3^SHORT_NAME^1^0^0
+	CE:
+	CS:cbWednesday.Text^RWC^Data Field^N^N
+		A:Text^Wednesday^N^M^N^N^60b13529-a72b-4d29-9fd1-a9124c37ed75^SHORT_NAME^1^0^0
+	CE:
+	CS:gbRepeated_Execution.Text^RWC^Group Box^N^N
+		A:Text^Repeated Execution^N^M^N^N^^^0^0^0
+	CE:
+	CS:gbSingle_Execution.Text^RWC^Group Box^N^N
+		A:Text^Single Execution^N^M^N^N^^^0^0^0
+	CE:
+	CS:labeldfScheduledDate.Text^RWC^Data Field^N^N
+		A:Text^Date:^N^M^N^N^127F4906845C4C2EBC025858D7B11434^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfScheduledTime.Text^RWC^Data Field^N^N
+		A:Text^Time:^N^M^N^N^C98635E4B65F4B5B8C0FB7E6F490216A^SHORT_NAME^1^0^0
+	CE:
+	CS:pbCancel.Text^RWC^Pushbutton^N^N
+		A:Text^Cancel^N^M^N^N^^^0^0^0
+	CE:
+	CS:pbOk.Text^RWC^Pushbutton^N^N
+		A:Text^OK^N^M^N^N^^^0^0^0
+	CE:
+	CS:rbAsap.Text^RWC^Data Field^N^N
+		A:Text^&Background^N^M^N^N^5727A5A01C664638960719829E3A6D59^MNEMONIC^1^0^0
+	CE:
+	CS:rbDaily.Text^RWC^Data Field^N^N
+		A:Text^&Daily at^N^M^N^N^99AB6B0E5AF741F9977545C032ADB204^MNEMONIC^1^0^0
+	CE:
+	CS:rbInterval.Text^RWC^Data Field^N^N
+		A:Text^&Interval of^N^M^N^N^e24ca468-ccd6-4b18-92e6-b276f13012cd^MNEMONIC^1^0^0
+	CE:
+	CS:rbOnline.Text^RWC^Data Field^N^N
+		A:Text^&Online^N^M^N^N^519F6A932C15444D9F02C13CF00897CC^MNEMONIC^1^0^0
+	CE:
+	CS:rbScheduled.Text^RWC^Data Field^N^N
+		A:Text^&Scheduled at^N^M^N^N^336F71C7F65B4CA1B508E2D4F553F94C^MNEMONIC^1^0^0
+	CE:
+	CS:rbWeekly.Text^RWC^Data Field^N^N
+		A:Text^&Weekly on^N^M^N^N^DC098C415C7F4A7595DF414EBA2D0282^MNEMONIC^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.dlgExecSingel^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Dialog Box^N^N
+		A:Text^Single Execution^N^M^N^N^^^0^0^0
+	CE:
+	CS:gbSingle_Execution.Text^RWC^Group Box^N^N
+		A:Text^Single Execution^N^M^N^N^^^0^0^0
+	CE:
+	CS:labeldfScheduledDate.Text^RWC^Data Field^N^N
+		A:Text^Date:^N^M^N^N^127F4906845C4C2EBC025858D7B11434^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfScheduledTime.Text^RWC^Data Field^N^N
+		A:Text^Time:^N^M^N^N^C98635E4B65F4B5B8C0FB7E6F490216A^SHORT_NAME^1^0^0
+	CE:
+	CS:pbCancel.Text^RWC^Pushbutton^N^N
+		A:Text^Cancel^N^M^N^N^^^0^0^0
+	CE:
+	CS:pbRestart.Text^RWC^Pushbutton^N^N
+		A:Text^Restart^N^M^N^N^^^0^0^0
+	CE:
+	CS:pbStart.Text^RWC^Pushbutton^N^N
+		A:Text^Start^N^M^N^N^^^0^0^0
+	CE:
+	CS:rbAsap.Text^RWC^Data Field^N^N
+		A:Text^&Background^N^M^N^N^5727A5A01C664638960719829E3A6D59^MNEMONIC^1^0^0
+	CE:
+	CS:rbOnline.Text^RWC^Data Field^N^N
+		A:Text^&Online^N^M^N^N^519F6A932C15444D9F02C13CF00897CC^MNEMONIC^1^0^0
+	CE:
+	CS:rbScheduled.Text^RWC^Data Field^N^N
+		A:Text^&Scheduled at^N^M^N^N^336F71C7F65B4CA1B508E2D4F553F94C^MNEMONIC^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceBasic^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Form Window^N^N
+		A:Text^Data Migration Basic Data^N^M^N^N^^^0^0^0
+	CE:
+	CS:IntfaceConvList^RWC^Tab^N^N
+		A:IntfaceConvList^Conversion Lists^N^M^N^N^^^0^0^0
+	CE:
+	CS:IntfaceDefRules^RWC^Tab^N^N
+		A:IntfaceDefRules^Default Rules^N^M^N^N^^^0^0^0
+	CE:
+	CS:IntfaceGroup^RWC^Tab^N^N
+		A:IntfaceGroup^Group^N^M^N^N^^^0^0^0
+	CE:
+	CS:IntfacePrUser^RWC^Tab^N^N
+		A:IntfacePrUser^Pr User^N^M^N^N^^^0^0^0
+	CE:
+	CS:IntfaceProcedures^RWC^Tab^N^N
+		A:IntfaceProcedures^Procedures^N^M^N^N^^^0^0^0
+	CE:
+	CS:IntfaceUser^RWC^Tab^N^N
+		A:IntfaceUser^User^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceConvList^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Form Window^N^N
+		A:Text^Conversion List^N^M^N^N^^^0^0^0
+	CE:
+	CS:labeldfsDescription.Text^RWC^Data Field^N^N
+		A:Text^Description:^N^M^N^N^911FEE4C48C846E79FD6986186C17F02^ABBREVIATION^1^0^0
+	CE:
+	CS:labelecmbConvListId.Text^RWC^Data Field^N^N
+		A:Text^Conversion List Id:^N^M^N^N^B46EBB882E8440F18F384040113586FC^SHORT_NAME^1^0^0
+	CE:
+	CS:tblIntfaceConvListCols_colsConvListId.Title^RWC^Data Field^N^N
+		A:Title^Conv List Id^N^M^N^N^B46EBB882E8440F18F384040113586FC^SHORT_NAME^1^0^0
+	CE:
+	CS:tblIntfaceConvListCols_colsNewValue.Title^RWC^Data Field^N^N
+		A:Title^New Value^N^M^N^N^FFAC2B1F01D24F2BBCF51AF0A5CC6B93^SHORT_NAME^1^0^0
+	CE:
+	CS:tblIntfaceConvListCols_colsOldValue.Title^RWC^Data Field^N^N
+		A:Title^Old Value^N^M^N^N^5153D3443ED2456B8782531D91CE2E73^SHORT_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceHeader^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Form Window^N^N
+		A:Text^Migration Job^N^M^N^N^^^0^0^0
+	CE:
+	CS:Format^RWC^Tab^N^N
+		A:Format^Formatting^N^M^N^N^^^0^0^0
+	CE:
+	CS:Replication^RWC^Tab^N^N
+		A:Replication^Replication^N^M^N^N^^^0^0^0
+	CE:
+	CS:cbOnInsert.Text^RWC^Data Field^N^N
+		A:Text^Insert^N^M^N^N^CD18B0B003EB4355835B69A374DF73E9^ABBREVIATION^1^0^0
+	CE:
+	CS:cbOnUpdate.Text^RWC^Data Field^N^N
+		A:Text^Update^N^M^N^N^246BD1756C4E4E9D98D967681A995022^SHORT_NAME^1^0^0
+	CE:
+	CS:cbsEnabled.Text^RWC^Data Field^N^N
+		A:Text^Enabled^N^M^N^N^84FE2F356F3D452D9ABEEBFCD74095C7^ABBREVIATION^1^0^0
+	CE:
+	CS:gbCriteria.Text^RWC^Group Box^N^N
+		A:Text^Criteria^N^M^N^N^^^0^0^0
+	CE:
+	CS:gbDatabase_Information.Text^RWC^Group Box^N^N
+		A:Text^Database Information^N^M^N^N^^^0^0^0
+	CE:
+	CS:gbFile_Configuration.Text^RWC^Group Box^N^N
+		A:Text^File Configuration^N^M^N^N^^^0^0^0
+	CE:
+	CS:gbFile_Information.Text^RWC^Group Box^N^N
+		A:Text^File Information^N^M^N^N^^^0^0^0
+	CE:
+	CS:gbTrigger.Text^RWC^Group Box^N^N
+		A:Text^Trigger^N^M^N^N^^^0^0^0
+	CE:
+	CS:labelcmbColumnEmbrace.Text^RWC^Data Field^N^N
+		A:Text^Column Embrace:^N^M^N^N^758c5265-7f0d-45c4-b4d9-6107d7756407^SHORT_NAME^1^0^0
+	CE:
+	CS:labelcmbColumnSeparator.Text^RWC^Data Field^N^N
+		A:Text^Column Separator:^N^M^N^N^B4B134F965DE42F59791332386254CE3^ABBREVIATION^1^0^0
+	CE:
+	CS:labelcmbDecimalPoint.Text^RWC^Data Field^N^N
+		A:Text^Decimal Point:^N^M^N^N^A2277DAA75B345428BD86EA0EC71DB12^SHORT_NAME^1^0^0
+	CE:
+	CS:labelcmbFileLocation.Text^RWC^Data Field^N^N
+		A:Text^File Location:^N^M^N^N^1A57410F9F8842028084FED9C2E75E7C^ABBREVIATION^1^0^0
+	CE:
+	CS:labelcmbThousandSeparator.Text^RWC^Data Field^N^N
+		A:Text^Thousand Separator:^N^M^N^N^7033873E0C0B4BCCA14DBBA53DC227F4^FULL_NAME^1^0^0
+	CE:
+	CS:labelcmbsReplCriteria.Text^RWC^Data Field^N^N
+		A:Text^Repl Criteria:^N^M^N^N^16E301102A9B40E3BA6A5677EE15ADD8^ABBREVIATION^1^0^0
+	CE:
+	CS:labelcmbsReplicationMode.Text^RWC^Data Field^N^N
+		A:Text^Mode:^N^M^N^N^249EF1CE55674F62A9EAA1B8F8780C23^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldf23.Text^RWC^Data Field^N^N
+		A:Text^Character Set:^N^M^N^N^e3ce56be-a1e3-4a3b-a4b7-9bad0ae2535c^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfnGroupSeq.Text^RWC^Data Field^N^N
+		A:Text^Group Seq.:^N^M^N^N^^^1^0^1
+	CE:
+	CS:labeldfnMinusPos.Text^RWC^Data Field^N^N
+		A:Text^Minus Pos:^N^M^N^N^7EABFF52684F4927B84F138DB56DBE0E^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsDateFormat.Text^RWC^Data Field^N^N
+		A:Text^Date Format:^N^M^N^N^1B064F84D95849F9A9EA0AFC2241AC12^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfsDescription.Text^RWC^Data Field^N^N
+		A:Text^Description:^N^M^N^N^799DF6BE170644D8AD4D7DE9D46BDC17^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsDirection.Text^RWC^Data Field^N^N
+		A:Text^Direction:^N^M^N^N^58867DB9EA574DF8A3683003F7F7629A^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsFromValue.Text^RWC^Data Field^N^N
+		A:Text^From Value:^N^M^N^N^3B75636A6E294AB3BF18BB80238E7AA1^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsGroupByClause.Text^RWC^Data Field^N^N
+		A:Text^Group By Clause:^N^M^N^N^3e83bea1-045d-439f-9886-f25543773d41^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfsGroupId.Text^RWC^Data Field^N^N
+		A:Text^Group ID:^N^M^N^N^55B6D506709044C9B3E261C738DEBEA9^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsIntfaceFile.Text^RWC^Data Field^N^N
+		A:Text^File Name:^N^M^N^N^6CDA50DB61204E07861FFCDF116C7933^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfsIntfacePath.Text^RWC^Data Field^N^N
+		A:Text^File Path:^N^M^N^N^073F96FE39C3434BBB13FB9EC040294D^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsLastInfo.Text^RWC^Data Field^N^N
+		A:Text^Last Info:^N^M^N^N^3CAFEA4512D24120844E4BEA6E6BC17A^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsNoteText.Text^RWC^Data Field^N^N
+		A:Text^Note Text:^N^M^N^N^915B830BDD094B608FF5967B3B953BD3^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfsOrderByClause.Text^RWC^Data Field^N^N
+		A:Text^Order By Clause:^N^M^N^N^CBBCD23405064C4E835E7BAD1D30C3FC^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsProcedureName.Text^RWC^Data Field^N^N
+		A:Text^Procedure Name:^N^M^N^N^04A5A77C4D03469FBE59F19C014CDDC8^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsSourceName.Text^RWC^Data Field^N^N
+		A:Text^Source Name:^N^M^N^N^534600EB704545C6AC9760F8786D069F^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfsSourceOwner.Text^RWC^Data Field^N^N
+		A:Text^Source Owner:^N^M^N^N^DA0FEE5DB20E4997AFABFEE2A9D86BF3^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfsTableName.Text^RWC^Data Field^N^N
+		A:Text^Table Name:^N^M^N^N^3E4AEFF68A504899ABCB98CCD02218FF^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsTriggerWhen.Text^RWC^Data Field^N^N
+		A:Text^Trigger When:^N^M^N^N^5302CB7263BD49C288B69E3251A9569A^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsValueList.Text^RWC^Data Field^N^N
+		A:Text^To Value List:^N^M^N^N^691B7ED3A86F430CAC37477698F47592^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsViewName.Text^RWC^Data Field^N^N
+		A:Text^View Name:^N^M^N^N^E0B3C98ABE8B4C0C9FBA8DA3CDABB27D^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsWhereClause.Text^RWC^Data Field^N^N
+		A:Text^Where Clause:^N^M^N^N^171E9454F7A04A4DB06AE54BCBBD9C54^SHORT_NAME^1^0^0
+	CE:
+	CS:labelecmbIntfaceName.Text^RWC^Data Field^N^N
+		A:Text^Job ID:^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:menuFrmMethods_menuCopy__Migration_Job.Caption^RWC^Command^N^N
+		A:Caption^Copy &Migration Job^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuExecJob.Caption^RWC^Command^N^N
+		A:Caption^&Start Job...^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuHistory.Caption^RWC^Command^N^N
+		A:Caption^Migration Job &History...^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuQ_uery_Source_Columns.Caption^RWC^Command^N^N
+		A:Caption^Q&uery Source Columns^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuSchedule_Job.Caption^RWC^Command^N^N
+		A:Caption^Schedule Job^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuSer_ver_Processes___.Caption^RWC^Command^N^N
+		A:Caption^S&cheduled Migration Jobs...^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuSho_w_Select_Statement.Caption^RWC^Command^N^N
+		A:Caption^Sho&w Select Statement^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuTranslation.Caption^RWC^Command^N^N
+		A:Caption^&Translation...^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceJobHistHead^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Form Window^N^N
+		A:Text^Migration Job History^N^M^N^N^^^0^0^0
+	CE:
+	CS:labelcmbStatus.Text^RWC^Data Field^N^N
+		A:Text^Status:^N^M^N^N^CBDEC807A6B645A2BBBE9D8506D0A557^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfIntfaceHeaderDescription.Text^RWC^Data Field^N^N
+		A:Text^Description:^N^M^N^N^4f463950-81c7-41c0-adf4-775ea8c90b06^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfdDateExecuted.Text^RWC^Data Field^N^N
+		A:Text^Date Executed:^N^M^N^N^4aee059c-f45e-4a65-b5dd-ed5b674c2ed8^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfnExecutionNo.Text^RWC^Data Field^N^N
+		A:Text^Execution No:^N^M^N^N^E249BD345CCB42A89A04FB26A1A507D0^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsExecutedBy.Text^RWC^Data Field^N^N
+		A:Text^Executed By:^N^M^N^N^75D4F9C72CF540E39F47E3611288DFBA^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfsLastInfo.Text^RWC^Data Field^N^N
+		A:Text^Last Info:^N^M^N^N^3CAFEA4512D24120844E4BEA6E6BC17A^SHORT_NAME^1^0^0
+	CE:
+	CS:labelecmbIntfaceName.Text^RWC^Data Field^N^N
+		A:Text^Job ID:^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:tblIntfaceJobHistDetail_colAttributeString.Title^RWC^Data Field^N^N
+		A:Title^Attribute String^N^M^N^N^5943478155D94A3F90CF367CA4D4C4AE^FULL_NAME^1^0^0
+	CE:
+	CS:tblIntfaceJobHistDetail_colErrorMessage.Title^RWC^Data Field^N^N
+		A:Title^Error Message^N^M^N^N^F81657E389924EADB21D158F15540ADB^FULL_NAME^1^0^0
+	CE:
+	CS:tblIntfaceJobHistDetail_colFileString.Title^RWC^Data Field^N^N
+		A:Title^File String^N^M^N^N^16F8ADD9E07844B5ABDDADB7CEDC54A8^ABBREVIATION^1^0^0
+	CE:
+	CS:tblIntfaceJobHistDetail_colnExecutionNo.Title^RWC^Data Field^N^N
+		A:Title^Execution No^N^M^N^N^E249BD345CCB42A89A04FB26A1A507D0^ABBREVIATION^1^0^0
+	CE:
+	CS:tblIntfaceJobHistDetail_colnLineNo.Title^RWC^Data Field^N^N
+		A:Title^Line No^N^M^N^N^1B9D2E504D0144E08CF8A4266C16D3F9^SHORT_NAME^1^0^0
+	CE:
+	CS:tblIntfaceJobHistDetail_colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:tblIntfaceJobHistDetail_colsSourceRowid.Title^RWC^Data Field^N^N
+		A:Title^Source Rowid^N^M^N^N^17eaa452-7d3a-46e3-9f1b-d00c46dae679^SHORT_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfacePrUser^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Form Window^N^N
+		A:Text^Pr User^N^M^N^N^^^0^0^0
+	CE:
+	CS:labelecmbIdentity.Text^RWC^Data Field^N^N
+		A:Text^Identity:^N^M^N^N^FFD1FA41F3AC42EBA9C4BDF769711F0D^SHORT_NAME^1^0^0
+	CE:
+	CS:tblIntfacePrUser_colsIdentity.Title^RWC^Data Field^N^N
+		A:Title^Identity^N^M^N^N^FFD1FA41F3AC42EBA9C4BDF769711F0D^SHORT_NAME^1^0^0
+	CE:
+	CS:tblIntfacePrUser_colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^4A7043DFC12947D3AA6154404F3B6301^SHORT_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceReplExecPlan^RWC^Global Data^N^N
+	CS:cbFriday.Text^RWC^Data Field^N^N
+		A:Text^Friday^N^M^N^N^7db276d5-5b13-4c46-ab42-79e551b29f69^SHORT_NAME^1^0^0
+	CE:
+	CS:cbMonday.Text^RWC^Data Field^N^N
+		A:Text^Monday^N^M^N^N^bececc8e-ed21-4e86-8dd8-ac36c922a0b6^SHORT_NAME^1^0^0
+	CE:
+	CS:cbSaturday.Text^RWC^Data Field^N^N
+		A:Text^Saturday^N^M^N^N^6a04aea1-fbb9-4ffe-8d4c-743aa0d03096^SHORT_NAME^1^0^0
+	CE:
+	CS:cbSunday.Text^RWC^Data Field^N^N
+		A:Text^Sunday^N^M^N^N^2637fee5-eb2a-4936-9f7d-2119b8719372^SHORT_NAME^1^0^0
+	CE:
+	CS:cbThursday.Text^RWC^Data Field^N^N
+		A:Text^Thursday^N^M^N^N^dac295d7-7ac7-4b98-8f9e-7e4ac7b1e923^SHORT_NAME^1^0^0
+	CE:
+	CS:cbTuesday.Text^RWC^Data Field^N^N
+		A:Text^Tuesday^N^M^N^N^a7408742-bc41-445c-8a84-a56a41216cb3^SHORT_NAME^1^0^0
+	CE:
+	CS:cbWednesday.Text^RWC^Data Field^N^N
+		A:Text^Wednesday^N^M^N^N^60b13529-a72b-4d29-9fd1-a9124c37ed75^SHORT_NAME^1^0^0
+	CE:
+	CS:gbRepeated_Execution.Text^RWC^Group Box^N^N
+		A:Text^Repeated Execution^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuCreate_Execution_Plan.Caption^RWC^Command^N^N
+		A:Caption^Create Execution Plan^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuSchedule_Insert_Package.Caption^RWC^Command^N^N
+		A:Caption^Schedule Insert Package^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuSchedule_Update_Package.Caption^RWC^Command^N^N
+		A:Caption^Schedule Update Package^N^M^N^N^^^0^0^0
+	CE:
+	CS:rbDaily.Text^RWC^Data Field^N^N
+		A:Text^&Daily at^N^M^N^N^99AB6B0E5AF741F9977545C032ADB204^MNEMONIC^1^0^0
+	CE:
+	CS:rbInterval.Text^RWC^Data Field^N^N
+		A:Text^&Interval of^N^M^N^N^e24ca468-ccd6-4b18-92e6-b276f13012cd^MNEMONIC^1^0^0
+	CE:
+	CS:rbWeekly.Text^RWC^Data Field^N^N
+		A:Text^&Weekly on^N^M^N^N^DC098C415C7F4A7595DF414EBA2D0282^MNEMONIC^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceReplStruct^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Form Window^N^N
+		A:Text^Replication Structure^N^M^N^N^^^0^0^0
+	CE:
+	CS:ExecutionPlan^RWC^Tab^N^N
+		A:ExecutionPlan^Execution Plan^N^M^N^N^^^0^0^0
+	CE:
+	CS:Struct^RWC^Tab^N^N
+		A:Struct^Structure^N^M^N^N^^^0^0^0
+	CE:
+	CS:cmdDefineColumns.Caption^RWC^Command^N^N
+		A:Caption^Define Columns...^N^M^N^N^^^0^0^0
+	CE:
+	CS:cmdShowSourceText.Caption^RWC^Command^N^N
+		A:Caption^Show Source Text...^N^M^N^N^^^0^0^0
+	CE:
+	CS:labelcmbFileLocation.Text^RWC^Data Field^N^N
+		A:Text^File Location:^N^M^N^N^1A57410F9F8842028084FED9C2E75E7C^ABBREVIATION^1^0^0
+	CE:
+	CS:labelcmbMessageType.Text^RWC^Data Field^N^N
+		A:Text^Message Type:^N^M^N^N^78727D1010D7455398F1560F1BD27C1A^SHORT_NAME^1^0^0
+	CE:
+	CS:labelcmbReplicationMode.Text^RWC^Data Field^N^N
+		A:Text^Replication Mode:^N^M^N^N^249EF1CE55674F62A9EAA1B8F8780C23^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldflsHiddenSqlStatement.Text^RWC^Data Field^N^N
+		A:Text^DB Objects^N^M^N^N^e847c9b4-4cb7-40ab-8c83-5f0c92ec1f9d^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfnServerProcess.Text^RWC^Data Field^N^N
+		A:Text^Server Processes:^N^M^N^N^72a0a1dd-a997-486d-8d70-6588b3eeccaf^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfsDateFormat.Text^RWC^Data Field^N^N
+		A:Text^Date Format:^N^M^N^N^451662EC58AC4D5BABB711ED2FACA9F8^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfsDescription.Text^RWC^Data Field^N^N
+		A:Text^Description:^N^M^N^N^799DF6BE170644D8AD4D7DE9D46BDC17^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsDirection.Text^RWC^Data Field^N^N
+		A:Text^Direction:^N^M^N^N^58867DB9EA574DF8A3683003F7F7629A^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsGroupId.Text^RWC^Data Field^N^N
+		A:Text^Group ID:^N^M^N^N^55B6D506709044C9B3E261C738DEBEA9^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsMessageName.Text^RWC^Data Field^N^N
+		A:Text^Message Name:^N^M^N^N^B2E5BEFA071B4926818ECC3BE0AA77FC^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsMessageReceiver.Text^RWC^Data Field^N^N
+		A:Text^Message Receiver:^N^M^N^N^328F52D959704D9289425C74A8F84657^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsMessageSender.Text^RWC^Data Field^N^N
+		A:Text^Message Sender:^N^M^N^N^D0217E9475D140F0B7CB96AD10A7D09B^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsNoteText.Text^RWC^Data Field^N^N
+		A:Text^Note Text:^N^M^N^N^0A886EF8FCD046C9AFEFE877A11133F8^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfsProcedureName.Text^RWC^Data Field^N^N
+		A:Text^Procedure Name:^N^M^N^N^04A5A77C4D03469FBE59F19C014CDDC8^SHORT_NAME^1^0^0
+	CE:
+	CS:labelecmbIntfaceName.Text^RWC^Data Field^N^N
+		A:Text^Job ID:^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:menuFrmMethods_menuCompile__Packages.Caption^RWC^Command^N^N
+		A:Caption^Compile &Packages^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuCompile__Triggers.Caption^RWC^Command^N^N
+		A:Caption^Compile &Triggers^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuCreate__XSD_File.Caption^RWC^Command^N^N
+		A:Caption^Create &XSD File^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuShow__Log.Caption^RWC^Command^N^N
+		A:Caption^Show &Log^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuShow__Server_Processes.Caption^RWC^Command^N^N
+		A:Caption^Show &Scheduled Migration Jobs^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuStart__Insert_Package.Caption^RWC^Command^N^N
+		A:Caption^Start &Insert Package^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuStart__Update_Package.Caption^RWC^Command^N^N
+		A:Caption^Start &Update Package^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menu_Copy_Migration_Job.Caption^RWC^Command^N^N
+		A:Caption^&Copy Migration Job^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menu_Disable_Triggers.Caption^RWC^Command^N^N
+		A:Caption^&Disable Triggers^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menu_Enable_Triggers.Caption^RWC^Command^N^N
+		A:Caption^&Enable Triggers^N^M^N^N^^^0^0^0
+	CE:
+	CS:tblObjects_colErrorText.Title^RWC^Data Field^N^N
+		A:Title^Error Text^N^M^N^N^F81657E389924EADB21D158F15540ADB^SHORT_NAME^1^1^0
+	CE:
+	CS:tblObjects_coldCreated.Title^RWC^Data Field^N^N
+		A:Title^Date Created^N^M^N^N^A0C56393B6124187A615FDE8CAA26EB9^FULL_NAME^1^0^0
+	CE:
+	CS:tblObjects_coldLastDdlTime.Title^RWC^Data Field^N^N
+		A:Title^Last DDL Time^N^M^N^N^038f14ae-183f-4a3c-a2d8-28f95f759a37^SHORT_NAME^1^0^0
+	CE:
+	CS:tblObjects_colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:tblObjects_colsObjectName.Title^RWC^Data Field^N^N
+		A:Title^Object Name^N^M^N^N^4ce16c1d-719e-48c6-b297-be6386dea175^SHORT_NAME^1^0^0
+	CE:
+	CS:tblObjects_colsObjectType.Title^RWC^Data Field^N^N
+		A:Title^Object Type^N^M^N^N^61a7257b-ad60-45cb-9990-16c5cd7c52d5^SHORT_NAME^1^0^0
+	CE:
+	CS:tblObjects_colsStatus.Title^RWC^Data Field^N^N
+		A:Title^Status^N^M^N^N^b3339abf-da4c-4a1b-a569-f097a4da3c5d^SHORT_NAME^1^0^0
+	CE:
+	CS:tblObjects_colsTableName.Title^RWC^Data Field^N^N
+		A:Title^Table Name^N^M^N^N^3E4AEFF68A504899ABCB98CCD02218FF^SHORT_NAME^1^0^0
+	CE:
+	CS:tblStructure_colNoteText.Title^RWC^Data Field^N^N
+		A:Title^Note Text^N^M^N^N^0A886EF8FCD046C9AFEFE877A11133F8^FULL_NAME^1^0^0
+	CE:
+	CS:tblStructure_colSelectWhere.Title^RWC^Data Field^N^N
+		A:Title^Select Where^N^M^N^N^56B86DA60A684833BD6129CC0990D84D^SHORT_NAME^1^0^0
+	CE:
+	CS:tblStructure_colTriggerWhen.Title^RWC^Data Field^N^N
+		A:Title^Trigger When^N^M^N^N^5302CB7263BD49C288B69E3251A9569A^SHORT_NAME^1^0^0
+	CE:
+	CS:tblStructure_colnParentSeq.Title^RWC^Data Field^N^N
+		A:Title^Parent Sequence^N^M^N^N^D32E47FFDBC84340B794E979EA9315FB^SHORT_NAME^1^0^0
+	CE:
+	CS:tblStructure_colnPos.Title^RWC^Data Field^N^N
+		A:Title^Pos^N^M^N^N^8D2E4A97998F431E95B65143FE7B48C3^ABBREVIATION^1^0^0
+	CE:
+	CS:tblStructure_colnStructureSeq.Title^RWC^Data Field^N^N
+		A:Title^Seq^N^M^N^N^D8D402D8F9EE4DB185EF9485C903C13E^ABBREVIATION^1^0^0
+	CE:
+	CS:tblStructure_colsElementName.Title^RWC^Data Field^N^N
+		A:Title^Element Name^N^M^N^N^DC79FBB873184FFE9C7786580450868A^ABBREVIATION^1^0^0
+	CE:
+	CS:tblStructure_colsElementType.Title^RWC^Data Field^N^N
+		A:Title^Element Type^N^M^N^N^84DA38BC57C348428CCBFD6E2AEF5F21^ABBREVIATION^1^0^0
+	CE:
+	CS:tblStructure_colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Intface Name^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:tblStructure_colsOnInsert.Title^RWC^Data Field^N^N
+		A:Title^On Insert^N^M^N^N^0E296B78360241028420F834F45841E0^SHORT_NAME^1^0^0
+	CE:
+	CS:tblStructure_colsOnUpdate.Title^RWC^Data Field^N^N
+		A:Title^On Update^N^M^N^N^5FB90C984AF349BCA56B55D9A5347A2F^SHORT_NAME^1^0^0
+	CE:
+	CS:tblStructure_colsRecordName.Title^RWC^Data Field^N^N
+		A:Title^Record Name^N^M^N^N^581D2ABD360646F8A26449D895A4A713^SHORT_NAME^1^0^0
+	CE:
+	CS:tblStructure_colsStartPoint.Title^RWC^Data Field^N^N
+		A:Title^Start Point^N^M^N^N^EA631B4A41DF419287A4ADB25C0B87C8^SHORT_NAME^1^0^0
+	CE:
+	CS:tblStructure_colsTriggerTable.Title^RWC^Data Field^N^N
+		A:Title^Trigger Table^N^M^N^N^17B3009BE091417182E4DFF783C581E7^SHORT_NAME^1^0^0
+	CE:
+	CS:tblStructure_colsViewName.Title^RWC^Data Field^N^N
+		A:Title^View Name^N^M^N^N^E0B3C98ABE8B4C0C9FBA8DA3CDABB27D^SHORT_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.frmIntfaceStart^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Form Window^N^N
+		A:Text^Execute job^N^M^N^N^^^0^0^0
+	CE:
+	CS:Defaults^RWC^Tab^N^N
+		A:Defaults^Defaults^N^M^N^N^^^0^0^0
+	CE:
+	CS:Detail^RWC^Tab^N^N
+		A:Detail^Detail^N^M^N^N^^^0^0^0
+	CE:
+	CS:labelcmbIntfaceName.Text^RWC^Data Field^N^N
+		A:Text^Job ID:^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfdLastExecuted.Text^RWC^Data Field^N^N
+		A:Text^Last Executed:^N^M^N^N^dd1272d2-c4e4-4a63-b556-5a5a786d8cbb^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsDescription.Text^RWC^Data Field^N^N
+		A:Text^Description:^N^M^N^N^4f463950-81c7-41c0-adf4-775ea8c90b06^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsDirection.Text^RWC^Data Field^N^N
+		A:Text^Direction:^N^M^N^N^58867DB9EA574DF8A3683003F7F7629A^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsExecutedBy.Text^RWC^Data Field^N^N
+		A:Text^Executed By:^N^M^N^N^75D4F9C72CF540E39F47E3611288DFBA^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfsFileLocation.Text^RWC^Data Field^N^N
+		A:Text^File Location:^N^M^N^N^1A57410F9F8842028084FED9C2E75E7C^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsFileLocationDb.Text^RWC^Data Field^N^N
+		A:Text^File Location:^N^M^N^N^1A57410F9F8842028084FED9C2E75E7C^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsGroupId.Text^RWC^Data Field^N^N
+		A:Text^Group ID:^N^M^N^N^7CA739DF31414B6180021384D0B487B1^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsIntfaceFile.Text^RWC^Data Field^N^N
+		A:Text^File Name:^N^M^N^N^6CDA50DB61204E07861FFCDF116C7933^FULL_NAME^1^0^0
+	CE:
+	CS:labeldfsIntfacePath.Text^RWC^Data Field^N^N
+		A:Text^File Path:^N^M^N^N^073F96FE39C3434BBB13FB9EC040294D^ABBREVIATION^1^0^0
+	CE:
+	CS:labeldfsLastInfo.Text^RWC^Data Field^N^N
+		A:Text^Last Info:^N^M^N^N^3CAFEA4512D24120844E4BEA6E6BC17A^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsProcedureName.Text^RWC^Data Field^N^N
+		A:Text^Procedure Name:^N^M^N^N^04A5A77C4D03469FBE59F19C014CDDC8^SHORT_NAME^1^0^0
+	CE:
+	CS:labeldfsStatus.Text^RWC^Data Field^N^N
+		A:Text^Status:^N^M^N^N^CBDEC807A6B645A2BBBE9D8506D0A557^SHORT_NAME^1^0^0
+	CE:
+	CS:menuFrmMethods_menuClean_Up.Caption^RWC^Command^N^N
+		A:Caption^Clean Up^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuJob.Caption^RWC^Command^N^N
+		A:Caption^Migration Job...^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuRestart_Online.Caption^RWC^Command^N^N
+		A:Caption^Restart Online^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuSchedule_Job.Caption^RWC^Command^N^N
+		A:Caption^Schedule Job^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuStart_Online.Caption^RWC^Command^N^N
+		A:Caption^Start Online^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuFrmMethods_menuUnpack_File.Caption^RWC^Command^N^N
+		A:Caption^Unpack File^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfStartDefaults^RWC^Global Data^N^N
+	CS:colsColumnName.Title^RWC^Data Field^N^N
+		A:Title^Column Name^N^M^N^N^CDE5CEB6FF6F4BAD8EB6CF455A6CE618^FULL_NAME^1^0^0
+	CE:
+	CS:colsDefaultValue.Title^RWC^Data Field^N^N
+		A:Title^Default Value^N^M^N^N^A3C4ECFBDCF04B8CB49BC74963E95540^FULL_NAME^1^0^0
+	CE:
+	CS:colsDefaultWhere.Title^RWC^Data Field^N^N
+		A:Title^Default Where^N^M^N^N^729CB78DEA57450DB0490BACAA00622C^FULL_NAME^1^0^0
+	CE:
+	CS:colsDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^8bd9ac30-3499-11da-16be-b1006d452326^ABBREVIATION^1^0^0
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDefaultRules^RWC^Global Data^N^N
+	CS:colsDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^4e12ff50-acb5-4ae7-a53e-254d1daec54d^SHORT_NAME^1^0^0
+	CE:
+	CS:colsProcedureName.Title^RWC^Data Field^N^N
+		A:Title^Procedure Name^N^M^N^N^F8B7227CB46A48919B3EA8FE4FB63246^SHORT_NAME^1^0^0
+	CE:
+	CS:colsRuleFlag.Title^RWC^Data Field^N^N
+		A:Title^Rule Flag^N^M^N^N^D3EECB58E9824A34AC723522EA4DDF6A^SHORT_NAME^1^0^0
+	CE:
+	CS:colsRuleId.Title^RWC^Data Field^N^N
+		A:Title^Rule Id^N^M^N^N^37DDD6E81E234B6BBC779C1544CBE514^SHORT_NAME^1^0^0
+	CE:
+	CS:colsRuleValue.Title^RWC^Data Field^N^N
+		A:Title^Rule Value^N^M^N^N^9F64C03180304F64B97BA80B4505BF2B^SHORT_NAME^1^0^0
+	CE:
+	CS:colsValueFlag.Title^RWC^Data Field^N^N
+		A:Title^Value Flag^N^M^N^N^9EC544A97BA54D8780D4B7F80FD1B226^SHORT_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDetail^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Table Window^N^N
+		A:Text^Migration Details - File^N^M^N^N^^^0^0^0
+	CE:
+	CS:colNoteText.Title^RWC^Data Field^N^N
+		A:Title^Note Text^N^M^N^N^E6918B4EB92640F39424CCBAF3C4B058^FULL_NAME^1^0^0
+	CE:
+	CS:colnAmountFactor.Title^RWC^Data Field^N^N
+		A:Title^Amount Denominator^N^M^N^N^5A2DD9E237514D6BB32F5617C6C85C8A^FULL_NAME^1^0^0
+	CE:
+	CS:colnAttrSeq.Title^RWC^Data Field^N^N
+		A:Title^Attr Seq^N^M^N^N^F3085D341DFA44A2833AC2E611F011EF^ABBREVIATION^1^0^0
+	CE:
+	CS:colnDecimalLength.Title^RWC^Data Field^N^N
+		A:Title^Decimal Length^N^M^N^N^F797EE03D19A4DCDA48AED71FDC3B8F2^ABBREVIATION^1^0^0
+	CE:
+	CS:colnLength.Title^RWC^Data Field^N^N
+		A:Title^Length^N^M^N^N^9bc1c187-0d3a-4cae-b989-3039722e6eab^SHORT_NAME^1^0^0
+	CE:
+	CS:colnPos.Title^RWC^Data Field^N^N
+		A:Title^Pos^N^M^N^N^4854DB03208744D48DB0D0ABC4C1AF13^ABBREVIATION^1^0^0
+	CE:
+	CS:colsChangeDefaults.Title^RWC^Data Field^N^N
+		A:Title^Change Defaults^N^M^N^N^0BF2DE2852244881A63D0D86E7747E0D^ABBREVIATION^1^0^0
+	CE:
+	CS:colsColumnDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^7CC9D7CA50FB4FCA9E6CF1492324B99E^ABBREVIATION^1^0^0
+	CE:
+	CS:colsColumnFlags.Title^RWC^Data Field^N^N
+		A:Title^Flags^N^M^N^N^C4BBDC0813924621837D5C8BFD43863B^SHORT_NAME^1^0^0
+	CE:
+	CS:colsColumnName.Title^RWC^Data Field^N^N
+		A:Title^Column Name^N^M^N^N^71CCC3ACE1794EB4ABCD4A602E70B75A^FULL_NAME^1^0^0
+	CE:
+	CS:colsConvListId.Title^RWC^Data Field^N^N
+		A:Title^Conversion List^N^M^N^N^B46EBB882E8440F18F384040113586FC^SHORT_NAME^1^0^0
+	CE:
+	CS:colsDataType.Title^RWC^Data Field^N^N
+		A:Title^Data Type^N^M^N^N^81307AD529EB470E9C2A150E7841F6E8^ABBREVIATION^1^0^0
+	CE:
+	CS:colsDefaultValue.Title^RWC^Data Field^N^N
+		A:Title^Default Value^N^M^N^N^93C801F31D094C50862ABAEE2B808B23^FULL_NAME^1^0^0
+	CE:
+	CS:colsDefaultWhere.Title^RWC^Data Field^N^N
+		A:Title^Default Where^N^M^N^N^A22975C4964648D4ADDC329728ACF4DE^FULL_NAME^1^0^0
+	CE:
+	CS:colsExtAttr.Title^RWC^Data Field^N^N
+		A:Title^Ext Attr^N^M^N^N^dc663010-c245-484d-a6c4-8180e7340735^SHORT_NAME^1^0^0
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:colsPadCharLeft.Title^RWC^Data Field^N^N
+		A:Title^Pad Char Left^N^M^N^N^37E5543431284CA68A4A5447AC1283D6^SHORT_NAME^1^0^0
+	CE:
+	CS:colsPadCharRight.Title^RWC^Data Field^N^N
+		A:Title^Pad Char Right^N^M^N^N^A0D075E94125444FAF328C2E9BFADD53^SHORT_NAME^1^0^0
+	CE:
+	CS:menuTbwMethods_menuConvert_columns___.Caption^RWC^Command^N^N
+		A:Caption^Convert columns...^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDetailConversion^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Table Window^N^N
+		A:Text^Migration Details^N^M^N^N^^^0^0^0
+	CE:
+	CS:colDbClientValues.Title^RWC^Data Field^N^N
+		A:Title^Db Client Values^N^M^N^N^d8656fa0-4dcd-4166-838e-da36ddbe2e5d^SHORT_NAME^1^0^0
+	CE:
+	CS:colNoteText.Title^RWC^Data Field^N^N
+		A:Title^Note Text^N^M^N^N^E6918B4EB92640F39424CCBAF3C4B058^FULL_NAME^1^0^0
+	CE:
+	CS:colnAttrSeq.Title^RWC^Data Field^N^N
+		A:Title^Attr Seq^N^M^N^N^F3085D341DFA44A2833AC2E611F011EF^ABBREVIATION^1^0^0
+	CE:
+	CS:colnLength.Title^RWC^Data Field^N^N
+		A:Title^Length^N^M^N^N^9bc1c187-0d3a-4cae-b989-3039722e6eab^SHORT_NAME^1^0^0
+	CE:
+	CS:colnPos.Title^RWC^Data Field^N^N
+		A:Title^Pos^N^M^N^N^8D2E4A97998F431E95B65143FE7B48C3^ABBREVIATION^1^0^0
+	CE:
+	CS:colsChangeDefaults.Title^RWC^Data Field^N^N
+		A:Title^Change Defaults^N^M^N^N^0BF2DE2852244881A63D0D86E7747E0D^ABBREVIATION^1^0^0
+	CE:
+	CS:colsColumnDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^D486D342AB8D422EAEC5007E124F66C1^ABBREVIATION^1^0^0
+	CE:
+	CS:colsColumnFlags.Title^RWC^Data Field^N^N
+		A:Title^Flags^N^M^N^N^C4BBDC0813924621837D5C8BFD43863B^SHORT_NAME^1^0^0
+	CE:
+	CS:colsColumnName.Title^RWC^Data Field^N^N
+		A:Title^Column Name^N^M^N^N^49C0C91E0A7A49098D7EC03D4C4F1842^FULL_NAME^1^0^0
+	CE:
+	CS:colsConvListId.Title^RWC^Data Field^N^N
+		A:Title^Conv List Id^N^M^N^N^B46EBB882E8440F18F384040113586FC^SHORT_NAME^1^0^0
+	CE:
+	CS:colsDataType.Title^RWC^Data Field^N^N
+		A:Title^Data Type^N^M^N^N^81307AD529EB470E9C2A150E7841F6E8^ABBREVIATION^1^0^0
+	CE:
+	CS:colsDefaultValue.Title^RWC^Data Field^N^N
+		A:Title^Default Value^N^M^N^N^9ECC708E9C634564BB5FFA00979DBB3D^FULL_NAME^1^0^0
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:colsSourceColumn.Title^RWC^Data Field^N^N
+		A:Title^Source Column^N^M^N^N^70345C6A166D49389832C57CAD6268B7^SHORT_NAME^1^0^0
+	CE:
+	CS:menuTbwMethods_menuConvert_columns___.Caption^RWC^Command^N^N
+		A:Caption^Convert columns...^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuTbwMethods_menuTranslation.Caption^RWC^Command^N^N
+		A:Caption^&Translation...^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceDetailOverview^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Table Window^N^N
+		A:Text^Migration Job Details^N^M^N^N^^^0^0^0
+	CE:
+	CS:colIntfaceHeaderGroup_Id.Title^RWC^Data Field^N^N
+		A:Title^Group_Id^N^M^N^N^7CA739DF31414B6180021384D0B487B1^ABBREVIATION^1^0^0
+	CE:
+	CS:colNoteText.Title^RWC^Data Field^N^N
+		A:Title^Note Text^N^M^N^N^0A886EF8FCD046C9AFEFE877A11133F8^FULL_NAME^1^0^0
+	CE:
+	CS:colnAmountFactor.Title^RWC^Data Field^N^N
+		A:Title^Amount Denominator^N^M^N^N^5A2DD9E237514D6BB32F5617C6C85C8A^FULL_NAME^1^0^0
+	CE:
+	CS:colnAttrSeq.Title^RWC^Data Field^N^N
+		A:Title^Attr Seq^N^M^N^N^F3085D341DFA44A2833AC2E611F011EF^ABBREVIATION^1^0^0
+	CE:
+	CS:colnDecimalLength.Title^RWC^Data Field^N^N
+		A:Title^Decimal Length^N^M^N^N^F797EE03D19A4DCDA48AED71FDC3B8F2^ABBREVIATION^1^0^0
+	CE:
+	CS:colnLength.Title^RWC^Data Field^N^N
+		A:Title^Length^N^M^N^N^9bc1c187-0d3a-4cae-b989-3039722e6eab^SHORT_NAME^1^0^0
+	CE:
+	CS:colnPos.Title^RWC^Data Field^N^N
+		A:Title^Pos^N^M^N^N^4854DB03208744D48DB0D0ABC4C1AF13^ABBREVIATION^1^0^0
+	CE:
+	CS:colsChangeDefaults.Title^RWC^Data Field^N^N
+		A:Title^Change Defaults^N^M^N^N^0BF2DE2852244881A63D0D86E7747E0D^ABBREVIATION^1^0^0
+	CE:
+	CS:colsColumnDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^8bd9ac30-3499-11da-16be-b1006d452326^ABBREVIATION^1^0^0
+	CE:
+	CS:colsColumnFlags.Title^RWC^Data Field^N^N
+		A:Title^Flags^N^M^N^N^C4BBDC0813924621837D5C8BFD43863B^SHORT_NAME^1^0^0
+	CE:
+	CS:colsColumnName.Title^RWC^Data Field^N^N
+		A:Title^Column Name^N^M^N^N^CDE5CEB6FF6F4BAD8EB6CF455A6CE618^FULL_NAME^1^0^0
+	CE:
+	CS:colsConvListId.Title^RWC^Data Field^N^N
+		A:Title^Conversion List^N^M^N^N^B46EBB882E8440F18F384040113586FC^SHORT_NAME^1^0^0
+	CE:
+	CS:colsDataType.Title^RWC^Data Field^N^N
+		A:Title^Data Type^N^M^N^N^81307AD529EB470E9C2A150E7841F6E8^ABBREVIATION^1^0^0
+	CE:
+	CS:colsDefaultValue.Title^RWC^Data Field^N^N
+		A:Title^Default Value^N^M^N^N^93C801F31D094C50862ABAEE2B808B23^FULL_NAME^1^0^0
+	CE:
+	CS:colsDefaultWhere.Title^RWC^Data Field^N^N
+		A:Title^Default Where^N^M^N^N^729CB78DEA57450DB0490BACAA00622C^FULL_NAME^1^0^0
+	CE:
+	CS:colsExtAttr.Title^RWC^Data Field^N^N
+		A:Title^Ext Attr^N^M^N^N^dc663010-c245-484d-a6c4-8180e7340735^SHORT_NAME^1^0^0
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:colsPadCharLeft.Title^RWC^Data Field^N^N
+		A:Title^Pad Char Left^N^M^N^N^37E5543431284CA68A4A5447AC1283D6^SHORT_NAME^1^0^0
+	CE:
+	CS:colsPadCharRight.Title^RWC^Data Field^N^N
+		A:Title^Pad Char Right^N^M^N^N^A0D075E94125444FAF328C2E9BFADD53^SHORT_NAME^1^0^0
+	CE:
+	CS:colsSourceColumn.Title^RWC^Data Field^N^N
+		A:Title^Source Column^N^M^N^N^70345C6A166D49389832C57CAD6268B7^SHORT_NAME^1^0^0
+	CE:
+	CS:menuTbwMethods_menuConvert_columns___.Caption^RWC^Command^N^N
+		A:Caption^Convert columns...^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceGroup^RWC^Global Data^N^N
+	CS:cmdExportGroup.Caption^RWC^Command^N^N
+		A:Caption^&Export Group...^N^M^N^N^^^0^0^0
+	CE:
+	CS:colNoteText.Title^RWC^Data Field^N^N
+		A:Title^Note Text^N^M^N^N^B5EF14E4177A40028ED80FFBCD84A200^FULL_NAME^1^0^0
+	CE:
+	CS:colsDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^9BE6C5DBFBCF47C2850B4C46209FB47B^SHORT_NAME^1^0^0
+	CE:
+	CS:colsGroupId.Title^RWC^Data Field^N^N
+		A:Title^Group Id^N^M^N^N^7CA739DF31414B6180021384D0B487B1^ABBREVIATION^1^0^0
+	CE:
+	CS:colsHideFlag.Title^RWC^Data Field^N^N
+		A:Title^Hide Flag^N^M^N^N^719e0f10-6351-47a2-96dd-bc46a6f1e4e8^SHORT_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceHeader^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Table Window^N^N
+		A:Text^Migration Jobs^N^M^N^N^^^0^0^0
+	CE:
+	CS:colIntfaceGroupDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^9BE6C5DBFBCF47C2850B4C46209FB47B^SHORT_NAME^1^0^0
+	CE:
+	CS:colIntfaceProceduresDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^137F740AF1C14D00820FE0175380DAED^ABBREVIATION^1^0^0
+	CE:
+	CS:colIntfaceProceduresDirection.Title^RWC^Data Field^N^N
+		A:Title^Direction^N^M^N^N^58867DB9EA574DF8A3683003F7F7629A^ABBREVIATION^1^0^0
+	CE:
+	CS:colLastInfo.Title^RWC^Data Field^N^N
+		A:Title^Last Info^N^M^N^N^3CAFEA4512D24120844E4BEA6E6BC17A^SHORT_NAME^1^0^0
+	CE:
+	CS:colNoteText.Title^RWC^Data Field^N^N
+		A:Title^Note Text^N^M^N^N^0A886EF8FCD046C9AFEFE877A11133F8^FULL_NAME^1^0^0
+	CE:
+	CS:colOrderByClause.Title^RWC^Data Field^N^N
+		A:Title^Order By Clause^N^M^N^N^CBBCD23405064C4E835E7BAD1D30C3FC^SHORT_NAME^1^0^0
+	CE:
+	CS:colSourceName.Title^RWC^Data Field^N^N
+		A:Title^Source Name^N^M^N^N^534600EB704545C6AC9760F8786D069F^FULL_NAME^1^0^0
+	CE:
+	CS:colWhereClause.Title^RWC^Data Field^N^N
+		A:Title^Where Clause^N^M^N^N^171E9454F7A04A4DB06AE54BCBBD9C54^SHORT_NAME^1^0^0
+	CE:
+	CS:coldLastExecuted.Title^RWC^Data Field^N^N
+		A:Title^Last Executed^N^M^N^N^dd1272d2-c4e4-4a63-b556-5a5a786d8cbb^SHORT_NAME^1^0^0
+	CE:
+	CS:colnMinusPos.Title^RWC^Data Field^N^N
+		A:Title^Minus Pos^N^M^N^N^7EABFF52684F4927B84F138DB56DBE0E^SHORT_NAME^1^0^0
+	CE:
+	CS:colsColumnEmbrace.Title^RWC^Data Field^N^N
+		A:Title^Column Embrace^N^M^N^N^758c5265-7f0d-45c4-b4d9-6107d7756407^SHORT_NAME^1^0^0
+	CE:
+	CS:colsColumnSeparator.Title^RWC^Data Field^N^N
+		A:Title^Column Separator^N^M^N^N^B4B134F965DE42F59791332386254CE3^ABBREVIATION^1^0^0
+	CE:
+	CS:colsDateFormat.Title^RWC^Data Field^N^N
+		A:Title^Date Format^N^M^N^N^1B064F84D95849F9A9EA0AFC2241AC12^FULL_NAME^1^0^0
+	CE:
+	CS:colsDecimalPoint.Title^RWC^Data Field^N^N
+		A:Title^Decimal Point^N^M^N^N^A2277DAA75B345428BD86EA0EC71DB12^SHORT_NAME^1^0^0
+	CE:
+	CS:colsDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^4f463950-81c7-41c0-adf4-775ea8c90b06^FULL_NAME^1^0^0
+	CE:
+	CS:colsExecutedBy.Title^RWC^Data Field^N^N
+		A:Title^Executed By^N^M^N^N^75D4F9C72CF540E39F47E3611288DFBA^FULL_NAME^1^0^0
+	CE:
+	CS:colsExportJob.Title^RWC^Data Field^N^N
+		A:Title^ExportJob^N^M^N^N^87fd719a-3aa0-44e9-8ae4-da3c3356233a^SHORT_NAME^1^0^0
+	CE:
+	CS:colsFileLocation.Title^RWC^Data Field^N^N
+		A:Title^File Location^N^M^N^N^1A57410F9F8842028084FED9C2E75E7C^ABBREVIATION^1^0^0
+	CE:
+	CS:colsGroupId.Title^RWC^Data Field^N^N
+		A:Title^Group Id^N^M^N^N^7CA739DF31414B6180021384D0B487B1^ABBREVIATION^1^0^0
+	CE:
+	CS:colsIntfaceFile.Title^RWC^Data Field^N^N
+		A:Title^Intface File^N^M^N^N^6CDA50DB61204E07861FFCDF116C7933^FULL_NAME^1^0^0
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:colsIntfacePath.Title^RWC^Data Field^N^N
+		A:Title^Intface Path^N^M^N^N^073F96FE39C3434BBB13FB9EC040294D^ABBREVIATION^1^0^0
+	CE:
+	CS:colsProcedureName.Title^RWC^Data Field^N^N
+		A:Title^Procedure Name^N^M^N^N^04A5A77C4D03469FBE59F19C014CDDC8^SHORT_NAME^1^0^0
+	CE:
+	CS:colsSourceOwner.Title^RWC^Data Field^N^N
+		A:Title^Source Owner^N^M^N^N^DA0FEE5DB20E4997AFABFEE2A9D86BF3^FULL_NAME^1^0^0
+	CE:
+	CS:colsThousandSeparator.Title^RWC^Data Field^N^N
+		A:Title^Thousand Separator^N^M^N^N^7033873E0C0B4BCCA14DBBA53DC227F4^FULL_NAME^1^0^0
+	CE:
+	CS:colsViewName.Title^RWC^Data Field^N^N
+		A:Title^View Name^N^M^N^N^E0B3C98ABE8B4C0C9FBA8DA3CDABB27D^SHORT_NAME^1^0^0
+	CE:
+	CS:menuTbwMethods_menuJob__History_Overview___.Caption^RWC^Command^N^N
+		A:Caption^Job &History Overview...^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuTbwMethods_menuS_erver_Processes___.Caption^RWC^Command^N^N
+		A:Caption^S&cheduled Migration Jobs...^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuTbwMethods_menu_Export_job___.Caption^RWC^Command^N^N
+		A:Caption^&Export job...^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuTbwMethods_menu_Job_Details___.Caption^RWC^Command^N^N
+		A:Caption^&Job Details...^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuTbwMethods_menu_Print_Documentation___.Caption^RWC^Command^N^N
+		A:Caption^&Print Documentation...^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuTbwMethods_menu_Start_Job___.Caption^RWC^Command^N^N
+		A:Caption^&Start Job...^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceJobDetail^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Table Window^N^N
+		A:Text^(class default)^N^M^N^N^^^0^0^0
+	CE:
+	CS:colAttributeString.Title^RWC^Data Field^N^N
+		A:Title^Attribute String^N^M^N^N^5943478155D94A3F90CF367CA4D4C4AE^FULL_NAME^1^0^0
+	CE:
+	CS:colErrorMessage.Title^RWC^Data Field^N^N
+		A:Title^Error Message^N^M^N^N^F81657E389924EADB21D158F15540ADB^FULL_NAME^1^0^0
+	CE:
+	CS:colFileString.Title^RWC^Data Field^N^N
+		A:Title^File String^N^M^N^N^16F8ADD9E07844B5ABDDADB7CEDC54A8^ABBREVIATION^1^0^0
+	CE:
+	CS:colnExecutionNo.Title^RWC^Data Field^N^N
+		A:Title^Execution No^N^M^N^N^E249BD345CCB42A89A04FB26A1A507D0^ABBREVIATION^1^0^0
+	CE:
+	CS:colnLineNo.Title^RWC^Data Field^N^N
+		A:Title^Line No^N^M^N^N^1B9D2E504D0144E08CF8A4266C16D3F9^SHORT_NAME^1^0^0
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:colsStatus.Title^RWC^Data Field^N^N
+		A:Title^Status^N^M^N^N^CBDEC807A6B645A2BBBE9D8506D0A557^SHORT_NAME^1^0^0
+	CE:
+	CS:menuTbwMethods_menuExport_to_File___.Caption^RWC^Command^N^N
+		A:Caption^Export to File...^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuTbwMethods_menuLoad_File___.Caption^RWC^Command^N^N
+		A:Caption^Load File...^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceJobHistHead^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Table Window^N^N
+		A:Text^Migration Jobs History^N^M^N^N^^^0^0^0
+	CE:
+	CS:colIntfaceHeaderDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^4f463950-81c7-41c0-adf4-775ea8c90b06^ABBREVIATION^1^0^0
+	CE:
+	CS:colLastInfo.Title^RWC^Data Field^N^N
+		A:Title^Last Info^N^M^N^N^3CAFEA4512D24120844E4BEA6E6BC17A^SHORT_NAME^1^0^0
+	CE:
+	CS:coldDateExecuted.Title^RWC^Data Field^N^N
+		A:Title^Date Executed^N^M^N^N^4aee059c-f45e-4a65-b5dd-ed5b674c2ed8^SHORT_NAME^1^0^0
+	CE:
+	CS:colnExecutionNo.Title^RWC^Data Field^N^N
+		A:Title^Execution No^N^M^N^N^E249BD345CCB42A89A04FB26A1A507D0^ABBREVIATION^1^0^0
+	CE:
+	CS:colsExecutedBy.Title^RWC^Data Field^N^N
+		A:Title^Executed By^N^M^N^N^75D4F9C72CF540E39F47E3611288DFBA^FULL_NAME^1^0^0
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:colsStatus.Title^RWC^Data Field^N^N
+		A:Title^Status^N^M^N^N^CBDEC807A6B645A2BBBE9D8506D0A557^SHORT_NAME^1^0^0
+	CE:
+	CS:menuTbwMethods_menu_Job_History_Details___.Caption^RWC^Command^N^N
+		A:Caption^&Job History Details...^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceMethodList^RWC^Global Data^N^N
+	CS:colNoteText.Title^RWC^Data Field^N^N
+		A:Title^Note Text^N^M^N^N^5F84993F02A84BEF9B4FF61455C1DFEC^FULL_NAME^1^0^0
+	CE:
+	CS:colOnFirstRow.Title^RWC^Data Field^N^N
+		A:Title^On First Row^N^M^N^N^ee86a836-768c-4a2f-8a71-db1e32c40043^SHORT_NAME^1^0^0
+	CE:
+	CS:colnExecuteSeq.Title^RWC^Data Field^N^N
+		A:Title^Execute Seq^N^M^N^N^634132209FD64C138A123DEB49D462C2^ABBREVIATION^1^0^0
+	CE:
+	CS:colsAction.Title^RWC^Data Field^N^N
+		A:Title^Action^N^M^N^N^68469808371C41C6B17C439813E4667A^SHORT_NAME^1^0^0
+	CE:
+	CS:colsColumnName.Title^RWC^Data Field^N^N
+		A:Title^Column Name^N^M^N^N^EFFCB00476AD4E3B8316AC77D1053BE5^FULL_NAME^1^0^0
+	CE:
+	CS:colsColumnValue.Title^RWC^Data Field^N^N
+		A:Title^Column Value^N^M^N^N^7FB4B7618B2340FD84F467B0F74244C2^ABBREVIATION^1^0^0
+	CE:
+	CS:colsHiddenSqlStatement.Title^RWC^Data Field^N^N
+		A:Title^HiddenSql^N^M^N^N^^^1^0^1
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:colsMethodName.Title^RWC^Data Field^N^N
+		A:Title^Method Name^N^M^N^N^4E80E51B5FB0474FB6CD2D19ECF911BB^SHORT_NAME^1^0^0
+	CE:
+	CS:colsOnModify.Title^RWC^Data Field^N^N
+		A:Title^Modify^N^M^N^N^4678B32EF7604806BA841AF578A2DBFD^SHORT_NAME^1^0^0
+	CE:
+	CS:colsOnNew.Title^RWC^Data Field^N^N
+		A:Title^New^N^M^N^N^305AF2BCD4424C0EB687D67C5130AD46^SHORT_NAME^1^0^0
+	CE:
+	CS:colsOnNewMaster.Title^RWC^Data Field^N^N
+		A:Title^On New Master^N^M^N^N^6b39ceee-3900-47a7-ad66-c6e04f8fbc9b^SHORT_NAME^1^0^0
+	CE:
+	CS:colsPrefixOption.Title^RWC^Data Field^N^N
+		A:Title^Prefix Option^N^M^N^N^BD946652F971424BAE0E868892A6BD87^SHORT_NAME^1^0^0
+	CE:
+	CS:colsSourceName.Title^RWC^Data Field^N^N
+		A:Title^Source Name^N^M^N^N^99FB42C8DA864581BAC0EC5338B97055^FULL_NAME^1^0^0
+	CE:
+	CS:colsViewName.Title^RWC^Data Field^N^N
+		A:Title^View Name^N^M^N^N^0442BF362D4344C1B6BAE36350815FCD^SHORT_NAME^1^0^0
+	CE:
+	CS:menuTbwMethods_menuShow_Procedure_Statement.Caption^RWC^Command^N^N
+		A:Caption^Show Procedure Statement^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuTbwMethods_menu_Method_List_Attribute___.Caption^RWC^Command^N^N
+		A:Caption^&Method List Attribute...^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceMethodListAttribute^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Table Window^N^N
+		A:Text^Method List Attribute^N^M^N^N^^^0^0^0
+	CE:
+	CS:colFixedValue.Title^RWC^Data Field^N^N
+		A:Title^Fixed Value^N^M^N^N^775897da-74f1-4ad3-a444-3708b6171e9c^SHORT_NAME^1^0^0
+	CE:
+	CS:colIidValues.Title^RWC^Data Field^N^N
+		A:Title^Iid Values^N^M^N^N^d8656fa0-4dcd-4166-838e-da36ddbe2e5d^SHORT_NAME^1^0^0
+	CE:
+	CS:colnColumnSequence.Title^RWC^Data Field^N^N
+		A:Title^Column Sequence^N^M^N^N^7BA50D44F05946B68066C1ED88D246CC^FULL_NAME^1^0^0
+	CE:
+	CS:colnExecuteSeq.Title^RWC^Data Field^N^N
+		A:Title^Execute Seq^N^M^N^N^634132209FD64C138A123DEB49D462C2^ABBREVIATION^1^0^0
+	CE:
+	CS:colsColumnName.Title^RWC^Data Field^N^N
+		A:Title^Column Name^N^M^N^N^CDE5CEB6FF6F4BAD8EB6CF455A6CE618^FULL_NAME^1^0^0
+	CE:
+	CS:colsDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^998227B05203442883CC902BE01627AE^ABBREVIATION^1^0^0
+	CE:
+	CS:colsFlags.Title^RWC^Data Field^N^N
+		A:Title^Flags^N^M^N^N^C4BBDC0813924621837D5C8BFD43863B^SHORT_NAME^1^0^0
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:colsLuReference.Title^RWC^Data Field^N^N
+		A:Title^Lu Reference^N^M^N^N^b2fe29b4-9be1-4df4-b5e9-e1a36c2ad581^SHORT_NAME^1^0^0
+	CE:
+	CS:colsOnModify.Title^RWC^Data Field^N^N
+		A:Title^On Modify^N^M^N^N^d180628a-2912-419d-a104-2fb65ec86119^SHORT_NAME^1^0^0
+	CE:
+	CS:colsOnNew.Title^RWC^Data Field^N^N
+		A:Title^On New^N^M^N^N^d4ea0aaa-ca43-4eb9-a592-b7b4eaa31c9f^SHORT_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceProcedures^RWC^Global Data^N^N
+	CS:colsDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^137F740AF1C14D00820FE0175380DAED^ABBREVIATION^1^0^0
+	CE:
+	CS:colsDirection.Title^RWC^Data Field^N^N
+		A:Title^Direction^N^M^N^N^E65601E23C60460BB9894BB4B99060CD^ABBREVIATION^1^0^0
+	CE:
+	CS:colsProcedureName.Title^RWC^Data Field^N^N
+		A:Title^Procedure Name^N^M^N^N^6A20781DF3F8432B9BB19705921DB368^SHORT_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceReplDbObjects^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Table Window^N^N
+		A:Text^Replication Objects^N^M^N^N^^^0^0^0
+	CE:
+	CS:colErrorText.Title^RWC^Data Field^N^N
+		A:Title^Error Text^N^M^N^N^F81657E389924EADB21D158F15540ADB^SHORT_NAME^1^1^0
+	CE:
+	CS:colStatus.Title^RWC^Data Field^N^N
+		A:Title^Status^N^M^N^N^b3339abf-da4c-4a1b-a569-f097a4da3c5d^SHORT_NAME^1^0^0
+	CE:
+	CS:colTableName.Title^RWC^Data Field^N^N
+		A:Title^Table Name^N^M^N^N^3E4AEFF68A504899ABCB98CCD02218FF^SHORT_NAME^1^0^0
+	CE:
+	CS:coldCreated.Title^RWC^Data Field^N^N
+		A:Title^Date Created^N^M^N^N^7AF3F31759D3478DA61CA76C3F1B9B97^SHORT_NAME^1^0^0
+	CE:
+	CS:coldLastDdlTime.Title^RWC^Data Field^N^N
+		A:Title^Last DDL Time^N^M^N^N^038f14ae-183f-4a3c-a2d8-28f95f759a37^SHORT_NAME^1^0^0
+	CE:
+	CS:colsHiddenSqlStatement.Title^RWC^Data Field^N^N
+		A:Title^HiddenSql^N^M^N^N^^^1^0^1
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:colsObjectName.Title^RWC^Data Field^N^N
+		A:Title^Object Name^N^M^N^N^4ce16c1d-719e-48c6-b297-be6386dea175^SHORT_NAME^1^0^0
+	CE:
+	CS:colsObjectType.Title^RWC^Data Field^N^N
+		A:Title^Object Name^N^M^N^N^4ce16c1d-719e-48c6-b297-be6386dea175^SHORT_NAME^1^0^0
+	CE:
+	CS:menuTbwMethods_menuShow_Source_Text.Caption^RWC^Command^N^N
+		A:Caption^Show Source Text^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceReplOutLog^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Table Window^N^N
+		A:Text^Replication Output Log^N^M^N^N^^^0^0^0
+	CE:
+	CS:coldLogDate.Title^RWC^Data Field^N^N
+		A:Title^Log Date^N^M^N^N^7C006BA81E5A4239B85CFE20E1C4DDEC^SHORT_NAME^1^0^0
+	CE:
+	CS:colnLogSeq.Title^RWC^Data Field^N^N
+		A:Title^Log Seq^N^M^N^N^DD9D9CF4D97947C38B82CD168F6002D1^SHORT_NAME^1^0^0
+	CE:
+	CS:colnPos.Title^RWC^Data Field^N^N
+		A:Title^Pos^N^M^N^N^47427228056B43ABBEFB329270CC2673^ABBREVIATION^1^0^0
+	CE:
+	CS:colnStartPos.Title^RWC^Data Field^N^N
+		A:Title^Start Pos^N^M^N^N^FA448DBC4B8E4362AB7B22F3F964F05B^SHORT_NAME^1^0^0
+	CE:
+	CS:colnStructureSeq.Title^RWC^Data Field^N^N
+		A:Title^Structure Seq^N^M^N^N^8887942B0CFD4C7EB6E1442982C15EF7^ABBREVIATION^1^0^0
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Intface Name^N^M^N^N^9a0a351f-aad6-4988-878a-231eeb06d6d7^SHORT_NAME^1^0^0
+	CE:
+	CS:colsKeyAttr.Title^RWC^Data Field^N^N
+		A:Title^Key Attr^N^M^N^N^43B3754CB58145D5B057F3A95F79698C^ABBREVIATION^1^0^0
+	CE:
+	CS:colsTriggerType.Title^RWC^Data Field^N^N
+		A:Title^Trigger Type^N^M^N^N^58B1C751287541F7B27E5C3CB56AAE3C^SHORT_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceReplStructCols^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Table Window^N^N
+		A:Text^Define Columns^N^M^N^N^^^0^0^0
+	CE:
+	CS:colColumnAlias.Title^RWC^Data Field^N^N
+		A:Title^Column Alias^N^M^N^N^1762FEA6A51840CE93E89786526ABE86^FULL_NAME^1^0^0
+	CE:
+	CS:colColumnName.Title^RWC^Data Field^N^N
+		A:Title^Column Name^N^M^N^N^4874D2D65AB04C90BC50A107C72ECB07^FULL_NAME^1^0^0
+	CE:
+	CS:colnColumnSeq.Title^RWC^Data Field^N^N
+		A:Title^Column Seq^N^M^N^N^7BA50D44F05946B68066C1ED88D246CC^ABBREVIATION^1^0^0
+	CE:
+	CS:colnStructureSeq.Title^RWC^Data Field^N^N
+		A:Title^Structure Seq^N^M^N^N^8887942B0CFD4C7EB6E1442982C15EF7^ABBREVIATION^1^0^0
+	CE:
+	CS:colsDataType.Title^RWC^Data Field^N^N
+		A:Title^Data Type^N^M^N^N^E4F2478BC3DD4818BE3451D688486DDD^ABBREVIATION^1^0^0
+	CE:
+	CS:colsDescription.Title^RWC^Data Field^N^N
+		A:Title^Description^N^M^N^N^998227B05203442883CC902BE01627AE^ABBREVIATION^1^0^0
+	CE:
+	CS:colsFlags.Title^RWC^Data Field^N^N
+		A:Title^Flags^N^M^N^N^C4BBDC0813924621837D5C8BFD43863B^SHORT_NAME^1^0^0
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Intface Name^N^M^N^N^9a0a351f-aad6-4988-878a-231eeb06d6d7^SHORT_NAME^1^0^0
+	CE:
+	CS:colsOnInsert.Title^RWC^Data Field^N^N
+		A:Title^On Insert^N^M^N^N^0E296B78360241028420F834F45841E0^SHORT_NAME^1^0^0
+	CE:
+	CS:colsOnUpdate.Title^RWC^Data Field^N^N
+		A:Title^On Update^N^M^N^N^5FB90C984AF349BCA56B55D9A5347A2F^SHORT_NAME^1^0^0
+	CE:
+	CS:colsParentKeyName.Title^RWC^Data Field^N^N
+		A:Title^Parent Key Name^N^M^N^N^2BDDDF1328A4422ABC244492395EC854^SHORT_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceRules^RWC^Global Data^N^N
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^0^0
+	CE:
+	CS:colsRuleDescription.Title^RWC^Data Field^N^N
+		A:Title^Rule Description^N^M^N^N^2BC55137D3C64659903EF421785CB879^SHORT_NAME^1^0^0
+	CE:
+	CS:colsRuleFlag.Title^RWC^Data Field^N^N
+		A:Title^Rule Flag^N^M^N^N^48C3511BE4D844928F96A5A7106BB04B^SHORT_NAME^1^0^0
+	CE:
+	CS:colsRuleId.Title^RWC^Data Field^N^N
+		A:Title^Rule Id^N^M^N^N^C1F513228FC8494D8EEDB5387F2AD8AF^SHORT_NAME^1^0^0
+	CE:
+	CS:colsRuleValue.Title^RWC^Data Field^N^N
+		A:Title^Rule Value^N^M^N^N^A19C98D949C142E6AC281B65D37AB55B^SHORT_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceServerProcesses^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Table Window^N^N
+		A:Text^Scheduled Migration Jobs^N^M^N^N^^^0^0^0
+	CE:
+	CS:coldEndDate.Title^RWC^Data Field^N^N
+		A:Title^End Date^N^M^N^N^3AF5BA48270E4EE3B9CC8BDC95A8524C^SHORT_NAME^1^0^0
+	CE:
+	CS:coldModifiedDate.Title^RWC^Data Field^N^N
+		A:Title^Modified Date^N^M^N^N^8B1A2EF73A024CB0860C2B29F838D3DA^FULL_NAME^1^0^0
+	CE:
+	CS:coldNextExecutionDate.Title^RWC^Data Field^N^N
+		A:Title^Next Execution Date^N^M^N^N^4AFB140B3C094FAF870D819F58E892F9^SHORT_NAME^1^0^0
+	CE:
+	CS:coldStartDate.Title^RWC^Data Field^N^N
+		A:Title^Start date^N^M^N^N^8F0A578BA83044CB963645478FF0D55E^SHORT_NAME^1^0^0
+	CE:
+	CS:colnExecutions.Title^RWC^Data Field^N^N
+		A:Title^Executions^N^M^N^N^24143eb1-38d3-46a9-98d8-279a142c3940^SHORT_NAME^1^0^0
+	CE:
+	CS:colnScheduleId.Title^RWC^Data Field^N^N
+		A:Title^Schedule ID^N^M^N^N^1b212b0c-bd16-4866-958b-392671e4d7d7^SHORT_NAME^1^0^0
+	CE:
+	CS:colsActiveDb.Title^RWC^Data Field^N^N
+		A:Title^Active^N^M^N^N^C790DE1FD20440CE8D64694E070F2EA7^SHORT_NAME^1^0^0
+	CE:
+	CS:colsExecutionPlan.Title^RWC^Data Field^N^N
+		A:Title^Execution Plan^N^M^N^N^160C1BB41AF34609BCF6FF0435360891^ABBREVIATION^1^0^0
+	CE:
+	CS:colsIntfaceName.Title^RWC^Data Field^N^N
+		A:Title^Intface Name^N^M^N^N^DF96D883FF1345BBB82A4CCF823BBE91^SHORT_NAME^1^0^0
+	CE:
+	CS:colsLangCode.Title^RWC^Data Field^N^N
+		A:Title^Language code^N^M^N^N^0BDD5E9D7BB944309C0A077CC3DAA602^FULL_NAME^1^0^0
+	CE:
+	CS:colsModuleName.Title^RWC^Data Field^N^N
+		A:Title^Module Name^N^M^N^N^3895809f-f43b-4bbc-bb91-e46fb3cdb727^GENITIVE^1^0^0
+	CE:
+	CS:colsScheduleName.Title^RWC^Data Field^N^N
+		A:Title^Schedule Name^N^M^N^N^28e2734d-6aea-4b06-a702-4d39379b6595^FULL_NAME^1^0^0
+	CE:
+	CS:colsScheduledBy.Title^RWC^Data Field^N^N
+		A:Title^Scheduled By^N^M^N^N^8af500b5-e335-49c3-a46b-a7eef7d33e84^SHORT_NAME^1^0^0
+	CE:
+	CS:colsTaskName.Title^RWC^Data Field^N^N
+		A:Title^Task Name^N^M^N^N^2c72cbaa-4218-4d8d-80fd-8a5e2d334545^SHORT_NAME^1^0^0
+	CE:
+	CS:menuTbwMethods_menu_Execute_Job.Caption^RWC^Command^N^N
+		A:Caption^&Run^N^M^N^N^^^0^0^0
+	CE:
+	CS:menuTbwMethods_menu_View_Schedule.Caption^RWC^Command^N^N
+		A:Caption^&View Schedule^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceSourceCols^RWC^Global Data^N^N
+	CS:$this.Text^RWC^Table Window^N^N
+		A:Text^Query - Source Columns^N^M^N^N^^^0^0^0
+	CE:
+	CS:colnColumnId.Title^RWC^Data Field^N^N
+		A:Title^Column id^N^M^N^N^123eb77a-3a43-48f8-9e91-2f89822248d7^SHORT_NAME^1^0^0
+	CE:
+	CS:colnDataLength.Title^RWC^Data Field^N^N
+		A:Title^Data Length^N^M^N^N^8a25b4f6-2d27-42d1-9769-8abd46ce03dc^FULL_NAME^1^0^0
+	CE:
+	CS:colnDataPrecision.Title^RWC^Data Field^N^N
+		A:Title^Data Precision^N^M^N^N^6a06a69a-3b96-44e3-bc51-0d26fa315d19^FULL_NAME^1^0^0
+	CE:
+	CS:colnDataScale.Title^RWC^Data Field^N^N
+		A:Title^Data Scale^N^M^N^N^d610222e-a47c-44ed-81a8-2640ef0e1c80^FULL_NAME^1^0^0
+	CE:
+	CS:colsColumnName.Title^RWC^Data Field^N^N
+		A:Title^Column Name^N^M^N^N^CDE5CEB6FF6F4BAD8EB6CF455A6CE618^FULL_NAME^1^0^0
+	CE:
+	CS:colsDataType.Title^RWC^Data Field^N^N
+		A:Title^Data Type^N^M^N^N^81307AD529EB470E9C2A150E7841F6E8^ABBREVIATION^1^0^0
+	CE:
+	CS:colsNullable.Title^RWC^Data Field^N^N
+		A:Title^Nullable^N^M^N^N^a3fe2cab-8a35-4c7b-b3c4-002ec71d7b14^FULL_NAME^1^0^0
+	CE:
+	CS:colsSourceName.Title^RWC^Data Field^N^N
+		A:Title^Source Name^N^M^N^N^534600EB704545C6AC9760F8786D069F^FULL_NAME^1^0^0
+	CE:
+	CS:colsSourceOwner.Title^RWC^Data Field^N^N
+		A:Title^Source Owner^N^M^N^N^DA0FEE5DB20E4997AFABFEE2A9D86BF3^FULL_NAME^1^0^0
+	CE:
+CE:
+CS:Ifs.Application.Fndmig_.tbwIntfaceUser^RWC^Global Data^N^N
+	CS:colsIdentity.Title^RWC^Data Field^N^N
+		A:Title^Identity^N^M^N^N^785B912BD37541688C9DF79B78A2BC44^SHORT_NAME^1^0^0
+	CE:
+	CS:colsPrivilege.Title^RWC^Data Field^N^N
+		A:Title^Privilege^N^M^N^N^E350ACC5751E4328A13CA406E55E2E81^SHORT_NAME^1^0^0
+	CE:
+	CS:menuItemPrUser.Caption^RWC^Command^N^N
+		A:Caption^Pr &User...^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:Ifs.Fnd.Navigator.FNDMIG^RWC^Global Data^N^N
+	CS:FNDMIG_ROOT-IntfaceBasic.Text^RWC^Message^N^N
+		A:Text^Data Migration Basic Data^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_ROOT-IntfaceHeader.Text^RWC^Message^N^N
+		A:Text^Migration Job^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_ROOT-IntfaceHistory.Text^RWC^Message^N^N
+		A:Text^Migration Job History^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_ROOT-IntfaceReplOutLog.Text^RWC^Message^N^N
+		A:Text^Replication Output Log^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_ROOT-IntfaceReplStruct.Text^RWC^Message^N^N
+		A:Text^Replication Structure^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_ROOT-IntfaceServerProcesses.Text^RWC^Message^N^N
+		A:Text^Scheduled Migration Jobs^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_ROOT-IntfaceStart.Text^RWC^Message^N^N
+		A:Text^Execute Job^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_ROOT-OverviewIntfaceDetail.Text^RWC^Message^N^N
+		A:Text^Migration Job Details^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_ROOT-OverviewIntfaceHeader.Text^RWC^Message^N^N
+		A:Text^Migration Jobs^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_ROOT-OverviewIntfaceHistory.Text^RWC^Message^N^N
+		A:Text^Migration Jobs History^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_ROOT-intfaceReplDbObjects.Text^RWC^Message^N^N
+		A:Text^Replication Objects^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_ROOT.Text^RWC^Message^N^N
+		A:Text^Data Migration^N^M^N^N^^^0^0^0
+	CE:
+CE:

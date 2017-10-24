@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?report  module="FNDMIG" package="INTFACE_DOCUMENTATION_REP" ?>
+<xs:schema
+   targetNamespace="urn:ifsworld-com:intface_documentation_rep"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns="urn:ifsworld-com:intface_documentation_rep"
+   elementFormDefault="qualified"
+   attributeFormDefault="unqualified"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.w3.org/2001/XMLSchema http://www.w3.org/2001/XMLSchema.xsd">
+   <xs:element name="INTFACE_DOCUMENTATION_REP_REQUEST">
+      <xs:complexType>
+         <xs:all minOccurs="1" maxOccurs="1">
+            <xs:element name="PROCESSING_INFO">
+               <xs:complexType>
+                  <xs:all minOccurs="1" maxOccurs="1">
+                     <xs:element name="FORMATTING_OPTIONS">
+                        <xs:complexType>
+                           <xs:all minOccurs="1" maxOccurs="1">
+                              <xs:element name="COPIES" type="xs:int" nillable="true"/>
+                              <xs:element name="PAGE_FROM" type="xs:int" nillable="true"/>
+                              <xs:element name="PAGE_TO" type="xs:int" nillable="true"/>
+                              <xs:element name="LANG_CODE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="5"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="LAYOUT_NAME" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="PRINT_DIRECTORY" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="LAYOUT_FILE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="SELECTED_PRINTER" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="LANGUAGE_LAYOUT_FILE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="PAPER_FORMAT" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PROCESSING_ATTRIBUTES">
+                        <xs:complexType>
+                           <xs:all minOccurs="1" maxOccurs="1">
+                              <xs:element name="EXECUTION_TIME" type="xs:dateTime"/>
+                              <xs:element name="ORDERED_BY" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="JOB_ID" type="xs:int" nillable="true"/>
+                              <xs:element name="COMMENT" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="ORDER_TIME" type="xs:dateTime"/>
+                              <xs:element name="REPORT_TITLE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="PRINTED_BY" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="CREATED" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="STANDARD_TRANSLATIONS">
+                        <xs:complexType>
+                           <xs:all minOccurs="1" maxOccurs="1">
+                              <xs:element name="ATTRIBUTE_DISPLAY_TEXTS">
+                                 <xs:complexType>
+                                    <xs:all minOccurs="1" maxOccurs="1">
+                                       <xs:element name="EXECUTION_TIME" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="ORDERED_BY" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="JOB_ID" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="COMMENT" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="ORDER_TIME" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="REPORT_TITLE" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="PRINTED_BY" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="CURRENT_TIME" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="CURRENT_DATE" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="PAGE" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="END_OF_REPORT" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="REPORT_PARAMETERS" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="APPLICATION_TEXT" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="CREATED" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="NONE" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="NOTES" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="NO_DATA_FOUND" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                    </xs:all>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="SITE_TEXTS">
+                                 <xs:complexType>
+                                    <xs:all minOccurs="1" maxOccurs="1">
+                                       <xs:element name="COMPANY_NAME" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="SITE_TEXT_1" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="SITE_TEXT_2" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="SITE_TEXT_3" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="SITE_TEXT_4" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="SITE_TEXT_5" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="SITE_TEXT_6" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="SITE_TEXT_7" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="SITE_TEXT_8" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="SITE_TEXT_9" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="SITE_TEXT_10" nillable="true">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="200"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                    </xs:all>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:all>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="INTFACE_DOCUMENTATION_REP_DATA_ASSEMBLY_PARAMETERS">
+               <xs:complexType>
+                  <xs:all minOccurs="1" maxOccurs="1">
+                     <xs:element name="GROUP_ID">
+                        <xs:complexType>
+                           <xs:all minOccurs="1" maxOccurs="1">
+                              <xs:element name="DISPLAY_TEXT" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="VALUE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="INTFACE_IN">
+                        <xs:complexType>
+                           <xs:all minOccurs="1" maxOccurs="1">
+                              <xs:element name="DISPLAY_TEXT" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="VALUE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PRINT_DETAIL">
+                        <xs:complexType>
+                           <xs:all minOccurs="1" maxOccurs="1">
+                              <xs:element name="DISPLAY_TEXT" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="VALUE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PRINT_DOC_INFO">
+                        <xs:complexType>
+                           <xs:all minOccurs="1" maxOccurs="1">
+                              <xs:element name="DISPLAY_TEXT" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="VALUE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PRINT_HEADER">
+                        <xs:complexType>
+                           <xs:all minOccurs="1" maxOccurs="1">
+                              <xs:element name="DISPLAY_TEXT" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="VALUE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PRINT_MAP_VALUE">
+                        <xs:complexType>
+                           <xs:all minOccurs="1" maxOccurs="1">
+                              <xs:element name="DISPLAY_TEXT" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="VALUE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PRINT_METH_LIST">
+                        <xs:complexType>
+                           <xs:all minOccurs="1" maxOccurs="1">
+                              <xs:element name="DISPLAY_TEXT" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="VALUE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:all>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="INTFACE_DOCUMENTATION_REP_ARCHIVE_VARIABLES">
+               <xs:complexType>
+                  <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                     <xs:element name="VARIABLE">
+                        <xs:complexType>
+                           <xs:all minOccurs="1" maxOccurs="1">
+                              <xs:element name="NAME" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="VALUE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="INTFACE_DOCUMENTATION_REP_TRANSLATIONS">
+               <xs:complexType>
+                  <xs:all minOccurs="1" maxOccurs="1">
+                     <xs:element name="REPORT_TEXTS">
+                        <xs:complexType>
+                           <xs:all minOccurs="1" maxOccurs="1">
+                              <xs:element name="TXCOLUMNNAME" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXDATATYPE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXTITLEDOCPAGE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXDESCRCOLUMNNAME" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXHEADERCOLMAPPING" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXHEADERMETHODLIST" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXFILEINFO" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXFLAGSI" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXFLAGS" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXFLAGSK" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXLASTEXECUTIONINFO" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXFLAGSM" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXVIEWINFO" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXFLAGSP" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXSOURCECOLUMN" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXEXECUTESEQ" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXMETMETHODNAME" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXMAPTITLE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXDETAILTITLE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXHEADERTITLE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXMETCOLUMNVALUE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXDECIMALLENGTH" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXAMOUNTFACTOR" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXPADCHARLEFT" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXPADCHARRIGHT" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXDEFAULTVALUE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXPOS" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXLENGTH" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXCHANGEDEFAULTS" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXFLAGSU" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXACTION" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXMETCOLUMNNAME" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                              <xs:element name="TXMETHODLISTTITLE" nillable="true">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                       <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                 </xs:simpleType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="ATTRIBUTE_DISPLAY_TEXTS">
+                        <xs:complexType>
+                           <xs:choice minOccurs="0" maxOccurs="1">
+                              <xs:element name="INTFACE_HEADERS" nillable="true" minOccurs="0">
+                                 <xs:complexType>
+                                    <xs:choice minOccurs="0" maxOccurs="1">
+                                       <xs:element name="INTFACE_HEADER">
+                                          <xs:complexType>
+                                             <xs:choice minOccurs="0" maxOccurs="33">
+                                                <xs:element name="BLOCK_TYPE" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="INTFACE_NAME" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="INTFACE_DESCR" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="INTFACE_PATH" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="INTFACE_FILE" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="DATE_FORMAT" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="MINUS_POS" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="WHERE_CLAUSE" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="VIEW_NAME" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="COLUMN_SEPARATOR" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="THOUSAND_SEPARATOR" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="DECIMAL_POINT" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="COLUMN_EMBRACE" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="FILE_LOCATION" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="DIRECTION" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="PROCEDURE_NAME" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="LAST_EXECUTED" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="EXECUTED_BY" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="LAST_INFO" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="SOURCE_NAME" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="SOURCE_OWNER" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="NOTE_TEXT_HEADER" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="ORDER_BY_CLAUSE" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="GROUP_ID" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="INFO_TEXT_HEADER" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="PRINT_DOC_INFO" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="FILE_LOCATION_DB" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="DIRECTION_DB" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="GROUP_DESCRIPTION" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="NOTE_TEXT_GROUP" nillable="true" minOccurs="0">
+                                                   <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                         <xs:maxLength value="200"/>
+                                                      </xs:restriction>
+                                                   </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="INTFACE_DETAILS" nillable="true" minOccurs="0">
+                                                   <xs:complexType>
+                                                      <xs:choice minOccurs="0" maxOccurs="1">
+                                                         <xs:element name="INTFACE_DETAIL">
+                                                            <xs:complexType>
+                                                               <xs:choice minOccurs="0" maxOccurs="18">
+                                                                  <xs:element name="COLUMN_NAME" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="DESCR_COLUMN_NAME" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="DATA_TYPE" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="POS" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="LENGTH" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="DECIMAL_LENGTH" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="AMOUNT_FACTOR" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="DEFAULT_VALUE" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="DEFAULT_WHERE" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="FLAGS" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="PAD_CHAR_RIGHT" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="PAD_CHAR_LEFT" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="CHANGE_DEFAULTS" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="ATTR_SEQ" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="SOURCE_COLUMN" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="NOTE_TEXT_DETAIL" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="INFO_TEXT_DETAIL" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="BLOCK_TYPE" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                               </xs:choice>
+                                                            </xs:complexType>
+                                                         </xs:element>
+                                                      </xs:choice>
+                                                   </xs:complexType>
+                                                </xs:element>
+                                                <xs:element name="METHOD_LISTS" nillable="true" minOccurs="0">
+                                                   <xs:complexType>
+                                                      <xs:choice minOccurs="0" maxOccurs="1">
+                                                         <xs:element name="METHOD_LIST">
+                                                            <xs:complexType>
+                                                               <xs:choice minOccurs="0" maxOccurs="11">
+                                                                  <xs:element name="EXECUTE_SEQ" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="MET_VIEW_NAME" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="MET_METHOD_NAME" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="MET_COLUMN_NAME" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="MET_COLUMN_VALUE" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="CONVERT_ATTR" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="NOTE_TEXT_METH_LIST" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="REFERENCES" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="ACTION" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="INFO_TEXT_METH_LIST" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="BLOCK_TYPE" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                               </xs:choice>
+                                                            </xs:complexType>
+                                                         </xs:element>
+                                                      </xs:choice>
+                                                   </xs:complexType>
+                                                </xs:element>
+                                                <xs:element name="COLUMN_MAPPING_LISTS" nillable="true" minOccurs="0">
+                                                   <xs:complexType>
+                                                      <xs:choice minOccurs="0" maxOccurs="1">
+                                                         <xs:element name="COLUMN_MAPPING_LIST">
+                                                            <xs:complexType>
+                                                               <xs:choice minOccurs="0" maxOccurs="6">
+                                                                  <xs:element name="CONV_LIST_ID" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="CONV_LIST_DESCR" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="COLS_USING_LIST" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="OLD_VALUE" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="NEW_VALUE" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                                  <xs:element name="BLOCK_TYPE" nillable="true" minOccurs="0">
+                                                                     <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                           <xs:maxLength value="200"/>
+                                                                        </xs:restriction>
+                                                                     </xs:simpleType>
+                                                                  </xs:element>
+                                                               </xs:choice>
+                                                            </xs:complexType>
+                                                         </xs:element>
+                                                      </xs:choice>
+                                                   </xs:complexType>
+                                                </xs:element>
+                                             </xs:choice>
+                                          </xs:complexType>
+                                       </xs:element>
+                                    </xs:choice>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:choice>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:all>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="INTFACE_DOCUMENTATION_REP">
+               <xs:complexType>
+                  <xs:choice minOccurs="0" maxOccurs="1">
+                     <xs:element name="INTFACE_HEADERS" nillable="true" minOccurs="0">
+                        <xs:complexType>
+                           <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                              <xs:element name="INTFACE_HEADER">
+                                 <xs:complexType>
+                                    <xs:choice minOccurs="0" maxOccurs="33">
+                                       <xs:element name="BLOCK_TYPE" type="xs:float" nillable="true" minOccurs="0"/>
+                                       <xs:element name="INTFACE_NAME" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="INTFACE_DESCR" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="INTFACE_PATH" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="INTFACE_FILE" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="DATE_FORMAT" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="MINUS_POS" type="xs:float" nillable="true" minOccurs="0"/>
+                                       <xs:element name="WHERE_CLAUSE" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="VIEW_NAME" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="COLUMN_SEPARATOR" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="THOUSAND_SEPARATOR" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="DECIMAL_POINT" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="COLUMN_EMBRACE" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="FILE_LOCATION" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="DIRECTION" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="PROCEDURE_NAME" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="LAST_EXECUTED" type="xs:dateTime" nillable="true" minOccurs="0"/>
+                                       <xs:element name="EXECUTED_BY" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="LAST_INFO" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="SOURCE_NAME" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="SOURCE_OWNER" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="NOTE_TEXT_HEADER" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="ORDER_BY_CLAUSE" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="GROUP_ID" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="INFO_TEXT_HEADER" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="PRINT_DOC_INFO" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="FILE_LOCATION_DB" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="DIRECTION_DB" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="GROUP_DESCRIPTION" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="NOTE_TEXT_GROUP" nillable="true" minOccurs="0">
+                                          <xs:simpleType>
+                                             <xs:restriction base="xs:string">
+                                                <xs:maxLength value="4000"/>
+                                             </xs:restriction>
+                                          </xs:simpleType>
+                                       </xs:element>
+                                       <xs:element name="INTFACE_DETAILS" nillable="true" minOccurs="0">
+                                          <xs:complexType>
+                                             <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                                                <xs:element name="INTFACE_DETAIL">
+                                                   <xs:complexType>
+                                                      <xs:choice minOccurs="0" maxOccurs="18">
+                                                         <xs:element name="COLUMN_NAME" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="DESCR_COLUMN_NAME" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="DATA_TYPE" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="POS" type="xs:float" nillable="true" minOccurs="0"/>
+                                                         <xs:element name="LENGTH" type="xs:float" nillable="true" minOccurs="0"/>
+                                                         <xs:element name="DECIMAL_LENGTH" type="xs:float" nillable="true" minOccurs="0"/>
+                                                         <xs:element name="AMOUNT_FACTOR" type="xs:float" nillable="true" minOccurs="0"/>
+                                                         <xs:element name="DEFAULT_VALUE" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="DEFAULT_WHERE" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="FLAGS" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="PAD_CHAR_RIGHT" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="PAD_CHAR_LEFT" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="CHANGE_DEFAULTS" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="ATTR_SEQ" type="xs:float" nillable="true" minOccurs="0"/>
+                                                         <xs:element name="SOURCE_COLUMN" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="NOTE_TEXT_DETAIL" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="INFO_TEXT_DETAIL" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="BLOCK_TYPE" type="xs:float" nillable="true" minOccurs="0"/>
+                                                      </xs:choice>
+                                                   </xs:complexType>
+                                                </xs:element>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="METHOD_LISTS" nillable="true" minOccurs="0">
+                                          <xs:complexType>
+                                             <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                                                <xs:element name="METHOD_LIST">
+                                                   <xs:complexType>
+                                                      <xs:choice minOccurs="0" maxOccurs="11">
+                                                         <xs:element name="EXECUTE_SEQ" type="xs:float" nillable="true" minOccurs="0"/>
+                                                         <xs:element name="MET_VIEW_NAME" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="MET_METHOD_NAME" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="MET_COLUMN_NAME" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="MET_COLUMN_VALUE" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="CONVERT_ATTR" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="NOTE_TEXT_METH_LIST" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="REFERENCES" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="ACTION" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="INFO_TEXT_METH_LIST" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="BLOCK_TYPE" type="xs:float" nillable="true" minOccurs="0"/>
+                                                      </xs:choice>
+                                                   </xs:complexType>
+                                                </xs:element>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="COLUMN_MAPPING_LISTS" nillable="true" minOccurs="0">
+                                          <xs:complexType>
+                                             <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                                                <xs:element name="COLUMN_MAPPING_LIST">
+                                                   <xs:complexType>
+                                                      <xs:choice minOccurs="0" maxOccurs="6">
+                                                         <xs:element name="CONV_LIST_ID" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="CONV_LIST_DESCR" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="COLS_USING_LIST" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="OLD_VALUE" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="NEW_VALUE" nillable="true" minOccurs="0">
+                                                            <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                  <xs:maxLength value="4000"/>
+                                                               </xs:restriction>
+                                                            </xs:simpleType>
+                                                         </xs:element>
+                                                         <xs:element name="BLOCK_TYPE" type="xs:float" nillable="true" minOccurs="0"/>
+                                                      </xs:choice>
+                                                   </xs:complexType>
+                                                </xs:element>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                    </xs:choice>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:choice>
+               </xs:complexType>
+            </xs:element>
+         </xs:all>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

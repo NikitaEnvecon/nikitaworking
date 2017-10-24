@@ -1,0 +1,223 @@
+-----------------------------------------------------------------------------------------
+--
+--  Module:   ACCRUL 
+--
+--  File:     160211_127349_ACCRUL.cdb
+--
+--  Purpose:  Modify direct_currency_rate_round column in currency_rate_tab.
+--
+--  Date     Sign      History
+--  ------   ------    ---------------------------------------------------------------------------
+--  160211   Nudilk    Bug 127349 Corrected.
+--------------------------------------------------------------------------------------------------
+ 
+PROMPT Starting 160211_127349_ACCRUL.cdb
+
+SET SERVEROUTPUT ON
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160211_127349_ACCRUL.cdb','Timestamp_1');
+PROMPT Modifying column currency_rate of currency_rate_tab 
+  
+BEGIN
+   IF NOT Database_SYS.Is_Db_Patch_Registered('ACCRUL', 127349) THEN
+      DELETE 
+      FROM currency_rate_tab
+      WHERE currency_rate IS NULL;
+      COMMIT;
+   END IF;
+END;
+/   
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160211_127349_ACCRUL.cdb','Timestamp_2');
+
+PROMPT Preparation to be able to set the CURRENCY_RATE column as not NULL.
+DECLARE      
+   CURSOR get_companies IS
+      SELECT company
+      FROM company_finance_tab;
+
+   TYPE comp_list IS TABLE OF VARCHAR2(20) INDEX BY PLS_INTEGER;
+   comp_list_ comp_list;
+
+   CURSOR get_rates (company_ IN VARCHAR2) IS
+      SELECT *
+      FROM currency_rate_tab
+      WHERE company = company_
+      AND direct_currency_rate IS NULL
+      ORDER BY ref_currency_code, currency_code;
+
+   TYPE rates_list IS TABLE OF currency_rate_tab%ROWTYPE INDEX BY PLS_INTEGER;
+   rates_list_ rates_list;
+
+   CURSOR get_curr_code_data (company_ IN VARCHAR2, currency_code_ IN VARCHAR2) IS
+      SELECT emu_currency_from_date, inverted, decimals_in_rate
+      FROM currency_code_tab
+      WHERE company = company_
+      AND currency_code = currency_code_;
+
+   curr_code_emu_date_     DATE;
+   ref_curr_code_emu_date_ DATE;
+   inverted_               VARCHAR2(5);
+   dummy_inverted_         VARCHAR2(5);
+   curr_code_emu_          VARCHAR2(5);
+   ref_curr_code_emu_      VARCHAR2(5);
+   decimals_in_rate_       NUMBER;
+   dummy_decimals_in_rate_ NUMBER;
+   prev_curr_code_         VARCHAR2(3);
+   prev_ref_curr_code_     VARCHAR2(3);
+
+   FUNCTION Calculate_Direct_Curr_Rate___ (
+      rec_                    IN Currency_Rate_Tab%ROWTYPE,
+      is_curr_code_emu_       IN VARCHAR2,
+      is_ref_curr_code_emu_   IN VARCHAR2,
+      ref_curr_inverted_      IN VARCHAR2) RETURN NUMBER
+   IS
+      currency_rate_             NUMBER;
+      inverted_                  VARCHAR2(5);
+   BEGIN   
+      IF (rec_.ref_currency_code != 'EUR') THEN
+         IF (is_ref_curr_code_emu_ = 'FALSE' AND is_curr_code_emu_ = 'TRUE') THEN
+            IF (ref_curr_inverted_ = 'FALSE') THEN
+               inverted_ := 'FALSE';  
+            ELSE
+               inverted_ := 'TRUE';
+            END IF;     
+         ELSIF (is_ref_curr_code_emu_ = 'TRUE' AND is_curr_code_emu_ = 'TRUE') THEN
+            inverted_ := 'FALSE';
+         ELSIF (is_ref_curr_code_emu_ = 'TRUE' AND is_curr_code_emu_ = 'FALSE') THEN 
+            inverted_ := 'FALSE';
+         ELSE
+            IF (ref_curr_inverted_ = 'FALSE') THEN
+               inverted_ := 'FALSE';  
+            ELSE
+               inverted_ := 'TRUE';
+            END IF;  
+         END IF;  
+      ELSE
+         IF (ref_curr_inverted_ = 'FALSE') THEN
+            inverted_ := 'FALSE';  
+         ELSE
+            inverted_ := 'TRUE';
+         END IF;  
+      END IF;
+
+      -- No special treament (triangulation handling) for old EMU currencies, so they could get incorrect values. EMU currencies are probably not used in any way nowdays
+      IF (inverted_ = 'TRUE') THEN
+         currency_rate_ := (1/(rec_.currency_rate/rec_.conv_factor));
+      ELSE
+         currency_rate_ := rec_.currency_rate/rec_.conv_factor;
+      END IF;
+      RETURN currency_rate_;
+   END Calculate_Direct_Curr_Rate___;
+BEGIN
+   IF NOT Database_SYS.Is_Db_Patch_Registered('ACCRUL', 127349) THEN
+
+      OPEN get_companies;
+      FETCH get_companies BULK COLLECT INTO comp_list_;
+      CLOSE get_companies;
+   
+      FOR i IN 1..comp_list_.COUNT LOOP
+         -- Reset prev_ variables when changing company
+         prev_curr_code_ := 'XXX';
+         prev_ref_curr_code_ := 'XXX';
+         OPEN get_rates(comp_list_(i));
+         LOOP
+            FETCH get_rates BULK COLLECT INTO rates_list_ LIMIT 10000;
+            FOR k IN 1..rates_list_.COUNT LOOP            
+               -- if ref currency and currency is same then copy the value from the rate column directly
+               IF (rates_list_(k).ref_currency_code = rates_list_(k).currency_code) THEN
+                  rates_list_(k).direct_currency_rate := 1;
+                  rates_list_(k).direct_currency_rate_round := 1;
+               ELSE               
+                  IF (prev_ref_curr_code_ != rates_list_(k).ref_currency_code) THEN
+                     prev_ref_curr_code_ := rates_list_(k).ref_currency_code;
+                     OPEN get_curr_code_data(rates_list_(k).company, rates_list_(k).ref_currency_code);
+                     FETCH get_curr_code_data INTO ref_curr_code_emu_date_, inverted_, dummy_decimals_in_rate_;
+                     CLOSE get_curr_code_data;
+                  END IF;
+   
+                  IF (ref_curr_code_emu_date_ <= rates_list_(k).valid_from) THEN
+                     ref_curr_code_emu_ := 'TRUE';
+                  ELSIF (ref_curr_code_emu_date_ IS NULL) OR (ref_curr_code_emu_date_ > rates_list_(k).valid_from) THEN
+                     ref_curr_code_emu_ := 'FALSE';
+                  END IF;
+   
+                  IF (prev_curr_code_ != rates_list_(k).currency_code) THEN
+                     prev_curr_code_ := rates_list_(k).currency_code;
+   
+                     OPEN get_curr_code_data(rates_list_(k).company, rates_list_(k).currency_code);
+                     FETCH get_curr_code_data INTO curr_code_emu_date_, dummy_inverted_, decimals_in_rate_;
+                     CLOSE get_curr_code_data;            
+                  END IF;
+   
+                  IF (curr_code_emu_date_ <= rates_list_(k).valid_from) THEN
+                     curr_code_emu_ := 'TRUE';
+                  ELSIF (curr_code_emu_date_ IS NULL) OR (curr_code_emu_date_ > rates_list_(k).valid_from) THEN
+                     curr_code_emu_ := 'FALSE';
+                  END IF;
+   
+                  rates_list_(k).direct_currency_rate := Calculate_Direct_Curr_Rate___(rates_list_(k),
+                                                                                       curr_code_emu_,
+                                                                                       ref_curr_code_emu_,
+                                                                                       inverted_);
+                  rates_list_(k).direct_currency_rate_round := ROUND(rates_list_(k).direct_currency_rate, NVL(decimals_in_rate_,9)); 
+               END IF;                                                                     
+            END LOOP;
+   
+            FORALL m IN 1..rates_list_.COUNT
+               UPDATE currency_rate_tab
+                  SET direct_currency_rate = rates_list_(m).direct_currency_rate,
+                      direct_currency_rate_round = rates_list_(m).direct_currency_rate_round
+               WHERE company = rates_list_(m).company
+               AND   valid_from = rates_list_(m).valid_from
+               AND   currency_type = rates_list_(m).currency_type
+               AND   currency_code = rates_list_(m).currency_code;         
+   
+            EXIT WHEN get_rates%NOTFOUND;
+   
+         END LOOP;
+         CLOSE get_rates;
+         -- commit after each company
+         COMMIT;
+      END LOOP;
+   END IF;
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160211_127349_ACCRUL.cdb','Timestamp_3');
+PROMPT Modifying column direct_currency_rate_round of currency_rate_tab 
+  
+BEGIN
+   IF NOT Database_SYS.Is_Db_Patch_Registered('ACCRUL', 127349) THEN
+      UPDATE currency_rate_tab r
+         SET direct_currency_rate_round = ROUND(direct_currency_rate, NVL((SELECT decimals_in_rate
+                                                                             FROM currency_code_tab c
+                                                                            WHERE c.company       = r.company
+                                                                              AND c.currency_code = r.currency_code),9))
+       WHERE direct_currency_rate_round IS NULL;       
+      COMMIT;
+   END IF;
+END;
+/   
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160211_127349_ACCRUL.cdb','Timestamp_4');
+PROMPT Modify some COLUMNS to mandatory in CURRENCY_RATE_TAB 
+  
+DECLARE
+   table_name_   VARCHAR2(30) := 'CURRENCY_RATE_TAB';   
+   columns_      Database_SYS.ColumnTabType;
+BEGIN
+   IF NOT Database_SYS.Is_Db_Patch_Registered('ACCRUL', 127349) THEN
+      Database_SYS.Reset_Column_Table(columns_);
+      Database_SYS.Set_Table_Column(columns_, 'CURRENCY_RATE',              'NUMBER', 'N');
+      Database_SYS.Set_Table_Column(columns_, 'DIRECT_CURRENCY_RATE',       'NUMBER', 'N');
+      Database_SYS.Set_Table_Column(columns_, 'DIRECT_CURRENCY_RATE_ROUND', 'NUMBER', 'N');
+      Database_SYS.Alter_Table(table_name_ , columns_, TRUE);       
+      Database_SYS.Register_Db_Patch('ACCRUL', 127349, 'Modified columns in CURRENCY_RATE_TAB.'); 
+      COMMIT;
+   END IF;      
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160211_127349_ACCRUL.cdb','Done');
+SET SERVEROUTPUT OFF

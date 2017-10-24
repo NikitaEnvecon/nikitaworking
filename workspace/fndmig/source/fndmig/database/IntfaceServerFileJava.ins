@@ -1,0 +1,183 @@
+-----------------------------------------------------------------------------
+--  Module : FNDMIG
+--
+--  Purpose: Inserting Java implementation of plsql method in Intface_Server_File_API
+--
+--  File   : IntfaceServerFile.ins
+--
+--  IFS Developer Studio Template Version 2.5
+--
+--  Date           Sign    History
+--  ------------   ------  --------------------------------------------------
+--  Nov 28, 2013   wawilk  created
+--  ------------   ------  --------------------------------------------------
+-----------------------------------------------------------------------------
+
+SHOW ERROR
+
+CREATE OR REPLACE AND COMPILE JAVA SOURCE NAMED "intfaceFile" AS
+import java.io.*;
+import java.sql.*;
+import java.text.*;
+import java.util.*;
+import oracle.sql.*;
+import oracle.jdbc.driver.*;
+
+public class intfaceFile {
+
+   private static String className = "intfaceFile";
+   private static String dateFormat = "yyyy-MM-dd HH:mm:ss";
+
+   private static String rPad(String s, int l) {
+      StringBuffer sb = new StringBuffer(s);
+      while ( sb.length() < l )
+         sb.append(" ");
+      return sb.toString();
+   }
+
+   private static String lPad(String s, int l) {
+      StringBuffer sb = new StringBuffer();
+      while ( sb.length() < (l - s.length()) )
+         sb.append(" ");
+      sb.append(s);
+      return sb.toString();
+   }
+
+   private static String numFormat(long n) {
+      if ( n == 0 ) return "0";
+      if ( n/1024 < 1 ) return "1";
+      NumberFormat formatter = new DecimalFormat("#,###,###,###");
+      return formatter.format(n/1024);
+   }
+
+   public static String exists(String dir, String fileName) throws Exception {    
+      System.out.println(className + ".exists " + dir + File.separatorChar + fileName);
+      if ( (new File(dir + File.separatorChar + fileName)).exists() ) return "TRUE";
+      else                                                            return "FALSE";
+   }
+
+   public static String delete(String dir, String fileName) throws Exception {
+      System.out.println(className + ".delete " + dir + File.separatorChar + fileName);
+      File file = new File(dir + File.separatorChar + fileName);
+      if ( file.delete() ) return "TRUE";
+      else                 return "FALSE";
+   }
+
+   public static String rename(String dir, String fileName, String newName) throws Exception {
+      System.out.println(className + ".rename " + dir + File.separatorChar + fileName + " to " + dir + File.separatorChar + newName);
+      File oldFile = new File(dir + File.separatorChar + fileName);
+      File newFile = new File(dir + File.separatorChar + newName);
+      if ( oldFile.renameTo(newFile) ) return "TRUE";
+      else                             return "FALSE";
+   }
+
+   public static String copy(String fromDir, String toDir, String fromFile, String toFile) throws Exception {
+      System.out.println(className + ".copy " + fromDir + File.separatorChar + fromFile + " to " + toDir + File.separatorChar + toFile);
+      File oldFile = new File(fromDir + File.separatorChar + fromFile);
+      File newFile = new File(toDir + File.separatorChar + toFile);
+      FileReader source = new FileReader(oldFile);
+      FileWriter target = new FileWriter(newFile);
+      int c;
+      while ((c = source.read()) != -1)
+         target.write(c);
+      source.close();
+      target.close();
+      return "TRUE";
+   }
+
+   public static String move(String fromDir, String toDir, String fromFile, String toFile) throws Exception {
+      System.out.println(className + ".move " + fromDir + File.separatorChar + fromFile + " to " + toDir + File.separatorChar + toFile);
+      if ( toDir.equals(fromDir) )
+         return rename(fromDir, fromFile, toFile);
+      if ( copy(fromDir, toDir, fromFile, toFile) == "TRUE" )
+         return delete(fromDir, fromFile);
+      return "FALSE";
+   }
+
+   public static oracle.sql.ARRAY getFileList(String startDir) throws Exception {
+      System.out.println(className + ".getFileList " + startDir);
+
+      String[] listOfDirectories = null;
+      String[] listOfFiles       = null;
+      String[] listOfAll         = null;
+
+      File dir = new File(startDir);
+
+      FileFilter directoryFilter = new FileFilter() {
+         public boolean accept(File file) {
+            return file.isDirectory();
+         }
+      };
+      File[] files = dir.listFiles(directoryFilter);
+
+      if ( files != null ) {
+         listOfDirectories = new String[files.length];      
+         for (int i = 0; i < files.length; i++) {
+            Format formatter = new SimpleDateFormat(dateFormat);
+            String s = formatter.format(new Date(files[i].lastModified()));
+            listOfDirectories[i] = s + rPad(lPad("<DIR>",15),19) + files[i].getName();
+         }
+      }
+
+      FileFilter fileFilter = new FileFilter() {
+         public boolean accept(File file) {
+            return !file.isDirectory();
+         }
+      };
+
+      files = dir.listFiles(fileFilter);
+
+      if ( files != null ) {
+         listOfFiles = new String[files.length];      
+         for (int i = 0; i < files.length; i++) {
+            Format formatter = new SimpleDateFormat(dateFormat);
+            String s = formatter.format(new Date(files[i].lastModified()));
+            listOfFiles[i] = s + rPad(lPad("" + numFormat(files[i].length()) + " KB",15),19) + files[i].getName();
+         }
+      }
+      listOfAll = new String[listOfDirectories.length + listOfFiles.length + 1];
+            
+      listOfAll[0] = "Directory of " + startDir;
+      for (int i = 0; i < listOfDirectories.length; i++)
+         listOfAll[i + 1] = listOfDirectories[i];
+      for (int i = 0; i < listOfFiles.length; i++)
+         listOfAll[i + listOfDirectories.length + 1] = listOfFiles[i];
+
+      Connection      c = new OracleDriver().defaultConnection();
+      ArrayDescriptor d = ArrayDescriptor.createDescriptor("INTFACE_STRARRAY", c);
+      return new oracle.sql.ARRAY(d, c, listOfAll);
+   } // getFileList
+
+   public static oracle.sql.ARRAY getFileListShort(String startDir) throws Exception {
+      System.out.println(className + ".getFileListShort " + startDir);
+
+      String[] listOfFiles = null;
+
+      File dir = new File(startDir);
+
+      FileFilter fileFilter = new FileFilter() {
+         public boolean accept(File file) {
+            return !file.isDirectory();
+         }
+      };
+
+      File[] files = dir.listFiles(fileFilter);
+
+      if ( files != null ) {
+         listOfFiles = new String[files.length];
+         for (int i = 0; i < files.length; i++) {
+            Format formatter = new SimpleDateFormat(dateFormat);
+            String s = formatter.format(new Date(files[i].lastModified()));
+            listOfFiles[i] = files[i].getName() + ";" + numFormat(files[i].length()) + " KB;" + s;
+         }
+      }
+      Connection      c = new OracleDriver().defaultConnection();
+      ArrayDescriptor d = ArrayDescriptor.createDescriptor("INTFACE_STRARRAY", c);
+      return new oracle.sql.ARRAY(d, c, listOfFiles);
+   } // getFileListShort
+}
+/
+
+SHOW ERROR
+
+

@@ -1,0 +1,49 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceRules
+--  Component:    FNDMIG
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+VIEW Intface_Rules_Lov IS
+   Prompt = 'Intface Rules LOV'
+   Rule_Id.Flags = 'K---L'
+   Rule_Value.Flags = 'A---L'
+   Rule_Value.Datatype = 'STRING(200)'
+   Description.Flags = 'A---L'
+   Description.Datatype = 'STRING(100)'
+   Description.Prompt = 'Description'
+   Rule_Flag.Flags = 'A---L'
+SELECT rule_id                        rule_id,
+       rule_value                     rule_value,
+       description                    description,
+       rule_flag                      rule_flag
+  FROM intface_default_rules
+ WHERE App_Context_SYS.Get_Value('INTFACE_RULES_API.INTF_PROCEDURE_NAME_') LIKE procedure_name
+UNION
+SELECT rule_id                        rule_id,
+       rule_value                     rule_value,
+       description                    description,
+       rule_flag                      rule_flag
+  FROM intface_default_rules
+ WHERE procedure_name = '*'
+AND rule_id NOT IN (SELECT rule_id
+                      FROM intface_default_rules
+                     WHERE App_Context_SYS.Get_Value('INTFACE_RULES_API.INTF_PROCEDURE_NAME_') LIKE procedure_name)
+AND rule_id NOT IN (SELECT rule_id 
+                      FROM intface_default_rules 
+                     WHERE App_Context_SYS.Get_Value('INTFACE_RULES_API.INTF_PROCEDURE_NAME_') = 'EXCEL_MIGRATION');
+

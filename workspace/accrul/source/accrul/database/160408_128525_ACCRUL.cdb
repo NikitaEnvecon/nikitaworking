@@ -1,0 +1,34 @@
+-----------------------------------------------------------------------------------------
+--
+--  Module:   ACCRUL 
+--
+--  File:     160408_128525_ACCRUL.cdb
+--
+--  Purpose:  Modify correction column in EXT_TRANSACTIONS_TAB.
+--
+--  Date     Sign      History
+--  ------   ------    ---------------------------------------------------------------------------
+--  160408   SAVMLK    Bug 128525 Corrected.
+--------------------------------------------------------------------------------------------------
+ 
+PROMPT Starting 160408_128525_ACCRUL.cdb
+
+SET SERVEROUTPUT ON
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160408_128525_ACCRUL.cdb','Timestamp_1');
+PROMPT Modifying column FILE_TYPE of EXT_FILE_TYPE_TAB 
+  
+BEGIN
+   IF NOT Database_SYS.Is_Db_Patch_Registered('ACCRUL', 128525) THEN
+       UPDATE EXT_FILE_TYPE_TAB E
+       SET   E.api_to_call_input = 'Ext_Currency_API.Start_Ext_Currency'
+       WHERE E.file_type = 'ExtCurrency'
+       AND   E.api_to_call_input IS NULL ;
+           
+      Database_SYS.Register_Db_Patch('ACCRUL', 128525, 'Modified api_to_call_input.'); 
+      COMMIT;
+   END IF;
+END;
+/   
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160408_128525_ACCRUL.cdb','Done');
+SET SERVEROUTPUT OFF

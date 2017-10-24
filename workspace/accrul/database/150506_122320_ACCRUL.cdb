@@ -1,0 +1,55 @@
+-----------------------------------------------------------------------------
+--  Module : ACCRUL
+--
+--  File   : 150506_122320_ACCRUL.cdb
+--
+--  IFS Developer Studio Template Version 2.6
+--
+--  Date     Sign    History
+--  ------   ------  --------------------------------------------------
+--  150506   Chwilk  Bug 122320, Created.
+--  ------   ------  --------------------------------------------------
+-----------------------------------------------------------------------------
+
+SET SERVEROUTPUT ON
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL', '150506_122320_ACCRUL.cdb', 'Timestamp_1');
+
+PROMPT Changing ACCRUL_SESSION_PID_TAB to a temporary table
+
+DECLARE
+   table_name_    VARCHAR2(30) := 'ACCRUL_SESSION_PID_TAB';
+   index_name_rk_ VARCHAR2(30) := 'ACCRUL_SESSION_PID_RK';
+   index_name_pk_ VARCHAR2(30) := 'ACCRUL_SESSION_PID_PK';
+   columns_       Database_SYS.ColumnTabType;
+BEGIN
+   IF NOT Database_SYS.Is_Db_Patch_Registered('ACCRUL', 122320) THEN
+      
+      Database_SYS.Remove_Table(table_name_);      
+      
+      Database_SYS.Set_Table_Column(columns_, 'SESSION_ID', 'NUMBER', 'N');
+      Database_SYS.Set_Table_Column(columns_, 'POSTING_COMBINATION_ID', 'NUMBER', 'N'); 
+      Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'N', 'sys_guid()');     
+
+      Database_SYS.Create_Temporary_Table(table_name_, columns_, TRUE);
+      
+      Database_SYS.Reset_Column_Table(columns_);      
+      Database_SYS.Set_Table_Column (columns_, 'ROWKEY');     
+      
+      Database_SYS.Create_Constraint(table_name_, index_name_rk_, columns_, type_ => 'U', show_info_ => TRUE);
+      
+      Database_SYS.Reset_Column_Table(columns_);      
+      Database_SYS.Set_Table_Column (columns_, 'SESSION_ID');  
+      Database_SYS.Set_Table_Column (columns_, 'POSTING_COMBINATION_ID');      
+      
+      Database_SYS.Create_Constraint(table_name_, index_name_pk_, columns_, type_ => 'P', show_info_ => TRUE);
+
+      Database_SYS.Register_Db_Patch('ACCRUL', 122320, 'Bad performance in GL Balance Analysis');
+      COMMIT;
+   END IF;
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL', '150506_122320_ACCRUL.cdb', 'Done');
+
+SET SERVEROUTPUT OFF

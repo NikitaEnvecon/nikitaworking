@@ -1,0 +1,3043 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ifs.Fnd.AccessProvider</name>
+    </assembly>
+    <members>
+        <member name="T:Ifs.Fnd.AccessProvider.FndApfAsyncInvoke">
+            <summary>
+            Glboal class for handling abort requests for asynchonous invokes
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndApfAsyncInvoke.BeginAsyncInvoke">
+            <summary>
+            Returns the singelton instance. Accessing this property results in
+            setting asyncInvokeInProgress property to true and also InvokeAborted to false.
+            Should only be used in combination with "using"-statement
+            
+            e.g. Using(FndApfAsyncInvoke f = FndApfAsyncInvoke.Instance){}
+            Exiting the "using"-statement will result in setting asyncInvokeInProgress to false
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndApfAsyncInvoke.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndApfAsyncInvoke.Dispose">
+            <summary>
+            Dispose method, called when "using"-statement is exited
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndApfAsyncInvoke.Dispose(System.Boolean)">
+            <summary>
+            Dispose method taking a boolean
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndApfAsyncInvoke.AsyncAllowed">
+            <summary>
+            A switch to turn off/on cancel search functionality
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndApfAsyncInvoke.AsyncInvokeInProgress">
+            <summary>
+            Indicates if a asychronous invoke is in progress, (if we are withing a 
+            using(FndApfAsyncInvoke...) statement)
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndApfAsyncInvoke.MonitorThread">
+            <summary>
+            Monitor thread, this variable is set before a thread goes into Monitor.Enter to indicate
+            which thread is to be aborted if abort is requested.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndApfAsyncInvoke.InvokeAborted">
+            <summary>
+            This flag is set if a asyncronous invoke was aborted
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndApfAsyncInvoke.Instance">
+            <summary>
+            Returns the singelton instance
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndApfFetchMonitor">
+            <summary>
+            FndApfFetchMonitor is used to make aborting search/populate fetches of
+            keys into cRecordlistDataField possible.   
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndApfFetchMonitor.Dispose(System.Boolean)">
+            <summary>
+            Overridable Dispose(bool)
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndApfFetchMonitor.Dispose">
+            <summary>
+            Called when leaving a using statement. Sets fetch in progress to false.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndApfFetchMonitor.FetchInProgress">
+            <summary>
+            Indicates if an abortable fetch is in progress. 
+            Fetch in progress is set when an Instance is requested. See Instance property.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndApfFetchMonitor.FetchAborted">
+            <summary>
+            Indicates if the fetch has been aborted. This flag is read between 
+            each fetch.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndApfFetchMonitor.Instance">
+            <summary>
+            Returns the instance and sets the FetchInProgress flag to true.
+            Use this method in combination with a using statement as this flag
+            gets cleared on disposed.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndWhatsThisFetcher">
+            <summary>
+            Translation functionality through static methods/event
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndWhatsThisFetcher.ReadTermFile(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="termFile"></param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndWhatsThisFetcher.ReadTermFile(System.Reflection.Assembly)">
+            <summary>
+            TODO: This method is empty and is only here to prevent build from breaking. The prjmsp component must
+            remove the call to this method.
+            </summary>
+            <param name="termFile"></param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndWhatsThisFetcher.InitializeConnection(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Initializes the FndTranslation with an connection object.
+            </summary>
+            <param name="_connection"></param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndWhatsThisFetcher.GetWhatsThis(System.String,System.String)">
+            <summary>
+            Gets the whats this text.
+            </summary>
+            <param name="context">The context of the calling component. </param>
+            <param name="controlName">The name of the control. </param>
+            <returns>The translated text. </returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndWhatsThisFetcher.GetUsageVersionIdDisplayType(System.String,System.String)">
+            <summary>
+            Gets the Term Usage Version Id and Display Type for a control
+            </summary>
+            <param name="context">The context of the calling component.</param>
+            <param name="controlName">The name of the control.</param>
+            <returns>Term Usage Version Id and Display Type</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndWhatsThisFetcher.GetTranslatedItemKeyCandidates(System.String)">
+            <summary>
+            Creates a list of possible TranslatedItems key names based on 
+            the name of the control.
+            </summary>
+            <param name="controlName">Name of the control</param>
+            <returns>List of key cnadidates</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndWhatsThisFetcher.WhatsThis(System.String,System.String)">
+            <summary>
+            Retrives the whatsthistext for the specified keys
+            </summary>
+            <param name="context"></param>
+            <param name="controlName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndWhatsThisFetcher.GetWhatsThisText(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="languageCode"></param>
+            <param name="termUsageVersionId"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.InternalReauthenticateDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.InternalReauthenticateDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.InternalReauthenticateDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Activity.FndActivityCommand">
+            <summary>
+            FndActivityCommand is used for generated C# ActivityHandler Wrappers
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndCommandBase">
+            <summary>
+            Base class for all commands
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndCommandBase.#ctor">
+            <summary>
+            Initializes a new instance of the FndCommandBase class
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndCommandBase.#ctor(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Initializes a new instance of the FndCommandBase class
+            </summary>
+            <param name="connection">Connection to use</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndCommandBase.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext)">
+            <summary>
+            Initializes a new instance of the FndCommandBase class
+            </summary>
+            <param name="activityContext">Connection from ActivityContext to use</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndCommandBase.#ctor(Ifs.Fnd.AccessProvider.FndConnection,System.String)">
+            <summary>
+            Initializes a new instance of the FndCommandBase class
+            </summary>
+            <param name="connection">Connection to use</param>
+            <param name="commandText">Command text</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndCommandBase.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext,System.String)">
+            <summary>
+            Initializes a new instance of the FndCommandBase class
+            </summary>
+            <param name="activityContext">Connection to use</param>
+            <param name="commandText">Command text</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndCommandBase.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the FndCommandBase class
+            </summary>
+            <param name="commandText">Command text</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndCommandBase.GetConnection">
+            <summary>
+            Gets the FndConnection instance, regardless if it's coming from an ActivityContext or not.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndCommandBase.CheckConnection">
+            <summary>
+            Checks that the connection is set before invokation
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndCommandBase.ToString">
+            <summary>
+            Formats the command to a string
+            </summary>
+            <returns>String representation</returns>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndCommandBase.CommandText">
+            <summary>
+            Gets or sets the command text
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndCommandBase.Connection">
+            <summary>
+            Gets or sets the connection. If ActivityContext is set, Connection will be null.
+            Setting Connection will reset ActivityContext
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndCommandBase.ActivityContext">
+            <summary>
+            Gets or sets ActivityContext used to call server instead when no FndConnection instance is available.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommand.#ctor">
+            <summary>
+            Initializes a new instance of the FndActivityCommand class
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommand.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext)">
+            <summary>
+            Initializes a new instance of the FndActivityCommand class
+            </summary>
+            <param name="context">Activity context</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommand.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext,System.String)">
+            <summary>
+            Initializes a new instance of the FndActivityCommand class
+            </summary>
+            <param name="context">Activity context</param>
+            <param name="commandText">Command text</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommand.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the FndActivityCommand class
+            </summary>
+            <param name="commandText">Command text</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommand.ExecuteReader(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Invokes a method with query protocol
+            </summary>
+            <param name="row">The condition</param>
+            <returns>The result array as a FndDataTable</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommand.ExecuteReader(Ifs.Fnd.Data.FndDataRow,Ifs.Fnd.Data.FndDataTable)">
+            <summary>
+            Invokes a method with query protocol
+            </summary>
+            <param name="row">The condition</param>
+            <param name="destination">The destination FndDataTable to receive the result array</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommand.ExecuteNonQuery(System.Object)">
+            <summary>
+            Invokes a server method with in/out protocol
+            </summary>
+            <param name="body">The in/out request/response body</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommand.ExecuteNonQuery(System.Object,System.Object)">
+            <summary>
+            Invokes a method with in/out protocol
+            </summary>
+            <param name="request">The sent request body</param>
+            <param name="response">The response body to receive the result</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommand.CheckConnection">
+            <summary>
+            Checks that a connection is set
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection">
+            <summary>
+            Collection of FndActivityCommand objects.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection.#ctor">
+            <summary>
+            Initializes a new instance of the FndActivityCommandCollection class
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext)">
+            <summary>
+            Initializes a new instance of the FndActivityCommandCollection class
+            </summary>
+            <param name="context">Activity context</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection.Insert(System.Int32,Ifs.Fnd.AccessProvider.Activity.FndActivityCommand)">
+            <summary>
+            Inserts an element into the Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection at the specified index.  
+            </summary>
+            <param name="index">The zero-based index at which value should be inserted.</param>
+            <param name="command">The Ifs.Fnd.AccessProvider.Activity.FndActivityCommand to insert.</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection.CopyTo(Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection,System.Int32)">
+            <summary>
+            The CopyTo method copies all elements of the collection to the specified <see cref="T:Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection"/>, beginning at the specified index.
+            </summary>
+            <param name="commands">Contains an <see cref="T:Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection"/> that receives the elements of the collections</param>
+            <param name="index">Contains the zero-based index in array where the CopyTo method starts copying the collection. </param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection.Add(Ifs.Fnd.AccessProvider.Activity.FndActivityCommand)">
+            <summary>
+            Add a new command to collection
+            </summary>
+            <param name="command">The new command</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection.Add">
+            <summary>
+            Add a new command to the collection
+            </summary>
+            <returns>The new command</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection.Add(System.String)">
+            <summary>
+            Add a new command to the collection
+            </summary>
+            <param name="commandText">The CommandText for the new command</param>
+            <returns>The new command</returns>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityCommandCollection.ActivityContext">
+            <summary>
+            Gets or sets the activity context
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Activity.FndActivityComponentBase">
+            <summary>
+            Base Component which provides activity Context
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.Activity.FndActivityComponentBase.activityContext">
+            <summary>
+            Activity Context
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityComponentBase.#ctor">
+            <summary>
+            Creates a FndActivityComponentBase instance
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityComponentBase.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Creates a FndActivityComponentBase instance and associates it with the specified container.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityComponentBase.#ctor(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Creates a FndActivityComponentBase instance
+            </summary>
+            <param name="connection">server connection</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityComponentBase.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityComponentBase.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Activity.FndActivityContext">
+            <summary>
+            ActivityContext provides fuctionality for server interaction within an activity. An object of this instance can be activated with an URL containing information for the generated RequestContext that will be generated for the server invokes.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.#ctor">
+            <summary>
+            Initializes a new instance of the FndActivityContext class
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the FndActivityContext class and associates it with the specified container.
+            </summary>
+            <param name="container">Container</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.#ctor(Ifs.Fnd.AccessProvider.FndConnection,System.String)">
+            <summary>
+            Initializes a new instance of the FndActivityContext class
+            </summary>
+            <param name="connection">Connection</param>
+            <param name="url">Url as string</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.#ctor(Ifs.Fnd.AccessProvider.FndConnection,System.String,System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the FndActivityContext class
+            </summary>
+            <param name="connection">Connection</param>
+            <param name="url">Url as string</param>
+            <param name="container">component collection of parent</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.#ctor(Ifs.Fnd.AccessProvider.FndConnection,Ifs.Fnd.Core.FndUrlAddress)">
+            <summary>
+            Initializes a new instance of the FndActivityContext class
+            </summary>
+            <param name="connection">Connection</param>
+            <param name="urlAddress">Url address object</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.#ctor(Ifs.Fnd.AccessProvider.FndConnection,Ifs.Fnd.Core.FndUrlAddress,System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the FndActivityContext class
+            </summary>
+            <param name="connection">Connection</param>
+            <param name="urlAddress">Url address object</param>
+            <param name="container">component collection of parent</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext)">
+            <summary>
+            Constructor using other FndActivityContext for connection initialization
+            </summary>
+            <param name="sibling">Sibling FndActivityContext containing connection</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext,System.ComponentModel.IContainer)">
+            <summary>
+            Constructor using other FndActivityContext for connection initialization
+            </summary>
+            <param name="sibling">Sibling FndActivityContext containing connection</param>
+            <param name="container">component collection of parent</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.CopyFrom(Ifs.Fnd.AccessProvider.Activity.FndActivityContext)">
+            <summary>
+            Copies information from an existing FndActivityContext
+            </summary>
+            <param name="activityContext">The source FndActivityContext</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.Invoke(System.String,System.String,System.Object)">
+            <summary>
+            Performes an server invocation. The request context for this invokation will be generated from the URL that this object was activated with.
+            </summary>
+            <param name="intface">The server interface</param>
+            <param name="operation">The operation in the interface</param>
+            <param name="body">The in/out parameter for the invocation</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.Invoke(System.String,System.String,System.Object,System.Object)">
+            <summary>
+            Performes an server invocation. The request context for this invokation will be generated from the URL that this object was activated with.
+            </summary>
+            <param name="intface">The server interface</param>
+            <param name="operation">The operation in the interface</param>
+            <param name="request">The request sent in the invocation</param>
+            <param name="response">The response retrieved from the invocation</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.Invoke(System.String,System.String,System.Object,System.Object,System.String)">
+            <summary>
+            Performes an server invocation. The request context for this invokation will be generated from the URL that this object was activated with.
+            </summary>
+            <param name="intface">The server interface</param>
+            <param name="operation">The operation in the interface</param>
+            <param name="request">The request sent in the invocation</param>
+            <param name="response">The response retrieved from the invocation</param>
+            <param name="runAs">Run as value</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.InvokeSync(System.String,System.String,System.Object)">
+            <summary>
+            Performes an server invocation. The request context for this invokation will be generated from the URL that this object was activated with.
+            This is ignores the value of AsynchronousMode and calls are made as AsynchronousMode was false
+            </summary>
+            <param name="intface">The server interface</param>
+            <param name="operation">The operation in the interface</param>
+            <param name="body">The in/out parameter for the invocation</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.InvokeSync(System.String,System.String,System.Object,System.Object)">
+            <summary>
+            Performes an server invocation. The request context for this invokation will be generated from the URL that this object was activated with.
+            This is ignores the value of AsynchronousMode and calls are made as AsynchronousMode was false
+            </summary>
+            <param name="intface">The server interface</param>
+            <param name="operation">The operation in the interface</param>
+            <param name="request">The request sent in the invocation</param>
+            <param name="response">The response retrieved from the invocation</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.EnableGenericAspect(System.String)">
+            <summary>
+            Enables an Aspect for this activity context.
+            Enabling an aspect tells the server layer that a configured aspect for the entity view should be included 
+            if existing.
+            </summary>
+            <remarks>
+            This method only includes or excludes an aspect attribute from the result views. For an aspect to be available
+            to a feature the aspect entity must have been configured enabled for the entity views in the server layer
+            prior to enabling it in the client. 
+            </remarks>
+            <param name="aspect">The aspect name to enable</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.Url">
+            <summary>
+            Gets the url string that activated this activity context
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.UrlAddress">
+            <summary>
+            Gets the url address object that activated this activity context
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.CallerInformation">
+            <summary>
+            Caller information, used for debugging
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.ApplicationContext">
+            <summary>
+            Gets the ApplicationContext available for this activity context
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.PlSqlContext">
+            <summary>
+            Gets the PlSqlContext available for this activity context
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.InteractiveMode">
+            <summary>
+            Tell if the server connection should allow any UI to show during a call to invoke.
+            This should only be changed temporary for some specific use cases. The caller is 
+            responsible to reset the value to the former value when done.
+            Example: 
+            bool interactiveMode = fndActivityContext1.InteractiveMode;
+            fndActivityContext1.InteractiveMode = false;
+            fndActivityContext1.Invoke(...);
+            fndActivityContext1.InteractiveMode = interactiveMode;
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityContext.AsynchronousMode">
+            <summary>
+            Tell if the server connection should use asynchronous calls.
+            This should only be changed temporary for some specific use cases. The caller is 
+            responsible to reset the value to the former value when done.
+            Example: 
+            bool asynchronousMode = fndActivityContext1.AsynchronousMode;
+            fndActivityContext1.AsynchronousMode = false;
+            fndActivityContext1.Invoke(...);
+            fndActivityContext1.AsynchronousMode = asynchronousMode;
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter">
+            <summary>
+            Manages query/save/prepare/dirty for generated datasets
+            </summary>
+            
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Creates a FndActivityDataAdapter instance and associates it with the specified container.
+            </summary>
+            <param name="container">component collection of parent</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext)">
+            <summary>
+            Custom constructor. Initilizes the activity data adapter
+            and sets its <see cref="T:Ifs.Fnd.AccessProvider.Activity.FndActivityContext"/> field.
+            </summary>
+            <param name="context">An FndActivityContext object.</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext,System.ComponentModel.IContainer)">
+            <summary>
+            Custom constructor. Initilizes the activity data adapter
+            and sets its <see cref="T:Ifs.Fnd.AccessProvider.Activity.FndActivityContext"/> field.
+            </summary>
+            <param name="context">An FndActivityContext object.</param>
+            <param name="container">component collection of parent</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.CreateCommand">
+            <summary>
+            Creates a new command
+            </summary>
+            <returns>The new command</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.CreateCommand(System.String)">
+            <summary>
+            Creates a new command
+            </summary>
+            <param name="commandText">The command text</param>
+            <returns>The new command text</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.OnModifyDeferredPopulateCondition(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Raises the event ModifyDeferredPopulateCondition
+            </summary>
+            <param name="condition">The condition datarow</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.Fill">
+            <summary>
+            Fills the dataset by calling the SelectCommand
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.Fill(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Fills the dataset by calling the SelectCommand with default query options (FndQueryOptions.DefaultOptions)
+            </summary>
+            <param name="condition">Query-by-example condition</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.Fill(Ifs.Fnd.Data.FndDataRow,Ifs.Fnd.Data.FndQueryOptions)">
+            <summary>
+            Fills the dataset by calling the SelectCommand
+            </summary>
+            <param name="condition">Query-by-example condition</param>
+            <param name="queryOptions">Options with maxrows and skiprows</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.Fill(Ifs.Fnd.Data.FndDataRow,Ifs.Fnd.Data.FndQueryOptions,System.Int32,Ifs.Fnd.AccessProvider.Activity.FndQueryChunkNotifyDelegate,System.Object)">
+            <summary>
+            Fills the dataset by calling the SelectCommand
+            </summary>
+            <param name="condition">Query-by-example condition</param>
+            <param name="queryOptions">Options with maxrows and skiprows</param>
+            <param name="initialQueryChunkSize">Number of rows to get before invoking longRunningQueryNotify delegate</param> 
+            <param name="queryChunkNotify">Delegate to notify/check whenever to continue fetching from server</param>
+            <param name="tag">Custom data storage to which is sent to the queryChunkNotify delegate</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.Populate(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Invokes the populate method
+            </summary>
+            <param name="row">Row containing keys, include/exclude flags for attributes</param>
+            <returns>Requested attributes</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.Prepare(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Preparing a row by calling the prepare command
+            </summary>
+            <param name="row">The row to prepare</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.Get(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Getting a row by calling the select command
+            </summary>
+            <param name="row">The row to get</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.Update">
+            <summary>
+            Calls the save command for all dirty rows
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.FindRow(System.String,Ifs.Fnd.Data.FndDataRow@)">
+            <summary>
+            Finds a data row with specific identity. 
+            This method searches each connected table, it's rows and their child structures.
+            </summary>
+            <param name="identity">Row identity</param>
+            <param name="row">The row if found</param>
+            <returns>Returns true if the row is found and false otherwise</returns>
+        </member>
+        <member name="E:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.DeferredPopulate">
+            <summary>
+            Raised when deferred populate is called.
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.ModifyDeferredPopulateCondition">
+            <summary>
+            Raised before calling deferred populate, the developer can hook this event to send a custom condition to adaptor fill method.
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.AfterFilled">
+            <summary>
+            Raised after filling the data adaptor, developer can hook this event to carry out post fill operations like sorting, filtering etc.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.ActivityHandler">
+            <summary>
+            The ActivityHandler used for server calls
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.ActivityContext">
+            <summary>
+            Activity context for server access
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.DataSet">
+            <summary>
+            The dataset containing the data to work with
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.SelectCommand">
+            <summary>
+            The command in the ActivityHandler to call to fill the dataset
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.SaveCommand">
+            <summary>
+            The command in the ActivityHandler to call to save dirty data
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.PopulateCommand">
+            <summary>
+            The command in the ActivityHandler to do deferred populate on a row
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.PrepareCommand">
+            <summary>
+            The command in the ActivityHandler to call to prepare a new row
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.Deferred">
+            <summary>
+            Specifies whether the populate is deferred or not
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.Filled">
+            <summary>
+            Specifies whether the data adaptor is filled or not
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.DeferredPopulateRequestMonitor">
+            <summary>
+            Gets or sets the DeferredPopulateRequestMonitor associated with the data adaptor
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityDataAdapter.DataMemberAccesses">
+            <summary>
+            Collection of datamembers within dataset accessed from code
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Activity.FndQueryChunkNotifyDelegate">
+            <summary>
+            Callback delegate for nofify that a long running query threshold limit has been hit.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Activity.FndDeferredPopulateConditionEventHandler">
+            <summary>
+            Event handler used for setting a custom condition for data adaptor deferred populate.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Activity.FndDeferredPopulateConditionEventArgs">
+            <summary>
+            Eventarguments for setting a custom condition for data adaptor deferred populate.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndDeferredPopulateConditionEventArgs.#ctor(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.Windows.Forms.FndDeferredPopulateConditionEventArgs object
+            with an initial query condition.
+            </summary>
+            <param name="condition">The query condition</param>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndDeferredPopulateConditionEventArgs.Condition">
+            <summary>
+            Gets the query condition for the deferred populate call
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Activity.FndActivityHandlerBase">
+            <summary>
+            Base class for generated activity handler wrappers
+            </summary>
+            
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityHandlerBase.#ctor">
+            <summary>
+            Initializes a new instance of the FndActivityHandlerBase class
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityHandlerBase.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext)">
+            <summary>
+            Initializes a new instance of the FndActivityHandlerBase class
+            </summary>
+            <param name="context">Activity context</param>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Activity.FndActivityHandlerBase.ActivityContext">
+            <summary>
+            Gets or sets the activity context
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Activity.FndActivityQueryRow">
+            <summary>
+            Provides parameter support for activity handler query protocol methods
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityQueryRow.#ctor(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Initializes a new instance of the FndActivityQueryRow class
+            </summary>
+            <param name="condition">Condition used for query operation</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityQueryRow.#ctor(Ifs.Fnd.Data.FndDataRow,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the FndActivityQueryRow class.
+            This constructor is a candidate of removal.
+            </summary>
+            <param name="condition">Condition used for query operation</param>
+            <param name="maxRows">Max number of rows</param>
+            <param name="skipRows">Number of rows to skip</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityQueryRow.#ctor(Ifs.Fnd.Data.FndDataRow,Ifs.Fnd.Data.FndQueryOptions)">
+            <summary>
+            Initializes a new instance of the FndActivityQueryRow class
+            </summary>
+            <param name="condition">Condition used for query operation</param>
+            <param name="queryOptions">Query Options, such as OrderBy etc</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityQueryRow.#ctor(Ifs.Fnd.Data.FndDataRow,Ifs.Fnd.Data.FndQueryOptions,Ifs.Fnd.Data.FndDataTable)">
+            <summary>
+            Initializes a new instance of the FndActivityQueryRow class
+            </summary>
+            <param name="condition">Condition used for query operation</param>
+            <param name="queryOptions">Query Options, such as OrderBy etc</param>
+            <param name="result">The table that will recieve the result</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.Activity.FndActivityQueryRow.GetPreservedValue(Ifs.Fnd.Data.FndDataColumn)">
+            <summary>
+            Return row/table value that should be preserved when unmarshalaing
+            </summary>
+            <param name="column">Column</param>
+            <returns>Preserved value</returns>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString">
+            <summary>
+            Provides functionality to build attribute strings
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString.#ctor">
+            <summary>
+            Initializes a new instance of the FndAttributeString class
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the FndAttributeString class
+            </summary>
+            <param name="attribute">Initial value</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString.#ctor(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Initializes a new instance of the FndAttributeString class
+            </summary>
+            <param name="record">Row to parse into attribute string</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString.ToString">
+            <summary>
+            Format this object to a string
+            </summary>
+            <returns>The attribute string</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString.Clear">
+            <summary>
+            Clears the attribute string
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString.Add(System.String,System.String)">
+            <summary>
+            Add a new item to the attribute string
+            </summary>
+            <param name="name">Name of the attribute</param>
+            <param name="value">The value of the attribute</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString.Add(System.String,System.DateTime)">
+            <summary>
+            Add a new item to the attribute string
+            </summary>
+            <param name="name">Name of the attribute</param>
+            <param name="value">The value of the attribute</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString.Add(System.String,System.Double)">
+            <summary>
+            Add a new item to the attribute string
+            </summary>
+            <param name="name">Name of the attribute</param>
+            <param name="value">The value of the attribute</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString.GetNext(System.String@,System.String@)">
+            <summary>
+            Used to iterate through the attribute string
+            </summary>
+            <param name="name">Out parameter to receive the name</param>
+            <param name="value">Out parameter to receive the value</param>
+            <returns>True if successful</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString.ResetGetIndex">
+            <summary>
+            Reset the index used for iteration
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString.GetValue(System.String)">
+            <summary>
+            Get a value from the attribute string
+            </summary>
+            <param name="name">Name of the attribute</param>
+            <returns>Value of the attribute</returns>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableDirection">
+            <summary>
+            Directions for bind variables
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableDirection.In">
+            <summary>
+            Direction in
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableDirection.Out">
+            <summary>
+            Direction out
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableDirection.InOut">
+            <summary>
+            Direction in/out
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariable">
+            <summary>
+            Used to define bind variables for PLSQL calls
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariable.#ctor">
+            <summary>
+            Default constructor to enable COM visibility
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariable.#ctor(Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableDirection,System.String,Ifs.Fnd.Data.FndAttribute)">
+            <summary>
+            Initializes a new instance of the FndBindVariable class
+            </summary>
+            <param name="direction">Direction</param>
+            <param name="name">Name</param>
+            <param name="initialValue">Initial value</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariable.#ctor(System.String,Ifs.Fnd.Data.FndAttribute)">
+            <summary>
+            Initializes a new instance of the FndBindVariable class
+            </summary>
+            <param name="name">Name</param>
+            <param name="initialValue">Initial value</param>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariable.Value">
+            <summary>
+            Value of the bindvariable
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariable.Name">
+            <summary>
+            Name of the bindvariable
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariable.Direction">
+            <summary>
+            Direction of the bindvariable
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableCollection">
+            <summary>
+            Collection of BindVariable objects
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableCollection.#ctor">
+            <summary>
+            Initializes a new instance of the FndBindVariableCollection class
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableCollection.Add(Ifs.Fnd.AccessProvider.PLSQL.FndBindVariable)">
+            <summary>
+            Add a new bind variable
+            </summary>
+            <param name="bindVariable">The new bind variable</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableCollection.AddFndTextVariable(System.String,System.String,Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableDirection)">
+            <summary>
+            Add a new bind variable of type FndTextAttribute
+            </summary>
+            <param name="name">Name</param>
+            <param name="initialValue">Initial value</param>
+            <param name="direction">Direction</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableCollection.AddFndNumberVariable(System.String,System.Double,Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableDirection)">
+            <summary>
+            Add a new bind variable of type FndNumberAttribute
+            </summary>
+            <param name="name">Name</param>
+            <param name="initialValue">Initial value</param>
+            <param name="direction">Direction</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableCollection.AddFndDecimalVariable(System.String,System.Decimal,Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableDirection)">
+            <summary>
+            Add a new bind variable of type FndDecimalAttribute
+            </summary>
+            <param name="name">Name</param>
+            <param name="initialValue">Initial value</param>
+            <param name="direction">Direction</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableCollection.AddFndBinaryVariable(System.String,System.Byte[],Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableDirection)">
+            <summary>
+            Add a new bind variable of type FndBinaryAttribute
+            </summary>
+            <param name="name">Name</param>
+            <param name="initialValue">Initial value</param>
+            <param name="direction">Direction</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableCollection.AddFndLongTextVariable(System.String,System.String,Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableDirection)">
+            <summary>
+            Add a new bind variable of type FndLongTextAttribute
+            </summary>
+            <param name="name">Name</param>
+            <param name="initialValue">Initial value</param>
+            <param name="direction">Direction</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableCollection.AddFndTimeStampVariable(System.String,System.DateTime,Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableDirection)">
+            <summary>
+            Add a new bind variable of type FndTimeStampAttribute
+            </summary>
+            <param name="name">Name</param>
+            <param name="initialValue">Initial value</param>
+            <param name="direction">Direction</param>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableCollection.Item(System.Int32)">
+            <summary>
+            Retrieve a bind variable from the collection
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndBindVariableCollection.Item(System.String)">
+            <summary>
+            Retrieve a bind variable from the collection
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndConnection">
+            <summary>
+            Provides functionality for server access
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.#ctor">
+            <summary>
+            Default constructor to enable COM visibility. This is redundant in .NET context but needed for COM.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the FndConnection class
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the FndConnection class
+            </summary>
+            <param name="connectionString">Connection string</param>
+            <example>
+            <code>
+            conn = new FndConnection("myserver:8080");
+            </code>
+            </example>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the FndConnection class
+            </summary>
+            <param name="connectionString">Connection string</param>
+            <param name="loginIdentification">Login identification</param>
+            <param name="loginPassword">Password</param>
+            <example>
+            <code>
+            conn = new FndConnection("myserver:8080", "mydomain\\myuser", "mypassword");
+            </code>
+            </example>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the FndConnection class
+            </summary>
+            <param name="connectionString">Connection string</param>
+            <param name="encryptedCredentials">Encrypted login credentials passed to a external process in credentials argument .</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.Invoke(System.String,System.String,System.Object)">
+            <summary>
+            Invokes a server method
+            </summary>
+            <param name="intface">Name of the interface</param>
+            <param name="operation">Name of the operation</param>
+            <param name="requestBody">The request body, typically a FndDataRow object</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.Invoke(System.String,System.String,System.Object,System.Object)">
+            <summary>
+            Invokes a server method
+            </summary>
+            <param name="intface">Name of the interface</param>
+            <param name="operation">Name of the operation</param>
+            <param name="requestBody">The request body, typically a FndDataRow object</param>
+            <param name="responseBody">The response body, typically a FndDataRow object</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.Invoke(System.String,System.String,System.Object,System.Object,Ifs.Fnd.AccessProvider.FndRequestContext)">
+            <summary>
+            Invokes a server method
+            </summary>
+            <param name="intface">Name of the interface</param>
+            <param name="operation">Name of the operation</param>
+            <param name="requestBody">The request body, typically a FndDataRow object</param>
+            <param name="responseBody">The response body, typically a FndDataRow object</param>
+            <param name="requestContext">RequestContext containing domain info etc</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.InvokeSync(System.String,System.String,System.Object)">
+            <summary>
+            Invokes a server method
+            This is ignores the value of AsynchronousMode and calls are made as AsynchronousMode was false
+            </summary>
+            <param name="intface">Name of the interface</param>
+            <param name="operation">Name of the operation</param>
+            <param name="requestBody">The request body, typically a FndDataRow object</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.InvokeSync(System.String,System.String,System.Object,System.Object)">
+            <summary>
+            Invokes a server method
+            This is ignores the value of AsynchronousMode and calls are made as AsynchronousMode was false
+            </summary>
+            <param name="intface">Name of the interface</param>
+            <param name="operation">Name of the operation</param>
+            <param name="requestBody">The request body, typically a FndDataRow object</param>
+            <param name="responseBody">The response body, typically a FndDataRow object</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.InvokeSync(System.String,System.String,System.Object,System.Object,Ifs.Fnd.AccessProvider.FndRequestContext)">
+            <summary>
+            Invokes a server method
+            This is ignores the value of AsynchronousMode and calls are made as AsynchronousMode was false
+            </summary>
+            <param name="intface">Name of the interface</param>
+            <param name="operation">Name of the operation</param>
+            <param name="requestBody">The request body, typically a FndDataRow object</param>
+            <param name="responseBody">The response body, typically a FndDataRow object</param>
+            <param name="requestContext">RequestContext containing domain info etc</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.InvokeByCom(System.String,System.String,Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Invoke by COM application
+            </summary>
+            <param name="intface"></param>
+            <param name="operation"></param>
+            <param name="requestBody"></param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.AbortRequest(System.String)">
+            <summary>
+            Request an abort for a previous (now running) server invoke made earlier.
+            Must be called on a different thread than the running invoke.
+            This method will return immediately and the running request (server invoke) will
+            try to abort. If it succeeds in the abort request, that invoke call will
+            throw an FndRequestAbortException with that error.
+            </summary>
+            <param name="requestId">The unique Id of the request. All requests exposes it's Id in the event Invoking</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.SetCredentials(System.String,System.String)">
+            <summary>
+            Sets the credentials to use for invocations
+            </summary>
+            <param name="loginIdentification">The userid</param>
+            <param name="loginPassword">The password</param>
+            <example>
+            <code>
+            ...
+            FndConnection conn = new FndConnection();
+            conn.SetCredentials("domain\\userid", "password");
+            ...
+            </code>
+            </example>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.Clone">
+            <summary>
+            Clones this connection to a copy
+            </summary>
+            <returns>A clone of this connection</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.ExtractErrorKeys(Ifs.Fnd.Buffer.FndBuffer)">
+            <summary>
+            Find message for Foundation1 error messages
+            </summary>
+            <param name="errorBuf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.GetRequestUri(System.String,System.String)">
+            <summary>
+            Returns fndext based url or saved redirection
+            </summary>
+            <param name="intface">The interface to call</param>
+            <param name="operation">The operation within the interface</param>	
+            <returns>The url that services the method call</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.GetResponse(System.String,System.String,Ifs.Fnd.AccessProvider.FndRequestContext,Ifs.Fnd.AccessProvider.FndManualDecisionCollection,System.Byte[],System.Byte[],Ifs.Fnd.AccessProvider.FndApfAsyncInvoke)">
+            <summary>
+            Gets response for intface.operation and handles redirects
+            </summary>
+            <param name="intface">Interface to call</param>
+            <param name="operation">Operation within interface</param>
+            <param name="requestContext">RequestContext containing domain info etc</param>
+            <param name="decisions">Manual decisions</param>
+            <param name="requestHeaderBytes">Headers</param>
+            <param name="requestBodyBytes">Body</param>
+            <param name="asyncInvokeHandle">Async invoke handle</param>
+            <returns>The HttpWebResponse for the call</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.CreateWebRequest(System.String,System.String)">
+            <summary>
+            Creates a HttpWebRequest with all authentication and other settings initialized
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.InitializeConnection">
+            <summary>
+            Initializes a connection by doing an empty request to server:port/fndext/clientgateway/
+            This should be done before the first call made on a connection.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.GetResponseWithoutPersistencyHandler(System.String,System.String,Ifs.Fnd.AccessProvider.FndRequestContext,Ifs.Fnd.AccessProvider.FndManualDecisionCollection,System.Byte[],System.Byte[])">
+            <summary>
+            Do NOT call this method, except from GetResponse. 
+            Implements GetResponse, except that persistent connections are not implemented.
+            (Nestling code multiple times would affect source code readablity)
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.AsyncGetResponse(System.String,System.String,Ifs.Fnd.AccessProvider.FndRequestContext,Ifs.Fnd.AccessProvider.FndManualDecisionCollection,System.Byte[],System.Byte[],Ifs.Fnd.AccessProvider.FndApfAsyncInvoke)">
+            <summary>
+            Runs on thread pool worker thread
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.GetConnectionCredentials">
+            <summary>
+            Create an FndConnectionCredentials object containing all information needed for authenticating new connection
+            </summary>
+            <returns>packed credentials</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.EnableGenericAspect(System.String)">
+            <summary>
+            Enables an Aspect for this connection.
+            Enabling an aspect tells the server layer that a configured aspect for the entity view should be included 
+            if existing.
+            </summary>
+            <remarks>
+            This method only includes or excludes an aspect attribute from the result views. For an aspect to be available
+            to a feature the aspect entity must have been configured enabled for the entity views in the server layer
+            prior to enabling it in the client. 
+            </remarks>
+            <param name="aspect">The aspect name to enable</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnection.FormatGenericAspects">
+            <summary>
+            This method formats all generic aspects enabled for the connection into a string
+            that will be included in requestHeader for all invokes.
+            </summary>
+            <returns>The GENERIC_ASPECTS string with all enabled aspects (if any)</returns>
+        </member>
+        <member name="E:Ifs.Fnd.AccessProvider.FndConnection.Invoking">
+            <summary>
+            Raised before a server invocation
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.AccessProvider.FndConnection.NoLongerAbortable">
+            <summary>
+            Raised when the abortable part of the server invoke has finished
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.AccessProvider.FndConnection.Invoked">
+            <summary>
+            Raised after a server invocation
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.AccessProvider.FndConnection.RequestAborted">
+            <summary>
+            The current request has been aborted by the user
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.AccessProvider.FndConnection.FeedbackMessage">
+            <summary>
+            Used to override the default feedback message functionality. Set cancel flag to tell that the event has been handled.
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.AccessProvider.FndConnection.ManualDecisionRequested">
+            <summary>
+            Used to override the default manual decision functionality. Set cancel flag to tell that the event has been handled.
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.AccessProvider.FndConnection.SessionInitialized">
+            <summary>
+            A succsesfull server invoke has been made. Meaning that the connection is now authenticated.
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.AccessProvider.FndConnection.AsyncInvokeCallback">
+            <summary>
+            This event is fired when the asynchronous server invoke starts.
+            Check e.AsyncResult.IsCompleted for status.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.RunAs">
+            <summary>
+            Sets the value (directory id) of an alternative user to run the server calls as.
+            Alternative as in one that is different form the one set in the SetCredentials(). 
+            This directory id is used for security- and authorization-related checks on the server-side. 
+            Normal user authentication is still peformed and only a pre-defined set of users may use an alternative directory id.
+            Value the directory id of a user to run as.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.AsynchronousMode">
+            <summary>
+            All server invokes will execute on a thread pool thread.
+            Note: Events could fire back on this worker thread. 
+            Beware if updating UI in event handlers.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.OfflineMode">
+            <summary>
+            Not to be used. Foundation1 Framework internal usage only!
+            
+            Run in offline mode
+            Any exceptions when trying to connect are suppressed
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.UseConnectionGroup">
+            <summary>
+            Value indicating the connection should be in defined group
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.InteractiveMode">
+            <summary>
+            Tell if the connection should allow any UI
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.CatchExceptions">
+            <summary>
+            Tell if the connection should catch and show exceptions
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.UseCompression">
+            <summary>
+            Tell if the connection should use zip compression
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.UseDefaultProxy">
+            <summary>
+            The UseDefaultProxy property controls whether the default WebProxy 
+            instance to process requests to Internet resources should be used. 
+            To specify that no proxy should be used, set this property to false.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.SimulateNetworkLatency">
+            <summary>
+            Simulates network latency by suspending the server invoke call
+            for x milliseconds. Specify zero (0) for no delay.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.ConnectionTimeout">
+            <summary>
+            Gets or sets the time-out value for a request.
+            Default is 60 seconds. Set to System.Threading.Timeout.Infinite
+            to avoid timeouts.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.AutoLogon">
+            <summary>
+            Use your windows logon for authentication
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.ConnectionString">
+            <summary>
+            Connect string to server on format server:port
+            </summary>
+            <example>
+            <code>
+            ...
+            FndConnection conn = new FndConnection();
+            conn.ConnectionString = "lkprnd1:63080";
+            ...
+            </code>
+            </example>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.DefaultRequestContext">
+            <summary>
+            The requestcontext that is used when invoke is called without this parameter
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.ApplicationContext">
+            <summary>
+            Application context used with this connection.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.PlSqlContext">
+            <summary>
+            PLSQL context used with this connection.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.CallerInformation">
+            <summary>
+            Caller information, added to the request for debug purposes
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.Locale">
+            <summary>
+            Locale used for invocations
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.IsSessionInitialized">
+            <summary>
+            Indicated if session is initialized. Set when a succesfull server invoke has been made.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.DebugSettings">
+            <summary>
+            Debugsettings for defining log/debug behavior
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.LastServerOutput">
+            <summary>
+            Information about last invocation
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.Credential">
+            <summary>
+            Gets network credentials associated with this connection.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.SuppressFeedbackMessages">
+            <summary>
+            If <b>true</b> Feedback messages/warnings(not exceptions) from the database will not be 
+            displyed to the end user. Set this property to <b>true</b> before a server call to
+            suppress any feedback from database/application server following the call. The property 
+            will be automatically reset to false after the server call.
+            <b>Note:</b> Use only when the situation strictly demands it since database/application server
+            feedback are more often than not useful.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.ClientId">
+            <summary>
+            Return the ClientID for trace purposes, formatted using MACHINE_NAME-F1_USER-SESSION_NAMEPID
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.SessionName">
+            <summary>
+            Returns example: "console"
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnection.MachineAndDomainName">
+            <summary>
+            Returns example: "console@jarose1.corpnet.ifsworld.com"
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndFeedbackMessageEventHandler">
+            <summary>
+            Represents the method that handles the FndConnection.FeedbackMessage event
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndServerInvokeEventHandler">
+            <summary>
+            Represents the method that handles the FndConnection.Invoking event
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndSessionInitializedEventHandler">
+            <summary>
+            Represents the method that handles the FndConnection.SessionInitialized event
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndAsyncInvokeCallbackEventHandler">
+            <summary>
+            Represents the method that handles the FndConnection.AsyncInvokeCallback event
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndFeedbackMessageEventArgs">
+            <summary>
+            Argument for FndConnection.FeedbackMessage event
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndFeedbackMessageEventArgs.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the FndFeedbackMessageEventArgs class
+            </summary>
+            <param name="message">Message</param>
+            <param name="cancel">Cancel flag</param>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndFeedbackMessageEventArgs.Message">
+            <summary>
+            The message to display to the user
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndFeedbackMessageEventArgs.Cancel">
+            <summary>
+            Set this flag to tell FndConnection that the event has been handled and surpress the MessageBox.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndAsyncInvokeCallbackEventArgs">
+            <summary>
+            Event argument for FndAsyncInvokeCallbackHandler events in FndConnection
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndAsyncInvokeCallbackEventArgs.#ctor(System.IAsyncResult)">
+            <summary>
+            Initializes a new instance of the FndAsyncInvokeCallbackEventArgs class
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndAsyncInvokeCallbackEventArgs.AsyncResult">
+            <summary>
+            The AsyncResult of the asynchronous invoke running
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndAsyncInvokeCallbackEventArgs.WaitForEndInvoke">
+            <summary>
+            Set this false to skip call to EndInvoke when async has finished
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndSessionInitializedEventArgs">
+            <summary>
+            Event argument for FndSessionInitializedEventArgs events in FndConnection
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndSessionInitializedEventArgs.#ctor(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Initializes a new instance of the FndSessionInitializedEventArgs class
+            </summary>
+            <param name="connection">Connection object</param>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndSessionInitializedEventArgs.Connection">
+            <summary>
+            The connection that was initialized
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndServerInvokeEventArgs">
+            <summary>
+            Event argument for FndServerInvokeEventHandler events in FndConnection
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndServerInvokeEventArgs.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the FndServerInvokeEventArgs class
+            </summary>
+            <param name="requestId">Request Id</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndServerInvokeEventArgs.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the FndServerInvokeEventArgs class
+            </summary>
+            <param name="requestId">Request Id</param>
+            <param name="requestWasAborted">Flag to indicate that request was aborted</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndServerInvokeEventArgs.#ctor(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the FndServerInvokeEventArgs class
+            </summary>
+            <param name="requestId">Request Id</param>
+            <param name="requestWasAborted">Flag to indicate that request was aborted</param>
+            <param name="requestThrowsException">Flag to indicate that an exception was thrown</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndServerInvokeEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the FndServerInvokeEventArgs class
+            </summary>
+            <param name="requestId">Request Id</param>
+            <param name="method">The server method called</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndServerInvokeEventArgs.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the FndServerInvokeEventArgs class
+            </summary>
+            <param name="requestWasAborted">Flag to indicate that request was aborted</param>
+            <param name="requestThrowsException">Flag to indicate that an exception was thrown</param>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndServerInvokeEventArgs.RequestId">
+            <summary>
+            The request Id
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndServerInvokeEventArgs.RequestWasAborted">
+            <summary>
+            Flag to indicate that request was aborted
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndServerInvokeEventArgs.RequestThrowsException">
+            <summary>
+            Flag to indicate that an exception was thrown
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndServerInvokeEventArgs.Method">
+            <summary>
+            The called method (Interface.Method)
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndConnectionFailedException">
+            <summary>
+            Custom exception class used to handle specific connection failure scenarios such as HTTP 500, 403 and general WebExceptions
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnectionFailedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the FndConnectionFailedException class with a specified error message.
+            This exception handles specific connection failure scenarios such as HTTP 500, 403 and general WebExceptions
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndRequestAbortException">
+            <summary>
+            The exception that is thrown when a call is aborted by the
+            user. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndRequestAbortException.#ctor">
+            <summary>
+            Initializes a new instance of the FndRequestAbortException class.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndRequestAbortException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the FndRequestAbortException class with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndRequestAbortException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the FndRequestAbortException class with a specified error message 
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception. If the innerException parameter is not null, the current exception is raised in a catch block that handles the inner exception.</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndRequestAbortException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            This is the serialization constructor.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndRequestAbortException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the target object.
+            </summary>
+            <param name="info">The System.Runtime.Serialization.SerializationInfo to populate with data.</param>
+            <param name="context">The destination (see System.Runtime.Serialization.StreamingContext) for this serialization.</param>
+            <exception cref="T:System.Security.SecurityException">The caller does not have the required permission.</exception>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndConnectionCredentials">
+            <summary>
+            Representation of credentials used to authenticate the EE user
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnectionCredentials.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnectionCredentials.#ctor(System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="login">UserID</param>
+            <param name="password">Password</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnectionCredentials.#ctor(System.String)">
+            <summary>
+            Construct new credentials using an encoded string containing all information needed.
+            String is created by FndConnectionCredentials.GetCredentials()
+            </summary>
+            <param name="encodedCredentials">Encoded credentials</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndConnectionCredentials.GetCredentials">
+            <summary>
+            Pack all credentials info into a string that can be passed to the constructor
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnectionCredentials.AuthType">
+            <summary>
+            Type of authorization used
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnectionCredentials.Login">
+            <summary>
+            User id
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnectionCredentials.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndConnectionCredentials.UseDefaultProxy">
+            <summary>
+            Use the IE Default Proxy
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndConnectionCredentials.FndConnectionCredentialsTypeEnum">
+            <summary>
+            Type of credentials
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndConnectionCredentials.FndConnectionCredentialsTypeEnum.DB">
+            <summary>
+            Database login
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndConnectionCredentials.FndConnectionCredentialsTypeEnum.WIA">
+            <summary>
+            Single Sign On
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndBodyType">
+            <summary>
+            Type of body used for request and response
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndBodyType.Void">
+            <summary>
+            Void, means no request/resonse body when used for request/resonse
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndBodyType.Record">
+            <summary>
+            Record body
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndBodyType.RecordCollection">
+            <summary>
+            Record collection body
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndBodyType.Buffer">
+            <summary>
+            Buffer body
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndBodyType.BufferBytes">
+            <summary>
+            Buffer bytes body
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndBodyType.XmlDocument">
+            <summary>
+            XML document body
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndBodyType.XmlString">
+            <summary>
+            XML string body
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.LogLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.LogLevel.Debug">
+            <summary>
+            Comment Me
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.LogLevel.Trace">
+            <summary>
+            Comment Me
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.LogLevel.Info">
+            <summary>
+            Comment Me
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.LogLevel.Warning">
+            <summary>
+            Comment Me
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.LogLevel.Error">
+            <summary>
+            Comment Me
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.LogLevel.Undefined">
+            <summary>
+            Comment Me
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndDebugSettings">
+            <summary>
+            Contains debug settings for a FndConnection
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndDebugSettings.#ctor">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.FndDebugSettings class.  
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.InvokeInProgress">
+            <summary>
+            Property is set to true while a invoke is in progress for remote debug settings
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.ServerTraceEnabled">
+            <summary>
+            Gets or sets whether server traces should be enabled or not. 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.TranslationsTraceEnabled">
+            <summary>
+            Gets or sets whether translations traces should be enabled or not. 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.CallSequenceLogLevel">
+            <summary>
+            Call sequence log level
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.DBAccessSequenceLogLevel">
+            <summary>
+            Database access sequence log level
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.SkeletonArgumentsLogLevel">
+            <summary>
+            Skeleton arguments log level
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.StubArgumentsLogLevel">
+            <summary>
+            Stub arguments log level
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.ApplicationCodeLogLevel">
+            <summary>
+            Application code Log level
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.TraceLogFilePath">
+            <summary>
+            Set a file path to write trace to a log file.
+            To enable tracing, also set WriteTraceLogFile = true
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.WriteTraceLogFile">
+            <summary>
+            Switch logging on/off
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.WriteSqlTraceFile">
+            <summary>
+            Switch SQL Trace on/off
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.DebugMode">
+            <summary>
+            Switch debug on/off
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.PlsqlDebugger">
+            <summary>
+            Gets or sets the host and port information of the JDWP enabled application 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.ProfilingEnabled">
+            <summary>
+            When true, all Server Invokes will be profiled having the result from the profile stored and available for further analysis.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.ProfilingComment">
+            <summary>
+            When set, the comment will be stored in the header of the profiling object and displayed when analyzing the profiling results.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndDebugSettings.ProfilingStatement">
+            <summary>
+            Whe set, the PLSQL statement will be stored in the header of the profiling object and displayed when analyzing the profiling results.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndLastServerOutput">
+            <summary>
+            An object that keeps the last invoke data, server trace, statistics etc.
+            Note: Most properties will not be valid unless the debug console was on during the server invoke.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndLastServerOutput.#ctor">
+            <summary>
+            Initializes a new Ifs.Fnd.AccessProvider.FndLastServerOutput object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndLastServerOutput.Clear">
+            <summary>
+            Clear all members
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndLastServerOutput.Clone">
+            <summary>
+            Clone all members to a new LastServerOutput object
+            </summary>
+            <returns>The new LastServerOutput object</returns>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.ServerErrorMessages">
+            <summary>
+            Collected Error Messages from the server
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.Statistics">
+            <summary>
+            Statistics for the invocation
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.RequestInterface">
+            <summary>
+            Interface name of the request
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.RequestOperation">
+            <summary>
+            Opertaion name of the request
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.ServerTraceLastOutput">
+            <summary>
+            Trace output from server
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.RequestHeaderBytes">
+            <summary>
+            The request header sent to the server
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.RequestBodyBytes">
+            <summary>
+            The request body sent to the server
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.ResponseHeaderBytes">
+            <summary>
+            The response header received from the server
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.ResponseBodyBytes">
+            <summary>
+            The response body received from the server
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.CausedException">
+            <summary>
+            Indicates if an exception ocurred
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.Exception">
+            <summary>
+            The exception object if an exception ocurred
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.Info">
+            <summary>
+            Info message - can be used for any text
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.RequestUrl">
+            <summary>
+            The requested url for the invocation
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.RespondUrl">
+            <summary>
+            The processing url for the invocation (might be a redirect from RequestUrl)
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.RequestContext">
+            <summary>
+            The RequestContext used by the invocation
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.StartTime">
+            <summary>
+            When the invocation was started
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.Duration">
+            <summary>
+            Duration of the invocation
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.GZipAcceptedInResponse">
+            <summary>
+            Indicates if gzip was accepted in response
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.GZipUsedInRequest">
+            <summary>
+            Indicates if gzip was used in request
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.GZipUsedInResponse">
+            <summary>
+            Indicates if gzip was used in response
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.ServerDescription">
+            <summary>
+            Information about the responding server (not available unless the debug console is on)
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.RequestId">
+            <summary>
+            Unique Id identifying the server request call. Used to call AbortRequest to cancel a server operation.
+            The AbortRequest call must be done on a another thread.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.ObjectType">
+            <summary>
+            FndDataRow or FndDataTable or FndBuffer describing the current record
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndLastServerOutput.HttpRequestHeaders">
+            <summary>
+            Header collection sent to the server in the http request.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndManualDecisionEventHandler">
+            <summary>
+            Represents the method that will handle the ManualDecisionRequested event of a FndConnection
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndManualDecisionEventArgs">
+            <summary>
+            Event argument used by FndConnection.ManualDecisionRequested
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecisionEventArgs.Decision">
+            <summary>
+            Information about the decision
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndManualDecisionQuestionType">
+            <summary>
+            The type of question buttons the dialog will present
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionQuestionType.YesNo">
+            <summary>
+            Yes and No buttons
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionQuestionType.YesNoYesToAll">
+            <summary>
+            Yes, No and Yes to All buttons
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionQuestionType.YesNoNoToAll">
+            <summary>
+            Yes, No and No to All buttons
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionQuestionType.Continue">
+            <summary>
+            Continue button
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionQuestionType.Reauthenticate">
+            <summary>
+            Reauthenticate
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndManualDecisionAnswer">
+            <summary>
+            The type of answer returned from the Manual Decision dialog
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionAnswer.Yes">
+            <summary>
+            Yes answer
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionAnswer.No">
+            <summary>
+            No answer
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionAnswer.YesToAll">
+            <summary>
+            Yes to All answer
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionAnswer.NoToAll">
+            <summary>
+            No to All answer
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionAnswer.Continue">
+            <summary>
+            Continue answer
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionAnswer.NoAnswer">
+            <summary>
+            No answer answer
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionAnswer.Cancel">
+            <summary>
+            Cancel answer
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndManualDecisionAnswer.Reauthenticate">
+            <summary>
+            Reauthenticate answer
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.ManualDecisionException">
+            <summary>
+            Used to indicate an errorneous situation associated with
+            a FndManualDecision
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndManualDecision">
+            <summary>
+            ManualDecision is a server initiated question to the end user.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecision.Answer">
+            <summary>
+            The answer to the question
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecision.DefaultAnswer">
+            <summary>
+            Default button in the dialog
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecision.CancelAnswer">
+            <summary>
+            Answer for cancel button
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecision.QuestionType">
+            <summary>
+            Type of question, tells what buttons to show
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecision.Message">
+            <summary>
+            Message to the user
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecision.Key">
+            <summary>
+            Unique key for this message, a combination of DecisionKey and DecisionId
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecision.DecisionKey">
+            <summary>
+            Unique part of the Key
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecision.DecisionId">
+            <summary>
+            The id that will be shared between similar decisions for xxxToAll answers
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecision.AuthenticationInfo">
+            <summary>
+            Authentication info for decisions of type Reauthenticate
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecision.UserName">
+            <summary>
+            UserName that is returned from the Reauthentication
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecision.UserComment">
+            <summary>
+            User Comment that is returned from the Reauthentication
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecision.GateId">
+            <summary>
+            Gate Id that is returned from the Reauthentication
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndAuthenticationInfo">
+            <summary>
+            Athentication information on a manual decision of type Reauthentication
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndAuthenticationInfo.LoginIdentification">
+            <summary>
+            Gets the login identification
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndAuthenticationInfo.LoginPassword">
+            <summary>
+            Gets or sets the login password
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndManualDecisionCollection">
+            <summary>
+            A collection of ManualDecision objects
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndManualDecisionCollection.AskForDecisions(Ifs.Fnd.AccessProvider.FndManualDecisionEventHandler,Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Asks user for each entry in collection
+            </summary>
+            <returns>False if cancel has been pressed, otherwise true</returns>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndManualDecisionCollection.Item(System.Int32)">
+            <summary>
+            Returns an item within this collection
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndBaseMethodType">
+            <summary>
+            The type of method call to do in IFS Application PL/SQL code.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndBaseMethodType.New">
+            <summary>
+            Create a new record. Corresponds to the IFS PL/SQL method New__
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndBaseMethodType.Modify">
+            <summary>
+            Modify an existing record. Corresponds to the IFS PL/SQL method Modify__
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndBaseMethodType.Remove">
+            <summary>
+            Delete an existing record. Corresponds to the IFS PL/SQL method Remove__
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndBaseMethodAction">
+            <summary>
+            The type of actions to perform within a call to New, Modífy and Remove.
+            For example, the New method will be called with the parts PrepareNew, CheckNew and DoNew
+            while the Modify method will be called with the parts CheckModify and DoModify.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndBaseMethodAction.Prepare">
+            <summary>
+            Calls the IFS PL/SQL logic for Prepare. Action valid for method New only.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndBaseMethodAction.Check">
+            <summary>
+            Calls the IFS PL/SQL logic for Check.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndBaseMethodAction.Do">
+            <summary>
+            Calls the IFS PL/SQL logic for Do.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLBaseMethodCommand">
+            <summary>
+            A new/modify/remove PLSQL command
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand">
+            <summary>
+            Command used for PLSQL invocations
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand.#ctor">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand class.  
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand.#ctor(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand class
+            with an initial connection object set.
+            </summary>
+            <param name="connection">The server connection object to do the calls through</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand class
+            with an initial connection object set.
+            </summary>
+            <param name="activityContext">The server connection object to do the calls through</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand.#ctor(Ifs.Fnd.AccessProvider.FndConnection,System.String)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand class
+            with an initial connection object and PL/SQL statement set.
+            </summary>
+            <param name="connection">The server connection object to do the calls through</param>
+            <param name="commandText">The PL/SQL statement to execute</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext,System.String)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand class
+            with an initial connection object and PL/SQL statement set.
+            </summary>
+            <param name="activityContext">The server connection object to do the calls through</param>
+            <param name="commandText">The PL/SQL statement to execute</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand class
+            with an initial PL/SQL statement set.
+            </summary>
+            <param name="commandText">The PL/SQL statement to execute</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand.CreateCommandRecord(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Create attributes for record used for invokation
+            </summary>
+            <param name="commandRow">Row to create attributes on</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand.ProcessCommandRecord(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Process row after invoke
+            </summary>
+            <param name="commandRow">Row to process</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand.ExecuteNonQuery">
+            <summary>
+            Invoke a non query call
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand.CommandText">
+            <summary>
+            Gets or sets the PL/SQL statement to execute.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand.GenerateOuterBlock">
+             <summary>
+             Decides whenever an outer block, encapsulating the CommandText should be generated before executing the statement.
+             Outer blocks are needed to keep bind variable name semantics as exepected when several bind locations point to the same bind variable.
+            
+             This is per default neeed by ApplicationForms code
+             
+             Example:
+             CommandText: Some_CommandText.SomeThing(:somebind);
+             
+             DECLARE
+               some_inout_bind$ VARCHAR2 := ?
+             BEGIN
+               Some_CommandText.SomeThing(some_inout_bind$);
+                ? := some_inout_bind$
+             END;
+             
+             True = Generate outer block encapsulating the CommandText
+             False = Execute the CommandText exactly as specified.
+            
+             Default is true
+             </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand.BindVariables">
+            <summary>
+            Bind variabled used by this command
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLBaseMethodCommand.baseMethodType">
+            <summary>
+            Variable for BaseMethodType
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLBaseMethodCommand.action">
+            <summary>
+            Variable for action
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLBaseMethodCommand.associatedRecord">
+            <summary>
+            Variable for associatedRecord
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLBaseMethodCommand.#ctor">
+            <summary>
+            Default constructor for COM visibility
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLBaseMethodCommand.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext,Ifs.Fnd.AccessProvider.PLSQL.FndBaseMethodType,System.String,System.String,Ifs.Fnd.Data.FndDataRow,Ifs.Fnd.AccessProvider.PLSQL.FndBaseMethodAction)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLBaseMethodCommand class.  
+            </summary>
+            <param name="activityContext">ActivityContext which encapsulates the server connection to do the calls through</param>
+            <param name="baseMethodType">The type of method call</param>
+            <param name="packageName">Name of the PL/SQL package</param>
+            <param name="methodName">Name of the PL/SQL method</param>
+            <param name="record">The data record to use for the call. Data within this will be used to build PL/SQL attribute strings</param>
+            <param name="action">The type of action within i method call to perform</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLBaseMethodCommand.#ctor(Ifs.Fnd.AccessProvider.FndConnection,Ifs.Fnd.AccessProvider.PLSQL.FndBaseMethodType,System.String,System.String,Ifs.Fnd.Data.FndDataRow,Ifs.Fnd.AccessProvider.PLSQL.FndBaseMethodAction)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLBaseMethodCommand class.  
+            </summary>
+            <param name="connection">The server connection object to do the calls through</param>
+            <param name="baseMethodType">The type of method call</param>
+            <param name="packageName">Name of the PL/SQL package</param>
+            <param name="methodName">Name of the PL/SQL method</param>
+            <param name="record">The data record to use for the call. Data within this will be used to build PL/SQL attribute strings</param>
+            <param name="action">The type of action within i method call to perform</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLBaseMethodCommand.COMInitialize(System.String,System.String)">
+            <summary>
+            Public method exposed to COM clients to initialize an action
+            </summary>
+            <param name="packageName"></param>
+            <param name="methodName"></param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLBaseMethodCommand.ProcessCommandRecord(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Process row after invoke
+            </summary>
+            <param name="commandRow">Row to process</param>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommandCollection">
+            <summary>
+            A collection of FndPLSQLCommand objects
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommandCollection.#ctor(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommandCollection class
+            with an initial connection object set.
+            </summary>
+            <param name="connection">The server connection object to do the calls through</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommandCollection.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommandCollection class
+            with an initial connection object set.
+            </summary>
+            <param name="activityContext">The server connection object to do the calls through</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommandCollection.Add(Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommand)">
+            <summary>
+            Add a new item to this collection
+            </summary>
+            <param name="command">The new command</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommandCollection.Invoke">
+            <summary>
+            Invoke all commands in this collection in one transaction.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommandCollection.CreateFromRow(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Creates a FndPLSQLCommandCollection including all FndPLSQLCommands from a datarow.
+            </summary>
+            <param name="row">A PLSQL_INVOKATION record</param>
+            <returns>FndPLSQLCommandCollection just created</returns>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLCommandCollection.Item(System.Int32)">
+            <summary>
+            Get an item from this collection
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand">
+            <summary>
+            Command to invoke select statements
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.#ctor">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand class.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.#ctor(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand class
+            with an initial connection object set.
+            </summary>
+            <param name="connection">The server connection object to do the calls through</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand class
+            with an initial connection object set.
+            </summary>
+            <param name="activityContext">The server connection object to do the calls through</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.#ctor(Ifs.Fnd.AccessProvider.FndConnection,System.String)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand class
+            with an initial connection object set.
+            </summary>
+            <param name="connection">The server connection object to do the calls through</param>
+            <param name="commandText">The PL/SQL select statement to execute</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext,System.String)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand class
+            with an initial connection object set.
+            </summary>
+            <param name="activityContext">The server connection object to do the calls through</param>
+            <param name="commandText">The PL/SQL select statement to execute</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand class
+            with an initial PL/SQL select statement set.
+            </summary>
+            <param name="commandText">The PL/SQL select statement to execute</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.CreateCommandRecord(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Create attributes for record used for invokation
+            </summary>
+            <param name="commandRow">Row to create attributes on</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.ProcessCommandRecord(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Process row after invoke
+            </summary>
+            <param name="commandRow">Row to process</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.AddSelectColumnMeta(Ifs.Fnd.Data.FndAttributeType,System.Int32)">
+            <summary>
+            Add column meta information for the columns in the select clause
+            Meta must be added in same order as columns appear in SELECT clause
+            </summary>
+            <param name="type">Column type</param>
+            <param name="maxLength">Max length Alpha/Text. -1 if unknown length</param>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.ExecuteReader">
+            <summary>
+            Invoke a select statement
+            </summary>
+            <returns>The resultset</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.ExecuteReader(System.String)">
+            <summary>
+            Invoke a select statement
+            </summary>
+            <param name="recordType">Type of records to generate in the resultset.</param>
+            <returns>The resultset</returns>
+            <example>
+            <code>
+            ...
+            cmd.ExecuteReader("FND_USER");
+            ...
+            </code>
+            </example>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.ExecuteCursorReader(System.String)">
+            <summary>
+            Invokes a SQL statement using the cursor fetch mechanism.
+            </summary>
+            <param name="recordType">Type of records to generate in the resultset.</param>
+            <returns>Forward only cursor based reader from which result row can be fetched.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.ExecuteCursorReader(System.String,System.String)">
+            <summary>
+            Invokes a SQL statement using the cursor fetch mechanism.
+            </summary>
+            <param name="recordType">Type of records to generate in the resultset.</param>
+            <param name="cursorId">A custom provided cursor id. Needs to be unique for all open cursors for this session</param>
+            <returns>Forward only cursor based reader from which result row can be fetched.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.ExecuteCursorReader(System.String,System.Int32)">
+            <summary>
+            Invokes a SQL statement using the cursor fetch mechanism.
+            </summary>
+            <param name="recordType">Type of records to generate in the resultset.</param>
+            <param name="fetchSize">Custom provided array fetch size.</param>
+            <returns>Forward only cursor based reader from which result row can be fetched.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.ExecuteCursorReader(System.String,System.String,System.Int32)">
+            <summary>
+            Invokes a SQL statement using the cursor fetch mechanism.
+            </summary>
+            <param name="recordType">Type of records to generate in the resultset.</param>
+            <param name="cursorId">Custom provided cursor id. Needs to be unique for all open cursors for this session</param>
+            <param name="fetchSize">Custom provided array fetch size.</param>
+            <returns>Forward only cursor based reader from which result row can be fetched.</returns>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.Result">
+            <summary>
+            Result from the select statement
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.MaxRows">
+            <summary>
+            Max number of rows to retrieve
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.SkipRows">
+            <summary>
+            Offset in resultset. Setting SkipRows=20 and MaxRows=10 will retrieve row 21 to 30
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.CursorId">
+            <summary>
+            Gets or sets the Cursor id.
+            CursorId is created by a client. It is sent to every cursor-related command ("SELECT", "FETCH", and "CLOSE"). 
+            A client can have many open cursors at the same time. 
+            The "FETCH" command accepts the attributes MaxRows and SkipRows, which work as expected. 
+            Every cursor must be explicitly closed by the client by calling "CLOSE" command with the corresponding CursorId        
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.FndPLSQLSelectCommandColumnMeta">
+            <summary>
+            Contains metadata (type and optional maxlength) for a column
+            in select clause (by position)
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.FndPLSQLSelectCommandColumnMeta.#ctor(Ifs.Fnd.Data.FndAttributeType,System.Int32)">
+            <summary>
+            Creates a new instance of FndPLSQLSelectCommandColumnMeta.
+            </summary>
+            <param name="type">Column type</param>
+            <param name="maxLength">Max length for strings (or -1 if unknown)</param>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.FndPLSQLSelectCommandColumnMeta.Type">
+            <summary>
+            Gets the type
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommand.FndPLSQLSelectCommandColumnMeta.MaxLength">
+            <summary>
+            Gets the max length (-1 if unknown)
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReaderState">
+            <summary>
+            The state of a FndPLSQLSelectCommandReader
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReaderState.Created">
+            <summary>
+            FndPLSQLCursorSelectCommandReader just created.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReaderState.NonQuery">
+            <summary>
+            A non-query statement, ie just a procedure call.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReaderState.MoreRowsToRead">
+            <summary>
+            There are more rows to read.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReaderState.AllRowsRead">
+            <summary>
+            All rows are read.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReaderState.Closed">
+            <summary>
+            Cursor is closed.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReader">
+            <summary>
+            Reads a forward-only stream of rows from a FndPLSQLSelectCommand
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReader.Read(System.Boolean)">
+            <summary>
+            Reads a chunk of rows from the server using cursor FETCH and command.FetchSize.
+            </summary>
+            <param name="prepare">Set true to prepare the statement on the server in the first call. Then set to false in order to retrieve next result chunk</param>
+            <returns>true if more rows to read, false if all rows where read.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReader.Close">
+            <summary>
+            Closes the FndPLSQLSelectCommandReader instance. This will invoke a
+            "CLOSE" of the cursor on the server.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReader.GetEnumerator">
+            <summary>
+            Returns an System.Collections.IEnumerator that can be used to iterate through
+             the rows in the data reader.
+            </summary>
+            <returns>An System.Collections.IEnumerator that can be used to iterate through the
+            rows in the data reader.</returns>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReader.FetchSize">
+            <summary>
+            Fetch size
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReader.State">
+            <summary>
+            Gets the current state of the FndPLSQLSelectCommandReader instance
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReader.Schema">
+            <summary>
+            Gets the Schema that this statement generates.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReader.Count">
+            <summary>
+            Gets the number of rows currently fetched
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReader.Command">
+            <summary>
+            Gets the FndPLSQLSelectCommand instance to which this FndPLSQLSelectCommandReader instance
+            is created from.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.PLSQL.FndPLSQLSelectCommandReader.FndPLSQLSelectCommandReaderEnumerator">
+            <summary>
+            Enumerator for FndPLSQLSelectCommandReader
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndRequestContext">
+            <summary>
+            Contains framework information used by server invocations
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndRequestContext.Clone">
+            <summary>
+            Clone to a new RequestContext object
+            </summary>
+            <returns>The new RequestContext object</returns>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndRequestContext.ContextParameters">
+            <summary>
+            Gets parameters sent in context on server invocations
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndRequestContext.CustomHttpHeaders">
+            <summary>
+            Custom http headers to be set on the request
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndEvaluationResultCategory">
+            <summary>
+            Evaluation of the performance of the server invoke
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndEvaluationResultCategory.Excellent">
+            <summary>
+            LastInvokeSqlStatementCount less or equal 1 and
+            LastInvokeExternalCallCount less or equal 1 and
+            LastInvokeBytesReceived less or equal 2000
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndEvaluationResultCategory.OK">
+            <summary>
+            LastInvokeSqlStatementCount less or equal 20 and
+            LastInvokeExternalCallCount less or equal 20 and
+            LastInvokeBytesReceived less or equal 30000
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndEvaluationResultCategory.Questionable">
+            <summary>
+            LastInvokeSqlStatementCount less or equal 5 and
+            LastInvokeExternalCallCount less or equal 5 and
+            LastInvokeBytesReceived less or equal 100000
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndEvaluationResultCategory.VeryBad">
+            <summary>
+            Worse than Questionable
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.FndEvaluationResultCategory.NotAvailable">
+            <summary>
+            Cannot calculate
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.FndStatistics">
+            <summary>
+            Statistics for a server invocation
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndStatistics.#ctor">
+            <summary>
+            Initializes a new instance of the Ifs.Fnd.AccessProvider.FndStatistics class.  
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndStatistics.ToString">
+            <summary>
+            Gets a human-readable string that describes the Ifs.Fnd.AccessProvider.FndStatistics object.  
+            </summary>
+            <returns>A string that describes the Ifs.Fnd.AccessProvider.FndStatistics object.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndStatistics.CompressionRatio(System.Int64,System.Int64)">
+            <summary>
+            Calculates how much in percent is left of the data after compression
+            </summary>
+            <param name="uncompressed">Number of bytes uncompressed</param>
+            <param name="compressed">Number of bytes compressed</param>
+            <returns>Percentage string</returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndStatistics.BytesToString(System.Double)">
+            <summary>
+            Returns a formatted string for bytes
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndStatistics.Clear">
+            <summary>
+            Resets all counters
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.FndStatistics.Clone">
+            <summary>
+            Returns an FndStatistics object that is identical to this instance.  
+            </summary>
+            <returns>An FndStatistics object that is a copy of this instance.</returns>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.LastInvokeSqlStatementCount">
+            <summary>
+            Gets or sets the number of SQL statements used in the last server invoke
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.LastInvokeSqlFetchCount">
+            <summary>
+            Gets or sets the number of rows fetched from the database in the last server invoke
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.LastInvokeExternalCallCount">
+            <summary>
+            Gets or sets the number of external calls made in the last server invoke
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.LastInvokeTimeToUnmarshal">
+            <summary>
+            Gets or sets the time it took to unmarshal the result buffer of the last server invoke
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.LastInvokeBytesSent">
+            <summary>
+            Gets or sets the number of bytes sent (before compression) to the server in the last server invoke
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.LastInvokeBytesSentCompressed">
+            <summary>
+            Gets or sets the number of bytes (after compression) sent to the server in the last server invoke.
+            These are the number of bytes that actually goes over the network.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.LastInvokeBytesReceived">
+            <summary>
+            Gets or sets the number of bytes received (before compression) from the server in the last server invoke
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.LastInvokeBytesReceivedCompressed">
+            <summary>
+            Gets or sets the number of bytes (after compression) received from the server in the last server invoke.
+            These are the number of bytes that actually goes over the network.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.TotalInvokeCount">
+            <summary>
+            Gets or sets the number of total invokes made in this client session.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.TotalInvokeBytesSent">
+            <summary>
+            Gets or sets the number of bytes sent (before compression) to the server in this client session.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.TotalInvokeBytesSentCompressed">
+            <summary>
+            Gets or sets the number of bytes (after compression) sent to the server in this client session.
+            These are the number of bytes that actually goes over the network.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.TotalInvokeBytesReceived">
+            <summary>
+            Gets or sets the number of bytes received (before compression) from the server in this client session.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.TotalInvokeBytesReceivedCompressed">
+            <summary>
+            Gets or sets the number of bytes (after compression) received from the server in this client session.
+            These are the number of bytes that actually goes over the network.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.LastInvokeEvaluationResult">
+            <summary>
+            Gets a value indicating the performance of the last server invoke
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.LastInvokeEvaluationResultText">
+            <summary>
+            Gets a string representation of the LastInvokeEvaluationResult
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.LastInvokeBytesSentCompressionRatio">
+            <summary>
+            Gets a percentage value (as string) of the ratio
+            between the number of bytes sent to the server 
+            in the last invoke before and after compression
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.LastInvokeBytesReceivedCompressionRatio">
+            <summary>
+            Gets a percentage value (as string) of the ratio
+            between the number of bytes received from the server 
+            in the last invoke before and after compression
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.TotalInvokeBytesSentCompressionRatio">
+            <summary>
+            Gets a percentage value (as string) of the ratio
+            between the number of all bytes sent to the server 
+            in this client session before and after compression
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.FndStatistics.TotalInvokeBytesReceivedCompressionRatio">
+            <summary>
+            Gets a percentage value (as string) of the ratio
+            between the number of all bytes received from the server 
+            in this client session before and after compression
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.InternalLoginDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.InternalLoginDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.InternalLoginDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.ManualDecisionDialog">
+            <summary>
+            Summary description for formManualDecision.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.ManualDecisionDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.ManualDecisionDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.ManualDecisionDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Properties.Resources.AuthenticationRequest">
+            <summary>
+              Looks up a localized string similar to Authentication Request.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Properties.Resources.ConnectionFailed">
+             <summary>
+               Looks up a localized string similar to There is currently a problem connecting to &apos;{0}&apos;. Server is not responding.
+            Most likely causes:
+            
+            * Your computer is not connected to the network.
+            * Server not running or not connected to the network.
+            * Application server not started.
+            
+            Contact your system administrator if this condition persists..
+             </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Properties.Resources.OperationCanceled">
+            <summary>
+              Looks up a localized string similar to Operation Canceled.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.AccessProvider.Properties.Resources.TransactionExpired">
+            <summary>
+              Looks up a localized string similar to The server transaction has expired. Please redo your changes..
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.AccessProvider.ProxyLoginDialog">
+            <summary>
+            Summary description for ProxyLoginDialog.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.AccessProvider.ProxyLoginDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.ProxyLoginDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.AccessProvider.ProxyLoginDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

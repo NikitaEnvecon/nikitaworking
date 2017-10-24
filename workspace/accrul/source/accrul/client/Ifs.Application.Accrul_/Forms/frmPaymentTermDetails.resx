@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="&gt;&gt;menuFrmMethods.Name" xml:space="preserve">
+    <value>menuFrmMethods</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods.Name" xml:space="preserve">
+    <value>menuTblMethods</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="menuTblMethods_menuPayment_Term_Discounts___.Caption" xml:space="preserve">
+    <value>Payment Term Discounts...</value>
+  </data>
+  <data name="menuFrmMethods_menuAutomatic_Installment_Plan___.Caption" xml:space="preserve">
+    <value>Automatic Installment Plan...</value>
+  </data>
+  <data name="menuFrmMethods_menuChange__Company___.Caption" xml:space="preserve">
+    <value>Change &amp;Company...</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labeldfsCompany.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="labeldfsCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 79</value>
+  </data>
+  <data name="labeldfsCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="labeldfsCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labeldfsCompany.Text" xml:space="preserve">
+    <value>Company:</value>
+  </data>
+  <data name="labeldfsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCompany.Name" xml:space="preserve">
+    <value>labeldfsCompany</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCompany.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCompany.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="dfsCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 75</value>
+  </data>
+  <data name="dfsCompany.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="dfsCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 21</value>
+  </data>
+  <data name="dfsCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dfsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Name" xml:space="preserve">
+    <value>dfsCompany</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="labelcmbPayTermId.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbPayTermId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
+  </data>
+  <data name="labelcmbPayTermId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
+  </data>
+  <data name="labelcmbPayTermId.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelcmbPayTermId.Text" xml:space="preserve">
+    <value>Payment Term:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbPayTermId.Name" xml:space="preserve">
+    <value>labelcmbPayTermId</value>
+  </data>
+  <data name="&gt;&gt;labelcmbPayTermId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbPayTermId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbPayTermId.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="cmbPayTermId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 29</value>
+  </data>
+  <data name="cmbPayTermId.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="cmbPayTermId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 21</value>
+  </data>
+  <data name="cmbPayTermId.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cmbPayTermId.Name" xml:space="preserve">
+    <value>cmbPayTermId</value>
+  </data>
+  <data name="&gt;&gt;cmbPayTermId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cRecListDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cmbPayTermId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbPayTermId.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labeldfsDescription.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 9</value>
+  </data>
+  <data name="labeldfsDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="labeldfsDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labeldfsDescription.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsDescription.Name" xml:space="preserve">
+    <value>labeldfsDescription</value>
+  </data>
+  <data name="&gt;&gt;labeldfsDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsDescription.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="dfsDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 29</value>
+  </data>
+  <data name="dfsDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 21</value>
+  </data>
+  <data name="dfsDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dfsDescription.Name" xml:space="preserve">
+    <value>dfsDescription</value>
+  </data>
+  <data name="&gt;&gt;dfsDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsDescription.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labelcmbVatDistribution.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbVatDistribution.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 67</value>
+  </data>
+  <data name="labelcmbVatDistribution.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="labelcmbVatDistribution.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelcmbVatDistribution.Text" xml:space="preserve">
+    <value>Tax Distribution:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbVatDistribution.Name" xml:space="preserve">
+    <value>labelcmbVatDistribution</value>
+  </data>
+  <data name="&gt;&gt;labelcmbVatDistribution.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbVatDistribution.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbVatDistribution.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="cmbVatDistribution.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbVatDistribution.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 87</value>
+  </data>
+  <data name="cmbVatDistribution.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbVatDistribution.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 21</value>
+  </data>
+  <data name="cmbVatDistribution.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;cmbVatDistribution.Name" xml:space="preserve">
+    <value>cmbVatDistribution</value>
+  </data>
+  <data name="&gt;&gt;cmbVatDistribution.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cComboBox, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cmbVatDistribution.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbVatDistribution.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cbBlockForDirectDebiting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>394, 9</value>
+  </data>
+  <data name="cbBlockForDirectDebiting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 20</value>
+  </data>
+  <data name="cbBlockForDirectDebiting.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="cbBlockForDirectDebiting.Text" xml:space="preserve">
+    <value>Block For Direct Debiting</value>
+  </data>
+  <data name="&gt;&gt;cbBlockForDirectDebiting.Name" xml:space="preserve">
+    <value>cbBlockForDirectDebiting</value>
+  </data>
+  <data name="&gt;&gt;cbBlockForDirectDebiting.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbBlockForDirectDebiting.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbBlockForDirectDebiting.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cbUseCommercialYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>394, 34</value>
+  </data>
+  <data name="cbUseCommercialYear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 20</value>
+  </data>
+  <data name="cbUseCommercialYear.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="cbUseCommercialYear.Text" xml:space="preserve">
+    <value>Use Commercial Year</value>
+  </data>
+  <data name="&gt;&gt;cbUseCommercialYear.Name" xml:space="preserve">
+    <value>cbUseCommercialYear</value>
+  </data>
+  <data name="&gt;&gt;cbUseCommercialYear.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbUseCommercialYear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbUseCommercialYear.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cbConsiderPayVacPeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>394, 59</value>
+  </data>
+  <data name="cbConsiderPayVacPeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 20</value>
+  </data>
+  <data name="cbConsiderPayVacPeriod.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="cbConsiderPayVacPeriod.Text" xml:space="preserve">
+    <value>Consider Payment Vacation Periods</value>
+  </data>
+  <data name="&gt;&gt;cbConsiderPayVacPeriod.Name" xml:space="preserve">
+    <value>cbConsiderPayVacPeriod</value>
+  </data>
+  <data name="&gt;&gt;cbConsiderPayVacPeriod.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbConsiderPayVacPeriod.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbConsiderPayVacPeriod.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cbExcludeCreditLimit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>394, 84</value>
+  </data>
+  <data name="cbExcludeCreditLimit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 20</value>
+  </data>
+  <data name="cbExcludeCreditLimit.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="cbExcludeCreditLimit.Text" xml:space="preserve">
+    <value>Exclude From Credit Limit Control</value>
+  </data>
+  <data name="&gt;&gt;cbExcludeCreditLimit.Name" xml:space="preserve">
+    <value>cbExcludeCreditLimit</value>
+  </data>
+  <data name="&gt;&gt;cbExcludeCreditLimit.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbExcludeCreditLimit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbExcludeCreditLimit.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="menuFrmMethods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 54</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Name" xml:space="preserve">
+    <value>menuFrmMethods</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="menuItem_Automatic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 22</value>
+  </data>
+  <data name="menuSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 6</value>
+  </data>
+  <data name="menuItem_Change.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 22</value>
+  </data>
+  <data name="menuTblMethods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 26</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods.Name" xml:space="preserve">
+    <value>menuTblMethods</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="menuItem_Payment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 22</value>
+  </data>
+  <data name="cbSuppressAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>641, 9</value>
+  </data>
+  <data name="cbSuppressAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 20</value>
+  </data>
+  <data name="cbSuppressAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="cbSuppressAmount.Text" xml:space="preserve">
+    <value>Suppress Amount</value>
+  </data>
+  <data name="&gt;&gt;cbSuppressAmount.Name" xml:space="preserve">
+    <value>cbSuppressAmount</value>
+  </data>
+  <data name="&gt;&gt;cbSuppressAmount.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbSuppressAmount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbSuppressAmount.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbCashDiscFixassAcqValueDb.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbCashDiscFixassAcqValueDb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>641, 22</value>
+  </data>
+  <data name="cbCashDiscFixassAcqValueDb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 43</value>
+  </data>
+  <data name="cbCashDiscFixassAcqValueDb.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="cbCashDiscFixassAcqValueDb.Text" xml:space="preserve">
+    <value>Apply Cash Discount to Fixed Assets Acquisition Values</value>
+  </data>
+  <data name="cbCashDiscFixassAcqValueDb.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="&gt;&gt;cbCashDiscFixassAcqValueDb.Name" xml:space="preserve">
+    <value>cbCashDiscFixassAcqValueDb</value>
+  </data>
+  <data name="&gt;&gt;cbCashDiscFixassAcqValueDb.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbCashDiscFixassAcqValueDb.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbCashDiscFixassAcqValueDb.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tblPaymentTermDetails_colsCompany.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblPaymentTermDetails_colsCompany.Title" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="tblPaymentTermDetails_colsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsCompany.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colsCompany</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsCompany.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsCompany.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tblPaymentTermDetails_colsPayTermId.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblPaymentTermDetails_colsPayTermId.Title" xml:space="preserve">
+    <value>Payment Term</value>
+  </data>
+  <data name="tblPaymentTermDetails_colsPayTermId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsPayTermId.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colsPayTermId</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsPayTermId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsPayTermId.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsPayTermId.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnInstallmentNumber.Title" xml:space="preserve">
+    <value>Installment 
+Id</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnInstallmentNumber.Width" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnInstallmentNumber.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colnInstallmentNumber</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnInstallmentNumber.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnInstallmentNumber.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnInstallmentNumber.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnDayFrom.Title" xml:space="preserve">
+    <value>Day From</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDayFrom.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colnDayFrom</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDayFrom.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDayFrom.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDayFrom.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnDayTo.Title" xml:space="preserve">
+    <value>Day To</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDayTo.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colnDayTo</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDayTo.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDayTo.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDayTo.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnFreeDeliveryMonths.Title" xml:space="preserve">
+    <value>Number of 
+Free Delivery Months</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnFreeDeliveryMonths.Width" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnFreeDeliveryMonths.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colnFreeDeliveryMonths</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnFreeDeliveryMonths.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnFreeDeliveryMonths.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnFreeDeliveryMonths.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnDaysToDueDate.Title" xml:space="preserve">
+    <value>Days 
+to Due Date</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnDaysToDueDate.Width" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDaysToDueDate.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colnDaysToDueDate</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDaysToDueDate.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDaysToDueDate.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDaysToDueDate.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tblPaymentTermDetails_colEndOfMonth.Title" xml:space="preserve">
+    <value>End of 
+Month</value>
+  </data>
+  <data name="tblPaymentTermDetails_colEndOfMonth.Width" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colEndOfMonth.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colEndOfMonth</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colEndOfMonth.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colEndOfMonth.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colEndOfMonth.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnDueDate1.Title" xml:space="preserve">
+    <value>Specific 
+Due Day 1</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDueDate1.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colnDueDate1</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDueDate1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDueDate1.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDueDate1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnDueDate2.Title" xml:space="preserve">
+    <value>Specific
+Due Day 2</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDueDate2.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colnDueDate2</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDueDate2.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDueDate2.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDueDate2.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnDueDate3.Title" xml:space="preserve">
+    <value>Specific
+Due Day 3</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDueDate3.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colnDueDate3</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDueDate3.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDueDate3.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDueDate3.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnNetAmountPercentage.Title" xml:space="preserve">
+    <value>Net Amount 
+Percentage</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnNetAmountPercentage.Width" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnNetAmountPercentage.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colnNetAmountPercentage</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnNetAmountPercentage.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnNetAmountPercentage.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnNetAmountPercentage.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="tblPaymentTermDetails_colsPaymentInstitute.Title" xml:space="preserve">
+    <value>Payment
+Institute</value>
+  </data>
+  <data name="tblPaymentTermDetails_colsPaymentInstitute.Width" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsPaymentInstitute.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colsPaymentInstitute</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsPaymentInstitute.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsPaymentInstitute.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsPaymentInstitute.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="tblPaymentTermDetails_colsPaymentMethod.Title" xml:space="preserve">
+    <value>Payment
+Method</value>
+  </data>
+  <data name="tblPaymentTermDetails_colsPaymentMethod.Width" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsPaymentMethod.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colsPaymentMethod</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsPaymentMethod.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsPaymentMethod.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsPaymentMethod.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="tblPaymentTermDetails_colsDiscountSpecified.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblPaymentTermDetails_colsDiscountSpecified.Title" xml:space="preserve">
+    <value>Discount
+Specified</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsDiscountSpecified.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colsDiscountSpecified</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsDiscountSpecified.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBoxColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsDiscountSpecified.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colsDiscountSpecified.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnDummyInstallmentNumber.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblPaymentTermDetails_colnDummyInstallmentNumber.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDummyInstallmentNumber.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails_colnDummyInstallmentNumber</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDummyInstallmentNumber.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDummyInstallmentNumber.Parent" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails_colnDummyInstallmentNumber.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="tblPaymentTermDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 135</value>
+  </data>
+  <data name="tblPaymentTermDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>635, 208</value>
+  </data>
+  <data name="tblPaymentTermDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails.Name" xml:space="preserve">
+    <value>tblPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cChildTableFinBase, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tblPaymentTermDetails.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>883, 374</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 151</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Payment Term Details</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods_menuPayment_Term_Discounts___.Name" xml:space="preserve">
+    <value>menuTblMethods_menuPayment_Term_Discounts___</value>
+  </data>
+  <data name="&gt;&gt;menuTblMethods_menuPayment_Term_Discounts___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuAutomatic_Installment_Plan___.Name" xml:space="preserve">
+    <value>menuFrmMethods_menuAutomatic_Installment_Plan___</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuAutomatic_Installment_Plan___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuChange__Company___.Name" xml:space="preserve">
+    <value>menuFrmMethods_menuChange__Company___</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuChange__Company___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Automatic.Name" xml:space="preserve">
+    <value>menuItem_Automatic</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Automatic.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator1.Name" xml:space="preserve">
+    <value>menuSeparator1</value>
+  </data>
+  <data name="&gt;&gt;menuSeparator1.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripSeparator, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change.Name" xml:space="preserve">
+    <value>menuItem_Change</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Payment.Name" xml:space="preserve">
+    <value>menuItem_Payment</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Payment.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmPaymentTermDetails</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cFormWindowFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

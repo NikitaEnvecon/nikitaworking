@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FndNavigator xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Legacy="false" Source="mdmgt\client\navigator-functional.xml">
+  <FndNavigatorEntries>
+    <FndNavigatorEntry>
+      <Key>MDM_BASI_DATA</Key>
+      <Name>Master Data Management</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>NAVIGATOR_Root</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>MDM_BASI_DATA.MDM_BAIS</Key>
+      <Name>MDM Basic Data</Name>
+      <Url>ifsapf:frmMdmBasicData</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>MDM_BASI_DATA</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>MDM_BASI_DATA.MDM_REQUST</Key>
+      <Name>MDM REquest</Name>
+      <Url>ifsapf:frmMdmRequestHeader</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>MDM_BASI_DATA</ParentKey>
+      <Ordinal>120</Ordinal>
+    </FndNavigatorEntry>
+  </FndNavigatorEntries>
+  <FndShortcutItems />
+</FndNavigator>

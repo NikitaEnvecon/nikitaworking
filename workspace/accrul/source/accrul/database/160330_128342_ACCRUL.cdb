@@ -1,0 +1,44 @@
+-----------------------------------------------------------------------------
+--  Module : ACCRUL
+--
+--  File   : 160330_128342_ACCRUL.cdb
+--
+--  IFS Developer Studio Template Version 2.6
+--
+--  Date     Sign    History
+--  ------   ------  --------------------------------------------------
+--  160330   NuDiLK  Bug 128342, Created.
+--  ------   ------  --------------------------------------------------
+-----------------------------------------------------------------------------
+
+SET SERVEROUTPUT ON
+
+PROMPT Adding tax_transaction to EXT_TRANSACTIONS_TAB
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160330_128342_ACCRUL.cdb','Timestamp_1');
+DECLARE
+   table_name_   VARCHAR2(30):= 'EXT_VOUCHER_ROW_TAB';
+   column_       Database_SYS.ColRec;
+BEGIN 
+   IF NOT Database_SYS.Is_Db_Patch_Registered( 'ACCRUL', 128342 ) THEN
+      column_ := Database_SYS.Set_Column_Values('TAX_TRANSACTION', 'VARCHAR2(5)');
+      Database_SYS.Alter_Table_Column(table_name_, 'A', column_, TRUE);
+   END IF;
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160330_128342_ACCRUL.cdb','Timestamp_2');
+BEGIN 
+   IF NOT Database_SYS.Is_Db_Patch_Registered( 'ACCRUL', 128342 ) THEN
+      UPDATE EXT_VOUCHER_ROW_TAB
+      SET tax_transaction = ( CASE WHEN trans_code IN ('AP1', 'AP2', 'AP3', 'AP4') THEN 'TRUE'
+                                   ELSE 'FALSE'
+                              END)
+      WHERE tax_transaction IS NULL;
+      Database_SYS.Register_Db_Patch('ACCRUL', 128342, 'Added tax_transaction to EXT_TRANSACTIONS_TAB');
+      COMMIT;
+   END IF;
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160330_128342_ACCRUL.cdb','Done');
+SET SERVEROUTPUT OFF

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+This file should contain the environment details that the IFS Data Migration Excel Add-In should log in to.
+
+You may either replace this file with the standard server.xml for IFS EE (found in \client\runtime)
+Or
+Replace <configuation/> tag with the following
+<configuation connectstring="http://[server]:[port]" systemname="[name]"/>
+Replace [server],[port],[name] with the application server name, port and the Environment name
+-->
+<configuation/>

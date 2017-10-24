@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FndNavigator xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Legacy="false" Source="cots\client\navigator-functional.xml">
+  <FndNavigatorEntries>
+    <FndNavigatorEntry>
+      <Key>EQUINT_IF</Key>
+      <Name>Equipment If</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>NAVIGATOR_Root</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>EQUINT_IF.CONTER_TRACNG</Key>
+      <Name>Container Tracking</Name>
+      <Url>ifsapf:frmContainerTrackingSummaryView</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>EQUINT_IF</ParentKey>
+      <Ordinal>90</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>EQUINT_IF.TEST</Key>
+      <Name>Test</Name>
+      <Url>ifsapf:frmTestCheck</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>EQUINT_IF</ParentKey>
+      <Ordinal>80</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>EQUINT_IF.EQUINT_TABL</Key>
+      <Name>Equipment Table</Name>
+      <Url>ifsapf:tbwEquipChar</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>EQUINT_IF</ParentKey>
+      <Ordinal>200</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>EQUINT_IF.CONTAIER_TRAC_DATA</Key>
+      <Name>Container Tracking Data</Name>
+      <Url>ifsapf:tbwContChar</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>EQUINT_IF</ParentKey>
+      <Ordinal>300</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>EQUINT_IF.EQUINT_CHARCS</Key>
+      <Name>Equipment Charectristics</Name>
+      <Url>ifsapf:frmEquipmentCharacteristics</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>EQUINT_IF</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+  </FndNavigatorEntries>
+  <FndShortcutItems />
+</FndNavigator>

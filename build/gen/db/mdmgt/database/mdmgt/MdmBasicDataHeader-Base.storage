@@ -1,0 +1,40 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: MdmBasicDataHeader
+--  Component:    MDMGT
+--
+--  Template:     3.0
+--  Built by:     IFS Developer Studio 10.82.731.20170505
+--
+--  NOTE! Do not edit!! This file is completely generated and will be
+--        overwritten next time the corresponding model is saved.
+-----------------------------------------------------------------------------
+
+
+layer Base;
+
+-------------------- TABLE DEFINITIONS --------------------------------------
+
+TABLE mdm_basic_data_header_tab IS (
+   template_id                    VARCHAR2(30)   NOT NULL,
+   revision                       NUMBER         NOT NULL,
+   description                    VARCHAR2(50)   NOT NULL,
+   created_by                     VARCHAR2(10)   NOT NULL,
+   created_date                   DATE           NOT NULL,
+   profile_id                     VARCHAR2(10)   NULL,
+   notes                          CLOB           NULL,
+   rowversion                     DATE           NOT NULL,
+   rowkey                         VARCHAR2(50)   DEFAULT sys_guid() NOT NULL,
+   rowstate                       VARCHAR2(20)   NOT NULL);
+
+
+PRIMARY KEY mdm_basic_data_header_pk IS mdm_basic_data_header_tab (
+   template_id,
+   revision);
+
+
+UNIQUE CONSTRAINT mdm_basic_data_header_rk IS mdm_basic_data_header_tab (
+   rowkey);
+
+-------------------- OTHER DEFINITIONS --------------------------------------
+

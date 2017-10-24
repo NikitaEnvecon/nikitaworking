@@ -1,0 +1,1605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="picTabs.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>12, 68, 5, 5</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="picTabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>590, 665</value>
+  </data>
+  <data name="picTabs.TabSetup" xml:space="preserve">
+    <value>{Name=Default Code Part Demands;Label=Default Code Part Demands}{Name=Default Budget Code Part Demands;Label=Default Budget Code Part Demands}</value>
+  </data>
+  <data name="&gt;&gt;picTabs.Name" xml:space="preserve">
+    <value>picTabs</value>
+  </data>
+  <data name="&gt;&gt;picTabs.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.QO.SalQuickTabs, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;picTabs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;picTabs.ZOrder" xml:space="preserve">
+    <value>53</value>
+  </data>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menuFrmMethods_menuChange__Company___.Caption" xml:space="preserve">
+    <value>Change &amp;Company...</value>
+  </data>
+  <data name="menuItem_Change.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 22</value>
+  </data>
+  <data name="menuFrmMethods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 26</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Name" xml:space="preserve">
+    <value>menuFrmMethods</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labeldfsCompany.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 647</value>
+  </data>
+  <data name="labeldfsCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="labeldfsCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labeldfsCompany.Text" xml:space="preserve">
+    <value>Company:</value>
+  </data>
+  <data name="labeldfsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCompany.Name" xml:space="preserve">
+    <value>labeldfsCompany</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCompany.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCompany.ZOrder" xml:space="preserve">
+    <value>52</value>
+  </data>
+  <data name="dfsCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 644</value>
+  </data>
+  <data name="dfsCompany.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="dfsCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 21</value>
+  </data>
+  <data name="dfsCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="dfsCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Name" xml:space="preserve">
+    <value>dfsCompany</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsCompany.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="labelcmbAccntType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbAccntType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 7</value>
+  </data>
+  <data name="labelcmbAccntType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="labelcmbAccntType.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelcmbAccntType.Text" xml:space="preserve">
+    <value>@A Type:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbAccntType.Name" xml:space="preserve">
+    <value>labelcmbAccntType</value>
+  </data>
+  <data name="&gt;&gt;labelcmbAccntType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbAccntType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbAccntType.ZOrder" xml:space="preserve">
+    <value>51</value>
+  </data>
+  <data name="cmbAccntType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="cmbAccntType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 21</value>
+  </data>
+  <data name="cmbAccntType.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cmbAccntType.Name" xml:space="preserve">
+    <value>cmbAccntType</value>
+  </data>
+  <data name="&gt;&gt;cmbAccntType.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cRecSelExtComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbAccntType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbAccntType.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="labeldfsDescription.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 8</value>
+  </data>
+  <data name="labeldfsDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="labeldfsDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labeldfsDescription.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsDescription.Name" xml:space="preserve">
+    <value>labeldfsDescription</value>
+  </data>
+  <data name="&gt;&gt;labeldfsDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsDescription.ZOrder" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="dfsDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 27</value>
+  </data>
+  <data name="dfsDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 21</value>
+  </data>
+  <data name="dfsDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dfsDescription.Name" xml:space="preserve">
+    <value>dfsDescription</value>
+  </data>
+  <data name="&gt;&gt;dfsDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsDescription.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="labelcmbLogicalAccountType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbLogicalAccountType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 8</value>
+  </data>
+  <data name="labelcmbLogicalAccountType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="labelcmbLogicalAccountType.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelcmbLogicalAccountType.Text" xml:space="preserve">
+    <value>Logical @A Type:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbLogicalAccountType.Name" xml:space="preserve">
+    <value>labelcmbLogicalAccountType</value>
+  </data>
+  <data name="&gt;&gt;labelcmbLogicalAccountType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbLogicalAccountType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbLogicalAccountType.ZOrder" xml:space="preserve">
+    <value>49</value>
+  </data>
+  <data name="cmbLogicalAccountType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 27</value>
+  </data>
+  <data name="cmbLogicalAccountType.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbLogicalAccountType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 21</value>
+  </data>
+  <data name="cmbLogicalAccountType.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;cmbLogicalAccountType.Name" xml:space="preserve">
+    <value>cmbLogicalAccountType</value>
+  </data>
+  <data name="&gt;&gt;cmbLogicalAccountType.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbLogicalAccountType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbLogicalAccountType.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="labelcmbReqCodeBDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqCodeBDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 106</value>
+  </data>
+  <data name="labelcmbReqCodeBDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="labelcmbReqCodeBDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="labelcmbReqCodeBDefault.Text" xml:space="preserve">
+    <value>@B:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeBDefault.Name" xml:space="preserve">
+    <value>labelcmbReqCodeBDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeBDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeBDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeBDefault.ZOrder" xml:space="preserve">
+    <value>48</value>
+  </data>
+  <data name="cmbReqCodeBDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 104</value>
+  </data>
+  <data name="cmbReqCodeBDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqCodeBDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqCodeBDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeBDefault.Name" xml:space="preserve">
+    <value>cmbReqCodeBDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeBDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeBDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeBDefault.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="labelcmbReqCodeCDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqCodeCDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 141</value>
+  </data>
+  <data name="labelcmbReqCodeCDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="labelcmbReqCodeCDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="labelcmbReqCodeCDefault.Text" xml:space="preserve">
+    <value>@C:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeCDefault.Name" xml:space="preserve">
+    <value>labelcmbReqCodeCDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeCDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeCDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeCDefault.ZOrder" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="cmbReqCodeCDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 139</value>
+  </data>
+  <data name="cmbReqCodeCDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqCodeCDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqCodeCDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeCDefault.Name" xml:space="preserve">
+    <value>cmbReqCodeCDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeCDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeCDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeCDefault.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="labelcmbReqCodeDDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqCodeDDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 176</value>
+  </data>
+  <data name="labelcmbReqCodeDDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="labelcmbReqCodeDDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="labelcmbReqCodeDDefault.Text" xml:space="preserve">
+    <value>@D:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeDDefault.Name" xml:space="preserve">
+    <value>labelcmbReqCodeDDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeDDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeDDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeDDefault.ZOrder" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="cmbReqCodeDDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 174</value>
+  </data>
+  <data name="cmbReqCodeDDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqCodeDDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqCodeDDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeDDefault.Name" xml:space="preserve">
+    <value>cmbReqCodeDDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeDDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeDDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeDDefault.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="labelcmbReqCodeEDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqCodeEDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 211</value>
+  </data>
+  <data name="labelcmbReqCodeEDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="labelcmbReqCodeEDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="labelcmbReqCodeEDefault.Text" xml:space="preserve">
+    <value>@E:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeEDefault.Name" xml:space="preserve">
+    <value>labelcmbReqCodeEDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeEDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeEDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeEDefault.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="cmbReqCodeEDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 209</value>
+  </data>
+  <data name="cmbReqCodeEDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqCodeEDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqCodeEDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeEDefault.Name" xml:space="preserve">
+    <value>cmbReqCodeEDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeEDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeEDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeEDefault.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="labelcmbReqCodeFDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqCodeFDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 246</value>
+  </data>
+  <data name="labelcmbReqCodeFDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="labelcmbReqCodeFDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="labelcmbReqCodeFDefault.Text" xml:space="preserve">
+    <value>@F:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeFDefault.Name" xml:space="preserve">
+    <value>labelcmbReqCodeFDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeFDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeFDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeFDefault.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="cmbReqCodeFDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 244</value>
+  </data>
+  <data name="cmbReqCodeFDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqCodeFDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqCodeFDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeFDefault.Name" xml:space="preserve">
+    <value>cmbReqCodeFDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeFDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeFDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeFDefault.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="labelcmbReqCodeGDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqCodeGDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 281</value>
+  </data>
+  <data name="labelcmbReqCodeGDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="labelcmbReqCodeGDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="labelcmbReqCodeGDefault.Text" xml:space="preserve">
+    <value>@G:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeGDefault.Name" xml:space="preserve">
+    <value>labelcmbReqCodeGDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeGDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeGDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeGDefault.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="cmbReqCodeGDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 279</value>
+  </data>
+  <data name="cmbReqCodeGDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqCodeGDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqCodeGDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeGDefault.Name" xml:space="preserve">
+    <value>cmbReqCodeGDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeGDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeGDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeGDefault.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="labelcmbReqCodeHDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqCodeHDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 106</value>
+  </data>
+  <data name="labelcmbReqCodeHDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="labelcmbReqCodeHDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="labelcmbReqCodeHDefault.Text" xml:space="preserve">
+    <value>@H:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeHDefault.Name" xml:space="preserve">
+    <value>labelcmbReqCodeHDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeHDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeHDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeHDefault.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="cmbReqCodeHDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 104</value>
+  </data>
+  <data name="cmbReqCodeHDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqCodeHDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqCodeHDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeHDefault.Name" xml:space="preserve">
+    <value>cmbReqCodeHDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeHDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeHDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeHDefault.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="labelcmbReqCodeIDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqCodeIDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 141</value>
+  </data>
+  <data name="labelcmbReqCodeIDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 13</value>
+  </data>
+  <data name="labelcmbReqCodeIDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="labelcmbReqCodeIDefault.Text" xml:space="preserve">
+    <value>@I:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeIDefault.Name" xml:space="preserve">
+    <value>labelcmbReqCodeIDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeIDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeIDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeIDefault.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="cmbReqCodeIDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 139</value>
+  </data>
+  <data name="cmbReqCodeIDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqCodeIDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqCodeIDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeIDefault.Name" xml:space="preserve">
+    <value>cmbReqCodeIDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeIDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeIDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeIDefault.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="labelcmbReqCodeJDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqCodeJDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 176</value>
+  </data>
+  <data name="labelcmbReqCodeJDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 13</value>
+  </data>
+  <data name="labelcmbReqCodeJDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="labelcmbReqCodeJDefault.Text" xml:space="preserve">
+    <value>@J:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeJDefault.Name" xml:space="preserve">
+    <value>labelcmbReqCodeJDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeJDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeJDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqCodeJDefault.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="cmbReqCodeJDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 174</value>
+  </data>
+  <data name="cmbReqCodeJDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqCodeJDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqCodeJDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeJDefault.Name" xml:space="preserve">
+    <value>cmbReqCodeJDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeJDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeJDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqCodeJDefault.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="labelcmbReqQuantityDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqQuantityDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 211</value>
+  </data>
+  <data name="labelcmbReqQuantityDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="labelcmbReqQuantityDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="labelcmbReqQuantityDefault.Text" xml:space="preserve">
+    <value>Quantity:</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqQuantityDefault.Name" xml:space="preserve">
+    <value>labelcmbReqQuantityDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqQuantityDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqQuantityDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqQuantityDefault.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="cmbReqQuantityDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 209</value>
+  </data>
+  <data name="cmbReqQuantityDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqQuantityDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqQuantityDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;cmbReqQuantityDefault.Name" xml:space="preserve">
+    <value>cmbReqQuantityDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqQuantityDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqQuantityDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqQuantityDefault.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="labelcmbProcessCodeDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbProcessCodeDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 246</value>
+  </data>
+  <data name="labelcmbProcessCodeDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
+  <data name="labelcmbProcessCodeDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="labelcmbProcessCodeDefault.Text" xml:space="preserve">
+    <value>Process Code :</value>
+  </data>
+  <data name="&gt;&gt;labelcmbProcessCodeDefault.Name" xml:space="preserve">
+    <value>labelcmbProcessCodeDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbProcessCodeDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbProcessCodeDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbProcessCodeDefault.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="cmbProcessCodeDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 244</value>
+  </data>
+  <data name="cmbProcessCodeDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbProcessCodeDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbProcessCodeDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;cmbProcessCodeDefault.Name" xml:space="preserve">
+    <value>cmbProcessCodeDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbProcessCodeDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbProcessCodeDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbProcessCodeDefault.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="labelcmbReqBudCodeBDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqBudCodeBDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 106</value>
+  </data>
+  <data name="labelcmbReqBudCodeBDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="labelcmbReqBudCodeBDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="labelcmbReqBudCodeBDefault.Text" xml:space="preserve">
+    <value>@B:</value>
+  </data>
+  <data name="labelcmbReqBudCodeBDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeBDefault.Name" xml:space="preserve">
+    <value>labelcmbReqBudCodeBDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeBDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeBDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeBDefault.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="cmbReqBudCodeBDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 104</value>
+  </data>
+  <data name="cmbReqBudCodeBDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqBudCodeBDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqBudCodeBDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="cmbReqBudCodeBDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeBDefault.Name" xml:space="preserve">
+    <value>cmbReqBudCodeBDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeBDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeBDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeBDefault.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelcmbReqBudCodeCDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqBudCodeCDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 141</value>
+  </data>
+  <data name="labelcmbReqBudCodeCDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="labelcmbReqBudCodeCDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="labelcmbReqBudCodeCDefault.Text" xml:space="preserve">
+    <value>@C:</value>
+  </data>
+  <data name="labelcmbReqBudCodeCDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeCDefault.Name" xml:space="preserve">
+    <value>labelcmbReqBudCodeCDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeCDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeCDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeCDefault.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="cmbReqBudCodeCDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 139</value>
+  </data>
+  <data name="cmbReqBudCodeCDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqBudCodeCDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqBudCodeCDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="cmbReqBudCodeCDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeCDefault.Name" xml:space="preserve">
+    <value>cmbReqBudCodeCDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeCDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeCDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeCDefault.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelcmbReqBudCodeDDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqBudCodeDDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 176</value>
+  </data>
+  <data name="labelcmbReqBudCodeDDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="labelcmbReqBudCodeDDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="labelcmbReqBudCodeDDefault.Text" xml:space="preserve">
+    <value>@D:</value>
+  </data>
+  <data name="labelcmbReqBudCodeDDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeDDefault.Name" xml:space="preserve">
+    <value>labelcmbReqBudCodeDDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeDDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeDDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeDDefault.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="cmbReqBudCodeDDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 174</value>
+  </data>
+  <data name="cmbReqBudCodeDDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqBudCodeDDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqBudCodeDDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="cmbReqBudCodeDDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeDDefault.Name" xml:space="preserve">
+    <value>cmbReqBudCodeDDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeDDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeDDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeDDefault.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelcmbReqBudCodeEDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqBudCodeEDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 211</value>
+  </data>
+  <data name="labelcmbReqBudCodeEDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="labelcmbReqBudCodeEDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="labelcmbReqBudCodeEDefault.Text" xml:space="preserve">
+    <value>@E:</value>
+  </data>
+  <data name="labelcmbReqBudCodeEDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeEDefault.Name" xml:space="preserve">
+    <value>labelcmbReqBudCodeEDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeEDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeEDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeEDefault.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="cmbReqBudCodeEDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 209</value>
+  </data>
+  <data name="cmbReqBudCodeEDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqBudCodeEDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqBudCodeEDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="cmbReqBudCodeEDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeEDefault.Name" xml:space="preserve">
+    <value>cmbReqBudCodeEDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeEDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeEDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeEDefault.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelcmbReqBudCodeFDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqBudCodeFDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 246</value>
+  </data>
+  <data name="labelcmbReqBudCodeFDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="labelcmbReqBudCodeFDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="labelcmbReqBudCodeFDefault.Text" xml:space="preserve">
+    <value>@F:</value>
+  </data>
+  <data name="labelcmbReqBudCodeFDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeFDefault.Name" xml:space="preserve">
+    <value>labelcmbReqBudCodeFDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeFDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeFDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeFDefault.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="cmbReqBudCodeFDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 244</value>
+  </data>
+  <data name="cmbReqBudCodeFDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqBudCodeFDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqBudCodeFDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="cmbReqBudCodeFDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeFDefault.Name" xml:space="preserve">
+    <value>cmbReqBudCodeFDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeFDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeFDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeFDefault.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labelcmbReqBudCodeGDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqBudCodeGDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 281</value>
+  </data>
+  <data name="labelcmbReqBudCodeGDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="labelcmbReqBudCodeGDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="labelcmbReqBudCodeGDefault.Text" xml:space="preserve">
+    <value>@G:</value>
+  </data>
+  <data name="labelcmbReqBudCodeGDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeGDefault.Name" xml:space="preserve">
+    <value>labelcmbReqBudCodeGDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeGDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeGDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeGDefault.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="cmbReqBudCodeGDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 279</value>
+  </data>
+  <data name="cmbReqBudCodeGDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqBudCodeGDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqBudCodeGDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="cmbReqBudCodeGDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeGDefault.Name" xml:space="preserve">
+    <value>cmbReqBudCodeGDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeGDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeGDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeGDefault.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelcmbReqBudCodeHDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqBudCodeHDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 106</value>
+  </data>
+  <data name="labelcmbReqBudCodeHDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="labelcmbReqBudCodeHDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="labelcmbReqBudCodeHDefault.Text" xml:space="preserve">
+    <value>@H:</value>
+  </data>
+  <data name="labelcmbReqBudCodeHDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeHDefault.Name" xml:space="preserve">
+    <value>labelcmbReqBudCodeHDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeHDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeHDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeHDefault.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="cmbReqBudCodeHDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 104</value>
+  </data>
+  <data name="cmbReqBudCodeHDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqBudCodeHDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqBudCodeHDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="cmbReqBudCodeHDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeHDefault.Name" xml:space="preserve">
+    <value>cmbReqBudCodeHDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeHDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeHDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeHDefault.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelcmbReqBudCodeIDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqBudCodeIDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 141</value>
+  </data>
+  <data name="labelcmbReqBudCodeIDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 13</value>
+  </data>
+  <data name="labelcmbReqBudCodeIDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="labelcmbReqBudCodeIDefault.Text" xml:space="preserve">
+    <value>@I:</value>
+  </data>
+  <data name="labelcmbReqBudCodeIDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeIDefault.Name" xml:space="preserve">
+    <value>labelcmbReqBudCodeIDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeIDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeIDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeIDefault.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="cmbReqBudCodeIDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 139</value>
+  </data>
+  <data name="cmbReqBudCodeIDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqBudCodeIDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqBudCodeIDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="cmbReqBudCodeIDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeIDefault.Name" xml:space="preserve">
+    <value>cmbReqBudCodeIDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeIDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeIDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeIDefault.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="labelcmbReqBudCodeJDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqBudCodeJDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 176</value>
+  </data>
+  <data name="labelcmbReqBudCodeJDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 13</value>
+  </data>
+  <data name="labelcmbReqBudCodeJDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="labelcmbReqBudCodeJDefault.Text" xml:space="preserve">
+    <value>@J:</value>
+  </data>
+  <data name="labelcmbReqBudCodeJDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeJDefault.Name" xml:space="preserve">
+    <value>labelcmbReqBudCodeJDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeJDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeJDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudCodeJDefault.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="cmbReqBudCodeJDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 174</value>
+  </data>
+  <data name="cmbReqBudCodeJDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqBudCodeJDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqBudCodeJDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="cmbReqBudCodeJDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeJDefault.Name" xml:space="preserve">
+    <value>cmbReqBudCodeJDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeJDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeJDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudCodeJDefault.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labelcmbReqBudQuantityDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbReqBudQuantityDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 211</value>
+  </data>
+  <data name="labelcmbReqBudQuantityDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="labelcmbReqBudQuantityDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="labelcmbReqBudQuantityDefault.Text" xml:space="preserve">
+    <value>Quantity:</value>
+  </data>
+  <data name="labelcmbReqBudQuantityDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudQuantityDefault.Name" xml:space="preserve">
+    <value>labelcmbReqBudQuantityDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudQuantityDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudQuantityDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbReqBudQuantityDefault.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="cmbReqBudQuantityDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 209</value>
+  </data>
+  <data name="cmbReqBudQuantityDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbReqBudQuantityDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbReqBudQuantityDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="cmbReqBudQuantityDefault.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudQuantityDefault.Name" xml:space="preserve">
+    <value>cmbReqBudQuantityDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudQuantityDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudQuantityDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbReqBudQuantityDefault.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labelcmbTextDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelcmbTextDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 281</value>
+  </data>
+  <data name="labelcmbTextDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="labelcmbTextDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="labelcmbTextDefault.Text" xml:space="preserve">
+    <value>Text :</value>
+  </data>
+  <data name="&gt;&gt;labelcmbTextDefault.Name" xml:space="preserve">
+    <value>labelcmbTextDefault</value>
+  </data>
+  <data name="&gt;&gt;labelcmbTextDefault.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelcmbTextDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelcmbTextDefault.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="cmbTextDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 279</value>
+  </data>
+  <data name="cmbTextDefault.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbTextDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="cmbTextDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="&gt;&gt;cmbTextDefault.Name" xml:space="preserve">
+    <value>cmbTextDefault</value>
+  </data>
+  <data name="&gt;&gt;cmbTextDefault.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cComboBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbTextDefault.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbTextDefault.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dfAction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 0</value>
+  </data>
+  <data name="dfAction.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="dfAction.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="dfAction.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfAction.Name" xml:space="preserve">
+    <value>dfAction</value>
+  </data>
+  <data name="&gt;&gt;dfAction.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cDataFieldFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfAction.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfAction.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>607, 344</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Account Types</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuChange__Company___.Name" xml:space="preserve">
+    <value>menuFrmMethods_menuChange__Company___</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuChange__Company___.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change.Name" xml:space="preserve">
+    <value>menuItem_Change</value>
+  </data>
+  <data name="&gt;&gt;menuItem_Change.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmAccountType</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cTabFormWindowFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

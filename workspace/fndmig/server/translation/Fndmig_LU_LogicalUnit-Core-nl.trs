@@ -1,0 +1,1702 @@
+-------------------------------------------------------
+File Type: IFS Foundation Translation File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Language: nl
+Culture: nl-NL
+Fittings: Standard
+Layer: Core
+Main Type: LU
+Sub Type: Logical Unit
+-------------------------------------------------------
+CS:IntfaceChangeDefaults^LU
+	A:Prompt^Intface wijzig std.waarden^O
+	CS:1^LU
+		A:Text^Toegestaan^O
+	CE:
+	CS:2^LU
+		A:Text^Niet toegestaan^O
+	CE:
+	CS:3^LU
+		A:Text^Vaste waarde^O
+	CE:
+CE:
+CS:IntfaceConvList^LU
+	A:Prompt^Intface conv.lijst^O
+	CS:INTFACE_CONV_LIST^LU
+	CE:
+CE:
+CS:IntfaceConvListCols^LU
+	A:Prompt^Intface conv.lijstkol.^O
+	CS:INTFACE_CONV_LIST_COLS^LU
+	CE:
+CE:
+CS:IntfaceDefaultRules^LU
+	A:Prompt^Intface standaardregels^O
+	CS:ADDOBJID^LU
+		A:Text^Maak extra kolomdetail aan voor OBJID^O
+	CE:
+	CS:CHECKOPTION^LU
+		A:Text^Voer methodes New en Modify uit met CHECK optie^O
+	CE:
+	CS:CLEANUP^LU
+		A:Text^Automatisch wissen van foutdetails^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Aantal regels tussen iedere commit^O
+	CE:
+	CS:CONNJOB^LU
+		A:Text^Start eerst deze taak^O
+	CE:
+	CS:CREATEDET^LU
+		A:Text^Maak nieuwe kolomdetails aan gebaseerd op views in de Method Lijst^O
+	CE:
+	CS:CRETABCONF^LU
+		A:Text^Opties voor tijdelijke tabel^O
+	CE:
+	CS:EVENTMESS^LU
+		A:Text^Meld aan Event Server wanneer de job klaar is^O
+	CE:
+	CS:EXITLINES^LU
+		A:Text^Stop lezen van bestand na dit regelnummer^O
+	CE:
+	CS:FETCHCONDITION^LU
+		A:Text^Stelt in of de taak gebruikt kan worden om gegevens op te halen. Geef de join-voorwaarde op bij gebruik van meerdere LU's^O
+	CE:
+	CS:FILEBKP^LU
+		A:Text^Maak kopie van bestand na correcte afsluiting^O
+	CE:
+	CS:FILEHEAD^LU
+		A:Text^Maak bestandskop met kolom namen. Alleen voor CSV bestanden^O
+	CE:
+	CS:IGNOREADERROR^LU
+		A:Text^Ga door met lezen van bestand zelfs wanneer fouten optreden^O
+	CE:
+	CS:IGNOREXEERROR^LU
+		A:Text^Ga door met procedure zelfs wanneer fouten optreden^O
+	CE:
+	CS:INSUPD^LU
+		A:Text^Voer INSERT of UPDATE uit^O
+	CE:
+	CS:INTFACE_DEFAULT_RULES^LU
+	CE:
+	CS:NOCLEANUP^LU
+		A:Text^Bewaar alle job-details voor client bestanden^O
+	CE:
+	CS:SAVEJOBDAYS^LU
+		A:Text^Aantal dagen voor opslag van job-historie^O
+	CE:
+	CS:SAVEJOBERR^LU
+		A:Text^Bewaar alleen fouten in de historie^O
+	CE:
+	CS:SERVFILOAD^LU
+		A:Text^Laad serverbestand voordat de job start^O
+	CE:
+	CS:SKIPLINES^LU
+		A:Text^Begin met lezen van bestand na dit regelnummer^O
+	CE:
+	CS:SYNCDETAILS^LU
+		A:Text^Synchroniseer job-details met kolommen in de bestandskop^O
+	CE:
+	CS:TRUNCVAL^LU
+		A:Text^Ingekorte waarden zijn groter dan kolom lengte^O
+	CE:
+CE:
+CS:IntfaceDetail^LU
+	A:Prompt^Intface Detail^O
+	CS:CHECKERROR^LU
+		A:Text^Controle op :P1 mislukt - :P2^O
+	CE:
+	CS:CLIENTVAL^LU
+		A:Text^Client-waardes^O
+	CE:
+	CS:COLOUTDAT^LU
+		A:Text^Fout bij formattering van :P1 met datumwaarde :P2^O
+	CE:
+	CS:COLOUTDAT2^LU
+		A:Text^Fout bij opmaken van datumkolom :P1^O
+	CE:
+	CS:COLOUTNUM^LU
+		A:Text^Fout bij formattering van :P1 met numerieke waarde :P2^O
+	CE:
+	CS:COLOUTNUM2^LU
+		A:Text^Fout bij opmaken van numerieke kolom :P1^O
+	CE:
+	CS:COLUMNOUT^LU
+		A:Text^Fout bij formattering van :P1 met waarde :P2^O
+	CE:
+	CS:COLUMNOUT2^LU
+		A:Text^Fout bij opmaken van kolom :P1^O
+	CE:
+	CS:COMMITCNT^LU
+		A:Text^:P1 Aantal regels commited: :P2^O
+	CE:
+	CS:CREERRORATTR^LU
+		A:Text^Aanmaken bestand van :P1 mislukt.^O
+	CE:
+	CS:CREFORMAT^LU
+		A:Text^Aanmaken bestand mislukt - :P1^O
+	CE:
+	CS:CREINTFACEOK^LU
+		A:Text^Migratietaak :P1 afgerond^O
+	CE:
+	CS:DBVAL^LU
+		A:Text^DB-waardes^O
+	CE:
+	CS:ERRDEFAULT^LU
+		A:Text^:P1 alleen gebruikt wanneer de richting = :P2^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Default-where niet in gebruik voor richting = :P1^O
+	CE:
+	CS:FILENOTFOUND^LU
+		A:Text^Kan bestand :P1 niet vinden op pad :P2.^O
+	CE:
+	CS:FORMATERROR^LU
+		A:Text^Opmaak mislukt - :P1. (Fout veroorzaakt door regel: :P2)^O
+	CE:
+	CS:INSCHECK^LU
+		A:Text^:P1 nieuwe regels gemarkeerd met OK^O
+	CE:
+	CS:INSCHECKERR^LU
+		A:Text^:P1 regels gemarkeerd met fout^O
+	CE:
+	CS:INSERRORNEW^LU
+		A:Text^Invoegen in :P1 mislukt - :P2 (Fout veroorzaakt door regel: :P3)^O
+	CE:
+	CS:INSINTERR^LU
+		A:Text^:P1 rijen mislukt^O
+	CE:
+	CS:INSINTINS^LU
+		A:Text^:P1 nieuwe regels toegevoegd^O
+	CE:
+	CS:INSINTNOROWS^LU
+		A:Text^Geen regels verwerkt^O
+	CE:
+	CS:INSINTOK^LU
+		A:Text^Migratietaak :P1 afgerond^O
+	CE:
+	CS:INTFACE_DETAIL^LU
+		CS:SOURCE_NAME^LU
+		CE:
+		CS:SOURCE_OWNER^LU
+		CE:
+	CE:
+	CS:INTFACE_DETAIL_COL_LOV^LU
+	CE:
+	CS:LOADERR^LU
+		A:Text^Fout tijdens laden van migratie job info :P1^O
+	CE:
+	CS:NODET^LU
+		A:Text^Geen details gevonden voor :P1^O
+	CE:
+	CS:NOROWS^LU
+		A:Text^Geen regels verwerkt^O
+	CE:
+	CS:NOVAL^LU
+		A:Text^Geen DB/Client waardes voor :P1^O
+	CE:
+	CS:ROWSFAILED^LU
+		A:Text^:P1 rijen mislukt^O
+	CE:
+	CS:ROWSWRITTEN^LU
+		A:Text^:P1 regels weggeschreven^O
+	CE:
+	CS:STRINGOUT^LU
+		A:Text^Fout bij formattering van :P1 met waarde :P2^O
+	CE:
+	CS:STRINGOUT2^LU
+		A:Text^Fout bij opmaken van kolom :P1^O
+	CE:
+	CS:STRINGOUTCONV^LU
+		A:Text^Fout bij conversie van waarde :P2 voor :P1^O
+	CE:
+	CS:STRINGOUTCONV2^LU
+		A:Text^Fout bij converteren van kolom :P1^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^Ingevoerde lengte :P2 voor kolom :P1 is overschreden door de waarde :P3. Rule TRUNCVAL kan dit oplossen.^O
+	CE:
+	CS:TOOLONG2^LU
+		A:Text^Ingevoerde lengte :P2 voor kolom :P1 is overschreden. Regel TRUNCVAL kan dit oplossen.^O
+	CE:
+	CS:UNPACKPOS^LU
+		A:Text^Fout opgetreden bij uitpakken van :P1 met waarde :P2^O
+	CE:
+	CS:UNPACKPOS2^LU
+		A:Text^Fout bij uitpakken van kolom :P1^O
+	CE:
+	CS:UNPACKPOSCONV^LU
+		A:Text^Fout bij conversie van waarde :P2 voor :P1^O
+	CE:
+	CS:UNPACKPOSDAT^LU
+		A:Text^Fout bij formattering van datum waarde :P2 voor :P1^O
+	CE:
+	CS:UNPACKPOSDAT2^LU
+		A:Text^Fout bij opmaken van datumkolom :P1^O
+	CE:
+	CS:UNPACKPOSDEF^LU
+		A:Text^Fout bij formattering van standaardwaarde :P2 voor :P1^O
+	CE:
+	CS:UNPACKPOSNUM^LU
+		A:Text^Fout bij formattering van numerieke waarde :P2 voor :P1^O
+	CE:
+	CS:UNPACKPOSNUM2^LU
+		A:Text^Fout bij opmaken van numerieke kolom :P1^O
+	CE:
+	CS:UNPACKPOSSTR^LU
+		A:Text^Fout bij formattering van string :P2 voor :P1^O
+	CE:
+	CS:UNPACKPOSSTR2^LU
+		A:Text^Fout bij opmaken van stringkolom :P1^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Fout opgetreden bij uitpakken van :P1 met waarde :P2^O
+	CE:
+	CS:UNPACKSEP2^LU
+		A:Text^Fout bij uitpakken van kolom :P1^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Fout bij conversie van waarde :P2 voor :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Fout bij formattering van datum waarde :P2 voor :P1^O
+	CE:
+	CS:UNPACKSEPDAT2^LU
+		A:Text^Fout bij opmaken van datumkolom :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Fout bij formattering van standaardwaarde :P2 voor :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Fout bij formattering van numerieke waarde :P2 voor :P1^O
+	CE:
+	CS:UNPACKSEPNUM2^LU
+		A:Text^Fout bij opmaken van numerieke kolom :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Fout bij lezen van kolomwaardes door kolom-scheidingsteken^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Fout bij formattering van string :P2 voor :P1^O
+	CE:
+	CS:UNPACKSEPSTR2^LU
+		A:Text^Fout bij opmaken van stringkolom :p1^O
+	CE:
+	CS:UPDERRORCHK^LU
+		A:Text^Fout :P1 bij uitvoeren van :P2^O
+	CE:
+	CS:UPDERRORUPD^LU
+		A:Text^Update van :P1 mislukt - :P2^O
+	CE:
+	CS:UPDINTFACEOK^LU
+		A:Text^Migratietaak :P1 afgerond^O
+	CE:
+	CS:UPDINTFERR^LU
+		A:Text^:P1 rijen mislukt^O
+	CE:
+	CS:UPDINTFINS^LU
+		A:Text^:P1 nieuwe regels toegevoegd^O
+	CE:
+	CS:UPDINTFUPD^LU
+		A:Text^:P1 regels gewijzigd^O
+	CE:
+	CS:VALFOUND^LU
+		A:Text^DB/Client waardes gevonden^O
+	CE:
+	CS:WRNOROWS^LU
+		A:Text^Geen regels verwerkt^O
+	CE:
+CE:
+CS:IntfaceDirection^LU
+	A:Prompt^Intfacerichting^O
+	CS:1^LU
+		A:Text^Bestand In^O
+	CE:
+	CS:2^LU
+		A:Text^Bestand Uit^O
+	CE:
+	CS:3^LU
+		A:Text^Geen^O
+	CE:
+	CS:4^LU
+		A:Text^Bron Migratie^O
+	CE:
+	CS:5^LU
+		A:Text^ReplicStructuur^O
+	CE:
+	CS:6^LU
+		A:Text^Excel-migratie^O
+	CE:
+CE:
+CS:IntfaceDocumentation^LU
+	A:Prompt^Intfacedocumentatie^O
+	CS:INFTXTDETAIL^LU
+		A:Text^Niet in gebruik^O
+	CE:
+	CS:INFTXTHEADER^LU
+		A:Text^Niet in gebruik^O
+	CE:
+	CS:INFTXTMETHLI^LU
+		A:Text^Niet in gebruik^O
+	CE:
+	CS:INTFACE_DOCUMENTATION_REP^LU
+		A:Title^Migratiedocumentatie^O
+		CS:ACTION^LU
+			A:Title^Actie^O
+		CE:
+		CS:AMOUNT_FACTOR^LU
+			A:Title^Bedragfactor^O
+		CE:
+		CS:ATTR_SEQ^LU
+			A:Title^Attr.volgnr^O
+		CE:
+		CS:BLOCK_TYPE^LU
+			A:Title^Bloktype^O
+		CE:
+		CS:CHANGE_DEFAULTS^LU
+			A:Title^Wijzig std.waarden^O
+		CE:
+		CS:COLS_USING_LIST^LU
+			A:Title^Kolommen m.b.v. conversielijst:^O
+		CE:
+		CS:COLUMN_EMBRACE^LU
+			A:Title^Kolomafbakening^O
+		CE:
+		CS:COLUMN_NAME^LU
+			A:Title^Doelkolom^O
+		CE:
+		CS:COLUMN_SEPARATOR^LU
+			A:Title^Kolomscheidingsteken^O
+		CE:
+		CS:CONVERT_ATTR^LU
+			A:Title^Geconv. attr.^O
+		CE:
+		CS:CONV_LIST_DESCR^LU
+			A:Title^Omschr. conv.lijst^O
+		CE:
+		CS:CONV_LIST_ID^LU
+			A:Title^Conv.lijst^O
+		CE:
+		CS:DATA_TYPE^LU
+			A:Title^Gegevenstype^O
+		CE:
+		CS:DATE_FORMAT^LU
+			A:Title^Datumnotatie^O
+		CE:
+		CS:DECIMAL_LENGTH^LU
+			A:Title^Decimale lengte^O
+		CE:
+		CS:DECIMAL_POINT^LU
+			A:Title^Decimaalteken^O
+		CE:
+		CS:DEFAULT_VALUE^LU
+			A:Title^Standaardwaarde^O
+		CE:
+		CS:DEFAULT_WHERE^LU
+			A:Title^Standaard Where^O
+		CE:
+		CS:DESCR_COLUMN_NAME^LU
+			A:Title^Kolomomschrijving^O
+		CE:
+		CS:DIRECTION^LU
+			A:Title^Richting^O
+		CE:
+		CS:DIRECTION_DB^LU
+			A:Title^Richting DB^O
+		CE:
+		CS:EXECUTED_BY^LU
+			A:Title^Uitvoerder^O
+		CE:
+		CS:EXECUTE_SEQ^LU
+			A:Title^Uitvoeringsvolgnr^O
+		CE:
+		CS:FILE_LOCATION^LU
+			A:Title^Bestandslocatie^O
+		CE:
+		CS:FILE_LOCATION_DB^LU
+			A:Title^Bestandslocatie DB^O
+		CE:
+		CS:FLAGS^LU
+			A:Title^Vlaggen^O
+		CE:
+		CS:GROUP_DESCRIPTION^LU
+			A:Title^Groepsomschrijving^O
+		CE:
+		CS:GROUP_ID^LU
+			A:Query^Groeps-ID:^O
+			A:Title^Groeps-ID^O
+		CE:
+		CS:INFO_TEXT_DETAIL^LU
+			A:Title^Info:^O
+		CE:
+		CS:INFO_TEXT_HEADER^LU
+			A:Title^Info:^O
+		CE:
+		CS:INFO_TEXT_METH_LIST^LU
+			A:Title^Info:^O
+		CE:
+		CS:INTFACE_DESCR^LU
+			A:Title^Migratieomschrijving^O
+		CE:
+		CS:INTFACE_FILE^LU
+			A:Title^Bestand^O
+		CE:
+		CS:INTFACE_IN^LU
+			A:Query^Migratietaak-ID:^O
+		CE:
+		CS:INTFACE_NAME^LU
+			A:Title^Migratietaak-ID^O
+		CE:
+		CS:INTFACE_PATH^LU
+			A:Title^Pad^O
+		CE:
+		CS:IntfaceDoc.rdl^LU
+			A:Title^Migratiedocument^O
+		CE:
+		CS:LAST_EXECUTED^LU
+			A:Title^Laatste uitvoering^O
+		CE:
+		CS:LAST_INFO^LU
+			A:Title^Laatste info^O
+		CE:
+		CS:LENGTH^LU
+			A:Title^Lengte^O
+		CE:
+		CS:MET_COLUMN_NAME^LU
+			A:Title^Regelkolom^O
+		CE:
+		CS:MET_COLUMN_VALUE^LU
+			A:Title^Regelwaarde^O
+		CE:
+		CS:MET_METHOD_NAME^LU
+			A:Title^Methode^O
+		CE:
+		CS:MET_VIEW_NAME^LU
+			A:Title^Weergave^O
+		CE:
+		CS:MINUS_POS^LU
+			A:Title^Minus Pos^O
+		CE:
+		CS:NEW_VALUE^LU
+			A:Title^Nieuwe waarde^O
+		CE:
+		CS:NOTE_TEXT_DETAIL^LU
+			A:Title^Opmerkingen^O
+		CE:
+		CS:NOTE_TEXT_GROUP^LU
+			A:Title^Opmerkingen^O
+		CE:
+		CS:NOTE_TEXT_HEADER^LU
+			A:Title^Opmerkingen^O
+		CE:
+		CS:NOTE_TEXT_METH_LIST^LU
+			A:Title^Opmerkingen^O
+		CE:
+		CS:OLD_VALUE^LU
+			A:Title^Oude waarde^O
+		CE:
+		CS:ORDER_BY_CLAUSE^LU
+			A:Title^Sorteren op^O
+		CE:
+		CS:ORDER_BY_COL^LU
+			A:Title^Sorteren op^O
+		CE:
+		CS:PAD_CHAR_LEFT^LU
+			A:Title^Opvulteken links^O
+		CE:
+		CS:PAD_CHAR_RIGHT^LU
+			A:Title^Opvulteken rechts^O
+		CE:
+		CS:POS^LU
+			A:Title^Pos.^O
+		CE:
+		CS:PRINT_DETAIL^LU
+			A:Query^Print kolommapping:^O
+		CE:
+		CS:PRINT_DOC_INFO^LU
+			A:Query^Print documentinformatie:^O
+		CE:
+		CS:PRINT_HEADER^LU
+			A:Query^Print kopgegevens:^O
+		CE:
+		CS:PRINT_MAP_VALUE^LU
+			A:Query^Print gemapte waarden:^O
+		CE:
+		CS:PRINT_METH_LIST^LU
+			A:Query^Print methodelijst:^O
+		CE:
+		CS:PROCEDURE_NAME^LU
+			A:Title^Procedurenaam^O
+		CE:
+		CS:REFERENCES^LU
+			A:Title^Referenties^O
+		CE:
+		CS:Report Constants^LU
+			A:txAction^Gebruikt om te specificeren of de methode v\00F3\00F3r of na het verwerken van de geselecteerde bronregels moet worden uitgevoerd of bij iedere regel die uit de bron wordt opgehaald.^O
+			A:txAmountFactor^Dit veld bevat de noemer voor de herberekening van de waarde van de bronkolom, indien nodig, v\00F3\00F3r de transfer naar de IFS-databasekolom.^O
+			A:txChangeDefaults^Dit veld geeft aan of het toegestaan is om de standaardwaarde te wijzigen tijdens het uitvoeren van een migratietaak.^O
+			A:txColumnName^Databasekolom in IFS waar bronwaarde in moeten worden opgenomen^O
+			A:txDataType^Gegevenstype van databasekolom. Numeriek, alfanumeriek of datum.^O
+			A:txDecimalLength^Aantal te gebruiken decimalen bij lezen/schrijven bestand^O
+			A:txDefaultValue^Dit veld bevat de waarde die moet worden gebruikt als de bronkolom leeg is. Als er geen bronkolom wordt gespecificeerd, geldt de standaardwaarde voor alle regels.^O
+			A:txDescrColumnName^Omschrijving van databasekolom^O
+			A:txDetailTitle^Specificatie van kolommapping^O
+			A:txExecuteSeq^Specificeer in welke volgorde de methodes in de methodelijst uitgevoerd moeten worden^O
+			A:txFileInfo^Bestandsinformatie^O
+			A:txFlags^IFS-attribuutvlaggen. De vlaggen beschrijven diverse attributen die aan de DB-kolommen gekoppeld zijn. Ze kunnen een of meer van de volgende waarden bevatten:^O
+			A:txFlagsI^I = Invoegen toegestaan^O
+			A:txFlagsK^K = Key (vreemde sleutel)^O
+			A:txFlagsM^M = Mandatory^O
+			A:txFlagsP^P = Parent Key^O
+			A:txFlagsU^U = Update toegestaan^O
+			A:txHeaderColMapping^Verklaring van kolommen in kolommapping^O
+			A:txHeaderMethodList^Verklaring van kolommen in methodelijst^O
+			A:txHeaderTitle^Specificatie van migratieroutines voor^O
+			A:txLastExecutionInfo^Info laatste uitvoering^O
+			A:txLength^Dit veld bevat de maximaal toegestane lengte van de IFS-databasekolom. Dit veld wordt gebruikt in combinatie met het positieveld voor het lezen/schrijven van bestanden met een vaste kolombreedte.^O
+			A:txMapTitle^Specifieke kolomwaardemapping^O
+			A:txMetColumnName^Gebruikt om aan te geven dat een methode alleen moet worden uitgevoerd afhankelijk van de waarde van deze bronkolom.^O
+			A:txMetColumnValue^De methode zal alleen worden uitgevoerd als de waarde van de bronkolom gelijk is aan deze waarde. Als bijv. '%' is ingevoerd, zal de methode gelden voor alle regels met een waarde in de bronkolom.^O
+			A:txMetMethodName^Specificeer welke IFS- of zelfgedefinieerde methode uitgevoerd moet worden^O
+			A:txMethodListTitle^Gebruikte/aangemaakte methodes/API's^O
+			A:txPadCharLeft^Dit veld bevat het teken dat aan de linkerzijde van een kolom moet worden verwijderd of toegevoegd bij het lezen/schrijven van een bestand (ltrim/lpad).^O
+			A:txPadCharRight^Dit veld bevat het teken dat aan de rechterzijde van een kolom moet worden verwijderd of toegevoegd bij het lezen/schrijven van een bestand (rtrim/rpad).^O
+			A:txPos^Dit veld wordt gebruikt om de kolomlocatie in een bepaald bestand te specificeren. Bijv. 1, 2, 3 etc. in geval van een CSV-bestand.^O
+			A:txSourceColumn^Bronkolom van bestand, tabel of view die in IFS-databasekolom terecht moet komen^O
+			A:txTitleDocPage^Definities / Kolomomschrijvingen^O
+			A:txViewInfo^Hoofdbron/-doelinfo^O
+		CE:
+		CS:SOURCE_COLUMN^LU
+			A:Title^Bronkolom^O
+		CE:
+		CS:SOURCE_NAME^LU
+			A:Title^Bronnaam^O
+		CE:
+		CS:SOURCE_OWNER^LU
+			A:Title^Broneigenaar^O
+		CE:
+		CS:THOUSAND_SEPARATOR^LU
+			A:Title^Scheidingsteken duizendtallen^O
+		CE:
+		CS:VIEW_NAME^LU
+			A:Title^Doelnaam^O
+		CE:
+		CS:WHERE_CLAUSE^LU
+			A:Title^Waar^O
+		CE:
+	CE:
+	CS:INTFACE_INFO_SERVICES_RPV^LU
+	CE:
+CE:
+CS:IntfaceEvents^LU
+	A:Prompt^Intfacegebeurtenissen^O
+CE:
+CS:IntfaceExcelConnect^LU
+	A:Prompt^Intface Excel Connect^O
+CE:
+CS:IntfaceExecIntervalType^LU
+	A:Prompt^Intface uitv intervaltype^O
+	CS:1440^LU
+		A:Text^Minuten^O
+	CE:
+	CS:24^LU
+		A:Text^Uren^O
+	CE:
+	CS:86400^LU
+		A:Text^Seconden^O
+	CE:
+CE:
+CS:IntfaceExecution^LU
+	A:Prompt^Intface uitvoering^O
+	CS:INTFACE_EXECUTION^LU
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:IC_TABLE_NAME^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionDetail^LU
+	A:Prompt^Intface uitvoering detail^O
+	CS:INTFACE_EXECUTION_DETAIL^LU
+		CS:ATTRIBUTE_STRING^LU
+		CE:
+		CS:DATE_EXECUTED^LU
+		CE:
+		CS:ERROR_MESSAGE^LU
+		CE:
+		CS:EXECUTED_BY^LU
+		CE:
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:FILE_STRING^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+		CS:LINE_NO^LU
+		CE:
+		CS:STATUS^LU
+		CE:
+		CS:STATUS_DB^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionUtil^LU
+	CS:BLANKCOLUMNS^LU
+		A:Text^Bronkolom of standaardwaarde moet een waarde hebben^O
+	CE:
+	CS:CHKCOUNT^LU
+		A:Text^:P1 regels gecontroleerd^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Regels committed door regel COMMITSEQ : :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Deze taak kan niet worden gestart. De gekoppelde taak :P1 bevat fouten.^O
+	CE:
+	CS:CREIND^LU
+		A:Text^:P1 index op kolom :P2 aangemaakt^O
+	CE:
+	CS:DUPEXIST^LU
+		A:Text^Er zijn duplicaatkolommen. Los de duplicaten op voordat u gaat uitvoeren^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^Methodenr :P1 - Waarde voor taak-ID mag niet gelijk zijn aan hoofdtaak^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Uitgevoerd zonder fout^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^UITVOERENDE METHODENR :P1 :^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^:P1 onvolledige transacties t.g.v. COMMIT of ROLLBACK in aangeroepen methode^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Onvolledige selectie niet uitgevoerd - :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Controleer resultaat. Transacties kunnen gedeeltelijk zijn vastgelegd^O
+	CE:
+	CS:INVALIDLENGTH^LU
+		A:Text^Bronkolom mag niet meer zijn dan dertig tekens^O
+	CE:
+	CS:JOBRUNERROR^LU
+		A:Text^Fout bij uitvoeren van taak :P1^O
+	CE:
+	CS:LNGTHINVAL^LU
+		A:Text^Er zijn bronkolommen van meer dan 30 tekens. Los de bronkolomlengte op voordat u gaat uitvoeren^O
+	CE:
+	CS:LOADERR^LU
+		A:Text^Fout tijdens laden van migratie job info :P1^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 met CHECK-optie^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, Fouten: :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Nieuwe rijen : :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Verwerkte rijen : :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Bijgewerkte rijen : :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^Gemiddelde van :P1 rijen per minuut^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 rijen vastgelegd^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^:P1 rijen geselecteerd^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 rijen mislukt^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^:P1 uren en :P2 minuten verbruikt^O
+	CE:
+	CS:NODET^LU
+		A:Text^Geen details gevonden voor :P1^O
+	CE:
+	CS:NONAME^LU
+		A:Text^Waarde voor taak-ID ontbreekt in attr-string voor methodenr :P1^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^OBJID niet in selectie, maar regel ADDOBJID is actief^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Herstart onmogelijk - :P1 heeft geen rowid^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^Geen selectie gespecificeerd^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1 heeft :P2 foutregels en kan niet gestart worden^O
+	CE:
+	CS:NULLCOLS^LU
+		A:Text^Er zijn records zonder bronkolom en standaarwaarde. Los op voordat u gaat uitvoeren.^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Fout bij selectie :P1 - :P2^O
+	CE:
+	CS:SOURCEDUPLIC^LU
+		A:Text^Bronkolom moet uniek zijn.^O
+	CE:
+	CS:STATINSERT^LU
+		A:Text^Ingevoegd^O
+	CE:
+	CS:STATNOOP^LU
+		A:Text^Geen bewerking^O
+	CE:
+	CS:STATNOTEXT^LU
+		A:Text^Object bestaat niet^O
+	CE:
+	CS:STATOK^LU
+		A:Text^Valideren OK^O
+	CE:
+	CS:STATPROC^LU
+		A:Text^Verwerkt^O
+	CE:
+	CS:STATUPDATE^LU
+		A:Text^Bijgewerkt^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Starttijd - :P1 :P2^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^Ingevoerde lengte :P2 voor kolom :P1 is overschreden door de waarde :P3.^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Fout opgetreden bij uitpakken van :P1 met waarde :P2^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Fout bij conversie van waarde :P2 voor :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Fout bij opmaken van datumwaarde :P2 voor :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Fout bij opmaken van standaardwaarde :P2 voor :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Fout bij opmaken van numerieke waarde :P2 voor :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Fout bij lezen van kolomwaarden door kolom-scheidingsteken^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Fout bij opmaken van stringwaarde :P2 voor :P1^O
+	CE:
+CE:
+CS:IntfaceFileLocation^LU
+	A:Prompt^Intface bestandslocatie^O
+	CS:1^LU
+		A:Text^OpServer^O
+	CE:
+	CS:2^LU
+		A:Text^OpClient^O
+	CE:
+	CS:3^LU
+		A:Text^Geen bestand^O
+	CE:
+CE:
+CS:IntfaceFormatChar^LU
+	A:Prompt^Intface opmaakteken^O
+	CS:124^LU
+		A:Text^<pipe>^O
+	CE:
+	CS:13^LU
+		A:Text^<enter>^O
+	CE:
+	CS:164^LU
+		A:Text^<valuta teken>^O
+	CE:
+	CS:32^LU
+		A:Text^<spatie>^O
+	CE:
+	CS:34^LU
+		A:Text^<dubbele quote>^O
+	CE:
+	CS:35^LU
+		A:Text^<hekje>^O
+	CE:
+	CS:39^LU
+		A:Text^<enkele quote>^O
+	CE:
+	CS:42^LU
+		A:Text^<asterisk>^O
+	CE:
+	CS:44^LU
+		A:Text^<komma>^O
+	CE:
+	CS:46^LU
+		A:Text^<punt>^O
+	CE:
+	CS:48^LU
+		A:Text^<nul>^O
+	CE:
+	CS:59^LU
+		A:Text^<puntkomma>^O
+	CE:
+	CS:9^LU
+		A:Text^<tab>^O
+	CE:
+CE:
+CS:IntfaceGroup^LU
+	A:Prompt^Intfacegroep^O
+	CS:INTFACE_GROUP^LU
+	CE:
+CE:
+CS:IntfaceHeader^LU
+	A:Prompt^Intfacekop^O
+	CS:BATCHJOBCOMP^LU
+		A:Text^Migratietaak :P1 is uitgevoerd.^O
+	CE:
+	CS:BATCHJOBERROR^LU
+		A:Text^Uitvoering van migratietaak :P1 be\00EBindigd met fout(en). Zie venster Historie migratietaak voor meer informatie.^O
+	CE:
+	CS:BCKFILE^LU
+		A:Text^Backup bestandnaam :P1^O
+	CE:
+	CS:BCKPATH^LU
+		A:Text^Backup bestand pad :P1^O
+	CE:
+	CS:COPYERR^LU
+		A:Text^Fout bij aanmaak :P1 - :P2^O
+	CE:
+	CS:COPYOK^LU
+		A:Text^Migratiejob :P1 aangemaakt^O
+	CE:
+	CS:DELFILE^LU
+		A:Text^Bestand :P1 is verwijderd^O
+	CE:
+	CS:DEPREC^LU
+		A:Text^Data Migration Quick Report Export functie is verouderd. Gebruik de ingebouwde Import/Export functionaliteit in Quick Reports.^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Default-where niet in gebruik voor richting = :P1^O
+	CE:
+	CS:EXECNO^LU
+		A:Text^Uitvoeringsnr :P1^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Fout bij export :P1 - :P2^O
+	CE:
+	CS:EXPTXT1^LU
+		A:Text^Ge\00EBxporteerde migratie taken:^O
+	CE:
+	CS:EXPTXT2^LU
+		A:Text^Ge\00EBxporteerde migratie groepen:^O
+	CE:
+	CS:EXPTXT3^LU
+		A:Text^Ge\00EBxporteerde conversie lijsten:^O
+	CE:
+	CS:EXPTXT4^LU
+		A:Text^Ge\00EBxporteerde triggers:^O
+	CE:
+	CS:EXPTXT5^LU
+		A:Text^Ge\00EBxporteerde packages:^O
+	CE:
+	CS:EXPTXT6^LU
+		A:Text^Aangemaakte bestanden:^O
+	CE:
+	CS:EXPTXT7^LU
+		A:Text^Conversielijsten NIET ge\00EBxporteerd:^O
+	CE:
+	CS:IMPERR^LU
+		A:Text^Fout bij import :P1 - :P2^O
+	CE:
+	CS:IMPTXT1^LU
+		A:Text^Ge\00EFmporteerde nieuwe migratietaken:^O
+	CE:
+	CS:IMPTXT10^LU
+		A:Text^Replicatie jobs die herstart moeten worden:^O
+	CE:
+	CS:IMPTXT2^LU
+		A:Text^Ge\00EFmporteerde nieuwe groepen:^O
+	CE:
+	CS:IMPTXT3^LU
+		A:Text^Ge\00EFmporteerde conversielijsten:^O
+	CE:
+	CS:IMPTXT4^LU
+		A:Text^Migratietaken NIET toegevoegd:^O
+	CE:
+	CS:IMPTXT5^LU
+		A:Text^Groepen NIET toegevoegd:^O
+	CE:
+	CS:IMPTXT6^LU
+		A:Text^Conversielijsten NIET toegevoegd:^O
+	CE:
+	CS:IMPTXT7^LU
+		A:Text^Ge\00EFmp. en vervangen migratietaken:^O
+	CE:
+	CS:IMPTXT8^LU
+		A:Text^Ge\00EFmp. en vervangen groepen:^O
+	CE:
+	CS:IMPTXT9^LU
+		A:Text^Ge\00EFmp. en vervangen conv.lijsten:^O
+	CE:
+	CS:INTFACE_ALLOWED_JOBS^LU
+		CS:DESCRIPTION^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+	CS:INTFACE_CHARACTERSET_LOV^LU
+	CE:
+	CS:INTFACE_HEADER^LU
+	CE:
+	CS:INTFACE_REPL_EXPORT_INFO^LU
+	CE:
+	CS:INTFACE_TABLE_NAME_LOV^LU
+	CE:
+	CS:JOBBATERR^LU
+		A:Text^Uitgestelde aanroep mislukt voor :P1 - :P2^O
+	CE:
+	CS:LISTERR^LU
+		A:Text^Waardenlijst mag niet beginnen met puntkomma^O
+	CE:
+	CS:LONGNAME^LU
+		A:Text^Taak-ID :P1 is te lang. Mag niet meer dan 24 tekens bevatten.^O
+	CE:
+	CS:MOVPATH^LU
+		A:Text^Verplaats bestandspad: :P1^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^:P1 uren en :P2 minuten verbruikt^O
+	CE:
+	CS:NAMEERR^LU
+		A:Text^Als type = :P1, mag naam niet langer zijn dan :P2 tekens (:P3)^O
+	CE:
+	CS:NOCOLUMN^LU
+		A:Text^In taak komen geen kolommen van bestand voor^O
+	CE:
+	CS:NOFILE_ERROR^LU
+		A:Text^Bestandslocatie ":P1" kan niet worden gebruikt voor migratietaken met richting ingesteld op ":P2" of ":P3".^O
+	CE:
+	CS:NOMAN^LU
+		A:Text^Bij opstarten in modus Handmatig, moet er een WHERE-clausule voor de hoofdview in de structuur worden gespecificeerd.^O
+	CE:
+	CS:NOPRIV^LU
+		A:Text^U (:P1) hebt geen rechten om nieuwe gegevensmigratietaken aan te maken^O
+	CE:
+	CS:NOREPL^LU
+		A:Text^:P1 kan niet middels een achtergrond taak worden opgestart.Triggers zijn niet actief.^O
+	CE:
+	CS:NOTRIG^LU
+		A:Text^Triggers zijn aangemaakt. U kunt de modus niet wijzigen naar :P1^O
+	CE:
+	CS:NOWHERE^LU
+		A:Text^Where-clausule moet ingevoerd worden voor kopieertaken met modus Handmatig^O
+	CE:
+	CS:QUICKERR^LU
+		A:Text^Procedurenaam :P1 kan alleen samen met viewnaam QUICK_REPORT worden gebruikt^O
+	CE:
+	CS:RANFILE^LU
+		A:Text^Hernoem bestandsnaam: :P1^O
+	CE:
+	CS:RENPATH^LU
+		A:Text^Hernoem bestandspad: :P1^O
+	CE:
+	CS:SELECTOK^LU
+		A:Text^Selectie-opdracht OK, ontleed en uitgevoerd voor 1 regel^O
+	CE:
+	CS:SELLENGTH^LU
+		A:Text^Lengte opdracht: :P1 tekens^O
+	CE:
+	CS:SERVOK^LU
+		A:Text^Server proces gestart voor :P1^O
+	CE:
+	CS:STARTBATERR^LU
+		A:Text^:P1 - :P2 kan niet gestart worden^O
+	CE:
+	CS:STARTJOBERR^LU
+		A:Text^:P1 - :P2 kan niet gestart worden^O
+	CE:
+	CS:STARTOK^LU
+		A:Text^Migratietaak :P1 in achtergrond gestart^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Eindtijd - :P1 :P2^O
+	CE:
+	CS:TRIGDEL^LU
+		A:Text^Triggers moeten worden verwijderd voordat deze taak kan worden verwijderd.^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^Vanaf waarde :P1 mag niet in waardenlijst voorkomen^O
+	CE:
+	CS:WHENERR^LU
+		A:Text^When-regel voor trigger moet worden verplaatst van kolom :P1 naar :P2^O
+	CE:
+	CS:WILDERR^LU
+		A:Text^Er kunnen alleen Wildcards in bestandsnamen worden gebruikt bij het exporteren van gegevens naar server bestanden^O
+	CE:
+	CS:WRONGCOL^LU
+		A:Text^Kolom :P1 bestaat niet in taak :P2^O
+	CE:
+	CS:WRONGDIR^LU
+		A:Text^Regel SYNCDETAILS kan alleen worden gebruikt bij lezen van bestanden^O
+	CE:
+CE:
+CS:IntfaceJobDetail^LU
+	A:Prompt^Intface taakdetail^O
+	CS:CLIENTCLEAN^LU
+		A:Text^Regel CLEANUP met waarde BEFORE is niet toegestaan voor clientbestand^O
+	CE:
+	CS:CLOSEFILERR^LU
+		A:Text^Fout bij sluiten bestand :P1^O
+	CE:
+	CS:CLOSEJOBERR^LU
+		A:Text^Fout bij sluiten taak :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Gekoppelde taak :P1 heeft regels met fouten^O
+	CE:
+	CS:CONNJOBERR^LU
+		A:Text^Taak :P1 kan niet worden gestart.^O
+	CE:
+	CS:EMPTYFILE^LU
+		A:Text^Bestand :P1 op :P2 is leeg, programma niet gestart^O
+	CE:
+	CS:HISTERR^LU
+		A:Text^Fout bij aanmaak historie :P1^O
+	CE:
+	CS:INITJOBERR^LU
+		A:Text^Initialisatie taak :P1 mislukt^O
+	CE:
+	CS:INTFACE_JOB_DETAIL^LU
+	CE:
+	CS:LOADFILERR^LU
+		A:Text^Fout bij laden bestand :P1 op :P2^O
+	CE:
+	CS:NOFILE^LU
+		A:Text^Bestand :P1 bestaat niet op :P2, programma niet gestart^O
+	CE:
+	CS:PREPERR^LU
+		A:Text^Fout bij voorbereiden details :P1^O
+	CE:
+	CS:SERVFILEERR^LU
+		A:Text^Fout in bestand handeling - :P1^O
+	CE:
+	CS:UNPACKEND^LU
+		A:Text^Uitpakken gereed voor taak :P1^O
+	CE:
+	CS:UNPACKERR^LU
+		A:Text^Fout bij uitpakken ==> :P1^O
+	CE:
+CE:
+CS:IntfaceJobHistDetail^LU
+	A:Prompt^Intface taakhist.detail^O
+	CS:INTFACE_JOB_HIST_DETAIL^LU
+	CE:
+CE:
+CS:IntfaceJobHistHead^LU
+	A:Prompt^Intface taakhist.kop^O
+	CS:INTFACE_JOB_HIST_HEAD^LU
+	CE:
+CE:
+CS:IntfaceJobStatus^LU
+	A:Prompt^Intface taakstatus^O
+	CS:1^LU
+		A:Text^Geen bestand^O
+	CE:
+	CS:2^LU
+		A:Text^Geladen^O
+	CE:
+	CS:3^LU
+		A:Text^Regel Fout^O
+	CE:
+	CS:4^LU
+		A:Text^Regel Ok^O
+	CE:
+	CS:5^LU
+		A:Text^Job Ok^O
+	CE:
+	CS:6^LU
+		A:Text^Uitvoeren^O
+	CE:
+	CS:7^LU
+		A:Text^Job mislukt^O
+	CE:
+CE:
+CS:IntfaceMethodAction^LU
+	A:Prompt^Intface methodeactie^O
+	CS:1^LU
+		A:Text^VoorLus^O
+	CE:
+	CS:2^LU
+		A:Text^InLus^O
+	CE:
+	CS:3^LU
+		A:Text^NaLus^O
+	CE:
+	CS:4^LU
+		A:Text^NietUitvoeren^O
+	CE:
+CE:
+CS:IntfaceMethodList^LU
+	A:Prompt^Intface methodelijst^O
+	CS:CHKCOUNT^LU
+		A:Text^:P1 regels gecontroleerd^O
+	CE:
+	CS:CLREMAP^LU
+		A:Text^Verplaatst naar DB-Kolom^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Regels committed door Regel COMMITSEQ : :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Deze taak kan niet worden gestart. De gekoppelde taak :P1 bevat fouten.^O
+	CE:
+	CS:CREATEERROR^LU
+		A:Text^Fout bij aanmaken van tabel :P1 - :P2^O
+	CE:
+	CS:CREATEVIEWERR^LU
+		A:Text^Fout bij aanmaken van weergave :P1 - :P2^O
+	CE:
+	CS:CREIND^LU
+		A:Text^:P1 index op kolom :P2 aangemaakt^O
+	CE:
+	CS:CRETAB^LU
+		A:Text^Aangemaakte tabel :P1 (^O
+	CE:
+	CS:DATEVAL^LU
+		A:Text^Standaardwaarde systeemdatum van PREPARE^O
+	CE:
+	CS:DBREMAP^LU
+		A:Text^Herzien van client-waarde^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^Methodenr :P1 - Waarde voor taak-ID mag niet gelijk zijn aan hoofdtaak^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Uitgevoerd zonder fout^O
+	CE:
+	CS:GRANTERROR^LU
+		A:Text^Fout bij toekennen van weergave :P1 aan IFS-systeemgebruiker (IFSSYS) - :P2^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^UITVOERENDE METHODENR :P1^O
+	CE:
+	CS:ILLARGTYPE^LU
+		A:Text^Argument :P1 heeft een ongeldig type. Alleen datatype DATE VARCHAR2 NUMBER is toegestaan.^O
+	CE:
+	CS:ILLMETH^LU
+		A:Text^Methode :P1 is een functie. Alleen procedures zijn toegestaan^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^:P1 incomplete transacties t.g.v. COMMIT of ROLLBACK in aangeroepen methode^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Onvolledige selectie niet uitgevoerd - :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Controleer resultaat. Transacties kunnen gedeeltelijk zijn vastgelegd^O
+	CE:
+	CS:INDEXERROR^LU
+		A:Text^Fout bij aanmaken index :P1 - :P2^O
+	CE:
+	CS:INSTAB^LU
+		A:Text^Invoegen in tabel :P1 met :P2 rijen^O
+	CE:
+	CS:INTFACE_EXCEL_INPUT_DEFAULT^LU
+	CE:
+	CS:INTFACE_EXCEL_INPUT_FORMAT^LU
+	CE:
+	CS:INTFACE_METHOD_LIST^LU
+	CE:
+	CS:KEEPALL^LU
+		A:Text^Regel BEWAARALLES kan niet worden gebruikt als een andere taak is gekoppeld aan :P1 (:P2)^O
+	CE:
+	CS:KEEPERR^LU
+		A:Text^Regel BEWAARFOUTEN kan alleen worden gebruikt als een andere taak is gekoppeld aan :P1^O
+	CE:
+	CS:MAKEOTHER^LU
+		A:Text^Fout bij het aanmaken van attribuut en referenties -:P1^O
+	CE:
+	CS:MANDDEF^LU
+		A:Text^<MIST VERPLICHTE STANDAARD_WAARDE>^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 met CHECK-optie^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, Fouten: :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Nieuwe rijen : :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Verwerkte rijen : :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Bijgewerkte rijen : :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^Gemiddelde van :P1 rijen per minuut^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 rijen vastgelegd^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^:P1 rijen geselecteerd^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 rijen mislukt^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^:P1 uren en :P2 minuten verbruikt^O
+	CE:
+	CS:NONAME^LU
+		A:Text^Waarde voor taak-ID ontbreekt in attr-string voor methode :P1^O
+	CE:
+	CS:NONBASEVIEW^LU
+		A:Text^Er is geen standaard methode gevonden voor view ":P1" tijdens het genereren van de Methode lijst. de [View Naam] moet een basis view van een IFS logische eenheid zijn.^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^OBJID niet in selectie, maar regel ADDOBJID is actief^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Herstart onmogelijk - :P1 heeft geen rowid^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^Geen selectie gespecificeerd^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1 heeft :P2 foutregels en kan niet gestart worden^O
+	CE:
+	CS:NOTEDEF^LU
+		A:Text^Beslis over het gerbuik van een Standaard Waarde. OPTIONEELe kunnen verwijderd worden^O
+	CE:
+	CS:NOTINLOOP^LU
+		A:Text^Procedure :P1 moet vanuit lus gestart worden^O
+	CE:
+	CS:NOTOUTLOOP^LU
+		A:Text^Procedure :P1 kan niet vanuit lus gestart worden^O
+	CE:
+	CS:NOVIEW^LU
+		A:Text^Specificeren view_name alleen binnen de lus^O
+	CE:
+	CS:OPTDEF^LU
+		A:Text^<MIST OPTIONELE STANDAARD_WAARDE>^O
+	CE:
+	CS:PREPVAL^LU
+		A:Text^Standaardwaarde :P1 van PREPARE^O
+	CE:
+	CS:RENAMTAB^LU
+		A:Text^Hernoemde tabel :P1 met :P2 records naar :P3^O
+	CE:
+	CS:RESTART^LU
+		A:Text^Herstart invoegen in tabel :P1^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Fout bij selectie :P1 - :P2^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^Kolom naam :P1 is meerdere keren gedefinieerd^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Starttijd - :P1 :P2^O
+	CE:
+CE:
+CS:IntfaceMethodListAttrib^LU
+	A:Prompt^Intface methodelijstattrib^O
+	CS:INTFACE_METHOD_LIST_ATTRIB^LU
+	CE:
+	CS:WRONGSEQ1^LU
+		A:Text^EXECUTE_SEQ :P1 bestaat niet^O
+	CE:
+	CS:WRONGSEQ2^LU
+		A:Text^Gerefereerde EXECUTE_SEQ moet voor deze liggen^O
+	CE:
+CE:
+CS:IntfaceMode^LU
+	A:Prompt^Intface modus^O
+	CS:1^LU
+		A:Text^Handmatig^O
+	CE:
+	CS:2^LU
+		A:Text^Automatisch^O
+	CE:
+	CS:3^LU
+		A:Text^Batch^O
+	CE:
+CE:
+CS:IntfacePrUser^LU
+	A:Prompt^Intface pr gebruiker^O
+	CS:INTFACE_PR_USER^LU
+	CE:
+CE:
+CS:IntfacePrefixOption^LU
+	A:Prompt^Intface prefix-optie^O
+	CS:1^LU
+		A:Text^ViewNaam^O
+	CE:
+	CS:2^LU
+		A:Text^ViewNaamUniek^O
+	CE:
+	CS:3^LU
+		A:Text^GeenPrefix^O
+	CE:
+CE:
+CS:IntfacePrivilege^LU
+	A:Prompt^Intface Privilege^O
+	CS:1^LU
+		A:Text^GeenUpdateToegestaan^O
+	CE:
+	CS:2^LU
+		A:Text^UpdateToegestaan^O
+	CE:
+CE:
+CS:IntfaceProcedures^LU
+	A:Prompt^Intface Procedures^O
+	CS:CHECK_BY_METHOD_NEW^LU
+		A:Text^Controleer bestandsregels conform Business Logic^O
+	CE:
+	CS:CREATE_OUTPUT_FILE^LU
+		A:Text^Schrijf gegevens naar bestand^O
+	CE:
+	CS:CREATE_TABLE_FROM_FI^LU
+		A:Text^Aanmaak tabel vanuit bestand^O
+	CE:
+	CS:EXCEL_MIGRATION^LU
+		A:Text^Gegevensmigratie vanuit Excel-bestand^O
+	CE:
+	CS:FNDMIG_EXPORT^LU
+		A:Text^Export gegevensmigratiedefinities naar bestand^O
+	CE:
+	CS:FNDMIG_IMPORT^LU
+		A:Text^Import datamigratiedefinities vanuit bestand^O
+	CE:
+	CS:INSERT_BY_METHOD_NEW^LU
+		A:Text^Toevoegen regels vanuit bestand^O
+	CE:
+	CS:INSERT_OR_UPDATE^LU
+		A:Text^Toevoegen of bijwerken regels vanuit bestand^O
+	CE:
+	CS:INTFACE_PROCEDURES^LU
+	CE:
+	CS:INTFACE_PROC_LOV_EXCL_REPL^LU
+	CE:
+	CS:INTFACE_PROC_LOV_INCL_REPL^LU
+	CE:
+	CS:MIGRATE_SOURCE_DATA^LU
+		A:Text^Gegevensmigratie vanuit tabel/view^O
+	CE:
+	CS:REPLICATION^LU
+		A:Text^Replicatie^O
+	CE:
+	CS:REPL_DATA_OUT^LU
+		A:Text^Kopieren Gegevens structuren^O
+	CE:
+CE:
+CS:IntfaceQuickReportUtil^LU
+	CS:DEPREC^LU
+		A:Text^Deze functie is verouderd. Gebruik de ingebouwde Import/Export functionaliteit in Quick Reports.^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Fout bij export :P1 - :P2^O
+	CE:
+	CS:EXPOK^LU
+		A:Text^Ge\00EBxporteerde :P1 rapporten^O
+	CE:
+CE:
+CS:IntfaceReplElemType^LU
+	A:Prompt^Intface repl elem type^O
+	CS:AGGREGATE^LU
+		A:Text^Totaal^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Array^O
+	CE:
+CE:
+CS:IntfaceReplMaintUtil^LU
+	CS:EXECERR^LU
+		A:Text^Fout opgetreden - :P1^O
+	CE:
+	CS:INTFACE_REPL_DB_OBJECTS^LU
+	CE:
+	CS:INTFACE_SERVER_PROCESSES^LU
+	CE:
+	CS:LOGOK^LU
+		A:Text^Log tabel met :P1 regels is succesvol verwerkt voor :P2^O
+	CE:
+	CS:NOUPDATE^LU
+		A:Text^U kunt :P1 niet bijwerken omdat het kopieren bezig is. Alle triggers zijn actief.^O
+	CE:
+	CS:REPLFAIL^LU
+		A:Text^Kopieer Taak :P1 afgebroken  - :P2^O
+	CE:
+	CS:REPLOK^LU
+		A:Text^Procedure :P1 is succesvol verwerkt^O
+	CE:
+CE:
+CS:IntfaceReplMessType^LU
+	A:Prompt^Intface repl mess type^O
+	CS:BIZAPI^LU
+		A:Text^BizApi^O
+	CE:
+	CS:TRACE^LU
+		A:Text^Toon Historie^O
+	CE:
+CE:
+CS:IntfaceReplOutLog^LU
+	A:Prompt^Intface repl out log^O
+	CS:INTFACE_REPL_OUT_LOG^LU
+	CE:
+CE:
+CS:IntfaceReplPackageUtil^LU
+	CS:COMPERR^LU
+		A:Text^Fout bij compileren package :P1^O
+	CE:
+	CS:ERR1PAR^LU
+		A:Text^Enkele rijen mogen geen waarde hebben in de kolom Oudervolgorde^O
+	CE:
+	CS:ERR2PAR^LU
+		A:Text^E\00E9n rij moet als ouder worden aangemerkt = zonder waarde in kolom Oudervolgorde^O
+	CE:
+	CS:ERRLONG^LU
+		A:Text^Herkomst te lang, kan niet worden geschreven naar Intface_Job_Detail - :P1^O
+	CE:
+	CS:KEYERR^LU
+		A:Text^Oudersleutel :P1 bestaat niet in structuren eerder dan :P2^O
+	CE:
+	CS:LONGSRC^LU
+		A:Text^Herkomst te lang. Exporteer bestand van Uitvoeren taak venster en verwerk van Admin^O
+	CE:
+	CS:NODATA^LU
+		A:Text^Op minimaal \00E9\00E9n regel moet toevoegen of bijwerken zijn aangevinkt^O
+	CE:
+	CS:OTHERS^LU
+		A:Text^Fout bij compileren package - :P1^O
+	CE:
+CE:
+CS:IntfaceReplRecType^LU
+	A:Prompt^Intface repl rec type^O
+	CS:AGGREGATE^LU
+		A:Text^Totaal^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Array^O
+	CE:
+CE:
+CS:IntfaceReplStructCols^LU
+	A:Prompt^Intface repl struct kol^O
+	CS:INTFACE_REPL_STRUCT_COLS^LU
+	CE:
+CE:
+CS:IntfaceReplStructure^LU
+	A:Prompt^Intface repl structuur^O
+	CS:ERRSEQ^LU
+		A:Text^Oudervolgorde kan niet gelijk zijn aan deze volgorde^O
+	CE:
+	CS:INSERR^LU
+		A:Text^Alle rijen vanaf het startpunt naar boven moeten kolom Toevoegen hebben aangevinkt en kolom Triggertabel gevuld hebben.^O
+	CE:
+	CS:INTFACE_REPL_PARENT_LOV^LU
+	CE:
+	CS:INTFACE_REPL_STRUCTURE^LU
+	CE:
+	CS:INTFACE_REPL_TABLE_LOV^LU
+	CE:
+	CS:MULTIPLESTART^LU
+		A:Text^U kunt alleen \00E9\00E9n startpunt voor een taak defini\00EBren^O
+	CE:
+	CS:NONUNIQUE^LU
+		A:Text^Geen unieke master gedefinieerd voor :P1. Slechts \00E9\00E9n item hoort een leeg ParentSeq te hebben.^O
+	CE:
+	CS:NOSEQ^LU
+		A:Text^De oudervolgorde kan niet worden gebruikt. Er zijn geen regels met volgorde :P1^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^:P1 = :P2, waarde mag niet groter zijn dan 99^O
+	CE:
+CE:
+CS:IntfaceReplTriggersUtil^LU
+	CS:ALTERR^LU
+		A:Text^Fout bij invoeren trigger :P1 - :P2^O
+	CE:
+	CS:COMPERR^LU
+		A:Text^Fout opgetreden voor trigger - :P1^O
+	CE:
+	CS:DROPERR^LU
+		A:Text^Fout bij verwijderen trigger :P1 - :P2^O
+	CE:
+	CS:NODEF^LU
+		A:Text^U moet een tabelnaam en het veld Toevegen of Bijwerken invoern bij minimaal \00E9\00E9n structuur item^O
+	CE:
+CE:
+CS:IntfaceReplicCriteria^LU
+	A:Prompt^Intface replic criteria^O
+	CS:1^LU
+		A:Text^Vestiging^O
+	CE:
+	CS:2^LU
+		A:Text^Bedrijf^O
+	CE:
+CE:
+CS:IntfaceReplicationLog^LU
+	A:Prompt^Intface replicatielog^O
+	CS:INTFACE_REPLICATION_LOG^LU
+	CE:
+CE:
+CS:IntfaceRuleFlag^LU
+	A:Prompt^Intface regelwaarde^O
+	CS:1^LU
+		A:Text^Actief^O
+	CE:
+	CS:2^LU
+		A:Text^Inactief^O
+	CE:
+CE:
+CS:IntfaceRuleValue^LU
+	A:Prompt^Intface Rule Value^O
+	CS:1^LU
+		A:Text^Geen waarde toegest.^O
+	CE:
+	CS:2^LU
+		A:Text^Verplicht nummer^O
+	CE:
+	CS:3^LU
+		A:Text^Verplichte string^O
+	CE:
+	CS:4^LU
+		A:Text^Verplichte datum^O
+	CE:
+	CS:5^LU
+		A:Text^Optioneel^O
+	CE:
+CE:
+CS:IntfaceRules^LU
+	A:Prompt^Intface regels^O
+	CS:CHECKRULEERROR^LU
+		A:Text^Regel :P1 is niet geldig voor procedurenaam :P2.^O
+	CE:
+	CS:ERRCONN^LU
+		A:Text^Taak :P1 is reeds gekoppeld aan :P2^O
+	CE:
+	CS:ERRCONN2^LU
+		A:Text^Taak :P1 moet procedure CREATE_TABLE_FROM_FILE gebruiken^O
+	CE:
+	CS:ERRORVAL1^LU
+		A:Text^Geldige waarden zijn BEWAAR ALLES of BEWAAR FOUTEN^O
+	CE:
+	CS:ERRORVAL2^LU
+		A:Text^Geldige waarden zijn TOEVOEGEN of BIJWERKEN^O
+	CE:
+	CS:ERRORVAL3^LU
+		A:Text^Geldige waarden zijn VOOR of NA^O
+	CE:
+	CS:FILERULEERR^LU
+		A:Text^Regel :P1 kan niet actief zijn, zolang als :P2 actief is^O
+	CE:
+	CS:INTFACE_RULES^LU
+	CE:
+	CS:INTFACE_RULES_LOV^LU
+	CE:
+	CS:REPLUSR1^LU
+		A:Text^Deze regel kan alleen worden gebruikt voor REPLICATION-taken^O
+	CE:
+	CS:REPLUSR2^LU
+		A:Text^Alternatieve gebruiker niet gedefinieerd in systeemparameters in Admin.exe^O
+	CE:
+	CS:REPLUSR3^LU
+		A:Text^Alternatieve gebruiker kan niet gelijk worden gedefinieerd als appeigenaar in systeemparameters in Admin.exe^O
+	CE:
+CE:
+CS:IntfaceServerFile^LU
+	A:Prompt^Intface serverbestand^O
+	CS:CNTERR^LU
+		A:Text^Een fout is opgetreden tijdens het tellen van de records^O
+	CE:
+	CS:CREERR^LU
+		A:Text^Records zijn geweigerd. Check log bestand van de het start-venster^O
+	CE:
+	CS:INTFACE_SERVER_DIR_LOV^LU
+		CS:NAME^LU
+		CE:
+		CS:PATH^LU
+		CE:
+	CE:
+	CS:INTFACE_SERVER_FILES_LOV^LU
+		CS:FILE_DATE^LU
+		CE:
+		CS:FILE_NAME^LU
+		CE:
+		CS:FILE_SIZE^LU
+		CE:
+	CE:
+	CS:NOFILE^LU
+		A:Text^File :P1 bestaat niet op :P2^O
+	CE:
+	CS:NOICTAB^LU
+		A:Text^Tabel :P1 bestaat niet^O
+	CE:
+	CS:NOINS^LU
+		A:Text^Invoegen in IC-tabel mislukt. RMK Uitpakken van Bestand in Uitvoeren Job venster zal de format fouten tonen. :P1^O
+	CE:
+	CS:NOSERV^LU
+		A:Text^Bestandslocatie moet :P1 zijn, niet :P2. Vernieuw Job header^O
+	CE:
+	CS:NOTAB^LU
+		A:Text^Externe tabel niet aangemaakt. :P1^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^Kolom naam :P1 is meerdere keren gedefinieerd^O
+	CE:
+CE:
+CS:IntfaceTableMigrations^LU
+	A:Prompt^Tabelmigratieparameters^O
+	CS:INTFACE_TABLE_MIGRATIONS^LU
+	CE:
+	CS:NOCOL^LU
+		A:Text^Geen kolommen om te wijzigen^O
+	CE:
+	CS:PROCERR^LU
+		A:Text^Fout :P1^O
+	CE:
+	CS:TABERR^LU
+		A:Text^:P2 :P1 kan niet worden bijgewerkt^O
+	CE:
+CE:
+CS:IntfaceUser^LU
+	A:Prompt^Intface gebruiker^O
+	CS:INTFACE_USER^LU
+	CE:
+CE:
+CS:IntfaceUtil^LU
+	CS:COMPILE_ERRORS^LU
+		A:Text^Compilatiefouten voor triggers :P1^O
+	CE:
+	CS:UPDERR^LU
+		A:Text^U kunt geen andere tabellen bijwerken dan IC-tabellen^O
+	CE:
+CE:
+CS:IntfaceViews^LU
+	A:Prompt^Intface weergaven^O
+	CS:INTFACE_SOURCE_COL_LOV^LU
+	CE:
+	CS:INTFACE_VIEWS^LU
+	CE:
+	CS:INTFACE_VIEWS_COL_INFO^LU
+	CE:
+CE:
+CS:IntfaceXsdUtil^LU
+	CS:XSDCRE^LU
+		A:Text^XSD aangemaakt als clientbestand, :P1 regels^O
+	CE:
+CE:

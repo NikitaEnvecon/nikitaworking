@@ -1,0 +1,1771 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ifs.Fnd.Windows.Forms.FndXGantt</name>
+    </assembly>
+    <members>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataDefinitionProp">
+            <summary>
+            FndXGanttDataDefinitionProp provides quick access to VcGantt properties using FndXGanttDataTable 
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataDefinitionProp.#ctor(NETRONIC.XGantt.VcGantt@)">
+            <summary>
+            Creates a new instance of FndXGanttDataDefinitionProp from an existing vcGantt 
+            </summary>
+            <param name="vcGantt">vcGantt instance to load definitions from</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataDefinitionProp.GetFieldName(System.Int32,System.String)">
+            <summary>
+            This method will find the name of the column for the index specified
+            in the table specefied in the XGantt properties dialog.
+            </summary>
+            <param name="index">The index number in the data definition in XGantt</param>
+            <param name="tableName">The name of the table in XGantt properties</param>
+            <returns>The name for the index and table specified. Returns null if no match</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataDefinitionProp.GetDataType(System.Int32,System.String)">
+            <summary>
+            This method will find the data type of the column for the index specified
+            in the table specefied in the XGantt properties dialog.
+            </summary>
+            <param name="index">The index number in the data definition in XGantt</param>
+            <param name="tableName">The name of the table in XGantt properties</param>
+            <returns>The data type for the index of the table specified. 
+            Returns vcDataTableFieldStringType if no match</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataDefinitionProp.GetFieldIndex(System.String,System.String)">
+            <summary>
+            This method will find the fields index of the column for the field name specified
+            in the table specefied in the XGantt properties dialog.
+            </summary>
+            <param name="fieldName">The index number in the data definition in XGantt</param>
+            <param name="tableName">The name of the table in XGantt properties</param>
+            <returns>The index for the field name of the table specified. Returns -1 if no match</returns>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataDefinitionProp.dataTablesProperty">
+            <summary>
+            Get dataTables dictionary for direct use
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTable">
+            <summary>
+            FndXGanttDataTable Holds extra attributes for a VcDataTable inside a VcGantt
+            It builds a list of FndXGanttDataTableField from the VcDataTable fields
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTable.#ctor(NETRONIC.XGantt.VcGantt@,NETRONIC.XGantt.VcDataTable)">
+            <summary>
+            Creates a new instance of FndXGanttDataTable
+            </summary>
+            <param name="vcGantt">VcGantt instance</param>
+            <param name="table">VcDataTable to builds a list of FndXGanttDataTableField from</param>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTable.dataTableFields">
+            <summary>
+            Gets a list of FndXGanttDataTableField for this FndXGanttDataTable
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTable.Table">
+            <summary>
+            Gets the underlying VcDataTable for this FndXGanttDataTable
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTableField">
+            <summary>
+            Holds properties about a XGantt Data Table field.
+            The purpose of this is to be able to hold more properties about a 
+            field then XGantt normally do.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTableField.#ctor">
+            <summary>
+            Creates a new instance of FndXGanttDataTableField
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTableField.#ctor(System.String,System.Int16,System.String,NETRONIC.XGantt.VcDataTableFieldType)">
+            <summary>
+            Creates a new instance of FndXGanttDataTableField with the most common properties
+            </summary>
+            <param name="tableName">Name of the table in XGantt properties</param>
+            <param name="indexNumber">Index number in the data definition in XGantt</param>
+            <param name="fieldName">Field SQL column name</param>
+            <param name="dataType"></param>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTableField.IndexNumber">
+            <summary>
+            Get the index number in the data definition in XGantt
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTableField.FieldName">
+            <summary>
+            Gets the field SQL column name
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTableField.TableName">
+            <summary>
+            Gets or sets the name of the table in XGantt properties
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTableField.ClientValue">
+            <summary>
+            Gets or sets the client value (currently not used)
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTableField.DataType">
+            <summary>
+            Gets the custom VcDataTableFieldType for the field
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTableField.ColumnWidth">
+            <summary>
+            Gets or sets the colmn width (currently not used)
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDataTableField.DisplayColumn">
+            <summary>
+            Gets or sets the display column (currently not used)
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDirtyNode">
+            <summary>
+            FndXGanttDirtyNode contains information about changed nodes in FndXGantt and reason for change
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDirtyNode.#ctor(System.String,Ifs.Fnd.Windows.Forms.FndXGantt.DirtyNodeModifications,System.Int32)">
+            <summary>
+            Creates a new instance of FndXGanttDirtyNode
+            </summary>
+            <param name="nodeKey">Node primary key</param>
+            <param name="nodeState">Node dirty state</param>
+            <param name="nodeType">Node type</param>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDirtyNode.NodeModification">
+            <summary>
+            Gets or sets node dirty state
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDirtyNode.NodeKey">
+            <summary>
+            Gets or sets node primary key value
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGanttDirtyNode.NodeType">
+            <summary>
+            Gets or sets node type (node or link)
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt">
+            <summary>
+            FndXGantt provides common functionality over XGantt for use in IFS Applications.
+            This is. Connection to work time calendar (APPSRV), data populate from IFS LU:s, optional data storage 
+            for changed items, integration with IFS User profile etc.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.DATA_DEFINITION_NAME">
+            <summary>
+            Not used by FndXGantt
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.DATA_DEFINITION_VISIBLE">
+            <summary>
+            Not used by FndXGantt
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.DATA_DEFINITION_TYPE">
+            <summary>
+            Not used by FndXGantt
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.RELATION_NAME">
+            <summary>
+            Not used by FndXGantt
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.RELATION_VISIBLE">
+            <summary>
+            Not used by FndXGantt
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.RELATION_TYPE">
+            <summary>
+            Not used by FndXGantt
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.CALENDAR_START_DATE">
+            <summary>
+            Get the start date when calling GetXGanttStartEndDates
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.CALENDAR_END_DATE">
+            <summary>
+            Get the end date when calling GetXGanttStartEndDates
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.DATE_FORMAT_STANDARD">
+            <summary>
+            Standard (database) format in GetDateFormatConversion
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.DATE_FORMAT_LOCAL">
+            <summary>
+            Client date format in GetDateFormatConversion
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.WORKDAY_CALENDAR">
+            <summary>
+            Not used by FndXGantt
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.WORKFREEDAY_CALENDAR">
+            <summary>
+            Not used by FndXGantt
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.WORKWEEK_CALANDAR">
+            <summary>
+            Not used by FndXGantt
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.DATE_FORMAT">
+            <summary>
+            Date format string for use in client (.NET)
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.DATABASE_DATE_FORMAT">
+            <summary>
+            Date format string for use in database (Oracle)
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.#ctor">
+            <summary>
+            Creates a new instance of FndXGantt
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.#ctor(Ifs.Fnd.AccessProvider.Activity.FndActivityContext)">
+            <summary>
+            Creates a new instance of FndXGantt with FndActivityContext connection for server access
+            </summary>
+            <param name="activityContext">FndActivityContext for use to access server</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.#ctor(NETRONIC.XGantt.VcGantt@)">
+            <summary>
+            Creates a new instance of FndXGantt connected to an existing XGantt instance.
+            </summary>
+            <param name="vcGantt"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.StartUp">
+            <summary>
+            Internal Start Up things that makes the XGantt work with our framework.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.Init(System.String,System.String)">
+            <summary>
+            This method will initialize XGantt object with i.e. GUI settings, 
+            zoom depending on screen resolution and other initialization data.
+            It's possible to use the method ChangeInit if you need to change these settings.
+            
+            Note: Byy using this overload of the Init method the XGantt table headings 
+            will not be automatically translated.
+            
+            This method should be called when:
+            - A new form is loaded
+            - After the XGantt object has been called by the method "Clear".
+            </summary>
+            <param name="view">The current view there the data should be fetched from.</param>
+            <param name="startDateColumn">This parameter will specify the column 
+            name of the Start Date column that is used for the Start Date of a 
+            Node in the XGantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.Init(System.String,PPJ.Runtime.SalWindowHandle,System.String)">
+            <summary>
+            This method will initialize XGantt object with i.e. GUI settings, 
+            zoom depending on screen resolution and other initialization data.
+            It's possible to use the method ChangeInit if you need to change these settings.
+            
+            This method should be called when:
+            - A new form is loaded
+            - After the XGantt object has been called by the method "Clear".
+            </summary>
+            <param name="view">The current view there the data should be fetched from.</param>
+            <param name="dummyTable">The dummy table that is used only for the Query 
+            dialog in the window and translating XGantt table columns. This must be a 
+            fully qualified reference!</param>
+            <param name="startDateColumn">This parameter will specify the column 
+            name of the Start Date column that is used for the Start Date of a 
+            Node in the XGantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ChangeInit(System.String,PPJ.Runtime.SalWindowHandle,System.String)">
+            <summary>
+            This method will change the initialize XGantt object settings with i.e. GUI settings, 
+            zoom depending on screen resolution and other initialization data.
+            The Init method should be called before this method could be used
+            
+            This method should be called when:
+            - When for instance the XGantt should load data from a different view 
+              after Init has been executed
+            </summary>
+            <param name="view"> The current view there the data should be fetched from.</param>
+            <param name="dummyTable">he dummy table that is used only for the Query 
+            dialog in the window. This must be a fully qualified reference!</param>
+            <param name="startDateColumn">This parameter will specify the column name of the 
+            Start Date column that is used for the Start Date of a Node in the XGantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.Reset(System.String,System.String)">
+            <summary>
+            This method will reset the gantt by clearing already loaded data and settings
+            Start date and end date for the time scale passed in parameters should be given
+            in the correct format i.e "yyyy-MM-dd HH.mm.ss"
+            </summary>
+            <param name="startDate">Start date for the time scale after reset</param>
+            <param name="endDate">End date for the time scale after reset</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.Close">
+            <summary>
+            This method will take care of all the work that is necessary 
+            when closing a form with a XGantt object.
+            
+            This method should be called when:
+            - The form that has this XGantt object is closed
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.XGanttPopulate(System.String,System.String)">
+            <summary>
+            This method will populate the data from the current data source to the current XGantt object.
+            
+            The method XGanttPopulate will call these methods to perform its work:
+            - StoreSettings
+            - Clear
+            - LoadSettings
+            - CreateSQLStatement
+            </summary>
+            <param name="whereStatment">The where statment to be used in the populate</param>
+            <param name="orderByStatment">The order by statment to be used in the populate</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.XGanttPopulate(System.String,System.String,System.Boolean)">
+            <summary>
+            This method will load data to the current XGantt object.
+            
+            The method XGanttPopulate will call these methods to perform its work:
+            - StoreSettings
+            - Clear
+            - LoadSettings
+            </summary>
+            <param name="whereStatment">The where statment to be used in the populate</param>
+            <param name="orderByStatment">The order by statment to be used in the populate</param>
+            <param name="connectByClause">An indicator if a connect by clause is attach with the where clause</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.XGanttPopulate(System.String[])">
+            <summary>
+            This method will load data to the current XGantt object.
+            
+            The method XGanttPopulate will call these methods to perform its work:
+            - StoreSettings
+            - Clear
+            - LoadSettings
+            </summary>
+            <param name="data">A string array with data to load in the Gantt, should be ; separated</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.XGanttPopulateAdd(System.String,System.String)">
+            <summary>
+            This method will populate the data from the current data source to the current XGantt object.
+            But it will not remove data that is already loaded.
+            
+            The method XGanttPopulate will call these methods to perform its work:
+            - CreateSQLStatement
+            </summary>
+            <param name="whereStatment">The where statment to be used in the populate</param>
+            <param name="orderByStatment">The order by statment to be used in the populate</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.XGanttPopulateAdd(System.String[])">
+            <summary>
+            This method will insert the input data set to the current XGantt object.
+            But it will not remove data that is already loaded.
+            
+            The method XGanttPopulate will call these methods to perform its work:
+            - LoadData
+            </summary>
+            <param name="data">The data set to be inserted in to the Gantt object</param>        
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.XGanttRelationPopulate(System.String,System.String)">
+            <summary>
+            This method will populate the Relations from the current data source to 
+            the XGantt object.
+            </summary>
+            <param name="relationView">This is the view from where you want to get 
+            the relations from.</param>
+            <param name="relationWhereStatment">This is the Where Statment for the Relation View.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.LoadTemporarySettings">
+            <summary>
+            This method will load temporary settings XGantt has been populated.
+            
+            List of settings to load:
+            - Table Columns Width
+            - Table Area Width
+            - Time Scale Unit Width
+            - Active Time Scale
+            - Start and End date for Time Scale
+            </summary>     
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.StoreTemporarySettings">
+            <summary>
+            This method will store settings temporary while XGantt is populating.
+            
+            List of settings to temporary store:
+            - Table Columns Width
+            - Table Area Width
+            - Time Scale Unit Width
+            - Start and End date for Time Scale
+            </summary>        
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.AddDynamicCalendar(System.String,System.String)">
+            <summary>
+            This method will make it possible to have a dynamic period in the calendar. 
+            The Calendar period will be dependent on the what date the first and last 
+            node that is being load will have.
+            </summary>
+            <param name="endDateColumn">This parameter will specify the column name of 
+            the End Date column that is used for the End Date of a Node in the XGantt.</param>
+            <param name="extendDateInterval">This parameter will give you the opportunity to 
+            add an extra time interval before and after the date of the first and last node 
+            that has been loaded. The unit is day. If you enter XGANTT_DATES in this parameter
+            the current XGantt calendar date will be used.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ActivateSaveFunctionality(System.String,System.String,System.String)">
+            <summary>
+            This function activates the Save functionality in the cXGanttLib
+            </summary>
+            <param name="primaryKeyColumn">The Data Definition Column name that is the "key" column.</param>
+            <param name="defaultLU">This is the name of the default LU.</param>
+            <param name="columnsToSave">This is the list of columns to save when the XGanttSave method is called.
+            The colum names should be separated by the sign "|".
+            Observe that you need to include the "key" columns among the list of columns.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.AddDirtyNode(NETRONIC.XGantt.VcNode,System.String,System.Int32)">
+            <summary>
+            This function will add dirty nodes to the sDirtyNodesArray
+            </summary>
+            <param name="modifiedNode">The node that has been modified</param>
+            <param name="modificationType">One of the modification types N(New), M(Modify), D(Delete)</param>
+            <param name="creationType">Creation type: node or link</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.AddToolTipType(NETRONIC.XGantt.VcObjectType,System.String)">
+            <summary>
+            This function adds a Tool Tip Type and specifies what should be 
+            displayed in the Tool Tip.
+            
+            Supported Object Types are: vcObjTypeNodeInDiagram
+            Activates the Tool Tip functionality.
+            </summary>
+            <param name="objectTypeEnum">This is the Object Type number that 
+            the Tool Tip should be attached to.</param>
+            <param name="toolTipString">This is a string that should contain the 
+            attributes that you want to display in the Tool Tip. The attributes 
+            are separate by the signe ";".</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.CleanDirtyNodeTable">
+            <summary>
+            This function cleans the dirtyNodeList
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.TranslateTableColumns(System.String)">
+            <summary>
+            This function will activate the columns to be translated in the XGantt table.
+            (Needed to add this method because it's not possible to loop through the XGantt table headings)        /// 
+            
+            Parameters:
+            String translationColumnIndexes: This parameter should have the index numbers for the XGantt
+            column headings that you want to translate in a list separated with the character '|'. 
+            The index number that should be given is the Table Column Index.
+            </summary>
+            <param name="translationColumnIndexess"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.IncludeRecordsWithoutDates(System.Boolean)">
+            <summary>
+            This method will include records without dates specified. If this attribute is not 
+            activated then only records that has dates specified will be loaded. 
+            This method effects the method CreateSQLStatement.
+            </summary>
+            <param name="includeNoDateRecords">Set true or false depending if you want the records 
+            without dates to be loaded into the XGantt object.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.DisplayNoRecordsFound(System.Boolean)">
+            <summary>
+            This function will set the property if the message box "No data was found" 
+            should be displayed or not.
+            </summary>
+            <param name="displayMessage">Should be set to TRUE if you want this message to 
+            be displayed or FALSE otherwhise. As default this value is set to TRUE.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetDataFromNode(NETRONIC.XGantt.VcNode,System.String)">
+            <summary>
+            This function will return a String value for the Data Field that you requested
+            </summary>
+            <param name="node">The Node that you want to retrieve the value from</param>
+            <param name="dataDefinitionFieldName">The Data Field Name from XGantt Data Definition that 
+            you want to retrieve the value from</param>
+            <returns>The value you requested is returned as the data type: String</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetDataFromGroupDataField(NETRONIC.XGantt.VcGroup,System.String)">
+            <summary>
+            This function will return a String value for the Data Field that you requested
+            </summary>
+            <param name="group">The Group that you want to retrieve the value from</param>
+            <param name="dataDefinitionFieldName">The Data Field Name from XGantt Data Definition 
+            that you want to retrieve the value from</param>
+            <returns>The value you requested is returned as the data type: String</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetAllDataFromNode(NETRONIC.XGantt.VcNode)">
+            <summary>
+            This function will return a String with all the data from the node
+            </summary>
+            <param name="node">The Node that you want to retrieve the values from</param>
+            <returns>All the data from the node will be separated with ";"</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetNameFromIndex(System.Int32,NETRONIC.XGantt.VcDataTableType)">
+            <summary>
+            This method returns the Name of a Definition Field
+            </summary>
+            <param name="fieldIndex">The data definition field index number</param>
+            <param name="dataTableEnum">The enumeration value for the data definition table</param>
+            <returns>The name representing the requested index number</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetTypeFromIndex(System.Int32,NETRONIC.XGantt.VcDataTableType)">
+            <summary>
+            This method returns the Data Type of a Definition Field
+            </summary>
+            <param name="fieldIndex">The index number of the data field</param>
+            <param name="dataTableEnum">The enumeration value for the data definition table</param>
+            <returns>Returns enumeration value for the data type</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetIndexFromName(System.String)">
+            <summary>
+            Returns the index from the data defintion. 
+            </summary>
+            <param name="dataDefinitionFieldName">The field name in XGantt data definition that you 
+            want the index number for.</param>
+            <returns>The index number for the field name that was sent to this method.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetIndexFromName(System.String,NETRONIC.XGantt.VcDataTableType)">
+            <summary>
+            Returns the index from the data defintion. 
+            </summary>
+            <param name="dataDefinitionFieldName">The field name in XGantt data definition that you 
+            want the index number for.</param>
+            <param name="dataTableEnum">The enumeration value for the data definition table</param>
+            <returns>The index number for the field name that was sent to this method.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetIndexFromNameNoApplicationOwner(System.String)">
+            <summary>
+            Returns the index from the data definition, but ignores if a application
+            owner is stated in the begining of the column name.
+            </summary>
+            <param name="dataDefinitionFieldName">The index number for the field name that was sent to this method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetDateFormatConversion(System.String,System.Int32)">
+            <summary>
+            This function converts the date format from the standard format to local client 
+            format and it also converst in the opposite direction.
+            </summary>
+            <param name="dateToConvert">This is the date the you want to convert to either 
+            a standard format or the clients format</param>
+            <param name="convertTo">This parmeter takes the two constants 
+            DATE_FORMAT_STANDARD and DATE_FORMAT_LOCAL</param>
+            <returns>The return value is a date where the format is depending on the what 
+            constant is used DATE_FORMAT_STANDARD or DATE_FORMAT_LOCAL</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetCalendarStartEndDates(System.Int32)">
+            <summary>
+            This function will return Start Date or the End Date for the Calendar. 
+            The information will be fetched from the profile.
+            </summary>
+            <param name="dateConstant">This parameter only takes the constants CALENDAR_START_DATE or 
+            the constant CALENDAR_END_DATE.</param>
+            <returns>The function will return eithere the Start Date or the End Date, 
+            depending on what constant was sent as inparameter.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetToolTipText(NETRONIC.XGantt.VcToolTipTextSupplyingEventArgs)">
+            <summary>
+            Creates the Tool tip text string for current object.
+            Should be called from the VcToolTipTextSupplying event.
+            </summary>
+            <param name="toolTipEventArgs">The object where the Tool Tip 
+            should be displayed.</param>
+            <returns>The Created Tool Tip string</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetXGanttStartEndDates(System.Int32)">
+            <summary>
+            This function will return Start Date or the End Date for the XGantt Calendar. 
+            The information will be taken directly from the current XGantt object.
+            </summary>
+            <param name="dateConstant">This parameter only takes the constants CALENDAR_START_DATE or 
+            the constant CALENDAR_END_DATE.</param>
+            <returns>The function will return either the Start Date or the End Date, 
+            depending on what constant was sent as in parameter.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetXGanttViewingDates(System.Int32)">
+            <summary>
+            This function will return the First and the Last date that is visual in the XGantt control.
+            </summary>
+            <param name="dateConstant">This parameter only takes the constants CALENDAR_START_DATE or 
+            the constant CALENDAR_END_DATE.</param>
+            <returns>The function will return either the Start Date or the End Date of the viewed calendar, 
+            depending on what constant was sent as in parameter.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.InsertNode(System.String,System.Boolean)">
+            <summary>
+            This function will insert a node record into XGantt object.
+            This is a wrapping of the XGantt method InsertNodeRecord, 
+            with some extra functionality. It's necessary to perform a EndLoading 
+            method to be able to see a new node, but if you are inserting several records
+            only the last record needs to have the EndLoading method. For performance 
+            reasons only the last inserted record should have a EndLoading.
+            </summary>
+            <param name="nodeRecord">The data to insert in a record should have concatenated 
+            string of the attributes. </param>
+            <param name="performEndLoading">This parameter will perform the EndLoading 
+            method if it's set to TRUE.</param>
+            <returns>Returns true if the insert was ok.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.InsertNode(System.String,System.Boolean,NETRONIC.XGantt.VcNode@)">
+            <summary>
+            This function will insert a node record into XGantt object.
+            This is a wrapping of the XGantt method InsertNodeRecord, 
+            with some extra functionality. It's necessary to perform a EndLoading 
+            method to be able to see a new node, but if you are inserting several records
+            only the last record needs to have the EndLoading method. For performance 
+            reasons only the last inserted record should have a EndLoading.
+            </summary>
+            <param name="nodeRecord">The data to insert in a record should have concatenated 
+            string of the attributes. </param>
+            <param name="performEndLoading">This parameter will perform the EndLoading 
+            method if it's set to TRUE.</param>
+            <param name="insertedNode">The node inserted in XGantt</param>
+            <returns>Returns true if the insert was ok.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.InsertNode(Ifs.Fnd.Data.FndDataRow,System.Boolean)">
+            <summary>
+            This function will insert a node record into XGantt object.
+            This is a wrapping of the XGantt method InsertNodeRecord, 
+            with some extra functionality. It's necessary to perform a EndLoading 
+            method to be able to see a new node, but if you are inserting several records
+            only the last record needs to have the EndLoading method. For performance 
+            reasons only the last inserted record should have a EndLoading.
+            </summary>
+            <param name="row">This represents a row in fetched record</param>
+            <param name="performEndLoading">This parameter will perform the EndLoading
+            method if it's set to TRUE.</param>
+            <returns>Returns true if the insert was ok.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.InsertLink(Ifs.Fnd.Data.FndDataRow,System.Boolean)">
+            <summary>
+            This function will insert a link or relation record into XGantt object.
+            This is a wrapping of the XGantt method InsertLinkRecord, 
+            with some extra functionality. It's necessary to perform a EndLoading 
+            method to be able to see a new node, but if you are inserting several records
+            only the last record needs to have the EndLoading method. For performance 
+            reasons only the last inserted record should have a EndLoading.
+            </summary>
+            <param name="row">This represents a row in fetched record</param>
+            <param name="performEndLoading">This parameter will perform the EndLoading
+            method if it's set to TRUE.</param>
+            <returns>Returns true if the insert was ok.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.SetNodeValue(NETRONIC.XGantt.VcNode,System.String,System.String)">
+            <summary>
+            This function sets the a specific attribute value of a node
+            </summary>
+            <param name="node">The node to set the attribute value on</param>
+            <param name="dataDefinitionFieldName">The Data Definitions column that you want to set the value to</param>
+            <param name="value">The value to se to the Node column</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.SetXGanttProfileValue(System.String,System.String)">
+            <summary>
+            This function will set a value to the XGantt Profile. The reson for this function 
+            is to put the profile valueto the correct XGantt structure under the current Form
+            </summary>
+            <param name="entry">The Entry name.</param>
+            <param name="value">The Value to set.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.RemoveToolTip">
+            <summary>
+            This function will clear the current ToolTip text from the toolTipAttributes List.
+            It also sets the ToolTipTextSupplyingEventEnabled property to false
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ZoomOnResolution">
+            <summary>
+            This method will zoom the XGantt object on the resolution on the main screen.
+            A XGantt object is always designed for a specific resolution and needs to be 
+            zoomed if the current screen have a different resolution.
+            Note: That this method assumes that the XGantt object was designed for the
+            resolution 1024*768
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ChangeGanttTimeScale(System.String)">
+            <summary>
+            This function changes the active time scale for the XGantt diagram.
+            If no parameter is sent it will try to read the Time Scale from the Profile.
+            </summary>
+            <param name="timeScaleName">
+            This parameter should recive the values Hours, Days, Weeks, Months or STRING_Null.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ChangeGanttTimeInterval(System.String,System.String)">
+            <summary>
+            This function changes the time interval of the time scale for the XGantt diagram.
+            
+            Info: If you have not enterd the dates that you want to change the time interval as in parameters
+            this function will read the values from the user profile.
+            If the dates are enterd as In parameters the Extended Interval exists it will be considered.
+            </summary>
+            <param name="StartDate">Start Date for the date interval</param>
+            <param name="EndDate">End Date for the date interval</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ChangeGanttColumnInformation">
+            <summary>
+            This function sets the information about the columns with the 
+            information stored in the user profile.
+            
+            Information that is beeing changed for the coulmns:
+            - The width of the column
+            - If the column is visble or not
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ChangeGanttTimeScaleUnitWidth(System.Int32)">
+            <summary>
+            This function set the Unit Width of the Time Scale
+            </summary>
+            <param name="unitWidth">This parameter is the Unit Width for the Time Sale.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.StoreColumnInformation">
+            <summary>
+            This function will store some information about the table columns to the profile
+            
+            Information that is beeing stored about the column:
+            - The width of the column
+            - If the column is visble or not
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.CreateSQLStatement(System.String,System.String)">
+            <summary>
+            This method will create the SQL statement to load the data from the DB
+            </summary>
+            <param name="whereStatment">The where statment for the select statment</param>
+            <param name="orderByStatment">The Order By statmanet for the select statment</param>
+            <returns>The generated SQL statment</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.CreateSQLStatement(System.String,System.String,System.Boolean)">
+            <summary>
+            This method will create the SQL statement to load the data from the DB
+            </summary>
+            <param name="whereStatment">The where statment for the select statment</param>
+            <param name="orderByStatment">The Order By statmanet for the select statment</param>
+            <param name="connectByClause">An indicator if a connect by clause is attach with the where clause</param>
+            <returns>The generated SQL statment</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.CreateSQLStatement(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            This method will create the SQL statement to load the data from the DB
+            </summary>
+            <param name="whereStatment">The where statment for the select statment</param>
+            <param name="orderByStatment">The Order By statmanet for the select statment</param>
+            <param name="connectByClause">An indicator if a connect by clause is attach with the where clause</param>
+            <param name="includePartialData">An indicator whether partial data should be included</param>
+            <returns>The generated SQL statment</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.FormatBarInfo(NETRONIC.XGantt.VcNode,System.String[],System.String)">
+            <summary>
+            Returns the formatted bar information of a node
+            </summary>
+            <param name="currentNode">node to get the bar information</param>
+            <param name="sAttributes">list of attributes to be included in the bar information</param>
+            <param name="delimiter">delimiter to be used [Default is "/"]</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.SetBarInfo(NETRONIC.XGantt.VcNode,System.String[],System.String,System.String)">
+            <summary>
+            Updates a given node with bar Information
+            </summary>
+            <param name="node">Node to be updated</param>
+            <param name="sAttributes">list of attributes to be included in the bar information</param>
+            <param name="delimiter">delimiter to be used [Default is "/"]</param>
+            <param name="columnName">name of the column to include bar information</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.SetBarInfo(NETRONIC.XGantt.VcNodeCollection,System.String[],System.String,System.String)">
+            <summary>
+            Updates a collection of nodes with bar Information
+            </summary>
+            <param name="nodeCollection">Collection of nodes to be updated</param>
+            <param name="sAttributes">list of attributes to be included in the bar information</param>
+            <param name="delimiter">delimiter to be used [Default is "/"]</param>
+            <param name="columnName">name of the column to include bar information</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.AddWhereStatment(System.String,System.Boolean,System.Boolean,System.String@)">
+            <summary>
+            This method will create the SQL Where statement to load the data from the DB
+            </summary>
+            <param name="whereStatment">The where statment for the select statment</param>
+            <param name="connectByClause">An indicator if a connect by clause is attach with the where clause</param>
+            <param name="includePartialData">An indicator whether partial data should be included</param>
+            <param name="SQLStatment">The SQL statement appended with the where clause</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.LoadData(System.String)">
+            <summary>
+            This function will the data populated from the DB and insert it into XGantt.
+            </summary>
+            <param name="SQLStatment">The SQL Statement that will populate that XGantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.LoadData(System.String[])">
+            <summary>
+            This function will load a given result set into the XGantt.
+            </summary>
+            <param name="data">The result set that should be loaded to the XGantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.StoreData(System.String,System.String)">
+            <summary>
+            This function stores data to the LU specified as parameters to this function.
+            </summary>
+            <param name="logicalUnitName"></param>
+            <param name="viewName"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.CreateRelationSQLStmt(System.String,System.String)">
+            <summary>
+            This method will create the SQL statement to load the relations data from the DB.
+            </summary>
+            <param name="relationView">The name of the view from where relations should 
+            be loaded</param>
+            <param name="relationWhereStatment">The where statment to use when loading 
+            relations</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.LoadRelationsData(System.String)">
+            <summary>
+            This function will populate the Relations from the DB and insert it into XGantt.
+            </summary>
+            <param name="SQLStatment">The SQL Statement that will be used to populate 
+            that XGantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetDirtyNodeModificationType(System.String)">
+            <summary>
+            Converts from old modification type values the new version.
+            </summary>
+            <param name="oldModificatioinType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ActivateWrkschCalendar(System.Boolean)">
+            <summary>
+            This method will activate the functionallity to use the Wrksch Calendar (HR).
+            </summary>
+            <param name="wrkschCalendarActivate">This parameter will say if the Wrksch Calendar should be used</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ActivateGroupCalendar(System.String,System.Boolean)">
+            <summary>
+            This method will activate the functionallity to use the Group Calendars.
+            </summary>
+            <param name="groupIdColumn">This parameter will specify the column name of the Group ID column</param>
+            <param name="groupCalendarAtivate">This parameter will say if the Group Calendar should be used</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.LoadWrkschCalendar(System.String,System.String)">
+            <summary>
+            This function will load the Wrksch Calendar for each group in the current XGantt instance.
+            </summary>
+            <param name="companyId"></param>
+            <param name="calendarId"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.LoadAppsrvCalendar(System.String,System.String)">
+            <summary>
+            This function will load the Appsrv Calendar
+            </summary>
+            <param name="calendarId">Id of the WorkTimeCalendar in the database</param>
+            <param name="groupId">Identifiers for differet calendars used in FndXGantt</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ExtendGanttCalendar(System.String,System.String,System.String)">
+            <summary>
+            This function will load a extended part of the Work Time Calendar from Application Servicess.
+            If you have loaded your Gantt with data and a calendar, then you want to extend the time period in 
+            the Gantt then you should use this function to load the calendar for that part also.
+            </summary>
+            <param name="calendarId">The name of the calendar that should be loaded</param>
+            <param name="extendedStartDate">The start date of the date extention (only the extended part)</param>
+            <param name="extendedEndDate">The end date of the date extention (only the extended part)</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ChangeGanttCalendar(System.String)">
+             <summary>
+             This function will load the Work Time Calendar from Application Servicess
+            
+             Limitation: Can only handle Work Weeks that are 7 days long. And it can only handle 2 type of Workdays.
+                     And it can only handle if the week starts with a Monday.
+             </summary>
+             <param name="calendarId">The name of the calendar that should be loaded</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.CheckCalendarExist(System.String)">
+            <summary>
+            This function checks if a calendar has been inserted into the current XGantt object
+            </summary>
+            <param name="calendarId">The Calendar Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetDirtyNode(System.Int32)">
+            <summary>
+            This function returns the key for the current dirty node
+            </summary>
+            <param name="dirtyNodeNumber">The number of the dirty node you want</param>
+            <returns>Returns the key of the dirty node</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetStorageColumn(System.Int32)">
+            <summary>
+            This function will unpack and return the column from the sDefaultStorageColumns variable
+            </summary>
+            <param name="storageColumnIndex">The storage column index</param>
+            <returns>The name of the storage column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetFirstDirtyNode">
+            <summary>
+            This function will return the key to the first dirty node record
+            </summary>
+            <returns>The Key to the first dirty node record</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetFirstDirtyNodeCategory">
+            <summary>
+            This function will return the modification type of the first dirty node record
+            </summary>
+            <returns>The modification type to the first dirty node record.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GetFirstDirtyNodeType">
+            <summary>
+            This function will return the Type(node or link) of the first dirty node record   
+            </summary>
+            <returns>The Type(node or link) to the first dirty node record</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ClearAllDirtyNodeList">
+            <summary>
+            This function will delete all the node from the dirty node list
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ClearFromDirtyNodeList(System.Int32)">
+            <summary>
+            This function will delete the node from the dirty node list
+            </summary>
+            <param name="indexOfDirtyNodeList">The index number of the dirty node list</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ClearFromDirtyNodeList(System.String)">
+            <summary>
+            This function will delete the node from the dirty node list
+            </summary>
+            <param name="keyOfDirtyNodeList">The index number of the dirty node list</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.StoreNode(System.Int32,System.String)">
+            <summary>
+            This function is will store one dirty node to the database
+            </summary>
+            <param name="indexOfDirtyNodeList">The index number of the dirty node list</param>
+            <param name="defaultStorageColumns">The list of columns that should be stored</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.StoreRecord(System.String,System.String,System.String@,System.String,System.String,System.Int32)">
+            <summary>
+            This function will do the actual storage of the record
+            </summary>
+            <param name="paramRecordStringAttr">The attribute string that is going to be 
+            sent to the database</param>
+            <param name="paramObjid">This is the Objid from the record in the DB that 
+            corresponds the node</param>
+            <param name="paramObjversion">This is the Objversion from the record in the DB 
+            that corresponds the node</param>
+            <param name="paramAction">This is the action that should be done to the record. 
+            The values could be: DO or CHECK</param>
+            <param name="dirtyNodeCategory">This parameter Node Category can contain the 
+            following values: DIRTY_NODE_CATEGORY_NEW, DIRTY_NODE_CATEGORY_MODIFY, 
+            DIRTY_NODE_CATEGORY_DELETE</param>
+            <param name="dirtyNodeType">This parameter should contain type of modification 
+            done to the node, these types are specified by VcGantt constants</param>
+            <returns>The return value is TRUE if all the statements are executed and the 
+            transaction committed, FALSE otherwise.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.StoreRecord(System.String@,System.String,System.String@,System.String,System.String,System.Int32)">
+            <summary>
+            This function will do the actual storage of the record
+            </summary>
+            <param name="paramRecordStringAttr">The attribute string that is going to be 
+            sent to the database</param>
+            <param name="paramObjid">This is the Objid from the record in the DB that 
+            corresponds the node</param>
+            <param name="paramObjversion">This is the Objversion from the record in the DB 
+            that corresponds the node</param>
+            <param name="paramAction">This is the action that should be done to the record. 
+            The values could be: DO or CHECK</param>
+            <param name="dirtyNodeCategory">This parameter Node Category can contain the 
+            following values: DIRTY_NODE_CATEGORY_NEW, DIRTY_NODE_CATEGORY_MODIFY, 
+            DIRTY_NODE_CATEGORY_DELETE</param>
+            <param name="dirtyNodeType">This parameter should contain type of modification 
+            done to the node, these types are specified by VcGantt constants</param>
+            <returns>The return value is TRUE if all the statements are executed and the 
+            transaction committed, FALSE otherwise.</returns>
+            
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.StoreRecord(Ifs.Fnd.AccessProvider.PLSQL.FndAttributeString,System.String,System.String@,System.String,Ifs.Fnd.Windows.Forms.FndXGantt.DirtyNodeModifications,System.Int32)">
+            <summary>
+            This function will do the actual storage of the record
+            </summary>
+            <param name="paramRecordStringAttr">The attribute string that is going to be 
+            sent to the database</param>
+            <param name="paramObjid">This is the Objid from the record in the DB that 
+            corresponds the node</param>
+            <param name="paramObjversion">This is the Objversion from the record in the DB 
+            that corresponds the node</param>
+            <param name="paramAction">This is the action that should be done to the record. 
+            The values could be: DO or CHECK</param>
+            <param name="dirtyNodeCategory">This parameter Node Category can contain the 
+            following values: DIRTY_NODE_CATEGORY_NEW, DIRTY_NODE_CATEGORY_MODIFY, 
+            DIRTY_NODE_CATEGORY_DELETE</param>
+            <param name="dirtyNodeType">This parameter should contain type of modification 
+            done to the node, these types are specified by VcGantt constants</param>
+            <returns>The return value is TRUE if all the statements are executed and the 
+            transaction committed, FALSE otherwise.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.LocalizeFonts">
+            <summary>
+            This function will handle changes to the correct font. 
+            The window that the current XGantt object is located on will decide what 
+            font should be used. This means that the fonts set in XGantt properties 
+            will have no affect on the font being displayed in runtime.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.TranslateColumnTitles">
+            <summary>
+            This function will translate the column titles in the XGantt table. 
+            The translations will be taken from the dummy table that is corresponding 
+            to the current XGantt object. The tables column title needs to have the 
+            same name as the F1 properties.
+            Should be used for IFS Application Forms.
+            </summary>
+            
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.SetTableColumnTitles(System.String,System.String)">
+            <summary>
+            Should be used for manualy translating Table Column Titles for a IFS Feature.
+            </summary>
+            <param name="columnIndexes"></param>
+            <param name="columnTranslations"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.SetEndDateColumn(System.String)">
+            <summary>
+            This function will set the column name of the End Date column that is used for 
+            the End Date of a Node in the XGantt.
+            </summary>
+            <param name="endDateColumn">The column name of the End Date column that is used for the End Date of a Node in the XGantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.OnCreateControl">
+            <summary>
+            Startup FndXGantt
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.SetTheme">
+            <summary>
+            Implements the interface IFndThemeable method SetTheme.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ActivityContext">
+            <summary>
+            This is the ActivityContext of the form from where the XGantt object is located.
+            It's used for loading data from the database.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.DisplayNoRecordsFoundProperty">
+            <summary>
+            This prroperty will decide if a No Data Found dialog should
+            be displayed when using XGanttPopulate.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.UseDataTimeInterval">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.TableAreaWidthProperty">
+            <summary>
+            Gets or sets the table/diagram width ratio for storage in IFS User profile
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.NumberOfTableColumnsProperty">
+            <summary>
+            Gets or sets number of table columns for storage in IFS User profile
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.TableColumnsWidthProperty">
+            <summary>
+            Gets or sets the list of table column withds for storage in IFS User profile
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.TimeScaleUnitWidthProperty">
+            <summary>
+            Gets or sets the time scale unith width for storage in IFS User profile
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GanttCalendarStartTimeProperty">
+            <summary>
+            Gets or sets the start time for storage in IFS User profile
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.GanttCalendarEndTimeProperty">
+            <summary>
+            Gets or sets the end time for storage in IFS User profile
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.FndXGantt.ToolTipAttributes">
+            <summary>
+            Gets or sets tool tip texts for storage in IFS User profile.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndXGantt.DirtyNodeModifications">
+            <summary>
+            The list of reasons that the node is dirty.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.DirtyNodeModifications.newNode">
+            <summary>
+            Node is new ('N')
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.DirtyNodeModifications.modifiedNode">
+            <summary>
+            Node is modified ('M')
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.DirtyNodeModifications.deleteNode">
+            <summary>
+            A persisted node is deleted ('D')
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.DirtyNodeModifications.deleteNewNode">
+            <summary>
+            A non-persisted node is deleted
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.DirtyNodeModifications.notModified">
+            <summary>
+            Node not modified
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities">
+            <summary>
+            FndXGanttUtilities is the helper class for vcGantt control
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.Init(NETRONIC.XGantt.VcGantt)">
+            <summary>
+            Initializes the specified vcGantt.
+            </summary>
+            <param name="vcGantt">The vcGantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SetTheme(NETRONIC.XGantt.VcGantt)">
+            <summary>
+            Sets the theme.
+            </summary>
+            <param name="vcGantt">The vcgantt object.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SetTheme_DateLine(NETRONIC.XGantt.VcGantt)">
+            <summary>
+            Sets the theme of datelines.
+            </summary>
+            <param name="vcGantt">The vc gantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SetTheme_LineFormatField(NETRONIC.XGantt.VcGantt)">
+            <summary>
+            Sets the theme of line format field.
+            </summary>
+            <param name="vcGantt">The vc gantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SetTheme_Layer(NETRONIC.XGantt.VcGantt)">
+            <summary>
+            Sets the theme of layers.
+            </summary>
+            <param name="vcGantt">The vc gantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SetTheme_TimeScale(NETRONIC.XGantt.VcGantt)">
+            <summary>
+            Sets the theme of time scales.
+            </summary>
+            <param name="vcGantt">The vc gantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SetTheme_TableFormatField(NETRONIC.XGantt.VcGantt)">
+            <summary>
+            Sets the theme of table format fields.
+            </summary>
+            <param name="vcGantt">The vc gantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SetTheme_HierarchyLevelLayout(NETRONIC.XGantt.VcGantt)">
+            <summary>
+            Sets the theme of hierarchylevellayout.
+            </summary>
+            <param name="vcGantt">The vc gantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SetTheme_Histogram(NETRONIC.XGantt.VcGantt)">
+            <summary>
+            Sets the theme of histogram.
+            </summary>
+            <param name="vcGantt">The vc gantt.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.ChangeSupplyTextEntry(System.Object,NETRONIC.XGantt.VcTextEntrySupplyingEventArgs)">
+            <summary>
+            This function will change the XGantt texts to the correct ones for the current language that is being used.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="supplyEventArgs">The <see cref="T:NETRONIC.XGantt.VcTextEntrySupplyingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SaveSettings(NETRONIC.XGantt.VcGantt,Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SettingsType)">
+            <summary>
+            Saves settings in profile.
+            </summary>
+            <param name="vcGantt">The vc gantt.</param>
+            <param name="type">Type of settings that need to be saved.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.LoadSettings(NETRONIC.XGantt.VcGantt,Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SettingsType)">
+            <summary>
+            Loads the settings.
+            </summary>
+            <param name="vcGantt">The vc gantt.</param>
+            <param name="type">Type of settings that need to be loaded.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.ReplaceTransparency(NETRONIC.XGantt.VcGantt,System.Drawing.Bitmap,System.Drawing.Color)">
+            <summary>
+            ReplaceTransparency.
+            </summary>
+            <param name="vcGantt">The vcgantt.</param>
+            <param name="image">The image.</param>
+            <param name="newcolor">The newcolor.</param>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SettingsType">
+            <summary>
+            Different types of settings related to xGantt
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.FndXGantt.GanttUtilities.FndXGanttUtilities.SettingsType.print">
+            <summary>
+            The print dialog settings
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.ActivityChangeEndDate">
+            <summary>
+              Looks up a localized string similar to Change End Date.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.ActivityChangeStartDate">
+            <summary>
+              Looks up a localized string similar to Change Start Date.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.ActivityDuration">
+            <summary>
+              Looks up a localized string similar to Duration.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.ActivityEnd">
+            <summary>
+              Looks up a localized string similar to End.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.ActivityMoveActivity">
+            <summary>
+              Looks up a localized string similar to Move Activity.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.ActivityStart">
+            <summary>
+              Looks up a localized string similar to Start.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.AdjustTimescale">
+            <summary>
+              Looks up a localized string similar to Adjust time scale to width of pages.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.AdoptTableWidthOfView">
+            <summary>
+              Looks up a localized string similar to Adopt appearence from view on screen.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.AlignmentItems">
+            <summary>
+              Looks up a localized string similar to Top left|Top|Top right|Left|Centered|Right|Bottom left|Bottom|Bottom right.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarDay1Monday">
+            <summary>
+              Looks up a localized string similar to Monday.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarDay2Tuseday">
+            <summary>
+              Looks up a localized string similar to Tuesday.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarDay3Wednesday">
+            <summary>
+              Looks up a localized string similar to Wednesday.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarDay4Thursday">
+            <summary>
+              Looks up a localized string similar to Thursday.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarDay5Friday">
+            <summary>
+              Looks up a localized string similar to Friday.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarDay6Saturday">
+            <summary>
+              Looks up a localized string similar to Saturday.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarDay7Sunday">
+            <summary>
+              Looks up a localized string similar to Sunday.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarMon10October">
+            <summary>
+              Looks up a localized string similar to October.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarMon11November">
+            <summary>
+              Looks up a localized string similar to November.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarMon12December">
+            <summary>
+              Looks up a localized string similar to December.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarMon1January">
+            <summary>
+              Looks up a localized string similar to January.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarMon2February">
+            <summary>
+              Looks up a localized string similar to February.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarMon3March">
+            <summary>
+              Looks up a localized string similar to March.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarMon4April">
+            <summary>
+              Looks up a localized string similar to April.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarMon5May">
+            <summary>
+              Looks up a localized string similar to May.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarMon6June">
+            <summary>
+              Looks up a localized string similar to June.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarMon7July">
+            <summary>
+              Looks up a localized string similar to July.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarMon8August">
+            <summary>
+              Looks up a localized string similar to August.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarMon9September">
+            <summary>
+              Looks up a localized string similar to September.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarQuar1">
+            <summary>
+              Looks up a localized string similar to Quarter 1.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarQuar2">
+            <summary>
+              Looks up a localized string similar to Quarter 2.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarQuar3">
+            <summary>
+              Looks up a localized string similar to Quarter 3.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarQuar4">
+            <summary>
+              Looks up a localized string similar to Quarter 4.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CalendarWeek">
+            <summary>
+              Looks up a localized string similar to Week.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CombinedFitToPage">
+            <summary>
+              Looks up a localized string similar to Zoom with horizontal fit.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.CurrentValues">
+            <summary>
+              Looks up a localized string similar to Current.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.DlgOk">
+            <summary>
+              Looks up a localized string similar to OK.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.EditTimeScale">
+            <summary>
+              Looks up a localized string similar to Edit Time Scale....
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.EditTimeScaleTitle">
+            <summary>
+              Looks up a localized string similar to Edit Time Scale.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.EnableDiagram">
+            <summary>
+              Looks up a localized string similar to Show diagram.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.EnableTable">
+            <summary>
+              Looks up a localized string similar to Show table.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.EndDate">
+            <summary>
+              Looks up a localized string similar to End Date.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.FoldingMarksItems">
+            <summary>
+              Looks up a localized string similar to Form A|Form B|Form C.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.Grid">
+            <summary>
+              Looks up a localized string similar to Grid.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.MaxPages">
+            <summary>
+              Looks up a localized string similar to Page(s).
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.MoveLayer">
+            <summary>
+              Looks up a localized string similar to Move Layer.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PageNumberingItems">
+            <summary>
+              Looks up a localized string similar to Row.Column|Column.Row|Page/Count.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PagePadding">
+            <summary>
+              Looks up a localized string similar to Pad pages with space.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrevAll">
+            <summary>
+              Looks up a localized string similar to Overview.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrevClose">
+            <summary>
+              Looks up a localized string similar to Close.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrevFitToPage">
+            <summary>
+              Looks up a localized string similar to Fit To Page.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrevNext">
+            <summary>
+              Looks up a localized string similar to Next.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrevPageLayout">
+            <summary>
+              Looks up a localized string similar to Page Setup....
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrevPagePreview">
+            <summary>
+              Looks up a localized string similar to Preview.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrevPrevious">
+            <summary>
+              Looks up a localized string similar to Previous.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrevPrint">
+            <summary>
+              Looks up a localized string similar to Print....
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrevPrintSetup">
+            <summary>
+              Looks up a localized string similar to Printer Setup....
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrevSingle">
+            <summary>
+              Looks up a localized string similar to Single.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrevZoomPrint">
+            <summary>
+              Looks up a localized string similar to Print area....
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrinterApplName">
+            <summary>
+              Looks up a localized string similar to Varchart XGantt.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrinterPrint">
+            <summary>
+              Looks up a localized string similar to Print.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrinterPrintingPage">
+            <summary>
+              Looks up a localized string similar to Printing Page.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.PrinterTo">
+            <summary>
+              Looks up a localized string similar to to.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.RepeatTable">
+            <summary>
+              Looks up a localized string similar to Repeat title/table/time scale/legend.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.ResizeSectionWidth">
+            <summary>
+              Looks up a localized string similar to Resize Section Width.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.Scale">
+            <summary>
+              Looks up a localized string similar to Scale.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.ScalingMode">
+            <summary>
+              Looks up a localized string similar to &amp;Mode:.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupAddCuttingMarks">
+            <summary>
+              Looks up a localized string similar to Add cutting marks.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupAlignment">
+            <summary>
+              Looks up a localized string similar to Alignment.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupApply">
+            <summary>
+              Looks up a localized string similar to Apply.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupBlackWhitePrint">
+            <summary>
+              Looks up a localized string similar to Black and white print.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupBottom">
+            <summary>
+              Looks up a localized string similar to Bottom.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupCancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupCm">
+            <summary>
+              Looks up a localized string similar to cm.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupColorPrint">
+            <summary>
+              Looks up a localized string similar to Color print.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupFitToPage">
+            <summary>
+              Looks up a localized string similar to Fit to page.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupFrameOutside">
+            <summary>
+              Looks up a localized string similar to Frame outside.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupGrayShadesPrint">
+            <summary>
+              Looks up a localized string similar to Gray shades print.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupLeft">
+            <summary>
+              Looks up a localized string similar to Left.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupMargins">
+            <summary>
+              Looks up a localized string similar to Margine.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupOk">
+            <summary>
+              Looks up a localized string similar to Ok.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupOptions">
+            <summary>
+              Looks up a localized string similar to Options.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupOutput">
+            <summary>
+              Looks up a localized string similar to Output.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupPageDescription">
+            <summary>
+              Looks up a localized string similar to Additional text.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupPageLayout">
+            <summary>
+              Looks up a localized string similar to Page Setup.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupPageNumbers">
+            <summary>
+              Looks up a localized string similar to Page Numbers.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupPagesMaxHeight">
+            <summary>
+              Looks up a localized string similar to (pages) max. height.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupPagesMaxWidth">
+            <summary>
+              Looks up a localized string similar to (pages) max. width.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupPercent">
+            <summary>
+              Looks up a localized string similar to %.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupPrintDate">
+            <summary>
+              Looks up a localized string similar to Print Date.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupReduceExpand">
+            <summary>
+              Looks up a localized string similar to Reduce/Expand.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupRight">
+            <summary>
+              Looks up a localized string similar to Right.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupScaling">
+            <summary>
+              Looks up a localized string similar to Scaling.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupSinglePages">
+            <summary>
+              Looks up a localized string similar to Repeat title/table/time scale.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.SetupTop">
+            <summary>
+              Looks up a localized string similar to Top.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.ShowFoldingMarks">
+            <summary>
+              Looks up a localized string similar to Show &amp;folding marks(DIN824).
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.StartDate">
+            <summary>
+              Looks up a localized string similar to Start Date.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.TableColumnRange">
+            <summary>
+              Looks up a localized string similar to Table colomuns (e.g. 1-7;7).
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.TimeColumnEnd">
+            <summary>
+              Looks up a localized string similar to Time scale end:.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.TimeColumnStart">
+            <summary>
+              Looks up a localized string similar to Time scale start:.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.TimeNowLine">
+            <summary>
+              Looks up a localized string similar to Time-Now Line.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndXGantt.Properties.Resources.ZoomFactor">
+            <summary>
+              Looks up a localized string similar to Zoom factor:.
+            </summary>
+        </member>
+    </members>
+</doc>

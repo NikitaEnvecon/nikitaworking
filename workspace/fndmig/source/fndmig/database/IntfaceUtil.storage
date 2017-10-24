@@ -1,0 +1,159 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: FndmigStorageUtil
+--  Component:    FNDMIG
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+
+
+
+layer Core;
+
+
+-------------------- TABLE DEFINITIONS --------------------------------------
+
+
+TABLE intface_info_services_rpt IS
+      ( result_key                      NUMBER           NOT NULL,
+        row_no                          NUMBER           NOT NULL,
+        parent_row_no                   NUMBER           NOT NULL,
+        s1                              VARCHAR2(2000)   NULL,
+        s2                              VARCHAR2(2000)   NULL,
+        s3                              VARCHAR2(2000)   NULL,
+        s4                              VARCHAR2(2000)   NULL,
+        s5                              VARCHAR2(2000)   NULL,
+        s6                              VARCHAR2(2000)   NULL,
+        s7                              VARCHAR2(2000)   NULL,
+        s8                              VARCHAR2(2000)   NULL,
+        s9                              VARCHAR2(2000)   NULL,
+        s10                             VARCHAR2(2000)   NULL,
+        s11                             VARCHAR2(2000)   NULL,
+        s12                             VARCHAR2(2000)   NULL,
+        s13                             VARCHAR2(2000)   NULL,
+        s14                             VARCHAR2(2000)   NULL,
+        s15                             VARCHAR2(2000)   NULL,
+        s16                             VARCHAR2(2000)   NULL,
+        s17                             VARCHAR2(2000)   NULL,
+        s18                             VARCHAR2(2000)   NULL,
+        s19                             VARCHAR2(2000)   NULL,
+        s20                             VARCHAR2(2000)   NULL,
+        s21                             VARCHAR2(2000)   NULL,
+        s22                             VARCHAR2(2000)   NULL,
+        s23                             VARCHAR2(2000)   NULL,
+        s24                             VARCHAR2(2000)   NULL,
+        s25                             VARCHAR2(2000)   NULL,
+        s26                             VARCHAR2(2000)   NULL,
+        s27                             VARCHAR2(2000)   NULL,
+        s28                             VARCHAR2(2000)   NULL,
+        s29                             VARCHAR2(2000)   NULL,
+        s30                             VARCHAR2(2000)   NULL,
+        s31                             VARCHAR2(2000)   NULL,
+        s32                             VARCHAR2(2000)   NULL,
+        s33                             VARCHAR2(2000)   NULL,
+        s34                             VARCHAR2(2000)   NULL,
+        s35                             VARCHAR2(2000)   NULL,
+        s36                             VARCHAR2(2000)   NULL,
+        s37                             VARCHAR2(2000)   NULL,
+        s38                             VARCHAR2(2000)   NULL,
+        s39                             VARCHAR2(2000)   NULL,
+        s40                             VARCHAR2(4000)   NULL,
+        s41                             VARCHAR2(2000)   NULL,
+        s42                             VARCHAR2(2000)   NULL,
+        s43                             VARCHAR2(2000)   NULL,
+        s44                             VARCHAR2(2000)   NULL,
+        s45                             VARCHAR2(2000)   NULL,
+        s46                             VARCHAR2(2000)   NULL,
+        s47                             VARCHAR2(2000)   NULL,
+        s48                             VARCHAR2(2000)   NULL,
+        s49                             VARCHAR2(2000)   NULL,
+        s50                             VARCHAR2(2000)   NULL,
+        s51                             VARCHAR2(2000)   NULL,
+        s52                             VARCHAR2(2000)   NULL,
+        s53                             VARCHAR2(2000)   NULL,
+        s54                             VARCHAR2(2000)   NULL,
+        s55                             VARCHAR2(2000)   NULL,
+        s56                             VARCHAR2(2000)   NULL,
+        s57                             VARCHAR2(2000)   NULL,
+        s58                             VARCHAR2(2000)   NULL,
+        s59                             VARCHAR2(2000)   NULL,
+        s60                             VARCHAR2(2000)   NULL,
+        s61                             VARCHAR2(2000)   NULL,
+        s62                             VARCHAR2(2000)   NULL,
+        s63                             VARCHAR2(2000)   NULL,
+        s64                             VARCHAR2(2000)   NULL,
+        s65                             VARCHAR2(2000)   NULL,
+        s66                             VARCHAR2(2000)   NULL,
+        s67                             VARCHAR2(2000)   NULL,
+        s68                             VARCHAR2(2000)   NULL,
+        s69                             VARCHAR2(2000)   NULL,
+        s70                             VARCHAR2(2000)   NULL,
+        s71                             VARCHAR2(2000)   NULL,
+        s72                             VARCHAR2(2000)   NULL,
+        s73                             VARCHAR2(2000)   NULL,
+        s74                             VARCHAR2(2000)   NULL,
+        s75                             VARCHAR2(2000)   NULL,
+        s76                             VARCHAR2(2000)   NULL,
+        s77                             VARCHAR2(2000)   NULL,
+        s78                             VARCHAR2(2000)   NULL,
+        s79                             VARCHAR2(2000)   NULL,
+        s80                             VARCHAR2(2000)   NULL,
+        n1                              NUMBER           NULL,
+        n2                              NUMBER           NULL,
+        n3                              NUMBER           NULL,
+        n4                              NUMBER           NULL,
+        n5                              NUMBER           NULL,
+        n6                              NUMBER           NULL,
+        n7                              NUMBER           NULL,
+        n8                              NUMBER           NULL,
+        n9                              NUMBER           NULL,
+        n10                             NUMBER           NULL,
+        n11                             NUMBER           NULL,
+        n12                             NUMBER           NULL,
+        n13                             NUMBER           NULL,
+        n15                             NUMBER           NULL,
+        n16                             NUMBER           NULL,
+        n17                             NUMBER           NULL,
+        n18                             NUMBER           NULL,
+        n19                             NUMBER           NULL,
+        n20                             NUMBER           NULL,
+        d1                              DATE             NULL,
+        d2                              DATE             NULL,
+        d3                              DATE             NULL,
+        d4                              DATE             NULL,
+        d5                              DATE             NULL,
+        d6                              DATE             NULL,
+        d7                              DATE             NULL,
+        d8                              DATE             NULL,
+        d9                              DATE             NULL,
+        d10                             DATE             NULL,
+        rowversion                      DATE             NULL,
+        rowkey                          VARCHAR2(50)     DEFAULT sys_guid() NOT NULL);
+
+PRIMARY KEY intface_info_services_pk IS intface_info_services_rpt (result_key, row_no, parent_row_no);
+UNIQUE CONSTRAINT intface_info_services_rpt_rk IS intface_info_services_rpt (rowkey);
+
+
+-------------------- OTHER DEFINITIONS --------------------------------------
+
+SEQUENCE INTFACE_BACKUP_FILE_SEQ IS MAXVALUE 9999 MINVALUE 1000 INCREMENT BY 1 START WITH 1000 NOCACHE    CYCLE;
+SEQUENCE REPL_LOG_SEQ IS MAXVALUE 9999999999999999999999999 INCREMENT BY 1 START WITH 1;
+
+OBJECT Intface_File_Type IS  (
+      file_name           VARCHAR2(100),
+      file_size           VARCHAR2(30),
+      file_date           VARCHAR2(30),
+      directory           VARCHAR2(4000));
+      
+COLLECTION Intface_File_Types IS TABLE OF Intface_File_Type;
+
+OBJECT Intface_Directory_Type IS (
+   name                VARCHAR2(4000),
+   path                VARCHAR2(4000),
+   grants              VARCHAR2(10));
+
+COLLECTION Intface_Directory_Types IS TABLE OF Intface_Directory_Type;
+
+COLLECTION Intface_strArray IS TABLE OF VARCHAR2(2000);

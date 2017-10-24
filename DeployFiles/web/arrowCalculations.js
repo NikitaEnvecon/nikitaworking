@@ -1,0 +1,7 @@
+
+function DegtoRad(x){return x*Math.PI/180;}
+function RadtoDeg(x){return x*180/Math.PI;}
+function CalculateCoord(origin,brng,arcLength){var lat1=DegtoRad(origin.Latitude);var lon1=DegtoRad(origin.Longitude);var centralAngle=arcLength/earthRadius;var lat2=Math.asin(Math.sin(lat1)*Math.cos(centralAngle)+Math.cos(lat1)*Math.sin(centralAngle)*Math.cos(DegtoRad(brng)));var lon2=lon1+Math.atan2(Math.sin(DegToRad(brng))*Math.sin(centralAngle)*Math.cos(lat1),Math.cos(centralAngle)-Math.sin(lat1)*Math.sin(lat2));return new VELatLong(RadtoDeg(lat2),RadtoDeg(lon2));}
+function CalculateBearing(A,B){var lat1=DegtoRad(A.Latitude);var lon1=A.Longitude;var lat2=DegtoRad(B.Latitude);var lon2=B.Longitude;var dLon=DegtoRad(lon2-lon1);var y=Math.sin(dLon)*Math.cos(lat2);var x=Math.cos(lat1)*Math.sin(lat2)-Math.sin(lat1)*Math.cos(lat2)*Math.cos(dLon);var brng=(RadtoDeg(Math.atan2(y,x))+360)%360;return brng;}
+function HaversineDistance(latlong1,latlong2)
+{var lat1=DegtoRad(latlong1.Latitude);var lon1=DegtoRad(latlong1.Longitude);var lat2=DegtoRad(latlong2.Latitude);var lon2=DegtoRad(latlong2.Longitude);var dLat=lat2-lat1;var dLon=lon2-lon1;var cordLength=Math.pow(Math.sin(dLat/2),2)+Math.cos(lat1)*Math.cos(lat2)*Math.pow(Math.sin(dLon/2),2);var centralAngle=2*Math.atan2(Math.sqrt(cordLength),Math.sqrt(1-cordLength));return earthRadius*centralAngle;}

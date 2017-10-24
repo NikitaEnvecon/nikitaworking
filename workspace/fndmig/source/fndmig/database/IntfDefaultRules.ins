@@ -1,0 +1,94 @@
+-----------------------------------------------------------------------------
+--
+--  Module: FNDMIG
+--
+--  File  : IntfDefaultRules.ins
+--
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+--  130108  JHMASE  Bug #107708 - DEPLOYFILE rule description changed
+--  111017  JHMASE  Created - Bug 99502
+-----------------------------------------------------------------------------
+
+SET SERVEROUTPUT ON
+
+PROMPT INSERT INTO intface_default_rules_tab
+DECLARE
+   PROCEDURE InsertRules (
+       rule_id_        IN VARCHAR2,
+       description_    IN VARCHAR2,
+       procedure_name_ IN VARCHAR2,
+       rule_flag_      IN VARCHAR2,
+       value_flag_     IN VARCHAR2,
+       rule_value_     IN VARCHAR2 DEFAULT NULL )
+   IS
+   BEGIN
+      INSERT INTO intface_default_rules_tab (rule_id, description,
+         procedure_name, rule_flag, value_flag, rule_value, rowversion)
+      VALUES (rule_id_, description_,
+         procedure_name_, rule_flag_, value_flag_, rule_value_, sysdate);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+   END InsertRules;   
+BEGIN
+   InsertRules('ADDOBJID',      'Create extra column detail for OBJID',                         'MIGRATE%',           '1', '1');
+   InsertRules('ADDOBJID',      'Create extra column detail for OBJID',                         'REPLICATION',        '1', '1');
+   InsertRules('ALTREPLUSER',   'Execute replication with alternate user',                      'REPLICATION',        '2', '1');
+   InsertRules('BUILDTRIGGERIF','Build IF-statement for updateable columns',                    'REPLICATION',        '1', '1');
+   InsertRules('CALLEXTPROC',   'Call external procedure after each row',                       'CREATE_OUTPUT_FILE', '2', '3');     
+   InsertRules('CHECKOPTION',   'Perform methods New and Modify with CHECK option',             'MIGRATE%',           '2', '1');
+   InsertRules('CHKSERVERFILE', 'Execute job only if serverfile exists',                        '*',                  '2', '5');
+   InsertRules('CLEANUP',       'Clear errordetails automatically',                             'REPLICATION',        '1', '5', 'BEFORE');
+   InsertRules('CLEANUP',       'Clear error details automatically',                            '*',                  '2', '5');
+   InsertRules('COMMITSEQ',     'Number of rows between each commit',                           '*',                  '2', '2');
+   InsertRules('CONNJOB',       'Start this job first',                                         'MIGRATE%',           '2', '3');
+   InsertRules('CREATEDET',     'Create new column details based on views in MethodList',       'MIGRATE%',           '1', '5', '1');
+   InsertRules('CREATEDET',     'Create new column details based on views in MethodList',       'REPLICATION',        '1', '5', '3');
+   InsertRules('CREATEDET',     'Create new column details based on views in MethodList',       'EXCEL_MIGRATION',    '1', '5', '1');   
+   InsertRules('CREINDEX',      'Create index for key columns',                                 'CREATE_TABLE%',      '2', '5');
+   InsertRules('CRETABCONF',    'Options for container table',                                  'CREATE_TABLE%',      '2', '3');
+   InsertRules('DEPLOYFILE',    'Make export-file for deployment with SQL tool',                'FNDMIG_EXPORT',      '2', '5');
+   InsertRules('EVENTMESS',     'Notify Event Server when job is finished',                     '*',                  '2', '1');
+   InsertRules('EXITLINES',     'Stop reading file after this line number',                     '*',                  '2', '2');
+   InsertRules('EXTTABLE',      'Create External Table and insert directly into IC-table',      'CREATE_TABLE%',      '2', '5');
+   InsertRules('FILEBKP',       'Backup file after successful completion',                      '*',                  '2', '5');
+   InsertRules('FILEDEL',       'Delete file after successful completion',                      '*',                  '2', '1');
+   InsertRules('FILEHEAD',      'Create fileheader with column names. CSV-files only',          'CREATE_OUTPUT_FILE', '2', '1');
+   InsertRules('FILEMOV',       'Move file after successful completion',                        '*',                  '2', '3');
+   InsertRules('FILERENAM',     'Rename file after successful completion',                      '*',                  '2', '5');
+   InsertRules('IGNOREADERROR', 'Continue reading file even if errors occur',                   '*',                  '2', '1');
+   InsertRules('IGNOREXEERROR', 'Continue procedure even if errors occur',                      'INSERT%',            '2', '1');
+   InsertRules('IGNOREXEERROR', 'Continue procedure even if errors occur',                      'MIGRATE%',           '1', '1');
+   InsertRules('IGNOREXEERROR', 'Continue procedure even if errors occur',                      'CREATE_TABLE%',      '1', '1');
+   InsertRules('IGNOREXEERROR', 'Continue procedure even if errors occur',                      'REPLICATION',        '1', '1');
+   InsertRules('IGNOREXEERROR', 'Continue procedure even if errors occur',                      'CHECK_BY%',          '2', '1');
+   InsertRules('INSUPD',        'Execute either INSERT or UPDATE',                              'INSERT_OR_UPDATE',   '2', '3');
+   InsertRules('FETCHCONDITION','Sets if the Job can be used to fetch data. If Multiple LUs are used specify the join condition', 'EXCEL_MIGRATION', '1', '5');
+   InsertRules('KEEPBLANKS',    'Do NOT trim off leading or trailing blanks from input file',   '*',                  '2', '1');
+   InsertRules('KEEPBLANKS',    'Do NOT trim off leading or trailing blanks from input file',   'EXCEL_MIGRATION',    '1', '1');
+   InsertRules('KEEPDYNAMPROC', 'Do not DROP dynamic created procedures',                       'MIGRATE%',           '2', '1');
+   InsertRules('KEEPTRIGGER',   'Do NOT generate standard trigger-code',                        'REPLICATION',        '2', '1');
+   InsertRules('MAPDBCOL',      'Remap IIDs client-default to DB-default',                      'REPLICATION',        '2', '1');
+   InsertRules('MAPDBCOL',      'Remap IIDs client-default to DB-default',                      'MIGRATE%',           '2', '1');
+   InsertRules('MAPDBCOL',      'Remap IIDs client-default to DB-default',                      'EXCEL_MIGRATION',    '2', '1');
+   InsertRules('NOCLEANUP',     'Keep all job details for client files',                        '*',                  '2', '1');
+   InsertRules('NONULLVAL',     'Do not include selected items with null-value in attr-string', 'MIGRATE%',           '2', '1');
+   InsertRules('NONULLVAL',     'Do not include selected items with null-value in attr-string', 'REPLICATION',        '2', '1');
+   InsertRules('REMLOG',        'Remove logfile if External Table was created OK',              'CREATE_TABLE%',      '1', '1');
+   InsertRules('SAVEJOBDAYS',   'Number of days to save job-history',                           '*',                  '2', '2');
+   InsertRules('SAVEJOBDAYS',   'Number of days to save job-history',                           'REPLICATION',        '1', '2', '30');
+   InsertRules('SAVEJOBERR',    'Save only errors in history log',                              'REPLICATION',        '1', '1');
+   InsertRules('SAVEJOBERR',    'Save only errors in history log',                              '*',                  '2', '1');
+   InsertRules('SERVFILOAD',    'Load serverfile before job starts',                            '*',                  '2', '1');
+   InsertRules('SKIPLINES',     'Start reading file after this line number',                    '*',                  '2', '2');
+   InsertRules('SYNCDETAILS',   'Synchronize job details with columns in file-header',          'INSERT%',            '2', '5');
+   InsertRules('SYNCDETAILS',   'Synchronize job details with columns in file-header',          'CHECK_BY%',          '2', '5');
+   InsertRules('SYNCDETAILS',   'Synchronize job details with columns in file-header',          'CREATE_TABLE%',      '2', '5');
+   InsertRules('TRUNCVAL',      'Truncate file values exceeding column length',                 '*',                  '2', '1');   
+   COMMIT;
+END;
+/

@@ -1,0 +1,40 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceJobDetail
+--  Component:    FNDMIG
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+@Overtake Base
+VIEW Intface_Job_Detail IS
+   Prompt = 'Intface Job Detail'
+SELECT intface_name                   intface_name,
+       line_no                        line_no,
+       file_string                    file_string,
+       attribute_string               attribute_string_db,
+       -- Display attribute-string in a formatted manner. Used from window 'Start Job', folder 'Detail'
+       substr(replace(replace(attribute_string,chr(31),'='),chr(30),chr(13)||chr(10)),1,2000) attribute_string,
+       error_message                  error_message,
+       date_executed                  date_executed,
+       execution_no                   execution_no,
+       Intface_Job_Status_API.Decode(status) status,
+       status                         status_db,
+       executed_by                    executed_by,
+       rowid                         objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   intface_job_detail_tab;
+

@@ -1,0 +1,1702 @@
+-------------------------------------------------------
+File Type: IFS Foundation Translation File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Language: sk
+Culture: sk-SK
+Fittings: Standard
+Layer: Core
+Main Type: LU
+Sub Type: Logical Unit
+-------------------------------------------------------
+CS:IntfaceChangeDefaults^LU
+	A:Prompt^Zmena implicit. hodn\00F4t Intface^O
+	CS:1^LU
+		A:Text^Povolen\00E9^O
+	CE:
+	CS:2^LU
+		A:Text^Nepovolen\00E9^O
+	CE:
+	CS:3^LU
+		A:Text^Pevn\00E1 hodnota^O
+	CE:
+CE:
+CS:IntfaceConvList^LU
+	A:Prompt^Konv. zoz. Intface^O
+	CS:INTFACE_CONV_LIST^LU
+	CE:
+CE:
+CS:IntfaceConvListCols^LU
+	A:Prompt^St\013Apce konv. zoz. Intface^O
+	CS:INTFACE_CONV_LIST_COLS^LU
+	CE:
+CE:
+CS:IntfaceDefaultRules^LU
+	A:Prompt^Implicitn\00E9 pravidl\00E1 Intface^O
+	CS:ADDOBJID^LU
+		A:Text^Vytvori\0165 zvl\00E1\0161tny detail st\013Apca pre OBJID^O
+	CE:
+	CS:CHECKOPTION^LU
+		A:Text^Vykona\0165 met\00F3dy Nov\00E1 a Modifikova\0165 s mo\017Enos\0165ou KONTROLA^O
+	CE:
+	CS:CLEANUP^LU
+		A:Text^Automaticky vymaza\0165 podrobnosti o chyb\00E1ch^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Po\010Det riadkov medzi ka\017Ed\00FDm potvrden\00EDm^O
+	CE:
+	CS:CONNJOB^LU
+		A:Text^Spusti\0165 najprv t\00FAto \00FAlohu^O
+	CE:
+	CS:CREATEDET^LU
+		A:Text^Vytvori\0165 detaily nov\00E9ho st\013Apca na z\00E1klade zobrazen\00ED v zozname met\00F3d^O
+	CE:
+	CS:CRETABCONF^LU
+		A:Text^Mo\017Enosti kontajnerovej tabu\013Eky^O
+	CE:
+	CS:EVENTMESS^LU
+		A:Text^Upovedomi\0165 Server udalost\00ED o ukon\010Den\00ED \00FAlohy^O
+	CE:
+	CS:EXITLINES^LU
+		A:Text^Zastavi\0165 \010D\00EDtanie s\00FAboru po tomto \010D\00EDsle riadka^O
+	CE:
+	CS:FETCHCONDITION^LU
+		A:Text^Nastavuje, \010Di \00FAlohu mo\017Eno pou\017Ei\0165 na vyvolanie \00FAdajov. Ak sa pou\017E\00EDvaj\00FA viacer\00E9 log. jedn., definujte podmienku spojenia^O
+	CE:
+	CS:FILEBKP^LU
+		A:Text^Z\00E1lohova\0165 s\00FAbor po \00FAspe\0161nom dokon\010Den\00ED^O
+	CE:
+	CS:FILEHEAD^LU
+		A:Text^Vytvori\0165 hlavi\010Dku s\00FAboru s n\00E1zvami st\013Apcov. Plat\00ED len pre s\00FAbory CSV.^O
+	CE:
+	CS:IGNOREADERROR^LU
+		A:Text^Pokra\010Dova\0165 v \010D\00EDtan\00ED s\00FAboru aj ke\010F nastali chyby^O
+	CE:
+	CS:IGNOREXEERROR^LU
+		A:Text^Pokra\010Dova\0165 v procese aj ke\010F nastali chyby^O
+	CE:
+	CS:INSUPD^LU
+		A:Text^Vykona\0165 bu\010F INSERT, alebo UPDATE^O
+	CE:
+	CS:INTFACE_DEFAULT_RULES^LU
+	CE:
+	CS:NOCLEANUP^LU
+		A:Text^Uchova\0165 v\0161etky detaily \00FAlohy pre klientske s\00FAbory^O
+	CE:
+	CS:SAVEJOBDAYS^LU
+		A:Text^Po\010Det dn\00ED po\010Das, ktor\00FDch sa bude uklada\0165 hist\00F3ria \00FAloh^O
+	CE:
+	CS:SAVEJOBERR^LU
+		A:Text^Do denn\00EDka hist\00F3rie uklada\0165 len chyby^O
+	CE:
+	CS:SERVFILOAD^LU
+		A:Text^Na\010D\00EDta\0165 serverov\00FD s\00FAbor pred spusten\00EDm \00FAlohy^O
+	CE:
+	CS:SKIPLINES^LU
+		A:Text^Spusti\0165 \010D\00EDtanie s\00FAboru po tomto \010D\00EDsle riadka^O
+	CE:
+	CS:SYNCDETAILS^LU
+		A:Text^Synchronizova\0165 detaily \00FAlohy so st\013Apcami v hlavi\010Dke s\00FAboru^O
+	CE:
+	CS:TRUNCVAL^LU
+		A:Text^Skr\00E1ti\0165 hodnoty prekra\010Duj\00FAce d\013A\017Eku st\013Apca^O
+	CE:
+CE:
+CS:IntfaceDetail^LU
+	A:Prompt^Detail Intface^O
+	CS:CHECKERROR^LU
+		A:Text^Kontrola :P1 zlyhala - :P2 (chyba sp\00F4soben\00E1 riadkom: :P3)^O
+	CE:
+	CS:CLIENTVAL^LU
+		A:Text^Klientske hodnoty^O
+	CE:
+	CS:COLOUTDAT^LU
+		A:Text^Chyba pri form\00E1tovan\00ED :P1 pri d\00E1tume :P2^O
+	CE:
+	CS:COLOUTDAT2^LU
+		A:Text^Chyba pri form\00E1tovan\00ED d\00E1tumov\00E9ho st\013Apca :P1^O
+	CE:
+	CS:COLOUTNUM^LU
+		A:Text^Chyba pri form\00E1tovan\00ED :P1 pri numerickej hodnote :P2^O
+	CE:
+	CS:COLOUTNUM2^LU
+		A:Text^Chyba pri form\00E1tovan\00ED numerick\00E9ho st\013Apca :P1^O
+	CE:
+	CS:COLUMNOUT^LU
+		A:Text^Chyba pri form\00E1tovan\00ED :P1 pri hodnote :P2^O
+	CE:
+	CS:COLUMNOUT2^LU
+		A:Text^Chyba pri form\00E1tovan\00ED st\013Apca :P1^O
+	CE:
+	CS:COMMITCNT^LU
+		A:Text^:P1 Po\010Det potvrden\00FDch riadkov: :P2^O
+	CE:
+	CS:CREERRORATTR^LU
+		A:Text^Nepodarilo sa vytvori\0165 s\00FAbor z :P1.^O
+	CE:
+	CS:CREFORMAT^LU
+		A:Text^Nepodarilo sa vytvori\0165 s\00FAbor - :P1^O
+	CE:
+	CS:CREINTFACEOK^LU
+		A:Text^\00DAloha migr\00E1cie :P1 bola dokon\010Den\00E1^O
+	CE:
+	CS:DBVAL^LU
+		A:Text^Datab\00E1za \2013 hodnoty^O
+	CE:
+	CS:ERRDEFAULT^LU
+		A:Text^:P1 sa pou\017E\00EDva, iba ak je smer = :P2^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Predvolen\00E9 WHERE sa nepou\017E\00EDva pre smer = :P1^O
+	CE:
+	CS:FILENOTFOUND^LU
+		A:Text^Nepodarilo sa n\00E1js\0165 s\00FAbor :P1 na ceste :P2.^O
+	CE:
+	CS:FORMATERROR^LU
+		A:Text^Form\00E1tovanie bolo ne\00FAspe\0161n\00E9 - :P1 (chyba sp\00F4soben\00E1 riadkom: :P2)^O
+	CE:
+	CS:INSCHECK^LU
+		A:Text^:P1 nov\00FDch riadkov bolo skontrolovan\00FDch so stavom OK^O
+	CE:
+	CS:INSCHECKERR^LU
+		A:Text^:P1 nov\00FDch riadkov bolo skontrolovan\00FDch s chybou^O
+	CE:
+	CS:INSERRORNEW^LU
+		A:Text^Vlo\017Eenie do :P1 zlyhalo - :P2 (chyba sp\00F4soben\00E1 riadkom: :P3)^O
+	CE:
+	CS:INSINTERR^LU
+		A:Text^:P1 chybn\00FDch riadkov^O
+	CE:
+	CS:INSINTINS^LU
+		A:Text^:P1 vlo\017Een\00FDch nov\00FDch riadkov^O
+	CE:
+	CS:INSINTNOROWS^LU
+		A:Text^Neboli spracovan\00E9 \017Eiadne riadky^O
+	CE:
+	CS:INSINTOK^LU
+		A:Text^\00DAloha migr\00E1cie :P1 bola dokon\010Den\00E1^O
+	CE:
+	CS:INTFACE_DETAIL^LU
+		CS:SOURCE_NAME^LU
+		CE:
+		CS:SOURCE_OWNER^LU
+		CE:
+	CE:
+	CS:INTFACE_DETAIL_COL_LOV^LU
+	CE:
+	CS:LOADERR^LU
+		A:Text^Chyba pri na\010D\00EDtavan\00ED inform\00E1ci\00ED o \00FAlohe migr\00E1cie :P1^O
+	CE:
+	CS:NODET^LU
+		A:Text^Nena\0161li sa \017Eiadne detaily o :P1^O
+	CE:
+	CS:NOROWS^LU
+		A:Text^Neboli spracovan\00E9 \017Eiadne riadky^O
+	CE:
+	CS:NOVAL^LU
+		A:Text^\017Diadne DB/klientske hodnoty pre :P1^O
+	CE:
+	CS:ROWSFAILED^LU
+		A:Text^:P1 chybn\00FDch riadkov^O
+	CE:
+	CS:ROWSWRITTEN^LU
+		A:Text^:P1 zap\00EDsan\00FDch riadkov^O
+	CE:
+	CS:STRINGOUT^LU
+		A:Text^Chyba pri form\00E1tovan\00ED :P1 pri hodnote :P2^O
+	CE:
+	CS:STRINGOUT2^LU
+		A:Text^Chyba pri form\00E1tovan\00ED st\013Apca :P1^O
+	CE:
+	CS:STRINGOUTCONV^LU
+		A:Text^Chyba pri konvertovan\00ED hodnoty :P2 pre :P1^O
+	CE:
+	CS:STRINGOUTCONV2^LU
+		A:Text^Chyba pri form\00E1tovan\00ED st\013Apca :P1^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^Zadan\00FA d\013A\017Eku :P2 st\013Apca :P1 prekro\010Dila hodnota :P3. Pravidlo TRUNCVAL to m\00F4\017Ee vyrie\0161i\0165.^O
+	CE:
+	CS:TOOLONG2^LU
+		A:Text^Ur\010Den\00E1 d\013A\017Eka :P2 pre st\013Apec :P1 je prekro\010Den\00E1. M\00F4\017Ee to vyrie\0161i\0165 pravidlo TRUNCVAL.^O
+	CE:
+	CS:UNPACKPOS^LU
+		A:Text^Chyba pri rozba\013Eovan\00ED :P1 pri hodnote :P2^O
+	CE:
+	CS:UNPACKPOS2^LU
+		A:Text^Pri rozba\013Eovan\00ED st\013Apca :P1 sa vyskytla chyba^O
+	CE:
+	CS:UNPACKPOSCONV^LU
+		A:Text^Chyba pri konvertovan\00ED hodnoty :P2 pre :P1^O
+	CE:
+	CS:UNPACKPOSDAT^LU
+		A:Text^Chyba pri form\00E1tovan\00ED d\00E1tumu :P2 pre :P1^O
+	CE:
+	CS:UNPACKPOSDAT2^LU
+		A:Text^Chyba pri form\00E1tovan\00ED d\00E1tumov\00E9ho st\013Apca :P1^O
+	CE:
+	CS:UNPACKPOSDEF^LU
+		A:Text^Chyba pri form\00E1tovan\00ED predvolenej hodnoty :P2 pre :P1^O
+	CE:
+	CS:UNPACKPOSNUM^LU
+		A:Text^Chyba pri form\00E1tovan\00ED numerickej hodnoty : P1 pre :P2^O
+	CE:
+	CS:UNPACKPOSNUM2^LU
+		A:Text^Chyba pri form\00E1tovan\00ED numerick\00E9ho st\013Apca :P1^O
+	CE:
+	CS:UNPACKPOSSTR^LU
+		A:Text^Chyba pri form\00E1tovan\00ED hodnoty re\0165azca :P2 pre :P1^O
+	CE:
+	CS:UNPACKPOSSTR2^LU
+		A:Text^Chyba pri form\00E1tovan\00ED st\013Apca typu re\0165azec :P1^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Chyba pri rozba\013Eovan\00ED :P1 pri hodnote :P2^O
+	CE:
+	CS:UNPACKSEP2^LU
+		A:Text^Pri rozba\013Eovan\00ED st\013Apca :P1 sa vyskytla chyba^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Chyba pri konvertovan\00ED hodnoty :P2 pre :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Chyba pri form\00E1tovan\00ED d\00E1tumu :P2 pre :P1^O
+	CE:
+	CS:UNPACKSEPDAT2^LU
+		A:Text^Chyba pri form\00E1tovan\00ED d\00E1tumov\00E9ho st\013Apca :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Chyba pri form\00E1tovan\00ED predvolenej hodnoty :P2 pre :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Chyba pri form\00E1tovan\00ED numerickej hodnoty : P1 pre :P2^O
+	CE:
+	CS:UNPACKSEPNUM2^LU
+		A:Text^Chyba pri form\00E1tovan\00ED numerick\00E9ho st\013Apca :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Chyba pri \010D\00EDtan\00ED hodn\00F4t st\013Apcov oddelen\00FDch odde\013Eova\010Dom st\013Apcov^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Chyba pri form\00E1tovan\00ED hodnoty re\0165azca :P2 pre :P1^O
+	CE:
+	CS:UNPACKSEPSTR2^LU
+		A:Text^Chyba pri form\00E1tovan\00ED st\013Apca typu re\0165azec :p1^O
+	CE:
+	CS:UPDERRORCHK^LU
+		A:Text^Chyba :P1 pri vykon\00E1van\00ED :P2^O
+	CE:
+	CS:UPDERRORUPD^LU
+		A:Text^Aktualiz\00E1cia :P1 zlyhala - :P2 (chyba sp\00F4soben\00E1 riadkom: :P3)^O
+	CE:
+	CS:UPDINTFACEOK^LU
+		A:Text^\00DAloha migr\00E1cie :P1 bola dokon\010Den\00E1^O
+	CE:
+	CS:UPDINTFERR^LU
+		A:Text^:P1 chybn\00FDch riadkov^O
+	CE:
+	CS:UPDINTFINS^LU
+		A:Text^:P1 vlo\017Een\00FDch nov\00FDch riadkov^O
+	CE:
+	CS:UPDINTFUPD^LU
+		A:Text^:P1 zmenen\00FDch riadkov^O
+	CE:
+	CS:VALFOUND^LU
+		A:Text^Na\0161li sa DB/klientske hodnoty^O
+	CE:
+	CS:WRNOROWS^LU
+		A:Text^Neboli spracovan\00E9 \017Eiadne riadky^O
+	CE:
+CE:
+CS:IntfaceDirection^LU
+	A:Prompt^Smer Intface^O
+	CS:1^LU
+		A:Text^Vstupn\00FD s\00FAbor^O
+	CE:
+	CS:2^LU
+		A:Text^V\00FDstupn\00FD s\00FAbor^O
+	CE:
+	CS:3^LU
+		A:Text^\017Diadne^O
+	CE:
+	CS:4^LU
+		A:Text^Migr\00E1cia zdroja^O
+	CE:
+	CS:5^LU
+		A:Text^Replika\010Dn\00E1 \0161trukt\00FAra^O
+	CE:
+	CS:6^LU
+		A:Text^Migr\00E1cia Excel^O
+	CE:
+CE:
+CS:IntfaceDocumentation^LU
+	A:Prompt^Dokument\00E1cia Intface^O
+	CS:INFTXTDETAIL^LU
+		A:Text^Nepou\017Eit\00E9^O
+	CE:
+	CS:INFTXTHEADER^LU
+		A:Text^Nepou\017Eit\00E9^O
+	CE:
+	CS:INFTXTMETHLI^LU
+		A:Text^Nepou\017Eit\00E9^O
+	CE:
+	CS:INTFACE_DOCUMENTATION_REP^LU
+		A:Title^Dokument\00E1cia o migr\00E1cii^O
+		CS:ACTION^LU
+			A:Title^\010Cinnos\0165^O
+		CE:
+		CS:AMOUNT_FACTOR^LU
+			A:Title^Koeficient \010Diastky^O
+		CE:
+		CS:ATTR_SEQ^LU
+			A:Title^Poradie atrib\00FAtu^O
+		CE:
+		CS:BLOCK_TYPE^LU
+			A:Title^Typ bloku^O
+		CE:
+		CS:CHANGE_DEFAULTS^LU
+			A:Title^Zmeni\0165 predvolen\00E9 nastavenia^O
+		CE:
+		CS:COLS_USING_LIST^LU
+			A:Title^St\013Apce pou\017E\00EDvaj\00FAce konverzn\00FD zoznam:^O
+		CE:
+		CS:COLUMN_EMBRACE^LU
+			A:Title^Ohrani\010Denie st\013Apcov^O
+		CE:
+		CS:COLUMN_NAME^LU
+			A:Title^Cie\013Eov\00FD st\013Apec^O
+		CE:
+		CS:COLUMN_SEPARATOR^LU
+			A:Title^Odde\013Eova\010D st\013Apcov^O
+		CE:
+		CS:CONVERT_ATTR^LU
+			A:Title^Konvertova\0165 atrib\00FAt^O
+		CE:
+		CS:CONV_LIST_DESCR^LU
+			A:Title^Popis konv. zoz.^O
+		CE:
+		CS:CONV_LIST_ID^LU
+			A:Title^Konv. zoz.^O
+		CE:
+		CS:DATA_TYPE^LU
+			A:Title^Typ \00FAdajov^O
+		CE:
+		CS:DATE_FORMAT^LU
+			A:Title^Form\00E1t d\00E1tumu^O
+		CE:
+		CS:DECIMAL_LENGTH^LU
+			A:Title^Po\010Det desatinn\00FDch miest^O
+		CE:
+		CS:DECIMAL_POINT^LU
+			A:Title^Desatinn\00E1 bodka^O
+		CE:
+		CS:DEFAULT_VALUE^LU
+			A:Title^Predvolen\00E1 hodnota^O
+		CE:
+		CS:DEFAULT_WHERE^LU
+			A:Title^Predvolen\00E9 Where^O
+		CE:
+		CS:DESCR_COLUMN_NAME^LU
+			A:Title^Popis st\013Apca^O
+		CE:
+		CS:DIRECTION^LU
+			A:Title^Smer^O
+		CE:
+		CS:DIRECTION_DB^LU
+			A:Title^Smer DB^O
+		CE:
+		CS:EXECUTED_BY^LU
+			A:Title^Vykonal^O
+		CE:
+		CS:EXECUTE_SEQ^LU
+			A:Title^Poradie vykonania^O
+		CE:
+		CS:FILE_LOCATION^LU
+			A:Title^Umiestnenie s\00FAboru^O
+		CE:
+		CS:FILE_LOCATION_DB^LU
+			A:Title^DB umiestnenia s\00FAboru^O
+		CE:
+		CS:FLAGS^LU
+			A:Title^Pr\00EDznaky^O
+		CE:
+		CS:GROUP_DESCRIPTION^LU
+			A:Title^Popis skupiny^O
+		CE:
+		CS:GROUP_ID^LU
+			A:Query^ID skupiny:^O
+			A:Title^ID skupiny^O
+		CE:
+		CS:INFO_TEXT_DETAIL^LU
+			A:Title^Inform\00E1cie:^O
+		CE:
+		CS:INFO_TEXT_HEADER^LU
+			A:Title^Inform\00E1cie:^O
+		CE:
+		CS:INFO_TEXT_METH_LIST^LU
+			A:Title^Inform\00E1cie:^O
+		CE:
+		CS:INTFACE_DESCR^LU
+			A:Title^Popis migr\00E1cie^O
+		CE:
+		CS:INTFACE_FILE^LU
+			A:Title^S\00FAbor^O
+		CE:
+		CS:INTFACE_IN^LU
+			A:Query^ID \00FAlohy migr\00E1cie:^O
+		CE:
+		CS:INTFACE_NAME^LU
+			A:Title^ID \00FAlohy migr\00E1cie^O
+		CE:
+		CS:INTFACE_PATH^LU
+			A:Title^Cesta^O
+		CE:
+		CS:IntfaceDoc.rdl^LU
+			A:Title^Dokument migr\00E1cie^O
+		CE:
+		CS:LAST_EXECUTED^LU
+			A:Title^Naposledy vykonan\00E9^O
+		CE:
+		CS:LAST_INFO^LU
+			A:Title^Posledn\00E9 inform\00E1cie^O
+		CE:
+		CS:LENGTH^LU
+			A:Title^D\013A\017Eka^O
+		CE:
+		CS:MET_COLUMN_NAME^LU
+			A:Title^Pravidlo st\013Apca^O
+		CE:
+		CS:MET_COLUMN_VALUE^LU
+			A:Title^Hodnota pravidla^O
+		CE:
+		CS:MET_METHOD_NAME^LU
+			A:Title^Met\00F3da^O
+		CE:
+		CS:MET_VIEW_NAME^LU
+			A:Title^Zobrazenie^O
+		CE:
+		CS:MINUS_POS^LU
+			A:Title^Poz\00EDcia \2013^O
+		CE:
+		CS:NEW_VALUE^LU
+			A:Title^Nov\00E1 hodnota^O
+		CE:
+		CS:NOTE_TEXT_DETAIL^LU
+			A:Title^Pozn\00E1mky^O
+		CE:
+		CS:NOTE_TEXT_GROUP^LU
+			A:Title^Pozn\00E1mky^O
+		CE:
+		CS:NOTE_TEXT_HEADER^LU
+			A:Title^Pozn\00E1mky^O
+		CE:
+		CS:NOTE_TEXT_METH_LIST^LU
+			A:Title^Pozn\00E1mky^O
+		CE:
+		CS:OLD_VALUE^LU
+			A:Title^Star\00E1 hodnota^O
+		CE:
+		CS:ORDER_BY_CLAUSE^LU
+			A:Title^Zoradi\0165 pod\013Ea^O
+		CE:
+		CS:ORDER_BY_COL^LU
+			A:Title^Zoradi\0165 pod\013Ea^O
+		CE:
+		CS:PAD_CHAR_LEFT^LU
+			A:Title^\013Dav\00FD v\00FDpl\0148ov\00FD znak^O
+		CE:
+		CS:PAD_CHAR_RIGHT^LU
+			A:Title^Prav\00FD v\00FDpl\0148ov\00FD znak^O
+		CE:
+		CS:POS^LU
+			A:Title^Poz.^O
+		CE:
+		CS:PRINT_DETAIL^LU
+			A:Query^Tla\010Di\0165 priradenia st\013Apcov:^O
+		CE:
+		CS:PRINT_DOC_INFO^LU
+			A:Query^Tla\010Di\0165 inform\00E1cie o dokumente:^O
+		CE:
+		CS:PRINT_HEADER^LU
+			A:Query^Tla\010Di\0165 inform\00E1cie v hlavi\010Dke:^O
+		CE:
+		CS:PRINT_MAP_VALUE^LU
+			A:Query^Tla\010Di\0165 priraden\00E9 hodnoty:^O
+		CE:
+		CS:PRINT_METH_LIST^LU
+			A:Query^Tla\010Di\0165 zoznam met\00F3d:^O
+		CE:
+		CS:PROCEDURE_NAME^LU
+			A:Title^N\00E1zov proced\00FAry^O
+		CE:
+		CS:REFERENCES^LU
+			A:Title^Odkazy^O
+		CE:
+		CS:Report Constants^LU
+			A:txAction^Ur\010Duje, \010Di m\00E1 by\0165 met\00F3da spusten\00E1 pred alebo po spracovan\00ED vybrat\00FDch riadkov zo zdroja, alebo \010Di m\00E1 by\0165 vykonan\00E1 raz pre ka\017Ed\00FD riadok na\010D\00EDtan\00FD zo zdroja.^O
+			A:txAmountFactor^Toto pole obsahuje menovate\013Ea na prepo\010Det hodnoty zdrojov\00E9ho st\013Apca, ak je to potrebn\00E9 pred prevodom na datab\00E1zov\00FD st\013Apec IFS.^O
+			A:txChangeDefaults^Toto pole ur\010Duje, \010Di je alebo nie je povolen\00E9 meni\0165 implicitn\00FA hodnotu po\010Das spustenej \00FAlohy migr\00E1cie.^O
+			A:txColumnName^Datab\00E1zov\00E9 st\013Apce v IFS, kam m\00E1 by\0165 prenesen\00E1 zdrojov\00E1 hodnota.^O
+			A:txDataType^Typ \00FAdajov datab\00E1zov\00E9ho st\013Apca. Numerick\00E9, alfanumerick\00E9 alebo d\00E1tumov\00E9 hodnoty.^O
+			A:txDecimalLength^Po\010Det desatinn\00FDch miest, ktor\00FD m\00E1 by\0165 pou\017Eit\00FD pri \010D\00EDtan\00ED/zapisovan\00ED do s\00FAboru.^O
+			A:txDefaultValue^Toto pole sa pou\017E\00EDva na zadanie hodnoty, ak v zdrojovom st\013Apci nie je \017Eiadna hodnota. Ak nie je \0161pecifikovan\00FD \017Eiadny zdrojov\00FD st\013Apec, pre v\0161etky riadky sa pou\017Eije \0161tandardn\00E1 hodnota.^O
+			A:txDescrColumnName^Popis datab\00E1zov\00E9ho st\013Apca^O
+			A:txDetailTitle^\0160pecifik\00E1cia priradenia st\013Apca^O
+			A:txExecuteSeq^Zadajte poradie, v akom maj\00FA by\0165 spusten\00E9 met\00F3dy zo zoznamu met\00F3d.^O
+			A:txFileInfo^Inform\00E1cie o s\00FAbore^O
+			A:txFlags^Pr\00EDznaky atrib\00FAtu IFS. Pr\00EDznaky opisuj\00FA rozli\010Dn\00E9 atrib\00FAty pripojen\00E9 k datab\00E1zov\00E9mu st\013Apcu IFS. M\00F4\017Eu zah\0155\0148a\0165 jednu alebo viac nasleduj\00FAcich hodn\00F4t:^O
+			A:txFlagsI^I = vlo\017Eenie povolen\00E9^O
+			A:txFlagsK^K = k\013E\00FA\010D (cudz\00ED k\013E\00FA\010D)^O
+			A:txFlagsM^M = povinn\00E9^O
+			A:txFlagsP^P = nadraden\00FD k\013E\00FA\010D^O
+			A:txFlagsU^U = aktualiz\00E1cia povolen\00E1^O
+			A:txHeaderColMapping^Vysvetlenie st\013Apcov pou\017Eit\00FDch v priraden\00ED st\013Apcov^O
+			A:txHeaderMethodList^Vysvetlenie st\013Apcov pou\017Eit\00FDch v zozname met\00F3d^O
+			A:txHeaderTitle^\0160pecifik\00E1cia migra\010Dn\00FDch rut\00EDn pre^O
+			A:txLastExecutionInfo^Inform\00E1cie o poslednom vykonan\00ED^O
+			A:txLength^Toto pole ur\010Duje maxim\00E1lnu povolen\00FA d\013A\017Eku datab\00E1zov\00E9ho st\013Apca IFS. Toto pole sa pou\017E\00EDva v kombin\00E1cii s po\013Eom Poz\00EDcia na \010D\00EDtanie/z\00E1pis s\00FAborov s pevnou \0161\00EDrkou st\013Apca.^O
+			A:txMapTitle^Priradenie \0161pecifick\00FDch hodn\00F4t st\013Apca^O
+			A:txMetColumnName^Ur\010Duje, \017Ee met\00F3da m\00E1 by\0165 spusten\00E1 iba na z\00E1klade hodnoty tohto zdrojov\00E9ho st\013Apca.^O
+			A:txMetColumnValue^Met\00F3da bude spusten\00E1 len v pr\00EDpade, \017Ee sa hodnota zdrojov\00E9ho st\013Apca rovn\00E1 tejto hodnote. T. j. ak zad\00E1te '%', met\00F3da bude vykonan\00E1 pre v\0161etky riadky, ktor\00E9 maj\00FA hodnotu v zdrojovom st\013Apci.^O
+			A:txMetMethodName^Zadajte, ktor\00E1 met\00F3da IFS alebo vlastn\00E1 met\00F3da m\00E1 by\0165 spusten\00E1.^O
+			A:txMethodListTitle^Pou\017Eit\00E9/vytvoren\00E9 met\00F3dy/API^O
+			A:txPadCharLeft^Toto pole sa pou\017E\00EDva na zadanie znaku, ktor\00FD m\00E1 by\0165 odrezan\00FD alebo pridan\00FD na \013Eav\00FA stranu st\013Apca pri \010D\00EDtan\00ED zo/z\00E1pise do s\00FAboru. (ltrim/lpad)^O
+			A:txPadCharRight^Toto pole sa pou\017E\00EDva na zadanie znaku, ktor\00FD m\00E1 by\0165 odrezan\00FD alebo pridan\00FD na prav\00FA stranu st\013Apca pri \010D\00EDtan\00ED zo/z\00E1pise do s\00FAboru. (ltrim/lpad)^O
+			A:txPos^Toto pole sa pou\017E\00EDva na ur\010Denie umiestnenia st\013Apcov v zadanom s\00FAbore. Ak sa pou\017E\00EDva napr. s\00FAbor CSV, toto pole bude 1,2,3 at\010F.^O
+			A:txSourceColumn^Zdrojov\00FD st\013Apec zo s\00FAboru, tabu\013Eky alebo zobrazenia, ktor\00FD m\00E1 by\0165 vlo\017Een\00FD do datab\00E1zov\00E9ho st\013Apca IFS^O
+			A:txTitleDocPage^Defin\00EDcie/Popisy st\013Apcov^O
+			A:txViewInfo^Inform\00E1cie o hlavom zdroji/cieli^O
+		CE:
+		CS:SOURCE_COLUMN^LU
+			A:Title^Zdrojov\00FD st\013Apec^O
+		CE:
+		CS:SOURCE_NAME^LU
+			A:Title^N\00E1zov zdroja^O
+		CE:
+		CS:SOURCE_OWNER^LU
+			A:Title^Vlastn\00EDk zdroja^O
+		CE:
+		CS:THOUSAND_SEPARATOR^LU
+			A:Title^Odde\013Eova\010D tis\00EDcov^O
+		CE:
+		CS:VIEW_NAME^LU
+			A:Title^N\00E1zov cie\013Ea^O
+		CE:
+		CS:WHERE_CLAUSE^LU
+			A:Title^Kde^O
+		CE:
+	CE:
+	CS:INTFACE_INFO_SERVICES_RPV^LU
+	CE:
+CE:
+CS:IntfaceEvents^LU
+	A:Prompt^Udalosti Intface^O
+CE:
+CS:IntfaceExcelConnect^LU
+	A:Prompt^Pripojenie Intface do progr. Excel^O
+CE:
+CS:IntfaceExecIntervalType^LU
+	A:Prompt^Typ intervalu vykon. Intface^O
+	CS:1440^LU
+		A:Text^Min\00FAty^O
+	CE:
+	CS:24^LU
+		A:Text^Hodiny^O
+	CE:
+	CS:86400^LU
+		A:Text^Sekundy^O
+	CE:
+CE:
+CS:IntfaceExecution^LU
+	A:Prompt^Spustenie Intface^O
+	CS:INTFACE_EXECUTION^LU
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:IC_TABLE_NAME^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionDetail^LU
+	A:Prompt^Detail spustenia Intface^O
+	CS:INTFACE_EXECUTION_DETAIL^LU
+		CS:ATTRIBUTE_STRING^LU
+		CE:
+		CS:DATE_EXECUTED^LU
+		CE:
+		CS:ERROR_MESSAGE^LU
+		CE:
+		CS:EXECUTED_BY^LU
+		CE:
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:FILE_STRING^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+		CS:LINE_NO^LU
+		CE:
+		CS:STATUS^LU
+		CE:
+		CS:STATUS_DB^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionUtil^LU
+	CS:BLANKCOLUMNS^LU
+		A:Text^Bu\010F zdrojov\00FD k\00F3d, alebo predvolen\00E1 hodnota musia ma\0165 hodnotu^O
+	CE:
+	CS:CHKCOUNT^LU
+		A:Text^Skontrolovan\00E9 riadky: :P1^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Riadky potvrden\00E9 pod\013Ea pravidla COMMITSEQ: :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Nemo\017Eno spusti\0165 t\00FAto \00FAlohu. Pripojen\00E1 \00FAloha :P1 obsahuje chyby.^O
+	CE:
+	CS:CREIND^LU
+		A:Text^Index :P1 st\013Apca :P2 bol vytvoren\00FD^O
+	CE:
+	CS:DUPEXIST^LU
+		A:Text^Existuj\00FA duplikovan\00E9 zdrojov\00E9 st\013Apce. Pred vykonan\00EDm duplik\00E1ty vyrie\0161te.^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^Met\00F3da \010D. :P1 - hodnota pre ID \00FAlohy sa nem\00F4\017Ee rovna\0165 hlavnej \00FAlohe^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Vykonan\00E9 bez chyby^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^VYKON\00C1VA SA MET\00D3DA \010C. :P1 :^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^:P1 nedokon\010Den\00E9 transakcie z d\00F4vodu pr\00EDkazu COMMIT alebo ROLLBACK vo volanej met\00F3de^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Ne\00FApln\00FD v\00FDber nebol vykonan\00FD - :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Skontrolujte v\00FDsledky. Transakcie m\00F4\017Eu by\0165 len \010Diasto\010Dne potvrden\00E9.^O
+	CE:
+	CS:INVALIDLENGTH^LU
+		A:Text^Zdrojov\00FD st\013Apec by nemal prekro\010Di\0165 tridsa\0165 znakov^O
+	CE:
+	CS:JOBRUNERROR^LU
+		A:Text^Chyba pri vykon\00E1van\00ED \00FAlohy :P1^O
+	CE:
+	CS:LNGTHINVAL^LU
+		A:Text^Existuj\00FA zdrojov\00E9 st\013Apce, ktor\00E9 prekra\010Duj\00FA 30 znakov. Pred vykon\00E1van\00EDm vyrie\0161te probl\00E9m s d\013A\017Ekou zdrojov\00FDch st\013Apcov^O
+	CE:
+	CS:LOADERR^LU
+		A:Text^Chyba pri na\010D\00EDtavan\00ED inform\00E1ci\00ED o \00FAlohe migr\00E1cie :P1^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 s mo\017Enos\0165ou CHECK (Kontrola)^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, chyby : :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Nov\00E9 riadky: :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Spracovan\00E9 riadky: :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Aktualizovan\00E9 riadky: :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^Priemer :P1 riadky/riadkov za min\00FAtu^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^Potvrden\00E9 riadky: :P1^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^Vybran\00E9 riadky: :P1^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^Chybn\00E9 riadky: :P1^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Trvanie: :P1 hod. a :P2 min.^O
+	CE:
+	CS:NODET^LU
+		A:Text^Nena\0161li sa \017Eiadne detaily o :P1^O
+	CE:
+	CS:NONAME^LU
+		A:Text^Ch\00FDba hodnota pre ID \00FAlohy na atr. re\0165azci pre met\00F3du \010D. :P1^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^Nie je vybrat\00E9 OBJID, ale pravidlo ADDOBJID je akt\00EDvne^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Re\0161tart nie je mo\017En\00FD - :P1 neobsahuje \017Eiadne rowid (ID riadka)^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^Nie je \0161pecifikovan\00FD \017Eiadny v\00FDber^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1 obsahuje chybn\00E9 riadky :P2 a nem\00F4\017Ee sa spusti\0165^O
+	CE:
+	CS:NULLCOLS^LU
+		A:Text^Existuj\00FA z\00E1znamy s ch\00FDbaj\00FAcim zdrojov\00FDm st\013Apcom aj predvolenou hodnotou. Vyrie\0161te tento probl\00E9m pred vykonan\00EDm.^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Chyba vo v\00FDbere :P1 - :P2^O
+	CE:
+	CS:SOURCEDUPLIC^LU
+		A:Text^Zdrojov\00FD st\013Apec by mal by\0165 jedine\010Dn\00FD.^O
+	CE:
+	CS:STATINSERT^LU
+		A:Text^Vlo\017Een\00E9^O
+	CE:
+	CS:STATNOOP^LU
+		A:Text^\017Diadna oper\00E1cia^O
+	CE:
+	CS:STATNOTEXT^LU
+		A:Text^Objekt neexistuje^O
+	CE:
+	CS:STATOK^LU
+		A:Text^Overenie OK^O
+	CE:
+	CS:STATPROC^LU
+		A:Text^Spracovan\00E9^O
+	CE:
+	CS:STATUPDATE^LU
+		A:Text^Aktualizovan\00E9^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^\010Cas spustenia - :P1 :P2^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^Zadan\00FA d\013A\017Eku :P2 pre st\013Apec :P1 prekro\010Dila hodnota :P3.^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Chyba pri rozba\013Eovan\00ED :P1 pri hodnote :P2^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Chyba pri konvertovan\00ED hodnoty :P2 pre :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Chyba pri form\00E1tovan\00ED d\00E1tumu :P2 pre :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Chyba pri form\00E1tovan\00ED predvolenej hodnoty :P2 pre :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Chyba pri form\00E1tovan\00ED numerickej hodnoty : P1 pre :P2^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Chyba pri \010D\00EDtan\00ED hodn\00F4t st\013Apcov oddelen\00FDch odde\013Eova\010Dom st\013Apcov^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Chyba pri form\00E1tovan\00ED hodnoty re\0165azca :P2 pre :P1^O
+	CE:
+CE:
+CS:IntfaceFileLocation^LU
+	A:Prompt^Umiestnenie s\00FAboru Intface^O
+	CS:1^LU
+		A:Text^Na serveri^O
+	CE:
+	CS:2^LU
+		A:Text^Na klientovi^O
+	CE:
+	CS:3^LU
+		A:Text^\017Diadny s\00FAbor^O
+	CE:
+CE:
+CS:IntfaceFormatChar^LU
+	A:Prompt^Form\00E1t. znaky Intface^O
+	CS:124^LU
+		A:Text^<spojovac\00ED znak>^O
+	CE:
+	CS:13^LU
+		A:Text^<n\00E1vrat na za\010Diatok riadka>^O
+	CE:
+	CS:164^LU
+		A:Text^<znak meny>^O
+	CE:
+	CS:32^LU
+		A:Text^<medzera>^O
+	CE:
+	CS:34^LU
+		A:Text^<dvojit\00E9 \00FAvodzovky>^O
+	CE:
+	CS:35^LU
+		A:Text^<dvojit\00FD kr\00ED\017Eik>^O
+	CE:
+	CS:39^LU
+		A:Text^<jednoduch\00E9 \00FAvodzovky>^O
+	CE:
+	CS:42^LU
+		A:Text^<hviezdi\010Dka>^O
+	CE:
+	CS:44^LU
+		A:Text^<\010Diarka>^O
+	CE:
+	CS:46^LU
+		A:Text^<bodka>^O
+	CE:
+	CS:48^LU
+		A:Text^<nula>^O
+	CE:
+	CS:59^LU
+		A:Text^<bodko\010Diarka>^O
+	CE:
+	CS:9^LU
+		A:Text^<tabul\00E1tor>^O
+	CE:
+CE:
+CS:IntfaceGroup^LU
+	A:Prompt^Skupina Intface^O
+	CS:INTFACE_GROUP^LU
+	CE:
+CE:
+CS:IntfaceHeader^LU
+	A:Prompt^Hlavi\010Dka Intface^O
+	CS:BATCHJOBCOMP^LU
+		A:Text^\00DAloha migr\00E1cie :P1 bola dokon\010Den\00E1^O
+	CE:
+	CS:BATCHJOBERROR^LU
+		A:Text^\00DAloha migr\00E1cie :P1 skon\010Dila chybou. Viac inform\00E1ci\00ED n\00E1jdete v okne Preh\013Ead - hist\00F3ria d\00E1vok.^O
+	CE:
+	CS:BCKFILE^LU
+		A:Text^N\00E1zov z\00E1lo\017En\00E9ho s\00FAboru: :P1^O
+	CE:
+	CS:BCKPATH^LU
+		A:Text^Cesta k z\00E1lo\017En\00E9mu s\00FAboru: :P1^O
+	CE:
+	CS:COPYERR^LU
+		A:Text^Chyba pri vytv\00E1ran\00ED :P1 - :P2^O
+	CE:
+	CS:COPYOK^LU
+		A:Text^\00DAloha migr\00E1cie :P1 bola vytvoren\00E1^O
+	CE:
+	CS:DELFILE^LU
+		A:Text^S\00FAbor :P1 bol vymazan\00FD^O
+	CE:
+	CS:DEPREC^LU
+		A:Text^Funkcia exportu r\00FDchlej zostavy o migr\00E1cii \00FAdajov je zamietnut\00E1. Namiesto nej pou\017Eite zabudovan\00FA funkciu importu/exportu v r\00FDchlych zostav\00E1ch.^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Predvolen\00E9 WHERE sa nepou\017E\00EDva pre smer = :P1^O
+	CE:
+	CS:EXECNO^LU
+		A:Text^Vykonanie \010D. :P1^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Chyba pri exporte :P1 - :P2^O
+	CE:
+	CS:EXPTXT1^LU
+		A:Text^Exportovan\00E9 \00FAlohy migr\00E1cie:^O
+	CE:
+	CS:EXPTXT2^LU
+		A:Text^Exportovan\00E9 migra\010Dn\00E9 skupiny:^O
+	CE:
+	CS:EXPTXT3^LU
+		A:Text^Exportovan\00E9 konverzn\00E9 zoznamy:^O
+	CE:
+	CS:EXPTXT4^LU
+		A:Text^Exportovan\00E9 sp\00FA\0161\0165a\010De:^O
+	CE:
+	CS:EXPTXT5^LU
+		A:Text^Exportovan\00E9 bal\00EDky:^O
+	CE:
+	CS:EXPTXT6^LU
+		A:Text^Vytvoren\00E9 s\00FAbory:^O
+	CE:
+	CS:EXPTXT7^LU
+		A:Text^NEXPORTOVAN\00C9 konverzn\00E9 zoznamy:^O
+	CE:
+	CS:IMPERR^LU
+		A:Text^Chyba pri importe :P1 - :P2^O
+	CE:
+	CS:IMPTXT1^LU
+		A:Text^Importovan\00E9 nov\00E9 \00FAlohy migr\00E1cie:^O
+	CE:
+	CS:IMPTXT10^LU
+		A:Text^\00DAlohy replik\00E1cie, ktor\00E9 je nutn\00E9 re\0161tartova\0165:^O
+	CE:
+	CS:IMPTXT2^LU
+		A:Text^Importovan\00E9 nov\00E9 skupiny:^O
+	CE:
+	CS:IMPTXT3^LU
+		A:Text^Importovan\00E9 konverzn\00E9 zoznamy:^O
+	CE:
+	CS:IMPTXT4^LU
+		A:Text^NEVLO\017DEN\00C9 \00FAlohy migr\00E1cie:^O
+	CE:
+	CS:IMPTXT5^LU
+		A:Text^NEVLO\017DEN\00C9 skupiny:^O
+	CE:
+	CS:IMPTXT6^LU
+		A:Text^NEVLO\017DEN\00C9 konverzn\00E9 zoznamy:^O
+	CE:
+	CS:IMPTXT7^LU
+		A:Text^Importovan\00E9 a nahraden\00E9 \00FAlohy migr\00E1cie:^O
+	CE:
+	CS:IMPTXT8^LU
+		A:Text^Importovan\00E9 a nahraden\00E9 skupiny:^O
+	CE:
+	CS:IMPTXT9^LU
+		A:Text^Importovan\00E9 a nahraden\00E9 konverzn\00E9 zoznamy:^O
+	CE:
+	CS:INTFACE_ALLOWED_JOBS^LU
+		CS:DESCRIPTION^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+	CS:INTFACE_CHARACTERSET_LOV^LU
+	CE:
+	CS:INTFACE_HEADER^LU
+	CE:
+	CS:INTFACE_REPL_EXPORT_INFO^LU
+	CE:
+	CS:INTFACE_TABLE_NAME_LOV^LU
+	CE:
+	CS:JOBBATERR^LU
+		A:Text^Ne\00FAspe\0161n\00E9 odlo\017Een\00E9 volanie pre :P1 - :P2^O
+	CE:
+	CS:LISTERR^LU
+		A:Text^Zoznam hodn\00F4t by nemal za\010D\00EDna\0165 bodko\010Diarkou^O
+	CE:
+	CS:LONGNAME^LU
+		A:Text^ID \00FAlohy :P1 je pr\00EDli\0161 dlh\00E9. Nesmie prekro\010Di\0165 24 znakov.^O
+	CE:
+	CS:MOVPATH^LU
+		A:Text^Cesta prenos. s\00FAboru : :P1^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Trvanie: :P1 hod. a :P2 min.^O
+	CE:
+	CS:NAMEERR^LU
+		A:Text^Ke\010F typ = :P1, n\00E1zov nem\00F4\017Ee by\0165 dlh\0161\00ED ako :P2 znakov (:P3)^O
+	CE:
+	CS:NOCOLUMN^LU
+		A:Text^\00DAloha neobsahuje \017Eiadne st\013Apce zo s\00FAboru^O
+	CE:
+	CS:NOFILE_ERROR^LU
+		A:Text^Umiestnenie s\00FAboru ":P1" nemo\017Eno pou\017Ei\0165 pre \00FAlohy migr\00E1cie so smerom nastaven\00FDm na hodnotu ":P2" alebo ":P3".^O
+	CE:
+	CS:NOMAN^LU
+		A:Text^Pri sp\00FA\0161\0165an\00ED ru\010Dn\00E9ho re\017Eimu mus\00EDte zada\0165 klauzulu WHERE pre hlavn\00E9 zobrazenie v \0161trukt\00FAre^O
+	CE:
+	CS:NOPRIV^LU
+		A:Text^Vy (:P1) nem\00E1te opr\00E1vnenia na vytvorenie nov\00FDch \00FAloh migr\00E1cie \00FAdajov^O
+	CE:
+	CS:NOREPL^LU
+		A:Text^Nemo\017Eno spusti\0165 :P1 v d\00E1vke. Sp\00FA\0161\0165a\010De nie s\00FA aktivovan\00E9^O
+	CE:
+	CS:NOTRIG^LU
+		A:Text^Sp\00FA\0161\0165a\010De s\00FA vygenerovan\00E9. Nem\00F4\017Eete zmeni\0165 re\017Eim na :P1^O
+	CE:
+	CS:NOWHERE^LU
+		A:Text^Mus\00EDte vlo\017Ei\0165 klauzulu WHERE pre \00FAlohy replik\00E1cie s re\017Eimom=Ru\010Dn\00FD^O
+	CE:
+	CS:QUICKERR^LU
+		A:Text^N\00E1zov proced\00FAry :P1 mo\017Eno pou\017Ei\0165 iba spolo\010Dne s n\00E1zvom zobrazenia QUICK_REPORT^O
+	CE:
+	CS:RANFILE^LU
+		A:Text^Premenova\0165 n\00E1zov s\00FAboru: :P1^O
+	CE:
+	CS:RENPATH^LU
+		A:Text^Premenova\0165 cestu s\00FAboru: :P1^O
+	CE:
+	CS:SELECTOK^LU
+		A:Text^Pr\00EDkaz SELECT je OK, je analyzovan\00FD a vykonan\00FD pre 1 riadok^O
+	CE:
+	CS:SELLENGTH^LU
+		A:Text^D\013A\017Eka pr\00EDkazu: :P1 znakov^O
+	CE:
+	CS:SERVOK^LU
+		A:Text^Datab\00E1zov\00E1 \00FAloha :P1 je napl\00E1novan\00E1 pre \00FAlohu migr\00E1cie :P2.^O
+	CE:
+	CS:STARTBATERR^LU
+		A:Text^Nemo\017Eno spusti\0165 :P1 - :P2^O
+	CE:
+	CS:STARTJOBERR^LU
+		A:Text^Nemo\017Eno spusti\0165 :P1 - :P2^O
+	CE:
+	CS:STARTOK^LU
+		A:Text^\00DAloha migr\00E1cie :P1 bola spusten\00E1 na pozad\00ED^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^\010Cas ukon\010Denia - :P1 :P2^O
+	CE:
+	CS:TRIGDEL^LU
+		A:Text^Pred vymazan\00EDm tejto \00FAlohy mus\00EDte odstr\00E1ni\0165 sp\00FA\0161\0165a\010De^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^Zdrojov\00E1 hodnota :P1 nem\00F4\017Ee by\0165 s\00FA\010Das\0165ou zoznamu hodn\00F4t^O
+	CE:
+	CS:WHENERR^LU
+		A:Text^Pr\00EDkaz When pre sp\00FA\0161\0165a\010D by mal by\0165 premiestnen\00FD zo st\013Apca :P1 do :P2^O
+	CE:
+	CS:WILDERR^LU
+		A:Text^Z\00E1stupn\00E9 znaky v n\00E1zve s\00FAboru mo\017Eno pou\017Ei\0165 iba pri exporte \00FAdajov do serverov\00FDch s\00FAborov^O
+	CE:
+	CS:WRONGCOL^LU
+		A:Text^St\013Apec :P1 nie je v \00FAlohe :P2^O
+	CE:
+	CS:WRONGDIR^LU
+		A:Text^Pravidlo SYNCDETAILS mo\017Eno pou\017Ei\0165 iba pri \010D\00EDtan\00ED s\00FAborov^O
+	CE:
+CE:
+CS:IntfaceJobDetail^LU
+	A:Prompt^Detail \00FAlohy Intface^O
+	CS:CLIENTCLEAN^LU
+		A:Text^Pravidlo CLEANUP s hodnotou BEFORE nie je povolen\00E9 pre klientsky s\00FAbor^O
+	CE:
+	CS:CLOSEFILERR^LU
+		A:Text^Chyba pri zatv\00E1ran\00ED s\00FAboru :P1^O
+	CE:
+	CS:CLOSEJOBERR^LU
+		A:Text^Chyba pri zatv\00E1ran\00ED \00FAlohy :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Pripojen\00E1 \00FAloha :P1 m\00E1 chybov\00E9 riadky^O
+	CE:
+	CS:CONNJOBERR^LU
+		A:Text^Nemo\017Eno spusti\0165 \00FAlohu :P1^O
+	CE:
+	CS:EMPTYFILE^LU
+		A:Text^S\00FAbor :P1 na :P2 je pr\00E1zdny, \00FAloha nebola spusten\00E1^O
+	CE:
+	CS:HISTERR^LU
+		A:Text^Chyba pri vytv\00E1ran\00ED hist\00F3rie :P1^O
+	CE:
+	CS:INITJOBERR^LU
+		A:Text^Nepodarilo sa inicializova\0165 \00FAlohu :P1^O
+	CE:
+	CS:INTFACE_JOB_DETAIL^LU
+	CE:
+	CS:LOADFILERR^LU
+		A:Text^Chyba pri na\010D\00EDtavan\00ED s\00FAboru :P1 na :P2^O
+	CE:
+	CS:NOFILE^LU
+		A:Text^S\00FAbor :P1 neexistuje na :P2, \00FAloha nebola spusten\00E1^O
+	CE:
+	CS:PREPERR^LU
+		A:Text^Chyba pri pr\00EDprave detailov :P1^O
+	CE:
+	CS:SERVFILEERR^LU
+		A:Text^Chyba pri spracovan\00ED s\00FAboru - :P1^O
+	CE:
+	CS:UNPACKEND^LU
+		A:Text^Pre \00FAlohu :P1 je rozbalenie dokon\010Den\00E9^O
+	CE:
+	CS:UNPACKERR^LU
+		A:Text^Po\010Das rozba\013Eovania sa vyskytla chyba ==> :P1^O
+	CE:
+CE:
+CS:IntfaceJobHistDetail^LU
+	A:Prompt^Detail hist. \00FAlohy Intface^O
+	CS:INTFACE_JOB_HIST_DETAIL^LU
+	CE:
+CE:
+CS:IntfaceJobHistHead^LU
+	A:Prompt^Nadpis hist. \00FAloh Intface^O
+	CS:INTFACE_JOB_HIST_HEAD^LU
+	CE:
+CE:
+CS:IntfaceJobStatus^LU
+	A:Prompt^Stav \00FAlohy Intface^O
+	CS:1^LU
+		A:Text^\017Diadny s\00FAbor^O
+	CE:
+	CS:2^LU
+		A:Text^Na\010D\00EDtan\00E9^O
+	CE:
+	CS:3^LU
+		A:Text^Chyba riadka^O
+	CE:
+	CS:4^LU
+		A:Text^Riadok OK^O
+	CE:
+	CS:5^LU
+		A:Text^\00DAloha OK^O
+	CE:
+	CS:6^LU
+		A:Text^Vykon\00E1va sa^O
+	CE:
+	CS:7^LU
+		A:Text^\00DAloha prebehla ne\00FAspe\0161ne^O
+	CE:
+CE:
+CS:IntfaceMethodAction^LU
+	A:Prompt^Akcia met\00F3dy Intface^O
+	CS:1^LU
+		A:Text^Pred cyklom^O
+	CE:
+	CS:2^LU
+		A:Text^V cykle^O
+	CE:
+	CS:3^LU
+		A:Text^Po cykle^O
+	CE:
+	CS:4^LU
+		A:Text^Bez vykonania^O
+	CE:
+CE:
+CS:IntfaceMethodList^LU
+	A:Prompt^Zoznam met\00F3d Intface^O
+	CS:CHKCOUNT^LU
+		A:Text^:P1 riadkov skontrolovan\00FDch^O
+	CE:
+	CS:CLREMAP^LU
+		A:Text^presun do DB st\013Apca^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Riadky potvrden\00E9 pod\013Ea pravidla COMMITSEQ: :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Nemo\017Eno spusti\0165 t\00FAto \00FAlohu. Pripojen\00E1 \00FAloha :P1 m\00E1 chyby.^O
+	CE:
+	CS:CREATEERROR^LU
+		A:Text^Chyba pri vytv\00E1ran\00ED tabu\013Eky :P1 - :P2^O
+	CE:
+	CS:CREATEVIEWERR^LU
+		A:Text^Chyba pri vytv\00E1ran\00ED zobrazenia :P1 - :P2^O
+	CE:
+	CS:CREIND^LU
+		A:Text^Index :P1 st\013Apca :P2 bol vytvoren\00FD^O
+	CE:
+	CS:CRETAB^LU
+		A:Text^Vytvoren\00E1 tabu\013Eka :P1 (^O
+	CE:
+	CS:DATEVAL^LU
+		A:Text^Predvolen\00E1 hodnota sysdate z PREPARE^O
+	CE:
+	CS:DBREMAP^LU
+		A:Text^Op\00E4tovne priraden\00E9 z klientskej hodnoty^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^Met\00F3da \010D\00EDslo :P1 - hodnota pre ID \00FAlohy sa nem\00F4\017Ee rovna\0165 hlavnej \00FAlohe^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Vykonan\00E9 bez chyby^O
+	CE:
+	CS:GRANTERROR^LU
+		A:Text^Chyba pri pridelen\00ED zobrazenia :P1 pou\017E\00EDvate\013Eovi syst\00E9mu IFS (IFSSYS) - :P2^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^VYKON\00C1VA SA MET\00D3DA \010C. :P1 :^O
+	CE:
+	CS:ILLARGTYPE^LU
+		A:Text^Argument :P1 m\00E1 nepr\00EDpustn\00FD typ. Povolen\00E9 s\00FA iba typy \00FAdajov DATE, VARCHAR2, NUMBER^O
+	CE:
+	CS:ILLMETH^LU
+		A:Text^Met\00F3da :P1 je funkcia. Povolen\00E9 s\00FA iba proced\00FAry^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^:P1 nedokon\010Den\00E9 transakcie z d\00F4vodu pr\00EDkazu COMMIT alebo ROLLBACK vo volanej met\00F3de^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Ne\00FApln\00FD v\00FDber nebol vykonan\00FD - :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Skontrolujte v\00FDsledky. Transakcie m\00F4\017Eu by\0165 len \010Diasto\010Dne potvrden\00E9.^O
+	CE:
+	CS:INDEXERROR^LU
+		A:Text^Chyba pri vytv\00E1ran\00ED indexu :P1 - :P2^O
+	CE:
+	CS:INSTAB^LU
+		A:Text^Vlo\017Eenie do tabu\013Eky :P1 s :P2 riadkami^O
+	CE:
+	CS:INTFACE_EXCEL_INPUT_DEFAULT^LU
+	CE:
+	CS:INTFACE_EXCEL_INPUT_FORMAT^LU
+	CE:
+	CS:INTFACE_METHOD_LIST^LU
+	CE:
+	CS:KEEPALL^LU
+		A:Text^Pravidlo KEEPALL nemo\017Eno pou\017Ei\0165, ak je k :P1 (:P2) pripojen\00E1 \010Fal\0161ia \00FAloha^O
+	CE:
+	CS:KEEPERR^LU
+		A:Text^Pravidlo KEEPALL mo\017Eno pou\017Ei\0165 iba ak je k :P1 pripojen\00E1 \010Fal\0161ia \00FAloha^O
+	CE:
+	CS:MAKEOTHER^LU
+		A:Text^Chyba pri vytv\00E1ran\00ED atrib\00FAtu a odkazov - :P1^O
+	CE:
+	CS:MANDDEF^LU
+		A:Text^<CH\00DDBAJ\00DACA POVINN\00C1 PREDVOLEN\00C1 HODNOTA>^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 s mo\017Enos\0165ou CHECK (Kontrola)^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, chyby : :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Nov\00E9 riadky: :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Spracovan\00E9 riadky: :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Aktualizovan\00E9 riadky: :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^Priemer :P1 riadky/riadkov za min\00FAtu^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 potvrden\00FDch riadkov^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^:P1 vybrat\00FDch riadkov^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 chybn\00FDch riadkov^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Trvanie: :P1 hod. a :P2 min.^O
+	CE:
+	CS:NONAME^LU
+		A:Text^V re\0165azci atrib\00FAtov pre met\00F3du \010D\00EDslo :P1 ch\00FDba hodnota pre ID \00FAlohy^O
+	CE:
+	CS:NONBASEVIEW^LU
+		A:Text^Identifikovanie \0161tandardn\00FDch met\00F3d pre zobrazenie ":P1" zlyhalo po\010Das pokusu o vygenerovanie zoznamu met\00F3d. [N\00E1zov zobrazenia] mus\00ED by\0165 z\00E1kladn\00FD poh\013Ead logickej jednotky IFS.^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^Nie je vybrat\00E9 OBJID, ale pravidlo ADDOBJID je akt\00EDvne^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Re\0161tart nie je mo\017En\00FD - :P1 neobsahuje \017Eiadne rowid (ID riadka)^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^Nie je \0161pecifikovan\00FD \017Eiadny v\00FDber^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1 m\00E1 :P2 chybn\00FDch riadkov a nem\00F4\017Ee sa spusti\0165^O
+	CE:
+	CS:NOTEDEF^LU
+		A:Text^Rozhodnite o pou\017Eit\00ED predvolenej hodnoty. Volite\013En\00E9 hodnoty sa m\00F4\017Eu odstr\00E1ni\0165^O
+	CE:
+	CS:NOTINLOOP^LU
+		A:Text^Proced\00FAra :P1 mus\00ED by\0165 spusten\00E1 v cykle^O
+	CE:
+	CS:NOTOUTLOOP^LU
+		A:Text^Proced\00FAra :P1 nesmie by\0165 spusten\00E1 v cykle^O
+	CE:
+	CS:NOVIEW^LU
+		A:Text^Zadajte n\00E1zov zobrazenia iba v r\00E1mci slu\010Dky^O
+	CE:
+	CS:OPTDEF^LU
+		A:Text^<CH\00DDBAJ\00DACA VOLITE\013DN\00C1 PREDVOLEN\00C1 HODNOTA>^O
+	CE:
+	CS:PREPVAL^LU
+		A:Text^Predvolen\00E1 hodnota :P1 z PR\00CDPRAVY^O
+	CE:
+	CS:RENAMTAB^LU
+		A:Text^Premenovan\00E1 tabu\013Eka :P1 s :P2 z\00E1znamami na :P3^O
+	CE:
+	CS:RESTART^LU
+		A:Text^Re\0161tartova\0165 vlo\017Eenie do tabu\013Eky :P1^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Chyba vo v\00FDbere :P1 - :P2^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^N\00E1zov st\013Apca :P1 nie je jednozna\010Dne definovan\00FD^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^\010Cas spustenia - :P1 :P2^O
+	CE:
+CE:
+CS:IntfaceMethodListAttrib^LU
+	A:Prompt^Atrib\00FAt zozn. met\00F3d Intface^O
+	CS:INTFACE_METHOD_LIST_ATTRIB^LU
+	CE:
+	CS:WRONGSEQ1^LU
+		A:Text^EXECUTE_SEQ :P1 neexistuje^O
+	CE:
+	CS:WRONGSEQ2^LU
+		A:Text^Odkazovan\00E9 poradie vykonania EXECUTE_SEQ mus\00ED by\0165 pred t\00FDmto^O
+	CE:
+CE:
+CS:IntfaceMode^LU
+	A:Prompt^Re\017Eim Intface^O
+	CS:1^LU
+		A:Text^Manu\00E1lny^O
+	CE:
+	CS:2^LU
+		A:Text^Automatick\00FD^O
+	CE:
+	CS:3^LU
+		A:Text^D\00E1vka^O
+	CE:
+CE:
+CS:IntfacePrUser^LU
+	A:Prompt^Prim. pou\017E. Intface^O
+	CS:INTFACE_PR_USER^LU
+	CE:
+CE:
+CS:IntfacePrefixOption^LU
+	A:Prompt^Mo\017Enos\0165 predpony Intface^O
+	CS:1^LU
+		A:Text^N\00E1zov zobrazenia^O
+	CE:
+	CS:2^LU
+		A:Text^Jednoz. n\00E1z. zobrazenia^O
+	CE:
+	CS:3^LU
+		A:Text^Bez prefixu^O
+	CE:
+CE:
+CS:IntfacePrivilege^LU
+	A:Prompt^Opr\00E1vnenie Intface^O
+	CS:1^LU
+		A:Text^Aktual. nepovol.^O
+	CE:
+	CS:2^LU
+		A:Text^Aktual. povol.^O
+	CE:
+CE:
+CS:IntfaceProcedures^LU
+	A:Prompt^Proced\00FAry Intface^O
+	CS:CHECK_BY_METHOD_NEW^LU
+		A:Text^Skontrolova\0165 riadky zo s\00FAboru pod\013Ea pracovnej logiky^O
+	CE:
+	CS:CREATE_OUTPUT_FILE^LU
+		A:Text^Zap\00EDsa\0165 \00FAdaje do s\00FAboru^O
+	CE:
+	CS:CREATE_TABLE_FROM_FI^LU
+		A:Text^Vytvori\0165 tabu\013Eku zo s\00FAboru^O
+	CE:
+	CS:EXCEL_MIGRATION^LU
+		A:Text^Migr\00E1cia \00FAdajov zo s\00FAboru Excel^O
+	CE:
+	CS:FNDMIG_EXPORT^LU
+		A:Text^Export defin\00EDci\00ED migr\00E1cie \00FAdajov do s\00FAboru^O
+	CE:
+	CS:FNDMIG_IMPORT^LU
+		A:Text^Import defin\00EDci\00ED migr\00E1cie \00FAdajov zo s\00FAboru^O
+	CE:
+	CS:INSERT_BY_METHOD_NEW^LU
+		A:Text^Vlo\017Ei\0165 riadky zo s\00FAboru^O
+	CE:
+	CS:INSERT_OR_UPDATE^LU
+		A:Text^Vlo\017Ei\0165 alebo aktualizova\0165 riadky zo s\00FAboru^O
+	CE:
+	CS:INTFACE_PROCEDURES^LU
+	CE:
+	CS:INTFACE_PROC_LOV_EXCL_REPL^LU
+	CE:
+	CS:INTFACE_PROC_LOV_INCL_REPL^LU
+	CE:
+	CS:MIGRATE_SOURCE_DATA^LU
+		A:Text^Migr\00E1cia \00FAdajov z tabu\013Eky/zobrazenia^O
+	CE:
+	CS:REPLICATION^LU
+		A:Text^Replik\00E1cia^O
+	CE:
+	CS:REPL_DATA_OUT^LU
+		A:Text^Replikova\0165 \00FAdajov\00E9 \0161trukt\00FAry^O
+	CE:
+CE:
+CS:IntfaceQuickReportUtil^LU
+	CS:DEPREC^LU
+		A:Text^T\00E1to funkcia je zamietnut\00E1. Namiesto nej pou\017Eite zabudovan\00FA funkciu importu/exportu v r\00FDchlych zostav\00E1ch.^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Chyba pri exporte :P1 - :P2^O
+	CE:
+	CS:EXPOK^LU
+		A:Text^Po\010Det exportovan\00FDch zost\00E1v: :P1^O
+	CE:
+CE:
+CS:IntfaceReplElemType^LU
+	A:Prompt^Typ repl. prvku Intface^O
+	CS:AGGREGATE^LU
+		A:Text^Agregova\0165^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Pole^O
+	CE:
+CE:
+CS:IntfaceReplMaintUtil^LU
+	CS:EXECERR^LU
+		A:Text^Vyskytla sa chyba - :P1^O
+	CE:
+	CS:INTFACE_REPL_DB_OBJECTS^LU
+	CE:
+	CS:INTFACE_SERVER_PROCESSES^LU
+	CE:
+	CS:LOGOK^LU
+		A:Text^Tabu\013Eka denn\00EDka s :P1 riadkami bola \00FAspe\0161ne spracovan\00E1 pre :P2^O
+	CE:
+	CS:NOUPDATE^LU
+		A:Text^:P1 nemo\017Eno aktualizova\0165, preto\017Ee prebieha replik\00E1cia. V\0161etky sp\00FA\0161\0165a\010De s\00FA akt\00EDvne.^O
+	CE:
+	CS:REPLFAIL^LU
+		A:Text^\00DAloha replik\00E1cie :P1 zlyhala - :P2^O
+	CE:
+	CS:REPLOK^LU
+		A:Text^Proced\00FAra :P1 bola \00FAspe\0161ne spracovan\00E1^O
+	CE:
+CE:
+CS:IntfaceReplMessType^LU
+	A:Prompt^Typ repl. spr. Intface^O
+	CS:BIZAPI^LU
+		A:Text^BizApi^O
+	CE:
+	CS:TRACE^LU
+		A:Text^Zobrazi\0165 sledovanie^O
+	CE:
+CE:
+CS:IntfaceReplOutLog^LU
+	A:Prompt^Intface Repl Out Log^O
+	CS:INTFACE_REPL_OUT_LOG^LU
+	CE:
+CE:
+CS:IntfaceReplPackageUtil^LU
+	CS:COMPERR^LU
+		A:Text^Chyba pri kompil\00E1cii bal\00EDka :P1^O
+	CE:
+	CS:ERR1PAR^LU
+		A:Text^Samostatn\00E9 riadky by nemali ma\0165 \017Eiadnu hodnotu v st\013Apci Nadraden\00E9 poradie^O
+	CE:
+	CS:ERR2PAR^LU
+		A:Text^Jeden riadok by mal by\0165 nadraden\00FD = bez hodnoty v st\013Apci Nadraden\00E9 poradie^O
+	CE:
+	CS:ERRLONG^LU
+		A:Text^Zdroj je pr\00EDli\0161 dlh\00FD, nemo\017Eno ho zap\00EDsa\0165 do Intface_Job_Detail - :P1^O
+	CE:
+	CS:KEYERR^LU
+		A:Text^Nadraden\00FD k\013E\00FA\010D : P1 neexistuje v \0161trukt\00FAre pred :P2^O
+	CE:
+	CS:LONGSRC^LU
+		A:Text^Zdroj je pr\00EDli\0161 dlh\00FD. Exportujte s\00FAbor z okna Vykona\0165 \00FAlohu a zave\010Fte z Admin^O
+	CE:
+	CS:NODATA^LU
+		A:Text^Aspo\0148 jeden riadok mus\00ED by\0165 ozna\010Den\00FD \201EPri vlo\017Een\00ED\201C alebo \201EPri aktualiz\00E1cii\201C^O
+	CE:
+	CS:OTHERS^LU
+		A:Text^Chyba pri kompil\00E1cii bal\00EDka - :P1^O
+	CE:
+CE:
+CS:IntfaceReplRecType^LU
+	A:Prompt^Typ repl. z\00E1zn. Intface^O
+	CS:AGGREGATE^LU
+		A:Text^Agregova\0165^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Pole^O
+	CE:
+CE:
+CS:IntfaceReplStructCols^LU
+	A:Prompt^St\013Apce repl. \0161trukt. Intface^O
+	CS:INTFACE_REPL_STRUCT_COLS^LU
+	CE:
+CE:
+CS:IntfaceReplStructure^LU
+	A:Prompt^Repl. \0161trukt\00FAra Intface^O
+	CS:ERRSEQ^LU
+		A:Text^Nadraden\00E9 poradie sa nem\00F4\017Ee zhodova\0165 s porad\00EDm^O
+	CE:
+	CS:INSERR^LU
+		A:Text^V\0161etky riadky od po\010Diato\010Dn\00E9ho bodu a vy\0161\0161ie musia ma\0165 za\010Diarknut\00FD st\013Apec Pri vlo\017Een\00ED a definovan\00FD st\013Apec Sp\00FA\0161\0165acia tabu\013Eka^O
+	CE:
+	CS:INTFACE_REPL_PARENT_LOV^LU
+	CE:
+	CS:INTFACE_REPL_STRUCTURE^LU
+	CE:
+	CS:INTFACE_REPL_TABLE_LOV^LU
+	CE:
+	CS:MULTIPLESTART^LU
+		A:Text^Pre \00FAlohu m\00F4\017Eete definova\0165 iba jeden po\010Diato\010Dn\00FD bod^O
+	CE:
+	CS:NONUNIQUE^LU
+		A:Text^Pre :P1 nie je definovan\00E1 jedine\010Dn\00E1 hlavn\00E1 polo\017Eka. Iba jedna polo\017Eka by mala ma\0165 nadraden\00E9 poradie = NULL^O
+	CE:
+	CS:NOSEQ^LU
+		A:Text^Nemo\017Eno pou\017Ei\0165 toto nadraden\00E9 poradie. \017Diadne riadky s porad\00EDm :P1^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^:P1 = :P2, hodnota nem\00F4\017Ee by\0165 vy\0161\0161ia ako 99^O
+	CE:
+CE:
+CS:IntfaceReplTriggersUtil^LU
+	CS:ALTERR^LU
+		A:Text^Chyba pri zmene sp\00FA\0161\0165a\010Da :P1 - :P2^O
+	CE:
+	CS:COMPERR^LU
+		A:Text^Chyba pre sp\00FA\0161\0165a\010D :P1^O
+	CE:
+	CS:DROPERR^LU
+		A:Text^Chyba pri odstra\0148ovan\00ED sp\00FA\0161\0165a\010Da :P1 - :P2^O
+	CE:
+	CS:NODEF^LU
+		A:Text^Mus\00EDte zada\0165 n\00E1zov tabu\013Eky a za\010Diarknu\0165 \201EPri vlo\017Een\00ED\201C alebo \201EPri aktualiz\00E1cii\201C aspo\0148 pri jednej polo\017Eke \0161trukt\00FAry^O
+	CE:
+CE:
+CS:IntfaceReplicCriteria^LU
+	A:Prompt^Replik. krit\00E9ri\00E1 Intface^O
+	CS:1^LU
+		A:Text^Zmluva^O
+	CE:
+	CS:2^LU
+		A:Text^Spolo\010Dnos\0165^O
+	CE:
+CE:
+CS:IntfaceReplicationLog^LU
+	A:Prompt^Denn\00EDk replik\00E1cie Intface^O
+	CS:INTFACE_REPLICATION_LOG^LU
+	CE:
+CE:
+CS:IntfaceRuleFlag^LU
+	A:Prompt^Pr\00EDznak pravidla Intface^O
+	CS:1^LU
+		A:Text^Akt\00EDvny^O
+	CE:
+	CS:2^LU
+		A:Text^Neakt\00EDvny^O
+	CE:
+CE:
+CS:IntfaceRuleValue^LU
+	A:Prompt^Hodnota pravidla Intface^O
+	CS:1^LU
+		A:Text^Nepovolen\00E1 \017Eiadna hodnota^O
+	CE:
+	CS:2^LU
+		A:Text^Povinn\00E9 \010D\00EDslo^O
+	CE:
+	CS:3^LU
+		A:Text^Povinn\00FD re\0165azec^O
+	CE:
+	CS:4^LU
+		A:Text^Povinn\00FD d\00E1tum^O
+	CE:
+	CS:5^LU
+		A:Text^Volite\013En\00E9^O
+	CE:
+CE:
+CS:IntfaceRules^LU
+	A:Prompt^Pravidl\00E1 Intface^O
+	CS:CHECKRULEERROR^LU
+		A:Text^Pravidlo :P1 nie je platn\00E9 pre n\00E1zov proced\00FAry :P2.^O
+	CE:
+	CS:ERRCONN^LU
+		A:Text^\00DAloha :P1 je u\017E pripojen\00E1 k :P2^O
+	CE:
+	CS:ERRCONN2^LU
+		A:Text^\00DAloha :P1 mus\00ED pou\017E\00EDva\0165 proced\00FAru CREATE_TABLE_FROM_FILE^O
+	CE:
+	CS:ERRORVAL1^LU
+		A:Text^Platn\00E9 hodnoty s\00FA KEEPALL , KEEPERR alebo NOBACKUP^O
+	CE:
+	CS:ERRORVAL2^LU
+		A:Text^Platn\00E9 hodnoty s\00FA INSERT alebo UPDATE^O
+	CE:
+	CS:ERRORVAL3^LU
+		A:Text^Platn\00E9 hodnoty s\00FA BEFORE alebo AFTER^O
+	CE:
+	CS:FILERULEERR^LU
+		A:Text^Pravidlo :P1 nem\00F4\017Ee by\0165 akt\00EDvne, pokia\013E je akt\00EDvne :P2^O
+	CE:
+	CS:INTFACE_RULES^LU
+	CE:
+	CS:INTFACE_RULES_LOV^LU
+	CE:
+	CS:REPLUSR1^LU
+		A:Text^Toto pravidlo mo\017Eno pou\017Ei\0165 len pre \00FAlohy REPLIK\00C1CIE^O
+	CE:
+	CS:REPLUSR2^LU
+		A:Text^V syst\00E9mov\00FDch parametroch v s\00FAbore Admin.exe nie je definovan\00FD alternat\00EDvny pou\017E\00EDvate\013E^O
+	CE:
+	CS:REPLUSR3^LU
+		A:Text^V syst\00E9mov\00FDch parametroch v s\00FAbore Admin.exe nemo\017Eno definova\0165 alternat\00EDvneho pou\017E\00EDvate\013Ea ekvivalentn\00E9ho vlastn\00EDkovi aplik\00E1cie^O
+	CE:
+CE:
+CS:IntfaceServerFile^LU
+	A:Prompt^S\00FAbor servera Intface^O
+	CS:CNTERR^LU
+		A:Text^Pri po\010D\00EDtan\00ED z\00E1znamov sa vyskytla chyba^O
+	CE:
+	CS:CREERR^LU
+		A:Text^Z\00E1znamy boli odmietnut\00E9. Skontrolujte s\00FAbor denn\00EDka v okne spustenia^O
+	CE:
+	CS:INTFACE_SERVER_DIR_LOV^LU
+		CS:NAME^LU
+		CE:
+		CS:PATH^LU
+		CE:
+	CE:
+	CS:INTFACE_SERVER_FILES_LOV^LU
+		CS:FILE_DATE^LU
+		CE:
+		CS:FILE_NAME^LU
+		CE:
+		CS:FILE_SIZE^LU
+		CE:
+	CE:
+	CS:NOFILE^LU
+		A:Text^S\00FAbor :P1 neexistuje na :P2^O
+	CE:
+	CS:NOICTAB^LU
+		A:Text^Tabu\013Eka :P1 neexistuje^O
+	CE:
+	CS:NOINS^LU
+		A:Text^Vlo\017Eenie do tabu\013Eky IC zlyhalo. V rozbalenom s\00FAbore RMB v okne spustenia \00FAlohy bud\00FA zobrazen\00E9 chyby form\00E1tu. :P1^O
+	CE:
+	CS:NOSERV^LU
+		A:Text^Umiestnenie s\00FAboru mus\00ED by\0165 :P1, nie :P2. Aktualizujte z\00E1hlavie \00FAlohy^O
+	CE:
+	CS:NOTAB^LU
+		A:Text^Extern\00E1 tabu\013Eka nebola vytvoren\00E1. :P1^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^N\00E1zov st\013Apca :P1 nie je jednozna\010Dne definovan\00FD^O
+	CE:
+CE:
+CS:IntfaceTableMigrations^LU
+	A:Prompt^Migra\010Dn\00E9 parametre tabu\013Eky^O
+	CS:INTFACE_TABLE_MIGRATIONS^LU
+	CE:
+	CS:NOCOL^LU
+		A:Text^\017Diadne st\013Apce na aktualiz\00E1ciu^O
+	CE:
+	CS:PROCERR^LU
+		A:Text^Chyba :P1^O
+	CE:
+	CS:TABERR^LU
+		A:Text^Nie je mo\017En\00E9 aktualizova\0165 :P2.:P1^O
+	CE:
+CE:
+CS:IntfaceUser^LU
+	A:Prompt^Pou\017E\00EDvate\013E Intface^O
+	CS:INTFACE_USER^LU
+	CE:
+CE:
+CS:IntfaceUtil^LU
+	CS:COMPILE_ERRORS^LU
+		A:Text^Kompila\010Dn\00E9 chyby pre sp\00FA\0161\0165a\010De :P1^O
+	CE:
+	CS:UPDERR^LU
+		A:Text^Nem\00F4\017Eete aktualizova\0165 in\00E9 tabu\013Eky ako tabu\013Eky IC^O
+	CE:
+CE:
+CS:IntfaceViews^LU
+	A:Prompt^Zobrazenia Intface^O
+	CS:INTFACE_SOURCE_COL_LOV^LU
+	CE:
+	CS:INTFACE_VIEWS^LU
+	CE:
+	CS:INTFACE_VIEWS_COL_INFO^LU
+	CE:
+CE:
+CS:IntfaceXsdUtil^LU
+	CS:XSDCRE^LU
+		A:Text^S\00FAbor XSD vytvoren\00FD ako klientsky s\00FAbor, riadky :P1^O
+	CE:
+CE:

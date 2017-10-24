@@ -1,0 +1,257 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+
+  <UsingTask 
+    TaskName="Ifs.Fnd.MSBuildTasks.ChangeVersionBasedOnTime" 
+    AssemblyFile="$(FndDeployTarget)\Ifs.Fnd.MSBuildTasks.dll"/>
+
+  <UsingTask 
+    TaskName="Ifs.Fnd.MSBuildTasks.SatelliteAssemblyGroupingTask" 
+    AssemblyFile="$(FndDeployTarget)\Ifs.Fnd.MSBuildTasks.dll"/>
+
+  <PropertyGroup>
+    <PublisherName>IFS Applications</PublisherName>
+    <ProductName Condition="$(SystemName) == ''">IFS Applications</ProductName>
+    <ProductName Condition="$(SystemName) != ''">IFS Applications - $(SystemName)</ProductName>
+    <ApplicationManifestName>Ifs.Fnd.Explorer.exe.manifest</ApplicationManifestName>
+    <DeploymentManifestName>Ifs.Fnd.Explorer.application</DeploymentManifestName>
+    <ApplicationManifestFile>$(FndDeployTarget)\$(ApplicationManifestName)</ApplicationManifestFile>
+    <DeploymentManifestFile>$(FndDeployTarget)\$(DeploymentManifestName)</DeploymentManifestFile>
+    <DeploymentServer Condition="$(ClickOnceServer) == ''">noserver/  - ERROR - NO DEPLOYMENT URL PROVIDED - Please sign the deployment using F1Mage.exe</DeploymentServer>
+    <DeploymentServer Condition="$(ClickOnceServer) != ''">$(ClickOnceServer)</DeploymentServer>
+    <CertFile Condition="$(Certificate) == ''">$(MSBuildProjectDirectory)\temporary.pfx</CertFile>
+    <CertFile Condition="$(Certificate) != ''">$(Certificate)</CertFile>
+    <DeploymentUrl Condition="$(DeploymentUrl) == ''">http://$(DeploymentServer)/client/runtime/$(DeploymentManifestName)</DeploymentUrl>   
+    <DeploymentUrl Condition="$(DeploymentUrl) != ''">$(DeploymentUrl)</DeploymentUrl>   
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <MinimumRequiredVersion>4.0.0.0</MinimumRequiredVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Themes Include="$(FndDeployTarget)\themes\**\*" />
+
+    <Files Include="$(FndDeployTarget)\Ifs.Fnd.Explorer.exe.config" />
+    <Files Include="$(FndDeployTarget)\*.xml" Exclude="$(FndDeployTarget)\Ifs.*.xml;$(FndDeployTarget)\PPJ.*.xml;$(FndDeployTarget)\server.xml" />
+    <Files Include="$(FndDeployTarget)\*.xml.gz" Exclude="$(FndDeployTarget)\Ifs.*.xml;$(FndDeployTarget)\server.xml" />
+    <Files Include="$(FndDeployTarget)\Terms.resources.zip" Condition="Exists('$(FndDeployTarget)\Terms.resources.zip')"/>
+    
+    <!-- Satellite Assemblies -->
+    <ZippedSatelliteAssemblies Include="$(FndDeployTarget)\*-*\Ifs.Language.*-*.zip" />
+    <SatelliteAssemblies Include="$(FndDeployTarget)\*-*\*.resources.dll" />
+
+    <!-- Framework Assemblies -->
+    <FrameworkDependency Include="$(FndDeployTarget)\Ifs.Fnd*.dll" Exclude="$(FndDeployTarget)\Ifs.Fnd.Windows.Forms.FndXGantt.dll"/>
+    <FrameworkDependency Include="$(FndDeployTarget)\PPJ*.dll" />
+    <FrameworkDependency Include="$(FndDeployTarget)\C1*.dll" />
+    <FrameworkDependency Include="$(FndDeployTarget)\DevExpress.Charts.*.dll" />
+    <FrameworkDependency Include="$(FndDeployTarget)\DevExpress.Data.v13.2.dll" /> 
+    <FrameworkDependency Include="$(FndDeployTarget)\DevExpress.Xpf.*.dll" />
+    <FrameworkDependency Include="$(FndDeployTarget)\Microsoft.Office.Interop.Word.dll" Condition="Exists('$(FndDeployTarget)\Microsoft.Office.Interop.Word.dll')"/>
+    <FrameworkDependency Include="$(FndDeployTarget)\ICSharpCode.SharpZipLib.dll" />
+
+    <!-- VCRedistributable dlls shared between XGantt and CBS client (and DocVue using Java7) -->
+    <VCRedistributable Include="$(FndDeployTarget)\msvcp100.dll" />
+    <VCRedistributable Include="$(FndDeployTarget)\msvcr100.dll" />
+
+    <!-- XGantt and its dependencies -->	
+    <XGantt Include="$(FndDeployTarget)\mfc100u.dll"/>
+    <XGantt Include="$(FndDeployTarget)\NETRONIC.XGantt.dll" Condition="Exists('$(FndDeployTarget)\NETRONIC.XGantt.dll')"/>
+    <XGantt Include="$(FndDeployTarget)\Ifs.Fnd.Windows.Forms.FndXGantt.dll"/>
+
+   
+
+    <PluginDependency Include="$(FndDeployTarget)\plugins\*.dll" />
+    <!-- End Framework Assemblies -->
+
+    <!-- Application Assemblies -->
+    <ApplicationDependency Include="$(FndDeployTarget)\Ifs.Application.*.dll"/> 
+    <ApplicationDependency Include="$(FndDeployTarget)\Custom.Application.*.dll"/> 
+    <!-- End Application Assemblies -->
+
+    <EntryPoint Include="$(FndDeployTarget)\Ifs.Fnd.Explorer.exe"/>
+    <ApplicationManifestWithPath Include="$(ApplicationManifestFile)" />
+    <DeploymentManifestWithPath Include="$(DeploymentManifestFile)" />
+    <IconFile Include ="$(FndDeployTarget)\ifsAppsCompLogo.ico"/>
+  </ItemGroup>
+ 
+    <!-- Component dependencies -->
+  <Choose>
+    <When Condition=" '$(ConfigBuilder)'=='True'">
+       <PropertyGroup>
+         <SrcModifier>source</SrcModifier>
+       </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <SrcModifier>*\source</SrcModifier>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+
+  <ItemGroup>
+    <ApplicationComponentDeployTargetFiles Include="$(BuildDirectory)\$(SrcModifier)\*\client\ComponentDeploy.target" />
+    <ApplicationComponentAssemblyDeployTargetFiles Include="$(BuildDirectory)\$(SrcModifier)\*\client\ComponentAssemblyDeploy.target" />
+  </ItemGroup>
+
+  <Target Name="DeployClickOnce">
+    <Message Text="Executing MSBuild target Deploy...."/>
+    <Message Text="@(ApplicationComponentDeployTargetFiles)"/>
+	
+    <ChangeVersionBasedOnTime>
+      <Output
+        TaskParameter="NewVersion" 
+        PropertyName="AssemblyVersion" />
+    </ChangeVersionBasedOnTime>
+
+    <CreateItem
+      Include="@(Themes)"
+      AdditionalMetadata="TargetPath=themes\%(RecursiveDir)%(FileName)%(Extension)" >
+      <Output
+        TaskParameter="Include"
+        ItemName="FilesWithTargetPath"/>
+    </CreateItem>
+
+    <CreateItem
+      Include="@(Files)"
+      AdditionalMetadata="TargetPath=%(RecursiveDir)%(FileName)%(Extension)" >
+      <Output
+        TaskParameter="Include"
+        ItemName="FilesWithTargetPath"/>
+    </CreateItem>
+
+    <CreateItem
+      Include="@(FrameworkDependency)"
+      AdditionalMetadata="DependencyType=Install;AssemblyType=Managed" >
+      <Output
+        TaskParameter="Include"
+        ItemName="AllDependencies"/>
+    </CreateItem>
+
+    <CreateItem
+      Include="@(VCRedistributable)"
+      AdditionalMetadata="TargetPath=%(FileName)%(Extension)" >   	
+      <Output
+        TaskParameter="Include"
+        ItemName="FilesWithTargetPath"/>
+    </CreateItem> 
+
+    <CreateItem
+      Include="@(XGantt)"
+      AdditionalMetadata="Group=NETRONIC.XGantt;TargetPath=%(FileName)%(Extension)" >
+      <Output
+        TaskParameter="Include"
+        ItemName="FilesWithTargetPath"/>
+    </CreateItem>
+	
+    <CreateItem 
+      Include="@(PluginDependency)"
+      AdditionalMetadata="TargetPath=plugins\%(FileName)%(Extension);DependencyType=Install;AssemblyType=Managed" >
+      <Output
+        TaskParameter="Include"
+        ItemName="AllDependencies"/>
+    </CreateItem>
+
+    <SatelliteAssemblyGroupingTask Include="@(SatelliteAssemblies)" ZippedSatelliteAssemblies="@(ZippedSatelliteAssemblies)" Plugins="@(PluginDependency)">
+      <Output
+        TaskParameter="OutputAssemblies"
+        ItemName="AllDependencies"/>
+      <Output
+        TaskParameter="OutputZippedAssemblies"
+        ItemName="FilesWithTargetPath"/>
+    </SatelliteAssemblyGroupingTask>
+
+    <CreateItem
+      Include="@(ApplicationDependency)"
+      AdditionalMetadata="Group=%(FileName);DependencyType=Install;AssemblyType=Managed" >
+      <Output
+        TaskParameter="Include"
+        ItemName="AllDependencies"/>
+    </CreateItem>
+
+    <CreateItem
+      Include="@(ApplicationComponentDeployTargetFiles)"
+      AdditionalMetadata="TargetPath=%(RecursiveDir)%(FileName)%(Extension)" >
+      <Output
+        TaskParameter="Include"
+        ItemName="ComponentDependencyWithTargetPath"/>
+    </CreateItem>
+
+    <CreateItem
+      Include="@(ApplicationComponentAssemblyDeployTargetFiles)"
+      AdditionalMetadata="TargetPath=%(RecursiveDir)%(FileName)%(Extension)" >
+      <Output
+        TaskParameter="Include"
+        ItemName="ComponentAssemblyDependencyWithTargetPath"/>
+    </CreateItem>
+
+    <MSBuild Projects="@(ComponentDependencyWithTargetPath->'%(FullPath)')"
+       Targets="IncludeAdditionalDependencies"
+                       Properties="FndDeployTarget=$(FndDeployTarget)">
+            <Output
+                TaskParameter="TargetOutputs"
+                ItemName="ComponentFiles" />
+    </MSBuild>
+
+    <MSBuild Projects="@(ComponentAssemblyDependencyWithTargetPath->'%(FullPath)')"
+       Targets="IncludeAdditionalDependencies"
+                       Properties="FndDeployTarget=$(FndDeployTarget)">
+      <Output
+                TaskParameter="TargetOutputs"
+                	ItemName="ComponentAssemblyFiles" />
+    </MSBuild>
+
+    <Message Text = "@(ComponentFiles)"/>
+
+    <CreateItem
+      Include="@(ComponentFiles)"
+      Condition="$([System.String]::new('%(TargetPath)').EndsWith('ComponentDeploy.target'))"
+       AdditionalMetadata="TargetPath=%(FileName)%(Extension)" >
+      <Output
+        TaskParameter="Include"
+        ItemName="FilesWithTargetPath"/>
+    </CreateItem>
+
+    <CreateItem
+      Include="@(ComponentFiles)"
+      Condition="!$([System.String]::new('%(TargetPath)').EndsWith('ComponentDeploy.target'))">
+      <Output
+        TaskParameter="Include"
+        ItemName="FilesWithTargetPath"/>
+    </CreateItem>
+
+    <CreateItem
+      Include="@(ComponentAssemblyFiles)"
+      AdditionalMetadata="TargetPath=%(FileName)%(Extension)" >
+      <Output
+        TaskParameter="Include"
+        ItemName="AllDependencies"/>
+    </CreateItem>
+
+    <GenerateApplicationManifest 
+      AssemblyVersion="$(AssemblyVersion)"
+      EntryPoint="@(EntryPoint)" 
+      Dependencies="@(AllDependencies)" 
+      Files="@(FilesWithTargetPath)" 
+      IconFile = "@(IconFile)"
+      OutputManifest="@(ApplicationManifestWithPath)" >
+      <Output ItemName="ApplicationManifest" TaskParameter="OutputManifest" />
+    </GenerateApplicationManifest>
+
+    <Message Text="$(DeploymentUrl)"/>
+    <!-- Deployment manifest -->
+    <GenerateDeploymentManifest 
+      DeploymentUrl="$(DeploymentUrl)" 
+      EntryPoint="@(ApplicationManifest)" 
+      Install="true" 
+      MinimumRequiredVersion="$(MinimumRequiredVersion)" 
+      OutputManifest="@(DeploymentManifestWithPath)" 
+      Publisher = "$(PublisherName)" 
+      Product = "$(ProductName)" 
+      TrustUrlParameters = "true" 
+      UpdateEnabled="true" 
+      UpdateInterval="0"
+      UpdateMode="Foreground" />
+
+    <Exec Command='"$(FndDeployTarget)\F1Mage.exe" CertFile="$(CertFile)" FileToSign="$(DeploymentManifestFile)" Online /Q'/>
+    <Message Text="Signed @(DeploymentManifestWithPath)."/>
+  </Target>
+</Project>

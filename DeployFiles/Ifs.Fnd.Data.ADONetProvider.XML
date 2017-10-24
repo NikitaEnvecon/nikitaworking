@@ -1,0 +1,533 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ifs.Fnd.Data.ADONetProvider</name>
+    </assembly>
+    <members>
+        <member name="T:Ifs.Fnd.Data.ADONetProvider.FndAPDataAdapter">
+            <summary>
+            Strongly typed implementation (FndApCommand) of DbDataAdapter 
+            <see cref="T:System.Data.Common.DbDataAdapter"/>
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPDataAdapter.#ctor">
+            <summary>
+            Creates an object of FndAPDataAdapter
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPDataAdapter.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Creates an object of FndAPDataAdapter
+            </summary>
+            <param name="container">component collection of parent</param>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPDataAdapter.DeleteCommand">
+            <summary>
+            Gets or sets delete command. <see cref="P:System.Data.Common.DbDataAdapter.DeleteCommand"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPDataAdapter.InsertCommand">
+            <summary>
+            Gets or sets insert command. <see cref="P:System.Data.Common.DbDataAdapter.InsertCommand"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPDataAdapter.UpdateCommand">
+            <summary>
+            Gets or sets update command. <see cref="P:System.Data.Common.DbDataAdapter.UpdateCommand"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPDataAdapter.SelectCommand">
+            <summary>
+            Gets or sets select command. <see cref="P:System.Data.Common.DbDataAdapter.SelectCommand"/>
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.ADONetProvider.FndAPCommand">
+            <summary>
+            Represents an SQL statement or stored procedure to execute against a IFS Extended Server
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.SetColumnMeta(System.Data.DbType,System.Int32)">
+            <summary>
+            Set meta information for columns when doing a select statement. 
+            This is transported to fndext where it's used for optimizing fetching from database.
+            </summary>
+            <param name="type">Data Type.String, numeric, datetime</param>
+            <param name="maxLength">Maximum length for strings</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.Cancel">
+            <summary>
+            <see cref="T:System.Data.Common.DbCommand"/>
+            Not implemented
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.Prepare">
+            <summary>
+            <see cref="T:System.Data.Common.DbCommand"/>
+            Not implemented
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.ExecuteDbDataReader(System.Data.CommandBehavior)">
+            <summary>
+            <see cref="M:System.Data.Common.DbCommand.ExecuteDbDataReader(System.Data.CommandBehavior)"/>
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.ExecuteScalar">
+            <summary>
+            <see cref="M:System.Data.Common.DbCommand.ExecuteScalar"/>
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.ExecuteNonQuery">
+            <summary>
+            <see cref="M:System.Data.Common.DbCommand.ExecuteNonQuery"/>
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.CreateDbParameter">
+            <summary>
+            <see cref="M:System.Data.Common.DbCommand.CreateDbParameter"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.FetchSize">
+            <summary>
+            Gets or sets the fetch size. Fetch size is maximum number of rows to retrieve in one server request. 
+            This is used to control number of server calls needed to "fill a form".
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.CommandType">
+            <summary>
+            <see cref="T:System.Data.Common.DbCommand"/>
+            Not implemented
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.CommandTimeout">
+            <summary>
+            <see cref="P:System.Data.Common.DbCommand.CommandTimeout"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.DesignTimeVisible">
+            <summary>
+            <see cref="P:System.Data.Common.DbCommand.DesignTimeVisible"/>
+            Not settable, always returns false
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.DbConnection">
+            <summary>
+            <see cref="P:System.Data.Common.DbCommand.DbConnection"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.UpdatedRowSource">
+            <summary>
+            <see cref="P:System.Data.Common.DbCommand.UpdatedRowSource"/>
+            Not implemented
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.CommandText">
+            <summary>
+            <see cref="P:System.Data.Common.DbCommand.CommandText"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.DbParameterCollection">
+            <summary>
+            <see cref="P:System.Data.Common.DbCommand.DbParameterCollection"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPCommand.DbTransaction">
+            <summary>
+            <see cref="P:System.Data.Common.DbCommand.DbTransaction"/>
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.ADONetProvider.FndAPConnection">
+            <summary>
+            Represents a connection to fndext server
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.#ctor">
+            <summary>
+            Creates a new instance of FndAPConnection
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Creates a new instance of FndAPConnection
+            </summary>
+            <param name="container">component collection of parent</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.#ctor(Ifs.Fnd.AccessProvider.FndConnection)">
+            <summary>
+            Creates a new instance of FndAPConnection reusing an existing .NET AP FndConnection instance
+            </summary>
+            <param name="connection">FndConnection instance</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.#ctor(Ifs.Fnd.AccessProvider.FndConnection,System.ComponentModel.IContainer)">
+            <summary>
+            Creates a new instance of FndAPConnection reusing an existing .NET AP FndConnection instance
+            </summary>
+            <param name="connection">FndConnection instance</param>
+            <param name="container">component collection of parent</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.SetActivityContext(Ifs.Fnd.AccessProvider.Activity.FndActivityContext)">
+            <summary>
+            Set ActivityContext to be used for server invokes
+            </summary>
+            <param name="ctx">FndActivityContext instance</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.CreateFndAPCommand">
+            <summary>
+            Creates a new FndAPCommand command instance for use in this FndApConnection session
+            </summary>
+            <returns>FndAPCommand instance</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.ChangeDatabase(System.String)">
+            <summary>
+            Not supported
+            <see cref="M:System.Data.Common.DbConnection.ChangeDatabase(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.BeginDbTransaction(System.Data.IsolationLevel)">
+            <summary>
+            Creates a new FndAPTransaction. IsolationLevel is ignored
+            <see cref="M:System.Data.Common.DbConnection.BeginDbTransaction(System.Data.IsolationLevel)"/>
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.CreateDbCommand">
+            <summary>
+            Creates a new FndAPCommand command connected to this FndApConnection
+            </summary>
+            <returns>FndAPCommand instance</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.Dispose(System.Boolean)">
+            <summary>
+            Dispose the resources
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.Open">
+            <summary>
+            Opens the connection. Next server access will open dedicated database session (if used)
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.Close">
+            <summary>
+            Closes the connection. This will invoke the server to close dedicated database session (if used)
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.ForceSynchronousMode">
+             <summary>
+             Force synchronousMode 
+            
+             ApplicationForms setting for forced sync to work around a problem with
+             some controls in PPJ which causes re-entrance problems with our solution for
+             asyncrounous server calls. This is a consequence of us using DoEvents in the Explorer code,
+             and when controls (such as PPJ.VisSpinField) performs server calls on a Timer tick (which 
+             keeps firing when mousedown is pressed on the up/down buttons)
+             </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.State">
+            <summary>
+            Gets the current state of the connection. <see cref="P:System.Data.Common.DbConnection.State"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.DataSource">
+            <summary>
+            Gets the server connection string <see cref="P:System.Data.Common.DbConnection.DataSource"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.ServerVersion">
+            <summary>
+            Not supported
+            <see cref="P:System.Data.Common.DbConnection.ServerVersion"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.ConnectionString">
+            <summary>
+            Gets or sets the connection string. 
+            Connection string is in the format: user id=alain;password=alain;server=lkpgseapp29:58080
+            server is passed to FndConnection.ConnectionString
+            user id and password are passed to FndConnection.SetCredentials
+            <see cref="P:System.Data.Common.DbConnection.ConnectionString"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.Database">
+            <summary>
+            Not implemented
+            <see cref="P:System.Data.Common.DbConnection.ConnectionString"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPConnection.ConnectionTimeout">
+            <summary>
+            Gets the timeout from the associated FndConnection 
+            <see cref="P:System.Data.Common.DbConnection.ConnectionTimeout"/>
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.ADONetProvider.FndApException">
+            <summary>
+            FndApException is a wrapper exception for all exception occuring withtin the Ifs.Fnd.Data.ADONetProvider classes
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndApException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new FndApException instance
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="innerException">Inner exception</param>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndApException.ErrorCode">
+            <summary>
+            Gets error code (always zero)
+            Memeber needed for ADO.Net compatibility
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndApException.ErrorPosition">
+            <summary>
+            Gets error code (always zero)
+            Memeber needed for ADO.Net compatibility
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.ADONetProvider.FndAPReader">
+            <summary>
+            Reads a forward-only stream of rows from an FndApCommand (ExecuteDbDataReader).
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.NextResult">
+            <summary>
+            Not implemented
+            <seealso cref="M:System.Data.Common.DbDataReader.NextResult"/>
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.Close">
+            <summary>
+            Closes the FndAPReader instance
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.Read">
+            <summary>
+            Reads next row
+            </summary>
+            <returns>true if row was read; false if end of stream</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetSchemaTable">
+            <summary>
+            Returns a System.Data.DataTable that describes the column metadata of the FndApReader.
+            </summary>
+            <returns>System.Data.DataTable instance</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetEnumerator">
+            <summary>
+            Returns an System.Collections.IEnumerator that can be used to iterate through the rows in the data reader.
+            </summary>
+            <returns>IEnumerator instance</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetInt32(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a int32
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetValue(System.Int32)">
+            <summary>
+            Gets the value of the specified column as an instance of System.Object
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.IsDBNull(System.Int32)">
+            <summary>
+            Gets a value that indicates whether the column contains nonexistent or missing values.
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>true if the specified column is null; otherwise false</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Not implemented.
+            <seealso cref="M:System.Data.Common.DbDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetByte(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a int8 (byte)
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetFieldType(System.Int32)">
+            <summary>
+            Gets the data type of the specified column.
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The data type of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetDecimal(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a System.Decimal
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetValues(System.Object[])">
+            <summary>
+            Gets all attribute columns in the collection for the current row.
+            </summary>
+            <param name="values">An array of System.Object into which to copy the attribute columns.</param>
+            <returns>The number of instances in the array</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetName(System.Int32)">
+            <summary>
+            Gets the name of the column
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The name of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetInt64(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a int64 (long)
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetDouble(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a double
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetBoolean(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a boolean
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetGuid(System.Int32)">
+            <summary>
+            Not implemented
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetDateTime(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a System.DateTime
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetOrdinal(System.String)">
+            <summary>
+            Gets the column ordinal given the name of the column
+            </summary>
+            <param name="name">Column name</param>
+            <returns>Zero based ordinal of the column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetDataTypeName(System.Int32)">
+            <summary>
+            Not implemented
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetFloat(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a fload
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Not implemented
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetString(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a string
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetChar(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a char
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPReader.GetInt16(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a int16 (short)
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPReader.RecordsAffected">
+            <summary>
+            Not implemented
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPReader.IsClosed">
+            <summary>
+            Gets a value indicating whether the FndAPReader is closed.
+             True if it is closed otherwise false.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPReader.HasRows">
+            <summary>
+            Gets a value that indicates whether this FndAPReader contains one or more rows.
+             True if it contains one or more rows otherwise false.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPReader.Depth">
+            <summary>
+            Not implemented
+            <seealso cref="P:System.Data.Common.DbDataReader.Depth"/>
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPReader.Item(System.String)">
+            <summary>
+            Gets the value of the specified column as an instance of System.Object.
+            </summary>
+            <param name="name">Column name</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPReader.Item(System.Int32)">
+            <summary>
+            Gets the value of the specified column as an instance of System.Object.
+            </summary>
+            <param name="i">The zero-based column ordinal</param>
+            <returns>The value of the specified column</returns>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPReader.FieldCount">
+            <summary>
+            Gets the number of columns in the current row
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.ADONetProvider.FndAPTransaction">
+            <summary>
+            Represents a transaction for a FndApConnection
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPTransaction.Dispose(System.Boolean)">
+            <summary>
+            Dispose the resources
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPTransaction.Rollback">
+            <summary>
+            Aborts a transaction. Calls server with ROLLBACK command
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.ADONetProvider.FndAPTransaction.Commit">
+            <summary>
+            Ends a transaction. Calls server with COMMIT command
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPTransaction.DbConnection">
+            <summary>
+            Gets the FndApConnection for this FndAPTransaction
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.ADONetProvider.FndAPTransaction.IsolationLevel">
+            <summary>
+            Get the supported transaction isolation level. Always ReadCommitted (which is the closest one)
+            </summary>
+        </member>
+    </members>
+</doc>

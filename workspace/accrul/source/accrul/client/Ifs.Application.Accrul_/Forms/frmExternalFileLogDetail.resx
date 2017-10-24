@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labelccsLoadFileId.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="labelccsLoadFileId.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labelccsLoadFileId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 8</value>
+  </data>
+  <data name="labelccsLoadFileId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 13</value>
+  </data>
+  <data name="labelccsLoadFileId.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelccsLoadFileId.Text" xml:space="preserve">
+    <value>Load File ID:</value>
+  </data>
+  <data name="&gt;&gt;labelccsLoadFileId.Name" xml:space="preserve">
+    <value>labelccsLoadFileId</value>
+  </data>
+  <data name="&gt;&gt;labelccsLoadFileId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labelccsLoadFileId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelccsLoadFileId.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="ccsLoadFileId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 25</value>
+  </data>
+  <data name="ccsLoadFileId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 21</value>
+  </data>
+  <data name="ccsLoadFileId.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ccsLoadFileId.Name" xml:space="preserve">
+    <value>ccsLoadFileId</value>
+  </data>
+  <data name="&gt;&gt;ccsLoadFileId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cRecListDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;ccsLoadFileId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ccsLoadFileId.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="dfnSeqNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 24</value>
+  </data>
+  <data name="dfnSeqNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 21</value>
+  </data>
+  <data name="dfnSeqNo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="dfnSeqNo.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfnSeqNo.Name" xml:space="preserve">
+    <value>dfnSeqNo</value>
+  </data>
+  <data name="&gt;&gt;dfnSeqNo.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfnSeqNo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfnSeqNo.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labeldfsState.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsState.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labeldfsState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 8</value>
+  </data>
+  <data name="labeldfsState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="labeldfsState.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labeldfsState.Text" xml:space="preserve">
+    <value>Log State:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsState.Name" xml:space="preserve">
+    <value>labeldfsState</value>
+  </data>
+  <data name="&gt;&gt;labeldfsState.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsState.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsState.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="dfsState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 25</value>
+  </data>
+  <data name="dfsState.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="dfsState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 21</value>
+  </data>
+  <data name="dfsState.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dfsState.Name" xml:space="preserve">
+    <value>dfsState</value>
+  </data>
+  <data name="&gt;&gt;dfsState.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsState.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsState.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labeldfdLogDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfdLogDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labeldfdLogDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 8</value>
+  </data>
+  <data name="labeldfdLogDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="labeldfdLogDate.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labeldfdLogDate.Text" xml:space="preserve">
+    <value>Log Date:</value>
+  </data>
+  <data name="&gt;&gt;labeldfdLogDate.Name" xml:space="preserve">
+    <value>labeldfdLogDate</value>
+  </data>
+  <data name="&gt;&gt;labeldfdLogDate.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfdLogDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfdLogDate.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="dfdLogDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>324, 25</value>
+  </data>
+  <data name="dfdLogDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="dfdLogDate.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dfdLogDate.Name" xml:space="preserve">
+    <value>dfdLogDate</value>
+  </data>
+  <data name="&gt;&gt;dfdLogDate.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfdLogDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfdLogDate.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labeldfsFileType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsFileType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labeldfsFileType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 50</value>
+  </data>
+  <data name="labeldfsFileType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="labeldfsFileType.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labeldfsFileType.Text" xml:space="preserve">
+    <value>File Type:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsFileType.Name" xml:space="preserve">
+    <value>labeldfsFileType</value>
+  </data>
+  <data name="&gt;&gt;labeldfsFileType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsFileType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsFileType.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="dfsFileType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 67</value>
+  </data>
+  <data name="dfsFileType.MaxLength" type="System.Int32, mscorlib">
+    <value>2000</value>
+  </data>
+  <data name="dfsFileType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 21</value>
+  </data>
+  <data name="dfsFileType.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;dfsFileType.Name" xml:space="preserve">
+    <value>dfsFileType</value>
+  </data>
+  <data name="&gt;&gt;dfsFileType.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsFileType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsFileType.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labeldfExtFileTypeDescription.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfExtFileTypeDescription.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labeldfExtFileTypeDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 50</value>
+  </data>
+  <data name="labeldfExtFileTypeDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="labeldfExtFileTypeDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="labeldfExtFileTypeDescription.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="&gt;&gt;labeldfExtFileTypeDescription.Name" xml:space="preserve">
+    <value>labeldfExtFileTypeDescription</value>
+  </data>
+  <data name="&gt;&gt;labeldfExtFileTypeDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfExtFileTypeDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfExtFileTypeDescription.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="dfExtFileTypeDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 67</value>
+  </data>
+  <data name="dfExtFileTypeDescription.MaxLength" type="System.Int32, mscorlib">
+    <value>2000</value>
+  </data>
+  <data name="dfExtFileTypeDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 21</value>
+  </data>
+  <data name="dfExtFileTypeDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;dfExtFileTypeDescription.Name" xml:space="preserve">
+    <value>dfExtFileTypeDescription</value>
+  </data>
+  <data name="&gt;&gt;dfExtFileTypeDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfExtFileTypeDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfExtFileTypeDescription.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labeldfsFileTemplateId.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsFileTemplateId.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labeldfsFileTemplateId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 92</value>
+  </data>
+  <data name="labeldfsFileTemplateId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
+  <data name="labeldfsFileTemplateId.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="labeldfsFileTemplateId.Text" xml:space="preserve">
+    <value>File Template:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsFileTemplateId.Name" xml:space="preserve">
+    <value>labeldfsFileTemplateId</value>
+  </data>
+  <data name="&gt;&gt;labeldfsFileTemplateId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsFileTemplateId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsFileTemplateId.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="dfsFileTemplateId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 109</value>
+  </data>
+  <data name="dfsFileTemplateId.MaxLength" type="System.Int32, mscorlib">
+    <value>2000</value>
+  </data>
+  <data name="dfsFileTemplateId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 21</value>
+  </data>
+  <data name="dfsFileTemplateId.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;dfsFileTemplateId.Name" xml:space="preserve">
+    <value>dfsFileTemplateId</value>
+  </data>
+  <data name="&gt;&gt;dfsFileTemplateId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsFileTemplateId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsFileTemplateId.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labeldfExtFileTemplateDescription.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfExtFileTemplateDescription.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labeldfExtFileTemplateDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 92</value>
+  </data>
+  <data name="labeldfExtFileTemplateDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="labeldfExtFileTemplateDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="labeldfExtFileTemplateDescription.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="&gt;&gt;labeldfExtFileTemplateDescription.Name" xml:space="preserve">
+    <value>labeldfExtFileTemplateDescription</value>
+  </data>
+  <data name="&gt;&gt;labeldfExtFileTemplateDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfExtFileTemplateDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfExtFileTemplateDescription.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="dfExtFileTemplateDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 109</value>
+  </data>
+  <data name="dfExtFileTemplateDescription.MaxLength" type="System.Int32, mscorlib">
+    <value>2000</value>
+  </data>
+  <data name="dfExtFileTemplateDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 21</value>
+  </data>
+  <data name="dfExtFileTemplateDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;dfExtFileTemplateDescription.Name" xml:space="preserve">
+    <value>dfExtFileTemplateDescription</value>
+  </data>
+  <data name="&gt;&gt;dfExtFileTemplateDescription.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfExtFileTemplateDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfExtFileTemplateDescription.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labeldfExtFileLoadFile_Direction.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfExtFileLoadFile_Direction.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="labeldfExtFileLoadFile_Direction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>453, 92</value>
+  </data>
+  <data name="labeldfExtFileLoadFile_Direction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="labeldfExtFileLoadFile_Direction.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="labeldfExtFileLoadFile_Direction.Text" xml:space="preserve">
+    <value>File_Direction:</value>
+  </data>
+  <data name="&gt;&gt;labeldfExtFileLoadFile_Direction.Name" xml:space="preserve">
+    <value>labeldfExtFileLoadFile_Direction</value>
+  </data>
+  <data name="&gt;&gt;labeldfExtFileLoadFile_Direction.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfExtFileLoadFile_Direction.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfExtFileLoadFile_Direction.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="dfExtFileLoadFile_Direction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 109</value>
+  </data>
+  <data name="dfExtFileLoadFile_Direction.MaxLength" type="System.Int32, mscorlib">
+    <value>2000</value>
+  </data>
+  <data name="dfExtFileLoadFile_Direction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 21</value>
+  </data>
+  <data name="dfExtFileLoadFile_Direction.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;dfExtFileLoadFile_Direction.Name" xml:space="preserve">
+    <value>dfExtFileLoadFile_Direction</value>
+  </data>
+  <data name="&gt;&gt;dfExtFileLoadFile_Direction.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfExtFileLoadFile_Direction.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfExtFileLoadFile_Direction.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tblExternalFileLogDetail_colnLoadFileId.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblExternalFileLogDetail_colnLoadFileId.Title" xml:space="preserve">
+    <value>Load File ID</value>
+  </data>
+  <data name="tblExternalFileLogDetail_colnLoadFileId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colnLoadFileId.Name" xml:space="preserve">
+    <value>tblExternalFileLogDetail_colnLoadFileId</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colnLoadFileId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colnLoadFileId.Parent" xml:space="preserve">
+    <value>tblExternalFileLogDetail</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colnLoadFileId.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tblExternalFileLogDetail_colnSeqNo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tblExternalFileLogDetail_colnSeqNo.Title" xml:space="preserve">
+    <value>Seq No</value>
+  </data>
+  <data name="tblExternalFileLogDetail_colnSeqNo.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colnSeqNo.Name" xml:space="preserve">
+    <value>tblExternalFileLogDetail_colnSeqNo</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colnSeqNo.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colnSeqNo.Parent" xml:space="preserve">
+    <value>tblExternalFileLogDetail</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colnSeqNo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tblExternalFileLogDetail_colsRowState.Title" xml:space="preserve">
+    <value>Row State</value>
+  </data>
+  <data name="tblExternalFileLogDetail_colsRowState.Width" type="System.Int32, mscorlib">
+    <value>118</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colsRowState.Name" xml:space="preserve">
+    <value>tblExternalFileLogDetail_colsRowState</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colsRowState.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cLookupColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colsRowState.Parent" xml:space="preserve">
+    <value>tblExternalFileLogDetail</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colsRowState.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tblExternalFileLogDetail_colnNoOfRecords.Title" xml:space="preserve">
+    <value>No Of Records</value>
+  </data>
+  <data name="tblExternalFileLogDetail_colnNoOfRecords.Width" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colnNoOfRecords.Name" xml:space="preserve">
+    <value>tblExternalFileLogDetail_colnNoOfRecords</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colnNoOfRecords.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cColumn, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colnNoOfRecords.Parent" xml:space="preserve">
+    <value>tblExternalFileLogDetail</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail_colnNoOfRecords.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tblExternalFileLogDetail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 143</value>
+  </data>
+  <data name="tblExternalFileLogDetail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>431, 150</value>
+  </data>
+  <data name="tblExternalFileLogDetail.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail.Name" xml:space="preserve">
+    <value>tblExternalFileLogDetail</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cChildTableFinBase, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tblExternalFileLogDetail.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>622, 344</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>External File Log Detail</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmExternalFileLogDetail</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cFormWindow, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+</root>

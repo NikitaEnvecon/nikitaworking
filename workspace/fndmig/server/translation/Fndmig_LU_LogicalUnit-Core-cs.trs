@@ -1,0 +1,1702 @@
+-------------------------------------------------------
+File Type: IFS Foundation Translation File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Language: cs
+Culture: cs-CZ
+Fittings: Standard
+Layer: Core
+Main Type: LU
+Sub Type: Logical Unit
+-------------------------------------------------------
+CS:IntfaceChangeDefaults^LU
+	A:Prompt^Zm\011Bnit rozhran\00ED na v\00FDchoz\00ED^O
+	CS:1^LU
+		A:Text^Povoleno^O
+	CE:
+	CS:2^LU
+		A:Text^Nen\00ED povoleno^O
+	CE:
+	CS:3^LU
+		A:Text^Pevn\00E1 hodnota^O
+	CE:
+CE:
+CS:IntfaceConvList^LU
+	A:Prompt^Seznam konvenc\00ED rozhran\00ED^O
+	CS:INTFACE_CONV_LIST^LU
+	CE:
+CE:
+CS:IntfaceConvListCols^LU
+	A:Prompt^Sloupce seznamu konvenc\00ED rozhran\00ED^O
+	CS:INTFACE_CONV_LIST_COLS^LU
+	CE:
+CE:
+CS:IntfaceDefaultRules^LU
+	A:Prompt^V\00FDchoz\00ED pravidla rozhran\00ED^O
+	CS:ADDOBJID^LU
+		A:Text^Vytvo\0159it zvl\00E1\0161tn\00ED sloupec na detaily pro ID objektu^O
+	CE:
+	CS:CHECKOPTION^LU
+		A:Text^Prov\00E9st metody Nov\00E1 a\00A0Zm\011Bnit s\00A0mo\017Enost\00ED KONTROLA^O
+	CE:
+	CS:CLEANUP^LU
+		A:Text^Automaticky smazat podrobnosti o\00A0chyb\00E1ch^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Po\010Det \0159\00E1dk\016F mezi ka\017Ed\00FDm potvrzen\00EDm^O
+	CE:
+	CS:CONNJOB^LU
+		A:Text^Spustit nejprve tuto \00FAlohu^O
+	CE:
+	CS:CREATEDET^LU
+		A:Text^Vytvo\0159it detaily nov\00E9ho sloupce zalo\017Een\00E9 na pohledech v\00A0seznamu metod^O
+	CE:
+	CS:CRETABCONF^LU
+		A:Text^Mo\017Enosti kontejnerov\00E9 tabulky^O
+	CE:
+	CS:EVENTMESS^LU
+		A:Text^Po dokon\010Den\00ED \00FAlohy informovat server ud\00E1lost\00ED^O
+	CE:
+	CS:EXITLINES^LU
+		A:Text^Po tomto \010D\00EDsle \0159\00E1dku zastavit \010Dten\00ED souboru^O
+	CE:
+	CS:FETCHCONDITION^LU
+		A:Text^Ur\010Duje, zda lze \00FAlohu pou\017E\00EDt pro sb\011Br dat. V\00A0p\0159\00EDpad\011B pou\017Eit\00ED v\00EDce LJ zadejte podm\00EDnku kombinace^O
+	CE:
+	CS:FILEBKP^LU
+		A:Text^Soubor z\00E1lohovat po \00FAsp\011B\0161n\00E9m dokon\010Den\00ED^O
+	CE:
+	CS:FILEHEAD^LU
+		A:Text^Vytvo\0159it z\00E1hlav\00ED souboru s\00A0n\00E1zvy sloupc\016F. Jen pro soubory CSV^O
+	CE:
+	CS:IGNOREADERROR^LU
+		A:Text^Pokra\010Dovat ve \010Dten\00ED souboru, i\00A0kdy\017E se vyskytnou chyby^O
+	CE:
+	CS:IGNOREXEERROR^LU
+		A:Text^Pokra\010Dovat v\00A0postupu, i\00A0kdy\017E se vyskytnou chyby^O
+	CE:
+	CS:INSUPD^LU
+		A:Text^Prov\00E9st bu\010F VLO\017DEN\00CD nebo AKTUALIZACI^O
+	CE:
+	CS:INTFACE_DEFAULT_RULES^LU
+	CE:
+	CS:NOCLEANUP^LU
+		A:Text^Uchovat v\0161echny detaily d\00E1vky pro klientsk\00E9 soubory^O
+	CE:
+	CS:SAVEJOBDAYS^LU
+		A:Text^Po\010Det dn\00ED pro ukl\00E1d\00E1n\00ED historie \00FAloh^O
+	CE:
+	CS:SAVEJOBERR^LU
+		A:Text^Do protokolu historie ulo\017Eit pouze chyby^O
+	CE:
+	CS:SERVFILOAD^LU
+		A:Text^Zav\00E9st serverov\00FD soubor p\0159ed spu\0161t\011Bn\00EDm d\00E1vky^O
+	CE:
+	CS:SKIPLINES^LU
+		A:Text^Po tomto \010D\00EDsle \0159\00E1dky spustit \010Dten\00ED souboru^O
+	CE:
+	CS:SYNCDETAILS^LU
+		A:Text^Synchronizovat detaily d\00E1vky se sloupci v\00A0z\00E1hlav\00ED souboru^O
+	CE:
+	CS:TRUNCVAL^LU
+		A:Text^Zkr\00E1tit hodnoty p\0159ekra\010Duj\00EDc\00ED d\00E9lku sloupce^O
+	CE:
+CE:
+CS:IntfaceDetail^LU
+	A:Prompt^Detail rozhran\00ED^O
+	CS:CHECKERROR^LU
+		A:Text^Kontrola :P1 se nezda\0159ila - :P2 (p\0159\00ED\010Dina chyby na \0159\00E1dku: :P3)^O
+	CE:
+	CS:CLIENTVAL^LU
+		A:Text^Klient - hodnoty^O
+	CE:
+	CS:COLOUTDAT^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED :P1 s\00A0hodnotou data :P2^O
+	CE:
+	CS:COLOUTDAT2^LU
+		A:Text^Chyba form\00E1tov\00E1n\00ED sloupce data :P1^O
+	CE:
+	CS:COLOUTNUM^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED :P1 s\00A0\010D\00EDselnou hodnotou :P2^O
+	CE:
+	CS:COLOUTNUM2^LU
+		A:Text^Chyba form\00E1tov\00E1n\00ED sloupce \010D\00EDseln\00E9 hodnoty :P1^O
+	CE:
+	CS:COLUMNOUT^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED :P1 s\00A0hodnotou :P2^O
+	CE:
+	CS:COLUMNOUT2^LU
+		A:Text^Chyba form\00E1tov\00E1n\00ED sloupce :P1^O
+	CE:
+	CS:COMMITCNT^LU
+		A:Text^:P1 Po\010Det potvrzen\00FDch \0159\00E1dk\016F: :P2^O
+	CE:
+	CS:CREERRORATTR^LU
+		A:Text^Nepoda\0159ilo se vytvo\0159it soubor z\00A0:P1.^O
+	CE:
+	CS:CREFORMAT^LU
+		A:Text^Nepoda\0159ilo se vytvo\0159it soubor - :P1^O
+	CE:
+	CS:CREINTFACEOK^LU
+		A:Text^\00DAloha migrace :P1 dokon\010Dena^O
+	CE:
+	CS:DBVAL^LU
+		A:Text^DB hodnoty^O
+	CE:
+	CS:ERRDEFAULT^LU
+		A:Text^:P1 se pou\017E\00EDv\00E1 pouze tehdy, kdy\017E sm\011Br = :P2^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^V\00FDchoz\00ED WHERE se nepou\017E\00EDv\00E1 pro sm\011Br = :P1^O
+	CE:
+	CS:FILENOTFOUND^LU
+		A:Text^Na cest\011B :P2 nebyl nalezen soubor :P1.^O
+	CE:
+	CS:FORMATERROR^LU
+		A:Text^Form\00E1tov\00E1n\00ED se nezda\0159ilo - :P1 (p\0159\00ED\010Dina chyby na \0159\00E1dku: :P2)^O
+	CE:
+	CS:INSCHECK^LU
+		A:Text^:P1 nov\00FDch \0159\00E1dk\016F zkontrolov\00E1no se stavem OK^O
+	CE:
+	CS:INSCHECKERR^LU
+		A:Text^:P1 nov\00FDch \0159\00E1dk\016F zkontrolov\00E1no s\00A0chybou^O
+	CE:
+	CS:INSERRORNEW^LU
+		A:Text^Vlo\017Een\00ED do :P1 se nezda\0159ilo - :P2 (p\0159\00ED\010Dina chyby na \0159\00E1dku: :P3)^O
+	CE:
+	CS:INSINTERR^LU
+		A:Text^:P1 chybn\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:INSINTINS^LU
+		A:Text^Vlo\017Eeno :P1 nov\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:INSINTNOROWS^LU
+		A:Text^Nebyly zpracov\00E1ny \017E\00E1dn\00E9 \0159\00E1dky^O
+	CE:
+	CS:INSINTOK^LU
+		A:Text^\00DAloha migrace :P1 dokon\010Dena^O
+	CE:
+	CS:INTFACE_DETAIL^LU
+		CS:SOURCE_NAME^LU
+		CE:
+		CS:SOURCE_OWNER^LU
+		CE:
+	CE:
+	CS:INTFACE_DETAIL_COL_LOV^LU
+	CE:
+	CS:LOADERR^LU
+		A:Text^Chyba p\0159i na\010Dten\00ED \00FAdaj\016F \00FAlohy migrace :P1^O
+	CE:
+	CS:NODET^LU
+		A:Text^Nebyly nalezeny detaily pro :P1^O
+	CE:
+	CS:NOROWS^LU
+		A:Text^Nebyly zpracov\00E1ny \017E\00E1dn\00E9 \0159\00E1dky^O
+	CE:
+	CS:NOVAL^LU
+		A:Text^\017D\00E1dn\00E9 DB/klientsk\00E9 hodnoty pro :P1^O
+	CE:
+	CS:ROWSFAILED^LU
+		A:Text^:P1 chybn\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:ROWSWRITTEN^LU
+		A:Text^:P1 napsan\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:STRINGOUT^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED :P1 s\00A0hodnotou :P2^O
+	CE:
+	CS:STRINGOUT2^LU
+		A:Text^Chyba form\00E1tov\00E1n\00ED sloupce :P1^O
+	CE:
+	CS:STRINGOUTCONV^LU
+		A:Text^Chyba p\0159i p\0159evodu hodnoty :P2 pro :P1^O
+	CE:
+	CS:STRINGOUTCONV2^LU
+		A:Text^Chyba p\0159evodu sloupce :P1^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^Zadan\00E1 d\00E9lka :P2 sloupce :P1 je p\0159ekro\010Dena hodnotou :P3. Pravidlo TRUNCVAL to m\016F\017Ee vy\0159e\0161it.^O
+	CE:
+	CS:TOOLONG2^LU
+		A:Text^Zadan\00E1 d\00E9lka :P2 sloupce :P1 je p\0159ekro\010Dena. \0158e\0161en\00EDm m\016F\017Ee b\00FDt pravidlo TRUNCVAL.^O
+	CE:
+	CS:UNPACKPOS^LU
+		A:Text^Chyba nastala p\0159i rozbalov\00E1n\00ED :P1 s\00A0hodnotou :P2^O
+	CE:
+	CS:UNPACKPOS2^LU
+		A:Text^P\0159i rozbalov\00E1n\00ED sloupce :P1 do\0161lo k\00A0chyb\011B^O
+	CE:
+	CS:UNPACKPOSCONV^LU
+		A:Text^Chyba p\0159i p\0159evodu hodnoty :P2 pro :P1^O
+	CE:
+	CS:UNPACKPOSDAT^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED data :P2 pro :P1^O
+	CE:
+	CS:UNPACKPOSDAT2^LU
+		A:Text^Chyba form\00E1tov\00E1n\00ED sloupce data :P1^O
+	CE:
+	CS:UNPACKPOSDEF^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED implicitn\00ED hodnoty :P2 pro :P1^O
+	CE:
+	CS:UNPACKPOSNUM^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED \010D\00EDseln\00E9 hodnoty :P2 pro :P1^O
+	CE:
+	CS:UNPACKPOSNUM2^LU
+		A:Text^Chyba form\00E1tov\00E1n\00ED sloupce \010D\00EDseln\00E9 hodnoty :P1^O
+	CE:
+	CS:UNPACKPOSSTR^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED hodnoty \0159et\011Bzce :P2 pro :P1^O
+	CE:
+	CS:UNPACKPOSSTR2^LU
+		A:Text^Chyba form\00E1tov\00E1n\00ED sloupce \0159et\011Bzce :P1^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Chyba nastala p\0159i rozbalov\00E1n\00ED :P1 s\00A0hodnotou :P2^O
+	CE:
+	CS:UNPACKSEP2^LU
+		A:Text^P\0159i rozbalov\00E1n\00ED sloupce :P1 do\0161lo k\00A0chyb\011B^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Chyba p\0159i p\0159evodu hodnoty :P2 pro :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED data :P2 pro :P1^O
+	CE:
+	CS:UNPACKSEPDAT2^LU
+		A:Text^Chyba form\00E1tov\00E1n\00ED sloupce data :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED implicitn\00ED hodnoty :P2 pro :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED \010D\00EDseln\00E9 hodnoty :P2 pro :P1^O
+	CE:
+	CS:UNPACKSEPNUM2^LU
+		A:Text^Chyba form\00E1tov\00E1n\00ED sloupce \010D\00EDseln\00E9 hodnoty :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Chyba p\0159i \010Dten\00ED hodnot sloupc\016F rozd\011Blen\00FDch odd\011Blova\010Dem sloupc\016F^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED hodnoty \0159et\011Bzce :P2 pro :P1^O
+	CE:
+	CS:UNPACKSEPSTR2^LU
+		A:Text^Chyba form\00E1tov\00E1n\00ED sloupce \0159et\011Bzce :P1^O
+	CE:
+	CS:UPDERRORCHK^LU
+		A:Text^Chyba :P1 p\0159i spu\0161t\011Bn\00ED :P2^O
+	CE:
+	CS:UPDERRORUPD^LU
+		A:Text^Aktualizace :P1 se nezda\0159ila - :P2 (p\0159\00ED\010Dina chyby na \0159\00E1dku: :P3)^O
+	CE:
+	CS:UPDINTFACEOK^LU
+		A:Text^\00DAloha migrace :P1 dokon\010Dena^O
+	CE:
+	CS:UPDINTFERR^LU
+		A:Text^:P1 chybn\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:UPDINTFINS^LU
+		A:Text^Vlo\017Eeno :P1 nov\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:UPDINTFUPD^LU
+		A:Text^:P1 zm\011Bn\011Bn\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:VALFOUND^LU
+		A:Text^Nalezeny DB/klientsk\00E9 hodnoty^O
+	CE:
+	CS:WRNOROWS^LU
+		A:Text^Nebyly zpracov\00E1ny \017E\00E1dn\00E9 \0159\00E1dky^O
+	CE:
+CE:
+CS:IntfaceDirection^LU
+	A:Prompt^Sm\011Br p\0159evodu^O
+	CS:1^LU
+		A:Text^Vstupn\00ED soubor^O
+	CE:
+	CS:2^LU
+		A:Text^V\00FDstupn\00ED soubor^O
+	CE:
+	CS:3^LU
+		A:Text^\017D\00E1dn\00FD^O
+	CE:
+	CS:4^LU
+		A:Text^Ze zdroje^O
+	CE:
+	CS:5^LU
+		A:Text^Replika\010Dn\00ED struktura^O
+	CE:
+	CS:6^LU
+		A:Text^Migrace Excel^O
+	CE:
+CE:
+CS:IntfaceDocumentation^LU
+	A:Prompt^Dokumentace rozhran\00ED^O
+	CS:INFTXTDETAIL^LU
+		A:Text^Nepou\017Eito^O
+	CE:
+	CS:INFTXTHEADER^LU
+		A:Text^Nepou\017Eito^O
+	CE:
+	CS:INFTXTMETHLI^LU
+		A:Text^Nepou\017Eito^O
+	CE:
+	CS:INTFACE_DOCUMENTATION_REP^LU
+		A:Title^Dokumentace migrace^O
+		CS:ACTION^LU
+			A:Title^Akce^O
+		CE:
+		CS:AMOUNT_FACTOR^LU
+			A:Title^Koeficient \010D\00E1stky^O
+		CE:
+		CS:ATTR_SEQ^LU
+			A:Title^Po\0159ad\00ED atributu^O
+		CE:
+		CS:BLOCK_TYPE^LU
+			A:Title^Typ bloku^O
+		CE:
+		CS:CHANGE_DEFAULTS^LU
+			A:Title^Zm\011Bnit v\00FDchoz\00ED^O
+		CE:
+		CS:COLS_USING_LIST^LU
+			A:Title^Sloupce s\00A0konverzn\00EDm seznamem:^O
+		CE:
+		CS:COLUMN_EMBRACE^LU
+			A:Title^Ohrani\010Den\00ED sloupc\016F^O
+		CE:
+		CS:COLUMN_NAME^LU
+			A:Title^C\00EDlov\00FD sloupec^O
+		CE:
+		CS:COLUMN_SEPARATOR^LU
+			A:Title^Odd\011Blova\010D sloupc\016F^O
+		CE:
+		CS:CONVERT_ATTR^LU
+			A:Title^Atribut p\0159evodu^O
+		CE:
+		CS:CONV_LIST_DESCR^LU
+			A:Title^Popis konv. sezn.^O
+		CE:
+		CS:CONV_LIST_ID^LU
+			A:Title^Konv. seznam^O
+		CE:
+		CS:DATA_TYPE^LU
+			A:Title^Datov\00FD typ^O
+		CE:
+		CS:DATE_FORMAT^LU
+			A:Title^Form\00E1t data^O
+		CE:
+		CS:DECIMAL_LENGTH^LU
+			A:Title^Po\010Det desetinn\00FDch m\00EDst^O
+		CE:
+		CS:DECIMAL_POINT^LU
+			A:Title^Desetinn\00E1 \010D\00E1rka^O
+		CE:
+		CS:DEFAULT_VALUE^LU
+			A:Title^V\00FDchoz\00ED hodnota^O
+		CE:
+		CS:DEFAULT_WHERE^LU
+			A:Title^V\00FDchoz\00ED Where^O
+		CE:
+		CS:DESCR_COLUMN_NAME^LU
+			A:Title^N\00E1zev sloupce^O
+		CE:
+		CS:DIRECTION^LU
+			A:Title^Sm\011Br^O
+		CE:
+		CS:DIRECTION_DB^LU
+			A:Title^Sm\011Br DB^O
+		CE:
+		CS:EXECUTED_BY^LU
+			A:Title^Provedl^O
+		CE:
+		CS:EXECUTE_SEQ^LU
+			A:Title^Po\0159ad\00ED proveden\00ED^O
+		CE:
+		CS:FILE_LOCATION^LU
+			A:Title^Um\00EDst\011Bn\00ED souboru^O
+		CE:
+		CS:FILE_LOCATION_DB^LU
+			A:Title^DB um\00EDst\011Bn\00ED souboru^O
+		CE:
+		CS:FLAGS^LU
+			A:Title^P\0159\00EDznaky^O
+		CE:
+		CS:GROUP_DESCRIPTION^LU
+			A:Title^Popis skupiny^O
+		CE:
+		CS:GROUP_ID^LU
+			A:Query^ID skupiny:^O
+			A:Title^ID skupiny^O
+		CE:
+		CS:INFO_TEXT_DETAIL^LU
+			A:Title^Informace:^O
+		CE:
+		CS:INFO_TEXT_HEADER^LU
+			A:Title^Informace:^O
+		CE:
+		CS:INFO_TEXT_METH_LIST^LU
+			A:Title^Informace:^O
+		CE:
+		CS:INTFACE_DESCR^LU
+			A:Title^Popis migrace^O
+		CE:
+		CS:INTFACE_FILE^LU
+			A:Title^Soubor^O
+		CE:
+		CS:INTFACE_IN^LU
+			A:Query^ID d\00E1vky:^O
+		CE:
+		CS:INTFACE_NAME^LU
+			A:Title^ID \00FAlohy migrace^O
+		CE:
+		CS:INTFACE_PATH^LU
+			A:Title^Cesta^O
+		CE:
+		CS:IntfaceDoc.rdl^LU
+			A:Title^Dokument migrace^O
+		CE:
+		CS:LAST_EXECUTED^LU
+			A:Title^Naposledy provedeno^O
+		CE:
+		CS:LAST_INFO^LU
+			A:Title^Informace o\00A0posledn\00EDm proveden\00ED^O
+		CE:
+		CS:LENGTH^LU
+			A:Title^D\00E9lka^O
+		CE:
+		CS:MET_COLUMN_NAME^LU
+			A:Title^Sloupec pravidla^O
+		CE:
+		CS:MET_COLUMN_VALUE^LU
+			A:Title^Hodnota pravidla^O
+		CE:
+		CS:MET_METHOD_NAME^LU
+			A:Title^Metoda^O
+		CE:
+		CS:MET_VIEW_NAME^LU
+			A:Title^Pohled^O
+		CE:
+		CS:MINUS_POS^LU
+			A:Title^Pozice -^O
+		CE:
+		CS:NEW_VALUE^LU
+			A:Title^Nov\00E1 hodnota^O
+		CE:
+		CS:NOTE_TEXT_DETAIL^LU
+			A:Title^Koment\00E1\0159e^O
+		CE:
+		CS:NOTE_TEXT_GROUP^LU
+			A:Title^Koment\00E1\0159e^O
+		CE:
+		CS:NOTE_TEXT_HEADER^LU
+			A:Title^Koment\00E1\0159e^O
+		CE:
+		CS:NOTE_TEXT_METH_LIST^LU
+			A:Title^Koment\00E1\0159e^O
+		CE:
+		CS:OLD_VALUE^LU
+			A:Title^P\016Fvodn\00ED hodnota^O
+		CE:
+		CS:ORDER_BY_CLAUSE^LU
+			A:Title^Se\0159adit podle^O
+		CE:
+		CS:ORDER_BY_COL^LU
+			A:Title^Se\0159adit podle^O
+		CE:
+		CS:PAD_CHAR_LEFT^LU
+			A:Title^Lev\00FD vypl\0148ovac\00ED znak^O
+		CE:
+		CS:PAD_CHAR_RIGHT^LU
+			A:Title^Prav\00FD vypl\0148ovac\00ED znak^O
+		CE:
+		CS:POS^LU
+			A:Title^Pozice^O
+		CE:
+		CS:PRINT_DETAIL^LU
+			A:Query^Tisk mapov\00E1n\00ED sloupce:^O
+		CE:
+		CS:PRINT_DOC_INFO^LU
+			A:Query^Tisk informac\00ED o\00A0dokumentu:^O
+		CE:
+		CS:PRINT_HEADER^LU
+			A:Query^Tisk informac\00ED z\00E1hlav\00ED:^O
+		CE:
+		CS:PRINT_MAP_VALUE^LU
+			A:Query^Tisk mapovan\00FDch hodnot:^O
+		CE:
+		CS:PRINT_METH_LIST^LU
+			A:Query^Tisk seznamu metod:^O
+		CE:
+		CS:PROCEDURE_NAME^LU
+			A:Title^N\00E1zev procedury^O
+		CE:
+		CS:REFERENCES^LU
+			A:Title^Reference^O
+		CE:
+		CS:Report Constants^LU
+			A:txAction^Slou\017E\00ED k\00A0ur\010Den\00ED, zda m\00E1 b\00FDt metoda spu\0161t\011Bna p\0159ed nebo po zpracov\00E1n\00ED vybran\00FDch \0159\00E1dk\016F ze zdroje, nebo zda m\00E1 b\00FDt provedena jednou pro ka\017Ed\00FD \0159\00E1dek na\010Dten\00FD ze zdroje.^O
+			A:txAmountFactor^Toto pole obsahuje jmenovatele pro p\0159epo\010Det hodnoty zdrojov\00E9ho sloupce, je-li to pot\0159eba p\0159ed p\0159evodem na datab\00E1zov\00FD sloupec IFS.^O
+			A:txChangeDefaults^Toto pole ud\00E1v\00E1, zda je \010Di nen\00ED povoleno zm\011Bnit v\00FDchoz\00ED hodnotu p\0159i spu\0161t\011Bn\00ED \00FAlohy migrace.^O
+			A:txColumnName^Datab\00E1zov\00E9 sloupce v\00A0IFS, kam m\00E1 b\00FDt p\0159evedena zdrojov\00E1 hodnota.^O
+			A:txDataType^Datov\00FD typ datab\00E1zov\00E9ho sloupce. Numerick\00E9, alfanumerick\00E9 hodnoty nebo datum.^O
+			A:txDecimalLength^Po\010Det desetinn\00FDch m\00EDst pou\017Eit\00FD p\0159i \010Dten\00ED/z\00E1pisu do souboru.^O
+			A:txDefaultValue^Toto pole slou\017E\00ED k\00A0zad\00E1n\00ED hodnoty, pokud nen\00ED \017E\00E1dn\00E1 hodnota ve zdrojov\00E9m sloupci. Nen\00ED-li zad\00E1n \017E\00E1dn\00FD zdrojov\00FD sloupec, pro v\0161echny \0159\00E1dky bude pou\017Eita standardn\00ED hodnota.^O
+			A:txDescrColumnName^Popis datab\00E1zov\00E9ho sloupce^O
+			A:txDetailTitle^Specifikace mapov\00E1n\00ED sloupc\016F^O
+			A:txExecuteSeq^Zadejte po\0159ad\00ED, v\00A0jak\00E9m maj\00ED b\00FDt spu\0161t\011Bny metody v\00A0seznamu metod.^O
+			A:txFileInfo^Informace o\00A0souboru^O
+			A:txFlags^P\0159\00EDznaky atribut\016F IFS. P\0159\00EDznaky popisuj\00ED r\016Fzn\00E9 atributy p\0159ipojen\00E9 k\00A0datab\00E1zov\00E9mu sloupci IFS. Mohou zahrnovat jednu nebo n\011Bkolik z\00A0n\00E1sleduj\00EDc\00EDch hodnot:^O
+			A:txFlagsI^I = vlo\017Een\00ED povoleno^O
+			A:txFlagsK^K = kl\00ED\010D (ciz\00ED kl\00ED\010D)^O
+			A:txFlagsM^M = povinn\00E9^O
+			A:txFlagsP^P = nad\0159\00EDzen\00FD kl\00ED\010D^O
+			A:txFlagsU^U = aktualizace povolena^O
+			A:txHeaderColMapping^Vysv\011Btlen\00ED sloupc\016F pou\017Eit\00FDch v\00A0mapov\00E1n\00ED sloupc\016F^O
+			A:txHeaderMethodList^Vysv\011Btlivky sloupc\016F pou\017Eit\00FDch v\00A0seznamu metod^O
+			A:txHeaderTitle^Specifikace migra\010Dn\00EDch n\00E1stroj\016F pro^O
+			A:txLastExecutionInfo^Informace o\00A0posledn\00EDm proveden\00ED^O
+			A:txLength^Toto pole ud\00E1v\00E1 maxim\00E1ln\00ED povolenou d\00E9lku datab\00E1zov\00E9ho sloupce IFS. Toto pole se pou\017E\00EDv\00E1 v\00A0kombinaci s\00A0polem Pozice pro \010Dten\00ED/z\00E1pis soubor\016F s\00A0pevnou \0161\00ED\0159kou sloupce.^O
+			A:txMapTitle^Mapov\00E1n\00ED specifick\00FDch hodnot sloupce^O
+			A:txMetColumnName^Slou\017E\00ED k\00A0ur\010Den\00ED, zda metoda m\00E1 b\00FDt spu\0161t\011Bna pouze v\00A0z\00E1vislosti na hodnot\011B tohoto zdrojov\00E9ho sloupce.^O
+			A:txMetColumnValue^Tato metoda bude spu\0161t\011Bna pouze tehdy, shoduje-li se hodnota zdrojov\00E9ho sloupce s\00A0touto hodnotou, tzn. je-li vlo\017Eeno '%', metoda bude provedena pro v\0161echny \0159\00E1dky, kter\00E9 maj\00ED hodnotu ve zdrojov\00E9m sloupci.^O
+			A:txMetMethodName^Zadejte, kter\00E1 metoda IFS nebo samodefinovan\00E1 metoda m\00E1 b\00FDt spu\0161t\011Bna.^O
+			A:txMethodListTitle^Pou\017Eit\00E9/Vytvo\0159en\00E9 metody/API^O
+			A:txPadCharLeft^Toto pole slou\017E\00ED k\00A0zad\00E1n\00ED znaku, kter\00FD m\00E1 b\00FDt od\0159\00EDznut nebo p\0159id\00E1n na levou stranu sloupce p\0159i \010Dten\00ED ze/z\00E1pisu do souboru. (ltrim/lpad)^O
+			A:txPadCharRight^Toto pole slou\017E\00ED k\00A0zad\00E1n\00ED znaku, kter\00FD m\00E1 b\00FDt od\0159\00EDznut nebo p\0159id\00E1n na pravou stranu sloupce p\0159i \010Dten\00ED ze/z\00E1pisu do souboru. (rtrim/rpad)^O
+			A:txPos^Toto pole slou\017E\00ED k\00A0ur\010Den\00ED um\00EDst\011Bn\00ED sloupc\016F v\00A0zadan\00E9m souboru. Pokud se pou\017E\00EDv\00E1 nap\0159. soubor CSV, toto pole bude 1,2,3 atd.^O
+			A:txSourceColumn^Zdrojov\00FD sloupec ze souboru, tabulky nebo pohledu, kter\00FD m\00E1 b\00FDt vlo\017Een do datab\00E1zov\00E9ho sloupce IFS^O
+			A:txTitleDocPage^Definice/Popisy sloupc\016F^O
+			A:txViewInfo^Hlavn\00ED zdrojov\00E9/c\00EDlov\00E9 informace^O
+		CE:
+		CS:SOURCE_COLUMN^LU
+			A:Title^Zdrojov\00FD sloupec^O
+		CE:
+		CS:SOURCE_NAME^LU
+			A:Title^N\00E1zev zdroje^O
+		CE:
+		CS:SOURCE_OWNER^LU
+			A:Title^Vlastn\00EDk zdroje^O
+		CE:
+		CS:THOUSAND_SEPARATOR^LU
+			A:Title^Odd\011Blova\010D tis\00EDc\016F^O
+		CE:
+		CS:VIEW_NAME^LU
+			A:Title^N\00E1zev c\00EDle^O
+		CE:
+		CS:WHERE_CLAUSE^LU
+			A:Title^Kde^O
+		CE:
+	CE:
+	CS:INTFACE_INFO_SERVICES_RPV^LU
+	CE:
+CE:
+CS:IntfaceEvents^LU
+	A:Prompt^Ud\00E1losti rozhran\00ED^O
+CE:
+CS:IntfaceExcelConnect^LU
+	A:Prompt^P\0159ipojen\00ED rozhran\00ED Excel^O
+CE:
+CS:IntfaceExecIntervalType^LU
+	A:Prompt^Typ intervalu spu\0161t\011Bn\00ED rozhran\00ED^O
+	CS:1440^LU
+		A:Text^Minuty^O
+	CE:
+	CS:24^LU
+		A:Text^Hodiny^O
+	CE:
+	CS:86400^LU
+		A:Text^Sekundy^O
+	CE:
+CE:
+CS:IntfaceExecution^LU
+	A:Prompt^Spu\0161t\011Bn\00ED rozhran\00ED^O
+	CS:INTFACE_EXECUTION^LU
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:IC_TABLE_NAME^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionDetail^LU
+	A:Prompt^Detaily spu\0161t\011Bn\00ED rozhran\00ED^O
+	CS:INTFACE_EXECUTION_DETAIL^LU
+		CS:ATTRIBUTE_STRING^LU
+		CE:
+		CS:DATE_EXECUTED^LU
+		CE:
+		CS:ERROR_MESSAGE^LU
+		CE:
+		CS:EXECUTED_BY^LU
+		CE:
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:FILE_STRING^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+		CS:LINE_NO^LU
+		CE:
+		CS:STATUS^LU
+		CE:
+		CS:STATUS_DB^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionUtil^LU
+	CS:BLANKCOLUMNS^LU
+		A:Text^Ve sloupci zdroje nebo v\00FDchoz\00EDch hodnot mus\00ED b\00FDt zad\00E1na hodnota^O
+	CE:
+	CS:CHKCOUNT^LU
+		A:Text^:P1 zkontrolovan\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^\0158\00E1dky potvrzen\00E9 podle pravidla COMMITSEQ: :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Nelze spustit tuto \00FAlohu. P\0159ipojen\00E1 \00FAloha :P1 m\00E1 chyby.^O
+	CE:
+	CS:CREIND^LU
+		A:Text^Byl vytvo\0159en index :P1 ve sloupci :P2^O
+	CE:
+	CS:DUPEXIST^LU
+		A:Text^Existuj\00ED duplicitn\00ED zdrojov\00E9 sloupce. P\0159ed spu\0161t\011Bn\00EDm duplicity odstra\0148te^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^Metoda \010D\00EDslo :P1 - hodnota pro ID \00FAlohy se nem\016F\017Ee rovnat hlavn\00ED \00FAloze^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Provedeno bez chyby^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^PROVEDEN\00CD METODY \010C\00CDSLO :P1 :^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^:P1 nedokon\010Den\00E9 transakce z\00A0d\016Fvodu POTVRZEN\00CD nebo NAVR\00C1CEN\00CD ve volan\00E9 metod\011B^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Ne\00FApln\00FD v\00FDb\011Br nebyl proveden - :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Zkontrolujte v\00FDsledek. Transakce mohou b\00FDt jen \010D\00E1ste\010Dn\011B potvrzen\00E9^O
+	CE:
+	CS:INVALIDLENGTH^LU
+		A:Text^Zdrojov\00FD sloupec nesm\00ED p\0159ekra\010Dovat d\00E9lku 30 znak\016F^O
+	CE:
+	CS:JOBRUNERROR^LU
+		A:Text^Chyba p\0159i prov\00E1d\011Bn\00ED \00FAlohy :P1^O
+	CE:
+	CS:LNGTHINVAL^LU
+		A:Text^N\011Bkter\00E9 zdrojov\00E9 sloupce p\0159ekra\010Duj\00ED d\00E9lku 30. Opravte d\00E9lku zdrojov\00FDch sloupc\016F a pak teprve pokra\010Dujte^O
+	CE:
+	CS:LOADERR^LU
+		A:Text^Chyba p\0159i na\010Dten\00ED \00FAdaj\016F \00FAlohy migrace :P1^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 s\00A0mo\017Enost\00ED KONTROLA^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, chyby: :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Nov\00E9 \0159\00E1dky: :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Zpracovan\00E9 \0159\00E1dky: :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Aktualizovan\00E9 \0159\00E1dky: :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^Pr\016Fm\011Br :P1 \0159\00E1dk\016F za minutu^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 potvrzen\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^Vybr\00E1no :P1 \0159\00E1dk\016F^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 chybn\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Trv\00E1n\00ED :P1 hodin a\00A0:P2 minut^O
+	CE:
+	CS:NODET^LU
+		A:Text^Nebyly nalezeny detaily pro :P1^O
+	CE:
+	CS:NONAME^LU
+		A:Text^V\00A0\0159et\011Bzci atribut\016F pro metodu \010D\00EDslo :P1 chyb\00ED hodnota pro ID \00FAlohy^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^ID objektu nebyl vybr\00E1n, ale metoda ADDOBJID je aktivn\00ED^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Restart nen\00ED mo\017En\00FD - :P1 neobsahuje \017E\00E1dn\00FD ID \0159\00E1dku^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^Nen\00ED zad\00E1n \017E\00E1dn\00FD v\00FDb\011Br^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1 m\00E1 :P2 chybn\00FDch \0159\00E1dk\016F a\00A0nelze ji spustit^O
+	CE:
+	CS:NULLCOLS^LU
+		A:Text^U\00A0n\011Bkter\00FDch z\00E1znam\016F chyb\00ED hodnota ve zdrojov\00E9m sloupci i v\00FDchoz\00ED hodnota. P\0159ed spu\0161t\011Bn\00EDm tyto chyby opravte.^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Chyba p\0159i v\00FDb\011Bru :P1 - :P2^O
+	CE:
+	CS:SOURCEDUPLIC^LU
+		A:Text^Zdrojov\00FD sloupec mus\00ED b\00FDt unik\00E1tn\00ED.^O
+	CE:
+	CS:STATINSERT^LU
+		A:Text^Vlo\017Eeno^O
+	CE:
+	CS:STATNOOP^LU
+		A:Text^\017D\00E1dn\00E1 operace^O
+	CE:
+	CS:STATNOTEXT^LU
+		A:Text^Objekt neexistuje^O
+	CE:
+	CS:STATOK^LU
+		A:Text^Ov\011B\0159en\00ED OK^O
+	CE:
+	CS:STATPROC^LU
+		A:Text^Zpracov\00E1no^O
+	CE:
+	CS:STATUPDATE^LU
+		A:Text^Aktualizov\00E1no^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^\010Cas zah\00E1jen\00ED - :P1 :P2^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^Zadan\00E1 d\00E9lka :P2 sloupce :P1 je p\0159ekro\010Dena hodnotou :P3.^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Chyba nastala p\0159i rozbalov\00E1n\00ED :P1 s\00A0hodnotou :P2^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Chyba p\0159i p\0159evodu hodnoty :P2 pro :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED data :P2 pro :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED implicitn\00ED hodnoty :P2 pro :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED \010D\00EDseln\00E9 hodnoty :P2 pro :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Chyba p\0159i \010Dten\00ED hodnot sloupc\016F rozd\011Blen\00FDch odd\011Blova\010Dem sloupc\016F^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Chyba p\0159i form\00E1tov\00E1n\00ED hodnoty \0159et\011Bzce :P2 pro :P1^O
+	CE:
+CE:
+CS:IntfaceFileLocation^LU
+	A:Prompt^Um\00EDst\011Bn\00ED souboru rozhran\00ED^O
+	CS:1^LU
+		A:Text^Na server^O
+	CE:
+	CS:2^LU
+		A:Text^Na klienta^O
+	CE:
+	CS:3^LU
+		A:Text^\017D\00E1dn\00FD soubor^O
+	CE:
+CE:
+CS:IntfaceFormatChar^LU
+	A:Prompt^Form\00E1t znak\016F rozhran\00ED^O
+	CS:124^LU
+		A:Text^<trubka>^O
+	CE:
+	CS:13^LU
+		A:Text^<n\00E1vrat voz\00EDku>^O
+	CE:
+	CS:164^LU
+		A:Text^<znak m\011Bny>^O
+	CE:
+	CS:32^LU
+		A:Text^<mezera>^O
+	CE:
+	CS:34^LU
+		A:Text^<dvojit\00E9 uvozovky>^O
+	CE:
+	CS:35^LU
+		A:Text^<dvojit\00FD k\0159\00ED\017Eek>^O
+	CE:
+	CS:39^LU
+		A:Text^<jednoduch\00E9 uvozovky>^O
+	CE:
+	CS:42^LU
+		A:Text^<hv\011Bzdi\010Dka>^O
+	CE:
+	CS:44^LU
+		A:Text^<\010D\00E1rka>^O
+	CE:
+	CS:46^LU
+		A:Text^<te\010Dka>^O
+	CE:
+	CS:48^LU
+		A:Text^<nula>^O
+	CE:
+	CS:59^LU
+		A:Text^<st\0159edn\00EDk>^O
+	CE:
+	CS:9^LU
+		A:Text^<tabul\00E1tor>^O
+	CE:
+CE:
+CS:IntfaceGroup^LU
+	A:Prompt^Skupina rozhran\00ED^O
+	CS:INTFACE_GROUP^LU
+	CE:
+CE:
+CS:IntfaceHeader^LU
+	A:Prompt^Hlavi\010Dka rozhran\00ED^O
+	CS:BATCHJOBCOMP^LU
+		A:Text^Prov\00E1d\011Bn\00ED d\00E1vky :P1 dokon\010Deno.^O
+	CE:
+	CS:BATCHJOBERROR^LU
+		A:Text^Prov\00E1d\011Bn\00ED d\00E1vky :P1 skon\010Dilo s\00A0chybami. Dal\0161\00ED informace viz okno Historie d\00E1vky.^O
+	CE:
+	CS:BCKFILE^LU
+		A:Text^N\00E1zev z\00E1lohov\00E9ho souboru: :P1^O
+	CE:
+	CS:BCKPATH^LU
+		A:Text^Cesta z\00E1lohov\00E9ho souboru: :P1^O
+	CE:
+	CS:COPYERR^LU
+		A:Text^Chyba p\0159i vytv\00E1\0159en\00ED :P1 - :P2^O
+	CE:
+	CS:COPYOK^LU
+		A:Text^\00DAloha migrace :P1 vytvo\0159ena^O
+	CE:
+	CS:DELFILE^LU
+		A:Text^Soubor :P1 byl odstran\011Bn^O
+	CE:
+	CS:DEPREC^LU
+		A:Text^Funkce exportu rychl\00E9 sestavy migrace dat je zastaral\00E1. Pou\017Eijte m\00EDsto n\00ED vestav\011Bnou funkci Import/Export pro rychl\00E9 sestavy.^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^V\00FDchoz\00ED WHERE se nepou\017E\00EDv\00E1 pro sm\011Br = :P1^O
+	CE:
+	CS:EXECNO^LU
+		A:Text^Proveden\00ED \010D. :P1^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Chyba p\0159i exportu :P1 - :P2^O
+	CE:
+	CS:EXPTXT1^LU
+		A:Text^Exportovan\00E9 \00FAlohy migrace:^O
+	CE:
+	CS:EXPTXT2^LU
+		A:Text^Exportovan\00E9 migra\010Dn\00ED skupiny:^O
+	CE:
+	CS:EXPTXT3^LU
+		A:Text^Exportovan\00E9 konverzn\00ED seznamy:^O
+	CE:
+	CS:EXPTXT4^LU
+		A:Text^Exportovan\00E9 triggery:^O
+	CE:
+	CS:EXPTXT5^LU
+		A:Text^Exportovan\00E9 bal\00ED\010Dky:^O
+	CE:
+	CS:EXPTXT6^LU
+		A:Text^Vytvo\0159en\00E9 soubory:^O
+	CE:
+	CS:EXPTXT7^LU
+		A:Text^NEEXPORTOVAN\00C9 konverzn\00ED seznamy:^O
+	CE:
+	CS:IMPERR^LU
+		A:Text^Chyba p\0159i importu :P1 - :P2^O
+	CE:
+	CS:IMPTXT1^LU
+		A:Text^Importovan\00E9 nov\00E9 \00FAlohy migrace:^O
+	CE:
+	CS:IMPTXT10^LU
+		A:Text^\00DAlohy replikace mus\00ED b\00FDt restartov\00E1ny:^O
+	CE:
+	CS:IMPTXT2^LU
+		A:Text^Importovan\00E9 nov\00E9 skupiny:^O
+	CE:
+	CS:IMPTXT3^LU
+		A:Text^Importovan\00E9 konverzn\00ED seznamy:^O
+	CE:
+	CS:IMPTXT4^LU
+		A:Text^NEVLO\017DEN\00C9 \00FAlohy migrace:^O
+	CE:
+	CS:IMPTXT5^LU
+		A:Text^NEVLO\017DEN\00C9 skupiny:^O
+	CE:
+	CS:IMPTXT6^LU
+		A:Text^NEVLO\017DEN\00C9 konverzn\00ED seznamy:^O
+	CE:
+	CS:IMPTXT7^LU
+		A:Text^Importovan\00E9 a\00A0nahrazen\00E9 \00FAlohy migrace:^O
+	CE:
+	CS:IMPTXT8^LU
+		A:Text^Importovan\00E9 a\00A0nahrazen\00E9 skupiny:^O
+	CE:
+	CS:IMPTXT9^LU
+		A:Text^Importovan\00E9 a\00A0nahrazen\00E9 konverzn\00ED seznamy:^O
+	CE:
+	CS:INTFACE_ALLOWED_JOBS^LU
+		CS:DESCRIPTION^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+	CS:INTFACE_CHARACTERSET_LOV^LU
+	CE:
+	CS:INTFACE_HEADER^LU
+	CE:
+	CS:INTFACE_REPL_EXPORT_INFO^LU
+	CE:
+	CS:INTFACE_TABLE_NAME_LOV^LU
+	CE:
+	CS:JOBBATERR^LU
+		A:Text^Ne\00FAsp\011B\0161n\00E1 odlo\017Een\00E1 vol\00E1n\00ED pro :P1 - :P2^O
+	CE:
+	CS:LISTERR^LU
+		A:Text^Seznam hodnot nesm\00ED za\010D\00EDnat st\0159edn\00EDkem^O
+	CE:
+	CS:LONGNAME^LU
+		A:Text^ID \00FAlohy :P1 je p\0159\00EDli\0161 dlouh\00FD. Nesm\00ED p\0159ekro\010Dit 24 znak\016F^O
+	CE:
+	CS:MOVPATH^LU
+		A:Text^Cesta pro p\0159esun souboru: :P1^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Trv\00E1n\00ED :P1 hodin a\00A0:P2 minut^O
+	CE:
+	CS:NAMEERR^LU
+		A:Text^Jestli\017Ee typ = :P1, nesm\00ED b\00FDt n\00E1zev del\0161\00ED ne\017E :P2 znak\016F (:P3)^O
+	CE:
+	CS:NOCOLUMN^LU
+		A:Text^V\00A0\00FAloze neexistuj\00ED \017E\00E1dn\00E9 sloupce ze souboru^O
+	CE:
+	CS:NOFILE_ERROR^LU
+		A:Text^Um\00EDst\011Bn\00ED souboru \201E:P1\201C nelze pou\017E\00EDt u\00A0d\00E1vek se sm\011Brem nastaven\00FDm na \201E:P2\201C nebo \201E:P3\201C.^O
+	CE:
+	CS:NOMAN^LU
+		A:Text^P\0159i spou\0161t\011Bn\00ED ru\010Dn\00EDho re\017Eimu mus\00EDte zadat podm\00EDnku WHERE pro hlavn\00ED pohled ve struktu\0159e^O
+	CE:
+	CS:NOPRIV^LU
+		A:Text^Nem\00E1te (:P1) opr\00E1vn\011Bn\00ED pro vytv\00E1\0159en\00ED nov\00FDch \00FAloh migrace dat^O
+	CE:
+	CS:NOREPL^LU
+		A:Text^Nelze spustit :P1 v\00A0d\00E1vce. Triggery nejsou aktivovan\00E9^O
+	CE:
+	CS:NOTRIG^LU
+		A:Text^Triggery jsou vygenerovan\00E9. Nem\016F\017Eete zm\011Bnit re\017Eim na :P1^O
+	CE:
+	CS:NOWHERE^LU
+		A:Text^Mus\00EDte vlo\017Eit podm\00EDnku WHERE pro replika\010Dn\00ED \00FAlohy s\00A0re\017Eimem=Ru\010Dn\00ED^O
+	CE:
+	CS:QUICKERR^LU
+		A:Text^N\00E1zev procedury :P1 lze pou\017E\00EDt pouze spole\010Dn\011B s\00A0n\00E1zvem pohledu QUICK_REPORT^O
+	CE:
+	CS:RANFILE^LU
+		A:Text^N\00E1zev p\0159ejmenovan\00E9ho souboru: :P1^O
+	CE:
+	CS:RENPATH^LU
+		A:Text^Cesta k\00A0p\0159ejmenovan\00E9mu souboru: :P1^O
+	CE:
+	CS:SELECTOK^LU
+		A:Text^P\0159\00EDkaz SELECT je OK, zpracov\00E1n a\00A0proveden pro 1 \0159\00E1dek^O
+	CE:
+	CS:SELLENGTH^LU
+		A:Text^D\00E9lka p\0159\00EDkazu: :P1 znak\016F^O
+	CE:
+	CS:SERVOK^LU
+		A:Text^Datab\00E1zov\00E1 \00FAloha :P1 je napl\00E1nov\00E1na pro d\00E1vku :P2.^O
+	CE:
+	CS:STARTBATERR^LU
+		A:Text^Nepoda\0159ilo se spustit :P1 - :P2^O
+	CE:
+	CS:STARTJOBERR^LU
+		A:Text^Nepoda\0159ilo se spustit :P1 - :P2^O
+	CE:
+	CS:STARTOK^LU
+		A:Text^\00DAloha migrace :P1 byla spu\0161t\011Bna na pozad\00ED^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^\010Cas ukon\010Den\00ED - :P1 :P2^O
+	CE:
+	CS:TRIGDEL^LU
+		A:Text^P\0159ed odstran\011Bn\00EDm t\00E9to \00FAlohy mus\00EDte smazat triggery^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^Od hodnoty :P1 nem\016F\017Ee b\00FDt sou\010D\00E1st\00ED seznamu hodnot^O
+	CE:
+	CS:WHENERR^LU
+		A:Text^When-statement pro trigger by m\011Bl b\00FDt p\0159esunut ze sloupce :P1 do :P2^O
+	CE:
+	CS:WILDERR^LU
+		A:Text^Z\00E1stupn\00E9 znaky v\00A0n\00E1zvu souboru lze pou\017E\00EDt pouze p\0159i exportu dat do serverov\00FDch soubor\016F^O
+	CE:
+	CS:WRONGCOL^LU
+		A:Text^Sloupec :P1 neexistuje v\00A0\00FAloze :P2^O
+	CE:
+	CS:WRONGDIR^LU
+		A:Text^Pravidlo SYNCDETAILS lze pou\017E\00EDt pouze p\0159i \010Dten\00ED soubor\016F^O
+	CE:
+CE:
+CS:IntfaceJobDetail^LU
+	A:Prompt^Detaily \00FAlohy rozhran\00ED^O
+	CS:CLIENTCLEAN^LU
+		A:Text^Pravidlo CLEANUP s\00A0hodnotou BEFORE nen\00ED povoleno pro klientsk\00FD soubor^O
+	CE:
+	CS:CLOSEFILERR^LU
+		A:Text^Chyba p\0159i zav\00EDr\00E1n\00ED souboru :P1^O
+	CE:
+	CS:CLOSEJOBERR^LU
+		A:Text^Chyba p\0159i zav\00EDr\00E1n\00ED \00FAlohy :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^P\0159ipojen\00E1 \00FAloha :P1 m\00E1 chybov\00E9 \0159\00E1dky^O
+	CE:
+	CS:CONNJOBERR^LU
+		A:Text^Nelze spustit \00FAlohu :P1^O
+	CE:
+	CS:EMPTYFILE^LU
+		A:Text^Soubor :P1 na :P2 je pr\00E1zdn\00FD, \00FAloha nebyla zah\00E1jena^O
+	CE:
+	CS:HISTERR^LU
+		A:Text^Chyba p\0159i vytv\00E1\0159en\00ED historie :P1^O
+	CE:
+	CS:INITJOBERR^LU
+		A:Text^Nepoda\0159ilo se iniciovat \00FAlohu :P1^O
+	CE:
+	CS:INTFACE_JOB_DETAIL^LU
+	CE:
+	CS:LOADFILERR^LU
+		A:Text^Chyba p\0159i zav\00E1d\011Bn\00ED souboru :P1 na :P2^O
+	CE:
+	CS:NOFILE^LU
+		A:Text^Soubor :P1 neexistuje na :P2, \00FAloha nebyla zah\00E1jena^O
+	CE:
+	CS:PREPERR^LU
+		A:Text^Chyba p\0159i p\0159\00EDprav\011B detail\016F :P1^O
+	CE:
+	CS:SERVFILEERR^LU
+		A:Text^Chyba ve zpracov\00E1n\00ED souboru - :P1^O
+	CE:
+	CS:UNPACKEND^LU
+		A:Text^Rozbalen\00ED dokon\010Deno pro \00FAlohu :P1^O
+	CE:
+	CS:UNPACKERR^LU
+		A:Text^Chyba nastala p\0159i rozbalov\00E1n\00ED ==> :P1^O
+	CE:
+CE:
+CS:IntfaceJobHistDetail^LU
+	A:Prompt^Detaily historie \00FAlohy rozhran\00ED^O
+	CS:INTFACE_JOB_HIST_DETAIL^LU
+	CE:
+CE:
+CS:IntfaceJobHistHead^LU
+	A:Prompt^Hlavi\010Dka historie \00FAlohy rozhran\00ED^O
+	CS:INTFACE_JOB_HIST_HEAD^LU
+	CE:
+CE:
+CS:IntfaceJobStatus^LU
+	A:Prompt^Stav \00FAlohy rozhran\00ED^O
+	CS:1^LU
+		A:Text^\017D\00E1dn\00FD soubor^O
+	CE:
+	CS:2^LU
+		A:Text^Na\010Dteno^O
+	CE:
+	CS:3^LU
+		A:Text^Chyba \0159\00E1dku^O
+	CE:
+	CS:4^LU
+		A:Text^\0158\00E1dek OK^O
+	CE:
+	CS:5^LU
+		A:Text^\00DAloha OK^O
+	CE:
+	CS:6^LU
+		A:Text^Prov\00E1d\00ED se^O
+	CE:
+	CS:7^LU
+		A:Text^Ne\00FAsp\011B\0161n\00E1 \00FAloha^O
+	CE:
+CE:
+CS:IntfaceMethodAction^LU
+	A:Prompt^Metoda akce rozhran\00ED^O
+	CS:1^LU
+		A:Text^P\0159ed smy\010Dkou^O
+	CE:
+	CS:2^LU
+		A:Text^Ve smy\010Dce^O
+	CE:
+	CS:3^LU
+		A:Text^Po smy\010Dce^O
+	CE:
+	CS:4^LU
+		A:Text^Bez proveden\00ED^O
+	CE:
+CE:
+CS:IntfaceMethodList^LU
+	A:Prompt^Seznam metod rozhran\00ED^O
+	CS:CHKCOUNT^LU
+		A:Text^:P1 zkontrolovan\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:CLREMAP^LU
+		A:Text^p\0159esunuto do sloupce DB^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^\0158\00E1dky potvrzen\00E9 podle pravidla COMMITSEQ: :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Nelze spustit tuto \00FAlohu. P\0159ipojen\00E1 \00FAloha :P1 m\00E1 chyby.^O
+	CE:
+	CS:CREATEERROR^LU
+		A:Text^Chyba p\0159i vytv\00E1\0159en\00ED tabulky :P1 - :P2^O
+	CE:
+	CS:CREATEVIEWERR^LU
+		A:Text^Chyba p\0159i vytv\00E1\0159en\00ED pohledu :P1 - :P2^O
+	CE:
+	CS:CREIND^LU
+		A:Text^Byl vytvo\0159en index :P1 ve sloupci :P2^O
+	CE:
+	CS:CRETAB^LU
+		A:Text^Vytvo\0159en\00E1 tabulka :P1 (^O
+	CE:
+	CS:DATEVAL^LU
+		A:Text^V\00FDchoz\00ED hodnota syst\00E9mov\00E9ho data z\00A0P\0158\00CDPRAVY^O
+	CE:
+	CS:DBREMAP^LU
+		A:Text^P\0159emapov\00E1no z\00A0hodnoty klienta^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^Metoda \010D\00EDslo :P1 - hodnota pro ID \00FAlohy se nem\016F\017Ee rovnat hlavn\00ED \00FAloze^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Provedeno bez chyby^O
+	CE:
+	CS:GRANTERROR^LU
+		A:Text^Chyba p\0159i p\0159id\011Blov\00E1n\00ED pohledu :P1 syst\00E9mov\00E9mu u\017Eivateli IFS (IFSSYS) - :P2^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^PROVEDEN\00CD METODY \010C\00CDSLO :P1 :^O
+	CE:
+	CS:ILLARGTYPE^LU
+		A:Text^Argument :P1 m\00E1 nep\0159\00EDpustn\00FD typ. Povolen pouze datov\00FD typ DATE VARCHAR2 NUMBER^O
+	CE:
+	CS:ILLMETH^LU
+		A:Text^Metoda :P1 je funkce. Povoleny pouze procedury^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^:P1 nedokon\010Den\00E9 transakce z\00A0d\016Fvodu POTVRZEN\00CD nebo NAVR\00C1CEN\00CD ve volan\00E9 metod\011B^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Ne\00FApln\00FD v\00FDb\011Br nebyl proveden - :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Zkontrolujte v\00FDsledek. Transakce mohou b\00FDt jen \010D\00E1ste\010Dn\011B potvrzen\00E9^O
+	CE:
+	CS:INDEXERROR^LU
+		A:Text^Chyba p\0159i vytv\00E1\0159en\00ED indexu :P1 - :P2^O
+	CE:
+	CS:INSTAB^LU
+		A:Text^Vlo\017Ete do tabulky :P1 s\00A0:P2 \0159\00E1dky^O
+	CE:
+	CS:INTFACE_EXCEL_INPUT_DEFAULT^LU
+	CE:
+	CS:INTFACE_EXCEL_INPUT_FORMAT^LU
+	CE:
+	CS:INTFACE_METHOD_LIST^LU
+	CE:
+	CS:KEEPALL^LU
+		A:Text^Pravidlo KEEPALL nelze pou\017E\00EDt, je-li k\00A0:P1 (:P2) p\0159ipojena dal\0161\00ED \00FAloha^O
+	CE:
+	CS:KEEPERR^LU
+		A:Text^Pravidlo KEEPERR lze pou\017E\00EDt jen tehdy, je-li k\00A0:P1 p\0159ipojena dal\0161\00ED \00FAloha^O
+	CE:
+	CS:MAKEOTHER^LU
+		A:Text^Chyba p\0159i vytv\00E1\0159en\00ED atributu a\00A0odkaz\016F - :P1^O
+	CE:
+	CS:MANDDEF^LU
+		A:Text^<CHYB\011AJ\00CDC\00CD POVINN\00C1 V\00DDCHOZ\00CD_HODNOTA>^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 s\00A0mo\017Enost\00ED KONTROLA^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, chyby: :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Nov\00E9 \0159\00E1dky: :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Zpracovan\00E9 \0159\00E1dky: :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Aktualizovan\00E9 \0159\00E1dky: :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^Pr\016Fm\011Br :P1 \0159\00E1dk\016F za minutu^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 potvrzen\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^Vybr\00E1no :P1 \0159\00E1dk\016F^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 chybn\00FDch \0159\00E1dk\016F^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Trv\00E1n\00ED :P1 hodin a\00A0:P2 minut^O
+	CE:
+	CS:NONAME^LU
+		A:Text^V\00A0\0159et\011Bzci atribut\016F pro metodu \010D\00EDslo :P1 chyb\00ED hodnota pro ID \00FAlohy^O
+	CE:
+	CS:NONBASEVIEW^LU
+		A:Text^P\0159i pokusu vygenerovat seznam metod se nepoda\0159ilo identifikovat standardn\00ED metody pro pohled ":P1". [View Name] mus\00ED b\00FDt z\00E1kladn\00ED pohled logick\00E9 jednotky IFS.^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^ID objektu nebyl vybr\00E1n, ale metoda ADDOBJID je aktivn\00ED^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Restart nen\00ED mo\017En\00FD - :P1 neobsahuje \017E\00E1dn\00FD ID \0159\00E1dku^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^Nen\00ED zad\00E1n \017E\00E1dn\00FD v\00FDb\011Br^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1 m\00E1 :P2 chybn\00FDch \0159\00E1dk\016F a\00A0nelze ji spustit^O
+	CE:
+	CS:NOTEDEF^LU
+		A:Text^Rozhodn\011Bte o\00A0pou\017Eit\00ED V\00FDchoz\00ED hodnoty. VOLITELN\00C9 hodnoty mohou b\00FDt odebr\00E1ny^O
+	CE:
+	CS:NOTINLOOP^LU
+		A:Text^Procedura :P1 mus\00ED b\00FDt spu\0161t\011Bna ve smy\010Dce^O
+	CE:
+	CS:NOTOUTLOOP^LU
+		A:Text^Proceduru :P1 nelze spustit ve smy\010Dce^O
+	CE:
+	CS:NOVIEW^LU
+		A:Text^Zadejte n\00E1zev pohledu pouze v\00A0r\00E1mci smy\010Dky^O
+	CE:
+	CS:OPTDEF^LU
+		A:Text^<CHYB\011AJ\00CDC\00CD VOLITELN\00C1 V\00DDCHOZ\00CD_HODNOTA>^O
+	CE:
+	CS:PREPVAL^LU
+		A:Text^V\00FDchoz\00ED hodnota :P1 z\00A0P\0158\00CDPRAVY^O
+	CE:
+	CS:RENAMTAB^LU
+		A:Text^P\0159ejmenov\00E1na tabulka :P1 s\00A0:P2 z\00E1znamy na :P3^O
+	CE:
+	CS:RESTART^LU
+		A:Text^Restart vlo\017Een\00ED do tabulky :P1^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Chyba p\0159i v\00FDb\011Bru :P1 - :P2^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^N\00E1zev sloupce :P1 je nejednozna\010Dn\011B definov\00E1n^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^\010Cas zah\00E1jen\00ED - :P1 :P2^O
+	CE:
+CE:
+CS:IntfaceMethodListAttrib^LU
+	A:Prompt^Atribut seznamu metod rozhran\00ED^O
+	CS:INTFACE_METHOD_LIST_ATTRIB^LU
+	CE:
+	CS:WRONGSEQ1^LU
+		A:Text^EXECUTE_SEQ :P1 neexistuje^O
+	CE:
+	CS:WRONGSEQ2^LU
+		A:Text^Odkazovan\00E9 po\0159ad\00ED EXECUTE_SEQ mus\00ED b\00FDt p\0159ed t\00EDmto^O
+	CE:
+CE:
+CS:IntfaceMode^LU
+	A:Prompt^Re\017Eim rozhran\00ED^O
+	CS:1^LU
+		A:Text^Ru\010Dn\00ED^O
+	CE:
+	CS:2^LU
+		A:Text^Automatick\00FD^O
+	CE:
+	CS:3^LU
+		A:Text^D\00E1vka^O
+	CE:
+CE:
+CS:IntfacePrUser^LU
+	A:Prompt^Prim\00E1rn\00ED u\017Eivatel rozhran\00ED^O
+	CS:INTFACE_PR_USER^LU
+	CE:
+CE:
+CS:IntfacePrefixOption^LU
+	A:Prompt^Mo\017Enost p\0159edpony souboru^O
+	CS:1^LU
+		A:Text^N\00E1zev pohledu^O
+	CE:
+	CS:2^LU
+		A:Text^Jedine\010Dn\00FD n\00E1zev pohledu^O
+	CE:
+	CS:3^LU
+		A:Text^Bez p\0159edpony^O
+	CE:
+CE:
+CS:IntfacePrivilege^LU
+	A:Prompt^Opr\00E1vn\011Bn\00ED rozhran\00ED^O
+	CS:1^LU
+		A:Text^Aktualizace nepovolena^O
+	CE:
+	CS:2^LU
+		A:Text^Aktualizace povolena^O
+	CE:
+CE:
+CS:IntfaceProcedures^LU
+	A:Prompt^Procedury rozhran\00ED^O
+	CS:CHECK_BY_METHOD_NEW^LU
+		A:Text^Zkontrolovat \0159\00E1dky ze souboru podle Business Logic^O
+	CE:
+	CS:CREATE_OUTPUT_FILE^LU
+		A:Text^Zapsat data do souboru^O
+	CE:
+	CS:CREATE_TABLE_FROM_FI^LU
+		A:Text^Vytvo\0159it tabulku ze souboru^O
+	CE:
+	CS:EXCEL_MIGRATION^LU
+		A:Text^Migrace dat ze souboru Excel^O
+	CE:
+	CS:FNDMIG_EXPORT^LU
+		A:Text^Export definic migrace dat do souboru^O
+	CE:
+	CS:FNDMIG_IMPORT^LU
+		A:Text^Import definic migrace dat ze souboru^O
+	CE:
+	CS:INSERT_BY_METHOD_NEW^LU
+		A:Text^Vlo\017Eit \0159\00E1dky ze souboru^O
+	CE:
+	CS:INSERT_OR_UPDATE^LU
+		A:Text^Vlo\017Eit nebo aktualizovat \0159\00E1dky ze souboru^O
+	CE:
+	CS:INTFACE_PROCEDURES^LU
+	CE:
+	CS:INTFACE_PROC_LOV_EXCL_REPL^LU
+	CE:
+	CS:INTFACE_PROC_LOV_INCL_REPL^LU
+	CE:
+	CS:MIGRATE_SOURCE_DATA^LU
+		A:Text^Migrace dat z\00A0tabulky/pohledu^O
+	CE:
+	CS:REPLICATION^LU
+		A:Text^Replikace^O
+	CE:
+	CS:REPL_DATA_OUT^LU
+		A:Text^Replikovat datov\00E9 struktury^O
+	CE:
+CE:
+CS:IntfaceQuickReportUtil^LU
+	CS:DEPREC^LU
+		A:Text^Funkce je zastaral\00E1. Pou\017Eijte m\00EDsto n\00ED vestav\011Bnou funkci Import/Export pro rychl\00E9 sestavy.^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Chyba p\0159i exportu :P1 - :P2^O
+	CE:
+	CS:EXPOK^LU
+		A:Text^Exportov\00E1no :P1 sestav^O
+	CE:
+CE:
+CS:IntfaceReplElemType^LU
+	A:Prompt^Typ prvku replikace souboru^O
+	CS:AGGREGATE^LU
+		A:Text^Agregovat^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Pole^O
+	CE:
+CE:
+CS:IntfaceReplMaintUtil^LU
+	CS:EXECERR^LU
+		A:Text^Objevila se chyba - :P1^O
+	CE:
+	CS:INTFACE_REPL_DB_OBJECTS^LU
+	CE:
+	CS:INTFACE_SERVER_PROCESSES^LU
+	CE:
+	CS:LOGOK^LU
+		A:Text^Tabulka protokol\016F s\00A0:P1 \0159\00E1dky \00FAsp\011B\0161n\011B zpracov\00E1na pro :P2^O
+	CE:
+	CS:NOUPDATE^LU
+		A:Text^Nelze aktualizovat :P1, proto\017Ee prob\00EDh\00E1 replikace v\00A0tomto procesu. V\0161echny triggery jsou aktivn\00ED.^O
+	CE:
+	CS:REPLFAIL^LU
+		A:Text^Replika\010Dn\00ED \00FAloha :P1 se nezda\0159ila - :P2^O
+	CE:
+	CS:REPLOK^LU
+		A:Text^Procedura :P1 \00FAsp\011B\0161n\011B zpracov\00E1na^O
+	CE:
+CE:
+CS:IntfaceReplMessType^LU
+	A:Prompt^Typ zpr\00E1vy o\00A0replikaci rozhran\00ED^O
+	CS:BIZAPI^LU
+		A:Text^BizApi^O
+	CE:
+	CS:TRACE^LU
+		A:Text^Zobrazit sledov\00E1n\00ED^O
+	CE:
+CE:
+CS:IntfaceReplOutLog^LU
+	A:Prompt^V\00FDstupn\00ED protokol replikace rozhran\00ED^O
+	CS:INTFACE_REPL_OUT_LOG^LU
+	CE:
+CE:
+CS:IntfaceReplPackageUtil^LU
+	CS:COMPERR^LU
+		A:Text^Chyba p\0159i kompilaci bal\00ED\010Dku :P1^O
+	CE:
+	CS:ERR1PAR^LU
+		A:Text^Samostatn\00E9 \0159\00E1dky by nem\011Bly m\00EDt \017E\00E1dnou hodnotu ve sloupci Nad\0159\00EDzen\00E9 po\0159ad\00ED^O
+	CE:
+	CS:ERR2PAR^LU
+		A:Text^Jeden \0159\00E1dek by m\011Bl b\00FDt nad\0159\00EDzen\00FD = bez hodnoty ve sloupci Nad\0159\00EDzen\00E9 po\0159ad\00ED^O
+	CE:
+	CS:ERRLONG^LU
+		A:Text^Zdroj je p\0159\00EDli\0161 dlouh\00FD, nelze zapsat do Intface_Job_Detail - :P1^O
+	CE:
+	CS:KEYERR^LU
+		A:Text^Nad\0159\00EDzen\00FD kl\00ED\010D :P1 neexistuje ve struktu\0159e p\0159ed :P2^O
+	CE:
+	CS:LONGSRC^LU
+		A:Text^Zdroj p\0159\00EDli\0161 dlouh\00FD. Exportujte soubor z\00A0okna Prov\00E9st \00FAlohu a\00A0zave\010Fte z\00A0Admin^O
+	CE:
+	CS:NODATA^LU
+		A:Text^Alespo\0148 jeden \0159\00E1dek mus\00ED b\00FDt ozna\010Den P\0159i slo\017Een\00ED nebo P\0159i aktualizaci^O
+	CE:
+	CS:OTHERS^LU
+		A:Text^Chyba p\0159i kompilaci bal\00ED\010Dku - :P1^O
+	CE:
+CE:
+CS:IntfaceReplRecType^LU
+	A:Prompt^Typ z\00E1znamu replikace rozhran\00ED^O
+	CS:AGGREGATE^LU
+		A:Text^Agregovat^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Pole^O
+	CE:
+CE:
+CS:IntfaceReplStructCols^LU
+	A:Prompt^Sloupce struktury replikace rozhran\00ED^O
+	CS:INTFACE_REPL_STRUCT_COLS^LU
+	CE:
+CE:
+CS:IntfaceReplStructure^LU
+	A:Prompt^Struktura replikace rozhran\00ED^O
+	CS:ERRSEQ^LU
+		A:Text^Nad\0159\00EDzen\00E9 po\0159ad\00ED se nem\016F\017Ee shodovat s\00A0po\0159ad\00EDm^O
+	CE:
+	CS:INSERR^LU
+		A:Text^V\0161echny \0159\00E1dky od startovn\00EDho bodu a\00A0v\00FD\0161e mus\00ED m\00EDt ozna\010Den\00FD sloupec P\0159i vlo\017Een\00ED a\00A0definovan\00FD sloupec Spou\0161t\011Bc\00ED tabulka^O
+	CE:
+	CS:INTFACE_REPL_PARENT_LOV^LU
+	CE:
+	CS:INTFACE_REPL_STRUCTURE^LU
+	CE:
+	CS:INTFACE_REPL_TABLE_LOV^LU
+	CE:
+	CS:MULTIPLESTART^LU
+		A:Text^Pro \00FAlohu m\016F\017Eete definovat pouze jeden startovn\00ED bod^O
+	CE:
+	CS:NONUNIQUE^LU
+		A:Text^Pro :P1 nen\00ED definov\00E1n jednozna\010Dn\00FD hlavn\00ED bod. Pouze jedna polo\017Eka by m\011Bla m\00EDt nad\0159\00EDzen\00E9 po\0159ad\00ED = NULL^O
+	CE:
+	CS:NOSEQ^LU
+		A:Text^Nelze pou\017E\00EDt toto nad\0159\00EDzen\00E9 po\0159ad\00ED. \017D\00E1dn\00E9 \0159\00E1dky s\00A0po\0159ad\00EDm :P1^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^:P1 = :P2, hodnota nesm\00ED b\00FDt v\011Bt\0161\00ED ne\017E 99^O
+	CE:
+CE:
+CS:IntfaceReplTriggersUtil^LU
+	CS:ALTERR^LU
+		A:Text^Chyba p\0159i zm\011Bn\011B triggeru :P1 - :P2^O
+	CE:
+	CS:COMPERR^LU
+		A:Text^Objevila se chyba pro trigger :P1^O
+	CE:
+	CS:DROPERR^LU
+		A:Text^Chyba p\0159i smaz\00E1n\00ED triggeru :P1 - :P2^O
+	CE:
+	CS:NODEF^LU
+		A:Text^Mus\00EDte vlo\017Eit n\00E1zev tabulky a\00A0ozna\010Dit P\0159i vlo\017Een\00ED nebo P\0159i aktualizaci u\00A0alespo\0148 jedn\00E9 polo\017Eky struktury^O
+	CE:
+CE:
+CS:IntfaceReplicCriteria^LU
+	A:Prompt^Krit\00E9ria replikace rozhran\00ED^O
+	CS:1^LU
+		A:Text^Smlouva^O
+	CE:
+	CS:2^LU
+		A:Text^Spole\010Dnost^O
+	CE:
+CE:
+CS:IntfaceReplicationLog^LU
+	A:Prompt^Protokol o\00A0replikaci rozhran\00ED^O
+	CS:INTFACE_REPLICATION_LOG^LU
+	CE:
+CE:
+CS:IntfaceRuleFlag^LU
+	A:Prompt^P\0159\00EDznak pravidla rozhran\00ED^O
+	CS:1^LU
+		A:Text^Aktivn\00ED^O
+	CE:
+	CS:2^LU
+		A:Text^Neaktivn\00ED^O
+	CE:
+CE:
+CS:IntfaceRuleValue^LU
+	A:Prompt^Hodnota pravidla rozhran\00ED^O
+	CS:1^LU
+		A:Text^Nepovolena \017E\00E1dn\00E1 hodnota^O
+	CE:
+	CS:2^LU
+		A:Text^Povinn\00E9 \010D\00EDslo^O
+	CE:
+	CS:3^LU
+		A:Text^Povinn\00FD \0159et\011Bzec^O
+	CE:
+	CS:4^LU
+		A:Text^Povinn\00E9 datum^O
+	CE:
+	CS:5^LU
+		A:Text^Voliteln\00E9^O
+	CE:
+CE:
+CS:IntfaceRules^LU
+	A:Prompt^Pravidla rozhran\00ED^O
+	CS:CHECKRULEERROR^LU
+		A:Text^Pravidlo :P1 nen\00ED platn\00E9 pro n\00E1zev procedury :P2.^O
+	CE:
+	CS:ERRCONN^LU
+		A:Text^\00DAloha :P1 je ji\017E p\0159ipojena k\00A0:P2^O
+	CE:
+	CS:ERRCONN2^LU
+		A:Text^\00DAloha :P1 mus\00ED pou\017E\00EDt proceduru CREATE_TABLE_FROM_FILE^O
+	CE:
+	CS:ERRORVAL1^LU
+		A:Text^Platn\00E9 hodnoty jsou KEEPALL, KEEPERR nebo NOBACKUP^O
+	CE:
+	CS:ERRORVAL2^LU
+		A:Text^Platn\00E9 hodnoty jsou INSERT nebo UPDATE^O
+	CE:
+	CS:ERRORVAL3^LU
+		A:Text^Platn\00E9 hodnoty jsou BEFORE nebo AFTER^O
+	CE:
+	CS:FILERULEERR^LU
+		A:Text^Pravidlo :P1 nem\016F\017Ee b\00FDt aktivn\00ED, pokud je :P2 aktivn\00ED^O
+	CE:
+	CS:INTFACE_RULES^LU
+	CE:
+	CS:INTFACE_RULES_LOV^LU
+	CE:
+	CS:REPLUSR1^LU
+		A:Text^Toto pravidlo lze pou\017E\00EDt pouze pro \00FAlohy REPLIKACE^O
+	CE:
+	CS:REPLUSR2^LU
+		A:Text^Alternativn\00ED u\017Eivatel nen\00ED definov\00E1n v\00A0parametrech syst\00E9mu v\00A0aplikaci Admin.exe^O
+	CE:
+	CS:REPLUSR3^LU
+		A:Text^Alternativn\00ED u\017Eivatel nesm\00ED b\00FDt definov\00E1n stejn\011B jako Appowner v\00A0parametrech syst\00E9mu v\00A0aplikaci Admin.exe^O
+	CE:
+CE:
+CS:IntfaceServerFile^LU
+	A:Prompt^Soubor severu rozhran\00ED^O
+	CS:CNTERR^LU
+		A:Text^P\0159i po\010D\00EDt\00E1n\00ED z\00E1znam\016F se vyskytla chyba^O
+	CE:
+	CS:CREERR^LU
+		A:Text^Z\00E1znamy byly zam\00EDtnuty. Zkontrolujte soubor protokolu ze zahajovac\00EDho okna^O
+	CE:
+	CS:INTFACE_SERVER_DIR_LOV^LU
+		CS:NAME^LU
+		CE:
+		CS:PATH^LU
+		CE:
+	CE:
+	CS:INTFACE_SERVER_FILES_LOV^LU
+		CS:FILE_DATE^LU
+		CE:
+		CS:FILE_NAME^LU
+		CE:
+		CS:FILE_SIZE^LU
+		CE:
+	CE:
+	CS:NOFILE^LU
+		A:Text^Soubor :P1 neexistuje na :P2^O
+	CE:
+	CS:NOICTAB^LU
+		A:Text^Tabulka :P1 neexistuje^O
+	CE:
+	CS:NOINS^LU
+		A:Text^Vlo\017Een\00ED v\00A0tabulce IC selhalo. Rozbalen\00ED souboru RMB v\00A0okn\011B spu\0161t\011Bn\00ED \00FAlohy zobraz\00ED chyby form\00E1tu. :P1^O
+	CE:
+	CS:NOSERV^LU
+		A:Text^Um\00EDst\011Bn\00ED souboru mus\00ED b\00FDt :P1, ne :P2. Aktualizujte z\00E1hlav\00ED \00FAlohy^O
+	CE:
+	CS:NOTAB^LU
+		A:Text^Extern\00ED tabulka nevytvo\0159ena. :P1^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^N\00E1zev sloupce :P1 je nejednozna\010Dn\011B definov\00E1n^O
+	CE:
+CE:
+CS:IntfaceTableMigrations^LU
+	A:Prompt^Parametry migra\010Dn\00ED tabulky^O
+	CS:INTFACE_TABLE_MIGRATIONS^LU
+	CE:
+	CS:NOCOL^LU
+		A:Text^\017D\00E1dn\00E9 sloupce k\00A0aktualizaci^O
+	CE:
+	CS:PROCERR^LU
+		A:Text^Chyba :P1^O
+	CE:
+	CS:TABERR^LU
+		A:Text^Nelze aktualizovat :P2.:P1^O
+	CE:
+CE:
+CS:IntfaceUser^LU
+	A:Prompt^U\017Eivatel rozhran\00ED^O
+	CS:INTFACE_USER^LU
+	CE:
+CE:
+CS:IntfaceUtil^LU
+	CS:COMPILE_ERRORS^LU
+		A:Text^Chyby p\0159i kompilaci pro triggery :P1^O
+	CE:
+	CS:UPDERR^LU
+		A:Text^Nem\016F\017Eete aktualizovat jin\00E9 tabulky ne\017E IC^O
+	CE:
+CE:
+CS:IntfaceViews^LU
+	A:Prompt^Pohledy rozhran\00ED^O
+	CS:INTFACE_SOURCE_COL_LOV^LU
+	CE:
+	CS:INTFACE_VIEWS^LU
+	CE:
+	CS:INTFACE_VIEWS_COL_INFO^LU
+	CE:
+CE:
+CS:IntfaceXsdUtil^LU
+	CS:XSDCRE^LU
+		A:Text^Soubor XSD vytvo\0159en jako klientsk\00FD soubor, :P1 \0159\00E1dk\016F^O
+	CE:
+CE:

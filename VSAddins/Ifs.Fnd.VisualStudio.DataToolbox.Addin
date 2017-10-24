@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Extensibility xmlns="http://schemas.microsoft.com/AutomationExtensibility">
+	<HostApplication>
+		<Name>Microsoft Visual Studio</Name>
+		<Version>12.0</Version>
+	</HostApplication>
+	<Addin>
+		<FriendlyName>Data Toolbox Addin</FriendlyName>
+		<Description>DataToolboxAddin</Description>
+		<Assembly>Ifs.Fnd.VisualStudio.DataToolbox.dll</Assembly>
+		<FullClassName>Ifs.Fnd.VisualStudio.DataToolbox.Connect</FullClassName>
+		<LoadBehavior>1</LoadBehavior>
+		<CommandPreload>1</CommandPreload>
+		<CommandLineSafe>0</CommandLineSafe>
+	</Addin>
+</Extensibility>

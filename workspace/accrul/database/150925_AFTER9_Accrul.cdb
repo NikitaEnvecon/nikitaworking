@@ -1,0 +1,194 @@
+-----------------------------------------------------------------------------
+--  Module : ACCRUL
+--
+--  File   : 150925_AFTER9_Accrul.cdb
+--
+--  IFS Developer Studio Template Version 2.6
+--
+--  Date     Sign    History
+--  ------   ------  --------------------------------------------------
+--  150727   PKurlk  Created.
+--  ------   ------  --------------------------------------------------
+-----------------------------------------------------------------------------
+
+DEFINE MODULE           = ACCRUL
+DEFINE PATCH_DATE       = 150925
+DEFINE PATCH_ID         = AFTER9
+DEFINE FILE_NAME        = &PATCH_DATE._&PATCH_ID._&MODULE..CDB
+
+SET SERVEROUTPUT ON
+PROMPT Starting &FILE_NAME
+
+PROMPT Set column tax_recoverable nullable in statutory_fee_tab
+DECLARE
+   sub_section_  NUMBER:=1;
+   string_       VARCHAR2(4000);
+BEGIN
+   Installation_SYS.Log_Detail_Time_Stamp('&MODULE', '&FILE_NAME', ('Timestamp_'||sub_section_));
+   IF NOT (Db_Script_Register_Detail_API.Is_Sub_Section_Registered('&MODULE', '&PATCH_ID', sub_section_)) THEN
+      DECLARE
+         table_name_ VARCHAR2(30) := 'STATUTORY_FEE_TAB';
+         column_     Database_SYS.ColRec;
+      BEGIN
+         column_     := Database_SYS.Set_Column_Values('TAX_RECOVERABLE', nullable_ => 'Y');
+         Database_SYS.Alter_Table_Column (table_name_, 'M', column_, TRUE);
+      END;
+      
+      Db_Script_Register_Detail_API.Register_Sub_Section(
+         '&MODULE', 
+         '&PATCH_ID',
+         sub_section_,
+         'TRUE',
+         file_name_ => '&FILE_NAME');
+   END IF;   
+EXCEPTION
+   WHEN OTHERS THEN
+      string_ := 'Oratext is: '|| SQLERRM||' >>>';
+      Db_Script_Register_Detail_API.Register_Sub_Section(
+         '&MODULE', 
+         '&PATCH_ID',
+         sub_section_,
+         'FALSE',
+         string_,
+         '&FILE_NAME');
+      RAISE;
+END;
+/
+
+PROMPT Adding new columns to accounting_code_part_value_Tab
+DECLARE
+   sub_section_  NUMBER:=2;
+   string_       VARCHAR2(4000);
+BEGIN
+   Installation_SYS.Log_Detail_Time_Stamp('&MODULE', '&FILE_NAME', ('Timestamp_'||sub_section_));
+   IF NOT (Db_Script_Register_Detail_API.Is_Sub_Section_Registered('&MODULE', '&PATCH_ID', sub_section_)) THEN
+      
+      DECLARE
+         table_name_   VARCHAR2(30) := 'ACCOUNTING_CODE_PART_VALUE_TAB';
+         columns_      Database_SYS.ColumnTabType;
+      BEGIN
+         Database_SYS.Reset_Column_Table(columns_);
+         Database_SYS.Set_Table_Column(columns_, 'KEEP_REP_CURRENCY', 'VARCHAR2(20)');
+         Database_SYS.Set_Table_Column(columns_, 'KEEP_REPORTING_ENTITY', 'VARCHAR2(20)');
+         Database_SYS.Alter_Table(table_name_, columns_, TRUE);           
+      END;
+      
+      Db_Script_Register_Detail_API.Register_Sub_Section(
+         '&MODULE', 
+         '&PATCH_ID',
+         sub_section_,
+         'TRUE',
+         file_name_ => '&FILE_NAME');
+   END IF;   
+EXCEPTION
+   WHEN OTHERS THEN
+      string_ := 'Oratext is: '|| SQLERRM||' >>>';
+      Db_Script_Register_Detail_API.Register_Sub_Section(
+         '&MODULE', 
+         '&PATCH_ID',
+         sub_section_,
+         'FALSE',
+         string_,
+         '&FILE_NAME');
+      RAISE;
+END;
+/
+
+PROMPT Update Keep_Rep_Currency and Keep_Reporting_Entity columns in Account_tab
+DECLARE
+   sub_section_  NUMBER:=3;
+   string_       VARCHAR2(4000);
+BEGIN
+   Installation_SYS.Log_Detail_Time_Stamp('&MODULE', '&FILE_NAME', ('Timestamp_'||sub_section_));
+   IF NOT (Db_Script_Register_Detail_API.Is_Sub_Section_Registered('&MODULE', '&PATCH_ID', sub_section_)) THEN
+      
+      BEGIN
+         UPDATE accounting_code_part_value_tab
+         SET    keep_rep_currency = 'FALSE',
+                keep_reporting_entity = 'FALSE'
+         WHERE  code_part = 'A'
+         AND    keep_rep_currency IS NULL
+         AND    keep_reporting_entity IS NULL;         
+         COMMIT;         
+      END;   
+      
+      Db_Script_Register_Detail_API.Register_Sub_Section(
+         '&MODULE', 
+         '&PATCH_ID',
+         sub_section_,
+         'TRUE',
+         file_name_ => '&FILE_NAME');
+   END IF;   
+EXCEPTION
+   WHEN OTHERS THEN
+      string_ := 'Oratext is: '|| SQLERRM||' >>>';
+      Db_Script_Register_Detail_API.Register_Sub_Section(
+         '&MODULE', 
+         '&PATCH_ID',
+         sub_section_,
+         'FALSE',
+         string_,
+         '&FILE_NAME');
+      RAISE;
+END;
+/
+
+PROMPT Change the order of the columns in the IX1 index on Accounting_Code_Part_Value_TAB
+DECLARE
+   sub_section_  NUMBER:=4;
+   string_       VARCHAR2(4000);
+BEGIN
+   Installation_SYS.Log_Detail_Time_Stamp('&MODULE', '&FILE_NAME', ('Timestamp_'||sub_section_));
+   IF NOT (Db_Script_Register_Detail_API.Is_Sub_Section_Registered('&MODULE', '&PATCH_ID', sub_section_)) THEN 
+      DECLARE
+         index_name_ VARCHAR2(30) := 'ACCOUNTING_PERIOD_IX1';
+         table_name_ VARCHAR2(30) := 'ACCOUNTING_PERIOD_TAB';
+         columns_    Database_SYS.ColumnTabType;
+      BEGIN
+         Database_SYS.Reset_Column_Table(columns_);
+         Database_SYS.Set_Table_Column(columns_, 'COMPANY');
+         Database_SYS.Set_Table_Column(columns_, 'DATE_UNTIL');
+         Database_SYS.Set_Table_Column(columns_, 'DATE_FROM');
+         Database_SYS.Create_Index(table_name_, index_name_, columns_, 'N', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+      END;
+      
+      Db_Script_Register_Detail_API.Register_Sub_Section(
+         '&MODULE', 
+         '&PATCH_ID',
+         sub_section_,
+         'TRUE',
+         file_name_ => '&FILE_NAME');
+   END IF;   
+EXCEPTION
+   WHEN OTHERS THEN
+      string_ := 'Oratext is: '|| SQLERRM||' >>>';
+      Db_Script_Register_Detail_API.Register_Sub_Section(
+         '&MODULE', 
+         '&PATCH_ID',
+         sub_section_,
+         'FALSE',
+         string_,
+         '&FILE_NAME');
+      RAISE;
+END;
+/
+
+---------------------------------------------------------------------------------------
+-- Error Logging...
+---------------------------------------------------------------------------------------
+PROMPT Error LOGGING...
+BEGIN
+   Db_Script_Register_API.Log_Execution_Errors(
+      '&MODULE',
+      '&PATCH_ID');       
+END;
+/
+
+SET SERVEROUTPUT OFF
+PROMPT Ending &FILE_NAME
+EXEC Installation_SYS.Log_Detail_Time_Stamp('&MODULE', '&FILE_NAME', 'Done');
+
+UNDEFINE MODULE           
+UNDEFINE PATCH_DATE       
+UNDEFINE PATCH_ID         
+UNDEFINE FILE_NAME

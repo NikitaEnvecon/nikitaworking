@@ -1,0 +1,73 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: MdmBasicDataHeader
+--  Component:    MDMGT
+--
+--  Template:     3.0
+--  Built by:     IFS Developer Studio 10.82.731.20170505
+--
+--  NOTE! Do not edit!! This file is completely generated and will be
+--        overwritten next time the corresponding model is saved.
+-----------------------------------------------------------------------------
+
+
+layer Base;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+COLUMN Template_Id IS
+   Flags      = 'K-I-L'
+   Datatype   = 'STRING(30)/UPPERCASE'
+   Prompt     = 'Template Id';
+COLUMN Revision IS
+   Flags      = 'K-I-L'
+   Datatype   = 'NUMBER'
+   Prompt     = 'Revision';
+COLUMN Description IS
+   Flags      = 'AMIU-'
+   Datatype   = 'STRING(50)'
+   Prompt     = 'Description';
+COLUMN Created_By IS
+   Flags      = 'AMI--'
+   Datatype   = 'STRING(10)'
+   Prompt     = 'Created By';
+COLUMN Created_Date IS
+   Flags      = 'AMI--'
+   Datatype   = 'DATE/DATE'
+   Prompt     = 'Created Date';
+COLUMN Profile_Id IS
+   Flags      = 'A-IUL'
+   Datatype   = 'STRING(10)'
+   Prompt     = 'Approval Template Id'
+   Ref        = 'ApprovalProfile';
+COLUMN Notes IS
+   Flags      = 'A-IU-'
+   Datatype   = 'LONG_TEXT'
+   Prompt     = 'Notes';
+COLUMN State IS
+   Flags      = 'A---L'
+   Datatype   = 'STRING(20)'
+   Prompt     = 'State';
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+VIEW Mdm_Basic_Data_Header IS
+   Prompt     = 'Mdm Basic Data Header'
+SELECT
+       template_id                    template_id,
+       revision                       revision,
+       description                    description,
+       created_by                     created_by,
+       created_date                   created_date,
+       profile_id                     profile_id,
+       notes                          notes,
+       rowstate                       objstate,
+       Mdm_Basic_Data_Header_API.Finite_State_Events__(rowstate)                     objevents,
+       Mdm_Basic_Data_Header_API.Finite_State_Decode__(rowstate)                         state,
+       rowkey                         objkey,
+       to_char(rowversion,'YYYYMMDDHH24MISS') objversion,
+       rowid                          objid
+FROM   mdm_basic_data_header_tab;

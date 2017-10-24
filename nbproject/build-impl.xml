@@ -1,0 +1,1993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+*****************************************************************************
+*** GENERATED FILE DO NOT EDIT. IT WILL BE OVEWRITTEN. Note: If you edit  ***
+*** this file it will be backed up to nbproject/private and replaced with ***
+*** the latest build-impl.xml which is included with Developer Studio.    ***
+*****************************************************************************
+
+        -->
+<project name="MDMBasicData-impl" default="dist" basedir="." xmlns:artifact="antlib:org.apache.maven.artifact.ant" xmlns:ear2="http://www.netbeans.org/ns/j2ee-earproject/2">
+   <!-- Script to build IFS Applications -->
+   <property file="nbproject/project.properties"/>
+   <property file="nbproject/private/private.properties"/>
+   <!-- Loads all NetBeans registred "Ant Libraries" as variables -->
+   <property file="${user.properties.file}"/>
+
+   <property name="ws.name"             value="ifsapp"/>
+   <property name="ws.name.short"       value="ifsapp"/>
+
+   <property name="server.framework.libs"  value="lib/server/javaruntime"/>
+   <property name="server.app.libs"        value="lib/server/dist"/>
+   <property name="server.thirdparty.libs" value="${basedir}/lib/jars/thirdparty"/>
+
+   <property name="web.ear.name"  value="fndweb.ear"/>
+   <property name="webclient.dir" value="lib/webclient"/>
+   <property name="webclient.fndweb.ear" value="${webclient.dir}/${web.ear.name}"/>
+   <property name="webclient.installer.jar" value="${webclient.dir}/install_plugins/fndweb_installer.jar"/>
+   <property name="webclient.framework.jar" value="${webclient.dir}/lib/ifs-fndweb.jar"/>
+   <property name="webclient.security.plugin.jar" value="${webclient.dir}/security_plugins/ifs-fndweb-httpjaas.jar"/>   
+   <property name="webclient.build" value="${basedir}/${build.dir}/webclient"/>
+   <property name="webclient.dist"  value="${basedir}/${dist.dir}/webclient"/>
+   <property name="fndweb.ear.dist"          value="${webclient.dist}/${web.ear.name}"/>
+   <property name="build.web.components" value=""/>
+
+   <property name="ext.jars.folder"      value="${basedir}/${build.dir}/extjars"/>
+
+   <property name="ws.build"             value="${basedir}/${build.classes.dir}/server"/>
+   <property name="ws.ejb.build"         value="${basedir}/${build.dir}/temp-build-classes"/>
+   <property name="ws.dist"              value="${basedir}/${dist.dir}/server"/>
+   <property name="server.gen.src.dir"   value="${build.generated.sources.dir}/server"/>
+
+   <property name="ws.client.build"      value="${basedir}/${build.classes.dir}/javaclient"/>
+   <property name="ws.client.dist"       value="${basedir}/${dist.dir}/javaclient"/>
+   <property name="client.gen.src.dir"   value="${build.generated.sources.dir}/javaclient"/>
+
+   <property name="websvc.build"          value="${basedir}/${build.classes.dir}/services"/>
+   <property name="websvc.dist"           value="${basedir}/${dist.dir}/services"/>
+   <property name="websvc.gen.src.dir"    value="${build.generated.sources.dir}/services"/>
+   <property name="websvc.module.name"    value="ifsservices"/>
+
+   <property name="build.root"          value="${basedir}/workspace"/>
+   <property name="generate.root"       value="${basedir}"/>
+   <property name="tmp.dir"             value="${build.dir}/temp"/>
+
+  <!-- ============================================================== -->
+  <!--  TASK DEFINITIONS                                              -->
+  <!-- ============================================================== -->
+
+   <path id="maven-ant-tasks.classpath" path="${libs.maven-ant-tasks.classpath}" />
+   <typedef resource="org/apache/maven/artifact/ant/antlib.xml"
+             uri="antlib:org.apache.maven.artifact.ant"
+             classpathref="maven-ant-tasks.classpath" />
+
+   <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+      <classpath>
+         <pathelement location="${libs.ant_contrib_lib.classpath}"/>
+      </classpath>
+   </taskdef>
+
+   <taskdef name="initJars" classname="ifs.dev.buildtasks.InitJarTask">
+      <classpath>
+         <fileset dir="${codegen.modules.path}">
+            <include name="ifs-dev-buildtasks.jar"/>
+         </fileset>
+      </classpath>
+   </taskdef>
+
+
+   <taskdef name="prepareBuild" classname="ifs.dev.buildtasks.PrepareBuildTask">
+      <classpath>
+         <fileset dir="${codegen.modules.path}">
+            <include name="ifs-dev-client.jar"/>
+            <include name="ifs-dev-buildtasks.jar"/>
+            <include name="ifs-dev-model.jar"/>
+            <include name="ifs-dev-model-*.jar"/>
+            <include name="ifs-dev-util.jar"/>
+         </fileset>         
+      </classpath>
+   </taskdef>
+                
+   <taskdef name="setTargetVersionJavaProperties" classname="ifs.dev.buildtasks.VersionPropertySetterTask">
+      <classpath>
+         <fileset dir="${codegen.modules.path}">
+            <include name="ifs-dev-buildtasks.jar"/>
+            <include name="ifs-dev-util.jar"/>
+         </fileset>
+      </classpath>
+   </taskdef>
+
+   <taskdef name="buildWebservices" classname="ifs.dev.buildtasks.BuildWebservicesTask">
+      <classpath>
+         <fileset dir="${codegen.modules.path}">
+            <include name="ifs-dev-client.jar"/>
+            <include name="ifs-dev-buildtasks.jar"/>
+            <include name="ifs-dev-model.jar"/>
+            <include name="ifs-dev-model-*.jar"/>
+            <include name="ifs-dev-util.jar"/>
+         </fileset>         
+      </classpath>
+   </taskdef>
+
+   <taskdef name="packJars" classname="ifs.dev.buildtasks.PackageJarTask">
+      <classpath>
+         <fileset dir="${codegen.modules.path}">
+            <include name="ifs-dev-buildtasks.jar"/>
+         </fileset>
+      </classpath>
+   </taskdef>
+
+   <taskdef name="createApplicationConfigFile" classname="ifs.dev.buildtasks.CreateApplicationConfigFileTask">
+      <classpath>
+         <fileset dir="${codegen.modules.path}">
+            <include name="ifs-dev-client.jar"/>
+            <include name="ifs-dev-util.jar"/>
+            <include name="ifs-dev-buildtasks.jar"/>
+         </fileset>
+      </classpath>
+   </taskdef>
+
+   <taskdef name="genAppXml" classname="ifs.dev.buildtasks.CreateApplicationXml">
+      <classpath>
+         <fileset dir="${codegen.modules.path}">
+            <include name="ifs-dev-buildtasks.jar"/>
+         </fileset>
+      </classpath>
+   </taskdef>
+   
+   <typedef name="modelselector" classname="ifs.dev.buildtasks.ModelFileSelector">
+      <classpath>
+         <fileset dir="${codegen.modules.path}">
+            <include name="ifs-dev-buildtasks.jar"/>
+            <include name="ifs-dev-client.jar"/>
+            <include name="ifs-dev-util.jar"/>
+         </fileset>
+      </classpath>
+    </typedef>
+
+    <typedef name="isgreaterequal" classname="ifs.dev.buildtasks.IsVersionGreaterEqual">
+      <classpath>
+         <fileset dir="${codegen.modules.path}">
+            <include name="ifs-dev-buildtasks.jar"/>
+            <include name="ifs-dev-util.jar"/>
+         </fileset>
+      </classpath>
+    </typedef>
+
+   <path id="sources">
+       <pathelement location="${server.gen.src.dir}"/>
+   </path>
+   
+   <path id="activity">
+       <pathelement location="${server.gen.src.dir}"/>
+   </path>
+                
+   <path id="service">
+       <pathelement location="${server.gen.src.dir}"/>
+   </path>
+                
+   <path id="utility">
+       <pathelement location="${server.gen.src.dir}"/>
+   </path>
+                
+   <path id="entity">
+       <pathelement location="${server.gen.src.dir}"/>
+   </path>
+
+   <path id="classpath">
+    <!-- Jacek: Our F1 framework is newer -->
+    <!--pathelement location="${server.framework.libs}/ifs-fnd-j2ee.jar"/-->
+    <!--pathelement location="${runtime.lib.path}/ifs-fnd-jsf80.jar"/-->
+    <!--pathelement location="${runtime.lib.path}/ifs-fnd-jsf75.jar"/-->
+    <!--pathelement location="${ifs.jsf.jar}"/-->
+   </path>
+
+   <!-- Set java.source.level and project.javaee.version -->
+   <setTargetVersionJavaProperties targetVersion="${applications.version}" />
+
+  <!-- check if the project's version is 9.0-CORE or higher -->
+  <condition property="app9.core.and.above">
+      <isgreaterequal version1="${applications.version}" version2="9.0-CORE"/>
+  </condition>
+  <condition property="app9.above.upd1">
+      <isgreaterequal version1="${applications.version}" version2="9.0-UPDATE1_P1"/>
+  </condition>
+
+  <!-- check if any serverpackages or bizapis have been added to the Application Server (to build) -->
+  <condition property="build.service.layer">
+     <or>
+        <matches string="${build.source.artifacts}" pattern="\b,Serverpackage\b"/>
+        <matches string="${build.source.artifacts}" pattern="\b,Bizapi\b"/>
+     </or>
+  </condition>
+  <!-- check if any webcomponents have been added to the Application Server (to build) -->
+  <condition property="build.web.apps">
+        <matches string="${build.source.artifacts}" pattern="\b,Webcomponent\b"/>
+  </condition>
+
+  <!-- check if any webservices have been added to the Application Server (to build) -->
+  <condition property="build.jaxws.services">
+        <matches string="${build.source.artifacts}" pattern="\b,Webservice\b"/>
+  </condition>
+                             
+
+
+            
+
+  <!-- ============================================================== -->
+  <!--  TARGETS FOR SERVICES LAYER AND WEB CLIENT DEVELOPMENT         -->
+  <!-- ============================================================== -->
+
+   <target name="deploy" description="Deploys applications target AS" depends="init-check,deploy-check,dist">
+      <echo message="Server Vendor is ${j2ee.server.vendor}" level="info" />
+      <if>
+         <not>
+           <equals arg1="${j2ee.server.vendor}" arg2="WebLogic" />
+         </not>
+         <then>
+            <copy file="${resource.dir}/jboss-ds.xml" todir="${j2ee.server.instance.deploy.dir}" failonerror="false" preservelastmodified="true" verbose="true"/>
+            <copy file="${server.framework.libs}/mail.jar" todir="${j2ee.server.instance.dir}/lib"  failonerror="false" preservelastmodified="true" verbose="true"/>
+         </then>
+      </if>
+
+      <antcall target="deploy-services-layer"/>
+      <antcall target="deploy-web-apps"/>
+      <antcall target="deploy-web-services"/>
+      <echo>IMPORTANT: You may need to "Start Local Server" if it is not already running</echo>
+   </target>
+
+
+   <target name="deploy-services-layer" description="Deploys ifsapp.ear to target AS" if="build.service.layer">
+      <!--nbdeploy debugmode="true" forceredeploy="true" /-->
+      <copy file="${ws.dist}/${ws.name.short}.ear" todir="${j2ee.server.instance.dir}/tmp" overwrite="true" failonerror="false" preservelastmodified="false" verbose="true"/>
+      <move file="${j2ee.server.instance.dir}/tmp/${ws.name.short}.ear" todir="${j2ee.server.instance.deploy.dir}" overwrite="true" failonerror="false" preservelastmodified="false" verbose="true"/>
+   </target>
+
+    <target name="deploy-web-apps" description="Deploys fndweb.ear to target AS" if="build.web.apps">
+      <copy todir="${j2ee.server.instance.deploy.dir}" overwrite="true">
+          <fileset dir="${webclient.dist}"/>
+      </copy>
+      <if>
+         <equals arg1="${j2ee.server.vendor}" arg2="WebLogic" />
+         <then>
+            <touch file="${j2ee.server.instance.deploy.dir}/${web.ear.name}/META-INF/REDEPLOY"/>
+         </then>
+      </if>
+   </target>
+
+   <target name="deploy-web-services" description="Deploys ${webservices.war.name} to target AS" if="build.jaxws.services">
+      <!--nbdeploy debugmode="true" forceredeploy="true" /-->
+      <copy file="${websvc.dist}/${websvc.module.name}.ear" todir="${j2ee.server.instance.deploy.dir}" overwrite="true" failonerror="false" preservelastmodified="false" verbose="true"/>
+   </target>
+                          
+   <target name="quick-deploy-web" depends="init-check,init-web-components,compile-web-apps-if-included" description="Deploys classes, static files into an already deployed fndweb.ear" if="build.web.apps">
+      <fail message="Please perform a complete 'Deploy' once, before using 'Quick Deploy'">
+         <condition>
+           <not>
+             <available file="${j2ee.server.instance.deploy.dir}/${web.ear.name}" type="dir"/> <!-- quick deploy is possible only if fndweb.ear was deployed earlier -->
+           </not>
+         </condition>
+      </fail>
+      <copy todir="${j2ee.server.instance.deploy.dir}/${web.ear.name}/b2e.war/WEB-INF/classes" overwrite="true" failonerror="false">
+        <fileset dir="${webclient.build}/applications/b2e/WEB-INF/classes"/>
+      </copy>
+      <copy todir="${j2ee.server.instance.deploy.dir}/${web.ear.name}/b2b.war/WEB-INF/classes" overwrite="true"  failonerror="false">
+        <fileset dir="${webclient.build}/applications/b2b/WEB-INF/classes"/>
+      </copy>
+
+      <property name="quick.deploy.web" value="true"/>
+      <foreach list="${build.web.components}" delimiter="," param="web.component.name" target="copy-web-component-specific-files" inheritall="true"/>
+
+      <!-- "set_manager_mask" should always be called after calls to "copy-web-component-specific-files" above, thats when we get the *webxml.inc(s)-->
+      <taskdef name="set_manager_mask" classname="ifs.application.installer.installationclasses.WebClientANTTask" classpath="${webclient.installer.jar}"/>
+      <set_manager_mask
+            srcdir="${j2ee.server.instance.deploy.dir}/${web.ear.name}/b2e.war/WEB-INF"
+            destfile="${j2ee.server.instance.deploy.dir}/${web.ear.name}/b2e.war/WEB-INF/web.xml"
+            debug="false"
+            prefix="/secured"/>
+      <set_manager_mask
+            srcdir="${j2ee.server.instance.deploy.dir}/${web.ear.name}/b2b.war/WEB-INF"
+            destfile="${j2ee.server.instance.deploy.dir}/${web.ear.name}/b2b.war/WEB-INF/web.xml"
+            debug="false"
+            prefix="/secured"/>
+      <delete>
+         <fileset dir="${j2ee.server.instance.deploy.dir}/${web.ear.name}/b2e.war/WEB-INF" includes="*webxml.inc" casesensitive="false"/>
+         <fileset dir="${j2ee.server.instance.deploy.dir}/${web.ear.name}/b2b.war/WEB-INF" includes="*webxml.inc" casesensitive="false"/>
+      </delete>
+
+      <!-- quick deploy should also support changes to webclientconfig.xml -->
+      <copy file="${webclient.dir}/${web.ear.name}/b2e.war/WEB-INF/config/webclientconfig.xml" todir="${j2ee.server.instance.deploy.dir}/${web.ear.name}/b2e.war/WEB-INF/config" overwrite="true" failonerror="false"/>
+      <copy file="${webclient.dir}/${web.ear.name}/b2b.war/WEB-INF/config/webclientconfig.xml" todir="${j2ee.server.instance.deploy.dir}/${web.ear.name}/b2b.war/WEB-INF/config" overwrite="true" failonerror="false"/>
+
+      <replace dir="${j2ee.server.instance.deploy.dir}/${web.ear.name}">
+       <include name="*.war/WEB-INF/config/webclientconfig.xml"/>
+       <replacefilter token="{userid}" value="${webclient.config.user}"/>
+       <replacefilter token="{password}" value="${webclient.config.user.pwd}"/>
+      </replace>
+
+      <touch file="${j2ee.server.instance.deploy.dir}/${web.ear.name}/META-INF/application.xml"/>
+      <if>
+         <equals arg1="${j2ee.server.vendor}" arg2="WebLogic" />
+         <then>
+            <touch file="${j2ee.server.instance.deploy.dir}/${web.ear.name}/META-INF/REDEPLOY"/>
+         </then>
+      </if>
+   </target>
+
+   <target name="deploy-check">
+      <fail unless="j2ee.server.instance">Server instance not set, try closing and reopening your project</fail>
+      <delete file="${j2ee.server.instance.deploy.dir}/${jar.name}" failonerror="false"/>
+      <!--<copy file="${server.framework.libs}/ifs-fnd-common.jar" todir="${j2ee.server.instance.dir}/lib" overwrite="true" failonerror="false" preservelastmodified="false" verbose="true"/>-->
+   </target>
+
+   <target name="dist" depends="init-check">
+      <antcall target="dist-services-layer-if-included"/>
+      <antcall target="dist-web-apps-if-included"/>
+      <antcall target="dist-web-services-if-included"/>                
+   </target>
+
+   <target name="dist-services-layer-if-included" if="build.service.layer">
+       <antcall target="dist-services-layer"/>
+   </target>
+
+   <target name="dist-web-apps-if-included" if="build.web.apps">
+      <antcall target="dist-web-apps"/>
+   </target>
+
+   <target name="dist-web-services-if-included" if="build.jaxws.services">
+      <antcall target="dist-web-services"/>
+   </target>                   
+                            
+   <target name="dist-services-layer" depends="compile-services-layer,pack-packages,pack-module">
+       <echo>${ws.name.short}.ear was built succesfully</echo>
+   </target>
+   
+   <target name="dist-services-layer10" depends="compile-services-layer10,pack-packages,pack-module">
+       <echo>${ws.name.short}.ear was built succesfully</echo>
+   </target>
+
+   <target name="dist-web-apps" depends="compile-web-apps,pack-web-apps">
+      <echo>${web.ear.name} was built succesfully</echo>
+   </target>
+
+   <target name="dist-web-services" depends="compile-web-services,pack-ws-ear">
+      <echo>${websvc.module.name}.ear was built succesfully</echo>
+   </target>
+                            
+   <!-- This enables "compile" to be called standalone (not currently used maybe useful in future..JRebel???) -->
+   <target name="compile" depends="init-check">
+      <antcall target="compile-services-layer-if-included"/>
+      <antcall target="compile-web-apps-if-included"/>
+      <antcall target="compile-web-services-if-included"/>
+   </target>
+
+   <target name="compile-services-layer-if-included" if="build.service.layer">
+       <antcall target="compile-services-layer"/>
+   </target>
+
+   <target name="compile-web-apps-if-included" if="build.web.apps">
+      <antcall target="compile-web-apps"/>
+   </target>
+
+   <target name="compile-web-services-if-included" if="build.jaxws.services">
+      <antcall target="compile-web-services"/>
+   </target>
+
+  <target name="compile-services-layer" depends="init-services-layer-build,prepare-build">
+    <path id="services.layer.classpath">
+      <fileset dir="${server.framework.libs}">
+         <include name="**/*.jar"/>
+      </fileset>
+      <!-- The value for 'jars.for.missing.serverpkg.models' property is set by the prepare-build custom task-->
+      <fileset dir="${server.app.libs}" includes="${jars.for.missing.serverpkg.models}"/>
+      <fileset dir="${ext.jars.folder}" erroronmissingdir="false">
+         <include name="**/*.jar"/>
+      </fileset>
+      <pathelement location="${server.app.libs}/documents.jar"/>
+      <pathelement location="${server.app.libs}/entities.jar"/>
+      <pathelement location="${server.app.libs}/enumerations.jar"/>
+   </path>
+    <echo message="*** Compiling (${ws.name})... ***" level="info"/>
+    <echo message="*** ${ws.build}... ***" level="info"/>
+    <echo message="*** Compiling enumerations..." level="info"/>
+    <javac includeantruntime="false" includes="ifs/enumeration/*.java" debug="true" debuglevel="lines,vars,source" destdir="${ws.build}" optimize="true" source="${java.source.level}" target="${java.source.level}" deprecation="on">
+      <src refid="sources"/>
+      <classpath refid="services.layer.classpath"/>
+    </javac>
+    <echo message="*** Compiling entities..." level="info"/>
+    <javac includeantruntime="false" includes="ifs/entity/**/*.java" debug="true" debuglevel="lines,vars,source" destdir="${ws.build}" optimize="true" source="${java.source.level}" target="${java.source.level}" deprecation="on">
+      <src refid="sources"/>
+      <classpath refid="services.layer.classpath"/>
+    </javac>
+    <echo message="*** Compiling server packages..." level="info"/>
+    <javac includeantruntime="false" includes="ifs/application/**"  excludes="**/.ifs/**" debug="true" debuglevel="lines,vars,source" destdir="${ws.build}" optimize="true" source="${java.source.level}" target="${java.source.level}" deprecation="on">
+      <src refid="sources"/>
+      <classpath refid="services.layer.classpath"/>
+    </javac>
+    <echo message="*** Compiling web services..." level="info"/>
+    <javac includeantruntime="false" includes="com/**" excludes="**/.ifs/**" debug="true" debuglevel="lines,vars,source" destdir="${ws.build}" optimize="true" source="${java.source.level}" target="${java.source.level}" deprecation="on">
+      <src refid="sources"/>
+      <classpath refid="services.layer.classpath"/>
+    </javac>
+  </target>
+  
+  <target name="compile-services-layer10" depends="init-services-layer-build,prepare-build">
+    <mkdir dir="${ws.ejb.build}/Utility"/>
+    <mkdir dir="${ws.ejb.build}/Service"/>
+    <mkdir dir="${ws.ejb.build}/Activity"/>
+    <path id="services.layer.classpath">
+          <fileset dir="${server.framework.libs}">
+              <include name="**/*.jar"/>
+          </fileset>
+          <!-- The value for 'jars.for.missing.serverpkg.models' property is set by the prepare-build custom task-->
+          <fileset dir="${server.app.libs}" includes="${jars.for.missing.serverpkg.models}"/>
+          <fileset dir="${ext.jars.folder}" erroronmissingdir="false">
+              <include name="**/*.jar"/>
+          </fileset>
+          <pathelement location="${ws.build}"/>
+          <pathelement location="${ws.ejb.build}/Utility"/>
+          <!-- NOTE: Always add documents.jar, entities.jar and enumerations.jar after ${ws.build} in classpath to avoid compilation errors -->
+          <pathelement location="${server.app.libs}/documents.jar"/>
+          <pathelement location="${server.app.libs}/entities.jar"/>
+          <pathelement location="${server.app.libs}/enumerations.jar"/>          
+    </path>
+      
+    <antcall target="-prepare-model-categories"/>
+    <echo message="*** Compiling (${ws.name})... ***" level="info"/>
+    <echo message="*** ${ws.build}... ***" level="info"/>
+    <echo message="***"/>
+    <echo message="*** Compiling enumerations..."/>
+    <javac includeantruntime="false"
+           srcdir="${generate.root}/build/gen/server"
+           includes="ifs/enumeration/*.java"
+           debug="true"
+           debuglevel="lines,vars,source"
+           destdir="${ws.build}"
+           optimize="true"
+           source="${java.source.level}"
+           target="${java.source.level}"
+           deprecation="on" >
+       <src>
+            <path refid="entity"/>
+            <path refid="utility"/>
+       </src>
+       <classpath refid="services.layer.classpath"/>
+    </javac>
+    <echo message="*** Compiling entities..."/>
+    <javac includeantruntime="false"
+           srcdir="${generate.root}/build/gen/server"
+           includes="ifs/entity/**"
+           debug="true"
+           debuglevel="lines,vars,source"
+           destdir="${ws.build}"
+           optimize="true"
+           source="${java.source.level}"
+           target="${java.source.level}"
+           deprecation="on" >
+       <src>
+            <path refid="entity"/>
+            <path refid="utility"/>
+       </src>
+       <classpath refid="services.layer.classpath"/>
+    </javac>
+
+    <echo message="*** Compiling entity documents..."/>
+    <javac includeantruntime="false"
+           srcdir="${generate.root}/build/gen/server"
+           includes="ifs/application/**"
+           excludes="com/** **/.ifs/** ifs/enumeration/* ifs/entity/**"
+           debug="true"
+           debuglevel="lines,vars,source"
+           destdir="${ws.build}"
+           optimize="true"
+           source="${java.source.level}"
+           target="${java.source.level}"
+           deprecation="on" >
+       <src>
+            <path refid="entity"/>
+            <path refid="utility"/>
+       </src>
+       <classpath refid="services.layer.classpath"/>
+       <sourcepath>
+            <pathelement location="${generate.root}/build/gen/ejbs/Activity/"/>
+            <pathelement location="${generate.root}/build/gen/ejbs/Service/"/>
+            <pathelement location="${generate.root}/build/gen/ejbs/Utility/"/>
+        </sourcepath>
+       <compilerarg value="-implicit:none"/>
+    </javac>
+    <echo message="*** Compiling utilities..."/>
+    <javac includeantruntime="false"
+           srcdir="${generate.root}/build/gen/ejbs/Utility"
+           includes="ifs/application/**"
+           excludes="**/.ifs/**"
+           debug="true"
+           debuglevel="lines,vars,source"
+           destdir="${ws.ejb.build}/Utility"
+           optimize="true"
+           source="${java.source.level}"
+           target="${java.source.level}"
+           deprecation="on" >
+       <src>
+            <path refid="entity"/>
+            <path refid="utility"/>
+       </src>
+       <classpath refid="services.layer.classpath"/>
+       <compilerarg value="-implicit:none"/>
+    </javac>
+    <echo message="*** Compiling activities..."/>
+    <javac includeantruntime="false"
+           srcdir="${generate.root}/build/gen/ejbs/Activity"
+           includes="ifs/application/**"
+           excludes="**/.ifs/**"
+           debug="true"
+           debuglevel="lines,vars,source"
+           destdir="${ws.ejb.build}/Activity"
+           optimize="true"
+           source="${java.source.level}"
+           target="${java.source.level}"
+           deprecation="on" >
+       <src>
+            <path refid="entity"/>
+            <path refid="activity"/>
+            <path refid="utility"/>
+       </src>
+       <classpath refid="services.layer.classpath"/>
+       <sourcepath path="${generate.root}/build/gen/ejbs/Activity"/>
+       <compilerarg value="-implicit:none"/>
+    </javac>
+    <echo message="*** Compiling services..."/>
+    <javac includeantruntime="false"
+           srcdir="${generate.root}/build/gen/ejbs/Service"
+           includes="ifs/application/**"
+           excludes="**/.ifs/**"
+           debug="true"
+           debuglevel="lines,vars,source"
+           destdir="${ws.ejb.build}/Service"
+           optimize="true"
+           source="${java.source.level}"
+           target="${java.source.level}"
+           deprecation="on" >
+       <src>
+            <path refid="entity"/>
+            <path refid="service"/>
+            <path refid="utility"/>
+       </src>
+       <classpath refid="services.layer.classpath"/>
+       <sourcepath path="${generate.root}/build/gen/ejbs/Service/"/>
+       <compilerarg value="-implicit:none"/>
+    </javac>
+    <echo message="*** Compiling web services..."/>
+      <javac includeantruntime="false"
+             srcdir="${generate.root}/build/gen/server"
+             includes="com/**"
+             excludes="ifs/** **/.ifs/**"
+             debug="true"
+             debuglevel="lines,vars,source"
+             destdir="${ws.build}"
+             optimize="true"
+             source="${java.source.level}"
+             target="${java.source.level}"
+             deprecation="on" >
+          <src refid="sources"/>
+          <classpath>
+              <path refid="services.layer.classpath"/>
+              <pathelement location="${ws.ejb.build}/Utility"/>
+              <pathelement location="${ws.ejb.build}/Service"/>
+          </classpath>
+          <compilerarg value="-implicit:none"/>
+          <compilerarg value="-nowarn"/>
+      </javac>
+      <move file="${ws.ejb.build}/Utility/ifs" todir="${ws.build}" failonerror="false"/>
+      <move file="${ws.ejb.build}/Service/ifs" todir="${ws.build}" failonerror="false"/>
+      <move file="${ws.ejb.build}/Activity/ifs" todir="${ws.build}" failonerror="false"/>
+      <delete dir="${ws.ejb.build}"/>
+  </target>
+  
+  <target name="-prepare-model-categories">
+      <mkdir dir="${generate.root}/build/gen/ejbs/Utility/ifs/application"/>
+      <mkdir dir="${generate.root}/build/gen/ejbs/Activity/ifs/application"/>
+      <mkdir dir="${generate.root}/build/gen/ejbs/Service/ifs/application"/>
+      <foreach target="-read-model-category" param="cat-file" inheritall="true">
+         <fileset dir="${generate.root}/build/gen/server">
+            <include name="ifs/application/*/category.txt"/>
+         </fileset>
+      </foreach>
+   </target>
+
+   <target name="-read-model-category">
+      <loadfile srcfile="${cat-file}" property="cat-name">
+         <filterchain>
+            <deletecharacters chars=" \t\r\n"/>
+         </filterchain>
+      </loadfile>
+      <propertyregex property="pkg-path"
+                     input="${cat-file}"
+                     regexp="^(.*)[/\\]category.txt$"
+                     select="\1"/>
+      <condition property="move-package">
+         <resourcecount when="greater" count="0">
+            <fileset file="${pkg-path}/*Bean.java"/>
+         </resourcecount>
+      </condition>
+      <antcall target="-move-pkg-dir"/>
+   </target>
+
+   <target name="-move-pkg-dir" if="move-package">
+      <move file="${pkg-path}" todir="${generate.root}/build/gen/ejbs/${cat-name}/ifs/application"/>
+   </target>
+
+            
+
+  <target name="prepare-build">
+      <initJars buildFolder="${build.root}" development="TRUE" />
+      <prepareBuild   targetVersion="${applications.version}"
+                      generateFolder="${generate.root}"
+                      classFolder="${ws.build}"
+                      jarsFolder="${ws.dist}"
+                      extJarsFolder="${ext.jars.folder}"
+                      libServerDistFolder="${server.app.libs}"
+                      modelCacheFolder="${basedir}/nbproject/private"                      
+                      syncExtJarsFolder="${server.thirdparty.libs}"
+                      development="true"
+                      isActivity="true"
+                      generateClient="false"
+                      createNewImpl="true"
+                      copyImpl="${copy.impls}"
+                      detailLogs="true"
+                      buildFolder="${build.root}">
+                      <fileset dir="${build.root}">
+                          <modelselector selectedBuildObjects="${build.source.artifacts}"/>
+                          <exclude name="**/*.webservice"/>
+                      </fileset>
+      </prepareBuild>
+   </target>
+
+  <target name="compile-web-apps" depends="init-web-app-build, init-web-components">
+    <echo>Selected web components for build [${build.web.components}]</echo>
+    <!-- create properties for handling list of available sites and their source paths -->
+    <!-- this task will create property 'web.sites' containing all found web sites with their source paths -->
+    <taskdef name="webcompsrc" classname="ifs.fnd.buildtasks.WebCompSource" classpath="${webclient.installer.jar}"/>
+    <webcompsrc src="${build.root}" dev="TRUE" components="${build.web.components}" debug="false"/>
+    <foreach list="${web.sites}" delimiter="^" param="web.site.definition" target="compile-site" inheritall="true"/>
+  </target>
+
+
+  <target name="init-web-components">
+     <echo>******  Web Applications Build  ******</echo>
+     <script language="javascript">  <![CDATA[
+          buildArtifacts = project.getProperty("build.source.artifacts");
+          buildWebComponents = "";
+          if (buildArtifacts!=null && buildArtifacts!=""){
+              buildArtifactsArr = buildArtifacts.split(";");
+              if (buildArtifactsArr.length>0){
+                  for (i=0; i< buildArtifactsArr.length; i++)
+                  {
+                      buildArtifactInfo = buildArtifactsArr[i].split(",");
+                      if (buildArtifactInfo.length==3 && buildArtifactInfo[2]=="Webcomponent"){
+                         buildWebComponents = buildWebComponents.concat(buildArtifactInfo[1],",");
+                      }
+                  }
+                  if (buildWebComponents!=null && buildWebComponents!=""){
+                    project.setProperty("build.web.components",buildWebComponents);
+                  }
+              }
+           }
+         ]]>
+      </script>
+  </target>
+
+  <target name="compile-site" depends="init-compile-site,compile-web-with-debug"/>
+
+  <target name="init-compile-site">
+    <!-- this task will create two new properties: 'web.site.name' and 'web.site.paths' -->
+    <taskdef name="webcompsrc" classname="ifs.fnd.buildtasks.WebCompSource" classpath="${webclient.installer.jar}"/>
+    <webcompsrc site="${web.site.definition}" dev="TRUE"/>
+    <mkdir dir="${webclient.build}/applications/${web.site.name}/WEB-INF/classes"/>
+  </target>
+
+
+  <target name="compile-web-with-debug">
+    <echo message="Compiling Web components (with debug) for ${web.site.name} ..."/>
+    <javac
+        includeantruntime="false"
+        debug="true"
+        optimize="yes"
+        deprecation="on"
+        source="${java.source.level}"
+        target="${java.source.level}"
+        destdir="${webclient.build}/applications/${web.site.name}/WEB-INF/classes">
+        <src path="${web.site.paths}"/>
+        <classpath>
+          <pathelement location="${webclient.build}/applications/${web.site.name}/WEB-INF/classes"/>
+          <pathelement location="${server.framework.libs}/ifs-fnd-common.jar"/>
+          <pathelement location="${server.framework.libs}/ifs-fnd-ap.jar"/>
+          <pathelement location="${server.framework.libs}/ifs-fnd-j2ee.jar"/>
+          <pathelement location="${server.framework.libs}/javaee-api-${project.javaee.version}.jar"/>
+          <pathelement location="${webclient.framework.jar}"/>
+          <fileset dir="${server.app.libs}">
+             <include name="**/*.jar"/>
+          </fileset>
+          <fileset dir="${webclient.build}">
+            <include name="applications/${web.site.name}/WEB-INF/lib/*.jar"/>
+          </fileset>
+          <fileset dir="${build.root}">
+            <include name="*/webclient/applications/${web.site.name}/WEB-INF/lib/*.jar"/>
+          </fileset>
+          <fileset dir="${webclient.fndweb.ear}">
+             <include name="*.war/WEB-INF/lib/*.jar"/>
+          </fileset>
+        </classpath>
+    </javac>
+  </target>
+
+  <target name="compile-web-services" depends="init-web-services-build, generate-ws-code">
+    <path id="websvc.classpath">
+      <fileset dir="${server.framework.libs}">
+         <include name="ifs-fnd-j2ee.jar"/>
+         <include name="ifs-fnd-common.jar"/>
+         <include name="ifs-service-util.jar"/>
+         <include name="javaee-api-${project.javaee.version}.jar"/>
+      </fileset>
+    </path>
+    <javac srcdir="${websvc.gen.src.dir}" includeantruntime="false" debug="true" debuglevel="lines,vars,source" destdir="${websvc.build}" optimize="true" source="${java.source.level}" target="${java.source.level}" deprecation="on">
+      <classpath refid="websvc.classpath"/>
+    </javac>
+  </target>
+
+  <target name="generate-ws-code">
+      <initJars buildFolder="${build.root}" development="TRUE" />
+      <prepareBuild   targetVersion="${applications.version}"
+                      generateFolder="${generate.root}"
+                      classFolder="${ws.build}"
+                      jarsFolder="${ws.dist}"
+                      extJarsFolder="${ext.jars.folder}"
+                      libServerDistFolder="${server.app.libs}"
+                      modelCacheFolder="${basedir}/nbproject/private"                      
+                      development="true"
+                      isActivity="false"
+                      generateClient="false"
+                      detailLogs="true"
+                      buildFolder="${build.root}">
+                      <fileset dir="${build.root}">
+                          <modelselector selectedBuildObjects="${build.source.artifacts}"/>
+                          <include name="**/*.webservice"/>
+                      </fileset>
+      </prepareBuild>
+   </target>
+
+  <target name="pack-web-apps">
+      <copy todir="${fndweb.ear.dist}" overwrite="true">
+        <fileset dir="${webclient.fndweb.ear}"/>
+      </copy>
+
+      <copy file="${webclient.framework.jar}" todir="${fndweb.ear.dist}/b2e.war/WEB-INF/lib" overwrite="true" preservelastmodified="true" verbose="true"/>
+      <copy file="${webclient.framework.jar}" todir="${fndweb.ear.dist}/b2b.war/WEB-INF/lib" overwrite="true" preservelastmodified="true" verbose="true"/>
+
+      <copy todir="${fndweb.ear.dist}/b2e.war/WEB-INF/classes" overwrite="true" failonerror="false">
+        <fileset dir="${webclient.build}/applications/b2e/WEB-INF/classes"/>
+      </copy>
+      <copy todir="${fndweb.ear.dist}/b2b.war/WEB-INF/classes" overwrite="true" failonerror="false">
+        <fileset dir="${webclient.build}/applications/b2b/WEB-INF/classes"/>
+      </copy>
+      <if>
+         <isfalse value="${app9.core.and.above}"/>
+         <then>
+            <copy file="${webclient.security.plugin.jar}"   todir="${fndweb.ear.dist}/lib"   overwrite="true"/>
+         </then>         
+      </if>
+      <copy todir="${fndweb.ear.dist}/lib" overwrite="true" >
+        <fileset dir="${server.framework.libs}" includes="ifs-fnd-ap.jar ifs-fnd-j2ee.jar ifs-fnd-common.jar mt-rt.jar"/>
+        <fileset dir="${server.app.libs}" includes="entities.jar enumerations.jar documents.jar"/>
+      </copy>
+
+      <copy file="${server.framework.libs}/ifs-fnd-plsql.jar"   todir="${fndweb.ear.dist}/lib" preservelastmodified="true" verbose="true" failonerror="false"/>
+      <copy file="${server.framework.libs}/ifs-fnd-reauth-sp.jar"  todir="${fndweb.ear.dist}/lib" preservelastmodified="true" verbose="true" failonerror="false"/>
+      
+      <!-- find the required ejbs by looking at fndweb.ear's application.xml and copy from lib/server/dist -->
+      <xmlproperty file="${webclient.fndweb.ear}/META-INF/application.xml" prefix="web.deps" keeproot="false"/>
+
+      <antcall target="update-and-copy-ejbs-for-web"/>
+
+     <replace dir="${fndweb.ear.dist}">
+       <include name="*.war/WEB-INF/config/webclientconfig.xml"/>
+       <replacefilter token="{userid}" value="${webclient.config.user}"/>
+       <replacefilter token="{password}" value="${webclient.config.user.pwd}"/>
+     </replace>
+
+     <foreach list="${build.web.components}" delimiter="," param="web.component.name" target="copy-web-component-specific-files"/>
+
+     <!-- "set_manager_mask" should always be called after calls to "copy-web-component-specific-files" above, thats when we get the *webxml.inc(s)-->
+     <taskdef name="set_manager_mask" classname="ifs.application.installer.installationclasses.WebClientANTTask" classpath="${webclient.installer.jar}"/>
+     <set_manager_mask
+            srcdir="${fndweb.ear.dist}/b2e.war/WEB-INF"
+            destfile="${fndweb.ear.dist}/b2e.war/WEB-INF/web.xml"
+            debug="false"
+            prefix="/secured"/>
+     <set_manager_mask
+            srcdir="${fndweb.ear.dist}/b2b.war/WEB-INF"
+            destfile="${fndweb.ear.dist}/b2b.war/WEB-INF/web.xml"
+            debug="false"
+            prefix="/secured"/>
+      <delete>
+         <fileset dir="${fndweb.ear.dist}/b2e.war/WEB-INF" includes="*webxml.inc" casesensitive="false"/>
+         <fileset dir="${fndweb.ear.dist}/b2b.war/WEB-INF" includes="*webxml.inc" casesensitive="false"/>
+      </delete>
+  </target>
+
+  <target name="copy-web-component-specific-files">
+        <echo>Copying static files (images, js etc.) for web component ${web.component.name}</echo>
+        <if>
+            <equals arg1="${quick.deploy.web}" arg2="true" />
+            <then>
+               <property name="fndweb.ear.loc" value="${j2ee.server.instance.deploy.dir}/${web.ear.name}"/>
+            </then>
+            <else>
+               <property name="fndweb.ear.loc" value="${fndweb.ear.dist}"/>
+            </else>
+        </if>
+        <!-- The component may belong to either b2b or b2e types, therefore folder paths may differ -->
+        <if>
+            <available file="${build.root}/${web.component.name}/webclient/applications/b2e/${web.component.name}" type="dir"/>
+            <then>
+                <copy todir="${fndweb.ear.loc}/b2e.war/secured/${web.component.name}" failonerror="false" overwrite="true">
+                    <fileset dir="${build.root}/${web.component.name}/webclient/applications/b2e/${web.component.name}"/>
+                </copy>
+            </then>
+            <elseif>
+                <available file="${build.root}/${web.component.name}/webclient/applications/b2b/${web.component.name}" type="dir"/>
+                <then>
+                    <copy todir="${fndweb.ear.loc}/b2b.war/secured/${web.component.name}" failonerror="false" overwrite="true">
+                        <fileset dir="${build.root}/${web.component.name}/webclient/applications/b2b/${web.component.name}"/>
+                    </copy>
+                </then>
+            </elseif>
+        </if>
+        <echo>Copying config files and libraries for web component ${web.component.name}</echo>
+        <if>
+            <available file="${build.root}/${web.component.name}/webclient/applications/b2e/WEB-INF" type="dir"/>
+            <then>
+                <copy todir="${fndweb.ear.loc}/b2e.war/WEB-INF" failonerror="false" overwrite="true">
+                    <fileset dir="${build.root}/${web.component.name}/webclient/applications/b2e/WEB-INF"/>
+                </copy>
+            </then>
+            <elseif>
+                <available file="${build.root}/${web.component.name}/webclient/applications/b2b/WEB-INF" type="dir"/>
+                <then>
+                    <copy todir="${fndweb.ear.loc}/b2b.war/WEB-INF" failonerror="false" overwrite="true">
+                        <fileset dir="${build.root}/${web.component.name}/webclient/applications/b2b/WEB-INF"/>
+                    </copy>
+                </then>
+            </elseif>
+        </if>
+  </target>
+
+  <target name="update-and-copy-ejbs-for-web">
+        <mkdir dir="${webclient.build}/ejbs"/>
+        <!-- generate jboss.xml to be merged into ejbs -->
+        <echo file="${webclient.build}/ejbs/META-INF/jboss.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jboss PUBLIC "-//JBoss//DTD JBOSS 3.2//EN" "http://www.jboss.org/j2ee/dtd/jboss_3_2.dtd">
+<jboss>
+    <security-domain>java:/jaas/IFSApplications</security-domain>
+</jboss> ]]></echo>
+<if>
+  <equals arg1="${j2ee.server.vendor}" arg2="WebLogic" />
+  <then>
+       <echo file="${webclient.build}/ejbs/META-INF/weblogic-ejb-jar.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-ejb-jar xmlns="http://www.bea.com/ns/weblogic/90"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		            xsi:schemaLocation="http://www.bea.com/ns/weblogic/weblogic-ejb-jar/90/weblogic-ejb-jar.xsd">
+<security-role-assignment>
+      <role-name>IFSTrustedExternalModule</role-name>
+      <principal-name>IFSTrustedExternalModule</principal-name>
+   </security-role-assignment>
+</weblogic-ejb-jar>]]></echo>
+
+ <echo file="${webclient.build}/ejbs/META-INF/ejb-jar.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar version="3.0"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_0.xsd">
+    <assembly-descriptor>
+        <security-role>
+            <role-name>IFSUser</role-name>
+        </security-role>
+        <security-role>
+            <role-name>IFSTrustedExternalModule</role-name>
+        </security-role>
+    </assembly-descriptor>
+</ejb-jar>]]></echo>
+</then>
+</if>
+       <!-- find the required ejbs by looking at fndweb.ear's application.xml and copy into fndweb.ear after merging jboss.xml-->
+      <xmlproperty file="${webclient.fndweb.ear}/META-INF/application.xml" prefix="web.deps" keeproot="false"/>
+
+      <foreach list="${web.deps.module.ejb}" delimiter="," param="ejb.jar" target="update-and-copy-one-ejb-for-web"/>
+  </target>
+
+  <target name="update-and-copy-one-ejb-for-web">
+     <if>
+        <available file="${ws.dist}/${ejb.jar}"/>
+        <then>
+           <copy file="${ws.dist}/${ejb.jar}" todir="${webclient.build}/ejbs" overwrite="true" preservelastmodified="true" verbose="true"/>
+        </then>
+        <elseif>
+           <available file="${server.framework.libs}/${ejb.jar}"/> <!-- this is needed to handle ifs-fnd-j2ee-ejb.jar, all other ejbs are in lib/server/dist -->
+            <then>
+               <copy file="${server.framework.libs}/${ejb.jar}" todir="${webclient.build}/ejbs" overwrite="true" preservelastmodified="true" verbose="true"/>
+            </then>
+        </elseif>
+        <else>
+            <copy file="${server.app.libs}/${ejb.jar}" todir="${webclient.build}/ejbs" overwrite="true" preservelastmodified="true" verbose="true"/>
+        </else>
+     </if>
+     <jar jarfile="${webclient.build}/ejbs/${ejb.jar}" update="yes">
+         <fileset dir="${webclient.build}/ejbs" includes="META-INF/*.xml"/>
+     </jar>
+     <copy file="${webclient.build}/ejbs/${ejb.jar}" todir="${fndweb.ear.dist}"/>
+   </target>
+
+   <target name="open-web-browser">
+       <nbbrowse url="${web-url}"/>
+   </target>
+
+
+  <target name="clean">
+      <delete dir="${ws.build}"/>
+      <delete dir="${ws.ejb.build}"/>
+      <delete dir="${generate.root}/build/gen/ejbs"/>
+      <delete dir="${ws.dist}"/>
+      <delete dir="${ext.jars.folder}"/>
+      <delete dir="${server.gen.src.dir}"/>
+      <delete dir="${webclient.build}"/>
+      <delete dir="${webclient.dist}"/>
+      <delete dir="${websvc.build}"/>
+      <delete dir="${websvc.dist}"/>
+      <delete dir="${websvc.gen.src.dir}"/>
+  </target>
+
+
+  <target name="init-check">
+      <fail unless="build.source.artifacts">The Application Server is empty, there is nothing to deploy!</fail>
+   </target>
+
+  <!--target name="init" depends="init-check">
+     <antcall target="init-services-layer-build"/>
+     <antcall target="init-web-app-build"/>
+     <antcall target="init-web-services-build"/>
+  </target-->
+
+   <target name="init-services-layer-build" if="build.service.layer">
+      <tstamp/>
+      <delete dir="${ws.dist}"/>
+      <mkdir dir="${ws.build}"/>
+      <mkdir dir="${ws.dist}/lib"/>
+   </target>
+
+    <target name="init-web-app-build" if="build.web.apps">
+        <tstamp/>
+        <mkdir dir="${webclient.build}"/>
+        <mkdir dir="${webclient.dist}"/>
+    </target>
+
+    <target name="init-web-services-build" if="build.jaxws.services">
+      <tstamp/>
+      <delete dir="${websvc.dist}"/>
+      <mkdir dir="${websvc.build}"/>
+      <mkdir dir="${websvc.gen.src.dir}"/>
+      <mkdir dir="${websvc.dist}/lib"/>
+   </target>
+   
+
+   <target name="start-server" description="Start Application Server">
+      <!--<copy file="${server.framework.libs}/ifs-fnd-common.jar" todir="${j2ee.server.instance.dir}/lib" failonerror="false"/>-->
+      <nbstartserver debugmode="true"/>
+   </target>
+
+   <target name="-init-start-integration-server" >
+      <fail message="Please perform a complete 'Deploy' once, before trying to start Connect or Batch Server'">
+         <condition>
+           <not>
+             <available file="${j2ee.server.instance.deploy.dir}/${ws.name.short}.ear"/>
+           </not>
+         </condition>
+      </fail>
+   </target>
+
+    <scriptdef name="substring" language="javascript">
+        <attribute name="text" />
+        <attribute name="start" />
+        <attribute name="end" />
+        <attribute name="property" />
+        <![CDATA[
+           var text = attributes.get("text");
+           var start = attributes.get("start");
+           var end;
+           if (text.length()>50) {
+             end = attributes.get("end");
+           } else {
+             end = text.length();
+           }
+           project.setProperty(attributes.get("property"), text.substring(start, end));
+        ]]>
+    </scriptdef>
+
+    <target name="start-connect-server" description="Start Connect Server" depends="-init-start-integration-server,start-server">
+	<condition property="app9.framework.libs" value="${server.framework.libs}" else="${j2ee.server.ifs.home}/javaruntime">
+		<istrue value="${app9.core.and.above}"/>
+	</condition>
+        <condition property="app9.app.libs" value="${server.app.libs}" else="${j2ee.server.ifs.home}/javaruntime">
+		<istrue value="${app9.core.and.above}"/>
+	</condition>
+	<substring text="CONNECT_SERVER_${env.COMPUTERNAME}_${j2ee.server.instance.name}" start="0" end="50" property="connect.server.queue" />
+	<java classname="ifs.fnd.connectserver.ConnectorServer" maxmemory="768m" >
+		<sysproperty key="fndext.instance" value="${j2ee.server.instance.name}" />
+		<sysproperty key="fndext.home" value="${j2ee.server.ifs.home}" />
+		<sysproperty key="fndext.loggingConfig" value="connectserver1-logging.properties" />
+		<arg value="INS=CONNECT_SERVER_${env.COMPUTERNAME}_${j2ee.server.instance.name}"/>
+		<classpath>
+			<pathelement location="${app9.framework.libs}/connectserver.jar"/>
+			<pathelement location="${app9.framework.libs}/ifs-fnd-sta.jar"/>
+			<pathelement location="${app9.app.libs}/entities.jar"/>
+			<pathelement location="${app9.app.libs}/documents.jar"/>
+			<pathelement location="${app9.app.libs}/enumerations.jar"/>
+		</classpath>
+	</java>
+    </target>
+
+    <target name="start-batch-server" description="Start Batch Server" depends="-init-start-integration-server,start-server">
+        <substring text="BATCH_SERVER_${env.COMPUTERNAME}_${j2ee.server.instance.name}" start="0" end="50" property="batch.server.queue" />
+        <java classname="ifs.fnd.batchserver.server.BatchServer" maxmemory="128m" >
+            <sysproperty key="fndext.instance" value="${j2ee.server.instance.name}" />
+            <sysproperty key="fndext.home" value="${j2ee.server.ifs.home}" />
+            <sysproperty key="fndext.loggingConfig" value="batchserver1-logging.properties" />
+            <arg value="INS=${batch.server.queue}"/>
+            <classpath>
+                <pathelement location="${j2ee.server.ifs.home}/javaruntime/batchserver.jar"/>
+                <pathelement location="${j2ee.server.ifs.home}/javaruntime/entities.jar"/>
+                <pathelement location="${j2ee.server.ifs.home}/javaruntime/documents.jar"/>
+                <pathelement location="${j2ee.server.ifs.home}/javaruntime/enumerations.jar"/>
+                <pathelement location="${j2ee.server.ifs.home}/oracle/ojdbc6.jar"/>
+                <pathelement path="${j2ee.server.ifs.home}/instance/${j2ee.server.instance.name}/conf"/>
+            </classpath>
+        </java>
+    </target>
+
+   <target name="undeploy" description="Undeploys applications on target AS" >
+      <if>
+         <available file="${j2ee.server.instance.deploy.dir}/${web.ear.name}" type="dir"/>
+         <then>
+            <delete dir="${j2ee.server.instance.deploy.dir}/${web.ear.name}" failonerror="false"/>
+         </then>
+      </if>
+      <if>
+         <available file="${j2ee.server.instance.deploy.dir}/${jar.name}"/>
+         <then>
+            <delete file="${j2ee.server.instance.deploy.dir}/${jar.name}" failonerror="false"/>
+         </then>
+      </if>
+      <if>
+         <available file="${j2ee.server.instance.deploy.dir}/${websvc.module.name}.ear"/>
+         <then>
+            <delete file="${j2ee.server.instance.deploy.dir}/${websvc.module.name}.ear" failonerror="false"/>
+         </then>
+      </if>
+      <if>
+         <available file="${j2ee.server.instance.deploy.dir}/${odata.provider.war}" type="dir"/>
+         <then>
+            <delete dir="${j2ee.server.instance.deploy.dir}/${odata.provider.war}" failonerror="false"/>
+         </then>
+      </if>
+   </target>
+
+
+   <target name="verify" depends="dist" description="Verify ear file">
+      <nbverify file="${dist.jar}"/>
+   </target>
+
+   <target name="pack-packages">
+      <echo message="*** Packaging required jar files (${ws.name})... ***" level="info"/>
+      <packJars parallel="true"/>
+   </target>
+
+
+   <target name="pack-module">
+      <echo message="*** Packaging ear file (${ws.name}) ***" level="info"/>
+
+      <echo message="* First add framework POJO jars to the 'lib' subdirectory" level="info"/>
+      <copy file="${server.framework.libs}/mt-rt.jar"                        todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+      <copy file="${server.framework.libs}/ifs-fnd-j2ee.jar"                 todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+      <copy file="${server.framework.libs}/ifs-fnd-common.jar"               todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+      <copy file="${server.framework.libs}/ifs-fnd-connect.jar"              todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+      <copy file="${server.framework.libs}/ifs-fnd-gateway.jar"              todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+      <copy file="${server.framework.libs}/ifs-fnd-internationalization.jar" todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+      <copy file="${server.framework.libs}/ifs-fnd-plsql.jar"                todir="${ws.dist}/lib" preservelastmodified="true" verbose="true" failonerror="false"/>
+      <copy file="${server.framework.libs}/ifs-fnd-j2ee-ejb.jar"             todir="${ws.dist}"     preservelastmodified="true" verbose="true"/>
+      <if>
+         <istrue value="${app9.core.and.above}" />
+         <then>
+            <copy file="${server.framework.libs}/ifs-fnd-gateway-servlet.jar"      todir="${ws.dist}/lib"     preservelastmodified="true" verbose="true"/>
+         </then>
+         <else>
+            <copy file="${server.framework.libs}/ifs-fnd-gateway-servlet.jar"      todir="${ws.dist}"     preservelastmodified="true" verbose="true"/>
+         </else>
+      </if>
+      <if>
+             <istrue value="${app9.above.upd1}" />
+             <then>
+                 <copy file="${server.framework.libs}/ifs-management-beans.jar"             todir="${ws.dist}/lib"     preservelastmodified="true" verbose="true"/>
+             </then>
+      </if>
+      <copy file="${server.framework.libs}/ifs-fnd-reauth-sp.jar"            todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+
+      <if>
+         <equals arg1="${technology.integration}" arg2="true" />
+         <then>
+            <echo message="* Copy libraries needed for Batch and Connect servers" level="info"/>
+            <if>
+                <available file="${server.framework.libs}/ftpj.jar"/>
+                <then>
+                    <copy file="${server.framework.libs}/ftpj.jar"     todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+                </then>
+                <else>
+                    <if>
+                        <available file="${server.framework.libs}/ftp.jar"/>
+                        <then>
+                            <copy file="${server.framework.libs}/ftp.jar"     todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+                        </then>
+                    </if>
+                </else>
+            </if>
+            <if>
+                <available file="${server.framework.libs}/jsch-0.1.53.jar"/>
+                <then>
+                    <copy file="${server.framework.libs}/jsch-0.1.53.jar"   todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+                </then>
+                <else>
+                    <if>
+                        <available file="${server.framework.libs}/jsch-0.1.50.jar"/>
+                        <then>
+                            <copy file="${server.framework.libs}/jsch-0.1.50.jar"   todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+                        </then>
+                    <else>
+                        <copy file="${server.framework.libs}/jsch-0.1.31.jar"   todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+                    </else>
+                </if>             
+                </else>
+            </if>             
+            <copy file="${j2ee.server.ifs.home}/javaruntime/mail.jar"       todir="${ws.dist}/lib" preservelastmodified="true" verbose="true"/>
+         </then>
+      </if>
+
+      <echo message="* Copy ejbs required for server tester" level="info"/>
+      <copy file="${server.app.libs}/applicationsupport-ejb.jar"     todir="${ws.dist}"/>
+      <copy file="${server.app.libs}/clientservices-ejb.jar"         todir="${ws.dist}"/>
+      <copy file="${server.app.libs}/termruntimemanagement-ejb.jar"  todir="${ws.dist}"/>
+      <echo message="* Copy ejbs required for bizapi development and testing" level="info"/>
+      <if>
+         <istrue value="${app9.core.and.above}" />
+         <then>
+            <copy file="${server.app.libs}/messageprocessor-ejb.jar"       todir="${ws.dist}" failonerror="false"/>
+            <copy file="${server.app.libs}/reporthandling-ejb.jar"         todir="${ws.dist}"/>
+            <copy file="${server.app.libs}/printagentservice-ejb.jar"      todir="${ws.dist}"/>
+            <copy file="${server.app.libs}/infoservices-ejb.jar"           todir="${ws.dist}"/>
+         </then>
+         <else>
+            <copy file="${server.app.libs}/connectruntimeservices-ejb.jar" todir="${ws.dist}"/>
+            <copy file="${server.app.libs}/connectsenders-ejb.jar"         todir="${ws.dist}"/>
+         </else>
+      </if>
+      <copy file="${server.app.libs}/connectivityservices-ejb.jar"   todir="${ws.dist}"/>
+
+      <if>
+         <equals arg1="${j2ee.server.vendor}" arg2="WebLogic" />
+         <then>
+            <copy file="${server.app.libs}/manageuserprofile-ejb.jar"   todir="${ws.dist}"/>
+            <copy file="${server.app.libs}/plsqlaccess-ejb.jar"   todir="${ws.dist}"/>
+         </then>
+      </if>
+
+      <echo message="* Copy ejbs for missing models/source as fallback" level="info"/>
+      <copy  todir="${ws.dist}">
+         <fileset dir="${server.app.libs}" includes="${jars.for.missing.serverpkg.models}"/>
+      </copy>
+
+      <echo message="* Copy anonymous ejbs for anonymousgateway" level="info"/>
+      <copy file="${server.app.libs}/anonymousaccess-ejb.jar" todir="${ws.dist}"/>
+
+      <!-- merge enumerations.jar, entities.jar and documents.jar POJO jars -->
+      <if>
+         <available file="${server.app.libs}/enumerations.jar"/>
+         <then>
+            <jar destfile="${ws.dist}/lib/enumerations.jar" update="true">
+               <zipfileset includes="**/*.class" src="${server.app.libs}/enumerations.jar"/>
+            </jar>
+         </then>
+      </if>
+
+      <if>
+         <available file="${server.app.libs}/documents.jar"/>
+         <then>
+            <jar destfile="${ws.dist}/lib/documents.jar" update="true">
+               <zipfileset includes="**/*.class" src="${server.app.libs}/documents.jar"/>
+            </jar>
+         </then>
+      </if>
+
+      <if>
+         <available file="${server.app.libs}/entities.jar"/>
+         <then>
+            <jar destfile="${ws.dist}/lib/entities.jar" update="true">
+               <zipfileset includes="**/*.class" src="${server.app.libs}/entities.jar"/>
+            </jar>
+         </then>
+      </if>
+
+      <echo message="* Copy all third party jars to the lib subdirectory" level="info"/>
+      <copy todir="${ws.dist}/lib" failonerror="false">
+         <fileset dir="${ext.jars.folder}"/>
+      </copy>
+
+      <!-- delete any leftovers of previous jar unpacks-->
+      <delete dir="${tmp.dir}"/>
+      <mkdir dir="${tmp.dir}"/>
+
+
+    <!-- remove temporary directories -->
+    <!--delete dir="${ws.dist}/lib/enums"/>
+    <delete dir="${ws.dist}/lib/entities"/-->
+
+    <!-- Jacek: Not all *-ejb.jar files contain EJB's; only the ones with
+         EJB's have to be counted in application.xml. Futhermore there are
+         some more entries that have to exist in the file: we have EJBs in
+         the framework and we have servlets. The best would be if we could
+         send application.xml to genAppXml task for completion only.
+         So for now we have to create our own file from scratch. -->
+    <!--genAppXml path="${javaruntime}"/-->
+
+    <!-- create ifswebservices.war before generating application.xml-->
+    <antcall target="create-ifswebservices-war"/>
+    <available file="${server.framework.libs}/ifs-webservices.jar" property="ifs-webservices-jar-available"/>
+    <antcall target="merge-all-webservice-enums"/>
+
+    <!-- header for application.xml -->
+    <echo file="${ws.dist}/application.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<application version="5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_5.xsd">
+   <display-name>IFS Applications</display-name>
+]]>
+      </echo>
+
+      <foreach param="ejb.jar" target="add2appxml" inheritall="true">
+         <path>
+            <fileset dir="${ws.dist}" includes="*-ejb.jar"/>
+         </path>
+      </foreach>
+
+        <!-- antcall target="maven-install-jar" >
+            <param name="jar.path" value="${ws.dist}/lib/documents.jar"/>
+            <param name="jar.version" value="${maven.applications.version}"/>
+            <param name="artifact.id" value="documents"/>
+            <param name="group.id" value="ifs.fnd"/>            
+        </antcall>
+        <antcall target="maven-install-jar" >
+            <param name="jar.path" value="${ws.dist}/lib/entities.jar"/>
+            <param name="jar.version" value="${maven.applications.version}"/>            
+            <param name="artifact.id" value="entities"/>            
+            <param name="group.id" value="ifs.fnd"/>            
+        </antcall>
+        <antcall target="maven-install-jar" >
+            <param name="jar.path" value="${ws.dist}/lib/enumerations.jar"/>
+            <param name="jar.version" value="${maven.applications.version}"/>            
+            <param name="artifact.id" value="enumerations"/>            
+            <param name="group.id" value="ifs.fnd"/>            
+        </antcall>
+
+        <foreach param="ejb.jar" target="maven-install-application" inheritall="true">
+            <path>
+                <fileset dir="${ws.dist}">
+                    <include name="*-ejb.jar"/>
+                    <exclude name="anonymousaccess-ejb.jar"/>
+                    <exclude name="applicationsupport-ejb.jar"/>
+                    <exclude name="clientservices-ejb.jar"/>
+                    <exclude name="connectivityservices-ejb.jar"/>
+                    <exclude name="connectruntimeservices-ejb.jar"/>
+                    <exclude name="connectsenders-ejb.jar"/>
+                    <exclude name="messageprocessor-ejb.jar"/>
+                    <exclude name="reporthandling-ejb.jar"/>
+                    <exclude name="printagentservice-ejb.jar"/>
+                    <exclude name="infoservices-ejb.jar"/>
+                    <exclude name="ifs-fnd-j2ee-ejb.jar"/>
+                    <exclude name="termruntimemanagement-ejb.jar"/>
+               <exclude name="manageuserprofile-ejb.jar"/>
+               <exclude name="plsqlaccess-ejb.jar"/>
+                </fileset>
+            </path>
+        </foreach -->
+        
+
+        <echo file="${ws.dist}/application.xml" append="true"><![CDATA[   <module>
+             <web>
+               <web-uri>ifsclientgateway.war</web-uri>
+               <context-root>/fndext</context-root>
+             </web>
+           </module>
+           <module>
+            <web>
+                  <web-uri>ifsanonymousgateway.war</web-uri>
+                  <context-root>/anonymous</context-root>
+            </web>
+           </module>
+        ]]>
+        </echo>
+
+  <antcall target="update-appxml-with-internal-gw"/>
+  <antcall target="update-appxml-with-ifswebservices-war"/>
+
+  <!-- footer for application.xml -->
+  <echo file="${ws.dist}/application.xml" append="true"><![CDATA[
+   </application>
+]]>
+  </echo>
+
+ <!-- Add jboss-app.xml to ifsapp.ear -->
+    <echo file="${ws.dist}/META-INF/jboss-app.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<jboss-app>
+   <loader-repository>ifsworld.com:loader=ifsapp.ear</loader-repository>
+</jboss-app>
+]]>
+      </echo>
+
+               <!-- create application-config.xml -->
+                <delete dir="${tmp.dir}/clientgateway"/>
+                <mkdir dir="${tmp.dir}/clientgateway"/>
+                <copy file="${server.framework.libs}/ifsclientgateway.war" todir="${tmp.dir}/clientgateway"/>
+               <if>
+               <equals arg1="${j2ee.server.vendor}" arg2="WebLogic" />
+               <then>
+                  <if>
+                        <istrue value="${app9.core.and.above}" />
+                     <then>
+                        <createApplicationConfigFile destination="${tmp.dir}/clientgateway/WEB-INF" filename="application-config.xml" ejblistfilename="ejb-list.xml">
+                            <fileset dir="${build.generated.sources.dir}">
+                               <include name="**/mappings.txt"/>
+                            </fileset>
+                            <custom mapping="ApplicationSupport.BrowseJ2eeMetaData"/>
+                            <custom mapping="ClientServices.AbortRequest"/>
+                            <custom mapping="ClientServices.AuthenticateUser"/>
+                            <custom mapping="ClientServices.ClientApplication"/>
+                            <custom mapping="ClientServices.ClientRuntimeHelp"/>
+                            <custom mapping="ClientServices.UserGrants"/>
+                            <custom mapping="MessageProcessor.MessageHandler"/>
+                            <custom mapping="MessageProcessor.MessageHandlerService"/>
+                            <custom mapping="MessageProcessor.ExternalPrintAgent"/>
+                            <custom mapping="MessageProcessor.ConfigurationParametersHandler"/>
+                            <custom mapping="ReportHandling.FormatReport"/>
+                            <custom mapping="ReportHandling.ReportRuleEngine"/>
+                            <custom mapping="PrintAgentService.BaseInfoServices"/>
+                            <custom mapping="PrintAgentService.ConnectMessaging"/>
+                            <custom mapping="PrintAgentService.PrintAgentHandler"/>
+                            <custom mapping="PrintAgentService.PrintAgentInternal"/>
+                            <custom mapping="PrintAgentService.ReportDataServiceHandler"/>
+                            <custom mapping="InfoServices.AdminReportArchive"/>
+                            <custom mapping="InfoServices.CrystalReport"/>
+                            <custom mapping="InfoServices.CrystalReportService"/>
+                            <custom mapping="InfoServices.DistributionGroups"/>
+                            <custom mapping="InfoServices.ExploreReports"/>
+                            <custom mapping="InfoServices.PrintQueueManager"/>
+                            <custom mapping="InfoServices.PrintReport"/>
+                            <custom mapping="InfoServices.PrintReportUtilities"/>
+                            <custom mapping="InfoServices.ReportArchive"/>
+                            <custom mapping="InfoServices.ReportArchiveUtilities"/>
+                            <custom mapping="InfoServices.ReportDefinitionUtilities"/>
+                            <custom mapping="InfoServices.ReportScheduling"/>
+                            <custom mapping="InfoServices.ReportUtilities"/>
+                            <custom mapping="InfoServices.ExploreReports2"/> 
+                            <custom mapping="ConnectivityServices.ConnectivityProcessingHandler"/>
+                            <custom mapping="ConnectivityServices.ConnectivityUtilHandler"/>
+                            <custom mapping="ManageUserProfile.ManageMyUserProfile"/>
+                            <custom mapping="PlsqlAccess.AccessPlsql"/>
+                         </createApplicationConfigFile>
+                     </then>
+                     <else>
+                        <createApplicationConfigFile destination="${tmp.dir}/clientgateway/WEB-INF" filename="application-config.xml" ejblistfilename="ejb-list.xml">
+                            <fileset dir="${build.generated.sources.dir}">
+                               <include name="**/mappings.txt"/>
+                            </fileset>
+                            <custom mapping="ApplicationSupport.BrowseJ2eeMetaData"/>
+                            <custom mapping="ClientServices.AbortRequest"/>
+                            <custom mapping="ClientServices.AuthenticateUser"/>
+                            <custom mapping="ClientServices.ClientApplication"/>
+                            <custom mapping="ClientServices.ClientRuntimeHelp"/>
+                            <custom mapping="ClientServices.UserGrants"/>
+                            <custom mapping="ConnectRuntimeServices.ApplicationMessagingHandler"/>
+                            <custom mapping="ConnectRuntimeServices.ApplicationMessagingUtilHandler"/>
+                            <custom mapping="ConnectRuntimeServices.ApplicationMonitoringHandler"/>
+                            <custom mapping="ConnectRuntimeServices.ApplicationQueueUtilHandler"/>
+                            <custom mapping="ConnectRuntimeServices.BatchserverProcessingHandler"/>
+                            <custom mapping="ConnectRuntimeServices.ConfigurationParametersHandler"/>
+                            <custom mapping="ConnectSenders.ConnectUtilitiesHandler"/>
+                            <custom mapping="ConnectSenders.FileConnectorHandler"/>
+                            <custom mapping="ConnectSenders.FtpConnectorHandler"/>
+                            <custom mapping="ConnectSenders.HttpConnectorHandler"/>
+                            <custom mapping="ConnectSenders.JmsConnectorHandler"/>
+                            <custom mapping="ConnectSenders.MQSeriesConnectorHandler"/>
+                            <custom mapping="ConnectSenders.MailConnectorHandler"/>
+                            <custom mapping="ConnectSenders.SftpConnectorHandler"/>
+                            <custom mapping="ConnectSenders.ShellCommandConnectorHandler"/>
+                            <custom mapping="ConnectivityServices.ConnectivityProcessingHandler"/>
+                            <custom mapping="ConnectivityServices.ConnectivityUtilHandler"/>
+                            <custom mapping="ManageUserProfile.ManageMyUserProfile"/>
+                            <custom mapping="PlsqlAccess.AccessPlsql"/>
+                         </createApplicationConfigFile>
+                     </else>
+                  </if>
+               </then>
+               <else>
+                  <if>
+                     <istrue value="${app9.core.and.above}" />
+                     <then>
+                        <createApplicationConfigFile destination="${tmp.dir}/clientgateway/WEB-INF" filename="application-config.xml" ejblistfilename="ejb-list.xml">
+                           <fileset dir="${build.generated.sources.dir}">
+                              <include name="**/mappings.txt"/>
+                           </fileset>
+                           <custom mapping="ApplicationSupport.BrowseMobileApplication"/>
+                           <custom mapping="ApplicationSupport.TestEjbHandler"/>
+                           <custom mapping="ApplicationSupport.BrowseJ2eeMetaData"/>
+                           <custom mapping="ClientServices.AbortRequest"/>
+                           <custom mapping="ClientServices.AuthenticateUser"/>
+                           <custom mapping="ClientServices.ClientApplication"/>
+                           <custom mapping="ClientServices.ClientRuntimeHelp"/>
+                           <custom mapping="ClientServices.UserGrants"/>
+                           <custom mapping="MessageProcessor.MessageHandler"/>
+                           <custom mapping="MessageProcessor.MessageHandlerService"/>
+                           <custom mapping="MessageProcessor.ExternalPrintAgent"/>
+                           <custom mapping="MessageProcessor.ConfigurationParametersHandler"/>
+                           <custom mapping="ReportHandling.FormatReport"/>
+                           <custom mapping="ReportHandling.ReportRuleEngine"/>
+                           <custom mapping="PrintAgentService.BaseInfoServices"/>
+                           <custom mapping="PrintAgentService.ConnectMessaging"/>
+                           <custom mapping="PrintAgentService.PrintAgentHandler"/>
+                           <custom mapping="PrintAgentService.PrintAgentInternal"/>
+                           <custom mapping="PrintAgentService.ReportDataServiceHandler"/>
+                           <custom mapping="InfoServices.AdminReportArchive"/>
+                           <custom mapping="InfoServices.CrystalReport"/>
+                           <custom mapping="InfoServices.CrystalReportService"/>
+                           <custom mapping="InfoServices.DistributionGroups"/>
+                           <custom mapping="InfoServices.ExploreReports"/>
+                           <custom mapping="InfoServices.PrintQueueManager"/>
+                           <custom mapping="InfoServices.PrintReport"/>
+                           <custom mapping="InfoServices.PrintReportUtilities"/>
+                           <custom mapping="InfoServices.ReportArchive"/>
+                           <custom mapping="InfoServices.ReportArchiveUtilities"/>
+                           <custom mapping="InfoServices.ReportDefinitionUtilities"/>
+                           <custom mapping="InfoServices.ReportScheduling"/>
+                           <custom mapping="InfoServices.ReportUtilities"/>
+                           <custom mapping="InfoServices.ExploreReports2"/>
+                           <custom mapping="ConnectivityServices.ConnectivityProcessingHandler"/>
+                           <custom mapping="ConnectivityServices.ConnectivityUtilHandler"/>
+                        </createApplicationConfigFile>
+                     </then>
+                     <else>
+                        <createApplicationConfigFile destination="${tmp.dir}/clientgateway/WEB-INF" filename="application-config.xml" ejblistfilename="ejb-list.xml">
+                           <fileset dir="${build.generated.sources.dir}">
+                              <include name="**/mappings.txt"/>
+                           </fileset>
+                           <custom mapping="ApplicationSupport.BrowseMobileApplication"/>
+                           <custom mapping="ApplicationSupport.TestEjbHandler"/>
+                           <custom mapping="ApplicationSupport.BrowseJ2eeMetaData"/>
+                           <custom mapping="ClientServices.AbortRequest"/>
+                           <custom mapping="ClientServices.AuthenticateUser"/>
+                           <custom mapping="ClientServices.ClientApplication"/>
+                           <custom mapping="ClientServices.ClientRuntimeHelp"/>
+                           <custom mapping="ClientServices.UserGrants"/>
+                           <custom mapping="ConnectRuntimeServices.ApplicationMessagingHandler"/>
+                           <custom mapping="ConnectRuntimeServices.ApplicationMessagingUtilHandler"/>
+                           <custom mapping="ConnectRuntimeServices.ApplicationMonitoringHandler"/>
+                           <custom mapping="ConnectRuntimeServices.ApplicationQueueUtilHandler"/>
+                           <custom mapping="ConnectRuntimeServices.BatchserverProcessingHandler"/>
+                           <custom mapping="ConnectRuntimeServices.ConfigurationParametersHandler"/>
+                           <custom mapping="ConnectSenders.ConnectUtilitiesHandler"/>
+                           <custom mapping="ConnectSenders.FileConnectorHandler"/>
+                           <custom mapping="ConnectSenders.FtpConnectorHandler"/>
+                           <custom mapping="ConnectSenders.HttpConnectorHandler"/>
+                           <custom mapping="ConnectSenders.JmsConnectorHandler"/>
+                           <custom mapping="ConnectSenders.MQSeriesConnectorHandler"/>
+                           <custom mapping="ConnectSenders.MailConnectorHandler"/>
+                           <custom mapping="ConnectSenders.SftpConnectorHandler"/>
+                           <custom mapping="ConnectSenders.ShellCommandConnectorHandler"/>
+                           <custom mapping="ConnectivityServices.ConnectivityProcessingHandler"/>
+                           <custom mapping="ConnectivityServices.ConnectivityUtilHandler"/>
+                        </createApplicationConfigFile>
+
+                     </else>
+                  </if>            
+               </else>
+            </if>
+
+      <antcall target="update-client-gateway"/>
+      <antcall target="copy-and-update-internal-gateway"/>
+      <antcall target="create-resources-jar"/>
+      
+        <ear id="packModule" earfile="${ws.dist}/${ws.name.short}.ear"
+            appxml="${ws.dist}/application.xml" duplicate="preserve">
+             <fileset dir="."               includes="META-INF/jboss-app.xml"/>
+             <fileset dir="${ws.dist}"                includes="ifswebservices.war"/>
+             <fileset dir="${tmp.dir}/clientgateway"  includes="ifsclientgateway.war"/>
+             <fileset dir="${tmp.dir}/clientgateway"  includes="ifsinternalgateway.war"/>
+             <fileset dir="${server.framework.libs}"  includes="ifsanonymousgateway.war"/>
+             <fileset dir="${server.framework.libs}"  includes="ifs.properties"/>
+             <!-- Jacek: workaround: relaced 'refid' with regular fileset due to subdirectory -->
+             <!--fileset refid="jarFiles"-->
+             <fileset dir="${ws.dist}">
+                <include name="**/*"/>
+                <exclude name="application.xml"/>
+             </fileset>
+          </ear>
+   </target>
+
+   <target name="create-ifswebservices-war">
+      <delete dir="${tmp.dir}/webservices"/>
+      <buildWebservices javaruntime="${tmp.dir}"
+                        classFolder="${ws.build}"
+                        generateFolder="${generate.root}"
+                        tempDir="${tmp.dir}"
+                        destinationFolder="${ws.dist}"
+                        testerRequired="false"
+                        logLevel="info"/>
+   </target>
+
+   <target name="merge-all-webservice-enums" if="ifs-webservices-jar-available">
+      <if>
+         <available file="${tmp.dir}/webservices/ifswebservices.war" type="file"/>
+         <then>
+            <mkdir dir="${tmp.dir}/webservices/devstudio"/>
+            <unjar src="${server.framework.libs}/ifs-webservices.jar" dest="${tmp.dir}/webservices/devstudio/ifs-webservices">
+               <patternset>
+                  <include name="com/ifsworld/webservices/enumeration/*.class"/>
+               </patternset>
+            </unjar>
+            <if>
+               <available file="${tmp.dir}/webservices/devstudio/ifs-webservices/com/ifsworld/webservices/enumeration" type="dir"/>
+               <then>
+                  <unwar src="${tmp.dir}/webservices/ifswebservices.war" dest="${tmp.dir}/webservices/devstudio/ifswebservices"/>
+                  <jar destfile="${tmp.dir}/webservices/devstudio/ifswebservices/WEB-INF/lib/ifs-webservices.jar" update="true">
+                     <zipfileset dir="${tmp.dir}/webservices/devstudio/ifs-webservices/com/ifsworld/webservices/enumeration" includes="*.class" prefix="com/ifsworld/webservices/enumeration/"/>
+                  </jar>
+                  <delete file="${tmp.dir}/webservices/ifswebservices.war" quiet="true"/>
+                  <war destfile="${tmp.dir}/webservices/ifswebservices.war" update="true">
+                     <zipfileset dir="${tmp.dir}/webservices/devstudio/ifswebservices"/>
+                  </war>
+                  <copy file="${tmp.dir}/webservices/ifswebservices.war" todir="${ws.dist}" quiet="true"/>
+               </then>
+            </if>
+         </then>
+      </if>
+   </target>
+
+   <target name="create-resources-jar" if="app9.core.and.above">
+      <echo level="info" message="Creating ifs-fnd-resources.jar containing application-config.xml for apps 9"/>
+      <delete dir="${tmp.dir}/ifs-fnd-resources"/>
+      <mkdir dir="${tmp.dir}/ifs-fnd-resources"/>
+      <createApplicationConfigFile destination="${tmp.dir}/ifs-fnd-resources" filename="application-config.xml">
+         <fileset dir="${build.generated.sources.dir}">
+            <include name="**/mappings.txt"/>
+         </fileset>
+         <custom mapping="ManageUserProfile.ManageMyUserProfile"/>
+         <custom mapping="PlsqlAccess.AccessPlsql"/>
+         <custom mapping="ApplicationSupport.BrowseJ2eeMetaData"/>
+         <custom mapping="ClientServices.AbortRequest"/>
+         <custom mapping="ClientServices.AuthenticateUser"/>
+         <custom mapping="ClientServices.ClientApplication"/>
+         <custom mapping="ClientServices.ClientRuntimeHelp"/>
+         <custom mapping="ClientServices.UserGrants"/>
+         <custom mapping="MessageProcessor.MessageHandler"/>
+         <custom mapping="MessageProcessor.MessageHandlerService"/>
+         <custom mapping="MessageProcessor.ExternalPrintAgent"/>
+         <custom mapping="MessageProcessor.ConfigurationParametersHandler"/>
+         <custom mapping="ReportHandling.FormatReport"/>
+         <custom mapping="ReportHandling.ReportRuleEngine"/>
+         <custom mapping="PrintAgentService.BaseInfoServices"/>
+         <custom mapping="PrintAgentService.ConnectMessaging"/>
+         <custom mapping="PrintAgentService.PrintAgentHandler"/>
+         <custom mapping="PrintAgentService.PrintAgentInternal"/>
+         <custom mapping="PrintAgentService.ReportDataServiceHandler"/>
+         <custom mapping="InfoServices.AdminReportArchive"/>
+         <custom mapping="InfoServices.CrystalReport"/>
+         <custom mapping="InfoServices.CrystalReportService"/>
+         <custom mapping="InfoServices.DistributionGroups"/>
+         <custom mapping="InfoServices.ExploreReports"/>
+         <custom mapping="InfoServices.PrintQueueManager"/>
+         <custom mapping="InfoServices.PrintReport"/>
+         <custom mapping="InfoServices.PrintReportUtilities"/>
+         <custom mapping="InfoServices.ReportArchive"/>
+         <custom mapping="InfoServices.ReportArchiveUtilities"/>
+         <custom mapping="InfoServices.ReportDefinitionUtilities"/>
+         <custom mapping="InfoServices.ReportScheduling"/>
+         <custom mapping="InfoServices.ReportUtilities"/>
+         <custom mapping="InfoServices.ExploreReports2"/>
+         <custom mapping="ConnectivityServices.ConnectivityProcessingHandler"/>
+         <custom mapping="ConnectivityServices.ConnectivityUtilHandler"/>
+      </createApplicationConfigFile>
+      <jar file="${ws.dist}/lib/ifs-fnd-resources.jar" basedir="${tmp.dir}/ifs-fnd-resources"/>
+   </target>
+   
+   <target name="update-appxml-with-internal-gw" unless="app9.core.and.above">
+      <echo file="${ws.dist}/application.xml" append="true"><![CDATA[
+      <module>
+         <web>
+             <web-uri>ifsinternalgateway.war</web-uri>
+             <context-root>/fndint</context-root>
+          </web>
+      </module>
+      ]]>
+      </echo>
+   </target>
+
+   <target name="update-appxml-with-ifswebservices-war">
+      <if>
+        <available file="${ws.dist}/ifswebservices.war"/>
+        <then>
+          <echo file="${ws.dist}/application.xml" append="true"><![CDATA[   <module>
+              <web>
+                 <web-uri>ifswebservices.war</web-uri>
+                 <context-root>/webservices</context-root>
+              </web>
+           </module>
+           ]]>
+          </echo>
+        </then>
+      </if>
+   </target>
+
+   <target name="copy-and-update-internal-gateway" unless="app9.core.and.above">
+     <copy file="${server.framework.libs}/ifsinternalgateway.war" todir="${tmp.dir}/clientgateway"/>
+     <!-- update ifsclientgateway.war with application-config.xml and ejb-list.xml -->
+      <jar file="${tmp.dir}/clientgateway/ifsinternalgateway.war"  update="true">
+         <fileset dir="${tmp.dir}/clientgateway"   includes="WEB-INF/application-config.xml"/>
+         <fileset dir="${tmp.dir}/clientgateway"   includes="WEB-INF/ejb-list.xml"/>
+      </jar>
+   </target>
+
+   <target name="update-client-gateway" unless="app9.core.and.above">
+     <!-- update ifsclientgateway.war with application-config.xml and ejb-list.xml -->
+      <jar file="${tmp.dir}/clientgateway/ifsclientgateway.war"  update="true">
+         <fileset dir="${tmp.dir}/clientgateway"   includes="WEB-INF/application-config.xml"/>
+         <fileset dir="${tmp.dir}/clientgateway"   includes="WEB-INF/ejb-list.xml"/>
+      </jar>
+   </target>
+
+
+   
+            
+
+   <target name="pack-ws-ejb-jar-all">
+      <foreach target="pack-ws-ejb-jar" param="dir.name">
+         <path>
+            <dirset dir="${websvc.build}/com/ifsworld/webservices" includes="*"/>
+         </path>
+      </foreach>
+   </target>
+
+   <target name="pack-ws-ejb-jar">
+      <basename file="${dir.name}" property="webservice.name"/>
+      <echo message="Packing ${webservice.name}-ejb.jar"/>
+      <jar destfile="${websvc.dist}/${webservice.name}-ejb.jar" >
+         <fileset dir="${websvc.build}">
+            <include name="com/ifsworld/webservices/${webservice.name}/**/*.class"/>
+            <exclude name="**/*Service.class"/>
+         </fileset>
+      </jar>
+   </target>
+
+  <target name="pack-ws-war">
+       <concat fixlastline="yes" destfile="${websvc.gen.src.dir}/web.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+   <description>IFS Services</description>]]>
+       </concat>
+       <concat append="true" fixlastline="yes" destfile="${websvc.gen.src.dir}/web.xml">
+         <fileset dir="${websvc.gen.src.dir}" includes="**/webxml.inc"/>
+       </concat>
+       <concat append="true" destfile="${websvc.gen.src.dir}/web.xml">
+           <![CDATA[<security-constraint>
+       <web-resource-collection>
+           <web-resource-name>All resources</web-resource-name>
+           <description>Protects all resources</description>
+           <url-pattern>/*</url-pattern>
+           <http-method>POST</http-method>
+       </web-resource-collection>
+       <auth-constraint>
+           <role-name>IFSUser</role-name>
+       </auth-constraint>
+    </security-constraint>
+
+    <security-role>
+        <role-name>IFSUser</role-name>
+    </security-role>
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>myrealm</realm-name>
+    </login-config>
+    </web-app>
+           ]]>
+       </concat>
+       <mkdir dir="${build.dir}/temp/${websvc.module.name}"/>
+       <concat fixlastline="yes" destfile="${build.dir}/temp/${websvc.module.name}/WEB-INF/jboss-web.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jboss-web PUBLIC "-//JBoss//DTD Web Application 2.3V2//EN"
+        "http://www.jboss.org/j2ee/dtd/jboss-web_3_2.dtd">
+<jboss-web>
+    <security-domain flushOnSessionInvalidation="true">java:/jaas/IFSApplications</security-domain>
+</jboss-web>
+            ]]>
+       </concat>
+
+       	   <concat fixlastline="yes" destfile="${build.dir}/temp/${websvc.module.name}/WEB-INF/weblogic.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<weblogic-web-app xmlns="http://www.bea.com/ns/weblogic/weblogic-web-app">
+  <resource-description>
+    <res-ref-name>jdbc/fndbas</res-ref-name>
+    <jndi-name>jdbc/fndbas</jndi-name>
+  </resource-description>
+  <security-role-assignment>
+    <role-name>IFSUser</role-name>
+    <principal-name>IFSUser</principal-name>
+  </security-role-assignment>
+</weblogic-web-app>
+            ]]>
+       </concat>
+
+       <war destfile="${websvc.dist}/${websvc.module.name}.war" webxml="${websvc.gen.src.dir}/web.xml">
+           <fileset dir="${build.dir}/temp/${websvc.module.name}"/>
+           <classes dir="${websvc.build}">
+               <include name="**/*Service.class"/>
+           </classes>
+       </war>
+   </target>
+
+   <target name="pack-ws-ear" depends="pack-ws-ejb-jar-all,pack-ws-war">
+    <echo file="${websvc.dist}/application.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<application version="5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_5.xsd">
+   <display-name>IFS Services</display-name>
+   <module>
+      <ejb>]]></echo>
+    <pathconvert pathsep="-ejb.jar&lt;/ejb&gt;${line.separator}   &lt;/module&gt;${line.separator}   &lt;module&gt;${line.separator}      &lt;ejb&gt;" property="webservice.ejb.modules">
+        <dirset dir="${websvc.build}/com/ifsworld/webservices" includes="*" />
+        <flattenmapper/>
+    </pathconvert>
+    <echo file="${websvc.dist}/application.xml" message="${webservice.ejb.modules}" append="true"/>
+    <echo file="${websvc.dist}/application.xml" append="true"><![CDATA[-ejb.jar</ejb>
+   </module>
+   <module>
+      <web>
+         <web-uri>ifsservices.war</web-uri>
+         <context-root>/ifssvc</context-root>
+      </web>
+   </module>
+</application>
+]]></echo>
+    <copy file="${server.framework.libs}/ifs-fnd-j2ee.jar"    todir="${websvc.dist}/lib" preservelastmodified="true" verbose="true"/>
+    <copy file="${server.framework.libs}/ifs-fnd-common.jar" todir="${websvc.dist}/lib" preservelastmodified="true" verbose="true"/>
+    <copy file="${server.framework.libs}/ifs-service-util.jar" todir="${websvc.dist}/lib" preservelastmodified="true" verbose="true"/>
+    <ear destfile="${websvc.dist}/${websvc.module.name}.ear" appxml="${websvc.dist}/application.xml">
+       <fileset dir="${websvc.dist}">
+            <exclude name="application.xml"/>
+       </fileset>
+    </ear>
+   </target>
+
+    <target name="maven-install-jar" >
+        <basename property="jar.file.name" file="${jar.path}"/>
+        <basename property="name" file="${jar.path}" suffix=".jar"/>
+        <echo level="info" message="Installing ${jar.file.name} in local maven repo as group ${group.id} artifact ${artifact.id} version ${jar.version}"/>
+        <artifact:pom id="mypom" groupId="${group.id}" artifactId="${artifact.id}" version="${jar.version}" name="${name} project">
+            <license name="IFS" url="http://www.ifsworld.com"/>
+        </artifact:pom>
+
+        <artifact:writepom pomRefId="mypom" file="build/mypom.xml"/>
+        <artifact:pom id="mypom" file="build/mypom.xml" />
+
+        <artifact:install file="${jar.path}"  >
+            <pom refid="mypom"/>
+        </artifact:install>
+    </target>
+
+    <!-- target name="maven-install-application" >
+        <basename property="ejb.jar.name" file="${ejb.jar}"/>
+        <basename property="ejb.name" file="${ejb.jar}" suffix="-ejb.jar"/>
+        <echo level="info" message="Installing ${ejb.jar.name} in local maven repo as ${ejb.name}"/>
+        <artifact:pom id="mypom" groupId="ifs.application" artifactId="${ejb.name}" version="${maven.applications.version}" name="${ejb.name} project">
+            <license name="IFS" url="http://www.ifsworld.com"/>
+            <dependency groupId="ifs.fnd" artifactId="entities" version="${maven.applications.version}"/>
+            <dependency groupId="ifs.fnd" artifactId="enumerations" version="${maven.applications.version}"/>
+            <dependency groupId="ifs.fnd" artifactId="documents" version="${maven.applications.version}"/>
+        </artifact:pom>
+
+        <artifact:writepom pomRefId="mypom" file="build/mypom.xml"/>
+        <artifact:pom id="mypom" file="build/mypom.xml" />
+
+        <artifact:install file="dist/server/${ejb.jar.name}"  >
+            <pom refid="mypom"/>
+        </artifact:install>
+    </target -->
+
+   <target name="add2appxml">
+      <basename property="ejb.name" file="${ejb.jar}"/>
+      <echo file="${ws.dist}/application.xml" append="true"><![CDATA[   <module>
+      <ejb>${ejb.name}</ejb>
+   </module>
+]]>
+      </echo>
+   </target>
+
+  <!-- IMPORTANT: The targets from here onwards are ONLY used for synchronizing libraries
+       with a project share. (i.e. Not for building ifsapp.ear)
+   -->
+   <property name="sync.jars"           value="lib/jars"/>
+   <property name="sync.ejbs"           value="${sync.jars}/ejbs"/>
+   <property name="sync.entities"       value="${sync.jars}/entities"/>
+   <property name="sync.enumerations"   value="${sync.jars}/enumerations"/>
+   <property name="sync.documents"      value="${sync.jars}/documents"/>
+
+   <target name="syncjars">
+      <taskdef name="synchronizeFiles" classname="ifs.dev.buildtasks.SynchronizeFilesTask">
+       <classpath>
+         <fileset dir="${codegen.modules.path}">
+            <include name="ifs-dev-buildtasks.jar"/>
+            <include name="ifs-dev-client.jar"/>
+            <include name="ifs-dev-util.jar"/>
+         </fileset>
+       </classpath>
+      </taskdef>
+
+      <synchronizeFiles destination="${basedir}/lib" clean="${app9.core.and.above}">
+         <fileset dir="${project.share.root}">
+            <include name = "server/javaruntime"/>
+         </fileset>
+      </synchronizeFiles>
+      <synchronizeFiles destination="${basedir}/lib">
+         <fileset dir="${project.share.root}">
+            <include name = "jars"/>
+         </fileset>
+      </synchronizeFiles>
+      <if>
+      <equals arg1="${technology.web.client}" arg2="true" />
+      <then>
+      <synchronizeFiles destination="${basedir}/lib">
+         <fileset dir="${project.share.root}">
+            <include name = "webclient"/>
+         </fileset>
+      </synchronizeFiles>
+      </then>
+      </if>
+
+      <!-- copy all ejbs to server/lib -->
+      <copy todir="${server.app.libs}" overwrite="true" failonerror="false">
+         <fileset dir="${sync.ejbs}"/>
+      </copy>
+
+      <!-- now merge all entities and documents into 2 big jars -->
+      <delete dir="${build.dir}/temp"/>
+      <mkdir dir="${build.dir}/temp"/>
+      <jar destfile="${build.dir}/temp/entities.jar">
+         <zipgroupfileset dir="${sync.entities}" includes="**/*.jar"/>
+      </jar>
+      <jar destfile="${build.dir}/temp/documents.jar">
+         <zipgroupfileset dir="${sync.documents}" includes="**/*.jar"/>
+      </jar>
+
+      <copy file="${build.dir}/temp/entities.jar" todir="${server.app.libs}" overwrite="true" failonerror="false"/>
+      <copy file="${build.dir}/temp/documents.jar" todir="${server.app.libs}" overwrite="true" failonerror="false"/>
+      <copy file="${sync.enumerations}/enumerations.jar" todir="${server.app.libs}" overwrite="true" failonerror="false"/>
+      
+      <!-- antcall target="maven-install-jar" >
+         <param name="jar.path" value="${basedir}/lib/server/javaruntime/ifs-fnd-common.jar"/>
+         <param name="jar.version" value="${maven.applications.version}"/>
+         <param name="artifact.id" value="common"/>
+         <param name="group.id" value="ifs.fnd"/>
+      </antcall>
+      <antcall target="maven-install-jar" >
+         <param name="jar.path" value="${basedir}/lib/server/javaruntime/ifs-fnd-connect.jar"/>
+         <param name="jar.version" value="${maven.applications.version}"/>
+         <param name="artifact.id" value="connect"/>
+         <param name="group.id" value="ifs.fnd"/>
+      </antcall>
+      <antcall target="maven-install-jar" >
+         <param name="jar.path" value="${basedir}/lib/server/javaruntime/ifs-fnd-j2ee.jar"/>
+         <param name="jar.version" value="${maven.applications.version}"/>
+         <param name="artifact.id" value="j2ee"/>
+         <param name="group.id" value="ifs.fnd"/>
+      </antcall -->
+      <antcall target="maven-install-jar" >
+         <param name="jar.path" value="${devstudio.modules.path}/../maven/transformer-maven-plugin-1.1.jar"/>
+         <param name="jar.version" value="1.1"/>
+         <param name="artifact.id" value="transformer-maven-plugin"/>
+         <param name="group.id" value="ifs.dev.maven.plugins"/>
+      </antcall>
+   </target>
+   
+   <!-- ============================================================== -->
+   <!--                   TARGETS FOR JAVACLIENT BUILD                 -->
+   <!-- ============================================================== -->
+
+   <target name="clean-client">
+      <delete dir="${ws.client.build}"/>
+      <delete dir="${ws.client.dist}"/>
+      <delete dir="${client.gen.src.dir}"/>
+   </target>
+
+   <target name="init-client-build">
+      <tstamp/>
+      <mkdir dir="${ws.client.build}"/>
+      <mkdir dir="${ws.client.dist}"/>
+   </target>
+
+   <!-- get javaclient artifacts to build and call prepareBuild task-->
+   <target name="prepare-client-build">
+      <initJars buildFolder="${build.root}" development="TRUE" />
+      <prepareBuild   targetVersion="${applications.version}"
+                      generateFolder="${generate.root}"
+                      classFolder="${ws.build}"
+                      jarsFolder="${ws.dist}"
+                      extJarsFolder="${ext.jars.folder}"
+                      libServerDistFolder="${server.app.libs}"
+                      modelCacheFolder="${basedir}/nbproject/private"                      
+                      syncExtJarsFolder="${server.thirdparty.libs}"
+                      development="true"
+                      isActivity="true"
+                      generateClient="true"
+                      clientBuildOnly="true"
+                      clientClassFolder="${ws.client.build}"
+                      clientJarsFolder="${ws.client.dist}"
+                      copyImpl="${copy.impls}"
+                      detailLogs="true"
+                      buildFolder="${build.root}">
+                      <fileset dir="${build.root}">
+                          <modelselector selectedBuildObjects="${build.client.artifacts}"/>
+                      </fileset>
+      </prepareBuild>
+   </target>
+
+   <target name="compile-client" depends="clean-client,init-client-build,prepare-client-build">
+      <path id="client.layer.classpath">
+          <fileset dir="${server.framework.libs}">
+             <include name="**/*.jar"/>
+          </fileset>
+          <!-- The value for 'jars.for.missing.serverpkg.models' property is set by the prepare-build custom task-->
+          <fileset dir="${server.app.libs}" includes="${jars.for.missing.serverpkg.models}"/>
+          <fileset dir="${ext.jars.folder}" erroronmissingdir="false">
+             <include name="**/*.jar"/>
+          </fileset>
+          <pathelement location="${server.app.libs}/documents.jar"/>
+          <pathelement location="${server.app.libs}/entities.jar"/>
+          <pathelement location="${server.app.libs}/enumerations.jar"/>
+     </path>
+      <echo message="*** Compiling Java Client... ***" level="info"/>
+      <echo message="*** ${ws.client.build}... ***" level="info"/>
+      <echo message="*** Compiling client enumerations..." level="info"/>
+      <javac includeantruntime="false" srcdir="${client.gen.src.dir}" includes="ifs/client/enumeration/*.java" debug="true" debuglevel="lines,vars,source" destdir="${ws.client.build}" optimize="true" source="${java.source.level}" target="${java.source.level}" deprecation="on">
+         <classpath refid="client.layer.classpath"/>
+      </javac>
+      <echo message="*** Compiling client entities..." level="info"/>
+      <javac includeantruntime="false" srcdir="${client.gen.src.dir}" includes="ifs/client/entity/**" debug="true" debuglevel="lines,vars,source" destdir="${ws.client.build}" optimize="true" source="${java.source.level}" target="${java.source.level}" deprecation="on">
+         <classpath refid="client.layer.classpath"/>
+      </javac>
+      <echo message="*** Compiling client server packages..." level="info"/>
+      <javac includeantruntime="false" srcdir="${client.gen.src.dir}" includes="ifs/client/application/**" excludes="**/.ifs/**" debug="true" debuglevel="lines,vars,source" destdir="${ws.client.build}" optimize="true" source="${java.source.level}" target="${java.source.level}" deprecation="on" >
+         <classpath refid="client.layer.classpath"/>
+      </javac>
+   </target>
+
+
+   <target name="pack-client-jars">
+      <echo message="*** Packaging client jar file(s)... ***" level="info"/>
+      <packJars parallel="true"/>
+   </target>
+
+   <target name="dist-client-jars" depends="compile-client,pack-client-jars">
+       <echo>Java clients built succesfully</echo>
+   </target>
+
+
+            </project>

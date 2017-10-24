@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<MainMenuName>&amp;IFS Development Tools</MainMenuName>
+	<ToolbarName></ToolbarName>
+	<AddinConfigurations>
+		<AddinCommandConfiguration>
+			<FullClassName>Ifs.Fnd.VisualStudio.DataToolbox.Connect</FullClassName>
+			<Commands>
+				<VisualStudioCommand>
+					<Name>DataSetToolbox</Name>
+					<ButtonText>Dataset Toolbox</ButtonText>
+					<Tooltip>Shows the Dataset Toolbox.</Tooltip>
+					<Icon>523</Icon>
+					<Ordinal>1</Ordinal>
+					<BeginGroup>true</BeginGroup>
+				</VisualStudioCommand>
+			</Commands>
+		</AddinCommandConfiguration>
+		<AddinCommandConfiguration>
+			<FullClassName>Ifs.Fnd.VisualStudio.TabOrderOutline.Connect</FullClassName>
+			<Commands>
+				<VisualStudioCommand>
+					<Name>TabOrderOutline</Name>
+					<ButtonText>Tab Order Outline</ButtonText>
+					<Tooltip>Shows the Tab Order Outline.</Tooltip>
+					<Icon>0011</Icon>
+					<Ordinal>2</Ordinal>
+					<BeginGroup>false</BeginGroup>
+				</VisualStudioCommand>
+			</Commands>
+		</AddinCommandConfiguration>
+		<AddinCommandConfiguration>
+			<FullClassName>Ifs.Fnd.VisualStudio.DevelopmentTasks.Connect</FullClassName>
+			<Commands>
+				<VisualStudioCommand>
+					<Name>FieldVisibility</Name>
+					<ButtonText>Show Hidden Controls</ButtonText>
+					<Tooltip>Toggles visibility for hidden controls.</Tooltip>
+					<Icon>0941</Icon>
+					<Ordinal>3</Ordinal>
+					<BeginGroup>true</BeginGroup>
+				</VisualStudioCommand>
+				<VisualStudioCommand>
+					<Name>EditNavigator</Name>
+					<ButtonText>Edit Navigator</ButtonText>
+					<Tooltip>Starts the Navigator Editor.</Tooltip>
+					<Icon>3743</Icon>
+					<Ordinal>5</Ordinal>
+					<BeginGroup>true</BeginGroup>
+				</VisualStudioCommand>
+				<VisualStudioCommand>
+					<Name>GenerateDictionary</Name>
+					<ButtonText>Generate Dictionary</ButtonText>
+					<Tooltip>Builds the dictionary from selected projects.</Tooltip>
+					<Icon>3161</Icon>
+					<Ordinal>7</Ordinal>
+					<BeginGroup>false</BeginGroup>
+				</VisualStudioCommand>
+				<VisualStudioCommand>
+					<Name>StartPresentationObjectScan</Name>
+					<ButtonText>Start Presentation Object Scan</ButtonText>
+					<Tooltip>Start Presentation Object Scan for current project.</Tooltip>
+					<Icon>2555</Icon>
+					<Ordinal>8</Ordinal>
+					<BeginGroup>false</BeginGroup>
+					<CommandBarNames>&amp;IFS Development Tools,Item</CommandBarNames>
+				</VisualStudioCommand>
+				<VisualStudioCommand>
+					<Name>StartTranslatableCodeScan</Name>
+					<ButtonText>Start Translatable Code Scan</ButtonText>
+					<Tooltip>Start Translatable Code Scan for current project.</Tooltip>
+					<Icon>778</Icon>
+					<Ordinal>10</Ordinal>
+					<BeginGroup>false</BeginGroup>
+				</VisualStudioCommand>
+        <VisualStudioCommand>
+          <Name>SyncSelectedProject</Name>
+          <ButtonText>Sync referenced assemblies with Team Server</ButtonText>
+          <Tooltip>Synchronize the assemblies that this project references with the team server</Tooltip>
+          <Icon>1977</Icon>
+          <Ordinal>100</Ordinal>
+          <BeginGroup>false</BeginGroup>
+          <CommandBarNames>Project</CommandBarNames>
+        </VisualStudioCommand>
+      </Commands>
+		</AddinCommandConfiguration>
+		<AddinCommandConfiguration>
+			<FullClassName>Ifs.Fnd.VisualStudio.LocalizableStringExtraction.Connect</FullClassName>
+			<Commands>
+				<VisualStudioCommand>
+					<Name>LocalizableStringExtraction</Name>
+					<ButtonText>Extract Localizable Strings</ButtonText>
+					<Tooltip>Extracts localizable resources from the current project.</Tooltip>
+					<Icon>65</Icon>
+					<Ordinal>9</Ordinal>
+					<BeginGroup>false</BeginGroup>
+					<CommandBarNames>&amp;IFS Development Tools,Solution,Project,Item,Folder</CommandBarNames>
+				</VisualStudioCommand>
+			</Commands>
+		</AddinCommandConfiguration>
+		<AddinCommandConfiguration>
+			<FullClassName>Ifs.Fnd.VisualStudio.LocalizeForms.Connect</FullClassName>
+			<Commands>
+				<VisualStudioCommand>
+					<Name>LocalizeForms</Name>
+					<ButtonText>Set Forms Localizable</ButtonText>
+					<Tooltip>Set Localizable property true on all forms.</Tooltip>
+					<Icon>65</Icon>
+					<Ordinal>11</Ordinal>
+					<BeginGroup>false</BeginGroup>
+					<CommandBarNames>Solution,Project,Item,Folder</CommandBarNames>
+				</VisualStudioCommand>
+			</Commands>
+		</AddinCommandConfiguration>
+		<AddinCommandConfiguration>
+			<FullClassName>Ifs.Fnd.VisualStudio.CustomizationAddIn.Connect</FullClassName>
+			<Commands>
+				<VisualStudioCommand>
+					<Name>HooksCustomizeProj</Name>
+					<ButtonText>Customize this project</ButtonText>
+					<Tooltip>Customize this project</Tooltip>
+					<Icon>611</Icon>
+					<Ordinal>12</Ordinal>
+					<BeginGroup>false</BeginGroup>
+					<CommandBarNames>Project</CommandBarNames>
+				</VisualStudioCommand>
+				<VisualStudioCommand>
+					<Name>HooksCustomizeItem</Name>
+					<ButtonText>Customize this item</ButtonText>
+					<Tooltip>Customize this item</Tooltip>
+					<Icon>611</Icon>
+					<Ordinal>13</Ordinal>
+					<BeginGroup>false</BeginGroup>
+					<CommandBarNames>Item</CommandBarNames>
+				</VisualStudioCommand>
+			</Commands>
+		</AddinCommandConfiguration>
+	</AddinConfigurations>
+</CommandConfiguration>

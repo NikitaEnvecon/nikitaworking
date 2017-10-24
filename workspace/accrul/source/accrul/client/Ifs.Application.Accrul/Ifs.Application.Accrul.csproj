@@ -1,0 +1,859 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B87D85F8-EF5C-44D8-904F-A40BE5BADE2A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ifs.Application.Accrul</RootNamespace>
+    <AssemblyName>Ifs.Application.Accrul</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ifs.Application.Appsrv, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Application.Appsrv.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Application.Enterp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Application.Enterp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Application.Enterp_, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Application.Enterp_.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.AccessProvider, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.AccessProvider.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.AccessProvider.Interactive, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.AccessProvider.Interactive.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.ApplicationForms, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.ApplicationForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.ApplicationFormsIntegration, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.ApplicationFormsIntegration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.ApplicationSearch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.ApplicationSearch.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Buffer, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Buffer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.CompositePageRenderer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.CompositePageRenderer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Core, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.CustomObjectsServiceProvider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.CustomObjectsServiceProvider.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Data.ADONetProvider, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Data.ADONetProvider.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Diagnostics, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Diagnostics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Explorer.Extenders, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Explorer.Extenders.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Explorer.Interfaces">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Explorer.UI, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Explorer.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Feature">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Mail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Mail.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.MSBuildTasks, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.MSBuildTasks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.QueryEditor, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.QueryEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.StartPage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.StartPage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.ThemeManager, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.ThemeManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.CommonControls">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.ConditionalFields, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Windows.Forms.ConditionalFields.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.DataBinding, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Windows.Forms.DataBinding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.DataGrid, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Windows.Forms.DataGrid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.FndXGantt, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Windows.Forms.FndXGantt.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.FrameworkControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Windows.Forms.FrameworkControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.InfoServicesControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Windows.Forms.InfoServicesControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.InfoViz, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Windows.Forms.InfoViz.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.Interfaces">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ifs.Fnd.Windows.Forms.SearchControls, Version=4.52.9.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeployFiles\Ifs.Fnd.Windows.Forms.SearchControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PPJ.Runtime.4">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PPJ.Runtime.Vis.4">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\cCalculateFinAmount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\cFinlibServices.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\cCheckBoxColumnFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cCheckBoxFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cChildTableFin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cChildTableFin.Designer.cs">
+      <DependentUpon>cChildTableFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cChildTableFinBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cChildTableFinBase.Designer.cs">
+      <DependentUpon>cChildTableFinBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cChildTableObjectSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cChildTableObjectSelection.Designer.cs">
+      <DependentUpon>cChildTableObjectSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cColumnCodePartDescFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cColumnCodePartFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cColumnCodePartInt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cColumnExtFileLoad.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cColumnFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cColumnFinEuro.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cColumnFinWithUserProfile.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cComboBoxFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cContainerTabFormWindowFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cContainerTabFormWindowFin.Designer.cs">
+      <DependentUpon>cContainerTabFormWindowFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cDataFieldDlgFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cDataFieldFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cDataFieldFinContent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cDataFieldFinDescription.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cDataFieldFinEuro.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cDialogBoxFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cDialogBoxFin.Designer.cs">
+      <DependentUpon>cDialogBoxFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cFormWindowFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cFormWindowFin.Designer.cs">
+      <DependentUpon>cFormWindowFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cFormWindowSelTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cFormWindowSelTemplate.Designer.cs">
+      <DependentUpon>cFormWindowSelTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cLookupColumnFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cMasterDetailTabFormWindowFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cMasterDetailTabFormWindowFin.Designer.cs">
+      <DependentUpon>cMasterDetailTabFormWindowFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cMasterDetailTabFormWindowVou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cMasterDetailTabFormWindowVou.Designer.cs">
+      <DependentUpon>cMasterDetailTabFormWindowVou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cPushButtonDlgFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cRadioButtonFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cRecSelComboBoxFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cRecSelExtComboBoxFin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cTabDialogBoxFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cTabDialogBoxFin.Designer.cs">
+      <DependentUpon>cTabDialogBoxFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cTabFormWindowFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cTabFormWindowFin.Designer.cs">
+      <DependentUpon>cTabFormWindowFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cTableWindowFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cTableWindowFin.Designer.cs">
+      <DependentUpon>cTableWindowFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cTableWindowFinBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cTableWindowFinBase.Designer.cs">
+      <DependentUpon>cTableWindowFinBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cWizardDialogBoxFin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\cWizardDialogBoxFin.Designer.cs">
+      <DependentUpon>cWizardDialogBoxFin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgAuditFileResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgAuditFileResult.designer.cs">
+      <DependentUpon>dlgAuditFileResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgAuditInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgAuditInterface.Designer.cs">
+      <DependentUpon>dlgAuditInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgAuditReportOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgAuditReportOrder.Designer.cs">
+      <DependentUpon>dlgAuditReportOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgCopySelectionTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgCopySelectionTemplate.Designer.cs">
+      <DependentUpon>dlgCopySelectionTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgCopyVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgCopyVoucher.Designer.cs">
+      <DependentUpon>dlgCopyVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgCreateSelectionTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgCreateSelectionTemplate.Designer.cs">
+      <DependentUpon>dlgCreateSelectionTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgCreateVouTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgCreateVouTemplate.Designer.cs">
+      <DependentUpon>dlgCreateVouTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgExternalFileParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgExternalFileParam.Designer.cs">
+      <DependentUpon>dlgExternalFileParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgExternalFileWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgExternalFileWizard.Designer.cs">
+      <DependentUpon>dlgExternalFileWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgGLVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgGLVoucher.Designer.cs">
+      <DependentUpon>dlgGLVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgInstantUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgInstantUpdate.Designer.cs">
+      <DependentUpon>dlgInstantUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgInterimVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgInterimVoucher.Designer.cs">
+      <DependentUpon>dlgInterimVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgManualIntPosting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgManualIntPosting.Designer.cs">
+      <DependentUpon>dlgManualIntPosting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgPeriodAllocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgPeriodAllocation.Designer.cs">
+      <DependentUpon>dlgPeriodAllocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgPeriodAllocationRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgPeriodAllocationRule.Designer.cs">
+      <DependentUpon>dlgPeriodAllocationRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgPreYearEndDup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgPreYearEndDup.Designer.cs">
+      <DependentUpon>dlgPreYearEndDup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgReportSelTemplInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgReportSelTemplInfo.Designer.cs">
+      <DependentUpon>dlgReportSelTemplInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgRepSelectIncludeExclude.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgRepSelectIncludeExclude.Designer.cs">
+      <DependentUpon>dlgRepSelectIncludeExclude.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgRepSelectionInclExclAdv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgRepSelectionInclExclAdv.Designer.cs">
+      <DependentUpon>dlgRepSelectionInclExclAdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgSelectionInclExclAdv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgSelectionInclExclAdv.Designer.cs">
+      <DependentUpon>dlgSelectionInclExclAdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgSelectionIncludeExclude.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgSelectionIncludeExclude.Designer.cs">
+      <DependentUpon>dlgSelectionIncludeExclude.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgUseVouTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgUseVouTemplate.Designer.cs">
+      <DependentUpon>dlgUseVouTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgZoomIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgZoomIn.Designer.cs">
+      <DependentUpon>dlgZoomIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgZoomInStructure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgZoomInStructure.Designer.cs">
+      <DependentUpon>dlgZoomInStructure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgZoomInStructure2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgZoomInStructure2.Designer.cs">
+      <DependentUpon>dlgZoomInStructure2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAuditSourceColumn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAuditSourceColumn.Designer.cs">
+      <DependentUpon>frmAuditSourceColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCdCompl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCdCompl.Designer.cs">
+      <DependentUpon>frmCdCompl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDocumentFooter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDocumentFooter.Designer.cs">
+      <DependentUpon>frmDocumentFooter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEntryVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEntryVoucher.Designer.cs">
+      <DependentUpon>frmEntryVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTemplate.Designer.cs">
+      <DependentUpon>frmExternalFileTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExternalFileTransactions.Designer.cs">
+      <DependentUpon>frmExternalFileTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFooterDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFooterDefinition.Designer.cs">
+      <DependentUpon>frmFooterDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFooterField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFooterField.Designer.cs">
+      <DependentUpon>frmFooterField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMCEntryVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMCEntryVoucher.Designer.cs">
+      <DependentUpon>frmMCEntryVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMCVoucherRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMCVoucherRow.Designer.cs">
+      <DependentUpon>frmMCVoucherRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmQueryVoucherDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmQueryVoucherDetail.Designer.cs">
+      <DependentUpon>frmQueryVoucherDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTabAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTabAccount.Designer.cs">
+      <DependentUpon>frmTabAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVoucherPosting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVoucherPosting.Designer.cs">
+      <DependentUpon>frmVoucherPosting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVoucherRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVoucherRow.Designer.cs">
+      <DependentUpon>frmVoucherRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwAccountOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwAccountOverview.Designer.cs">
+      <DependentUpon>tbwAccountOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwAccrulQueryVoucherRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwAccrulQueryVoucherRow.Designer.cs">
+      <DependentUpon>tbwAccrulQueryVoucherRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwAttribute.Designer.cs">
+      <DependentUpon>tbwAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwAttributeCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwAttributeCon.Designer.cs">
+      <DependentUpon>tbwAttributeCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwAuditFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwAuditFormat.Designer.cs">
+      <DependentUpon>tbwAuditFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwAuditSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwAuditSource.Designer.cs">
+      <DependentUpon>tbwAuditSource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwFooterConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwFooterConnection.Designer.cs">
+      <DependentUpon>tbwFooterConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tbwQueryVoucherRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tbwQueryVoucherRow.Designer.cs">
+      <DependentUpon>tbwQueryVoucherRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals\Const.cs" />
+    <Compile Include="Globals\Ext.cs" />
+    <Compile Include="Globals\Int.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Globals\Var.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\cChildTableFin.resx">
+      <DependentUpon>cChildTableFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cChildTableFinBase.resx">
+      <DependentUpon>cChildTableFinBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cChildTableObjectSelection.resx">
+      <DependentUpon>cChildTableObjectSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cContainerTabFormWindowFin.resx">
+      <DependentUpon>cContainerTabFormWindowFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cDialogBoxFin.resx">
+      <DependentUpon>cDialogBoxFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cFormWindowFin.resx">
+      <DependentUpon>cFormWindowFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cFormWindowSelTemplate.resx">
+      <DependentUpon>cFormWindowSelTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cMasterDetailTabFormWindowFin.resx">
+      <DependentUpon>cMasterDetailTabFormWindowFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cMasterDetailTabFormWindowVou.resx">
+      <DependentUpon>cMasterDetailTabFormWindowVou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cTabDialogBoxFin.resx">
+      <DependentUpon>cTabDialogBoxFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cTabFormWindowFin.resx">
+      <DependentUpon>cTabFormWindowFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cTableWindowFin.resx">
+      <DependentUpon>cTableWindowFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cTableWindowFinBase.resx">
+      <DependentUpon>cTableWindowFinBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cWizardDialogBoxFin.resx">
+      <DependentUpon>cWizardDialogBoxFin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgAuditFileResult.resx">
+      <DependentUpon>dlgAuditFileResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgAuditInterface.resx">
+      <DependentUpon>dlgAuditInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgAuditReportOrder.resx">
+      <DependentUpon>dlgAuditReportOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgCopySelectionTemplate.resx">
+      <DependentUpon>dlgCopySelectionTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgCopyVoucher.resx">
+      <DependentUpon>dlgCopyVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgCreateSelectionTemplate.resx">
+      <DependentUpon>dlgCreateSelectionTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgCreateVouTemplate.resx">
+      <DependentUpon>dlgCreateVouTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgExternalFileParam.resx">
+      <DependentUpon>dlgExternalFileParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgExternalFileWizard.resx">
+      <DependentUpon>dlgExternalFileWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgGLVoucher.resx">
+      <DependentUpon>dlgGLVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgInstantUpdate.resx">
+      <DependentUpon>dlgInstantUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgInterimVoucher.resx">
+      <DependentUpon>dlgInterimVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgManualIntPosting.resx">
+      <DependentUpon>dlgManualIntPosting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgPeriodAllocation.resx">
+      <DependentUpon>dlgPeriodAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgPeriodAllocationRule.resx">
+      <DependentUpon>dlgPeriodAllocationRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgPreYearEndDup.resx">
+      <DependentUpon>dlgPreYearEndDup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgReportSelTemplInfo.resx">
+      <DependentUpon>dlgReportSelTemplInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgRepSelectIncludeExclude.resx">
+      <DependentUpon>dlgRepSelectIncludeExclude.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgRepSelectionInclExclAdv.resx">
+      <DependentUpon>dlgRepSelectionInclExclAdv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgSelectionInclExclAdv.resx">
+      <DependentUpon>dlgSelectionInclExclAdv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgSelectionIncludeExclude.resx">
+      <DependentUpon>dlgSelectionIncludeExclude.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgUseVouTemplate.resx">
+      <DependentUpon>dlgUseVouTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgZoomIn.resx">
+      <DependentUpon>dlgZoomIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgZoomInStructure.resx">
+      <DependentUpon>dlgZoomInStructure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgZoomInStructure2.resx">
+      <DependentUpon>dlgZoomInStructure2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAuditSourceColumn.resx">
+      <DependentUpon>frmAuditSourceColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCdCompl.resx">
+      <DependentUpon>frmCdCompl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDocumentFooter.resx">
+      <DependentUpon>frmDocumentFooter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEntryVoucher.resx">
+      <DependentUpon>frmEntryVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExternalFileTemplate.resx">
+      <DependentUpon>frmExternalFileTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExternalFileTransactions.resx">
+      <DependentUpon>frmExternalFileTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFooterDefinition.resx">
+      <DependentUpon>frmFooterDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFooterField.resx">
+      <DependentUpon>frmFooterField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMCEntryVoucher.resx">
+      <DependentUpon>frmMCEntryVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMCVoucherRow.resx">
+      <DependentUpon>frmMCVoucherRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmQueryVoucherDetail.resx">
+      <DependentUpon>frmQueryVoucherDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTabAccount.resx">
+      <DependentUpon>frmTabAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVoucherPosting.resx">
+      <DependentUpon>frmVoucherPosting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVoucherRow.resx">
+      <DependentUpon>frmVoucherRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwAccountOverview.resx">
+      <DependentUpon>tbwAccountOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwAccrulQueryVoucherRow.resx">
+      <DependentUpon>tbwAccrulQueryVoucherRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwAttribute.resx">
+      <DependentUpon>tbwAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwAttributeCon.resx">
+      <DependentUpon>tbwAttributeCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwAuditFormat.resx">
+      <DependentUpon>tbwAuditFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwAuditSource.resx">
+      <DependentUpon>tbwAuditSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwFooterConnection.resx">
+      <DependentUpon>tbwFooterConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tbwQueryVoucherRow.resx">
+      <DependentUpon>tbwQueryVoucherRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"%25DEVELOPROOT%25\Ifs.Fnd.AppDeployer.exe" sourcefile="$(TargetPath)" destdir="%25DEPLOYTARGET%25"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

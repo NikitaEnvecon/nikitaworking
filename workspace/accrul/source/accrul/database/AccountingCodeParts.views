@@ -1,0 +1,141 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: AccountingCodeParts
+--  Component:    ACCRUL
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-- 160513   Nudilk  Bug  129199, Added Accounting_Code_Parts_Used.
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+@Override
+VIEW ACCOUNTING_CODE_PARTS IS
+   ORDER BY company,code_part;
+ 
+
+COLUMN Rep_Ent_Company IS
+   Flags      = 'PMI--'
+   Datatype   = 'STRING(20)/UPPERCASE'
+   Prompt     = 'Reporting Entity Company'
+   Ref        = 'CompanyFinance';
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+VIEW Accounting_Code_Parts_Public IS
+   Prompt = 'Accounting Code Parts Public'
+SELECT company             company,
+       code_part_used      code_part_used_db,
+       code_part_function  code_part_function_db,
+       parent_code_part    parent_code_part,
+       logical_code_part   logical_code_part,
+       rowkey             objkey
+FROM accounting_code_part_tab;
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Accounting_Code_Parts_Used IS
+   Prompt = 'Accounting Code Names'
+   Sort = 'COMPANY,CODE_PART'
+   Code_Part.Flags = 'KMI-L'
+   Code_Part.Datatype = 'STRING'
+   Code_Part.Prompt = 'Code part'
+   Code_Name.Flags = 'KMI-L'
+   Description.Flags = 'AMI-L'
+SELECT a.COMPANY                                COMPANY,
+       CODE_PART                                CODE_PART,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company, 'ACCRUL', 'AccountingCodeParts', code_part), code_name)
+                                                CODE_NAME,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'AccountingCodeParts', code_part||'^DESCRIPTION'), a.description)
+                                                DESCRIPTION,
+       rowkey                                                                         objkey
+FROM   accounting_code_part_tab a
+WHERE  code_part_used = 'Y';
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Accounting_Code_Parts_Used2 IS
+   Prompt = 'Accounting Code Names'
+   Sort = 'COMPANY,CODE_PART'
+   Code_Part.Flags = 'A----'
+   Code_Part.Datatype = 'STRING'
+   Code_Part.Prompt = 'Code part'
+   Code_Name.Flags = 'KMI-L'
+   Description.Flags = 'AMI-L'
+SELECT a.COMPANY                                COMPANY,
+       CODE_PART                                CODE_PART,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company, 'ACCRUL', 'AccountingCodeParts', code_part), code_name)
+                                                CODE_NAME,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'AccountingCodeParts', code_part||'^DESCRIPTION'), a.description)
+                                                DESCRIPTION,
+       rowkey                                                                         objkey
+FROM   accounting_code_part_tab a
+WHERE  code_part_used = 'Y';
+
+VIEW Acc_Code_Parts_Grocon_Lov IS
+   Prompt = 'Accounting Code Names'
+   Sort = 'CODE_PART'
+   Code_Part.Flags = 'A----'
+   Code_Part.Datatype = 'STRING'
+   Code_Part.Prompt = 'Code part'
+   Code_Name.Flags = 'KMI-L'
+   Description.Flags = 'AMI-L'
+   Description.Datatype = 'STRING(35)'
+SELECT a.company                                rep_ent_company,
+       code_part                                code_part,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company, 'ACCRUL', 'AccountingCodeParts', code_part), code_name)
+                                                code_name,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'AccountingCodeParts', code_part||'^DESCRIPTION'), a.description)
+                                                description,
+       rowkey                                  objkey
+FROM   accounting_code_part_tab a
+WHERE  code_part_used = 'Y'
+AND    code_part != 'A';
+
+VIEW Code_Parts_For_Consolidation IS
+   Prompt = 'Accounting Code part'
+   Sort = 'CONS_COMPANY,CODE_PART'
+   Cons_Company.Flags = 'PMI--'
+   Cons_Company.Prompt = 'Company'
+   Cons_Company.Ref = 'CompanyFinance'
+   Code_Part.Flags = 'KMI-L'
+   Code_Part_Used_Db.Datatype = 'STRING(20)'
+   Code_Part_Function_Db.Datatype = 'STRING(20)'
+SELECT a.COMPANY                                CONS_COMPANY,
+       CODE_PART                                CODE_PART,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company, 'ACCRUL', 'AccountingCodeParts', code_part), code_name)
+                                                CODE_NAME,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'AccountingCodeParts', code_part||'^DESCRIPTION'), a.description)
+                                                DESCRIPTION,
+       Accounting_Code_Part_Y_N_API.Decode(CODE_PART_USED)
+                                                CODE_PART_USED,
+       code_part_used                           code_part_used_db,
+       Accounting_Code_Part_Fu_API.Decode(CODE_PART_FUNCTION)
+                                                CODE_PART_FUNCTION,
+       code_part_function                       code_part_function_db,
+                                                rowkey            objkey
+FROM   accounting_code_part_tab a, company_finance_auth c
+WHERE  a.company = c.company
+AND    code_part_function NOT IN ('CONSOL','CURR','ELIM','FAACC','PRACC')
+AND    code_part_used = 'Y';
+
+   
+VIEW Accounting_Code_Parts_Av IS
+   Prompt = 'Accounting Code Part Tax Audit'
+   Company.Flags = 'P----'
+   Code_Part.Flags = 'K----'
+   Code_Name.Flags = 'A----'
+   Code_Name.Datatype = 'STRING(20)'
+   Description.Flags = 'A----'
+SELECT company                                  company,
+       code_part                                code_part,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(company, 'ACCRUL', 'AccountingCodeParts', code_part), code_name)
+                                                code_name,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(company,'ACCRUL', 'AccountingCodeParts', code_part||'^DESCRIPTION'), description)
+                                                description
+FROM   accounting_code_part_tab;
+

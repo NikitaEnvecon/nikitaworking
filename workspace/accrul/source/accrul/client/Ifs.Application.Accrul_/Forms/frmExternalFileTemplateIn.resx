@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="commandManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>5, 17</value>
+  </metadata>
+  <data name="menuFrmMethods_menuExternal_File_Template_C_ontrol_.Caption" xml:space="preserve">
+    <value>External File Template C&amp;ontrol...</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuItem_External.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="menuFrmMethods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 26</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Name" xml:space="preserve">
+    <value>menuFrmMethods</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndContextMenuStrip, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="dfsFileTemplateId.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dfsFileTemplateId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 342</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dfsFileTemplateId.MaxLength" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="dfsFileTemplateId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 20</value>
+  </data>
+  <data name="dfsFileTemplateId.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dfsFileTemplateId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dfsFileTemplateId.Name" xml:space="preserve">
+    <value>dfsFileTemplateId</value>
+  </data>
+  <data name="&gt;&gt;dfsFileTemplateId.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsFileTemplateId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsFileTemplateId.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="cmbFileDirection.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbFileDirection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 317</value>
+  </data>
+  <data name="cmbFileDirection.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="cmbFileDirection.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="cmbFileDirection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 21</value>
+  </data>
+  <data name="cmbFileDirection.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cmbFileDirection.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbFileDirection.Name" xml:space="preserve">
+    <value>cmbFileDirection</value>
+  </data>
+  <data name="&gt;&gt;cmbFileDirection.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cComboBox, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cmbFileDirection.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbFileDirection.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="gbFile_Unpack_Options.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbFile_Unpack_Options.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 8</value>
+  </data>
+  <data name="gbFile_Unpack_Options.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 50</value>
+  </data>
+  <data name="gbFile_Unpack_Options.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gbFile_Unpack_Options.Text" xml:space="preserve">
+    <value>File Unpack Options</value>
+  </data>
+  <data name="&gt;&gt;gbFile_Unpack_Options.Name" xml:space="preserve">
+    <value>gbFile_Unpack_Options</value>
+  </data>
+  <data name="&gt;&gt;gbFile_Unpack_Options.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbFile_Unpack_Options.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbFile_Unpack_Options.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="gbProcessing_Options.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbProcessing_Options.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 8</value>
+  </data>
+  <data name="gbProcessing_Options.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 50</value>
+  </data>
+  <data name="gbProcessing_Options.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="gbProcessing_Options.Text" xml:space="preserve">
+    <value>Processing Options</value>
+  </data>
+  <data name="&gt;&gt;gbProcessing_Options.Name" xml:space="preserve">
+    <value>gbProcessing_Options</value>
+  </data>
+  <data name="&gt;&gt;gbProcessing_Options.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbProcessing_Options.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbProcessing_Options.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="gbFile_Name_Path_Options.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbFile_Name_Path_Options.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 67</value>
+  </data>
+  <data name="gbFile_Name_Path_Options.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 193</value>
+  </data>
+  <data name="gbFile_Name_Path_Options.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="gbFile_Name_Path_Options.Text" xml:space="preserve">
+    <value>File Name-Path Options</value>
+  </data>
+  <data name="&gt;&gt;gbFile_Name_Path_Options.Name" xml:space="preserve">
+    <value>gbFile_Name_Path_Options</value>
+  </data>
+  <data name="&gt;&gt;gbFile_Name_Path_Options.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbFile_Name_Path_Options.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbFile_Name_Path_Options.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="labeldfsFileName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsFileName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labeldfsFileName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labeldfsFileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 84</value>
+  </data>
+  <data name="labeldfsFileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="labeldfsFileName.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="labeldfsFileName.Text" xml:space="preserve">
+    <value>File Name:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsFileName.Name" xml:space="preserve">
+    <value>labeldfsFileName</value>
+  </data>
+  <data name="&gt;&gt;labeldfsFileName.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsFileName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsFileName.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="dfsFileName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dfsFileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 101</value>
+  </data>
+  <data name="dfsFileName.MaxLength" type="System.Int32, mscorlib">
+    <value>259</value>
+  </data>
+  <data name="dfsFileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 20</value>
+  </data>
+  <data name="dfsFileName.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;dfsFileName.Name" xml:space="preserve">
+    <value>dfsFileName</value>
+  </data>
+  <data name="&gt;&gt;dfsFileName.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsFileName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsFileName.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="labeldfsLoadFileTypeList.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsLoadFileTypeList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="labeldfsLoadFileTypeList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labeldfsLoadFileTypeList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 84</value>
+  </data>
+  <data name="labeldfsLoadFileTypeList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 13</value>
+  </data>
+  <data name="labeldfsLoadFileTypeList.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="labeldfsLoadFileTypeList.Text" xml:space="preserve">
+    <value>Load File Type List:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsLoadFileTypeList.Name" xml:space="preserve">
+    <value>labeldfsLoadFileTypeList</value>
+  </data>
+  <data name="&gt;&gt;labeldfsLoadFileTypeList.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsLoadFileTypeList.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsLoadFileTypeList.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="dfsLoadFileTypeList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dfsLoadFileTypeList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 101</value>
+  </data>
+  <data name="dfsLoadFileTypeList.MaxLength" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="dfsLoadFileTypeList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 20</value>
+  </data>
+  <data name="dfsLoadFileTypeList.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;dfsLoadFileTypeList.Name" xml:space="preserve">
+    <value>dfsLoadFileTypeList</value>
+  </data>
+  <data name="&gt;&gt;dfsLoadFileTypeList.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsLoadFileTypeList.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsLoadFileTypeList.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="labeldfsInputFilePath.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsInputFilePath.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="labeldfsInputFilePath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labeldfsInputFilePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 126</value>
+  </data>
+  <data name="labeldfsInputFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
+  <data name="labeldfsInputFilePath.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="labeldfsInputFilePath.Text" xml:space="preserve">
+    <value>Input File Path Client:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsInputFilePath.Name" xml:space="preserve">
+    <value>labeldfsInputFilePath</value>
+  </data>
+  <data name="&gt;&gt;labeldfsInputFilePath.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsInputFilePath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsInputFilePath.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="dfsInputFilePath.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dfsInputFilePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 143</value>
+  </data>
+  <data name="dfsInputFilePath.MaxLength" type="System.Int32, mscorlib">
+    <value>259</value>
+  </data>
+  <data name="dfsInputFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 20</value>
+  </data>
+  <data name="dfsInputFilePath.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;dfsInputFilePath.Name" xml:space="preserve">
+    <value>dfsInputFilePath</value>
+  </data>
+  <data name="&gt;&gt;dfsInputFilePath.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsInputFilePath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsInputFilePath.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="labeldfsInputFilePathServer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsInputFilePathServer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="labeldfsInputFilePathServer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labeldfsInputFilePathServer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 126</value>
+  </data>
+  <data name="labeldfsInputFilePathServer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 13</value>
+  </data>
+  <data name="labeldfsInputFilePathServer.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="labeldfsInputFilePathServer.Text" xml:space="preserve">
+    <value>Input File Path Server:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsInputFilePathServer.Name" xml:space="preserve">
+    <value>labeldfsInputFilePathServer</value>
+  </data>
+  <data name="&gt;&gt;labeldfsInputFilePathServer.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsInputFilePathServer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsInputFilePathServer.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="dfsInputFilePathServer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dfsInputFilePathServer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 143</value>
+  </data>
+  <data name="dfsInputFilePathServer.MaxLength" type="System.Int32, mscorlib">
+    <value>259</value>
+  </data>
+  <data name="dfsInputFilePathServer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 20</value>
+  </data>
+  <data name="dfsInputFilePathServer.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;dfsInputFilePathServer.Name" xml:space="preserve">
+    <value>dfsInputFilePathServer</value>
+  </data>
+  <data name="&gt;&gt;dfsInputFilePathServer.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsInputFilePathServer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsInputFilePathServer.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="labeldfsBackupFilePath.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsBackupFilePath.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="labeldfsBackupFilePath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labeldfsBackupFilePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 168</value>
+  </data>
+  <data name="labeldfsBackupFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 13</value>
+  </data>
+  <data name="labeldfsBackupFilePath.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="labeldfsBackupFilePath.Text" xml:space="preserve">
+    <value>Backup File Path Client:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsBackupFilePath.Name" xml:space="preserve">
+    <value>labeldfsBackupFilePath</value>
+  </data>
+  <data name="&gt;&gt;labeldfsBackupFilePath.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsBackupFilePath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsBackupFilePath.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="dfsBackupFilePath.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dfsBackupFilePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 185</value>
+  </data>
+  <data name="dfsBackupFilePath.MaxLength" type="System.Int32, mscorlib">
+    <value>259</value>
+  </data>
+  <data name="dfsBackupFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 20</value>
+  </data>
+  <data name="dfsBackupFilePath.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;dfsBackupFilePath.Name" xml:space="preserve">
+    <value>dfsBackupFilePath</value>
+  </data>
+  <data name="&gt;&gt;dfsBackupFilePath.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsBackupFilePath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsBackupFilePath.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labeldfsBackupFilePathServer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsBackupFilePathServer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="labeldfsBackupFilePathServer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labeldfsBackupFilePathServer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 168</value>
+  </data>
+  <data name="labeldfsBackupFilePathServer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 13</value>
+  </data>
+  <data name="labeldfsBackupFilePathServer.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="labeldfsBackupFilePathServer.Text" xml:space="preserve">
+    <value>Backup File Path Server:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsBackupFilePathServer.Name" xml:space="preserve">
+    <value>labeldfsBackupFilePathServer</value>
+  </data>
+  <data name="&gt;&gt;labeldfsBackupFilePathServer.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsBackupFilePathServer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsBackupFilePathServer.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="dfsBackupFilePathServer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dfsBackupFilePathServer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 185</value>
+  </data>
+  <data name="dfsBackupFilePathServer.MaxLength" type="System.Int32, mscorlib">
+    <value>259</value>
+  </data>
+  <data name="dfsBackupFilePathServer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 20</value>
+  </data>
+  <data name="dfsBackupFilePathServer.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;dfsBackupFilePathServer.Name" xml:space="preserve">
+    <value>dfsBackupFilePathServer</value>
+  </data>
+  <data name="&gt;&gt;dfsBackupFilePathServer.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsBackupFilePathServer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsBackupFilePathServer.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labeldfsCharacterSet.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsCharacterSet.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="labeldfsCharacterSet.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labeldfsCharacterSet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 210</value>
+  </data>
+  <data name="labeldfsCharacterSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="labeldfsCharacterSet.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="labeldfsCharacterSet.Text" xml:space="preserve">
+    <value>Character Set:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCharacterSet.Name" xml:space="preserve">
+    <value>labeldfsCharacterSet</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCharacterSet.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCharacterSet.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsCharacterSet.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="dfsCharacterSet.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dfsCharacterSet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 227</value>
+  </data>
+  <data name="dfsCharacterSet.MaxLength" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="dfsCharacterSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 20</value>
+  </data>
+  <data name="dfsCharacterSet.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;dfsCharacterSet.Name" xml:space="preserve">
+    <value>dfsCharacterSet</value>
+  </data>
+  <data name="&gt;&gt;dfsCharacterSet.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsCharacterSet.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsCharacterSet.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="gbRemove_Transaction_Options.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbRemove_Transaction_Options.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 67</value>
+  </data>
+  <data name="gbRemove_Transaction_Options.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 92</value>
+  </data>
+  <data name="gbRemove_Transaction_Options.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="gbRemove_Transaction_Options.Text" xml:space="preserve">
+    <value>Remove Transaction Options</value>
+  </data>
+  <data name="&gt;&gt;gbRemove_Transaction_Options.Name" xml:space="preserve">
+    <value>gbRemove_Transaction_Options</value>
+  </data>
+  <data name="&gt;&gt;gbRemove_Transaction_Options.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbRemove_Transaction_Options.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbRemove_Transaction_Options.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="labeldfnRemoveDays.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfnRemoveDays.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="labeldfnRemoveDays.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labeldfnRemoveDays.Location" type="System.Drawing.Point, System.Drawing">
+    <value>465, 88</value>
+  </data>
+  <data name="labeldfnRemoveDays.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="labeldfnRemoveDays.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="labeldfnRemoveDays.Text" xml:space="preserve">
+    <value>Remove Days:</value>
+  </data>
+  <data name="&gt;&gt;labeldfnRemoveDays.Name" xml:space="preserve">
+    <value>labeldfnRemoveDays</value>
+  </data>
+  <data name="&gt;&gt;labeldfnRemoveDays.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfnRemoveDays.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfnRemoveDays.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="dfnRemoveDays.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dfnRemoveDays.Location" type="System.Drawing.Point, System.Drawing">
+    <value>468, 105</value>
+  </data>
+  <data name="dfnRemoveDays.MaxLength" type="System.Int32, mscorlib">
+    <value>32767</value>
+  </data>
+  <data name="dfnRemoveDays.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 20</value>
+  </data>
+  <data name="dfnRemoveDays.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;dfnRemoveDays.Name" xml:space="preserve">
+    <value>dfnRemoveDays</value>
+  </data>
+  <data name="&gt;&gt;dfnRemoveDays.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfnRemoveDays.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfnRemoveDays.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cbRemoveComplete.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbRemoveComplete.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cbRemoveComplete.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbRemoveComplete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>468, 130</value>
+  </data>
+  <data name="cbRemoveComplete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 20</value>
+  </data>
+  <data name="cbRemoveComplete.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="cbRemoveComplete.Text" xml:space="preserve">
+    <value>Remove Completely</value>
+  </data>
+  <data name="&gt;&gt;cbRemoveComplete.Name" xml:space="preserve">
+    <value>cbRemoveComplete</value>
+  </data>
+  <data name="&gt;&gt;cbRemoveComplete.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cCheckBox, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;cbRemoveComplete.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbRemoveComplete.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="gbRecord_Handling_Options.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="gbRecord_Handling_Options.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 269</value>
+  </data>
+  <data name="gbRecord_Handling_Options.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 50</value>
+  </data>
+  <data name="gbRecord_Handling_Options.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="gbRecord_Handling_Options.Text" xml:space="preserve">
+    <value>Record Handling Options</value>
+  </data>
+  <data name="&gt;&gt;gbRecord_Handling_Options.Name" xml:space="preserve">
+    <value>gbRecord_Handling_Options</value>
+  </data>
+  <data name="&gt;&gt;gbRecord_Handling_Options.Type" xml:space="preserve">
+    <value>PPJ.Runtime.Windows.SalGroupBox, PPJ.Runtime.4, Version=4.0.1046.0, Culture=neutral, PublicKeyToken=17bef35e11b84171</value>
+  </data>
+  <data name="&gt;&gt;gbRecord_Handling_Options.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbRecord_Handling_Options.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="labeldfsApiToCall.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsApiToCall.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="labeldfsApiToCall.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labeldfsApiToCall.Location" type="System.Drawing.Point, System.Drawing">
+    <value>453, 168</value>
+  </data>
+  <data name="labeldfsApiToCall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="labeldfsApiToCall.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="labeldfsApiToCall.Text" xml:space="preserve">
+    <value>Api To Call:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApiToCall.Name" xml:space="preserve">
+    <value>labeldfsApiToCall</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApiToCall.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApiToCall.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApiToCall.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="dfsApiToCall.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dfsApiToCall.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 185</value>
+  </data>
+  <data name="dfsApiToCall.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="dfsApiToCall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 20</value>
+  </data>
+  <data name="dfsApiToCall.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;dfsApiToCall.Name" xml:space="preserve">
+    <value>dfsApiToCall</value>
+  </data>
+  <data name="&gt;&gt;dfsApiToCall.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsApiToCall.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsApiToCall.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labeldfsApiToCallUnpBefore.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsApiToCallUnpBefore.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="labeldfsApiToCallUnpBefore.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labeldfsApiToCallUnpBefore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>453, 210</value>
+  </data>
+  <data name="labeldfsApiToCallUnpBefore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 13</value>
+  </data>
+  <data name="labeldfsApiToCallUnpBefore.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="labeldfsApiToCallUnpBefore.Text" xml:space="preserve">
+    <value>Api Before Unpack:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApiToCallUnpBefore.Name" xml:space="preserve">
+    <value>labeldfsApiToCallUnpBefore</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApiToCallUnpBefore.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApiToCallUnpBefore.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApiToCallUnpBefore.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="dfsApiToCallUnpBefore.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dfsApiToCallUnpBefore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 227</value>
+  </data>
+  <data name="dfsApiToCallUnpBefore.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="dfsApiToCallUnpBefore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 20</value>
+  </data>
+  <data name="dfsApiToCallUnpBefore.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;dfsApiToCallUnpBefore.Name" xml:space="preserve">
+    <value>dfsApiToCallUnpBefore</value>
+  </data>
+  <data name="&gt;&gt;dfsApiToCallUnpBefore.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsApiToCallUnpBefore.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsApiToCallUnpBefore.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labeldfsApiToCallUnpAfter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labeldfsApiToCallUnpAfter.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="labeldfsApiToCallUnpAfter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labeldfsApiToCallUnpAfter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>453, 252</value>
+  </data>
+  <data name="labeldfsApiToCallUnpAfter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="labeldfsApiToCallUnpAfter.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="labeldfsApiToCallUnpAfter.Text" xml:space="preserve">
+    <value>Api After Unpack:</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApiToCallUnpAfter.Name" xml:space="preserve">
+    <value>labeldfsApiToCallUnpAfter</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApiToCallUnpAfter.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cBackgroundText, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApiToCallUnpAfter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labeldfsApiToCallUnpAfter.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="dfsApiToCallUnpAfter.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dfsApiToCallUnpAfter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 269</value>
+  </data>
+  <data name="dfsApiToCallUnpAfter.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="dfsApiToCallUnpAfter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 20</value>
+  </data>
+  <data name="dfsApiToCallUnpAfter.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;dfsApiToCallUnpAfter.Name" xml:space="preserve">
+    <value>dfsApiToCallUnpAfter</value>
+  </data>
+  <data name="&gt;&gt;dfsApiToCallUnpAfter.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cDataField, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;dfsApiToCallUnpAfter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dfsApiToCallUnpAfter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbSystemDefined.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbSystemDefined.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cbSystemDefined.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbSystemDefined.Location" type="System.Drawing.Point, System.Drawing">
+    <value>468, 84</value>
+  </data>
+  <data name="cbSystemDefined.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 20</value>
+  </data>
+  <data name="cbSystemDefined.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="cbSystemDefined.Text" xml:space="preserve">
+    <value>System Defined:</value>
+  </data>
+  <data name="cbSystemDefined.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cbSystemDefined.Name" xml:space="preserve">
+    <value>cbSystemDefined</value>
+  </data>
+  <data name="&gt;&gt;cbSystemDefined.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbSystemDefined.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbSystemDefined.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbAllowOneRecordSetOnly.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbAllowOneRecordSetOnly.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cbAllowOneRecordSetOnly.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbAllowOneRecordSetOnly.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 290</value>
+  </data>
+  <data name="cbAllowOneRecordSetOnly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 20</value>
+  </data>
+  <data name="cbAllowOneRecordSetOnly.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="cbAllowOneRecordSetOnly.Text" xml:space="preserve">
+    <value>Allow One Record Set Only</value>
+  </data>
+  <data name="&gt;&gt;cbAllowOneRecordSetOnly.Name" xml:space="preserve">
+    <value>cbAllowOneRecordSetOnly</value>
+  </data>
+  <data name="&gt;&gt;cbAllowOneRecordSetOnly.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbAllowOneRecordSetOnly.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbAllowOneRecordSetOnly.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cbAllowRecordSetRepeat.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbAllowRecordSetRepeat.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cbAllowRecordSetRepeat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbAllowRecordSetRepeat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 290</value>
+  </data>
+  <data name="cbAllowRecordSetRepeat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 20</value>
+  </data>
+  <data name="cbAllowRecordSetRepeat.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="cbAllowRecordSetRepeat.Text" xml:space="preserve">
+    <value>Allow Record Set Repeat</value>
+  </data>
+  <data name="&gt;&gt;cbAllowRecordSetRepeat.Name" xml:space="preserve">
+    <value>cbAllowRecordSetRepeat</value>
+  </data>
+  <data name="&gt;&gt;cbAllowRecordSetRepeat.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbAllowRecordSetRepeat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbAllowRecordSetRepeat.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cbSkipInitialBlanks.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbSkipInitialBlanks.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cbSkipInitialBlanks.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbSkipInitialBlanks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>569, 28</value>
+  </data>
+  <data name="cbSkipInitialBlanks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 20</value>
+  </data>
+  <data name="cbSkipInitialBlanks.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="cbSkipInitialBlanks.Text" xml:space="preserve">
+    <value>Skip Initial Blanks</value>
+  </data>
+  <data name="&gt;&gt;cbSkipInitialBlanks.Name" xml:space="preserve">
+    <value>cbSkipInitialBlanks</value>
+  </data>
+  <data name="&gt;&gt;cbSkipInitialBlanks.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbSkipInitialBlanks.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbSkipInitialBlanks.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="cbSkipAllBlanks.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbSkipAllBlanks.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cbSkipAllBlanks.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbSkipAllBlanks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>468, 28</value>
+  </data>
+  <data name="cbSkipAllBlanks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 20</value>
+  </data>
+  <data name="cbSkipAllBlanks.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="cbSkipAllBlanks.Text" xml:space="preserve">
+    <value>Skip All Blanks</value>
+  </data>
+  <data name="&gt;&gt;cbSkipAllBlanks.Name" xml:space="preserve">
+    <value>cbSkipAllBlanks</value>
+  </data>
+  <data name="&gt;&gt;cbSkipAllBlanks.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbSkipAllBlanks.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbSkipAllBlanks.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="cbAbortImmediatly.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbAbortImmediatly.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cbAbortImmediatly.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbAbortImmediatly.Location" type="System.Drawing.Point, System.Drawing">
+    <value>258, 28</value>
+  </data>
+  <data name="cbAbortImmediatly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 20</value>
+  </data>
+  <data name="cbAbortImmediatly.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="cbAbortImmediatly.Text" xml:space="preserve">
+    <value>Abort Immediately</value>
+  </data>
+  <data name="&gt;&gt;cbAbortImmediatly.Name" xml:space="preserve">
+    <value>cbAbortImmediatly</value>
+  </data>
+  <data name="&gt;&gt;cbAbortImmediatly.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbAbortImmediatly.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbAbortImmediatly.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="cbLogSkippedLines.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbLogSkippedLines.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cbLogSkippedLines.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbLogSkippedLines.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 28</value>
+  </data>
+  <data name="cbLogSkippedLines.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 20</value>
+  </data>
+  <data name="cbLogSkippedLines.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cbLogSkippedLines.Text" xml:space="preserve">
+    <value>Log Skipped Lines</value>
+  </data>
+  <data name="&gt;&gt;cbLogSkippedLines.Name" xml:space="preserve">
+    <value>cbLogSkippedLines</value>
+  </data>
+  <data name="&gt;&gt;cbLogSkippedLines.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbLogSkippedLines.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbLogSkippedLines.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="cbLogInvalidLines.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbLogInvalidLines.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cbLogInvalidLines.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbLogInvalidLines.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 28</value>
+  </data>
+  <data name="cbLogInvalidLines.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 20</value>
+  </data>
+  <data name="cbLogInvalidLines.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="cbLogInvalidLines.Text" xml:space="preserve">
+    <value>Log Invalid Lines</value>
+  </data>
+  <data name="&gt;&gt;cbLogInvalidLines.Name" xml:space="preserve">
+    <value>cbLogInvalidLines</value>
+  </data>
+  <data name="&gt;&gt;cbLogInvalidLines.Type" xml:space="preserve">
+    <value>Ifs.Application.Accrul.cCheckBoxFin, Ifs.Application.Accrul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbLogInvalidLines.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbLogInvalidLines.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>733, 327</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>External File Template In</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Name" xml:space="preserve">
+    <value>commandManager</value>
+  </data>
+  <data name="&gt;&gt;commandManager.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommandManager, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuExternal_File_Template_C_ontrol_.Name" xml:space="preserve">
+    <value>menuFrmMethods_menuExternal_File_Template_C_ontrol_</value>
+  </data>
+  <data name="&gt;&gt;menuFrmMethods_menuExternal_File_Template_C_ontrol_.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndCommand, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;menuItem_External.Name" xml:space="preserve">
+    <value>menuItem_External</value>
+  </data>
+  <data name="&gt;&gt;menuItem_External.Type" xml:space="preserve">
+    <value>Ifs.Fnd.Windows.Forms.FndToolStripMenuItem, Ifs.Fnd.Windows.Forms.CommonControls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmExternalFileTemplateIn</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Ifs.Fnd.ApplicationForms.cFormWindow, Ifs.Fnd.ApplicationForms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ff90f512e10aef0d</value>
+  </data>
+</root>

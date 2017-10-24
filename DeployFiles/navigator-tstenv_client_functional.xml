@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FndNavigator xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Legacy="false" Source="tstenv\client\navigator-functional.xml">
+  <FndNavigatorEntries>
+    <FndNavigatorEntry>
+      <Key>TEST</Key>
+      <Name>Test</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>NAVIGATOR_Root</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>TEST.COUNRY</Key>
+      <Name>Country</Name>
+      <Url>ifsapf:frmCountry</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>TEST</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>TEST.STAT</Key>
+      <Name>State</Name>
+      <Url>ifsapf:frmState</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>TEST</ParentKey>
+      <Ordinal>101</Ordinal>
+    </FndNavigatorEntry>
+  </FndNavigatorEntries>
+  <FndShortcutItems />
+</FndNavigator>

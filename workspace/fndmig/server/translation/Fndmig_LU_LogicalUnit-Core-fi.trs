@@ -1,0 +1,1702 @@
+-------------------------------------------------------
+File Type: IFS Foundation Translation File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Language: fi
+Culture: fi-FI
+Fittings: Standard
+Layer: Core
+Main Type: LU
+Sub Type: Logical Unit
+-------------------------------------------------------
+CS:IntfaceChangeDefaults^LU
+	A:Prompt^Intface Change Defaults^O
+	CS:1^LU
+		A:Text^Sallittu^O
+	CE:
+	CS:2^LU
+		A:Text^Ei sallittu^O
+	CE:
+	CS:3^LU
+		A:Text^Kiinte\00E4 arvo^O
+	CE:
+CE:
+CS:IntfaceConvList^LU
+	A:Prompt^Intface Conv List^O
+	CS:INTFACE_CONV_LIST^LU
+	CE:
+CE:
+CS:IntfaceConvListCols^LU
+	A:Prompt^Intface Conv List Cols^O
+	CS:INTFACE_CONV_LIST_COLS^LU
+	CE:
+CE:
+CS:IntfaceDefaultRules^LU
+	A:Prompt^Intface Default Rules^O
+	CS:ADDOBJID^LU
+		A:Text^Luo lis\00E4saraketiedot "OBJID":lle.^O
+	CE:
+	CS:CHECKOPTION^LU
+		A:Text^Suorita metodi uusi ja muuta, CHECK -optiolla^O
+	CE:
+	CS:CLEANUP^LU
+		A:Text^Puhdistaa virhetiedot automaattisesti^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Rivien lukum\00E4\00E4r\00E4, "commit":ien v\00E4lill\00E4^O
+	CE:
+	CS:CONNJOB^LU
+		A:Text^Aloita t\00E4m\00E4 ty\00F6 ensin^O
+	CE:
+	CS:CREATEDET^LU
+		A:Text^Luo uudet saraketiedot perustuen n\00E4kymiin MethodList :ssa.^O
+	CE:
+	CS:CRETABCONF^LU
+		A:Text^Kontainer -taulun vaihtoehdot^O
+	CE:
+	CS:EVENTMESS^LU
+		A:Text^Ilmoita "event" -serverille kun ty\00F6 on p\00E4\00E4ttynyt^O
+	CE:
+	CS:EXITLINES^LU
+		A:Text^Lopeta tiedostonluku t\00E4m\00E4n rivinumeron j\00E4lkeen^O
+	CE:
+	CS:FETCHCONDITION^LU
+		A:Text^M\00E4\00E4ritet\00E4\00E4n, jos ty\00F6t\00E4 voi k\00E4ytt\00E4\00E4 tietojen noutoon. Jos k\00E4yt\00F6ss\00E4 on useita loogisia yksik\00F6it\00E4, m\00E4\00E4rit\00E4 liittymisehto^O
+	CE:
+	CS:FILEBKP^LU
+		A:Text^Varmuuskopioi tiedosto onnistuneen suorituksen j\00E4lkeen^O
+	CE:
+	CS:FILEHEAD^LU
+		A:Text^Luo sarakenimist\00E4 tiedosto-otsikko. Vain CSV -tiedostot^O
+	CE:
+	CS:IGNOREADERROR^LU
+		A:Text^Jatka tiedoston lukua, vaikka virheit\00E4 ilmenee^O
+	CE:
+	CS:IGNOREXEERROR^LU
+		A:Text^Jatka menettely\00E4, vaikka virheit\00E4 ilmenee^O
+	CE:
+	CS:INSUPD^LU
+		A:Text^Suorita joko INSERT tai UPDATE^O
+	CE:
+	CS:INTFACE_DEFAULT_RULES^LU
+	CE:
+	CS:NOCLEANUP^LU
+		A:Text^S\00E4ilyt\00E4 kaikki asiakastiedostojen ty\00F6tiedot^O
+	CE:
+	CS:SAVEJOBDAYS^LU
+		A:Text^Ty\00F6historian tallennusaika p\00E4ivin\00E4^O
+	CE:
+	CS:SAVEJOBERR^LU
+		A:Text^Tallenna vain virheet historialokiin^O
+	CE:
+	CS:SERVFILOAD^LU
+		A:Text^Lataa server tiedosto enne ty\00F6n aloitusta^O
+	CE:
+	CS:SKIPLINES^LU
+		A:Text^Aloita tiedoston luku t\00E4m\00E4n rivinumeron j\00E4lkeen^O
+	CE:
+	CS:SYNCDETAILS^LU
+		A:Text^Synkronoi ty\00F6tiedot tiedosto-otsikon sarakkeiden kanssa^O
+	CE:
+	CS:TRUNCVAL^LU
+		A:Text^Lyhent\00E4\00E4 arvot, jotka ovat yli sarakkeen pituisia^O
+	CE:
+CE:
+CS:IntfaceDetail^LU
+	A:Prompt^Intface Detail^O
+	CS:CHECKERROR^LU
+		A:Text^Tarkistus :P1 ep\00E4onnistui - :P2 (virhe rivill\00E4: :P3)^O
+	CE:
+	CS:CLIENTVAL^LU
+		A:Text^"Client" -arvot^O
+	CE:
+	CS:COLOUTDAT^LU
+		A:Text^Virhe muotoilussa :P1 p\00E4iv\00E4 -arvolla :P2^O
+	CE:
+	CS:COLOUTDAT2^LU
+		A:Text^Virhe muotoiltaessa p\00E4iv\00E4m\00E4\00E4r\00E4saraketta :P1^O
+	CE:
+	CS:COLOUTNUM^LU
+		A:Text^Virhe muotoilussa :P1 numeerisella -arvolla :P2^O
+	CE:
+	CS:COLOUTNUM2^LU
+		A:Text^Virhe muotoiltaessa numerosaraketta :P1^O
+	CE:
+	CS:COLUMNOUT^LU
+		A:Text^Virhe muotoilussa :P1 arvolla :P2^O
+	CE:
+	CS:COLUMNOUT2^LU
+		A:Text^Virhe muotoiltaessa saraketta :P1^O
+	CE:
+	CS:COMMITCNT^LU
+		A:Text^:P1 tallennettuja rivej\00E4; :P2^O
+	CE:
+	CS:CREERRORATTR^LU
+		A:Text^Tiedoston luonti :P1:st\00E4 ep\00E4onnistui.^O
+	CE:
+	CS:CREFORMAT^LU
+		A:Text^Tiedoston luonti ep\00E4onnistui :P1^O
+	CE:
+	CS:CREINTFACEOK^LU
+		A:Text^Siirtoty\00F6 :P1 valmis^O
+	CE:
+	CS:DBVAL^LU
+		A:Text^Tietokanta-arvot^O
+	CE:
+	CS:ERRDEFAULT^LU
+		A:Text^:P1 k\00E4ytet\00E4\00E4n vain, kun suunta = :P2^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Oletus "where" ei ole k\00E4yt\00F6ss\00E4 suunnalle = :P1^O
+	CE:
+	CS:FILENOTFOUND^LU
+		A:Text^Tiedostoa :P1 ei ole polussa :P2.^O
+	CE:
+	CS:FORMATERROR^LU
+		A:Text^Muotoilu ep\00E4onnistui - :P1. (virhe rivill\00E4 :P2)^O
+	CE:
+	CS:INSCHECK^LU
+		A:Text^:P1 uutta rivi\00E4 tarkastettu - OK^O
+	CE:
+	CS:INSCHECKERR^LU
+		A:Text^:P1 rivi\00E4 tarkastettu - virheit\00E4^O
+	CE:
+	CS:INSERRORNEW^LU
+		A:Text^Lis\00E4ys kohteeseen :P1 ep\00E4onnistui - :P2 (virhe rivill\00E4 :P3)^O
+	CE:
+	CS:INSINTERR^LU
+		A:Text^:P1 rivi\00E4 ep\00E4onnistui^O
+	CE:
+	CS:INSINTINS^LU
+		A:Text^:P1 uutta rivi\00E4 lis\00E4tty^O
+	CE:
+	CS:INSINTNOROWS^LU
+		A:Text^Yht\00E4\00E4n rivi\00E4 ei k\00E4sitelty^O
+	CE:
+	CS:INSINTOK^LU
+		A:Text^Siirtoty\00F6 :P1 valmis^O
+	CE:
+	CS:INTFACE_DETAIL^LU
+		CS:SOURCE_NAME^LU
+		CE:
+		CS:SOURCE_OWNER^LU
+		CE:
+	CE:
+	CS:INTFACE_DETAIL_COL_LOV^LU
+	CE:
+	CS:LOADERR^LU
+		A:Text^Virhe ladattaessa siirtoty\00F6t\00E4 :P1^O
+	CE:
+	CS:NODET^LU
+		A:Text^Tietoja ei ole - :P1^O
+	CE:
+	CS:NOROWS^LU
+		A:Text^Yht\00E4\00E4n rivi\00E4 ei k\00E4sitelty^O
+	CE:
+	CS:NOVAL^LU
+		A:Text^Ei TK/Client -arvoja :P1^O
+	CE:
+	CS:ROWSFAILED^LU
+		A:Text^:P1 rivi\00E4 ep\00E4onnistui^O
+	CE:
+	CS:ROWSWRITTEN^LU
+		A:Text^:P1 rivi\00E4 kirjoitettu^O
+	CE:
+	CS:STRINGOUT^LU
+		A:Text^Virhe muotoilussa :P1 arvolla :P2^O
+	CE:
+	CS:STRINGOUT2^LU
+		A:Text^Virhe muotoiltaessa saraketta :P1^O
+	CE:
+	CS:STRINGOUTCONV^LU
+		A:Text^Virhe muunnettaessa arvoa :P2 kohteessa :P1^O
+	CE:
+	CS:STRINGOUTCONV2^LU
+		A:Text^Virhe muunnettaessa saraketta :P1^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^M\00E4\00E4ritetty pituus :P2 sarakkeelle :P1 on ylitetty arvolla :lf_ :P3.lf_ Rule TRUNCVAL saattaa auttaa t\00E4h\00E4n.^O
+	CE:
+	CS:TOOLONG2^LU
+		A:Text^M\00E4\00E4ritetty pituus :P2 sarakkeelle :P1 on ylitetty. S\00E4\00E4nt\00F6 TRUNCVAL saattaa auttaa t\00E4h\00E4n.^O
+	CE:
+	CS:UNPACKPOS^LU
+		A:Text^Virhe purkamisen aikana :P1 arvolla :P2^O
+	CE:
+	CS:UNPACKPOS2^LU
+		A:Text^Virhe purettaessa saraketta :P1^O
+	CE:
+	CS:UNPACKPOSCONV^LU
+		A:Text^Virhe muunnettaessa arvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKPOSDAT^LU
+		A:Text^Virhe muotoiltaessa p\00E4iv\00E4m\00E4\00E4r\00E4arvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKPOSDAT2^LU
+		A:Text^Virhe muotoiltaessa p\00E4iv\00E4m\00E4\00E4r\00E4saraketta :P1^O
+	CE:
+	CS:UNPACKPOSDEF^LU
+		A:Text^Virhe muotoiltaessa oletusarvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKPOSNUM^LU
+		A:Text^Virhe muotoiltaessa numeroarvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKPOSNUM2^LU
+		A:Text^Virhe muotoiltaessa numerosaraketta :P1^O
+	CE:
+	CS:UNPACKPOSSTR^LU
+		A:Text^Virhe muotoiltaessa merkkijonoarvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKPOSSTR2^LU
+		A:Text^Virhe muotoiltaessa merkkijonosaraketta :P1^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Virhe purkamisen aikana :P1 arvolla :P2^O
+	CE:
+	CS:UNPACKSEP2^LU
+		A:Text^Virhe purettaessa saraketta :P1^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Virhe muunnettaessa arvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Virhe muotoiltaessa p\00E4iv\00E4m\00E4\00E4r\00E4arvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKSEPDAT2^LU
+		A:Text^Virhe muotoiltaessa p\00E4iv\00E4m\00E4\00E4r\00E4saraketta :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Virhe muotoiltaessa oletusarvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Virhe muotoiltaessa numeroarvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKSEPNUM2^LU
+		A:Text^Virhe muotoiltaessa numerosaraketta :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Virhe luettaessa sarakearvoja erottimittain^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Virhe muotoiltaessa merkkijonoarvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKSEPSTR2^LU
+		A:Text^Virhe muotoiltaessa merkkijonosaraketta :p1^O
+	CE:
+	CS:UPDERRORCHK^LU
+		A:Text^Virhe :P1 suoritettaessa :P2^O
+	CE:
+	CS:UPDERRORUPD^LU
+		A:Text^Kohteen :P1 p\00E4ivitys ep\00E4onnistui - :P2 (virhe rivill\00E4 :P3)^O
+	CE:
+	CS:UPDINTFACEOK^LU
+		A:Text^Siirtoty\00F6 :P1 valmis^O
+	CE:
+	CS:UPDINTFERR^LU
+		A:Text^:P1 rivi\00E4 ep\00E4onnistui^O
+	CE:
+	CS:UPDINTFINS^LU
+		A:Text^:P1 uutta rivi\00E4 lis\00E4tty^O
+	CE:
+	CS:UPDINTFUPD^LU
+		A:Text^:P1 rivi\00E4 muutettu^O
+	CE:
+	CS:VALFOUND^LU
+		A:Text^TK/Client -arvot olemassa^O
+	CE:
+	CS:WRNOROWS^LU
+		A:Text^Yht\00E4\00E4n rivi\00E4 ei k\00E4sitelty^O
+	CE:
+CE:
+CS:IntfaceDirection^LU
+	A:Prompt^Intface Direction^O
+	CS:1^LU
+		A:Text^Tiedosto sis\00E4\00E4n^O
+	CE:
+	CS:2^LU
+		A:Text^Viet\00E4v\00E4 tiedosto^O
+	CE:
+	CS:3^LU
+		A:Text^Yht\00E4\00E4n^O
+	CE:
+	CS:4^LU
+		A:Text^L\00E4hde siirto^O
+	CE:
+	CS:5^LU
+		A:Text^ReplikRakenne^O
+	CE:
+	CS:6^LU
+		A:Text^Excel-siirto^O
+	CE:
+CE:
+CS:IntfaceDocumentation^LU
+	A:Prompt^Intface Documentation^O
+	CS:INFTXTDETAIL^LU
+		A:Text^Ei k\00E4ytetty^O
+	CE:
+	CS:INFTXTHEADER^LU
+		A:Text^Ei k\00E4ytetty^O
+	CE:
+	CS:INFTXTMETHLI^LU
+		A:Text^Ei k\00E4ytetty^O
+	CE:
+	CS:INTFACE_DOCUMENTATION_REP^LU
+		A:Title^Siirtodokumentaatio^O
+		CS:ACTION^LU
+			A:Title^Toiminto^O
+		CE:
+		CS:AMOUNT_FACTOR^LU
+			A:Title^Summakerroin^O
+		CE:
+		CS:ATTR_SEQ^LU
+			A:Title^Attr. j\00E4rj.^O
+		CE:
+		CS:BLOCK_TYPE^LU
+			A:Title^Er\00E4tyyppi^O
+		CE:
+		CS:CHANGE_DEFAULTS^LU
+			A:Title^Muuta oletukset^O
+		CE:
+		CS:COLS_USING_LIST^LU
+			A:Title^Muuntolistan sarakkeet^O
+		CE:
+		CS:COLUMN_EMBRACE^LU
+			A:Title^Merkki -rajoitin^O
+		CE:
+		CS:COLUMN_NAME^LU
+			A:Title^Kohdesarake^O
+		CE:
+		CS:COLUMN_SEPARATOR^LU
+			A:Title^Sarake-erotin^O
+		CE:
+		CS:CONVERT_ATTR^LU
+			A:Title^K\00E4\00E4nnetyt attribuutit^O
+		CE:
+		CS:CONV_LIST_DESCR^LU
+			A:Title^Muuntolistan kuv.^O
+		CE:
+		CS:CONV_LIST_ID^LU
+			A:Title^Muuntolist.^O
+		CE:
+		CS:DATA_TYPE^LU
+			A:Title^Tietotyyppi^O
+		CE:
+		CS:DATE_FORMAT^LU
+			A:Title^P\00E4iv\00E4formaatti^O
+		CE:
+		CS:DECIMAL_LENGTH^LU
+			A:Title^Desimaalim\00E4\00E4r\00E4^O
+		CE:
+		CS:DECIMAL_POINT^LU
+			A:Title^Desim. piste^O
+		CE:
+		CS:DEFAULT_VALUE^LU
+			A:Title^Oletusarvo^O
+		CE:
+		CS:DEFAULT_WHERE^LU
+			A:Title^Where-oletuslause^O
+		CE:
+		CS:DESCR_COLUMN_NAME^LU
+			A:Title^Sarakekuvaus^O
+		CE:
+		CS:DIRECTION^LU
+			A:Title^Suunta^O
+		CE:
+		CS:DIRECTION_DB^LU
+			A:Title^Suunta DB^O
+		CE:
+		CS:EXECUTED_BY^LU
+			A:Title^Tekij\00E4^O
+		CE:
+		CS:EXECUTE_SEQ^LU
+			A:Title^Suorita j\00E4rjestys^O
+		CE:
+		CS:FILE_LOCATION^LU
+			A:Title^Tiedostopolku^O
+		CE:
+		CS:FILE_LOCATION_DB^LU
+			A:Title^Tiedoston sijainti^O
+		CE:
+		CS:FLAGS^LU
+			A:Title^Merkinn\00E4t^O
+		CE:
+		CS:GROUP_DESCRIPTION^LU
+			A:Title^Ryhm\00E4n kuvaus^O
+		CE:
+		CS:GROUP_ID^LU
+			A:Query^Ryhm\00E4:^O
+			A:Title^Ryhm\00E4^O
+		CE:
+		CS:INFO_TEXT_DETAIL^LU
+			A:Title^Tiedot:^O
+		CE:
+		CS:INFO_TEXT_HEADER^LU
+			A:Title^Tiedot:^O
+		CE:
+		CS:INFO_TEXT_METH_LIST^LU
+			A:Title^Tiedot:^O
+		CE:
+		CS:INTFACE_DESCR^LU
+			A:Title^Siirron kuvaus^O
+		CE:
+		CS:INTFACE_FILE^LU
+			A:Title^Tiedosto^O
+		CE:
+		CS:INTFACE_IN^LU
+			A:Query^Siirtoty\00F6 nro:^O
+		CE:
+		CS:INTFACE_NAME^LU
+			A:Title^Siirtoty\00F6 nro^O
+		CE:
+		CS:INTFACE_PATH^LU
+			A:Title^Polku^O
+		CE:
+		CS:IntfaceDoc.rdl^LU
+			A:Title^Siirtodokumentti^O
+		CE:
+		CS:LAST_EXECUTED^LU
+			A:Title^Viim. suoritettu^O
+		CE:
+		CS:LAST_INFO^LU
+			A:Title^Viim. tiedot^O
+		CE:
+		CS:LENGTH^LU
+			A:Title^Pituus^O
+		CE:
+		CS:MET_COLUMN_NAME^LU
+			A:Title^S\00E4\00E4nt\00F6sarake^O
+		CE:
+		CS:MET_COLUMN_VALUE^LU
+			A:Title^S\00E4\00E4nt\00F6arvo^O
+		CE:
+		CS:MET_METHOD_NAME^LU
+			A:Title^Menetelm\00E4^O
+		CE:
+		CS:MET_VIEW_NAME^LU
+			A:Title^N\00E4kym\00E4^O
+		CE:
+		CS:MINUS_POS^LU
+			A:Title^Miinussij.^O
+		CE:
+		CS:NEW_VALUE^LU
+			A:Title^Uusi arvo^O
+		CE:
+		CS:NOTE_TEXT_DETAIL^LU
+			A:Title^Kommentit^O
+		CE:
+		CS:NOTE_TEXT_GROUP^LU
+			A:Title^Kommentit^O
+		CE:
+		CS:NOTE_TEXT_HEADER^LU
+			A:Title^Kommentit^O
+		CE:
+		CS:NOTE_TEXT_METH_LIST^LU
+			A:Title^Kommentit^O
+		CE:
+		CS:OLD_VALUE^LU
+			A:Title^Vanha arvo^O
+		CE:
+		CS:ORDER_BY_CLAUSE^LU
+			A:Title^J\00E4rjest\00E4^O
+		CE:
+		CS:ORDER_BY_COL^LU
+			A:Title^J\00E4rjest\00E4^O
+		CE:
+		CS:PAD_CHAR_LEFT^LU
+			A:Title^T\00E4yt\00E4 merkit vasemmalta^O
+		CE:
+		CS:PAD_CHAR_RIGHT^LU
+			A:Title^T\00E4yt\00E4 merkit oikealta^O
+		CE:
+		CS:POS^LU
+			A:Title^Sij.^O
+		CE:
+		CS:PRINT_DETAIL^LU
+			A:Query^Tulosta sarakemappaus:^O
+		CE:
+		CS:PRINT_DOC_INFO^LU
+			A:Query^Tulosta dokum.tiedot:^O
+		CE:
+		CS:PRINT_HEADER^LU
+			A:Query^Tulosta otsikkotiedot:^O
+		CE:
+		CS:PRINT_MAP_VALUE^LU
+			A:Query^Tulosta kartoitetut arvot:^O
+		CE:
+		CS:PRINT_METH_LIST^LU
+			A:Query^Tulosta menetelm\00E4lista:^O
+		CE:
+		CS:PROCEDURE_NAME^LU
+			A:Title^Menettelyn nimi^O
+		CE:
+		CS:REFERENCES^LU
+			A:Title^Viitteet^O
+		CE:
+		CS:Report Constants^LU
+			A:txAction^M\00E4\00E4ritt\00E4\00E4 jos menetelm\00E4 ajetaan ennen vai j\00E4lkeen l\00E4hteen valittujen rivien k\00E4sittely\00E4, vai ajetaanko jokaisen rivin valinnan yhteydess\00E4.^O
+			A:txAmountFactor^T\00E4h\00E4n kentt\00E4\00E4n annetaan nimitt\00E4j\00E4 l\00E4hdesarakkeen arvon uud.laskentaa varten, jos tarvetta, ennen IFS tietokantasarakkeeseen siirtoa.^O
+			A:txChangeDefaults^T\00E4ss\00E4 kent\00E4ss\00E4 m\00E4\00E4ritet\00E4\00E4n onko sallittua muuttaa oletusarvoa migraatioty\00F6n suorittamisessa.^O
+			A:txColumnName^Tietokantasarake IFS:ss\00E4 miss\00E4 l\00E4hdearvo tulee siirt\00E4\00E4.^O
+			A:txDataType^Tietokannan sarakkeen tietotyyppi: numeerinen, aakkosnumeerinen tai p\00E4iv\00E4m\00E4\00E4r\00E4.^O
+			A:txDecimalLength^K\00E4ytett\00E4vien desimaalien m\00E4\00E4r\00E4 tiedoston luvussa/kirjoituksessa.^O
+			A:txDefaultValue^T\00E4h\00E4n kentt\00E4\00E4n annetaan arvo jos se puuttuu l\00E4hdesarakkeesta. Jos l\00E4hdesaraketta ei ole m\00E4\00E4ritetty niin standardiarvoa k\00E4ytet\00E4\00E4n kaikilla riveill\00E4.^O
+			A:txDescrColumnName^Tietokantasarakkeen kuvaus^O
+			A:txDetailTitle^Sarakemappauksen m\00E4\00E4rittely^O
+			A:txExecuteSeq^Anna j\00E4rjestys jossa listassa olevat menetelm\00E4t ajetaan.^O
+			A:txFileInfo^Tiedoston tiedot^O
+			A:txFlags^IFS ominaisuusmerkki. Merkki kuvaa IFS tietokantasarakkeisiin liitettyj\00E4 eri ominaisuuksia. Voi sis\00E4lt\00E4\00E4 jonkin seuraavista arvoista:^O
+			A:txFlagsI^I = lis\00E4ys sallittu^O
+			A:txFlagsK^K = Avain (Ulk.av)^O
+			A:txFlagsM^M = Pakollinen^O
+			A:txFlagsP^P = Ylin avain^O
+			A:txFlagsU^U = P\00E4ivitys sallittu^O
+			A:txHeaderColMapping^Sarakkeiden selitys k\00E4yt\00F6ss\00E4 sarakemappauksessa^O
+			A:txHeaderMethodList^Sarakkeiden selitys k\00E4yt\00F6ss\00E4 menetelm\00E4listassa.^O
+			A:txHeaderTitle^Migraatiorutiinien m\00E4\00E4rittely^O
+			A:txLastExecutionInfo^Viim.suor. tiedot^O
+			A:txLength^T\00E4ss\00E4 kent\00E4ss\00E4 m\00E4\00E4ritet\00E4\00E4n IFS tietokantasarakkeen maksimipituus. Kentt\00E4\00E4 k\00E4ytet\00E4\00E4n yhdess\00E4 Pos kent\00E4n kanssa tiedostojen lukemisessa/kirjoittamisessa.^O
+			A:txMapTitle^Tietyn sarakearvon mappaus^O
+			A:txMetColumnName^M\00E4\00E4ritt\00E4\00E4 ett\00E4 menetelm\00E4 ajetaan vain l\00E4hdesarakkeen arvosta riippuen.^O
+			A:txMetColumnValue^Menetelm\00E4 ajetaan vain jos l\00E4hdesarakkeen arvo t\00E4sm\00E4\00E4 t\00E4h\00E4n arvoon eli jos '%' on annettu niin menetelm\00E4 suoritetaan kaikille riveille joilla on arvo l\00E4hdesarakkeessa.^O
+			A:txMetMethodName^Kerro mik\00E4 IFS tai itsem\00E4\00E4ritetty menetelm\00E4 ajetaan.^O
+			A:txMethodListTitle^K\00E4ytetty/luotu menetelm\00E4t/APIt^O
+			A:txPadCharLeft^T\00E4h\00E4n kentt\00E4\00E4n m\00E4\00E4ritet\00E4\00E4n merkki, joka poistetaan tai lis\00E4t\00E4\00E4n sarakkeen vasempaan laitaan kun tiedostoa luetaan / kirjoitetaan. (ltrim/lpad)^O
+			A:txPadCharRight^T\00E4h\00E4n kentt\00E4\00E4n m\00E4\00E4ritet\00E4\00E4n merkki, joka poistetaan tai lis\00E4t\00E4\00E4n sarakkeen oikeaan laitaan kun tiedostoa luetaan / kirjoitetaan. (ltrim/lpad)^O
+			A:txPos^T\00E4ss\00E4 kent\00E4ss\00E4 kerrotaan sarakkeen sijainti m\00E4\00E4r\00E4tyss\00E4 tiedostossa. Jos CSV tiedostoa k\00E4ytet\00E4\00E4n t\00E4ss\00E4 kent\00E4ss\00E4 on 1,2,3 jne.^O
+			A:txSourceColumn^L\00E4hdesarake tiedostosta, taulusta tai n\00E4kym\00E4st\00E4 IFS tietokantasarakkeeseen.^O
+			A:txTitleDocPage^M\00E4\00E4ritelm\00E4t / Sarakekuvaukset^O
+			A:txViewInfo^P\00E4\00E4l\00E4hde/kohdetiedot^O
+		CE:
+		CS:SOURCE_COLUMN^LU
+			A:Title^L\00E4hdesarake^O
+		CE:
+		CS:SOURCE_NAME^LU
+			A:Title^L\00E4hdenimi^O
+		CE:
+		CS:SOURCE_OWNER^LU
+			A:Title^L\00E4hteen omistaja^O
+		CE:
+		CS:THOUSAND_SEPARATOR^LU
+			A:Title^Tuhaterotin^O
+		CE:
+		CS:VIEW_NAME^LU
+			A:Title^Kohdenimi^O
+		CE:
+		CS:WHERE_CLAUSE^LU
+			A:Title^Where^O
+		CE:
+	CE:
+	CS:INTFACE_INFO_SERVICES_RPV^LU
+	CE:
+CE:
+CS:IntfaceEvents^LU
+	A:Prompt^Intface Events^O
+CE:
+CS:IntfaceExcelConnect^LU
+	A:Prompt^K\00E4ytt\00F6liittym\00E4n Excel-yhteys^O
+CE:
+CS:IntfaceExecIntervalType^LU
+	A:Prompt^Intface Exec Interval Type^O
+	CS:1440^LU
+		A:Text^Minuutit^O
+	CE:
+	CS:24^LU
+		A:Text^Tunnit^O
+	CE:
+	CS:86400^LU
+		A:Text^Sekunnit^O
+	CE:
+CE:
+CS:IntfaceExecution^LU
+	A:Prompt^K\00E4ytt\00F6liittym\00E4n suoritus^O
+	CS:INTFACE_EXECUTION^LU
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:IC_TABLE_NAME^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionDetail^LU
+	A:Prompt^K\00E4ytt\00F6liittym\00E4n suorituksen tiedot^O
+	CS:INTFACE_EXECUTION_DETAIL^LU
+		CS:ATTRIBUTE_STRING^LU
+		CE:
+		CS:DATE_EXECUTED^LU
+		CE:
+		CS:ERROR_MESSAGE^LU
+		CE:
+		CS:EXECUTED_BY^LU
+		CE:
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:FILE_STRING^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+		CS:LINE_NO^LU
+		CE:
+		CS:STATUS^LU
+		CE:
+		CS:STATUS_DB^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionUtil^LU
+	CS:BLANKCOLUMNS^LU
+		A:Text^Joko l\00E4hdesarakkeella tai oletusarvolla on oltava arvo^O
+	CE:
+	CS:CHKCOUNT^LU
+		A:Text^:P1 rivi\00E4 tarkastettu^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Rivit tallennettu s\00E4\00E4nn\00F6ll\00E4 COMMITSEQ: :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^T\00E4t\00E4 ty\00F6t\00E4 ei voi aloittaa.  Ty\00F6ss\00E4 :P1 on virheit\00E4^O
+	CE:
+	CS:CREIND^LU
+		A:Text^Luotu :P1 indeksi sarakkeesta :P2^O
+	CE:
+	CS:DUPEXIST^LU
+		A:Text^Useita l\00E4hdesarakkeita l\00F6ytyi. Ratkaise kaksoiskappaleet ennen suoritusta^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^Menetelm\00E4 :P1 - arvo ty\00F6numerolle ei voi olla sama kuin p\00E4\00E4ty\00F6ll\00E4^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Suoritettu virheett\00E4^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^Suoritusmetodi numero :P1^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^:P1 keskener\00E4ist\00E4 tapahtumaa, koska kutsutussa metodissa COMMIT tai ROLLBACK.^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Keskener\00E4ist\00E4 valintaa ei suoritettu :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Tarkasta tulos. Tapahtumat voi olla osittain tallennettu.^O
+	CE:
+	CS:INVALIDLENGTH^LU
+		A:Text^L\00E4hdesarake ei saa ylitt\00E4\00E4 30 merkin rajaa^O
+	CE:
+	CS:JOBRUNERROR^LU
+		A:Text^Virhe suoritettaessa ty\00F6t\00E4 :P1^O
+	CE:
+	CS:LNGTHINVAL^LU
+		A:Text^L\00F6ytyi l\00E4hdesarakkeita, joiden pituus ylitt\00E4\00E4 30 merkin rajan. Ratkaise l\00E4hdesarakkeiden pituus ennen suoritusta^O
+	CE:
+	CS:LOADERR^LU
+		A:Text^Virhe ladattaessa siirtoty\00F6t\00E4 :P1^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 TARKISTA optiolla^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, Virheit\00E4; :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Uudet rivit :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^K\00E4sitellyt rivit: :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^P\00E4ivitetyt rivit: :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^Keskim\00E4\00E4rin :P1 rivi\00E4 minuutissa^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 rivi\00E4 tallennettu^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^:P1 rivi\00E4 valittu^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 rivi\00E4 ep\00E4onnistui^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^:P1 tuntia ja :P2 minuuttia k\00E4ytetty^O
+	CE:
+	CS:NODET^LU
+		A:Text^Tietoja ei ole - :P1^O
+	CE:
+	CS:NONAME^LU
+		A:Text^Ty\00F6n tunnus puuttuu attribuutti-stringill\00E4 metodille :P1^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^OBJID ei ole "select":ss\00E4, mutta s\00E4\00E4nt\00F6 ADDOBJID on aktiivinen^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Ty\00F6n k\00E4ynnistys uudestaan mahdoton :P1 :ss\00E4 ROWID puuttuu^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^"Select" ei ole m\00E4\00E4ritetty^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1:ll\00E4 on :P2 virherivi\00E4 eik\00E4 voida aloittaa^O
+	CE:
+	CS:NULLCOLS^LU
+		A:Text^L\00F6ytyi tietueita, joista puuttuu sek\00E4 l\00E4hdesarake ett\00E4 oletusarvo. Ratkaise ennen suoritusta.^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Virhe valinnassa :P1 - :P2^O
+	CE:
+	CS:SOURCEDUPLIC^LU
+		A:Text^L\00E4hdesarakkeen pit\00E4\00E4 olla yksil\00F6llinen.^O
+	CE:
+	CS:STATINSERT^LU
+		A:Text^Lis\00E4tty^O
+	CE:
+	CS:STATNOOP^LU
+		A:Text^Ei toimintoa^O
+	CE:
+	CS:STATNOTEXT^LU
+		A:Text^Objektia ei ole olemassa^O
+	CE:
+	CS:STATOK^LU
+		A:Text^Validointi OK^O
+	CE:
+	CS:STATPROC^LU
+		A:Text^K\00E4sitelty^O
+	CE:
+	CS:STATUPDATE^LU
+		A:Text^P\00E4ivitetty^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Aloitusaika \2013 :P1 :P2^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^M\00E4\00E4ritetty pituus :P2 sarakkeelle :P1 on ylitetty arvolla :P3.^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Virhe purkamisen aikana :P1 arvolla :P2^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Virhe muunnettaessa arvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Virhe muotoiltaessa p\00E4iv\00E4m\00E4\00E4r\00E4arvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Virhe muotoiltaessa oletusarvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Virhe muotoiltaessa numeroarvoa :P2 kohteessa :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Virhe luettaessa sarakearvoja erottimittain^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Virhe muotoiltaessa merkkijonoarvoa :P2 kohteessa :P1^O
+	CE:
+CE:
+CS:IntfaceFileLocation^LU
+	A:Prompt^Intface File Location^O
+	CS:1^LU
+		A:Text^Serverill\00E4^O
+	CE:
+	CS:2^LU
+		A:Text^Clientilla^O
+	CE:
+	CS:3^LU
+		A:Text^EiTiedostoa^O
+	CE:
+CE:
+CS:IntfaceFormatChar^LU
+	A:Prompt^Intface Format Char^O
+	CS:124^LU
+		A:Text^<putki>^O
+	CE:
+	CS:13^LU
+		A:Text^<vaunun palautus>^O
+	CE:
+	CS:164^LU
+		A:Text^<currency sign>^O
+	CE:
+	CS:32^LU
+		A:Text^<space>^O
+	CE:
+	CS:34^LU
+		A:Text^<double quotation>^O
+	CE:
+	CS:35^LU
+		A:Text^<hash>^O
+	CE:
+	CS:39^LU
+		A:Text^<single quotation>^O
+	CE:
+	CS:42^LU
+		A:Text^<asterisk>^O
+	CE:
+	CS:44^LU
+		A:Text^<comma>^O
+	CE:
+	CS:46^LU
+		A:Text^<point>^O
+	CE:
+	CS:48^LU
+		A:Text^<zero>^O
+	CE:
+	CS:59^LU
+		A:Text^<semicolon>^O
+	CE:
+	CS:9^LU
+		A:Text^<tab>^O
+	CE:
+CE:
+CS:IntfaceGroup^LU
+	A:Prompt^Intface Group^O
+	CS:INTFACE_GROUP^LU
+	CE:
+CE:
+CS:IntfaceHeader^LU
+	A:Prompt^Intface Header^O
+	CS:BATCHJOBCOMP^LU
+		A:Text^Siirtoty\00F6n :P1 suoritus on valmis.^O
+	CE:
+	CS:BATCHJOBERROR^LU
+		A:Text^Siirtoty\00F6n :P1 suorituksessa esiintyi virheit\00E4. Lis\00E4tietoja l\00F6ytyy siirtoty\00F6n historiaikkunasta.^O
+	CE:
+	CS:BCKFILE^LU
+		A:Text^Varmistustiedosto: :P1^O
+	CE:
+	CS:BCKPATH^LU
+		A:Text^Varmistuspolku: :P1^O
+	CE:
+	CS:COPYERR^LU
+		A:Text^Virhe luotaessa :P1 - :P2^O
+	CE:
+	CS:COPYOK^LU
+		A:Text^Siirtoty\00F6 :P1 luotu^O
+	CE:
+	CS:DELFILE^LU
+		A:Text^Tiedosto :P1 on poistettu^O
+	CE:
+	CS:DEPREC^LU
+		A:Text^Tietojen siirron pikaraportin vientitoiminto on vanhentunut. K\00E4yt\00E4 sen sijaan pikaraporttien sis\00E4\00E4nrakennettua tuonti/vienti-toimintoa.^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Oletus "where" ei ole k\00E4yt\00F6ss\00E4 suunnalle = :P1^O
+	CE:
+	CS:EXECNO^LU
+		A:Text^Suoritusnro :P1^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Virhe viet\00E4ess\00E4 :P1 - :P2^O
+	CE:
+	CS:EXPTXT1^LU
+		A:Text^Viedyt muutosryhm\00E4t:^O
+	CE:
+	CS:EXPTXT2^LU
+		A:Text^Viedyt muutosryhm\00E4t:^O
+	CE:
+	CS:EXPTXT3^LU
+		A:Text^Viedyt konversiolistat:^O
+	CE:
+	CS:EXPTXT4^LU
+		A:Text^Viedyt triggerit:^O
+	CE:
+	CS:EXPTXT5^LU
+		A:Text^Viedyt paketit:^O
+	CE:
+	CS:EXPTXT6^LU
+		A:Text^Luo tiedostot:^O
+	CE:
+	CS:EXPTXT7^LU
+		A:Text^Muuntolistoja EI viety:^O
+	CE:
+	CS:IMPERR^LU
+		A:Text^Virhe tuotaessa :P1 - :P2^O
+	CE:
+	CS:IMPTXT1^LU
+		A:Text^Tuodut uudet siirtoty\00F6t:^O
+	CE:
+	CS:IMPTXT10^LU
+		A:Text^Replikointity\00F6t, jotka pit\00E4\00E4 k\00E4ynnist\00E4\00E4 uudelleen:^O
+	CE:
+	CS:IMPTXT2^LU
+		A:Text^Tuodut uudet ryhm\00E4t:^O
+	CE:
+	CS:IMPTXT3^LU
+		A:Text^Tuodut korvauslistat:^O
+	CE:
+	CS:IMPTXT4^LU
+		A:Text^Siirtot\00F6it\00E4 EI OLE lis\00E4tty:^O
+	CE:
+	CS:IMPTXT5^LU
+		A:Text^Ryhmi\00E4 EI OLE lis\00E4tty:^O
+	CE:
+	CS:IMPTXT6^LU
+		A:Text^Muuntolistat EI annettu:^O
+	CE:
+	CS:IMPTXT7^LU
+		A:Text^Tuodut ja korvatut siirtoty\00F6t:^O
+	CE:
+	CS:IMPTXT8^LU
+		A:Text^Tuodut ja korvatut ryhm\00E4t:^O
+	CE:
+	CS:IMPTXT9^LU
+		A:Text^Tuodut ja korvatut muuntolistat:^O
+	CE:
+	CS:INTFACE_ALLOWED_JOBS^LU
+		CS:DESCRIPTION^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+	CS:INTFACE_CHARACTERSET_LOV^LU
+	CE:
+	CS:INTFACE_HEADER^LU
+	CE:
+	CS:INTFACE_REPL_EXPORT_INFO^LU
+	CE:
+	CS:INTFACE_TABLE_NAME_LOV^LU
+	CE:
+	CS:JOBBATERR^LU
+		A:Text^Siirretty pyynt\00F6 ep\00E4onnistui :P1 :P2^O
+	CE:
+	CS:LISTERR^LU
+		A:Text^Arvoluettelo ei saa alkaa puolipisteell\00E4^O
+	CE:
+	CS:LONGNAME^LU
+		A:Text^Ty\00F6tunnus :P1 on liian pitk\00E4. Se ei saa ylitt\00E4\00E4 24 merkki\00E4^O
+	CE:
+	CS:MOVPATH^LU
+		A:Text^Siirr\00E4 tiedostopolku: :P1^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^:P1 tuntia ja :P2 minuuttia k\00E4ytetty^O
+	CE:
+	CS:NAMEERR^LU
+		A:Text^Kun tyyppi = :P1, nimi voi olla enint\00E4\00E4n :P2 merkki\00E4 pitk\00E4 (:P3)^O
+	CE:
+	CS:NOCOLUMN^LU
+		A:Text^Ty\00F6ll\00E4 ei ole sarakkeita tiedostossa^O
+	CE:
+	CS:NOFILE_ERROR^LU
+		A:Text^Tiedoston sijaintia ":P1" ei voi k\00E4ytt\00E4\00E4 siirtot\00F6iss\00E4, joiden suunnaksi on m\00E4\00E4ritetty ":P2" tai ":P3".^O
+	CE:
+	CS:NOMAN^LU
+		A:Text^Kun k\00E4yt\00F6ss\00E4 tapa Manuaalinen, sinun on annettava WHERE-lause rakenteen p\00E4\00E4n\00E4kym\00E4\00E4n.^O
+	CE:
+	CS:NOPRIV^LU
+		A:Text^Sinulla (:P1) ei ole oikeutta luoda uusia tiedonsiirtot\00F6it\00E4^O
+	CE:
+	CS:NOREPL^LU
+		A:Text^:P1 ei voi aloittaa er\00E4ty\00F6n\00E4. Triggerit eiv\00E4t ole valittu^O
+	CE:
+	CS:NOTRIG^LU
+		A:Text^Triggerit on generoitu. Tilaa ei voi muuttaa :P1 ksi.^O
+	CE:
+	CS:NOWHERE^LU
+		A:Text^Where-lause pit\00E4\00E4 antaa replikaatio -ty\00F6lle, moodi = Manuaalinen^O
+	CE:
+	CS:QUICKERR^LU
+		A:Text^Menettely\00E4 :P1 voidaan k\00E4ytt\00E4\00E4 vain yhdess\00E4 n\00E4kym\00E4nimess\00E4 QUICK_REPORT^O
+	CE:
+	CS:RANFILE^LU
+		A:Text^Nime\00E4 tiedosto uudelleen: :P1^O
+	CE:
+	CS:RENPATH^LU
+		A:Text^Nime\00E4 tiedostopolku uudelleen: :P1^O
+	CE:
+	CS:SELECTOK^LU
+		A:Text^"Select" -lause OK, j\00E4sennetty ja suoritettu 1:lle riville^O
+	CE:
+	CS:SELLENGTH^LU
+		A:Text^Lauseen pituu :P1 merkki\00E4^O
+	CE:
+	CS:SERVOK^LU
+		A:Text^Tietokantateht\00E4v\00E4 :P1 on ajoitettu migraatioty\00F6lle :P2^O
+	CE:
+	CS:STARTBATERR^LU
+		A:Text^Ei voi aloittaa :P1 - :P2^O
+	CE:
+	CS:STARTJOBERR^LU
+		A:Text^Ei voi aloittaa :P1 - :P2^O
+	CE:
+	CS:STARTOK^LU
+		A:Text^Siirtoty\00F6 :P1 aloitettu taustalla^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^P\00E4\00E4ttymisaika \2013 :P1 :P2^O
+	CE:
+	CS:TRIGDEL^LU
+		A:Text^Triggerit on poistettava ennen kuin ty\00F6 voidaan poistaa.^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^Arvo mist\00E4: :P1 ei voi olla osa arvolistasta^O
+	CE:
+	CS:WHENERR^LU
+		A:Text^Triggerin When-lause pit\00E4\00E4 siirt\00E4\00E4 sarakkeelta :P1 sarakkeeseen :P2^O
+	CE:
+	CS:WILDERR^LU
+		A:Text^Korvausmerkki\00E4 tiedostonimess\00E4 voi k\00E4ytt\00E4\00E4 vain kun tuodaan tiedota serveri tiedostoista.^O
+	CE:
+	CS:WRONGCOL^LU
+		A:Text^Sarake :P1 ei ole ty\00F6ss\00E4 :P2^O
+	CE:
+	CS:WRONGDIR^LU
+		A:Text^S\00E4\00E4nt\00F6 SYNCDETAILS voidaan k\00E4ytt\00E4\00E4 vain, kun tiedostoja luetaan^O
+	CE:
+CE:
+CS:IntfaceJobDetail^LU
+	A:Prompt^Intface Job Detail^O
+	CS:CLIENTCLEAN^LU
+		A:Text^S\00E4\00E4nt\00F6 CLEANUP arvolla BEFORE ei ole sallittu client tiedostolle^O
+	CE:
+	CS:CLOSEFILERR^LU
+		A:Text^Virhe suljettaessa tiedostoa :P1^O
+	CE:
+	CS:CLOSEJOBERR^LU
+		A:Text^Virhe suljettaessa ty\00F6t\00E4 :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Ty\00F6ss\00E4 :P1 on virherivej\00E4^O
+	CE:
+	CS:CONNJOBERR^LU
+		A:Text^Ty\00F6t\00E4 :P1 ei voi aloittaa^O
+	CE:
+	CS:EMPTYFILE^LU
+		A:Text^Tiedosto :P1 kohteessa :P2 on tyhj\00E4, ty\00F6t\00E4 ei aloitettu^O
+	CE:
+	CS:HISTERR^LU
+		A:Text^Virhe historiaa :P1 ker\00E4tt\00E4ess\00E4^O
+	CE:
+	CS:INITJOBERR^LU
+		A:Text^Ty\00F6n :P1 alustaminen ep\00E4onnistui^O
+	CE:
+	CS:INTFACE_JOB_DETAIL^LU
+	CE:
+	CS:LOADFILERR^LU
+		A:Text^Virhe tiedostoa ladattaessa :P1 :P2:lla^O
+	CE:
+	CS:NOFILE^LU
+		A:Text^Tiedostoa :P1 ei ole kohteessa :P2, ty\00F6t\00E4 ei aloitettu^O
+	CE:
+	CS:PREPERR^LU
+		A:Text^Virhe valmisteltaessa tietoja :P1^O
+	CE:
+	CS:SERVFILEERR^LU
+		A:Text^Virhe tiedostonk\00E4sittelyss\00E4 \2013 :P1^O
+	CE:
+	CS:UNPACKEND^LU
+		A:Text^Pura t\00E4ysin ty\00F6lle :P1^O
+	CE:
+	CS:UNPACKERR^LU
+		A:Text^Virhe purkamisen aikana ==> :P1^O
+	CE:
+CE:
+CS:IntfaceJobHistDetail^LU
+	A:Prompt^Intface Job Hist Detail^O
+	CS:INTFACE_JOB_HIST_DETAIL^LU
+	CE:
+CE:
+CS:IntfaceJobHistHead^LU
+	A:Prompt^Intface Job Hist Head^O
+	CS:INTFACE_JOB_HIST_HEAD^LU
+	CE:
+CE:
+CS:IntfaceJobStatus^LU
+	A:Prompt^Intface Job Status^O
+	CS:1^LU
+		A:Text^Ei tiedostoa^O
+	CE:
+	CS:2^LU
+		A:Text^Ladattu^O
+	CE:
+	CS:3^LU
+		A:Text^Virhe rivill\00E4^O
+	CE:
+	CS:4^LU
+		A:Text^Rivi ok^O
+	CE:
+	CS:5^LU
+		A:Text^Ty\00F6 ok^O
+	CE:
+	CS:6^LU
+		A:Text^Suoritetaan^O
+	CE:
+	CS:7^LU
+		A:Text^Ty\00F6 ep\00E4onnistui^O
+	CE:
+CE:
+CS:IntfaceMethodAction^LU
+	A:Prompt^Intface Method Action^O
+	CS:1^LU
+		A:Text^Enne silmukkaa^O
+	CE:
+	CS:2^LU
+		A:Text^Silmukassa^O
+	CE:
+	CS:3^LU
+		A:Text^Silmukan j\00E4lkeen^O
+	CE:
+	CS:4^LU
+		A:Text^EiSuoritusta^O
+	CE:
+CE:
+CS:IntfaceMethodList^LU
+	A:Prompt^Intface Method List^O
+	CS:CHKCOUNT^LU
+		A:Text^:P1 rivi\00E4 tarkastettu^O
+	CE:
+	CS:CLREMAP^LU
+		A:Text^siirretty DB -sarakkeeseen^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Rivit tallennettu s\00E4\00E4nn\00F6ll\00E4 COMMITSEQ: :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^T\00E4t\00E4 ty\00F6t\00E4 ei voi aloittaa.  Ty\00F6ss\00E4 :P1 on virheit\00E4^O
+	CE:
+	CS:CREATEERROR^LU
+		A:Text^Virhe luotaessa taulukkoa :P1 - :P2^O
+	CE:
+	CS:CREATEVIEWERR^LU
+		A:Text^Virhe luotaessa n\00E4kym\00E4\00E4 :P1 - :P2^O
+	CE:
+	CS:CREIND^LU
+		A:Text^Luotu :P1 indeksi sarakkeesta :P2^O
+	CE:
+	CS:CRETAB^LU
+		A:Text^Luotu taulu :P1 (^O
+	CE:
+	CS:DATEVAL^LU
+		A:Text^PREPARE oletus systeemip\00E4iv\00E4^O
+	CE:
+	CS:DBREMAP^LU
+		A:Text^Ohjattu uudelleen klientti -arvolla^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^Menetelm\00E4 :P1 - arvo ty\00F6numerolle ei voi olla sama kuin p\00E4\00E4ty\00F6ll\00E4^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Suoritettu virheett\00E4^O
+	CE:
+	CS:GRANTERROR^LU
+		A:Text^Virhe n\00E4kym\00E4n :P1 sallimisessa IFS-j\00E4rjestelm\00E4k\00E4ytt\00E4j\00E4lle (IFSSYS) - :P2^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^Suoritusmetodi numero :P1^O
+	CE:
+	CS:ILLARGTYPE^LU
+		A:Text^Argumentin :P1 tyyppi ei kelpaa. Vain tietotyyppi DATE VARCHAR2 NUMBER on sallittu^O
+	CE:
+	CS:ILLMETH^LU
+		A:Text^Menetelm\00E4 :P1 on funktio. Vain menettelyt sallitaan^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^:P1 keskener\00E4t\00E4 tapahtumaa, koska kutsutussa metodissa COMMIT tai ROLLBACK.^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Keskener\00E4ist\00E4 valintaa ei suoritettu :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Tarkasta tulos. Tapahtumat voi olla osittain tallennettu.^O
+	CE:
+	CS:INDEXERROR^LU
+		A:Text^Virhe luotaessa indeksi\00E4 :P1 - :P2^O
+	CE:
+	CS:INSTAB^LU
+		A:Text^Lis\00E4\00E4 tauluun :P1 :P2 rivill\00E4^O
+	CE:
+	CS:INTFACE_EXCEL_INPUT_DEFAULT^LU
+	CE:
+	CS:INTFACE_EXCEL_INPUT_FORMAT^LU
+	CE:
+	CS:INTFACE_METHOD_LIST^LU
+	CE:
+	CS:KEEPALL^LU
+		A:Text^S\00E4\00E4nt\00F6\00E4 PID\00C4KAIKKI ei voi k\00E4ytt\00E4\00E4, kun toinen ty\00F6 on kytketty :P1 (:P2)^O
+	CE:
+	CS:KEEPERR^LU
+		A:Text^S\00E4\00E4nt\00F6\00E4 PID\00C4VIRHE ei voi k\00E4ytt\00E4\00E4, kun toinen ty\00F6 on kytketty :P1^O
+	CE:
+	CS:MAKEOTHER^LU
+		A:Text^Virhe attribuuttia ja viitteit\00E4 teht\00E4ess\00E4 - :P1^O
+	CE:
+	CS:MANDDEF^LU
+		A:Text^<PUUTTUVA PAKOLLINEN OLETUSARVO>^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 TARKISTA optiolla^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, Virheit\00E4; :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Uudet rivit :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^K\00E4sitellyt rivit: :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^P\00E4ivitetyt rivit: :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^Keskim\00E4\00E4rin :P1 rivi\00E4 minuutissa^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 rivi\00E4 tallennettu^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^:P1 rivi\00E4 valittu^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 rivi\00E4 ep\00E4onnistui^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^:P1 tuntia ja :P2 minuuttia k\00E4ytetty^O
+	CE:
+	CS:NONAME^LU
+		A:Text^Ty\00F6n tunnus puuttuu attribuutti-stringill\00E4 metodille :P1^O
+	CE:
+	CS:NONBASEVIEW^LU
+		A:Text^N\00E4kym\00E4n ":P1" metodin tunnistu ep\00E4onnistui, kun yritettiin luoda metodi -luetteloa. [N\00E4kym\00E4 Nimi] pit\00E4\00E4 olla IFS LU kohteen perusn\00E4kym\00E4 .^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^OBJID ei ole "select":ss\00E4, mutta s\00E4\00E4nt\00F6 ADDOBJID on aktiivinen^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Ty\00F6n k\00E4ynnistys uudestaan mahdoton :P1 :ss\00E4 ROWID puuttuu^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^"Select" ei ole m\00E4\00E4ritetty^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1:ll\00E4 on :P2 virherivi\00E4 eik\00E4 voida aloittaa^O
+	CE:
+	CS:NOTEDEF^LU
+		A:Text^P\00E4\00E4t\00E4 oletusarvon k\00E4yt\00F6st\00E4. VALINNAISET arvot voi poistaa^O
+	CE:
+	CS:NOTINLOOP^LU
+		A:Text^Menettelyn :P1 pit\00E4\00E4 alkaa silmukan aikana^O
+	CE:
+	CS:NOTOUTLOOP^LU
+		A:Text^Menettely :P1 ei voi alkaa silmukan aikana^O
+	CE:
+	CS:NOVIEW^LU
+		A:Text^M\00E4\00E4rittele view_name vain sis\00E4iselle silmukalle.^O
+	CE:
+	CS:OPTDEF^LU
+		A:Text^<PUUTTUVA VALINNAINEN OLETUSARVO>^O
+	CE:
+	CS:PREPVAL^LU
+		A:Text^PREPARE oletusarvo :P1^O
+	CE:
+	CS:RENAMTAB^LU
+		A:Text^Uudestaan nimetty taulu :P1, :P2 rivi\00E4, nimelle :P3^O
+	CE:
+	CS:RESTART^LU
+		A:Text^K\00E4ynnist\00E4 uudelleen lis\00E4ys tauluun :P1^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Virhe valinnassa :P1 - :P2^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^Sarake :P1 m\00E4\00E4ritelty moniselitteisesti^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Aloitusaika \2013 :P1 :P2^O
+	CE:
+CE:
+CS:IntfaceMethodListAttrib^LU
+	A:Prompt^Intface Method List Attrib^O
+	CS:INTFACE_METHOD_LIST_ATTRIB^LU
+	CE:
+	CS:WRONGSEQ1^LU
+		A:Text^Suoritusj\00E4rjestyst\00E4 :P1 ei ole^O
+	CE:
+	CS:WRONGSEQ2^LU
+		A:Text^Viitattu EXECUTE_SEQ pit\00E4\00E4 olla ennen t\00E4t\00E4^O
+	CE:
+CE:
+CS:IntfaceMode^LU
+	A:Prompt^Intface Mode^O
+	CS:1^LU
+		A:Text^Manuaalinen^O
+	CE:
+	CS:2^LU
+		A:Text^Automaattinen^O
+	CE:
+	CS:3^LU
+		A:Text^Batch^O
+	CE:
+CE:
+CS:IntfacePrUser^LU
+	A:Prompt^Intface Pr User^O
+	CS:INTFACE_PR_USER^LU
+	CE:
+CE:
+CS:IntfacePrefixOption^LU
+	A:Prompt^Intface Prefix Option^O
+	CS:1^LU
+		A:Text^N\00E4kym\00E4^O
+	CE:
+	CS:2^LU
+		A:Text^N\00E4kym\00E4Uniikki^O
+	CE:
+	CS:3^LU
+		A:Text^EiEtuliitett\00E4^O
+	CE:
+CE:
+CS:IntfacePrivilege^LU
+	A:Prompt^Intface Privilege^O
+	CS:1^LU
+		A:Text^P\00E4ivitysEiSallittu^O
+	CE:
+	CS:2^LU
+		A:Text^P\00E4ivitysSallittu^O
+	CE:
+CE:
+CS:IntfaceProcedures^LU
+	A:Prompt^Intface Procedures^O
+	CS:CHECK_BY_METHOD_NEW^LU
+		A:Text^Tarkista rivit tiedostosta liiketoimintalogiikan avulla^O
+	CE:
+	CS:CREATE_OUTPUT_FILE^LU
+		A:Text^Kirjoita tiedostoon^O
+	CE:
+	CS:CREATE_TABLE_FROM_FI^LU
+		A:Text^Luo taulukko tiedostosta^O
+	CE:
+	CS:EXCEL_MIGRATION^LU
+		A:Text^Tiedonsiirto Excel-tiedostosta^O
+	CE:
+	CS:FNDMIG_EXPORT^LU
+		A:Text^Vie tiedonsiirtom\00E4\00E4rittelyt tiedostoon^O
+	CE:
+	CS:FNDMIG_IMPORT^LU
+		A:Text^Tuo tiedonsiirtom\00E4\00E4rittelyt tiedostosta^O
+	CE:
+	CS:INSERT_BY_METHOD_NEW^LU
+		A:Text^Lis\00E4\00E4 rivit tiedostosta^O
+	CE:
+	CS:INSERT_OR_UPDATE^LU
+		A:Text^Lis\00E4\00E4 ja p\00E4ivit\00E4 rivit tiedostosta^O
+	CE:
+	CS:INTFACE_PROCEDURES^LU
+	CE:
+	CS:INTFACE_PROC_LOV_EXCL_REPL^LU
+	CE:
+	CS:INTFACE_PROC_LOV_INCL_REPL^LU
+	CE:
+	CS:MIGRATE_SOURCE_DATA^LU
+		A:Text^Tiedonsiirto taulusta/n\00E4kym\00E4st\00E4^O
+	CE:
+	CS:REPLICATION^LU
+		A:Text^Replikointi^O
+	CE:
+	CS:REPL_DATA_OUT^LU
+		A:Text^Replikoi tietorakenteet^O
+	CE:
+CE:
+CS:IntfaceQuickReportUtil^LU
+	CS:DEPREC^LU
+		A:Text^T\00E4m\00E4 toiminto on vanhentunut. K\00E4yt\00E4 sen sijaan pikaraporttien sis\00E4\00E4nrakennettua tuonti/vienti-toimintoa.^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Virhe viet\00E4ess\00E4 :P1 - :P2^O
+	CE:
+	CS:EXPOK^LU
+		A:Text^Viety :P1 raporttia^O
+	CE:
+CE:
+CS:IntfaceReplElemType^LU
+	A:Prompt^Intface Repl Elem Type^O
+	CS:AGGREGATE^LU
+		A:Text^Kooste^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Matriisi^O
+	CE:
+CE:
+CS:IntfaceReplMaintUtil^LU
+	CS:EXECERR^LU
+		A:Text^Virhe ilmeni - :P1^O
+	CE:
+	CS:INTFACE_REPL_DB_OBJECTS^LU
+	CE:
+	CS:INTFACE_SERVER_PROCESSES^LU
+	CE:
+	CS:LOGOK^LU
+		A:Text^Lokitaulu jossa :P1 rivi\00E4 k\00E4sitelty :P2^O
+	CE:
+	CS:NOUPDATE^LU
+		A:Text^Et voi p\00E4ivitt\00E4\00E4 :P1 koska replikointi menossa. Kaikki laukaisimet mahdollisia.^O
+	CE:
+	CS:REPLFAIL^LU
+		A:Text^Replikointi ty\00F6 :P1 ep\00E4onnistui - :P2^O
+	CE:
+	CS:REPLOK^LU
+		A:Text^Menettely :P1 k\00E4sitelty^O
+	CE:
+CE:
+CS:IntfaceReplMessType^LU
+	A:Prompt^Intface Repl Mess Type^O
+	CS:BIZAPI^LU
+		A:Text^BizApi^O
+	CE:
+	CS:TRACE^LU
+		A:Text^N\00E4yt\00E4 j\00E4ljitys^O
+	CE:
+CE:
+CS:IntfaceReplOutLog^LU
+	A:Prompt^Intface Repl Out Log^O
+	CS:INTFACE_REPL_OUT_LOG^LU
+	CE:
+CE:
+CS:IntfaceReplPackageUtil^LU
+	CS:COMPERR^LU
+		A:Text^Virhe k\00E4\00E4nnett\00E4ess\00E4 pakettia - :P1^O
+	CE:
+	CS:ERR1PAR^LU
+		A:Text^Yksitt\00E4isell\00E4 rivill\00E4 sarake Ylempi j\00E4rjestys pit\00E4\00E4 olla tyhj\00E4^O
+	CE:
+	CS:ERR2PAR^LU
+		A:Text^Yksi rivi pit\00E4\00E4 olla ylempi = ilman arvoa sarakkeessa Ylempi j\00E4rjestys^O
+	CE:
+	CS:ERRLONG^LU
+		A:Text^L\00E4hde liian pitk\00E4, ei voi kirjoittaa Intface_Job_Detail - :P1^O
+	CE:
+	CS:KEYERR^LU
+		A:Text^Ylempi avain :P1 ei ole rakenteissa ennen :P2^O
+	CE:
+	CS:LONGSRC^LU
+		A:Text^L\00E4hde liian pitk\00E4. Tuo tiedosto Suorita Ty\00F6 ikkunasta ja pura Adminissa.^O
+	CE:
+	CS:NODATA^LU
+		A:Text^Ainakin yhdell\00E4 rivill\00E4 pit\00E4\00E4 valita Lis\00E4tt\00E4ess\00E4 tai P\00E4ivitett\00E4ess\00E4^O
+	CE:
+	CS:OTHERS^LU
+		A:Text^Virhe k\00E4\00E4nnett\00E4ess\00E4 pakettia - :P1^O
+	CE:
+CE:
+CS:IntfaceReplRecType^LU
+	A:Prompt^Intface Repl Rec Type^O
+	CS:AGGREGATE^LU
+		A:Text^Kooste^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Matriisi^O
+	CE:
+CE:
+CS:IntfaceReplStructCols^LU
+	A:Prompt^Intface Repl Struct Cols^O
+	CS:INTFACE_REPL_STRUCT_COLS^LU
+	CE:
+CE:
+CS:IntfaceReplStructure^LU
+	A:Prompt^Intface Repl Structure^O
+	CS:ERRSEQ^LU
+		A:Text^Ylempi j\00E4rjestys ei saa olla = J\00E4rj^O
+	CE:
+	CS:INSERR^LU
+		A:Text^Kaikki rivit alkupisteest\00E4 yl\00F6sp\00E4in pit\00E4\00E4 olla sarake Lis\00E4tt\00E4ess\00E4 valittuna ja sarake trigger -taulu m\00E4\00E4ritettyn\00E4^O
+	CE:
+	CS:INTFACE_REPL_PARENT_LOV^LU
+	CE:
+	CS:INTFACE_REPL_STRUCTURE^LU
+	CE:
+	CS:INTFACE_REPL_TABLE_LOV^LU
+	CE:
+	CS:MULTIPLESTART^LU
+		A:Text^Voit m\00E4\00E4ritt\00E4\00E4 vain yhden aloituspisteen ty\00F6lle^O
+	CE:
+	CS:NONUNIQUE^LU
+		A:Text^Uniikki master puuttuu :P1:lt\00E4.  Vain yhdell\00E4 pit\00E4\00E4 olla ParentSeq = NULL^O
+	CE:
+	CS:NOSEQ^LU
+		A:Text^Ylemp\00E4\00E4 j\00E4rjestyst\00E4 ei voi k\00E4ytt\00E4\00E4. Ei rivej\00E4 j\00E4rjestyksell\00E4 :P1^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^:P1 = :P2, arvo ei voi olla suurempi kuin 99^O
+	CE:
+CE:
+CS:IntfaceReplTriggersUtil^LU
+	CS:ALTERR^LU
+		A:Text^Virhe muutettaessa trigger:i\00E4 :P1 - :P2^O
+	CE:
+	CS:COMPERR^LU
+		A:Text^Virhe ilmeni triggerill\00E4 :P1^O
+	CE:
+	CS:DROPERR^LU
+		A:Text^Virhe luovuttaessa triggerist\00E4 :P1 - :P2^O
+	CE:
+	CS:NODEF^LU
+		A:Text^Sinun tulee sy\00F6tt\00E4\00E4 TableName ja tarkistaa OnInsert tai OnUpdate v\00E4hint\00E4\00E4n yhdelt\00E4 rakennekohdalta.^O
+	CE:
+CE:
+CS:IntfaceReplicCriteria^LU
+	A:Prompt^Intface Replic Criteria^O
+	CS:1^LU
+		A:Text^Pkunta^O
+	CE:
+	CS:2^LU
+		A:Text^Yritys^O
+	CE:
+CE:
+CS:IntfaceReplicationLog^LU
+	A:Prompt^Intface Replication Log^O
+	CS:INTFACE_REPLICATION_LOG^LU
+	CE:
+CE:
+CS:IntfaceRuleFlag^LU
+	A:Prompt^Intface Rule Flag^O
+	CS:1^LU
+		A:Text^Aktiivinen^O
+	CE:
+	CS:2^LU
+		A:Text^Ei-aktiivinen^O
+	CE:
+CE:
+CS:IntfaceRuleValue^LU
+	A:Prompt^Intface Rule Value^O
+	CS:1^LU
+		A:Text^Arvoa ei sallita^O
+	CE:
+	CS:2^LU
+		A:Text^Pakollinen numero^O
+	CE:
+	CS:3^LU
+		A:Text^Pakollinen merkkijono^O
+	CE:
+	CS:4^LU
+		A:Text^Pakollinen p\00E4iv\00E4^O
+	CE:
+	CS:5^LU
+		A:Text^Valinnainen^O
+	CE:
+CE:
+CS:IntfaceRules^LU
+	A:Prompt^Intface Rules^O
+	CS:CHECKRULEERROR^LU
+		A:Text^S\00E4\00E4nt\00F6 :P1 ei ole kelvollinen prosessin nimelle :P2.^O
+	CE:
+	CS:ERRCONN^LU
+		A:Text^Ty\00F6 :P1 on jo kytketty :P2:een^O
+	CE:
+	CS:ERRCONN2^LU
+		A:Text^Ty\00F6n :P1 tulee k\00E4ytt\00E4\00E4 prosessia CREATE_TABLE_FROM_FILE^O
+	CE:
+	CS:ERRORVAL1^LU
+		A:Text^K\00E4ytett\00E4v\00E4t arvot on KEEPALL tai KEEPERR^O
+	CE:
+	CS:ERRORVAL2^LU
+		A:Text^Kelvollinen arvo on INSERT tai UPDATE^O
+	CE:
+	CS:ERRORVAL3^LU
+		A:Text^Kelvollinen arvo on BEFORE tai AFTER^O
+	CE:
+	CS:FILERULEERR^LU
+		A:Text^S\00E4\00E4nt\00F6 :P1 ei voi olla aktiivinen, jos :P2 on aktiivinen^O
+	CE:
+	CS:INTFACE_RULES^LU
+	CE:
+	CS:INTFACE_RULES_LOV^LU
+	CE:
+	CS:REPLUSR1^LU
+		A:Text^T\00E4t\00E4 s\00E4\00E4nt\00F6\00E4 voi k\00E4ytt\00E4\00E4 ainoastaan REPLIKOINTI-t\00F6iss\00E4^O
+	CE:
+	CS:REPLUSR2^LU
+		A:Text^Vaihtoehtoista k\00E4ytt\00E4j\00E4\00E4 ei ole m\00E4\00E4ritetty j\00E4rjestelm\00E4parametreissa tiedostossa Admin.exe^O
+	CE:
+	CS:REPLUSR3^LU
+		A:Text^Vaihtoehtoista k\00E4ytt\00E4j\00E4\00E4 ei voi m\00E4\00E4ritt\00E4\00E4 samaksi kuin sovelluksen omistaja j\00E4rjestelm\00E4parametreissa tiedostossa Admin.exe^O
+	CE:
+CE:
+CS:IntfaceServerFile^LU
+	A:Prompt^K\00E4ytt\00F6liittym\00E4n palvelintiedosto^O
+	CS:CNTERR^LU
+		A:Text^Virhe laskettaessa tietueita^O
+	CE:
+	CS:CREERR^LU
+		A:Text^Tietueita hyl\00E4ttiin. Tarkista lokitiedosto aloitusikkunassa^O
+	CE:
+	CS:INTFACE_SERVER_DIR_LOV^LU
+		CS:NAME^LU
+		CE:
+		CS:PATH^LU
+		CE:
+	CE:
+	CS:INTFACE_SERVER_FILES_LOV^LU
+		CS:FILE_DATE^LU
+		CE:
+		CS:FILE_NAME^LU
+		CE:
+		CS:FILE_SIZE^LU
+		CE:
+	CE:
+	CS:NOFILE^LU
+		A:Text^Tiedostoa :P1 ei ole :P2^O
+	CE:
+	CS:NOICTAB^LU
+		A:Text^Taulua :P1 ei ole olemassa^O
+	CE:
+	CS:NOINS^LU
+		A:Text^Lis\00E4\00E4minen IC-tauluun ep\00E4onnistui. RMB:n purkutiedosto suoritusty\00F6n ikkunassa n\00E4ytt\00E4\00E4 muotoiluvirheit\00E4. :P1^O
+	CE:
+	CS:NOSERV^LU
+		A:Text^Tiedostosijainnin t\00E4ytyy olla :P1, ei :P2. P\00E4ivit\00E4 ty\00F6n otsikko^O
+	CE:
+	CS:NOTAB^LU
+		A:Text^Ulkoista taulua ei luotu. :P1^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^Sarake :P1 m\00E4\00E4ritelty moniselitteisesti^O
+	CE:
+CE:
+CS:IntfaceTableMigrations^LU
+	A:Prompt^Taulun migraatioparametrit^O
+	CS:INTFACE_TABLE_MIGRATIONS^LU
+	CE:
+	CS:NOCOL^LU
+		A:Text^Ei p\00E4ivitett\00E4vi\00E4 sarakkeita^O
+	CE:
+	CS:PROCERR^LU
+		A:Text^Virhe :P1^O
+	CE:
+	CS:TABERR^LU
+		A:Text^Ei voi muuttaa :P2.:P1^O
+	CE:
+CE:
+CS:IntfaceUser^LU
+	A:Prompt^Intface User^O
+	CS:INTFACE_USER^LU
+	CE:
+CE:
+CS:IntfaceUtil^LU
+	CS:COMPILE_ERRORS^LU
+		A:Text^K\00E4\00E4nn\00F6svirheit\00E4 k\00E4ynnistimiss\00E4 :P1^O
+	CE:
+	CS:UPDERR^LU
+		A:Text^Et voi p\00E4ivitt\00E4\00E4 muita kuin IC-tauluja^O
+	CE:
+CE:
+CS:IntfaceViews^LU
+	A:Prompt^Intface Views^O
+	CS:INTFACE_SOURCE_COL_LOV^LU
+	CE:
+	CS:INTFACE_VIEWS^LU
+	CE:
+	CS:INTFACE_VIEWS_COL_INFO^LU
+	CE:
+CE:
+CS:IntfaceXsdUtil^LU
+	CS:XSDCRE^LU
+		A:Text^XSD luotiin asiakasohjelman tiedostona, :P1 rivi\00E4^O
+	CE:
+CE:

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FndNavigator xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Legacy="false" Source="trnent\client\navigator-functional.xml">
+  <FndNavigatorEntries>
+    <FndNavigatorEntry>
+      <Key>MANA_GEOGES</Key>
+      <Name>Manage Geographies</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>NAVIGATOR_Root</ParentKey>
+      <Ordinal>200</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>MANA_GEOGES.COUNES</Key>
+      <Name>Countries</Name>
+      <Url>ifsapf:tbwCountries</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>MANA_GEOGES</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>MANA_COMPES</Key>
+      <Name>Manage Companies</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>NAVIGATOR_Root</ParentKey>
+      <Ordinal>300</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>MANA_COMPES.COMPES</Key>
+      <Name>Companies</Name>
+      <Url>ifsapf:tbwCompanies</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>MANA_COMPES</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>TEST</Key>
+      <Name>Test</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>NAVIGATOR_Root</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>TEST.SELE_ENTI</Key>
+      <Name>Select Entity</Name>
+      <Url>ifsapf:frmSelEnt</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>TEST</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+  </FndNavigatorEntries>
+  <FndShortcutItems />
+</FndNavigator>

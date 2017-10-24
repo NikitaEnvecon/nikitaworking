@@ -1,0 +1,532 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: StatutoryFee
+--  Component:    ACCRUL
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+VIEW Statutory_Fee_Pub IS
+   Prompt = 'Statutory Fee'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code),a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       fee_type                       fee_type,
+       vat_received                   vat_received,
+       vat_disbursed                  vat_disbursed,
+       deductible                     deductible,
+       multiple_tax                   multiple_tax,
+       amount_not_taxable             amount_not_taxable,
+       min_withheld_amount            min_withheld_amount,
+       use_withhold_amount_table      use_withhold_amount_table,
+       tax_amount_at_inv_print        tax_amount_at_inv_print,
+       tax_amt_limit                  tax_amt_limit,
+       minimum_base_amount            minimum_base_amount,
+       tax_reporting_category         tax_reporting_category,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion
+FROM   statutory_fee_tab a
+WHERE  EXISTS (SELECT * FROM company_finance_auth_pub c WHERE a.company = c.company);
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+VIEW Statutory_Fee IS
+WHERE  deductible = 100
+AND    multiple_tax = 'FALSE';
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Non_Vat IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code),a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       tax_amt_limit                  tax_amt_limit,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  a.fee_type IN ('SALETX', 'USETX', 'NOTAX')
+AND    a.multiple_tax = 'FALSE'
+AND    a.deductible = 100;
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Vat IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code),a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       tax_amt_limit                  tax_amt_limit,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  a.fee_type IN ('VAT', 'CALCVAT', 'NOTAX')
+AND    multiple_tax = 'FALSE';
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Vat_Mult IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code),a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       tax_amt_limit                  tax_amt_limit,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  a.fee_type IN ('VAT', 'CALCVAT', 'NOTAX');
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Tax_Withhold IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Amount_Not_Taxable.Flags = 'AMIUL'
+   Use_Withhold_Amount_Table.Flags = 'A-IUL'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Minimum_Base_Amount.Flags = 'A-IUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code), a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       amount_not_taxable             amount_not_taxable,
+       min_withheld_amount            min_withheld_amount,
+       use_withhold_amount_table      use_withhold_amount_table,
+       tax_amt_limit                  tax_amt_limit,
+       minimum_base_amount            minimum_base_amount,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  a.fee_type IN ('IRS1099TX');
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Tax_Withhold_Cu IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Amount_Not_Taxable.Flags = 'AMIUL'
+   Use_Withhold_Amount_Table.Flags = 'A-IUL'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Minimum_Base_Amount.Flags = 'A-IUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code), a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       amount_not_taxable             amount_not_taxable,
+       min_withheld_amount            min_withheld_amount,
+       use_withhold_amount_table      use_withhold_amount_table,
+       tax_amt_limit                  tax_amt_limit,
+       minimum_base_amount            minimum_base_amount,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  a.fee_type IN ('IRS1099TX')
+AND    a.deductible = 100;
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Deductible IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Minimum_Base_Amount.Flags = 'A-IUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code), a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       tax_amt_limit                  tax_amt_limit,
+       minimum_base_amount            minimum_base_amount,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  multiple_tax = 'FALSE';
+
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Tax_Code_Lov1 IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code), a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  a.fee_type IN ('SALETX', 'USETX')
+AND    SYSDATE BETWEEN a.valid_from AND a.valid_until;
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Multiple IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Multiple_Tax.Datatype = 'BOOLEAN'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code), a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       multiple_tax                   multiple_tax,
+       tax_amt_limit                  tax_amt_limit,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  a.deductible = 100;
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Deduct_Multiple IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Multiple_Tax.Datatype = 'BOOLEAN'
+   Amount_Not_Taxable.Flags = 'AMIUL'
+   Use_Withhold_Amount_Table.Flags = 'A-IUL'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Minimum_Base_Amount.Flags = 'A-IUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code),a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       multiple_tax                   multiple_tax,
+       amount_not_taxable             amount_not_taxable,
+       min_withheld_amount            min_withheld_amount,
+       use_withhold_amount_table      use_withhold_amount_table,
+       tax_amount_at_inv_print        tax_amount_at_inv_print_db,
+       Tax_Amount_At_Inv_Print_API.Decode(tax_amount_at_inv_print) tax_amount_at_inv_print,
+       tax_amt_limit                  tax_amt_limit,
+       minimum_base_amount            minimum_base_amount,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a;
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Vsr IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code), a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       tax_amt_limit                  tax_amt_limit,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  multiple_tax = 'FALSE'
+AND    a.fee_type IN ('SALETX', 'VAT', 'RDE');
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Non_Vat_Multiple IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code), a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       tax_amt_limit                  tax_amt_limit,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  a.fee_type IN ('SALETX', 'USETX', 'NOTAX')
+AND    a.deductible = 100;
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Non_Rde IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code), a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       tax_amt_limit                  tax_amt_limit,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  a.fee_type <> 'RDE'
+AND    a.multiple_tax = 'FALSE';
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Non_Rde_Multiple IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code), a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       tax_amt_limit                  tax_amt_limit,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  a.fee_type <> 'RDE'
+AND    a.fee_type <> 'IRS1099TX';
+
+@SecurityCheck Company.UserAuthorized(a.company)
+VIEW Statutory_Fee_Vat_Mult_Zero IS
+   Prompt = 'Statutory Fee'
+   Fee_Type_Db.Datatype = 'STRING(20)'
+   Vat_Received.Datatype = 'STRING(20)'
+   Vat_Disbursed.Datatype = 'STRING(20)'
+   Tax_Amt_Limit.Flags = 'AMIUL'
+   Tax_Reporting_Category.Datatype = 'STRING(50)'
+   Tax_Reporting_Category_Db.Flags = 'A-IU-'
+SELECT a.company                      company,
+       fee_code                       fee_code,
+       nvl(Enterp_Comp_Connect_V170_API.Get_Company_Translation(a.company,'ACCRUL', 'StatutoryFee', fee_code),a.description)
+                                      description,
+       fee_rate                       fee_rate,
+       a.valid_from                   valid_from,
+       valid_until                    valid_until,
+       Fee_Type_API.Decode(fee_type)  fee_type,
+       fee_type                       fee_type_db,
+       Vat_Method_API.Decode(vat_received) vat_received,
+       vat_received                   vat_received_db,
+       Vat_Method_API.Decode(vat_disbursed) vat_disbursed,
+       vat_disbursed                  vat_disbursed_db,
+       deductible                     deductible,
+       tax_amt_limit                  tax_amt_limit,
+       Tax_Reporting_Category_API.Decode(tax_reporting_category) tax_reporting_category,
+       tax_reporting_category         tax_reporting_category_db,
+       a.rowid                       objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                    objversion,
+       rowkey                        objkey
+FROM   statutory_fee_tab a
+WHERE  (a.fee_type IN ('CALCVAT', 'NOTAX')
+OR     (a.fee_type = 'VAT'
+AND    a.fee_rate = 0));
+

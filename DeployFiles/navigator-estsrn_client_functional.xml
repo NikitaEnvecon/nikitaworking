@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FndNavigator xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Legacy="false" Source="estsrn\client\navigator-functional.xml">
+  <FndNavigatorEntries>
+    <FndNavigatorEntry>
+      <Key>ESTIEN</Key>
+      <Name>EstimatedScreen</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>NAVIGATOR_Root</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>ESTIEN.ESTIED_SCRE</Key>
+      <Name>Estimated Screen</Name>
+      <Url>ifsapf:frmEstimated</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>ESTIEN</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>ESTIEN.TEST_TABL</Key>
+      <Name>Test Table</Name>
+      <Url>ifsapf:tbwTest</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>ESTIEN</ParentKey>
+      <Ordinal>200</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>ESTIEN.CHIL_TABL</Key>
+      <Name>Child Table</Name>
+      <Url>ifsapf:frmNewTest</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>ESTIEN</ParentKey>
+      <Ordinal>150</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>ESTIEN.TEST_FORM</Key>
+      <Name>Test Form</Name>
+      <Url>ifsapf:frmTest</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>ESTIEN</ParentKey>
+      <Ordinal>149</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>ESTIEN.DROPWN_FILT</Key>
+      <Name>Dropdown Filter</Name>
+      <Url>ifsapf:frmDropdownFilter</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>ESTIEN</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+  </FndNavigatorEntries>
+  <FndShortcutItems />
+</FndNavigator>

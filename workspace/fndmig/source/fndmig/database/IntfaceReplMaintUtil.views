@@ -1,0 +1,53 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceReplMaintUtil
+--  Component:    FNDMIG
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+VIEW Intface_Repl_Db_Objects IS
+SELECT intface_name                                                     intface_name,
+       object_name                                                      object_name,
+       object_type                                                      object_type,
+       decode(object_type,'PACKAGE BODY',status,
+          decode(status,'INVALID','INVALID',
+             Intface_Repl_Triggers_Util_API.Get_Status(object_name)))   status ,
+       decode(object_type,'PACKAGE BODY',null,
+          Intface_Repl_Triggers_Util_API.Get_Table_name(object_name))   table_name ,
+       decode(status,'VALID',null,
+          Intface_Repl_Maint_Util_API.Get_Source_Error(object_name))    error_text,
+       created                                                          created,
+       last_ddl_time                                                    last_ddl_time,
+       OBJKEY                                                          objkey
+FROM   intface_header, dba_objects
+WHERE  ( object_type = 'PACKAGE BODY' AND object_name LIKE 'RPL_'||intface_name||'__' )
+OR     ( object_type = 'TRIGGER'      AND object_name =    'RPL_'||intface_name)
+OR     ( object_type = 'TRIGGER'      AND object_name LIKE 'RPL_'||intface_name||'_T%')
+AND    owner = Fnd_Session_API.Get_App_Owner;
+
+VIEW Intface_Server_Processes IS
+SELECT intface_name              intface_name,
+       job_id                    server_job_id,
+       substr(action,1,2000)     action,
+       execution_plan            execution_plan,
+       last_date                 last_date,
+       next_date                 next_date,
+       status                    status,
+       OBJKEY                   objkey
+FROM   intface_header, batch_job
+WHERE INSTR(action,chr(31)||intface_name||chr(30)) != 0
+AND UPPER(action) LIKE 'INTFACE%';
+

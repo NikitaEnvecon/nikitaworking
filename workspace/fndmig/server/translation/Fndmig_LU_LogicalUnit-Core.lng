@@ -1,0 +1,2876 @@
+-------------------------------------------------------
+File Type: IFS Foundation Language File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Fittings: Standard
+Module File Types: LNG^TRUE^TRS^TRUE^
+Layer: Core
+Main Type: LU
+Sub Type: Logical Unit
+-------------------------------------------------------
+CS:IntfaceChangeDefaults^LU^Logical Unit^N^N
+	A:Prompt^Intface Change Defaults^N^M^N^N^^^0^0^0
+	CS:1^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^Allowed^N^M^N^N^^^0^0^0
+	CE:
+	CS:2^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^Not Allowed^N^M^N^N^^^0^0^0
+	CE:
+	CS:3^LU^Iid Element^N^N
+		P:Position^3
+		A:Text^Fixed Value^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceConvList^LU^Logical Unit^N^N
+	A:Prompt^Intface Conv List^N^M^N^N^^^0^0^0
+	CS:INTFACE_CONV_LIST^LU^View^N^N
+		CS:CONV_LIST_ID^LU^Column^N^N
+			A:Prompt^Conv List Id^N^M^N^N^B46EBB882E8440F18F384040113586FC^SHORT_NAME^1^1^0
+		CE:
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^911FEE4C48C846E79FD6986186C17F02^ABBREVIATION^1^1^0
+		CE:
+	CE:
+CE:
+CS:IntfaceConvListCols^LU^Logical Unit^N^N
+	A:Prompt^Intface Conv List Cols^N^M^N^N^^^0^0^0
+	CS:INTFACE_CONV_LIST_COLS^LU^View^N^N
+		CS:CONV_LIST_ID^LU^Column^N^N
+			A:Prompt^Conv List Id^N^M^N^N^B46EBB882E8440F18F384040113586FC^SHORT_NAME^1^1^0
+		CE:
+		CS:NEW_VALUE^LU^Column^N^N
+			A:Prompt^New Value^N^M^N^N^FFAC2B1F01D24F2BBCF51AF0A5CC6B93^SHORT_NAME^1^1^0
+		CE:
+		CS:OLD_VALUE^LU^Column^N^N
+			A:Prompt^Old Value^N^M^N^N^5153D3443ED2456B8782531D91CE2E73^SHORT_NAME^1^1^0
+		CE:
+	CE:
+CE:
+CS:IntfaceDefaultRules^LU^Logical Unit^N^N
+	A:Prompt^Intface Default Rules^N^M^N^N^^^0^0^0
+	CS:ADDOBJID^LU^Message^N^N
+		A:Text^Create extra column detail for OBJID^N^M^N^N^^^0^0^0
+	CE:
+	CS:CHECKOPTION^LU^Message^N^N
+		A:Text^Perform methods New and Modify with CHECK option^N^M^N^N^^^0^0^0
+	CE:
+	CS:CLEANUP^LU^Message^N^N
+		A:Text^Clear errordetails automatically^N^M^N^N^^^0^0^0
+	CE:
+	CS:COMMITSEQ^LU^Message^N^N
+		A:Text^Number of rows between each commit^N^M^N^N^^^0^0^0
+	CE:
+	CS:CONNJOB^LU^Message^N^N
+		A:Text^Start this job first^N^M^N^N^^^0^0^0
+	CE:
+	CS:CREATEDET^LU^Message^N^N
+		A:Text^Create new column details based on views in MethodList^N^M^N^N^^^0^0^0
+	CE:
+	CS:CRETABCONF^LU^Message^N^N
+		A:Text^Options for container table^N^M^N^N^^^0^0^0
+	CE:
+	CS:EVENTMESS^LU^Message^N^N
+		A:Text^Notify Event Server when job is finished^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXITLINES^LU^Message^N^N
+		A:Text^Stop reading file after this line number^N^M^N^N^^^0^0^0
+	CE:
+	CS:FETCHCONDITION^LU^Message^N^N
+		A:Text^Sets if the Job can be used to fetch data. If Multiple LUs are used specify the join condition^N^M^N^N^^^0^0^0
+	CE:
+	CS:FILEBKP^LU^Message^N^N
+		A:Text^Backup file after successful completion^N^M^N^N^^^0^0^0
+	CE:
+	CS:FILEHEAD^LU^Message^N^N
+		A:Text^Create fileheader with column names. CSV-files only^N^M^N^N^^^0^0^0
+	CE:
+	CS:IGNOREADERROR^LU^Message^N^N
+		A:Text^Continue reading file even if errors occur^N^M^N^N^^^0^0^0
+	CE:
+	CS:IGNOREXEERROR^LU^Message^N^N
+		A:Text^Continue procedure even if errors occur^N^M^N^N^^^0^0^0
+	CE:
+	CS:INSUPD^LU^Message^N^N
+		A:Text^Execute either INSERT or UPDATE^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTFACE_DEFAULT_RULES^LU^View^N^N
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^2BC55137D3C64659903EF421785CB879^SHORT_NAME^1^1^0
+		CE:
+		CS:PROCEDURE_NAME^LU^Column^N^N
+			A:Prompt^Procedure Name^N^M^N^N^F8B7227CB46A48919B3EA8FE4FB63246^SHORT_NAME^1^1^0
+		CE:
+		CS:RULE_FLAG^LU^Column^N^N
+			A:Prompt^Rule Flag^N^M^N^N^48C3511BE4D844928F96A5A7106BB04B^SHORT_NAME^1^1^0
+		CE:
+		CS:RULE_FLAG_DB^LU^Column^N^N
+			A:Prompt^Rule Flag^N^M^N^N^48C3511BE4D844928F96A5A7106BB04B^SHORT_NAME^1^1^0
+		CE:
+		CS:RULE_ID^LU^Column^N^N
+			A:Prompt^Rule Id^N^M^N^N^C1F513228FC8494D8EEDB5387F2AD8AF^SHORT_NAME^1^1^0
+		CE:
+		CS:RULE_VALUE^LU^Column^N^N
+			A:Prompt^Rule Value^N^M^N^N^A19C98D949C142E6AC281B65D37AB55B^SHORT_NAME^1^1^0
+		CE:
+		CS:VALUE_FLAG^LU^Column^N^N
+			A:Prompt^Value Flag^N^M^N^N^9EC544A97BA54D8780D4B7F80FD1B226^SHORT_NAME^1^1^0
+		CE:
+		CS:VALUE_FLAG_DB^LU^Column^N^N
+			A:Prompt^Value Flag^N^M^N^N^9EC544A97BA54D8780D4B7F80FD1B226^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:NOCLEANUP^LU^Message^N^N
+		A:Text^Keep all job details for client files^N^M^N^N^^^0^0^0
+	CE:
+	CS:SAVEJOBDAYS^LU^Message^N^N
+		A:Text^Number of days to save job-history^N^M^N^N^^^0^0^0
+	CE:
+	CS:SAVEJOBERR^LU^Message^N^N
+		A:Text^Save only errors in history log^N^M^N^N^^^0^0^0
+	CE:
+	CS:SERVFILOAD^LU^Message^N^N
+		A:Text^Load serverfile before job starts^N^M^N^N^^^0^0^0
+	CE:
+	CS:SKIPLINES^LU^Message^N^N
+		A:Text^Start reading file after this line number^N^M^N^N^^^0^0^0
+	CE:
+	CS:SYNCDETAILS^LU^Message^N^N
+		A:Text^Synchronize job details with columns in file-header^N^M^N^N^^^0^0^0
+	CE:
+	CS:TRUNCVAL^LU^Message^N^N
+		A:Text^Truncate values exceeding column length^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceDetail^LU^Logical Unit^N^N
+	A:Prompt^Intface Detail^N^M^N^N^^^0^0^0
+	CS:CHECKERROR^LU^Message^N^N
+		A:Text^Check on :P1 failed - :P2 (Error caused by line: :P3)^N^M^N^N^^^0^0^0
+	CE:
+	CS:CLIENTVAL^LU^Message^N^N
+		A:Text^Client-values^N^M^N^N^^^0^0^0
+	CE:
+	CS:COLOUTDAT^LU^Message^N^N
+		A:Text^Error formatting :P1 with date value :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:COLOUTDAT2^LU^Message^N^N
+		A:Text^Error formatting date column :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:COLOUTNUM^LU^Message^N^N
+		A:Text^Error formatting :P1 with numeric value :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:COLOUTNUM2^LU^Message^N^N
+		A:Text^Error formatting numeric column :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:COLUMNOUT^LU^Message^N^N
+		A:Text^Error formatting :P1 with value :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:COLUMNOUT2^LU^Message^N^N
+		A:Text^Error formatting column :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:COMMITCNT^LU^Message^N^N
+		A:Text^:P1 Number of rows commited : :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:CREERRORATTR^LU^Message^N^N
+		A:Text^Create file from :P1 failed.^N^M^N^N^^^0^0^0
+	CE:
+	CS:CREFORMAT^LU^Message^N^N
+		A:Text^Create file failed - :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:CREINTFACEOK^LU^Message^N^N
+		A:Text^Migration job :P1 completed^N^M^N^N^^^0^0^0
+	CE:
+	CS:DBVAL^LU^Message^N^N
+		A:Text^DB-values^N^M^N^N^^^0^0^0
+	CE:
+	CS:ERRDEFAULT^LU^Message^N^N
+		A:Text^:P1 only used when direction = :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:ERRWHERE^LU^Message^N^N
+		A:Text^Default-where not in use for direction = :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:FILENOTFOUND^LU^Message^N^N
+		A:Text^Cannot find file  :P1 on path :P2.^N^M^N^N^^^0^0^0
+	CE:
+	CS:FORMATERROR^LU^Message^N^N
+		A:Text^Formatting failed - :P1. (Error caused by line: :P2)^N^M^N^N^^^0^0^0
+	CE:
+	CS:INSCHECK^LU^Message^N^N
+		A:Text^:P1 new rows checked OK^N^M^N^N^^^0^0^0
+	CE:
+	CS:INSCHECKERR^LU^Message^N^N
+		A:Text^:P1 rows checked with error^N^M^N^N^^^0^0^0
+	CE:
+	CS:INSERRORNEW^LU^Message^N^N
+		A:Text^Insert into :P1 failed - :P2 (Error caused by line: :P3)^N^M^N^N^^^0^0^0
+	CE:
+	CS:INSINTERR^LU^Message^N^N
+		A:Text^:P1 rows failed^N^M^N^N^^^0^0^0
+	CE:
+	CS:INSINTINS^LU^Message^N^N
+		A:Text^:P1 new rows inserted^N^M^N^N^^^0^0^0
+	CE:
+	CS:INSINTNOROWS^LU^Message^N^N
+		A:Text^No rows processed^N^M^N^N^^^0^0^0
+	CE:
+	CS:INSINTOK^LU^Message^N^N
+		A:Text^Migration job :P1 completed^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTFACE_DETAIL^LU^View^N^N
+		CS:AMOUNT_FACTOR^LU^Column^N^N
+			A:Prompt^Amount Factor^N^M^N^N^5A2DD9E237514D6BB32F5617C6C85C8A^ABBREVIATION^1^1^0
+		CE:
+		CS:ATTR_SEQ^LU^Column^N^N
+			A:Prompt^Attr Seq^N^M^N^N^F3085D341DFA44A2833AC2E611F011EF^ABBREVIATION^1^1^0
+		CE:
+		CS:CHANGE_DEFAULTS^LU^Column^N^N
+			A:Prompt^Change Defaults^N^M^N^N^0BF2DE2852244881A63D0D86E7747E0D^ABBREVIATION^1^1^0
+		CE:
+		CS:CHANGE_DEFAULTS_DB^LU^Column^N^N
+			A:Prompt^Change Defaults^N^M^N^N^0BF2DE2852244881A63D0D86E7747E0D^ABBREVIATION^1^1^0
+		CE:
+		CS:COLUMN_NAME^LU^Column^N^N
+			A:Prompt^Column Name^N^M^N^N^71CCC3ACE1794EB4ABCD4A602E70B75A^FULL_NAME^1^1^0
+		CE:
+		CS:CONV_LIST_ID^LU^Column^N^N
+			A:Prompt^Conv List Id^N^M^N^N^B46EBB882E8440F18F384040113586FC^SHORT_NAME^1^1^0
+		CE:
+		CS:DATA_TYPE^LU^Column^N^N
+			A:Prompt^Data Type^N^M^N^N^81307AD529EB470E9C2A150E7841F6E8^ABBREVIATION^1^1^0
+		CE:
+		CS:DB_CLIENT_VALUES^LU^Column^N^N
+			A:Prompt^Db Client Values^N^M^N^N^d8656fa0-4dcd-4166-838e-da36ddbe2e5d^SHORT_NAME^1^1^0
+		CE:
+		CS:DECIMAL_LENGTH^LU^Column^N^N
+			A:Prompt^Decimal Length^N^M^N^N^F797EE03D19A4DCDA48AED71FDC3B8F2^ABBREVIATION^1^1^0
+		CE:
+		CS:DEFAULT_VALUE^LU^Column^N^N
+			A:Prompt^Default Value^N^M^N^N^A3C4ECFBDCF04B8CB49BC74963E95540^FULL_NAME^1^1^0
+		CE:
+		CS:DEFAULT_WHERE^LU^Column^N^N
+			A:Prompt^Default Where^N^M^N^N^A22975C4964648D4ADDC329728ACF4DE^FULL_NAME^1^1^0
+		CE:
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^799DF6BE170644D8AD4D7DE9D46BDC17^ABBREVIATION^1^1^0
+		CE:
+		CS:EXT_ATTR^LU^Column^N^N
+			A:Prompt^Ext Attr^N^M^N^N^dc663010-c245-484d-a6c4-8180e7340735^SHORT_NAME^1^1^0
+		CE:
+		CS:FLAGS^LU^Column^N^N
+			A:Prompt^Flags^N^M^N^N^C4BBDC0813924621837D5C8BFD43863B^SHORT_NAME^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:LENGTH^LU^Column^N^N
+			A:Prompt^Length^N^M^N^N^58455A6B9ED143D688CF126E7B7CA12D^SHORT_NAME^1^1^0
+		CE:
+		CS:NOTE_TEXT^LU^Column^N^N
+			A:Prompt^Note Text^N^M^N^N^1E4C0199A3864B3796326A4236E655B5^FULL_NAME^1^1^0
+		CE:
+		CS:PAD_CHAR_LEFT^LU^Column^N^N
+			A:Prompt^Pad Char Left^N^M^N^N^37E5543431284CA68A4A5447AC1283D6^SHORT_NAME^1^1^0
+		CE:
+		CS:PAD_CHAR_LEFT_DB^LU^Column^N^N
+			A:Prompt^Pad Char Left^N^M^N^N^37E5543431284CA68A4A5447AC1283D6^SHORT_NAME^1^1^0
+		CE:
+		CS:PAD_CHAR_RIGHT^LU^Column^N^N
+			A:Prompt^Pad Char Right^N^M^N^N^A0D075E94125444FAF328C2E9BFADD53^SHORT_NAME^1^1^0
+		CE:
+		CS:PAD_CHAR_RIGHT_DB^LU^Column^N^N
+			A:Prompt^Pad Char Right^N^M^N^N^A0D075E94125444FAF328C2E9BFADD53^SHORT_NAME^1^1^0
+		CE:
+		CS:POS^LU^Column^N^N
+			A:Prompt^Pos^N^M^N^N^8D2E4A97998F431E95B65143FE7B48C3^ABBREVIATION^1^1^0
+		CE:
+		CS:SOURCE_COLUMN^LU^Column^N^N
+			A:Prompt^Source Column^N^M^N^N^70345C6A166D49389832C57CAD6268B7^SHORT_NAME^1^1^0
+		CE:
+		CS:SOURCE_NAME^LU^Column^N^N
+			A:Prompt^Source Name^N^M^N^N^^^0^0^0
+		CE:
+		CS:SOURCE_OWNER^LU^Column^N^N
+			A:Prompt^Source Owner^N^M^N^N^^^0^0^0
+		CE:
+	CE:
+	CS:INTFACE_DETAIL_COL_LOV^LU^View^N^N
+		CS:COLUMN_NAME^LU^Column^N^N
+			A:Prompt^Column Name^N^M^N^N^71CCC3ACE1794EB4ABCD4A602E70B75A^FULL_NAME^1^1^0
+		CE:
+		CS:FLAGS^LU^Column^N^N
+			A:Prompt^Flags^N^M^N^N^C4BBDC0813924621837D5C8BFD43863B^SHORT_NAME^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:SOURCE_COLUMN^LU^Column^N^N
+			A:Prompt^Source Column^N^M^N^N^70345C6A166D49389832C57CAD6268B7^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:LOADERR^LU^Message^N^N
+		A:Text^Error loading migration job info :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:NODET^LU^Message^N^N
+		A:Text^No details found for  :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOROWS^LU^Message^N^N
+		A:Text^No rows processed^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOVAL^LU^Message^N^N
+		A:Text^No DB/Client values for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:ROWSFAILED^LU^Message^N^N
+		A:Text^:P1 rows failed^N^M^N^N^^^0^0^0
+	CE:
+	CS:ROWSWRITTEN^LU^Message^N^N
+		A:Text^:P1 rows written^N^M^N^N^^^0^0^0
+	CE:
+	CS:STRINGOUT^LU^Message^N^N
+		A:Text^Error formatting :P1 with value :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:STRINGOUT2^LU^Message^N^N
+		A:Text^Error formatting column :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:STRINGOUTCONV^LU^Message^N^N
+		A:Text^Error converting value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:STRINGOUTCONV2^LU^Message^N^N
+		A:Text^Error converting column :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:TOOLONG^LU^Message^N^N
+		A:Text^Specified length :P2 for column :P1 is exceeded by value :P3. Rule TRUNCVAL may solve this.^N^M^N^N^^^0^0^0
+	CE:
+	CS:TOOLONG2^LU^Message^N^N
+		A:Text^Specified length :P2 for column :P1 is exceeded. Rule TRUNCVAL may solve this.^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKPOS^LU^Message^N^N
+		A:Text^Error occured while unpacking :P1 with value :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKPOS2^LU^Message^N^N
+		A:Text^Error occured while unpacking column :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKPOSCONV^LU^Message^N^N
+		A:Text^Error converting value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKPOSDAT^LU^Message^N^N
+		A:Text^Error formatting date value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKPOSDAT2^LU^Message^N^N
+		A:Text^Error formatting date column :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKPOSDEF^LU^Message^N^N
+		A:Text^Error formatting default value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKPOSNUM^LU^Message^N^N
+		A:Text^Error formatting numeric value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKPOSNUM2^LU^Message^N^N
+		A:Text^Error formatting numeric column :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKPOSSTR^LU^Message^N^N
+		A:Text^Error formatting string value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKPOSSTR2^LU^Message^N^N
+		A:Text^Error formatting string column :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEP^LU^Message^N^N
+		A:Text^Error occured while unpacking :P1 with value :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEP2^LU^Message^N^N
+		A:Text^Error occured while unpacking column :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPCONV^LU^Message^N^N
+		A:Text^Error converting value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPDAT^LU^Message^N^N
+		A:Text^Error formatting date value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPDAT2^LU^Message^N^N
+		A:Text^Error formatting date column :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPDEF^LU^Message^N^N
+		A:Text^Error formatting default value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPNUM^LU^Message^N^N
+		A:Text^Error formatting numeric value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPNUM2^LU^Message^N^N
+		A:Text^Error formatting numeric column :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPSEP^LU^Message^N^N
+		A:Text^Error reading column values by column separator^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPSTR^LU^Message^N^N
+		A:Text^Error formatting string value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPSTR2^LU^Message^N^N
+		A:Text^Error formatting string column :p1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UPDERRORCHK^LU^Message^N^N
+		A:Text^Error :P1 when executing :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:UPDERRORUPD^LU^Message^N^N
+		A:Text^Update of :P1 failed - :P2 (Error caused by line: :P3)^N^M^N^N^^^0^0^0
+	CE:
+	CS:UPDINTFACEOK^LU^Message^N^N
+		A:Text^Migration job :P1 completed^N^M^N^N^^^0^0^0
+	CE:
+	CS:UPDINTFERR^LU^Message^N^N
+		A:Text^:P1 rows failed^N^M^N^N^^^0^0^0
+	CE:
+	CS:UPDINTFINS^LU^Message^N^N
+		A:Text^:P1 new rows inserted^N^M^N^N^^^0^0^0
+	CE:
+	CS:UPDINTFUPD^LU^Message^N^N
+		A:Text^:P1 rows modified^N^M^N^N^^^0^0^0
+	CE:
+	CS:VALFOUND^LU^Message^N^N
+		A:Text^DB/Client values found^N^M^N^N^^^0^0^0
+	CE:
+	CS:WRNOROWS^LU^Message^N^N
+		A:Text^No rows processed^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceDirection^LU^Logical Unit^N^N
+	A:Prompt^Intface Direction^N^M^N^N^^^0^0^0
+	CS:1^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^File In^N^M^N^N^^^0^0^0
+	CE:
+	CS:2^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^File Out^N^M^N^N^^^0^0^0
+	CE:
+	CS:3^LU^Iid Element^N^N
+		P:Position^3
+		A:Text^None^N^M^N^N^^^0^0^0
+	CE:
+	CS:4^LU^Iid Element^N^N
+		P:Position^4
+		A:Text^Source Migration^N^M^N^N^^^0^0^0
+	CE:
+	CS:5^LU^Iid Element^N^N
+		P:Position^5
+		A:Text^ReplicStructure^N^M^N^N^^^0^0^0
+	CE:
+	CS:6^LU^Iid Element^N^N
+		P:Position^6
+		A:Text^Excel Migration^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceDocumentation^LU^Logical Unit^N^N
+	A:Prompt^Intface Documentation^N^M^N^N^^^0^0^0
+	CS:INFTXTDETAIL^LU^Message^N^N
+		A:Text^Not Used^N^M^N^N^^^0^0^0
+	CE:
+	CS:INFTXTHEADER^LU^Message^N^N
+		A:Text^Not Used^N^M^N^N^^^0^0^0
+	CE:
+	CS:INFTXTMETHLI^LU^Message^N^N
+		A:Text^Not Used^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTFACE_DOCUMENTATION_REP^LU^Report^N^N
+		A:Title^Migration Documentation^N^M^N^N^^^0^0^0
+		CS:ACTION^LU^Report Column^N^N
+			A:Title^Action^N^M^N^N^^^0^0^0
+		CE:
+		CS:AMOUNT_FACTOR^LU^Report Column^N^N
+			A:Title^Amount Factor^N^M^N^N^^^0^0^0
+		CE:
+		CS:ATTR_SEQ^LU^Report Column^N^N
+			A:Title^Attr Seq^N^M^N^N^^^0^0^0
+		CE:
+		CS:BLOCK_TYPE^LU^Report Column^N^N
+			A:Title^Block Type^N^M^N^N^^^0^0^0
+		CE:
+		CS:CHANGE_DEFAULTS^LU^Report Column^N^N
+			A:Title^Change Defaults^N^M^N^N^^^0^0^0
+		CE:
+		CS:COLS_USING_LIST^LU^Report Column^N^N
+			A:Title^Columns Using Conversion List:^N^M^N^N^^^0^0^0
+		CE:
+		CS:COLUMN_EMBRACE^LU^Report Column^N^N
+			A:Title^Column Embrace^N^M^N^N^^^0^0^0
+		CE:
+		CS:COLUMN_NAME^LU^Report Column^N^N
+			A:Title^Target Column^N^M^N^N^^^0^0^0
+		CE:
+		CS:COLUMN_SEPARATOR^LU^Report Column^N^N
+			A:Title^Column Separator^N^M^N^N^^^0^0^0
+		CE:
+		CS:CONVERT_ATTR^LU^Report Column^N^N
+			A:Title^Convert Attr^N^M^N^N^^^0^0^0
+		CE:
+		CS:CONV_LIST_DESCR^LU^Report Column^N^N
+			A:Title^Conv. List Descr.^N^M^N^N^^^0^0^0
+		CE:
+		CS:CONV_LIST_ID^LU^Report Column^N^N
+			A:Title^Conv. List^N^M^N^N^^^0^0^0
+		CE:
+		CS:DATA_TYPE^LU^Report Column^N^N
+			A:Title^Data Type^N^M^N^N^^^0^0^0
+		CE:
+		CS:DATE_FORMAT^LU^Report Column^N^N
+			A:Title^Date Format^N^M^N^N^^^0^0^0
+		CE:
+		CS:DECIMAL_LENGTH^LU^Report Column^N^N
+			A:Title^Decimal Length^N^M^N^N^^^0^0^0
+		CE:
+		CS:DECIMAL_POINT^LU^Report Column^N^N
+			A:Title^Desimal Point^N^M^N^N^^^0^0^0
+		CE:
+		CS:DEFAULT_VALUE^LU^Report Column^N^N
+			A:Title^Default Value^N^M^N^N^^^0^0^0
+		CE:
+		CS:DEFAULT_WHERE^LU^Report Column^N^N
+			A:Title^Default Where^N^M^N^N^^^0^0^0
+		CE:
+		CS:DESCR_COLUMN_NAME^LU^Report Column^N^N
+			A:Title^Column Description^N^M^N^N^^^0^0^0
+		CE:
+		CS:DIRECTION^LU^Report Column^N^N
+			A:Title^Direction^N^M^N^N^^^0^0^0
+		CE:
+		CS:DIRECTION_DB^LU^Report Column^N^N
+			A:Title^Direction DB^N^M^N^N^^^0^0^0
+		CE:
+		CS:EXECUTED_BY^LU^Report Column^N^N
+			A:Title^Executed By^N^M^N^N^^^0^0^0
+		CE:
+		CS:EXECUTE_SEQ^LU^Report Column^N^N
+			A:Title^Execute Seq^N^M^N^N^^^0^0^0
+		CE:
+		CS:FILE_LOCATION^LU^Report Column^N^N
+			A:Title^File Location^N^M^N^N^^^0^0^0
+		CE:
+		CS:FILE_LOCATION_DB^LU^Report Column^N^N
+			A:Title^File Location DB^N^M^N^N^^^0^0^0
+		CE:
+		CS:FLAGS^LU^Report Column^N^N
+			A:Title^Flags^N^M^N^N^^^0^0^0
+		CE:
+		CS:GROUP_DESCRIPTION^LU^Report Column^N^N
+			A:Title^Group Description^N^M^N^N^^^0^0^0
+		CE:
+		CS:GROUP_ID^LU^Report Column^N^N
+			A:Query^Group Id:^N^M^N^N^^^0^0^0
+			A:Title^Group Id^N^M^N^N^^^0^0^0
+		CE:
+		CS:INFO_TEXT_DETAIL^LU^Report Column^N^N
+			A:Title^Info:^N^M^N^N^^^0^0^0
+		CE:
+		CS:INFO_TEXT_HEADER^LU^Report Column^N^N
+			A:Title^Info:^N^M^N^N^^^0^0^0
+		CE:
+		CS:INFO_TEXT_METH_LIST^LU^Report Column^N^N
+			A:Title^Info:^N^M^N^N^^^0^0^0
+		CE:
+		CS:INTFACE_DESCR^LU^Report Column^N^N
+			A:Title^Migration Description^N^M^N^N^^^0^0^0
+		CE:
+		CS:INTFACE_FILE^LU^Report Column^N^N
+			A:Title^File^N^M^N^N^^^0^0^0
+		CE:
+		CS:INTFACE_IN^LU^Report Column^N^N
+			A:Query^Migration Job ID:^N^M^N^N^^^0^0^0
+		CE:
+		CS:INTFACE_NAME^LU^Report Column^N^N
+			A:Title^Migration Job ID^N^M^N^N^^^0^0^0
+		CE:
+		CS:INTFACE_PATH^LU^Report Column^N^N
+			A:Title^Path^N^M^N^N^^^0^0^0
+		CE:
+		CS:IntfaceDoc.rdl^LU^Report Layout^N^N
+			A:Title^Migration Document^N^M^N^N^^^0^0^0
+		CE:
+		CS:LAST_EXECUTED^LU^Report Column^N^N
+			A:Title^Last Executed^N^M^N^N^^^0^0^0
+		CE:
+		CS:LAST_INFO^LU^Report Column^N^N
+			A:Title^Last Info^N^M^N^N^^^0^0^0
+		CE:
+		CS:LENGTH^LU^Report Column^N^N
+			A:Title^Length^N^M^N^N^^^0^0^0
+		CE:
+		CS:MET_COLUMN_NAME^LU^Report Column^N^N
+			A:Title^Rule Column^N^M^N^N^^^0^0^0
+		CE:
+		CS:MET_COLUMN_VALUE^LU^Report Column^N^N
+			A:Title^Rule Value^N^M^N^N^^^0^0^0
+		CE:
+		CS:MET_METHOD_NAME^LU^Report Column^N^N
+			A:Title^Method^N^M^N^N^^^0^0^0
+		CE:
+		CS:MET_VIEW_NAME^LU^Report Column^N^N
+			A:Title^View^N^M^N^N^^^0^0^0
+		CE:
+		CS:MINUS_POS^LU^Report Column^N^N
+			A:Title^Minus Pos^N^M^N^N^^^0^0^0
+		CE:
+		CS:NEW_VALUE^LU^Report Column^N^N
+			A:Title^New Value^N^M^N^N^^^0^0^0
+		CE:
+		CS:NOTE_TEXT_DETAIL^LU^Report Column^N^N
+			A:Title^Comments^N^M^N^N^^^0^0^0
+		CE:
+		CS:NOTE_TEXT_GROUP^LU^Report Column^N^N
+			A:Title^Comments^N^M^N^N^^^0^0^0
+		CE:
+		CS:NOTE_TEXT_HEADER^LU^Report Column^N^N
+			A:Title^Comments^N^M^N^N^^^0^0^0
+		CE:
+		CS:NOTE_TEXT_METH_LIST^LU^Report Column^N^N
+			A:Title^Comments^N^M^N^N^^^0^0^0
+		CE:
+		CS:OLD_VALUE^LU^Report Column^N^N
+			A:Title^Old Value^N^M^N^N^^^0^0^0
+		CE:
+		CS:ORDER_BY_CLAUSE^LU^Report Column^N^N
+			A:Title^Order By^N^M^N^N^^^0^0^0
+		CE:
+		CS:ORDER_BY_COL^LU^Report Column^N^N
+			A:Title^Order By^N^M^N^N^^^0^0^0
+		CE:
+		CS:PAD_CHAR_LEFT^LU^Report Column^N^N
+			A:Title^Pad Char Left^N^M^N^N^^^0^0^0
+		CE:
+		CS:PAD_CHAR_RIGHT^LU^Report Column^N^N
+			A:Title^Pad Char Right^N^M^N^N^^^0^0^0
+		CE:
+		CS:POS^LU^Report Column^N^N
+			A:Title^Pos^N^M^N^N^^^0^0^0
+		CE:
+		CS:PRINT_DETAIL^LU^Report Column^N^N
+			A:Query^Print Column Mapping:^N^M^N^N^^^0^0^0
+		CE:
+		CS:PRINT_DOC_INFO^LU^Report Column^N^N
+			A:Query^Print Document Information:^N^M^N^N^^^0^0^0
+		CE:
+		CS:PRINT_HEADER^LU^Report Column^N^N
+			A:Query^Print Header Info:^N^M^N^N^^^0^0^0
+		CE:
+		CS:PRINT_MAP_VALUE^LU^Report Column^N^N
+			A:Query^Print Mapped Values:^N^M^N^N^^^0^0^0
+		CE:
+		CS:PRINT_METH_LIST^LU^Report Column^N^N
+			A:Query^Print Method List:^N^M^N^N^^^0^0^0
+		CE:
+		CS:PROCEDURE_NAME^LU^Report Column^N^N
+			A:Title^Procedure Name^N^M^N^N^^^0^0^0
+		CE:
+		CS:REFERENCES^LU^Report Column^N^N
+			A:Title^References^N^M^N^N^^^0^0^0
+		CE:
+		CS:Report Constants^LU^Report Data^N^N
+			A:txAction^Used to specify if the method should be run before or after the selected rows from the source is handeled, or if it should be executed once for each row fetched from the source.^N^M^N^N^^^0^0^0
+			A:txAmountFactor^This field is used to give a denominator to re-calculate the value of the source column if needed before transfer to IFS database column.^N^M^N^N^^^0^0^0
+			A:txChangeDefaults^This field specifies whether or not it is allowed to change the value of the default value when running an migration job.^N^M^N^N^^^0^0^0
+			A:txColumnName^Database column in IFS where source value should be transfered to.^N^M^N^N^^^0^0^0
+			A:txDataType^Datatype of the database column. Numeric-, alfanumeric- or date values.^N^M^N^N^^^0^0^0
+			A:txDecimalLength^The number of decimals to use when reading/writing to file.^N^M^N^N^^^0^0^0
+			A:txDefaultValue^This field is used to specify a value if there is no value in the source column. If no source column is specified, the standard value will be used for all rows.^N^M^N^N^^^0^0^0
+			A:txDescrColumnName^Description of the database column^N^M^N^N^^^0^0^0
+			A:txDetailTitle^Spesification of column mapping^N^M^N^N^^^0^0^0
+			A:txExecuteSeq^Specify in what order the methods in the method list should be run.^N^M^N^N^^^0^0^0
+			A:txFileInfo^File Information^N^M^N^N^^^0^0^0
+			A:txFlags^IFS attribute flags. The flags describes different attributes connected to the IFS database column. May include one or more of the following values:^N^M^N^N^^^0^0^0
+			A:txFlagsI^I = Insert Allowed^N^M^N^N^^^0^0^0
+			A:txFlagsK^K = Key (Foreign Key)^N^M^N^N^^^0^0^0
+			A:txFlagsM^M = Mandatory^N^M^N^N^^^0^0^0
+			A:txFlagsP^P = Parent Key^N^M^N^N^^^0^0^0
+			A:txFlagsU^U = Update Allowed^N^M^N^N^^^0^0^0
+			A:txHeaderColMapping^Explanation of columns used in the Column Mapping^N^M^N^N^^^0^0^0
+			A:txHeaderMethodList^Explanation of columns used in the Method List^N^M^N^N^^^0^0^0
+			A:txHeaderTitle^Spesification of migration routines for ^N^M^N^N^^^0^0^0
+			A:txLastExecutionInfo^Last Execution Information^N^M^N^N^^^0^0^0
+			A:txLength^This field specifies the maximum length allowed for the IFS database column. This field is used in combination with the Pos field for reading/writing files with fixed column-width.^N^M^N^N^^^0^0^0
+			A:txMapTitle^Spesific column value mapping^N^M^N^N^^^0^0^0
+			A:txMetColumnName^Used to specify that a method should only be run depending on the value of this source column.^N^M^N^N^^^0^0^0
+			A:txMetColumnValue^The method will only be run if the value of the source column equals this value. I.e. if '%' is entered, the method will be executed for all rows that has a value in the source column.^N^M^N^N^^^0^0^0
+			A:txMetMethodName^Specify what IFS or selfdefined method that should be run.^N^M^N^N^^^0^0^0
+			A:txMethodListTitle^Utilized/Created methods/APIs^N^M^N^N^^^0^0^0
+			A:txPadCharLeft^This field is used to specify a character that should be trimmed off or added to the left side of a colum when reading from/writing to a file. (ltrim/lpad)^N^M^N^N^^^0^0^0
+			A:txPadCharRight^This field is used to specify a character that should be trimmed off or added to the right side of a colum when reading from/writing to a file. (rtrim/rpad)^N^M^N^N^^^0^0^0
+			A:txPos^This field is used to specify the columns location in a specified file. If i.e. a CSV file is used this field will be 1,2,3 etc.^N^M^N^N^^^0^0^0
+			A:txSourceColumn^Source column from file, table or view to put into the IFS database column^N^M^N^N^^^0^0^0
+			A:txTitleDocPage^Definitions / Column descriptions^N^M^N^N^^^0^0^0
+			A:txViewInfo^Main Source/Target Information^N^M^N^N^^^0^0^0
+		CE:
+		CS:SOURCE_COLUMN^LU^Report Column^N^N
+			A:Title^Source Column^N^M^N^N^^^0^0^0
+		CE:
+		CS:SOURCE_NAME^LU^Report Column^N^N
+			A:Title^Source Name^N^M^N^N^^^0^0^0
+		CE:
+		CS:SOURCE_OWNER^LU^Report Column^N^N
+			A:Title^Source Owner^N^M^N^N^^^0^0^0
+		CE:
+		CS:THOUSAND_SEPARATOR^LU^Report Column^N^N
+			A:Title^Thousand Separator^N^M^N^N^^^0^0^0
+		CE:
+		CS:VIEW_NAME^LU^Report Column^N^N
+			A:Title^Target Name^N^M^N^N^^^0^0^0
+		CE:
+		CS:WHERE_CLAUSE^LU^Report Column^N^N
+			A:Title^Where^N^M^N^N^^^0^0^0
+		CE:
+	CE:
+	CS:INTFACE_INFO_SERVICES_RPV^LU^View^N^N
+		CS:D1^LU^Column^N^N
+		CE:
+		CS:D10^LU^Column^N^N
+		CE:
+		CS:D2^LU^Column^N^N
+		CE:
+		CS:D3^LU^Column^N^N
+		CE:
+		CS:D4^LU^Column^N^N
+		CE:
+		CS:D5^LU^Column^N^N
+		CE:
+		CS:D6^LU^Column^N^N
+		CE:
+		CS:D7^LU^Column^N^N
+		CE:
+		CS:D8^LU^Column^N^N
+		CE:
+		CS:D9^LU^Column^N^N
+		CE:
+		CS:N1^LU^Column^N^N
+		CE:
+		CS:N10^LU^Column^N^N
+		CE:
+		CS:N11^LU^Column^N^N
+		CE:
+		CS:N12^LU^Column^N^N
+		CE:
+		CS:N13^LU^Column^N^N
+		CE:
+		CS:N15^LU^Column^N^N
+		CE:
+		CS:N16^LU^Column^N^N
+		CE:
+		CS:N17^LU^Column^N^N
+		CE:
+		CS:N18^LU^Column^N^N
+		CE:
+		CS:N19^LU^Column^N^N
+		CE:
+		CS:N2^LU^Column^N^N
+		CE:
+		CS:N20^LU^Column^N^N
+		CE:
+		CS:N3^LU^Column^N^N
+		CE:
+		CS:N4^LU^Column^N^N
+		CE:
+		CS:N5^LU^Column^N^N
+		CE:
+		CS:N6^LU^Column^N^N
+		CE:
+		CS:N7^LU^Column^N^N
+		CE:
+		CS:N8^LU^Column^N^N
+		CE:
+		CS:N9^LU^Column^N^N
+		CE:
+		CS:PARENT_ROW_NO^LU^Column^N^N
+		CE:
+		CS:RESULT_KEY^LU^Column^N^N
+		CE:
+		CS:ROWKEY^LU^Column^N^N
+		CE:
+		CS:ROWVERSION^LU^Column^N^N
+		CE:
+		CS:ROW_NO^LU^Column^N^N
+		CE:
+		CS:S1^LU^Column^N^N
+		CE:
+		CS:S10^LU^Column^N^N
+		CE:
+		CS:S11^LU^Column^N^N
+		CE:
+		CS:S12^LU^Column^N^N
+		CE:
+		CS:S13^LU^Column^N^N
+		CE:
+		CS:S14^LU^Column^N^N
+		CE:
+		CS:S15^LU^Column^N^N
+		CE:
+		CS:S16^LU^Column^N^N
+		CE:
+		CS:S17^LU^Column^N^N
+		CE:
+		CS:S18^LU^Column^N^N
+		CE:
+		CS:S19^LU^Column^N^N
+		CE:
+		CS:S2^LU^Column^N^N
+		CE:
+		CS:S20^LU^Column^N^N
+		CE:
+		CS:S21^LU^Column^N^N
+		CE:
+		CS:S22^LU^Column^N^N
+		CE:
+		CS:S23^LU^Column^N^N
+		CE:
+		CS:S24^LU^Column^N^N
+		CE:
+		CS:S25^LU^Column^N^N
+		CE:
+		CS:S26^LU^Column^N^N
+		CE:
+		CS:S27^LU^Column^N^N
+		CE:
+		CS:S28^LU^Column^N^N
+		CE:
+		CS:S29^LU^Column^N^N
+		CE:
+		CS:S3^LU^Column^N^N
+		CE:
+		CS:S30^LU^Column^N^N
+		CE:
+		CS:S31^LU^Column^N^N
+		CE:
+		CS:S32^LU^Column^N^N
+		CE:
+		CS:S33^LU^Column^N^N
+		CE:
+		CS:S34^LU^Column^N^N
+		CE:
+		CS:S35^LU^Column^N^N
+		CE:
+		CS:S36^LU^Column^N^N
+		CE:
+		CS:S37^LU^Column^N^N
+		CE:
+		CS:S38^LU^Column^N^N
+		CE:
+		CS:S39^LU^Column^N^N
+		CE:
+		CS:S4^LU^Column^N^N
+		CE:
+		CS:S40^LU^Column^N^N
+		CE:
+		CS:S41^LU^Column^N^N
+		CE:
+		CS:S42^LU^Column^N^N
+		CE:
+		CS:S43^LU^Column^N^N
+		CE:
+		CS:S44^LU^Column^N^N
+		CE:
+		CS:S45^LU^Column^N^N
+		CE:
+		CS:S46^LU^Column^N^N
+		CE:
+		CS:S47^LU^Column^N^N
+		CE:
+		CS:S48^LU^Column^N^N
+		CE:
+		CS:S49^LU^Column^N^N
+		CE:
+		CS:S5^LU^Column^N^N
+		CE:
+		CS:S50^LU^Column^N^N
+		CE:
+		CS:S51^LU^Column^N^N
+		CE:
+		CS:S52^LU^Column^N^N
+		CE:
+		CS:S53^LU^Column^N^N
+		CE:
+		CS:S54^LU^Column^N^N
+		CE:
+		CS:S55^LU^Column^N^N
+		CE:
+		CS:S56^LU^Column^N^N
+		CE:
+		CS:S57^LU^Column^N^N
+		CE:
+		CS:S58^LU^Column^N^N
+		CE:
+		CS:S59^LU^Column^N^N
+		CE:
+		CS:S6^LU^Column^N^N
+		CE:
+		CS:S60^LU^Column^N^N
+		CE:
+		CS:S61^LU^Column^N^N
+		CE:
+		CS:S62^LU^Column^N^N
+		CE:
+		CS:S63^LU^Column^N^N
+		CE:
+		CS:S64^LU^Column^N^N
+		CE:
+		CS:S65^LU^Column^N^N
+		CE:
+		CS:S66^LU^Column^N^N
+		CE:
+		CS:S67^LU^Column^N^N
+		CE:
+		CS:S68^LU^Column^N^N
+		CE:
+		CS:S69^LU^Column^N^N
+		CE:
+		CS:S7^LU^Column^N^N
+		CE:
+		CS:S70^LU^Column^N^N
+		CE:
+		CS:S71^LU^Column^N^N
+		CE:
+		CS:S72^LU^Column^N^N
+		CE:
+		CS:S73^LU^Column^N^N
+		CE:
+		CS:S74^LU^Column^N^N
+		CE:
+		CS:S75^LU^Column^N^N
+		CE:
+		CS:S76^LU^Column^N^N
+		CE:
+		CS:S77^LU^Column^N^N
+		CE:
+		CS:S78^LU^Column^N^N
+		CE:
+		CS:S79^LU^Column^N^N
+		CE:
+		CS:S8^LU^Column^N^N
+		CE:
+		CS:S80^LU^Column^N^N
+		CE:
+		CS:S9^LU^Column^N^N
+		CE:
+	CE:
+CE:
+CS:IntfaceEvents^LU^Logical Unit^N^N
+	A:Prompt^Intface Events^N^M^N^N^^^0^0^0
+CE:
+CS:IntfaceExcelConnect^LU^Logical Unit^N^N
+	A:Prompt^Intface Excel Connect^N^M^N^N^^^0^0^0
+CE:
+CS:IntfaceExecIntervalType^LU^Logical Unit^N^N
+	A:Prompt^Intface Exec Interval Type^N^M^N^N^^^0^0^0
+	CS:1440^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^Minutes^N^M^N^N^^^0^0^0
+	CE:
+	CS:24^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^Hours^N^M^N^N^^^0^0^0
+	CE:
+	CS:86400^LU^Iid Element^N^N
+		P:Position^3
+		A:Text^Seconds^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceExecution^LU^Logical Unit^N^N
+	A:Prompt^Intface Execution^N^M^N^N^^^0^0^0
+	CS:INTFACE_EXECUTION^LU^View^N^N
+		CS:EXECUTION_ID^LU^Column^N^N
+			A:Prompt^Execution Id^N^M^N^N^^^0^0^0
+		CE:
+		CS:IC_TABLE_NAME^LU^Column^N^N
+			A:Prompt^Ic Table Name^N^M^N^N^^^0^0^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Intface Name^N^M^N^N^^^0^0^0
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionDetail^LU^Logical Unit^N^N
+	A:Prompt^Intface Execution Detail^N^M^N^N^^^0^0^0
+	CS:INTFACE_EXECUTION_DETAIL^LU^View^N^N
+		CS:ATTRIBUTE_STRING^LU^Column^N^N
+			A:Prompt^Attribute String^N^M^N^N^^^0^0^0
+		CE:
+		CS:DATE_EXECUTED^LU^Column^N^N
+			A:Prompt^Date Executed^N^M^N^N^^^0^0^0
+		CE:
+		CS:ERROR_MESSAGE^LU^Column^N^N
+			A:Prompt^Error Message^N^M^N^N^^^0^0^0
+		CE:
+		CS:EXECUTED_BY^LU^Column^N^N
+			A:Prompt^Executed By^N^M^N^N^^^0^0^0
+		CE:
+		CS:EXECUTION_ID^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^^^0^0^0
+		CE:
+		CS:FILE_STRING^LU^Column^N^N
+			A:Prompt^File String^N^M^N^N^^^0^0^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Intface Name^N^M^N^N^^^0^0^0
+		CE:
+		CS:LINE_NO^LU^Column^N^N
+			A:Prompt^Line No^N^M^N^N^^^0^0^0
+		CE:
+		CS:STATUS^LU^Column^N^N
+			A:Prompt^Status^N^M^N^N^^^0^0^0
+		CE:
+		CS:STATUS_DB^LU^Column^N^N
+			A:Prompt^Status^N^M^N^N^^^0^0^0
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionUtil^LU^Logical Unit^N^N
+	A:Prompt^Intface Execution Util^N^M^N^N^^^0^0^0
+	CS:BLANKCOLUMNS^LU^Message^N^N
+		A:Text^Either Source column or default value must have a value^N^M^N^N^^^0^0^0
+	CE:
+	CS:CHKCOUNT^LU^Message^N^N
+		A:Text^:P1 rows checked^N^M^N^N^^^0^0^0
+	CE:
+	CS:COMMITSEQ^LU^Message^N^N
+		A:Text^Rows committed by Rule COMMITSEQ : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:CONNERR^LU^Message^N^N
+		A:Text^Cannot start this job. Connected job :P1 has errors.^N^M^N^N^^^0^0^0
+	CE:
+	CS:CREIND^LU^Message^N^N
+		A:Text^Created :P1 index on column :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:DUPEXIST^LU^Message^N^N
+		A:Text^Duplicate source columns exist. Please resolve the duplicates before executing^N^M^N^N^^^0^0^0
+	CE:
+	CS:DUPNAME^LU^Message^N^N
+		A:Text^Method no. :P1 - Value for Job ID cannot be equal to main job^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXEOK^LU^Message^N^N
+		A:Text^Executed without error^N^M^N^N^^^0^0^0
+	CE:
+	CS:HEADMSG^LU^Message^N^N
+		A:Text^EXECUTING METHOD NO. :P1 :^N^M^N^N^^^0^0^0
+	CE:
+	CS:INCOMPLETE^LU^Message^N^N
+		A:Text^:P1 incomplete transactions due to COMMIT or ROLLBACK in a called method^N^M^N^N^^^0^0^0
+	CE:
+	CS:INCOMPLSELECT^LU^Message^N^N
+		A:Text^Incomplete select not executed  -  :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:INCOMPLTRANS^LU^Message^N^N
+		A:Text^Check result. Transactions may be partially committed^N^M^N^N^^^0^0^0
+	CE:
+	CS:INVALIDLENGTH^LU^Message^N^N
+		A:Text^Source column should not exceed thirty characters^N^M^N^N^^^0^0^0
+	CE:
+	CS:JOBRUNERROR^LU^Message^N^N
+		A:Text^Error in executing job :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:LNGTHINVAL^LU^Message^N^N
+		A:Text^Source columns exceeding 30 characters exist. Please resolve the source column lengths before executing^N^M^N^N^^^0^0^0
+	CE:
+	CS:LOADERR^LU^Message^N^N
+		A:Text^Error loading migration job info :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:METHCHK^LU^Message^N^N
+		A:Text^:P1 :P2  with CHECK option^N^M^N^N^^^0^0^0
+	CE:
+	CS:METHFAILED^LU^Message^N^N
+		A:Text^, Errors : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:METHINS^LU^Message^N^N
+		A:Text^New rows      : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:METHNAME^LU^Message^N^N
+		A:Text^:P1 :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:METHPRC^LU^Message^N^N
+		A:Text^Processed rows  : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:METHUPD^LU^Message^N^N
+		A:Text^Updated rows  : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:MSGAVG^LU^Message^N^N
+		A:Text^Average of  :P1 rows per minute^N^M^N^N^^^0^0^0
+	CE:
+	CS:MSGCOMMIT^LU^Message^N^N
+		A:Text^:P1 rows committed^N^M^N^N^^^0^0^0
+	CE:
+	CS:MSGCOUNT^LU^Message^N^N
+		A:Text^:P1 rows selected^N^M^N^N^^^0^0^0
+	CE:
+	CS:MSGERR^LU^Message^N^N
+		A:Text^:P1 rows failed^N^M^N^N^^^0^0^0
+	CE:
+	CS:MSGLAPSE^LU^Message^N^N
+		A:Text^Used :P1 hours and :P2 minutes^N^M^N^N^^^0^0^0
+	CE:
+	CS:NODET^LU^Message^N^N
+		A:Text^No details found for  :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:NONAME^LU^Message^N^N
+		A:Text^Value for Job ID is missing on attr-string for method no. :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOOBJID^LU^Message^N^N
+		A:Text^OBJID not in select, but Rule ADDOBJID is active^N^M^N^N^^^0^0^0
+	CE:
+	CS:NORESTART^LU^Message^N^N
+		A:Text^Restart impossible - :P1 contains no rowid^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOSELECT^LU^Message^N^N
+		A:Text^No select specified^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOSTART^LU^Message^N^N
+		A:Text^:P1 have :P2 error lines and cannot be started^N^M^N^N^^^0^0^0
+	CE:
+	CS:NULLCOLS^LU^Message^N^N
+		A:Text^Records exist with both the source column and the default value missing. Please resolve before executing.^N^M^N^N^^^0^0^0
+	CE:
+	CS:SELECTSTMT^LU^Message^N^N
+		A:Text^Error in  select  :P1 - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:SOURCEDUPLIC^LU^Message^N^N
+		A:Text^Source column should be unique.^N^M^N^N^^^0^0^0
+	CE:
+	CS:STATINSERT^LU^Message^N^N
+		A:Text^Inserted^N^M^N^N^^^0^0^0
+	CE:
+	CS:STATNOOP^LU^Message^N^N
+		A:Text^No Operation^N^M^N^N^^^0^0^0
+	CE:
+	CS:STATNOTEXT^LU^Message^N^N
+		A:Text^Object does not exist^N^M^N^N^^^0^0^0
+	CE:
+	CS:STATOK^LU^Message^N^N
+		A:Text^Validate OK^N^M^N^N^^^0^0^0
+	CE:
+	CS:STATPROC^LU^Message^N^N
+		A:Text^Processed^N^M^N^N^^^0^0^0
+	CE:
+	CS:STATUPDATE^LU^Message^N^N
+		A:Text^Updated^N^M^N^N^^^0^0^0
+	CE:
+	CS:TIMESTAMP1^LU^Message^N^N
+		A:Text^Start time - :P1   :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:TOOLONG^LU^Message^N^N
+		A:Text^Specified length :P2 for column :P1 is exceeded by value :P3.^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEP^LU^Message^N^N
+		A:Text^Error occured while unpacking :P1 with value :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPCONV^LU^Message^N^N
+		A:Text^Error converting value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPDAT^LU^Message^N^N
+		A:Text^Error formatting date value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPDEF^LU^Message^N^N
+		A:Text^Error formatting default value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPNUM^LU^Message^N^N
+		A:Text^Error formatting numeric value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPSEP^LU^Message^N^N
+		A:Text^Error reading column values by column separator^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKSEPSTR^LU^Message^N^N
+		A:Text^Error formatting string value :P2 for :P1^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceFileLocation^LU^Logical Unit^N^N
+	A:Prompt^Intface File Location^N^M^N^N^^^0^0^0
+	CS:1^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^OnServer^N^M^N^N^^^0^0^0
+	CE:
+	CS:2^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^OnClient^N^M^N^N^^^0^0^0
+	CE:
+	CS:3^LU^Iid Element^N^N
+		P:Position^3
+		A:Text^NoFile^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceFormatChar^LU^Logical Unit^N^N
+	A:Prompt^Intface Format Char^N^M^N^N^^^0^0^0
+	CS:124^LU^Iid Element^N^N
+		P:Position^13
+		A:Text^<pipe>^N^M^N^N^^^0^0^0
+	CE:
+	CS:13^LU^Iid Element^N^N
+		P:Position^11
+		A:Text^<carriage return>^N^M^N^N^^^0^0^0
+	CE:
+	CS:164^LU^Iid Element^N^N
+		P:Position^5
+		A:Text^<currency sign>^N^M^N^N^^^0^0^0
+	CE:
+	CS:32^LU^Iid Element^N^N
+		P:Position^3
+		A:Text^<space>^N^M^N^N^^^0^0^0
+	CE:
+	CS:34^LU^Iid Element^N^N
+		P:Position^6
+		A:Text^<double quotation>^N^M^N^N^^^0^0^0
+	CE:
+	CS:35^LU^Iid Element^N^N
+		P:Position^9
+		A:Text^<hash>^N^M^N^N^^^0^0^0
+	CE:
+	CS:39^LU^Iid Element^N^N
+		P:Position^7
+		A:Text^<single quotation>^N^M^N^N^^^0^0^0
+	CE:
+	CS:42^LU^Iid Element^N^N
+		P:Position^10
+		A:Text^<asterisk>^N^M^N^N^^^0^0^0
+	CE:
+	CS:44^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^<comma>^N^M^N^N^^^0^0^0
+	CE:
+	CS:46^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^<point>^N^M^N^N^^^0^0^0
+	CE:
+	CS:48^LU^Iid Element^N^N
+		P:Position^8
+		A:Text^<zero>^N^M^N^N^^^0^0^0
+	CE:
+	CS:59^LU^Iid Element^N^N
+		P:Position^4
+		A:Text^<semicolon>^N^M^N^N^^^0^0^0
+	CE:
+	CS:9^LU^Iid Element^N^N
+		P:Position^12
+		A:Text^<tab>^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceGroup^LU^Logical Unit^N^N
+	A:Prompt^Intface Group^N^M^N^N^^^0^0^0
+	CS:INTFACE_GROUP^LU^View^N^N
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^799DF6BE170644D8AD4D7DE9D46BDC17^ABBREVIATION^1^1^0
+		CE:
+		CS:GROUP_ID^LU^Column^N^N
+			A:Prompt^Group Id^N^M^N^N^7CA739DF31414B6180021384D0B487B1^ABBREVIATION^1^1^0
+		CE:
+		CS:HIDE_FLAG^LU^Column^N^N
+			A:Prompt^Hide Flag^N^M^N^N^719e0f10-6351-47a2-96dd-bc46a6f1e4e8^SHORT_NAME^1^1^0
+		CE:
+		CS:NOTE_TEXT^LU^Column^N^N
+			A:Prompt^Note Text^N^M^N^N^1E4C0199A3864B3796326A4236E655B5^FULL_NAME^1^1^0
+		CE:
+	CE:
+CE:
+CS:IntfaceHeader^LU^Logical Unit^N^N
+	A:Prompt^Intface Header^N^M^N^N^^^0^0^0
+	CS:BATCHJOBCOMP^LU^Message^N^N
+		A:Text^Migration Job :P1 execution completed.^N^M^N^N^^^0^0^0
+	CE:
+	CS:BATCHJOBERROR^LU^Message^N^N
+		A:Text^Migration Job :P1 execution ended with error(s). See Migration Job History window for more information.^N^M^N^N^^^0^0^0
+	CE:
+	CS:BCKFILE^LU^Message^N^N
+		A:Text^Backup File Name : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:BCKPATH^LU^Message^N^N
+		A:Text^Backup File Path : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:COPYERR^LU^Message^N^N
+		A:Text^Error creating :P1 - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:COPYOK^LU^Message^N^N
+		A:Text^Migration Job :P1 created^N^M^N^N^^^0^0^0
+	CE:
+	CS:DELFILE^LU^Message^N^N
+		A:Text^File :P1 has been deleted^N^M^N^N^^^0^0^0
+	CE:
+	CS:DEPREC^LU^Message^N^N
+		A:Text^Data Migration Quick Report Export Functionality is Deprecated. Use the built in Import/Export functionality in Quick Reports instead.^N^M^N^N^^^0^0^0
+	CE: 
+	CS:ERRWHERE^LU^Message^N^N
+		A:Text^Default-where not in use for direction = :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXECNO^LU^Message^N^N
+		A:Text^Execution No :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXPERR^LU^Message^N^N
+		A:Text^Error exporting :P1 - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXPTXT1^LU^Message^N^N
+		A:Text^Exported migration jobs :^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXPTXT2^LU^Message^N^N
+		A:Text^Exported migration groups :^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXPTXT3^LU^Message^N^N
+		A:Text^Exported conversion lists :^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXPTXT4^LU^Message^N^N
+		A:Text^Exported triggers :^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXPTXT5^LU^Message^N^N
+		A:Text^Exported packages :^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXPTXT6^LU^Message^N^N
+		A:Text^Created files :^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXPTXT7^LU^Message^N^N
+		A:Text^Conversion lists NOT exported :^N^M^N^N^^^0^0^0
+	CE:
+	CS:IMPERR^LU^Message^N^N
+		A:Text^Error importing :P1 - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:IMPTXT1^LU^Message^N^N
+		A:Text^Imported new migration jobs :^N^M^N^N^^^0^0^0
+	CE:
+	CS:IMPTXT10^LU^Message^N^N
+		A:Text^Replications jobs that must be restarted :^N^M^N^N^^^0^0^0
+	CE:
+	CS:IMPTXT2^LU^Message^N^N
+		A:Text^Imported new groups :^N^M^N^N^^^0^0^0
+	CE:
+	CS:IMPTXT3^LU^Message^N^N
+		A:Text^Imported conversion lists :^N^M^N^N^^^0^0^0
+	CE:
+	CS:IMPTXT4^LU^Message^N^N
+		A:Text^Migration Jobs NOT inserted :^N^M^N^N^^^0^0^0
+	CE:
+	CS:IMPTXT5^LU^Message^N^N
+		A:Text^Groups NOT inserted :^N^M^N^N^^^0^0^0
+	CE:
+	CS:IMPTXT6^LU^Message^N^N
+		A:Text^Conversion lists NOT inserted :^N^M^N^N^^^0^0^0
+	CE:
+	CS:IMPTXT7^LU^Message^N^N
+		A:Text^Imported and replaced migration jobs :^N^M^N^N^^^0^0^0
+	CE:
+	CS:IMPTXT8^LU^Message^N^N
+		A:Text^Imported and replaced groups :^N^M^N^N^^^0^0^0
+	CE:
+	CS:IMPTXT9^LU^Message^N^N
+		A:Text^Imported and replaced conv.lists :^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTFACE_ALLOWED_JOBS^LU^View^N^N
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^^^0^0^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^^^0^0^0
+		CE:
+	CE:
+	CS:INTFACE_CHARACTERSET_LOV^LU^View^N^N
+		CS:VALUE^LU^Column^N^N
+			A:Prompt^Character Set^N^M^N^N^e3ce56be-a1e3-4a3b-a4b7-9bad0ae2535c^FULL_NAME^1^1^0
+		CE:
+	CE:
+	CS:INTFACE_HEADER^LU^View^N^N
+		CS:CHAR_SET^LU^Column^N^N
+			A:Prompt^Char Set^N^M^N^N^e3ce56be-a1e3-4a3b-a4b7-9bad0ae2535c^FULL_NAME^1^1^0
+		CE:
+		CS:COLUMN_EMBRACE^LU^Column^N^N
+			A:Prompt^Column Embrace^N^M^N^N^758c5265-7f0d-45c4-b4d9-6107d7756407^SHORT_NAME^1^1^0
+		CE:
+		CS:COLUMN_EMBRACE_DB^LU^Column^N^N
+			A:Prompt^Column Embrace^N^M^N^N^758c5265-7f0d-45c4-b4d9-6107d7756407^SHORT_NAME^1^1^0
+		CE:
+		CS:COLUMN_SEPARATOR^LU^Column^N^N
+			A:Prompt^Column Separator^N^M^N^N^B4B134F965DE42F59791332386254CE3^ABBREVIATION^1^1^0
+		CE:
+		CS:COLUMN_SEPARATOR_DB^LU^Column^N^N
+			A:Prompt^Column Separator^N^M^N^N^B4B134F965DE42F59791332386254CE3^ABBREVIATION^1^1^0
+		CE:
+		CS:DATE_FORMAT^LU^Column^N^N
+			A:Prompt^Date Format^N^M^N^N^451662EC58AC4D5BABB711ED2FACA9F8^FULL_NAME^1^1^0
+		CE:
+		CS:DECIMAL_POINT^LU^Column^N^N
+			A:Prompt^Decimal Point^N^M^N^N^A2277DAA75B345428BD86EA0EC71DB12^SHORT_NAME^1^1^0
+		CE:
+		CS:DECIMAL_POINT_DB^LU^Column^N^N
+			A:Prompt^Decimal Point^N^M^N^N^A2277DAA75B345428BD86EA0EC71DB12^SHORT_NAME^1^1^0
+		CE:
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^799DF6BE170644D8AD4D7DE9D46BDC17^ABBREVIATION^1^1^0
+		CE:
+		CS:ENABLED^LU^Column^N^N
+			A:Prompt^Enabled^N^M^N^N^84FE2F356F3D452D9ABEEBFCD74095C7^ABBREVIATION^1^1^0
+		CE:
+		CS:EXECUTED_BY^LU^Column^N^N
+			A:Prompt^Executed By^N^M^N^N^9AA53362BBB6410CA2C8A2BE27B09628^FULL_NAME^1^1^0
+		CE:
+		CS:FILE_LOCATION^LU^Column^N^N
+			A:Prompt^File Location^N^M^N^N^1A57410F9F8842028084FED9C2E75E7C^ABBREVIATION^1^1^0
+		CE:
+		CS:FILE_LOCATION_DB^LU^Column^N^N
+			A:Prompt^File Location^N^M^N^N^1A57410F9F8842028084FED9C2E75E7C^ABBREVIATION^1^1^0
+		CE:
+		CS:FROM_VALUE^LU^Column^N^N
+			A:Prompt^From Value^N^M^N^N^3B75636A6E294AB3BF18BB80238E7AA1^ABBREVIATION^1^1^0
+		CE:
+		CS:GROUP_BY_CLAUSE^LU^Column^N^N
+			A:Prompt^Group By Clause^N^M^N^N^90E34FED680B45A68F5BEB3010B8609D^FULL_NAME^1^1^0
+		CE:
+		CS:GROUP_ID^LU^Column^N^N
+			A:Prompt^Group Id^N^M^N^N^7CA739DF31414B6180021384D0B487B1^ABBREVIATION^1^1^0
+		CE:
+		CS:INTFACE_FILE^LU^Column^N^N
+			A:Prompt^File Name^N^M^N^N^6CDA50DB61204E07861FFCDF116C7933^FULL_NAME^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:INTFACE_PATH^LU^Column^N^N
+			A:Prompt^File Path^N^M^N^N^073F96FE39C3434BBB13FB9EC040294D^ABBREVIATION^1^1^0
+		CE:
+		CS:LAST_EXECUTED^LU^Column^N^N
+			A:Prompt^Last Executed^N^M^N^N^dd1272d2-c4e4-4a63-b556-5a5a786d8cbb^SHORT_NAME^1^1^0
+		CE:
+		CS:LAST_INFO^LU^Column^N^N
+			A:Prompt^Last Info^N^M^N^N^3CAFEA4512D24120844E4BEA6E6BC17A^SHORT_NAME^1^1^0
+		CE:
+		CS:MESSAGE_NAME^LU^Column^N^N
+			A:Prompt^Message Name^N^M^N^N^B2E5BEFA071B4926818ECC3BE0AA77FC^SHORT_NAME^1^1^0
+		CE:
+		CS:MESSAGE_RECEIVER^LU^Column^N^N
+			A:Prompt^Message Receiver^N^M^N^N^328F52D959704D9289425C74A8F84657^SHORT_NAME^1^1^0
+		CE:
+		CS:MESSAGE_SENDER^LU^Column^N^N
+			A:Prompt^Message Sender^N^M^N^N^D0217E9475D140F0B7CB96AD10A7D09B^SHORT_NAME^1^1^0
+		CE:
+		CS:MESSAGE_TYPE^LU^Column^N^N
+			A:Prompt^Message Type^N^M^N^N^78727D1010D7455398F1560F1BD27C1A^SHORT_NAME^1^1^0
+		CE:
+		CS:MESSAGE_TYPE_DB^LU^Column^N^N
+			A:Prompt^Message Type^N^M^N^N^78727D1010D7455398F1560F1BD27C1A^SHORT_NAME^1^1^0
+		CE:
+		CS:MINUS_POS^LU^Column^N^N
+			A:Prompt^Minus Pos^N^M^N^N^7EABFF52684F4927B84F138DB56DBE0E^SHORT_NAME^1^1^0
+		CE:
+		CS:NOTE_TEXT^LU^Column^N^N
+			A:Prompt^Note Text^N^M^N^N^1E4C0199A3864B3796326A4236E655B5^FULL_NAME^1^1^0
+		CE:
+		CS:OBJECT_SEQ^LU^Column^N^N
+			A:Prompt^Object Seq^N^M^N^N^^^1^1^1
+		CE:
+		CS:ON_INSERT^LU^Column^N^N
+			A:Prompt^On Insert^N^M^N^N^0E296B78360241028420F834F45841E0^SHORT_NAME^1^1^0
+		CE:
+		CS:ON_UPDATE^LU^Column^N^N
+			A:Prompt^On Update^N^M^N^N^5FB90C984AF349BCA56B55D9A5347A2F^SHORT_NAME^1^1^0
+		CE:
+		CS:ORDER_BY_CLAUSE^LU^Column^N^N
+			A:Prompt^Order By Clause^N^M^N^N^CBBCD23405064C4E835E7BAD1D30C3FC^SHORT_NAME^1^1^0
+		CE:
+		CS:PROCEDURE_NAME^LU^Column^N^N
+			A:Prompt^Procedure Name^N^M^N^N^F8B7227CB46A48919B3EA8FE4FB63246^SHORT_NAME^1^1^0
+		CE:
+		CS:REPLICATION_MODE^LU^Column^N^N
+			A:Prompt^Replication Mode^N^M^N^N^249EF1CE55674F62A9EAA1B8F8780C23^SHORT_NAME^1^1^0
+		CE:
+		CS:REPLICATION_MODE_DB^LU^Column^N^N
+			A:Prompt^Replication Mode^N^M^N^N^249EF1CE55674F62A9EAA1B8F8780C23^SHORT_NAME^1^1^0
+		CE:
+		CS:REPL_CRITERIA^LU^Column^N^N
+			A:Prompt^Repl Criteria^N^M^N^N^16E301102A9B40E3BA6A5677EE15ADD8^ABBREVIATION^1^1^0
+		CE:
+		CS:REPL_CRITERIA_DB^LU^Column^N^N
+			A:Prompt^Repl Criteria^N^M^N^N^16E301102A9B40E3BA6A5677EE15ADD8^ABBREVIATION^1^1^0
+		CE:
+		CS:SOURCE_NAME^LU^Column^N^N
+			A:Prompt^Source Name^N^M^N^N^534600EB704545C6AC9760F8786D069F^FULL_NAME^1^1^0
+		CE:
+		CS:SOURCE_OWNER^LU^Column^N^N
+			A:Prompt^Source Owner^N^M^N^N^A54A1E579BFC42B6A1EAB3BB6EDDB121^FULL_NAME^1^1^0
+		CE:
+		CS:TABLE_NAME^LU^Column^N^N
+			A:Prompt^Table Name^N^M^N^N^3E4AEFF68A504899ABCB98CCD02218FF^SHORT_NAME^1^1^0
+		CE:
+		CS:THOUSAND_SEPARATOR^LU^Column^N^N
+			A:Prompt^Thousand Separator^N^M^N^N^7033873E0C0B4BCCA14DBBA53DC227F4^FULL_NAME^1^1^0
+		CE:
+		CS:THOUSAND_SEPARATOR_DB^LU^Column^N^N
+			A:Prompt^Thousand Separator^N^M^N^N^7033873E0C0B4BCCA14DBBA53DC227F4^FULL_NAME^1^1^0
+		CE:
+		CS:TRIGGER_WHEN^LU^Column^N^N
+			A:Prompt^Trigger When^N^M^N^N^5302CB7263BD49C288B69E3251A9569A^SHORT_NAME^1^1^0
+		CE:
+		CS:VALUE_LIST^LU^Column^N^N
+			A:Prompt^Value List^N^M^N^N^691B7ED3A86F430CAC37477698F47592^SHORT_NAME^1^1^0
+		CE:
+		CS:VIEW_NAME^LU^Column^N^N
+			A:Prompt^View Name^N^M^N^N^34A69FA64F4F413588CFF6084387C5F1^SHORT_NAME^1^1^0
+		CE:
+		CS:WHERE_CLAUSE^LU^Column^N^N
+			A:Prompt^Where Clause^N^M^N^N^171E9454F7A04A4DB06AE54BCBBD9C54^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:INTFACE_REPL_EXPORT_INFO^LU^View^N^N
+		CS:COUNT^LU^Column^N^N
+			A:Prompt^Export text^N^M^N^N^^^1^1^1
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:OBJECT_NAME^LU^Column^N^N
+			A:Prompt^Object Name^N^M^N^N^4ce16c1d-719e-48c6-b297-be6386dea175^SHORT_NAME^1^1^0
+		CE:
+		CS:OBJECT_TYPE^LU^Column^N^N
+		CE:
+		CS:TEXT^LU^Column^N^N
+			A:Prompt^Export text^N^M^N^N^^^1^1^1
+		CE:
+	CE:
+	CS:INTFACE_TABLE_NAME_LOV^LU^View^N^N
+		CS:TABLE_NAME^LU^Column^N^N
+			A:Prompt^Table Name^N^M^N^N^3E4AEFF68A504899ABCB98CCD02218FF^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:JOBBATERR^LU^Message^N^N
+		A:Text^Deffered call failed for :P1  - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:LISTERR^LU^Message^N^N
+		A:Text^Value list should not start with semicolon^N^M^N^N^^^0^0^0
+	CE:
+	CS:LONGNAME^LU^Message^N^N
+		A:Text^Job ID :P1 too long. Must not exceed 24 characters^N^M^N^N^^^0^0^0
+	CE:
+	CS:MOVPATH^LU^Message^N^N
+		A:Text^Move File Path : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:MSGLAPSE^LU^Message^N^N
+		A:Text^Used :P1 hours and :P2 minutes^N^M^N^N^^^0^0^0
+	CE:
+	CS:NAMEERR^LU^Message^N^N
+		A:Text^When type = :P1, name may not be longer then :P2 characters (:P3)^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOCOLUMN^LU^Message^N^N
+		A:Text^No columns from file exists in Job^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOFILE_ERROR^LU^Message^N^N
+		A:Text^File Location ":P1" cannot be used for migration jobs with Direction set to ":P2" or ":P3".^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOMAN^LU^Message^N^N
+		A:Text^When starting in mode Manual, you must specify a WHERE-clause for main view in the structure^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOPRIV^LU^Message^N^N
+		A:Text^You (:P1) do not have the privilege to create new Data Migration jobs^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOREPL^LU^Message^N^N
+		A:Text^Cannot start :P1 in batch. Triggers are not enabled^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOTRIG^LU^Message^N^N
+		A:Text^Triggers are generated. You cannot change mode to :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOWHERE^LU^Message^N^N
+		A:Text^Where Clause must be entered for replication-jobs with mode=Manual^N^M^N^N^^^0^0^0
+	CE:
+	CS:QUICKERR^LU^Message^N^N
+		A:Text^Procedure name :P1 can only be used together with view name QUICK_REPORT^N^M^N^N^^^0^0^0
+	CE:
+	CS:RANFILE^LU^Message^N^N
+		A:Text^Rename File Name : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:RENPATH^LU^Message^N^N
+		A:Text^Rename File Path : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:SELECTOK^LU^Message^N^N
+		A:Text^Select statement OK, parsed and executed for 1 row^N^M^N^N^^^0^0^0
+	CE:
+	CS:SELLENGTH^LU^Message^N^N
+		A:Text^Length of statement : :P1 characters^N^M^N^N^^^0^0^0
+	CE:
+	CS:SERVOK^LU^Message^N^N
+		A:Text^The database task :P1 is scheduled for migration job :P2.^N^M^N^N^^^0^0^0
+	CE:
+	CS:STARTBATERR^LU^Message^N^N
+		A:Text^Unable to start :P1  - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:STARTJOBERR^LU^Message^N^N
+		A:Text^Unable to start :P1  - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:STARTOK^LU^Message^N^N
+		A:Text^Migration job :P1 started in background^N^M^N^N^^^0^0^0
+	CE:
+	CS:TIMESTAMP1^LU^Message^N^N
+		A:Text^End time - :P1   :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:TRIGDEL^LU^Message^N^N
+		A:Text^Triggers must be dropped before you can delete this job^N^M^N^N^^^0^0^0
+	CE:
+	CS:VALUEERR^LU^Message^N^N
+		A:Text^From value :P1 cannot be a part of value list^N^M^N^N^^^0^0^0
+	CE:
+	CS:WHENERR^LU^Message^N^N
+		A:Text^When-statement for trigger should be moved from column :P1 to :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:WILDERR^LU^Message^N^N
+		A:Text^Wildcards in filename can only be used when exporting data to server files^N^M^N^N^^^0^0^0
+	CE:
+	CS:WRONGCOL^LU^Message^N^N
+		A:Text^Column :P1 does no exist in Job :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:WRONGDIR^LU^Message^N^N
+		A:Text^Rule SYNCDETAILS can only be used when reading files^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceJobDetail^LU^Logical Unit^N^N
+	A:Prompt^Intface Job Detail^N^M^N^N^^^0^0^0
+	CS:CLIENTCLEAN^LU^Message^N^N
+		A:Text^Rule CLEANUP with value BEFORE is not allowed for client file^N^M^N^N^^^0^0^0
+	CE:
+	CS:CLOSEFILERR^LU^Message^N^N
+		A:Text^Error when closing file :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:CLOSEJOBERR^LU^Message^N^N
+		A:Text^Error when closing job :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:CONNERR^LU^Message^N^N
+		A:Text^Connected job :P1 has error lines^N^M^N^N^^^0^0^0
+	CE:
+	CS:CONNJOBERR^LU^Message^N^N
+		A:Text^Cannot start job. :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:EMPTYFILE^LU^Message^N^N
+		A:Text^File :P1 on :P2 is empty, job not started^N^M^N^N^^^0^0^0
+	CE:
+	CS:HISTERR^LU^Message^N^N
+		A:Text^Error making history :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:INITJOBERR^LU^Message^N^N
+		A:Text^Failed to initialize job :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTFACE_JOB_DETAIL^LU^View^N^N
+		CS:ATTRIBUTE_STRING^LU^Column^N^N
+			A:Prompt^Attribute String^N^M^N^N^5943478155D94A3F90CF367CA4D4C4AE^FULL_NAME^1^1^0
+		CE:
+		CS:ATTRIBUTE_STRING_DB^LU^Column^N^N
+		CE:
+		CS:DATE_EXECUTED^LU^Column^N^N
+			A:Prompt^Date Executed^N^M^N^N^4aee059c-f45e-4a65-b5dd-ed5b674c2ed8^SHORT_NAME^1^1^0
+		CE:
+		CS:ERROR_MESSAGE^LU^Column^N^N
+			A:Prompt^Error Message^N^M^N^N^F81657E389924EADB21D158F15540ADB^FULL_NAME^1^1^0
+		CE:
+		CS:EXECUTED_BY^LU^Column^N^N
+			A:Prompt^Executed By^N^M^N^N^9AA53362BBB6410CA2C8A2BE27B09628^FULL_NAME^1^1^0
+		CE:
+		CS:EXECUTION_NO^LU^Column^N^N
+			A:Prompt^Execution No^N^M^N^N^E249BD345CCB42A89A04FB26A1A507D0^ABBREVIATION^1^1^0
+		CE:
+		CS:FILE_STRING^LU^Column^N^N
+			A:Prompt^File String^N^M^N^N^16F8ADD9E07844B5ABDDADB7CEDC54A8^ABBREVIATION^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:LINE_NO^LU^Column^N^N
+			A:Prompt^Line No^N^M^N^N^1B9D2E504D0144E08CF8A4266C16D3F9^SHORT_NAME^1^1^0
+		CE:
+		CS:STATUS^LU^Column^N^N
+			A:Prompt^Status^N^M^N^N^CBDEC807A6B645A2BBBE9D8506D0A557^SHORT_NAME^1^1^0
+		CE:
+		CS:STATUS_DB^LU^Column^N^N
+			A:Prompt^Status^N^M^N^N^CBDEC807A6B645A2BBBE9D8506D0A557^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:LOADFILERR^LU^Message^N^N
+		A:Text^Error loading file :P1 on :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOFILE^LU^Message^N^N
+		A:Text^File :P1 does not exist on :P2, job not started^N^M^N^N^^^0^0^0
+	CE:
+	CS:PREPERR^LU^Message^N^N
+		A:Text^Error preparing details :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:SERVFILEERR^LU^Message^N^N
+		A:Text^Error in file handling - :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKEND^LU^Message^N^N
+		A:Text^Unpack complete for Job :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UNPACKERR^LU^Message^N^N
+		A:Text^Error occured during unpack ==> :P1^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceJobHistDetail^LU^Logical Unit^N^N
+	A:Prompt^Intface Job Hist Detail^N^M^N^N^^^0^0^0
+	CS:INTFACE_JOB_HIST_DETAIL^LU^View^N^N
+		CS:ATTRIBUTE_STRING^LU^Column^N^N
+			A:Prompt^Attribute String^N^M^N^N^5943478155D94A3F90CF367CA4D4C4AE^FULL_NAME^1^1^0
+		CE:
+		CS:ERROR_MESSAGE^LU^Column^N^N
+			A:Prompt^Error Message^N^M^N^N^F81657E389924EADB21D158F15540ADB^FULL_NAME^1^1^0
+		CE:
+		CS:EXECUTION_NO^LU^Column^N^N
+			A:Prompt^Execution No^N^M^N^N^E249BD345CCB42A89A04FB26A1A507D0^ABBREVIATION^1^1^0
+		CE:
+		CS:FILE_STRING^LU^Column^N^N
+			A:Prompt^File String^N^M^N^N^16F8ADD9E07844B5ABDDADB7CEDC54A8^ABBREVIATION^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:LINE_NO^LU^Column^N^N
+			A:Prompt^Line No^N^M^N^N^1B9D2E504D0144E08CF8A4266C16D3F9^SHORT_NAME^1^1^0
+		CE:
+		CS:SOURCE_ROWID^LU^Column^N^N
+			A:Prompt^Source Rowid^N^M^N^N^17eaa452-7d3a-46e3-9f1b-d00c46dae679^SHORT_NAME^1^1^0
+		CE:
+	CE:
+CE:
+CS:IntfaceJobHistHead^LU^Logical Unit^N^N
+	A:Prompt^Intface Job Hist Head^N^M^N^N^^^0^0^0
+	CS:INTFACE_JOB_HIST_HEAD^LU^View^N^N
+		CS:DATE_EXECUTED^LU^Column^N^N
+			A:Prompt^Date Executed^N^M^N^N^4aee059c-f45e-4a65-b5dd-ed5b674c2ed8^SHORT_NAME^1^1^0
+		CE:
+		CS:EXECUTED_BY^LU^Column^N^N
+			A:Prompt^Executed By^N^M^N^N^9AA53362BBB6410CA2C8A2BE27B09628^FULL_NAME^1^1^0
+		CE:
+		CS:EXECUTION_NO^LU^Column^N^N
+			A:Prompt^Execution No^N^M^N^N^E249BD345CCB42A89A04FB26A1A507D0^ABBREVIATION^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:LAST_INFO^LU^Column^N^N
+			A:Prompt^Last Info^N^M^N^N^3CAFEA4512D24120844E4BEA6E6BC17A^SHORT_NAME^1^1^0
+		CE:
+		CS:STATUS^LU^Column^N^N
+			A:Prompt^Status^N^M^N^N^CBDEC807A6B645A2BBBE9D8506D0A557^SHORT_NAME^1^1^0
+		CE:
+		CS:STATUS_DB^LU^Column^N^N
+			A:Prompt^Status^N^M^N^N^CBDEC807A6B645A2BBBE9D8506D0A557^SHORT_NAME^1^1^0
+		CE:
+	CE:
+CE:
+CS:IntfaceJobStatus^LU^Logical Unit^N^N
+	A:Prompt^Intface Job Status^N^M^N^N^^^0^0^0
+	CS:1^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^No file^N^M^N^N^^^0^0^0
+	CE:
+	CS:2^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^Loaded^N^M^N^N^^^0^0^0
+	CE:
+	CS:3^LU^Iid Element^N^N
+		P:Position^3
+		A:Text^Line error^N^M^N^N^^^0^0^0
+	CE:
+	CS:4^LU^Iid Element^N^N
+		P:Position^4
+		A:Text^Line Ok^N^M^N^N^^^0^0^0
+	CE:
+	CS:5^LU^Iid Element^N^N
+		P:Position^5
+		A:Text^Job Ok^N^M^N^N^^^0^0^0
+	CE:
+	CS:6^LU^Iid Element^N^N
+		P:Position^6
+		A:Text^Executing^N^M^N^N^^^0^0^0
+	CE:
+	CS:7^LU^Iid Element^N^N
+		P:Position^7
+		A:Text^Job Failed^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceMethodAction^LU^Logical Unit^N^N
+	A:Prompt^Intface Method Action^N^M^N^N^^^0^0^0
+	CS:1^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^BeforeLoop^N^M^N^N^^^0^0^0
+	CE:
+	CS:2^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^InLoop^N^M^N^N^^^0^0^0
+	CE:
+	CS:3^LU^Iid Element^N^N
+		P:Position^3
+		A:Text^AfterLoop^N^M^N^N^^^0^0^0
+	CE:
+	CS:4^LU^Iid Element^N^N
+		P:Position^4
+		A:Text^NoExecution^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceMethodList^LU^Logical Unit^N^N
+	A:Prompt^Intface Method List^N^M^N^N^^^0^0^0
+	CS:CHKCOUNT^LU^Message^N^N
+		A:Text^:P1 rows checked^N^M^N^N^^^0^0^0
+	CE:
+	CS:CLREMAP^LU^Message^N^N
+		A:Text^moved to DB-column^N^M^N^N^^^0^0^0
+	CE:
+	CS:COMMITSEQ^LU^Message^N^N
+		A:Text^Rows committed by Rule COMMITSEQ : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:CONNERR^LU^Message^N^N
+		A:Text^Cannot start this job. Connected job :P1 has errors.^N^M^N^N^^^0^0^0
+	CE:
+	CS:CREATEERROR^LU^Message^N^N
+		A:Text^Error creating table :P1 - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:CREATEVIEWERR^LU^Message^N^N
+		A:Text^Error creating view :P1 - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:CREIND^LU^Message^N^N
+		A:Text^Created :P1 index on column :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:CRETAB^LU^Message^N^N
+		A:Text^Created table  :P1 (^N^M^N^N^^^0^0^0
+	CE:
+	CS:DATEVAL^LU^Message^N^N
+		A:Text^Default value sysdate from PREPARE^N^M^N^N^^^0^0^0
+	CE:
+	CS:DBREMAP^LU^Message^N^N
+		A:Text^Remapped from client-value^N^M^N^N^^^0^0^0
+	CE:
+	CS:DUPNAME^LU^Message^N^N
+		A:Text^Method no. :P1 - Value for Job ID cannot be equal to main job^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXEOK^LU^Message^N^N
+		A:Text^Executed without error^N^M^N^N^^^0^0^0
+	CE:
+	CS:GRANTERROR^LU^Message^N^N
+		A:Text^Error granting view :P1 to IFS system user (IFSSYS) - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:HEADMSG^LU^Message^N^N
+		A:Text^EXECUTING METHOD NO. :P1 :^N^M^N^N^^^0^0^0
+	CE:
+	CS:ILLARGTYPE^LU^Message^N^N
+		A:Text^Argument :P1 has illegal type. Only datatype DATE VARCHAR2 NUMBER allowed^N^M^N^N^^^0^0^0
+	CE:
+	CS:ILLMETH^LU^Message^N^N
+		A:Text^Method :P1 is a function. Only procedures allowed^N^M^N^N^^^0^0^0
+	CE:
+	CS:INCOMPLETE^LU^Message^N^N
+		A:Text^:P1 incomplete transactions due to COMMIT or ROLLBACK in a called method^N^M^N^N^^^0^0^0
+	CE:
+	CS:INCOMPLSELECT^LU^Message^N^N
+		A:Text^Incomplete select not executed  -  :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:INCOMPLTRANS^LU^Message^N^N
+		A:Text^Check result. Transactions may be partially committed^N^M^N^N^^^0^0^0
+	CE:
+	CS:INDEXERROR^LU^Message^N^N
+		A:Text^Error creating index :P1 - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:INSTAB^LU^Message^N^N
+		A:Text^Insert into table :P1  with :P2 rows^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTFACE_EXCEL_INPUT_DEFAULT^LU^View^N^N
+		CS:COLUMN_NAME^LU^Column^N^N
+			A:Prompt^Column Name^N^M^N^N^71CCC3ACE1794EB4ABCD4A602E70B75A^FULL_NAME^1^1^0
+		CE:
+		CS:DATA_TYPE^LU^Column^N^N
+			A:Prompt^Data Type^N^M^N^N^81307AD529EB470E9C2A150E7841F6E8^ABBREVIATION^1^1^0
+		CE:
+		CS:DEFAULT_VALUE^LU^Column^N^N
+			A:Prompt^Default Value^N^M^N^N^A3C4ECFBDCF04B8CB49BC74963E95540^FULL_NAME^1^1^0
+		CE:
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^^^1^1^1
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:LANG_CODE^LU^Column^N^N
+			A:Prompt^Language Code^N^M^N^N^449D8B2B4EF04B2CA8DE6258FE0F3E0F^FULL_NAME^1^1^0
+		CE:
+		CS:LENGTH^LU^Column^N^N
+			A:Prompt^Length^N^M^N^N^58455A6B9ED143D688CF126E7B7CA12D^SHORT_NAME^1^1^0
+		CE:
+		CS:MANDATORY^LU^Column^N^N
+			A:Prompt^Mandatory^N^M^N^N^^^1^1^1
+		CE:
+		CS:NOTE_TEXT^LU^Column^N^N
+			A:Prompt^Note Text for ODBC^N^M^N^N^^^1^1^1
+		CE:
+		CS:POS^LU^Column^N^N
+			A:Prompt^Position^N^M^N^N^^^1^1^1
+		CE:
+		CS:PRIMARY_KEY^LU^Column^N^N
+			A:Prompt^Primary Key^N^M^N^N^^^1^1^1
+		CE:
+		CS:QR_TEXT^LU^Column^N^N
+			A:Prompt^Note Text for Quick Report^N^M^N^N^^^1^1^1
+		CE:
+		CS:SOURCE_COLUMN^LU^Column^N^N
+			A:Prompt^Source Column^N^M^N^N^70345C6A166D49389832C57CAD6268B7^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:INTFACE_EXCEL_INPUT_FORMAT^LU^View^N^N
+		CS:COLUMN_NAME^LU^Column^N^N
+			A:Prompt^Column Name^N^M^N^N^71CCC3ACE1794EB4ABCD4A602E70B75A^FULL_NAME^1^1^0
+		CE:
+		CS:DATA_TYPE^LU^Column^N^N
+			A:Prompt^Data Type^N^M^N^N^81307AD529EB470E9C2A150E7841F6E8^ABBREVIATION^1^1^0
+		CE:
+		CS:DEFAULT_VALUE^LU^Column^N^N
+			A:Prompt^Default Value^N^M^N^N^A3C4ECFBDCF04B8CB49BC74963E95540^FULL_NAME^1^1^0
+		CE:
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^^^1^1^1
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:LANG_CODE^LU^Column^N^N
+			A:Prompt^Language Code^N^M^N^N^449D8B2B4EF04B2CA8DE6258FE0F3E0F^FULL_NAME^1^1^0
+		CE:
+		CS:LENGTH^LU^Column^N^N
+			A:Prompt^Length^N^M^N^N^58455A6B9ED143D688CF126E7B7CA12D^SHORT_NAME^1^1^0
+		CE:
+		CS:MANDATORY^LU^Column^N^N
+			A:Prompt^Mandatory^N^M^N^N^^^1^1^1
+		CE:
+		CS:NOTE_TEXT^LU^Column^N^N
+			A:Prompt^Note Text for ODBC^N^M^N^N^^^1^1^1
+		CE:
+		CS:POS^LU^Column^N^N
+			A:Prompt^Position^N^M^N^N^^^1^1^1
+		CE:
+		CS:PRIMARY_KEY^LU^Column^N^N
+			A:Prompt^Primary Key^N^M^N^N^^^1^1^1
+		CE:
+		CS:QR_TEXT^LU^Column^N^N
+			A:Prompt^Note Text for Quick Report^N^M^N^N^^^1^1^1
+		CE:
+		CS:SOURCE_COLUMN^LU^Column^N^N
+			A:Prompt^Source Column^N^M^N^N^70345C6A166D49389832C57CAD6268B7^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:INTFACE_METHOD_LIST^LU^View^N^N
+		CS:ACTION^LU^Column^N^N
+			A:Prompt^Action^N^M^N^N^68469808371C41C6B17C439813E4667A^SHORT_NAME^1^1^0
+		CE:
+		CS:ACTION_DB^LU^Column^N^N
+			A:Prompt^Action^N^M^N^N^68469808371C41C6B17C439813E4667A^SHORT_NAME^1^1^0
+		CE:
+		CS:COLUMN_NAME^LU^Column^N^N
+			A:Prompt^Column Name^N^M^N^N^71CCC3ACE1794EB4ABCD4A602E70B75A^FULL_NAME^1^1^0
+		CE:
+		CS:COLUMN_VALUE^LU^Column^N^N
+			A:Prompt^Column Value^N^M^N^N^7FB4B7618B2340FD84F467B0F74244C2^ABBREVIATION^1^1^0
+		CE:
+		CS:CONVERT_ATTR^LU^Column^N^N
+			A:Prompt^Convert Attr^N^M^N^N^a7cd3cb0-9c09-42ca-b04e-5b786420f784^SHORT_NAME^1^1^0
+		CE:
+		CS:EXECUTE_SEQ^LU^Column^N^N
+			A:Prompt^Execute Seq^N^M^N^N^634132209FD64C138A123DEB49D462C2^ABBREVIATION^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:METHOD_NAME^LU^Column^N^N
+			A:Prompt^Method Name^N^M^N^N^4E80E51B5FB0474FB6CD2D19ECF911BB^SHORT_NAME^1^1^0
+		CE:
+		CS:NOTE_TEXT^LU^Column^N^N
+			A:Prompt^Note Text^N^M^N^N^1E4C0199A3864B3796326A4236E655B5^FULL_NAME^1^1^0
+		CE:
+		CS:ON_FIRST_ROW^LU^Column^N^N
+			A:Prompt^On First Row^N^M^N^N^ee86a836-768c-4a2f-8a71-db1e32c40043^SHORT_NAME^1^1^0
+		CE:
+		CS:ON_MODIFY^LU^Column^N^N
+			A:Prompt^On Modify^N^M^N^N^d180628a-2912-419d-a104-2fb65ec86119^SHORT_NAME^1^1^0
+		CE:
+		CS:ON_NEW^LU^Column^N^N
+			A:Prompt^On New^N^M^N^N^d4ea0aaa-ca43-4eb9-a592-b7b4eaa31c9f^SHORT_NAME^1^1^0
+		CE:
+		CS:ON_NEW_MASTER^LU^Column^N^N
+			A:Prompt^On New Master^N^M^N^N^6b39ceee-3900-47a7-ad66-c6e04f8fbc9b^SHORT_NAME^1^1^0
+		CE:
+		CS:PREFIX_OPTION^LU^Column^N^N
+			A:Prompt^Prefix Option^N^M^N^N^BD946652F971424BAE0E868892A6BD87^SHORT_NAME^1^1^0
+		CE:
+		CS:PREFIX_OPTION_DB^LU^Column^N^N
+			A:Prompt^Prefix Option^N^M^N^N^BD946652F971424BAE0E868892A6BD87^SHORT_NAME^1^1^0
+		CE:
+		CS:REFERENCES^LU^Column^N^N
+			A:Prompt^References^N^M^N^N^^^1^1^1
+		CE:
+		CS:SOURCE_NAME^LU^Column^N^N
+			A:Prompt^Source Name^N^M^N^N^534600EB704545C6AC9760F8786D069F^FULL_NAME^1^1^0
+		CE:
+		CS:VIEW_NAME^LU^Column^N^N
+			A:Prompt^View Name^N^M^N^N^34A69FA64F4F413588CFF6084387C5F1^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:KEEPALL^LU^Message^N^N
+		A:Text^Rule KEEPALL can not be used when another job is connected to :P1 (:P2)^N^M^N^N^^^0^0^0
+	CE:
+	CS:KEEPERR^LU^Message^N^N
+		A:Text^Rule KEEPERR can only be used when another job is connected to :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:MAKEOTHER^LU^Message^N^N
+		A:Text^Error making attribute and references - :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:MANDDEF^LU^Message^N^N
+		A:Text^<MISSING MANDATORY DEFAULT_VALUE>^N^M^N^N^^^0^0^0
+	CE:
+	CS:METHCHK^LU^Message^N^N
+		A:Text^:P1 :P2  with CHECK option^N^M^N^N^^^0^0^0
+	CE:
+	CS:METHFAILED^LU^Message^N^N
+		A:Text^, Errors : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:METHINS^LU^Message^N^N
+		A:Text^New rows      : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:METHNAME^LU^Message^N^N
+		A:Text^:P1 :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:METHPRC^LU^Message^N^N
+		A:Text^Processed rows  : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:METHUPD^LU^Message^N^N
+		A:Text^Updated rows  : :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:MSGAVG^LU^Message^N^N
+		A:Text^Average of  :P1 rows per minute^N^M^N^N^^^0^0^0
+	CE:
+	CS:MSGCOMMIT^LU^Message^N^N
+		A:Text^:P1 rows committed^N^M^N^N^^^0^0^0
+	CE:
+	CS:MSGCOUNT^LU^Message^N^N
+		A:Text^:P1 rows selected^N^M^N^N^^^0^0^0
+	CE:
+	CS:MSGERR^LU^Message^N^N
+		A:Text^:P1 rows failed^N^M^N^N^^^0^0^0
+	CE:
+	CS:MSGLAPSE^LU^Message^N^N
+		A:Text^Used :P1 hours and :P2 minutes^N^M^N^N^^^0^0^0
+	CE:
+	CS:NONAME^LU^Message^N^N
+		A:Text^Value for Job ID is missing on attr-string for method no. :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:NONBASEVIEW^LU^Message^N^N
+		A:Text^Failed to identify standard methods for view ":P1" while trying to generate the Method List. The [View Name] must be a base view of an IFS Logical Unit.^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOOBJID^LU^Message^N^N
+		A:Text^OBJID not in select, but Rule ADDOBJID is active^N^M^N^N^^^0^0^0
+	CE:
+	CS:NORESTART^LU^Message^N^N
+		A:Text^Restart impossible - :P1 contains no rowid^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOSELECT^LU^Message^N^N
+		A:Text^No select specified^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOSTART^LU^Message^N^N
+		A:Text^:P1 have :P2 error lines and cannot be started^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOTEDEF^LU^Message^N^N
+		A:Text^Please decide use of Default Value. OPTIONALs may be removed^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOTINLOOP^LU^Message^N^N
+		A:Text^Procedure :P1  must be started inside loop^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOTOUTLOOP^LU^Message^N^N
+		A:Text^Procedure :P1  cannot be started inside loop^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOVIEW^LU^Message^N^N
+		A:Text^Specify view_name only inside loop^N^M^N^N^^^0^0^0
+	CE:
+	CS:OPTDEF^LU^Message^N^N
+		A:Text^<MISSING OPTIONAL DEFAULT_VALUE>^N^M^N^N^^^0^0^0
+	CE:
+	CS:PREPVAL^LU^Message^N^N
+		A:Text^Default value :P1 from PREPARE^N^M^N^N^^^0^0^0
+	CE:
+	CS:RENAMTAB^LU^Message^N^N
+		A:Text^Renamed table :P1 with :P2 records to :P3^N^M^N^N^^^0^0^0
+	CE:
+	CS:RESTART^LU^Message^N^N
+		A:Text^Restart insert into table :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:SELECTSTMT^LU^Message^N^N
+		A:Text^Error in  select  :P1 - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:SYNTAXERROR^LU^Message^N^N
+		A:Text^Column name :P1 is ambigously defined^N^M^N^N^^^0^0^0
+	CE:
+	CS:TIMESTAMP1^LU^Message^N^N
+		A:Text^Start time - :P1   :P2^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceMethodListAttrib^LU^Logical Unit^N^N
+	A:Prompt^Intface Method List Attrib^N^M^N^N^^^0^0^0
+	CS:INTFACE_METHOD_LIST_ATTRIB^LU^View^N^N
+		CS:COLUMN_NAME^LU^Column^N^N
+			A:Prompt^Column Name^N^M^N^N^71CCC3ACE1794EB4ABCD4A602E70B75A^FULL_NAME^1^1^0
+		CE:
+		CS:COLUMN_SEQUENCE^LU^Column^N^N
+			A:Prompt^Column Sequence^N^M^N^N^7BA50D44F05946B68066C1ED88D246CC^FULL_NAME^1^1^0
+		CE:
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^D486D342AB8D422EAEC5007E124F66C1^ABBREVIATION^1^1^0
+		CE:
+		CS:EXECUTE_SEQ^LU^Column^N^N
+			A:Prompt^Execute Seq^N^M^N^N^634132209FD64C138A123DEB49D462C2^ABBREVIATION^1^1^0
+		CE:
+		CS:FIXED_VALUE^LU^Column^N^N
+			A:Prompt^Fixed Value^N^M^N^N^775897da-74f1-4ad3-a444-3708b6171e9c^SHORT_NAME^1^1^0
+		CE:
+		CS:FLAGS^LU^Column^N^N
+			A:Prompt^Flags^N^M^N^N^C4BBDC0813924621837D5C8BFD43863B^SHORT_NAME^1^1^0
+		CE:
+		CS:IID_VALUES^LU^Column^N^N
+			A:Prompt^Iid Values^N^M^N^N^d8656fa0-4dcd-4166-838e-da36ddbe2e5d^SHORT_NAME^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Intface Name^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:LU_REFERENCE^LU^Column^N^N
+			A:Prompt^Lu Reference^N^M^N^N^b2fe29b4-9be1-4df4-b5e9-e1a36c2ad581^SHORT_NAME^1^1^0
+		CE:
+		CS:ON_MODIFY^LU^Column^N^N
+			A:Prompt^On Modify^N^M^N^N^d180628a-2912-419d-a104-2fb65ec86119^SHORT_NAME^1^1^0
+		CE:
+		CS:ON_NEW^LU^Column^N^N
+			A:Prompt^On New^N^M^N^N^d4ea0aaa-ca43-4eb9-a592-b7b4eaa31c9f^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:WRONGSEQ1^LU^Message^N^N
+		A:Text^EXECUTE_SEQ :P1 does not exist^N^M^N^N^^^0^0^0
+	CE:
+	CS:WRONGSEQ2^LU^Message^N^N
+		A:Text^Referred EXECUTE_SEQ must be prior to this one^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceMode^LU^Logical Unit^N^N
+	A:Prompt^Intface Mode^N^M^N^N^^^0^0^0
+	CS:1^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^Manual^N^M^N^N^^^0^0^0
+	CE:
+	CS:2^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^Automatic^N^M^N^N^^^0^0^0
+	CE:
+	CS:3^LU^Iid Element^N^N
+		P:Position^3
+		A:Text^Batch^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfacePrUser^LU^Logical Unit^N^N
+	A:Prompt^Intface Pr User^N^M^N^N^^^0^0^0
+	CS:INTFACE_PR_USER^LU^View^N^N
+		CS:IDENTITY^LU^Column^N^N
+			A:Prompt^Identity^N^M^N^N^785B912BD37541688C9DF79B78A2BC44^SHORT_NAME^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+	CE:
+CE:
+CS:IntfacePrefixOption^LU^Logical Unit^N^N
+	A:Prompt^Intface Prefix Option^N^M^N^N^^^0^0^0
+	CS:1^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^ViewName^N^M^N^N^^^0^0^0
+	CE:
+	CS:2^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^ViewNameUnique^N^M^N^N^^^0^0^0
+	CE:
+	CS:3^LU^Iid Element^N^N
+		P:Position^3
+		A:Text^NoPrefix^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfacePrivilege^LU^Logical Unit^N^N
+	A:Prompt^Intface Privilege^N^M^N^N^^^0^0^0
+	CS:1^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^NoUpdateAllowed^N^M^N^N^^^0^0^0
+	CE:
+	CS:2^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^UpdateAllowed^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceProcedures^LU^Logical Unit^N^N
+	A:Prompt^Intface Procedures^N^M^N^N^^^0^0^0
+	CS:CHECK_BY_METHOD_NEW^LU^Message^N^N
+		A:Text^Check rows from file according to Business Logic^N^M^N^N^^^0^0^0
+	CE:
+	CS:CREATE_OUTPUT_FILE^LU^Message^N^N
+		A:Text^Write data to file^N^M^N^N^^^0^0^0
+	CE:
+	CS:CREATE_TABLE_FROM_FI^LU^Message^N^N
+		A:Text^Create table from file^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXCEL_MIGRATION^LU^Message^N^N
+		A:Text^Data Migration from Excel file^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_EXPORT^LU^Message^N^N
+		A:Text^Export Data Migration definitions to file^N^M^N^N^^^0^0^0
+	CE:
+	CS:FNDMIG_IMPORT^LU^Message^N^N
+		A:Text^Import Data Migration definitions from file^N^M^N^N^^^0^0^0
+	CE:
+	CS:INSERT_BY_METHOD_NEW^LU^Message^N^N
+		A:Text^Insert rows from file^N^M^N^N^^^0^0^0
+	CE:
+	CS:INSERT_OR_UPDATE^LU^Message^N^N
+		A:Text^Insert or Update rows from file^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTFACE_PROCEDURES^LU^View^N^N
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^799DF6BE170644D8AD4D7DE9D46BDC17^ABBREVIATION^1^1^0
+		CE:
+		CS:DIRECTION^LU^Column^N^N
+			A:Prompt^Direction^N^M^N^N^58867DB9EA574DF8A3683003F7F7629A^ABBREVIATION^1^1^0
+		CE:
+		CS:DIRECTION_DB^LU^Column^N^N
+			A:Prompt^Direction^N^M^N^N^58867DB9EA574DF8A3683003F7F7629A^ABBREVIATION^1^1^0
+		CE:
+		CS:PROCEDURE_NAME^LU^Column^N^N
+			A:Prompt^Procedure Name^N^M^N^N^F8B7227CB46A48919B3EA8FE4FB63246^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:INTFACE_PROC_LOV_EXCL_REPL^LU^View^N^N
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^137F740AF1C14D00820FE0175380DAED^ABBREVIATION^1^1^0
+		CE:
+		CS:DIRECTION^LU^Column^N^N
+			A:Prompt^Direction^N^M^N^N^58867DB9EA574DF8A3683003F7F7629A^ABBREVIATION^1^1^0
+		CE:
+		CS:DIRECTION_DB^LU^Column^N^N
+			A:Prompt^Direction^N^M^N^N^58867DB9EA574DF8A3683003F7F7629A^ABBREVIATION^1^1^0
+		CE:
+		CS:PROCEDURE_NAME^LU^Column^N^N
+			A:Prompt^Procedure Name^N^M^N^N^F8B7227CB46A48919B3EA8FE4FB63246^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:INTFACE_PROC_LOV_INCL_REPL^LU^View^N^N
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^137F740AF1C14D00820FE0175380DAED^ABBREVIATION^1^1^0
+		CE:
+		CS:DIRECTION^LU^Column^N^N
+			A:Prompt^Direction^N^M^N^N^58867DB9EA574DF8A3683003F7F7629A^ABBREVIATION^1^1^0
+		CE:
+		CS:DIRECTION_DB^LU^Column^N^N
+			A:Prompt^Direction^N^M^N^N^58867DB9EA574DF8A3683003F7F7629A^ABBREVIATION^1^1^0
+		CE:
+		CS:PROCEDURE_NAME^LU^Column^N^N
+			A:Prompt^Procedure Name^N^M^N^N^F8B7227CB46A48919B3EA8FE4FB63246^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:MIGRATE_SOURCE_DATA^LU^Message^N^N
+		A:Text^Data migration from table/view^N^M^N^N^^^0^0^0
+	CE:
+	CS:REPLICATION^LU^Message^N^N
+		A:Text^Replication^N^M^N^N^^^0^0^0
+	CE:
+	CS:REPL_DATA_OUT^LU^Message^N^N
+		A:Text^Replicate Data Structures^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceQuickReportUtil^LU^Logical Unit^N^N
+	A:Prompt^Intface Quick Report Util^N^M^N^N^^^0^0^0
+	CS:DEPREC^LU^Message^N^N
+		A:Text^This Functionality is Deprecated. Use the built in Import/Export functionality in Quick Reports instead.^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXPERR^LU^Message^N^N
+		A:Text^Error exporting :P1 - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:EXPOK^LU^Message^N^N
+		A:Text^Exported :P1 reports^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceReplElemType^LU^Logical Unit^N^N
+	A:Prompt^Intface Repl Elem Type^N^M^N^N^^^0^0^0
+	CS:AGGREGATE^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^Aggregate^N^M^N^N^^^0^0^0
+	CE:
+	CS:ARRAY^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^Array^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceReplMaintUtil^LU^Logical Unit^N^N
+	A:Prompt^Intface Repl Maint Util^N^M^N^N^^^0^0^0
+	CS:EXECERR^LU^Message^N^N
+		A:Text^Error occured - :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTFACE_REPL_DB_OBJECTS^LU^View^N^N
+		CS:CREATED^LU^Column^N^N
+			A:Prompt^Date Created^N^M^N^N^7AF3F31759D3478DA61CA76C3F1B9B97^SHORT_NAME^1^1^0
+		CE:
+		CS:ERROR_TEXT^LU^Column^N^N
+			A:Prompt^Error Text^N^M^N^N^F81657E389924EADB21D158F15540ADB^SHORT_NAME^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:LAST_DDL_TIME^LU^Column^N^N
+			A:Prompt^Last DDL Time^N^M^N^N^038f14ae-183f-4a3c-a2d8-28f95f759a37^SHORT_NAME^1^1^0
+		CE:
+		CS:OBJECT_NAME^LU^Column^N^N
+			A:Prompt^Object Name^N^M^N^N^4ce16c1d-719e-48c6-b297-be6386dea175^SHORT_NAME^1^1^0
+		CE:
+		CS:OBJECT_TYPE^LU^Column^N^N
+			A:Prompt^Object Name^N^M^N^N^4ce16c1d-719e-48c6-b297-be6386dea175^SHORT_NAME^1^1^0
+		CE:
+		CS:STATUS^LU^Column^N^N
+			A:Prompt^Status^N^M^N^N^CBDEC807A6B645A2BBBE9D8506D0A557^SHORT_NAME^1^1^0
+		CE:
+		CS:TABLE_NAME^LU^Column^N^N
+			A:Prompt^Table Name^N^M^N^N^3E4AEFF68A504899ABCB98CCD02218FF^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:INTFACE_SERVER_PROCESSES^LU^View^N^N
+		CS:ACTION^LU^Column^N^N
+			A:Prompt^Action^N^M^N^N^68469808371C41C6B17C439813E4667A^SHORT_NAME^1^1^0
+		CE:
+		CS:EXECUTION_PLAN^LU^Column^N^N
+			A:Prompt^Execution Plan^N^M^N^N^160C1BB41AF34609BCF6FF0435360891^ABBREVIATION^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:LAST_DATE^LU^Column^N^N
+			A:Prompt^Last Date^N^M^N^N^dd1272d2-c4e4-4a63-b556-5a5a786d8cbb^SHORT_NAME^1^1^0
+		CE:
+		CS:NEXT_DATE^LU^Column^N^N
+			A:Prompt^Next Date^N^M^N^N^4AFB140B3C094FAF870D819F58E892F9^SHORT_NAME^1^1^0
+		CE:
+		CS:SERVER_JOB_ID^LU^Column^N^N
+			A:Prompt^Server Job ID^N^M^N^N^D704C83DC68549919CA17001AB0D09E2^SHORT_NAME^1^1^0
+		CE:
+		CS:STATUS^LU^Column^N^N
+			A:Prompt^Status^N^M^N^N^CBDEC807A6B645A2BBBE9D8506D0A557^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:LOGOK^LU^Message^N^N
+		A:Text^Log table with :P1 rows succefully processed for :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOUPDATE^LU^Message^N^N
+		A:Text^You can not update :P1 beacuse replication is in process. All triggers are enabled.^N^M^N^N^^^0^0^0
+	CE:
+	CS:REPLFAIL^LU^Message^N^N
+		A:Text^Replication job :P1 failed - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:REPLOK^LU^Message^N^N
+		A:Text^Procedure :P1 succefully processed^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceReplMessType^LU^Logical Unit^N^N
+	A:Prompt^Intface Repl Mess Type^N^M^N^N^^^0^0^0
+	CS:BIZAPI^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^BizApi^N^M^N^N^^^0^0^0
+	CE:
+	CS:TRACE^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^DisplayTrace^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceReplOutLog^LU^Logical Unit^N^N
+	A:Prompt^Intface Repl Out Log^N^M^N^N^^^0^0^0
+	CS:INTFACE_REPL_OUT_LOG^LU^View^N^N
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Intface Name^N^M^N^N^9a0a351f-aad6-4988-878a-231eeb06d6d7^SHORT_NAME^1^1^0
+		CE:
+		CS:KEY_ATTR^LU^Column^N^N
+			A:Prompt^Key Attr^N^M^N^N^43B3754CB58145D5B057F3A95F79698C^ABBREVIATION^1^1^0
+		CE:
+		CS:LOG_DATE^LU^Column^N^N
+			A:Prompt^Log Date^N^M^N^N^7C006BA81E5A4239B85CFE20E1C4DDEC^SHORT_NAME^1^1^0
+		CE:
+		CS:LOG_SEQ^LU^Column^N^N
+			A:Prompt^Log Seq^N^M^N^N^DD9D9CF4D97947C38B82CD168F6002D1^SHORT_NAME^1^1^0
+		CE:
+		CS:POS^LU^Column^N^N
+			A:Prompt^Pos^N^M^N^N^47427228056B43ABBEFB329270CC2673^ABBREVIATION^1^1^0
+		CE:
+		CS:START_POS^LU^Column^N^N
+			A:Prompt^Start Pos^N^M^N^N^^^1^1^1
+		CE:
+		CS:STRUCTURE_SEQ^LU^Column^N^N
+			A:Prompt^Structure Seq^N^M^N^N^8887942B0CFD4C7EB6E1442982C15EF7^ABBREVIATION^1^1^0
+		CE:
+		CS:TRIGGER_TYPE^LU^Column^N^N
+			A:Prompt^Trigger Type^N^M^N^N^58B1C751287541F7B27E5C3CB56AAE3C^SHORT_NAME^1^1^0
+		CE:
+	CE:
+CE:
+CS:IntfaceReplPackageUtil^LU^Logical Unit^N^N
+	A:Prompt^Intface Repl Package Util^N^M^N^N^^^0^0^0
+	CS:COMPERR^LU^Message^N^N
+		A:Text^Error compiling package :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:ERR1PAR^LU^Message^N^N
+		A:Text^Single rows should not have any value in column Parent Sequence^N^M^N^N^^^0^0^0
+	CE:
+	CS:ERR2PAR^LU^Message^N^N
+		A:Text^One row should be parent = without value in column Parent Sequence^N^M^N^N^^^0^0^0
+	CE:
+	CS:ERRLONG^LU^Message^N^N
+		A:Text^Source too long, cannot write to Intface_Job_Detail - :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:KEYERR^LU^Message^N^N
+		A:Text^Parent key :P1 does not exist in structures prior to :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:LONGSRC^LU^Message^N^N
+		A:Text^Source too long. Export file from ExecuteJob window and deploy from Admin^N^M^N^N^^^0^0^0
+	CE:
+	CS:NODATA^LU^Message^N^N
+		A:Text^At least one row must be marked with On Insert or On Update^N^M^N^N^^^0^0^0
+	CE:
+	CS:OTHERS^LU^Message^N^N
+		A:Text^Error compiling package - :P1^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceReplRecType^LU^Logical Unit^N^N
+	A:Prompt^Intface Repl Rec Type^N^M^N^N^^^0^0^0
+	CS:AGGREGATE^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^Aggregate^N^M^N^N^^^0^0^0
+	CE:
+	CS:ARRAY^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^Array^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceReplStructCols^LU^Logical Unit^N^N
+	A:Prompt^Intface Repl Struct Cols^N^M^N^N^^^0^0^0
+	CS:INTFACE_REPL_STRUCT_COLS^LU^View^N^N
+		CS:COLUMN_ALIAS^LU^Column^N^N
+			A:Prompt^Column Alias^N^M^N^N^1762FEA6A51840CE93E89786526ABE86^FULL_NAME^1^1^0
+		CE:
+		CS:COLUMN_NAME^LU^Column^N^N
+			A:Prompt^Column Name^N^M^N^N^71CCC3ACE1794EB4ABCD4A602E70B75A^FULL_NAME^1^1^0
+		CE:
+		CS:COLUMN_SEQ^LU^Column^N^N
+			A:Prompt^Column Seq^N^M^N^N^7BA50D44F05946B68066C1ED88D246CC^ABBREVIATION^1^1^0
+		CE:
+		CS:DATA_TYPE^LU^Column^N^N
+			A:Prompt^Data Type^N^M^N^N^81307AD529EB470E9C2A150E7841F6E8^ABBREVIATION^1^1^0
+		CE:
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^D486D342AB8D422EAEC5007E124F66C1^ABBREVIATION^1^1^0
+		CE:
+		CS:FLAGS^LU^Column^N^N
+			A:Prompt^Flags^N^M^N^N^C4BBDC0813924621837D5C8BFD43863B^SHORT_NAME^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Intface Name^N^M^N^N^9a0a351f-aad6-4988-878a-231eeb06d6d7^SHORT_NAME^1^1^0
+		CE:
+		CS:ON_INSERT^LU^Column^N^N
+			A:Prompt^On Insert^N^M^N^N^0E296B78360241028420F834F45841E0^SHORT_NAME^1^1^0
+		CE:
+		CS:ON_UPDATE^LU^Column^N^N
+			A:Prompt^On Update^N^M^N^N^5FB90C984AF349BCA56B55D9A5347A2F^SHORT_NAME^1^1^0
+		CE:
+		CS:PARENT_KEY_NAME^LU^Column^N^N
+			A:Prompt^Parent Key Name^N^M^N^N^2BDDDF1328A4422ABC244492395EC854^SHORT_NAME^1^1^0
+		CE:
+		CS:STRUCTURE_SEQ^LU^Column^N^N
+			A:Prompt^Structure Seq^N^M^N^N^8887942B0CFD4C7EB6E1442982C15EF7^ABBREVIATION^1^1^0
+		CE:
+	CE:
+CE:
+CS:IntfaceReplStructure^LU^Logical Unit^N^N
+	A:Prompt^Intface Repl Structure^N^M^N^N^^^0^0^0
+	CS:ERRSEQ^LU^Message^N^N
+		A:Text^Parent Sequence cannot equal Seq^N^M^N^N^^^0^0^0
+	CE:
+	CS:INSERR^LU^Message^N^N
+		A:Text^All rows from Start Point and upwards must have column OnInsert checked and column TriggerTable defined^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTFACE_REPL_PARENT_LOV^LU^View^N^N
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Intface Name^N^M^N^N^9a0a351f-aad6-4988-878a-231eeb06d6d7^SHORT_NAME^1^1^0
+		CE:
+		CS:PARENT_SEQ^LU^Column^N^N
+			A:Prompt^Parent Seq^N^M^N^N^D32E47FFDBC84340B794E979EA9315FB^SHORT_NAME^1^1^0
+		CE:
+		CS:PARENT_VIEW^LU^Column^N^N
+			A:Prompt^Parent View^N^M^N^N^^^1^1^1
+		CE:
+	CE:
+	CS:INTFACE_REPL_STRUCTURE^LU^View^N^N
+		CS:ELEMENT_NAME^LU^Column^N^N
+			A:Prompt^Element Name^N^M^N^N^DC79FBB873184FFE9C7786580450868A^ABBREVIATION^1^1^0
+		CE:
+		CS:ELEMENT_TYPE^LU^Column^N^N
+			A:Prompt^Element Type^N^M^N^N^84DA38BC57C348428CCBFD6E2AEF5F21^ABBREVIATION^1^1^0
+		CE:
+		CS:ELEMENT_TYPE_DB^LU^Column^N^N
+			A:Prompt^Element Type^N^M^N^N^84DA38BC57C348428CCBFD6E2AEF5F21^ABBREVIATION^1^1^0
+		CE:
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Intface Name^N^M^N^N^9a0a351f-aad6-4988-878a-231eeb06d6d7^SHORT_NAME^1^1^0
+		CE:
+		CS:NOTE_TEXT^LU^Column^N^N
+			A:Prompt^Note Text^N^M^N^N^1E4C0199A3864B3796326A4236E655B5^FULL_NAME^1^1^0
+		CE:
+		CS:ON_INSERT^LU^Column^N^N
+			A:Prompt^On Insert^N^M^N^N^0E296B78360241028420F834F45841E0^SHORT_NAME^1^1^0
+		CE:
+		CS:ON_UPDATE^LU^Column^N^N
+			A:Prompt^On Update^N^M^N^N^5FB90C984AF349BCA56B55D9A5347A2F^SHORT_NAME^1^1^0
+		CE:
+		CS:PARENT_SEQ^LU^Column^N^N
+			A:Prompt^Parent Seq^N^M^N^N^D32E47FFDBC84340B794E979EA9315FB^SHORT_NAME^1^1^0
+		CE:
+		CS:POS^LU^Column^N^N
+			A:Prompt^Pos^N^M^N^N^8D2E4A97998F431E95B65143FE7B48C3^ABBREVIATION^1^1^0
+		CE:
+		CS:RECORD_NAME^LU^Column^N^N
+			A:Prompt^Record Name^N^M^N^N^581D2ABD360646F8A26449D895A4A713^SHORT_NAME^1^1^0
+		CE:
+		CS:SELECT_WHERE^LU^Column^N^N
+			A:Prompt^Select Where^N^M^N^N^56B86DA60A684833BD6129CC0990D84D^SHORT_NAME^1^1^0
+		CE:
+		CS:START_POINT^LU^Column^N^N
+			A:Prompt^Start Point^N^M^N^N^EA631B4A41DF419287A4ADB25C0B87C8^SHORT_NAME^1^1^0
+		CE:
+		CS:STRUCTURE_SEQ^LU^Column^N^N
+			A:Prompt^Structure Seq^N^M^N^N^8887942B0CFD4C7EB6E1442982C15EF7^ABBREVIATION^1^1^0
+		CE:
+		CS:TRIGGER_TABLE^LU^Column^N^N
+			A:Prompt^Trigger Table^N^M^N^N^3E4AEFF68A504899ABCB98CCD02218FF^SHORT_NAME^1^1^0
+		CE:
+		CS:TRIGGER_WHEN^LU^Column^N^N
+			A:Prompt^Trigger When^N^M^N^N^5302CB7263BD49C288B69E3251A9569A^SHORT_NAME^1^1^0
+		CE:
+		CS:VIEW_NAME^LU^Column^N^N
+			A:Prompt^View Name^N^M^N^N^34A69FA64F4F413588CFF6084387C5F1^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:INTFACE_REPL_TABLE_LOV^LU^View^N^N
+		CS:TABLE_NAME^LU^Column^N^N
+			A:Prompt^Table Name^N^M^N^N^3E4AEFF68A504899ABCB98CCD02218FF^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:MULTIPLESTART^LU^Message^N^N
+		A:Text^You can only define one Start Point for a job^N^M^N^N^^^0^0^0
+	CE:
+	CS:NONUNIQUE^LU^Message^N^N
+		A:Text^No unique master defined for :P1. Only one item should have ParentSeq equal NULL^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOSEQ^LU^Message^N^N
+		A:Text^Cannot use this Parent Sequence. No lines with Seq :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:VALUEERR^LU^Message^N^N
+		A:Text^:P1 = :P2, value may not be larger then 99^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceReplTriggersUtil^LU^Logical Unit^N^N
+	A:Prompt^Intface Repl Triggers Util^N^M^N^N^^^0^0^0
+	CS:ALTERR^LU^Message^N^N
+		A:Text^Error altering trigger :P1 - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:COMPERR^LU^Message^N^N
+		A:Text^Error occured for trigger :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:DROPERR^LU^Message^N^N
+		A:Text^Error dropping trigger :P1 - :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:NODEF^LU^Message^N^N
+		A:Text^You must enter a TableName and check OnInsert or OnUpdate of at least one structure item^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceReplicCriteria^LU^Logical Unit^N^N
+	A:Prompt^Intface Replic Criteria^N^M^N^N^^^0^0^0
+	CS:1^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^Contract^N^M^N^N^^^0^0^0
+	CE:
+	CS:2^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^Company^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceReplicationLog^LU^Logical Unit^N^N
+	A:Prompt^Intface Replication Log^N^M^N^N^^^0^0^0
+	CS:INTFACE_REPLICATION_LOG^LU^View^N^N
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Intface Name^N^M^N^N^9a0a351f-aad6-4988-878a-231eeb06d6d7^SHORT_NAME^1^1^0
+		CE:
+		CS:LOG_DATE^LU^Column^N^N
+			A:Prompt^Log Date^N^M^N^N^7C006BA81E5A4239B85CFE20E1C4DDEC^SHORT_NAME^1^1^0
+		CE:
+		CS:LOG_SEQ^LU^Column^N^N
+			A:Prompt^Log Seq^N^M^N^N^DD9D9CF4D97947C38B82CD168F6002D1^SHORT_NAME^1^1^0
+		CE:
+		CS:REPL_ROWID^LU^Column^N^N
+			A:Prompt^Repl Rowid^N^M^N^N^^^1^1^1
+		CE:
+		CS:TRIGGER_TYPE^LU^Column^N^N
+			A:Prompt^Trigger Type^N^M^N^N^58B1C751287541F7B27E5C3CB56AAE3C^SHORT_NAME^1^1^0
+		CE:
+	CE:
+CE:
+CS:IntfaceRuleFlag^LU^Logical Unit^N^N
+	A:Prompt^Intface Rule Flag^N^M^N^N^^^0^0^0
+	CS:1^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^Active^N^M^N^N^^^0^0^0
+	CE:
+	CS:2^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^Inactive^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceRuleValue^LU^Logical Unit^N^N
+	A:Prompt^Intface Rule Value^N^M^N^N^^^0^0^0
+	CS:1^LU^Iid Element^N^N
+		P:Position^1
+		A:Text^No value allowed^N^M^N^N^^^0^0^0
+	CE:
+	CS:2^LU^Iid Element^N^N
+		P:Position^2
+		A:Text^Mandatory number^N^M^N^N^^^0^0^0
+	CE:
+	CS:3^LU^Iid Element^N^N
+		P:Position^3
+		A:Text^Mandatory string^N^M^N^N^^^0^0^0
+	CE:
+	CS:4^LU^Iid Element^N^N
+		P:Position^4
+		A:Text^Mandatory date^N^M^N^N^^^0^0^0
+	CE:
+	CS:5^LU^Iid Element^N^N
+		P:Position^5
+		A:Text^Optional^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceRules^LU^Logical Unit^N^N
+	A:Prompt^Intface Rules^N^M^N^N^^^0^0^0
+	CS:CHECKRULEERROR^LU^Message^N^N
+		A:Text^Rule :P1 is not valid for procedure name :P2.^N^M^N^N^^^0^0^0
+	CE:
+	CS:ERRCONN^LU^Message^N^N
+		A:Text^Job :P1 is already connected to :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:ERRCONN2^LU^Message^N^N
+		A:Text^Job :P1 must be using procedure CREATE_TABLE_FROM_FILE^N^M^N^N^^^0^0^0
+	CE:
+	CS:ERRORVAL1^LU^Message^N^N
+		A:Text^Valid values are KEEPALL , KEEPERR or NOBACKUP^N^M^N^N^^^0^0^0
+	CE:
+	CS:ERRORVAL2^LU^Message^N^N
+		A:Text^Valid values are INSERT or UPDATE^N^M^N^N^^^0^0^0
+	CE:
+	CS:ERRORVAL3^LU^Message^N^N
+		A:Text^Valid values are BEFORE or AFTER^N^M^N^N^^^0^0^0
+	CE:
+	CS:FILERULEERR^LU^Message^N^N
+		A:Text^Rule :P1 cannot be active as long as :P2 is active^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTFACE_RULES^LU^View^N^N
+		CS:INTFACE_NAME^LU^Column^N^N
+			A:Prompt^Job ID^N^M^N^N^A4761C4C42F34E1FAC5D759B410FD6CB^SHORT_NAME^1^1^0
+		CE:
+		CS:RULE_FLAG^LU^Column^N^N
+			A:Prompt^Rule Flag^N^M^N^N^48C3511BE4D844928F96A5A7106BB04B^SHORT_NAME^1^1^0
+		CE:
+		CS:RULE_FLAG_DB^LU^Column^N^N
+			A:Prompt^Rule Flag^N^M^N^N^48C3511BE4D844928F96A5A7106BB04B^SHORT_NAME^1^1^0
+		CE:
+		CS:RULE_ID^LU^Column^N^N
+			A:Prompt^Rule Id^N^M^N^N^C1F513228FC8494D8EEDB5387F2AD8AF^SHORT_NAME^1^1^0
+		CE:
+		CS:RULE_VALUE^LU^Column^N^N
+			A:Prompt^Rule Value^N^M^N^N^A19C98D949C142E6AC281B65D37AB55B^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:INTFACE_RULES_LOV^LU^View^N^N
+		CS:DESCRIPTION^LU^Column^N^N
+			A:Prompt^Description^N^M^N^N^2BC55137D3C64659903EF421785CB879^SHORT_NAME^1^1^0
+		CE:
+		CS:RULE_FLAG^LU^Column^N^N
+			A:Prompt^Rule Flag^N^M^N^N^48C3511BE4D844928F96A5A7106BB04B^SHORT_NAME^1^1^0
+		CE:
+		CS:RULE_ID^LU^Column^N^N
+			A:Prompt^Rule Id^N^M^N^N^C1F513228FC8494D8EEDB5387F2AD8AF^SHORT_NAME^1^1^0
+		CE:
+		CS:RULE_VALUE^LU^Column^N^N
+			A:Prompt^Rule Value^N^M^N^N^A19C98D949C142E6AC281B65D37AB55B^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:REPLUSR1^LU^Message^N^N
+		A:Text^This rule can be used for REPLICATION jobs only^N^M^N^N^^^0^0^0
+	CE:
+	CS:REPLUSR2^LU^Message^N^N
+		A:Text^Alternative user not defined in System Parameters in Admin.exe^N^M^N^N^^^0^0^0
+	CE:
+	CS:REPLUSR3^LU^Message^N^N
+		A:Text^Alternative user cannot be defined equal to Appowner in System Parameters in Admin.exe^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceServerFile^LU^Logical Unit^N^N
+	A:Prompt^Intface Server File^N^M^N^N^^^0^0^0
+	CS:CNTERR^LU^Message^N^N
+		A:Text^An Error occured while counting records^N^M^N^N^^^0^0^0
+	CE:
+	CS:CREERR^LU^Message^N^N
+		A:Text^Records were rejected. Check logfile from start-window^N^M^N^N^^^0^0^0
+	CE:
+	CS:INTFACE_SERVER_DIR_LOV^LU^View^N^N
+		CS:GRANTS^LU^Column^N^N
+		CE:
+		CS:NAME^LU^Column^N^N
+			A:Prompt^Name^N^M^N^N^^^0^0^0
+		CE:
+		CS:PATH^LU^Column^N^N
+			A:Prompt^Path^N^M^N^N^^^0^0^0
+		CE:
+	CE:
+	CS:INTFACE_SERVER_FILES_LOV^LU^View^N^N
+		CS:FILE_DATE^LU^Column^N^N
+			A:Prompt^File Date^N^M^N^N^^^0^0^0
+		CE:
+		CS:FILE_NAME^LU^Column^N^N
+			A:Prompt^File Name^N^M^N^N^^^0^0^0
+		CE:
+		CS:FILE_SIZE^LU^Column^N^N
+			A:Prompt^File Size^N^M^N^N^^^0^0^0
+		CE:
+	CE:
+	CS:NOFILE^LU^Message^N^N
+		A:Text^File :P1 does not exist on :P2^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOICTAB^LU^Message^N^N
+		A:Text^Table :P1 does not exist^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOINS^LU^Message^N^N
+		A:Text^Insert in IC-table failed. RMB Unpack File in Execute Job window will display format errors. :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOSERV^LU^Message^N^N
+		A:Text^File location must be :P1, not :P2. Update job header^N^M^N^N^^^0^0^0
+	CE:
+	CS:NOTAB^LU^Message^N^N
+		A:Text^External table not created. :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:SYNTAXERROR^LU^Message^N^N
+		A:Text^Column name :P1 is ambigously defined^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceTableMigrations^LU^Logical Unit^N^N
+	A:Prompt^Table Migration Parametres^N^M^N^N^^^0^0^0
+	CS:INTFACE_TABLE_MIGRATIONS^LU^View^N^N
+		CS:DM_DATE_FORMAT^LU^Column^N^N
+			A:Prompt^Date Format^N^M^N^N^451662EC58AC4D5BABB711ED2FACA9F8^FULL_NAME^1^1^0
+		CE:
+		CS:DM_DB_LINK^LU^Column^N^N
+			A:Prompt^Database Link Name^N^M^N^N^bffbdfbf-0692-4315-9070-694d850fe68c^FULL_NAME^1^1^0
+		CE:
+		CS:DM_KEY_COLUMNS^LU^Column^N^N
+			A:Prompt^Key Columns on Table^N^M^N^N^7324E35FCEE44D0E93B4F361FCB77F0F^SHORT_NAME^1^1^0
+		CE:
+		CS:DM_OPERATION^LU^Column^N^N
+			A:Prompt^Operation on Table^N^M^N^N^C3E1AAE3553846099442293664369B79^SHORT_NAME^1^1^0
+		CE:
+		CS:DM_TABLE_NAME^LU^Column^N^N
+			A:Prompt^Table Name^N^M^N^N^352B68FFEE244A7F9739F0A8776745E9^FULL_NAME^1^1^0
+		CE:
+		CS:DM_TABLE_OWNER^LU^Column^N^N
+			A:Prompt^Table Owner^N^M^N^N^CA1B97D875A242448DD7C8F400FEE950^FULL_NAME^1^1^0
+		CE:
+	CE:
+	CS:NOCOL^LU^Message^N^N
+		A:Text^No columns to update^N^M^N^N^^^0^0^0
+	CE:
+	CS:PROCERR^LU^Message^N^N
+		A:Text^Error :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:TABERR^LU^Message^N^N
+		A:Text^Cannot update :P2.:P1^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceUser^LU^Logical Unit^N^N
+	A:Prompt^Intface User^N^M^N^N^^^0^0^0
+	CS:INTFACE_USER^LU^View^N^N
+		CS:IDENTITY^LU^Column^N^N
+			A:Prompt^Identity^N^M^N^N^785B912BD37541688C9DF79B78A2BC44^SHORT_NAME^1^1^0
+		CE:
+		CS:PRIVILEGE^LU^Column^N^N
+			A:Prompt^Privilege^N^M^N^N^E350ACC5751E4328A13CA406E55E2E81^SHORT_NAME^1^1^0
+		CE:
+		CS:PRIVILEGE_DB^LU^Column^N^N
+			A:Prompt^Privilege^N^M^N^N^E350ACC5751E4328A13CA406E55E2E81^SHORT_NAME^1^1^0
+		CE:
+	CE:
+CE:
+CS:IntfaceUtil^LU^Logical Unit^N^N
+	A:Prompt^Intface Util^N^M^N^N^^^0^0^0
+	CS:COMPILE_ERRORS^LU^Message^N^N
+		A:Text^Compilation errors for triggers :P1^N^M^N^N^^^0^0^0
+	CE:
+	CS:UPDERR^LU^Message^N^N
+		A:Text^You cannot update other tables than IC-tables^N^M^N^N^^^0^0^0
+	CE:
+CE:
+CS:IntfaceViews^LU^Logical Unit^N^N
+	A:Prompt^Intface Views^N^M^N^N^^^0^0^0
+	CS:INTFACE_SOURCE_COL_LOV^LU^View^N^N
+		CS:COLUMN_ID^LU^Column^N^N
+		CE:
+		CS:COLUMN_NAME^LU^Column^N^N
+			A:Prompt^Column Name^N^M^N^N^71CCC3ACE1794EB4ABCD4A602E70B75A^FULL_NAME^1^1^0
+		CE:
+		CS:DATA_LENGTH^LU^Column^N^N
+			A:Prompt^Data Length^N^M^N^N^8a25b4f6-2d27-42d1-9769-8abd46ce03dc^FULL_NAME^1^1^0
+		CE:
+		CS:DATA_PRECISION^LU^Column^N^N
+			A:Prompt^Data Precision^N^M^N^N^6a06a69a-3b96-44e3-bc51-0d26fa315d19^FULL_NAME^1^1^0
+		CE:
+		CS:DATA_SCALE^LU^Column^N^N
+			A:Prompt^Data Scale^N^M^N^N^d610222e-a47c-44ed-81a8-2640ef0e1c80^FULL_NAME^1^1^0
+		CE:
+		CS:DATA_TYPE^LU^Column^N^N
+			A:Prompt^Data Type^N^M^N^N^81307AD529EB470E9C2A150E7841F6E8^ABBREVIATION^1^1^0
+		CE:
+		CS:NULLABLE^LU^Column^N^N
+			A:Prompt^Nullable^N^M^N^N^a3fe2cab-8a35-4c7b-b3c4-002ec71d7b14^FULL_NAME^1^1^0
+		CE:
+		CS:SOURCE_NAME^LU^Column^N^N
+			A:Prompt^Source Name^N^M^N^N^534600EB704545C6AC9760F8786D069F^FULL_NAME^1^1^0
+		CE:
+		CS:SOURCE_OWNER^LU^Column^N^N
+			A:Prompt^Source Owner^N^M^N^N^A54A1E579BFC42B6A1EAB3BB6EDDB121^FULL_NAME^1^1^0
+		CE:
+	CE:
+	CS:INTFACE_VIEWS^LU^View^N^N
+		CS:VIEW_NAME^LU^Column^N^N
+			A:Prompt^View Name^N^M^N^N^34A69FA64F4F413588CFF6084387C5F1^SHORT_NAME^1^1^0
+		CE:
+	CE:
+	CS:INTFACE_VIEWS_COL_INFO^LU^View^N^N
+		CS:COLUMN_ID^LU^Column^N^N
+		CE:
+		CS:COLUMN_NAME^LU^Column^N^N
+			A:Prompt^Column Name^N^M^N^N^71CCC3ACE1794EB4ABCD4A602E70B75A^FULL_NAME^1^1^0
+		CE:
+		CS:DATA_LENGTH^LU^Column^N^N
+			A:Prompt^Data Length^N^M^N^N^8a25b4f6-2d27-42d1-9769-8abd46ce03dc^FULL_NAME^1^1^0
+		CE:
+		CS:DATA_PRECISION^LU^Column^N^N
+			A:Prompt^Data Precision^N^M^N^N^6a06a69a-3b96-44e3-bc51-0d26fa315d19^FULL_NAME^1^1^0
+		CE:
+		CS:DATA_SCALE^LU^Column^N^N
+			A:Prompt^Data Scale^N^M^N^N^d610222e-a47c-44ed-81a8-2640ef0e1c80^FULL_NAME^1^1^0
+		CE:
+		CS:DATA_TYPE^LU^Column^N^N
+			A:Prompt^Data Type^N^M^N^N^81307AD529EB470E9C2A150E7841F6E8^ABBREVIATION^1^1^0
+		CE:
+		CS:NULLABLE^LU^Column^N^N
+			A:Prompt^Nullable^N^M^N^N^a3fe2cab-8a35-4c7b-b3c4-002ec71d7b14^FULL_NAME^1^1^0
+		CE:
+		CS:VIEW_NAME^LU^Column^N^N
+			A:Prompt^View Name^N^M^N^N^34A69FA64F4F413588CFF6084387C5F1^SHORT_NAME^1^1^0
+		CE:
+	CE:
+CE:
+CS:IntfaceXsdUtil^LU^Logical Unit^N^N
+	A:Prompt^Intface Xsd Util^N^M^N^N^^^0^0^0
+	CS:XSDCRE^LU^Message^N^N
+		A:Text^XSD created as Client File, :P1 lines^N^M^N^N^^^0^0^0
+	CE:
+CE:

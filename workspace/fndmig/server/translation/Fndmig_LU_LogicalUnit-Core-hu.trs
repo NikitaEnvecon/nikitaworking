@@ -1,0 +1,1702 @@
+-------------------------------------------------------
+File Type: IFS Foundation Translation File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Language: hu
+Culture: hu-HU
+Fittings: Standard
+Layer: Core
+Main Type: LU
+Sub Type: Logical Unit
+-------------------------------------------------------
+CS:IntfaceChangeDefaults^LU
+	A:Prompt^Intface alap\00E9rt. v\00E1ltoztat.^O
+	CS:1^LU
+		A:Text^Enged.^O
+	CE:
+	CS:2^LU
+		A:Text^Nem megeng.^O
+	CE:
+	CS:3^LU
+		A:Text^R\00F6gz. \00E9rt\00E9k^O
+	CE:
+CE:
+CS:IntfaceConvList^LU
+	A:Prompt^Intface \00E1tv. lista^O
+	CS:INTFACE_CONV_LIST^LU
+	CE:
+CE:
+CS:IntfaceConvListCols^LU
+	A:Prompt^Intface \00E1tv. lista oszl.^O
+	CS:INTFACE_CONV_LIST_COLS^LU
+	CE:
+CE:
+CS:IntfaceDefaultRules^LU
+	A:Prompt^Intface alap\00E9rt. szab\00E1lyok^O
+	CS:ADDOBJID^LU
+		A:Text^K\00FCl\00F6n oszlop r\00E9szletek l\00E9trehoz\00E1sa OBJID (obj.az.)-hoz^O
+	CE:
+	CS:CHECKOPTION^LU
+		A:Text^\00DAj \00E9s M\00F3dos\00EDt\00E1s m\00F3dszerek v\00E9grehajt\00E1sa ELLEN\0150RZ\00C9S opci\00F3val^O
+	CE:
+	CS:CLEANUP^LU
+		A:Text^Hibar\00E9szletek automatikus t\00F6rl\00E9se^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Sorok sz\00E1ma v\00E9gleges\00EDt\00E9sek k\00F6z\00F6tt^O
+	CE:
+	CS:CONNJOB^LU
+		A:Text^Kezdjen ezzel a feladattal^O
+	CE:
+	CS:CREATEDET^LU
+		A:Text^\00DAj oszlop r\00E9szletek l\00E9trehoz\00E1sa a M\00F3dszerLista n\00E9zetek alapj\00E1n^O
+	CE:
+	CS:CRETABCONF^LU
+		A:Text^T\00E1rol\00F3 t\00E1bl\00E1zat opci\00F3k^O
+	CE:
+	CS:EVENTMESS^LU
+		A:Text^Esem\00E9nyszerver \00E9rtes\00EDt\00E9se feladat befejez\00E9sekor^O
+	CE:
+	CS:EXITLINES^LU
+		A:Text^F\00E1jl olvas\00E1s\00E1nak befejez\00E9se ez ut\00E1n a sorsz\00E1m ut\00E1n^O
+	CE:
+	CS:FETCHCONDITION^LU
+		A:Text^Annak be\00E1ll\00EDt\00E1sa, hogy a Feladat haszn\00E1lhat\00F3-e adatok beh\00EDv\00E1s\00E1ra. T\00F6bb logikai egys\00E9g haszn\00E1lata eset\00E9n meghat\00E1rozza a csatol\00E1si felt\00E9telt.^O
+	CE:
+	CS:FILEBKP^LU
+		A:Text^Biztons\00E1gi m\00E1solat k\00E9sz\00EDt\00E9se a sikeres v\00E9grehajt\00E1s ut\00E1n^O
+	CE:
+	CS:FILEHEAD^LU
+		A:Text^F\00E1jl fejl\00E9c l\00E9trehoz\00E1sa oszlop nevekkel. Csak CSV-f\00E1jlokn\00E1l^O
+	CE:
+	CS:IGNOREADERROR^LU
+		A:Text^Folytassa a f\00E1jl olvas\00E1s\00E1t akkor is, ha hiba t\00F6rt\00E9nik^O
+	CE:
+	CS:IGNOREXEERROR^LU
+		A:Text^Folytassa az elj\00E1r\00E1st akkor is, ha hiba t\00F6rt\00E9nik^O
+	CE:
+	CS:INSUPD^LU
+		A:Text^BESZ\00DAR\00C1S vagy FRISS\00CDT\00C9S v\00E9grehajt\00E1sa^O
+	CE:
+	CS:INTFACE_DEFAULT_RULES^LU
+	CE:
+	CS:NOCLEANUP^LU
+		A:Text^Kliens f\00E1jlok minden feladat r\00E9szlet\00E9nek megtart\00E1sa^O
+	CE:
+	CS:SAVEJOBDAYS^LU
+		A:Text^Feladat t\00F6rt\00E9net ment\00E9s\00E9nek napjai^O
+	CE:
+	CS:SAVEJOBERR^LU
+		A:Text^Csak hib\00E1k ment\00E9se az esem\00E9nynapl\00F3ba^O
+	CE:
+	CS:SERVFILOAD^LU
+		A:Text^Szerverf\00E1jl bet\00F6lt\00E9se feladat elkezd\00E9se el\0151tt^O
+	CE:
+	CS:SKIPLINES^LU
+		A:Text^F\00E1jl olvas\00E1sa ez ut\00E1n a sorsz\00E1m ut\00E1n^O
+	CE:
+	CS:SYNCDETAILS^LU
+		A:Text^Feladatr\00E9szletek szinkroniz\00E1l\00E1sa a f\00E1jl fejl\00E9cben tal\00E1lhat\00F3 oszlopokkal^O
+	CE:
+	CS:TRUNCVAL^LU
+		A:Text^A csonk\00EDtott \00E9rt\00E9kek meghaladj\00E1k az oszlop hossz\00FAs\00E1got^O
+	CE:
+CE:
+CS:IntfaceDetail^LU
+	A:Prompt^Intface r\00E9szlet^O
+	CS:CHECKERROR^LU
+		A:Text^:P1 ellen\0151rz\00E9se sikertelen - :P2 (A hiba oka: :P3 sor)^O
+	CE:
+	CS:CLIENTVAL^LU
+		A:Text^Kliens-\00E9rt\00E9kek^O
+	CE:
+	CS:COLOUTDAT^LU
+		A:Text^Hiba :P1 :P2 d\00E1tum \00E9rt\00E9kkel val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:COLOUTDAT2^LU
+		A:Text^Hiba a(z) :P1 d\00E1tum oszlop form\00E1z\00E1sakor^O
+	CE:
+	CS:COLOUTNUM^LU
+		A:Text^Hiba :P1 :P2 numerikus \00E9rt\00E9kkel val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:COLOUTNUM2^LU
+		A:Text^Hiba a(z) :P1 sz\00E1m oszlop form\00E1z\00E1sakor^O
+	CE:
+	CS:COLUMNOUT^LU
+		A:Text^Hiba :P1 :P2 \00E9rt\00E9kkel val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:COLUMNOUT2^LU
+		A:Text^Hiba a(z) :P1 oszlop form\00E1z\00E1sakor^O
+	CE:
+	CS:COMMITCNT^LU
+		A:Text^:P1 sz\00E1m\00FA sor v\00E9gleges\00EDtve: :P2^O
+	CE:
+	CS:CREERRORATTR^LU
+		A:Text^F\00E1jl l\00E9trehoz\00E1sa :P1-b\0151l nem siker\00FClt^O
+	CE:
+	CS:CREFORMAT^LU
+		A:Text^F\00E1jl l\00E9trehoz\00E1sa nem siker\00FClt - :P1^O
+	CE:
+	CS:CREINTFACEOK^LU
+		A:Text^:P1 adatbet\00F6lt\00E9si feladat befejez\0151d\00F6tt^O
+	CE:
+	CS:DBVAL^LU
+		A:Text^AB-\00E9rt\00E9kek^O
+	CE:
+	CS:ERRDEFAULT^LU
+		A:Text^:P1 csak akkor haszn\00E1latos, ha az ir\00E1ny = :P2^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Alap\00E9rt.-where nem haszn\00E1latos a(z) :P1 ir\00E1nyhoz^O
+	CE:
+	CS:FILENOTFOUND^LU
+		A:Text^:P1 f\00E1jl nem tal\00E1lhat\00F3 :P2 \00FAtvonalon.^O
+	CE:
+	CS:FORMATERROR^LU
+		A:Text^Form\00E1z\00E1s sikertelen - :P2 (A hiba oka: :P2 sor)^O
+	CE:
+	CS:INSCHECK^LU
+		A:Text^:P1 \00FAj sorok ellen\0151rizve OK^O
+	CE:
+	CS:INSCHECKERR^LU
+		A:Text^:P1 sor ellen\0151rizve hib\00E1val^O
+	CE:
+	CS:INSERRORNEW^LU
+		A:Text^:P1 helyre t\00F6rt\00E9n\0151 besz\00FAr\00E1s sikertelen - :P2 (A hiba oka: :P3 sor)^O
+	CE:
+	CS:INSINTERR^LU
+		A:Text^:P1 sorn\00E1l hiba^O
+	CE:
+	CS:INSINTINS^LU
+		A:Text^:P1 \00FAj sorok beillesztve^O
+	CE:
+	CS:INSINTNOROWS^LU
+		A:Text^Nem lett sor feldolgozva^O
+	CE:
+	CS:INSINTOK^LU
+		A:Text^:P1 adatbet\00F6lt\00E9si feladat befejez\0151d\00F6tt^O
+	CE:
+	CS:INTFACE_DETAIL^LU
+		CS:SOURCE_NAME^LU
+		CE:
+		CS:SOURCE_OWNER^LU
+		CE:
+	CE:
+	CS:INTFACE_DETAIL_COL_LOV^LU
+	CE:
+	CS:LOADERR^LU
+		A:Text^Hiba :P1 adatbet\00F6lt\00E9si feladat info bet\00F6lt\00E9sekor^O
+	CE:
+	CS:NODET^LU
+		A:Text^:P1-hez nincsenek r\00E9szletek^O
+	CE:
+	CS:NOROWS^LU
+		A:Text^Nem lett sor feldolgozva^O
+	CE:
+	CS:NOVAL^LU
+		A:Text^:P1-hez nincsenek AB/Kliens \00E9rt\00E9kek^O
+	CE:
+	CS:ROWSFAILED^LU
+		A:Text^:P1 sorn\00E1l hiba^O
+	CE:
+	CS:ROWSWRITTEN^LU
+		A:Text^:P1 sor ki\00EDrva^O
+	CE:
+	CS:STRINGOUT^LU
+		A:Text^Hiba :P1 :P2 \00E9rt\00E9kkel val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:STRINGOUT2^LU
+		A:Text^Hiba a(z) :P1 oszlop form\00E1z\00E1sakor^O
+	CE:
+	CS:STRINGOUTCONV^LU
+		A:Text^Hiba :P2 \00E9rt\00E9k :P1-re konvert\00E1l\00E1sakor^O
+	CE:
+	CS:STRINGOUTCONV2^LU
+		A:Text^Hiba a(z) :P1 oszlop konvert\00E1l\00E1sakor^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^:P3 \00E9rt\00E9k t\00FAll\00E9pi a(z) :P1 oszlophoz meghat\00E1rozott :P2 hossz\00FAs\00E1got. A TRUNCVAL szab\00E1ly ezt lehet, hogy megoldja.^O
+	CE:
+	CS:TOOLONG2^LU
+		A:Text^A(z) :P1 oszlophoz meghat\00E1rozott :P2 hossz\00FAs\00E1g t\00FAll\00E9pve. A TRUNCVAL szab\00E1ly ezt lehet, hogy megoldja.^O
+	CE:
+	CS:UNPACKPOS^LU
+		A:Text^Hiba t\00F6rt\00E9nt :P1 :P2 \00E9rt\00E9kkel val\00F3 kicsomagol\00E1sakor^O
+	CE:
+	CS:UNPACKPOS2^LU
+		A:Text^Hiba a(z) :P1 oszlop kicsomagol\00E1sakor^O
+	CE:
+	CS:UNPACKPOSCONV^LU
+		A:Text^Hiba :P2 \00E9rt\00E9k :P1-re konvert\00E1l\00E1sakor^O
+	CE:
+	CS:UNPACKPOSDAT^LU
+		A:Text^Hiba :P2 d\00E1tuma \00E9rt\00E9k :P1-re val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKPOSDAT2^LU
+		A:Text^Hiba a(z) :P1 d\00E1tum oszlop form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKPOSDEF^LU
+		A:Text^Hiba :P2 alap\00E9rt. \00E9rt\00E9k :P1-re val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKPOSNUM^LU
+		A:Text^Hiba :P2 numerikus \00E9rt\00E9k :P1-re val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKPOSNUM2^LU
+		A:Text^Hiba a(z) :P1 sz\00E1m oszlop form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKPOSSTR^LU
+		A:Text^Hiba :P2 sztring \00E9rt\00E9k :P1-re val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKPOSSTR2^LU
+		A:Text^Hiba a(z) :P1 sztring oszlop form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Hiba t\00F6rt\00E9nt :P1 :P2 \00E9rt\00E9kkel val\00F3 kicsomagol\00E1sakor^O
+	CE:
+	CS:UNPACKSEP2^LU
+		A:Text^Hiba a(z) :P1 oszlop kicsomagol\00E1sakor^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Hiba :P2 \00E9rt\00E9k :P1-re konvert\00E1l\00E1sakor^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Hiba :P2 d\00E1tuma \00E9rt\00E9k :P1-re val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKSEPDAT2^LU
+		A:Text^Hiba a(z) :P1 d\00E1tum oszlop form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Hiba :P2 alap\00E9rt. \00E9rt\00E9k :P1-re val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Hiba :P2 numerikus \00E9rt\00E9k :P1-re val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKSEPNUM2^LU
+		A:Text^Hiba a(z) :P1 sz\00E1m oszlop form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Hiba az oszlop \00E9rt\00E9kek oszlop elv\00E1laszt\00F3 szerinti olvas\00E1sakor^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Hiba :P2 sztring \00E9rt\00E9k :P1-re val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKSEPSTR2^LU
+		A:Text^Hiba a(z) :p1 sztring oszlop form\00E1z\00E1sakor^O
+	CE:
+	CS:UPDERRORCHK^LU
+		A:Text^:P1 hiba :P2 v\00E9grehajt\00E1sakor^O
+	CE:
+	CS:UPDERRORUPD^LU
+		A:Text^:P1 friss\00EDt\00E9se sikertelen - :P2 (A hiba oka: :P3 sor)^O
+	CE:
+	CS:UPDINTFACEOK^LU
+		A:Text^:P1 adatbet\00F6lt\00E9si feladat befejez\0151d\00F6tt^O
+	CE:
+	CS:UPDINTFERR^LU
+		A:Text^:P1 sorn\00E1l hiba^O
+	CE:
+	CS:UPDINTFINS^LU
+		A:Text^:P1 \00FAj sorok beillesztve^O
+	CE:
+	CS:UPDINTFUPD^LU
+		A:Text^:P1 sor m\00F3dos\00EDtva^O
+	CE:
+	CS:VALFOUND^LU
+		A:Text^Tal\00E1lt AB/Kliens \00E9rt\00E9kek^O
+	CE:
+	CS:WRNOROWS^LU
+		A:Text^Nem lett sor feldolgozva^O
+	CE:
+CE:
+CS:IntfaceDirection^LU
+	A:Prompt^Intface ir\00E1ny^O
+	CS:1^LU
+		A:Text^Bej\00F6v\0151 f\00E1jl^O
+	CE:
+	CS:2^LU
+		A:Text^Kimen\0151 f\00E1jl^O
+	CE:
+	CS:3^LU
+		A:Text^Egyik sem^O
+	CE:
+	CS:4^LU
+		A:Text^Forr\00E1s adatbet\00F6lt\00E9s^O
+	CE:
+	CS:5^LU
+		A:Text^Replik. strukt\00FAra^O
+	CE:
+	CS:6^LU
+		A:Text^Excel adatbet\00F6lt\00E9s^O
+	CE:
+CE:
+CS:IntfaceDocumentation^LU
+	A:Prompt^Intface dokument\00E1ci\00F3^O
+	CS:INFTXTDETAIL^LU
+		A:Text^Nem haszn\00E1lt^O
+	CE:
+	CS:INFTXTHEADER^LU
+		A:Text^Nem haszn\00E1lt^O
+	CE:
+	CS:INFTXTMETHLI^LU
+		A:Text^Nem haszn\00E1lt^O
+	CE:
+	CS:INTFACE_DOCUMENTATION_REP^LU
+		A:Title^Adatbet\00F6lt\00E9s dokument\00E1ci\00F3^O
+		CS:ACTION^LU
+			A:Title^M\0171velet^O
+		CE:
+		CS:AMOUNT_FACTOR^LU
+			A:Title^Mennyis\00E9g t\00E9nyez\0151^O
+		CE:
+		CS:ATTR_SEQ^LU
+			A:Title^Attr. sorozat^O
+		CE:
+		CS:BLOCK_TYPE^LU
+			A:Title^Blokk t\00EDpus^O
+		CE:
+		CS:CHANGE_DEFAULTS^LU
+			A:Title^Alap\00E9rt\00E9kek m\00F3dos\00EDt\00E1sa^O
+		CE:
+		CS:COLS_USING_LIST^LU
+			A:Title^Konverzi\00F3s list\00E1t haszn\00E1l\00F3 oszlopok:^O
+		CE:
+		CS:COLUMN_EMBRACE^LU
+			A:Title^Oszlop - k\00F6rbefog^O
+		CE:
+		CS:COLUMN_NAME^LU
+			A:Title^C\00E9l oszlop^O
+		CE:
+		CS:COLUMN_SEPARATOR^LU
+			A:Title^Oszlop elv\00E1laszt\00F3^O
+		CE:
+		CS:CONVERT_ATTR^LU
+			A:Title^Tulajd. konvert^O
+		CE:
+		CS:CONV_LIST_DESCR^LU
+			A:Title^Konv. lista megnev.^O
+		CE:
+		CS:CONV_LIST_ID^LU
+			A:Title^Konv. lista^O
+		CE:
+		CS:DATA_TYPE^LU
+			A:Title^Adat t\00EDpus^O
+		CE:
+		CS:DATE_FORMAT^LU
+			A:Title^D\00E1tum form\00E1tum^O
+		CE:
+		CS:DECIMAL_LENGTH^LU
+			A:Title^Tizedes hossz^O
+		CE:
+		CS:DECIMAL_POINT^LU
+			A:Title^Tizedes elv\00E1laszt\00F3^O
+		CE:
+		CS:DEFAULT_VALUE^LU
+			A:Title^Alap\00E9rt\00E9k^O
+		CE:
+		CS:DEFAULT_WHERE^LU
+			A:Title^Alap\00E9rt. Where^O
+		CE:
+		CS:DESCR_COLUMN_NAME^LU
+			A:Title^Oszlop megnevez\00E9s^O
+		CE:
+		CS:DIRECTION^LU
+			A:Title^Ir\00E1ny^O
+		CE:
+		CS:DIRECTION_DB^LU
+			A:Title^Ir\00E1ny AB^O
+		CE:
+		CS:EXECUTED_BY^LU
+			A:Title^V\00E9grehajt\00F3^O
+		CE:
+		CS:EXECUTE_SEQ^LU
+			A:Title^Sorozat v\00E9grehajt\00E1s^O
+		CE:
+		CS:FILE_LOCATION^LU
+			A:Title^F\00E1jl helye^O
+		CE:
+		CS:FILE_LOCATION_DB^LU
+			A:Title^F\00E1jl helye AB^O
+		CE:
+		CS:FLAGS^LU
+			A:Title^Jelz\0151k^O
+		CE:
+		CS:GROUP_DESCRIPTION^LU
+			A:Title^Csoport megnev.^O
+		CE:
+		CS:GROUP_ID^LU
+			A:Query^Csoport az.:^O
+			A:Title^Csoport az.^O
+		CE:
+		CS:INFO_TEXT_DETAIL^LU
+			A:Title^Info:^O
+		CE:
+		CS:INFO_TEXT_HEADER^LU
+			A:Title^Info:^O
+		CE:
+		CS:INFO_TEXT_METH_LIST^LU
+			A:Title^Info:^O
+		CE:
+		CS:INTFACE_DESCR^LU
+			A:Title^Adatbet\00F6lt\00E9s megnevez\00E9s^O
+		CE:
+		CS:INTFACE_FILE^LU
+			A:Title^F\00E1jl^O
+		CE:
+		CS:INTFACE_IN^LU
+			A:Query^Adatbet\00F6lt\00E9si feladat az.:^O
+		CE:
+		CS:INTFACE_NAME^LU
+			A:Title^Adatbet\00F6lt\00E9si feladat az.^O
+		CE:
+		CS:INTFACE_PATH^LU
+			A:Title^\00DAtvonal^O
+		CE:
+		CS:IntfaceDoc.rdl^LU
+			A:Title^Adatbet\00F6lt\00E9s dokumentum^O
+		CE:
+		CS:LAST_EXECUTED^LU
+			A:Title^Utols\00F3 v\00E9grehajt\00E1s^O
+		CE:
+		CS:LAST_INFO^LU
+			A:Title^Utols\00F3 info^O
+		CE:
+		CS:LENGTH^LU
+			A:Title^Hossz^O
+		CE:
+		CS:MET_COLUMN_NAME^LU
+			A:Title^Szab\00E1ly oszlop^O
+		CE:
+		CS:MET_COLUMN_VALUE^LU
+			A:Title^Szab\00E1ly \00E9rt\00E9k^O
+		CE:
+		CS:MET_METHOD_NAME^LU
+			A:Title^M\00F3dszer^O
+		CE:
+		CS:MET_VIEW_NAME^LU
+			A:Title^Megtekint\00E9s^O
+		CE:
+		CS:MINUS_POS^LU
+			A:Title^M\00EDnusz jel poz.^O
+		CE:
+		CS:NEW_VALUE^LU
+			A:Title^\00DAj \00E9rt\00E9k^O
+		CE:
+		CS:NOTE_TEXT_DETAIL^LU
+			A:Title^Megjegyz\00E9sek^O
+		CE:
+		CS:NOTE_TEXT_GROUP^LU
+			A:Title^Megjegyz\00E9sek^O
+		CE:
+		CS:NOTE_TEXT_HEADER^LU
+			A:Title^Megjegyz\00E9sek^O
+		CE:
+		CS:NOTE_TEXT_METH_LIST^LU
+			A:Title^Megjegyz\00E9sek^O
+		CE:
+		CS:OLD_VALUE^LU
+			A:Title^R\00E9gi \00E9rt\00E9k^O
+		CE:
+		CS:ORDER_BY_CLAUSE^LU
+			A:Title^Rendez\00E9s^O
+		CE:
+		CS:ORDER_BY_COL^LU
+			A:Title^Rendez\00E9s^O
+		CE:
+		CS:PAD_CHAR_LEFT^LU
+			A:Title^Sz\00E1mbill. kar. balra^O
+		CE:
+		CS:PAD_CHAR_RIGHT^LU
+			A:Title^Sz\00E1mbill. kar. jobbra^O
+		CE:
+		CS:POS^LU
+			A:Title^Poz.^O
+		CE:
+		CS:PRINT_DETAIL^LU
+			A:Query^Oszlop lek\00E9pez\00E9s nyomtat\00E1sa:^O
+		CE:
+		CS:PRINT_DOC_INFO^LU
+			A:Query^Dokumentum info nyomtat\00E1sa:^O
+		CE:
+		CS:PRINT_HEADER^LU
+			A:Query^Fejl\00E9c info nyomtat\00E1sa:^O
+		CE:
+		CS:PRINT_MAP_VALUE^LU
+			A:Query^Lek\00E9pezett \00E9rt\00E9kek nyomtat\00E1sa:^O
+		CE:
+		CS:PRINT_METH_LIST^LU
+			A:Query^M\00F3dszerlista nyomtat\00E1sa:^O
+		CE:
+		CS:PROCEDURE_NAME^LU
+			A:Title^Elj\00E1r\00E1s neve^O
+		CE:
+		CS:REFERENCES^LU
+			A:Title^Hivatkoz\00E1sok^O
+		CE:
+		CS:Report Constants^LU
+			A:txAction^Azt hat\00E1rozza meg, hogy a m\00F3dszert az el\0151tt vagy az ut\00E1n kell futtatni, hogy a kijel\00F6lt sorok kezelve lettek a forr\00E1sb\00F3l, vagy hogy a forr\00E1sb\00F3l leh\00EDvott minden egyes sorra k\00FCl\00F6n kell-e v\00E9grehajtani.^O
+			A:txAmountFactor^Ebben a mez\0151ben megadhat egy nevez\0151t a forr\00E1s oszlop \00E9rt\00E9k\00E9nek \00E1tsz\00E1m\00EDt\00E1s\00E1hoz, ha sz\00FCks\00E9ges, miel\0151tt \00E1tvinn\00E9 az IFS adatb\00E1zis oszlopba.^O
+			A:txChangeDefaults^Ez a mez\0151 hat\00E1rozza meg, hogy meg szabad-e v\00E1ltoztatni az alap\00E9rtelmezett \00E9rt\00E9ket, ha egy adatbet\00F6lt\00E9si feladatot futtat.^O
+			A:txColumnName^Az adatb\00E1zis oszlop az IFS-ben, ahov\00E1 a forr\00E1s \00E9rt\00E9ket \00E1t kell vezetni.^O
+			A:txDataType^Az adatb\00E1zis oszlop adatt\00EDpusa. Numerikus, alfanumerikus vagy d\00E1tum \00E9rt\00E9kek.^O
+			A:txDecimalLength^A haszn\00E1land\00F3 tizedes jegyek sz\00E1ma f\00E1jlb\00F3l olvas\00E1skor/f\00E1jlba \00EDr\00E1skor.^O
+			A:txDefaultValue^Ebben a mez\0151ben megadhat egy \00E9rt\00E9ket arra az esetre, ha nincs \00E9rt\00E9ke a forr\00E1soszlopban. Ha nincs forr\00E1soszlop megadva, a standard \00E9rt\00E9k fog szerepelni minden sorban.^O
+			A:txDescrColumnName^Az adatb\00E1zis oszlop megnevez\00E9se^O
+			A:txDetailTitle^Oszlop lek\00E9pez\00E9s specifik\00E1ci\00F3^O
+			A:txExecuteSeq^Adja meg, hogy milyen sorrendben kell futtatni a m\00F3dszer list\00E1ban tal\00E1lhat\00F3 m\00F3dszereket.^O
+			A:txFileInfo^F\00E1jl inform\00E1ci\00F3^O
+			A:txFlags^IFS attrib\00FAtum jelz\0151. A jelz\0151 az IFS adatb\00E1zis oszlophoz kapcsol\00F3d\00F3 k\00FCl\00F6nb\00F6z\0151 tulajdons\00E1gokat \00EDr le. Tartalmazhat egy vagy t\00F6bb \00E9rt\00E9ket az al\00E1bbiak k\00F6z\00FCl:^O
+			A:txFlagsI^I = Besz\00FAr\00E1s enged\00E9lyezett^O
+			A:txFlagsK^K = Kulcs (Idegen kulcs)^O
+			A:txFlagsM^M = K\00F6telez\0151^O
+			A:txFlagsP^P = Sz\00FCl\0151 kulcs^O
+			A:txFlagsU^U = Friss\00EDt\00E9s megengedett^O
+			A:txHeaderColMapping^Az Oszlop lek\00E9pez\00E9sben haszn\00E1lt oszlop magyar\00E1zat^O
+			A:txHeaderMethodList^A M\00F3dszer list\00E1ban haszn\00E1lt oszlop magyar\00E1zat^O
+			A:txHeaderTitle^Adatbet\00F6lt\00E9s rutinok specifik\00E1ci\00F3ja^O
+			A:txLastExecutionInfo^Utols\00F3 v\00E9grehajt\00E1s info^O
+			A:txLength^Ez a mez\0151 hat\00E1rozza meg az IFS adatb\00E1zis oszlop megengedett maxim\00E1lis hossz\00FAs\00E1g\00E1t. Ez a mez\0151 egy\00FCtt haszn\00E1latos a Poz. mez\0151vel r\00F6gz\00EDtett oszlopsz\00E9less\00E9g\0171 f\00E1jlok \00EDr\00E1sakor/olvas\00E1sakor.^O
+			A:txMapTitle^Adott oszlop \00E9rt\00E9k lek\00E9pez\00E9s^O
+			A:txMetColumnName^Annak meghat\00E1roz\00E1s\00E1ra szolg\00E1l, hogy a m\00F3dszert csak a forr\00E1s oszlop \00E9rt\00E9k\00E9t\0151l f\00FCgg\0151en kell-e futtatni.^O
+			A:txMetColumnValue^A m\00F3dszer csak akkor fut, ha a forr\00E1s oszlop \00E9rt\00E9ke egyenl\0151 ezzel az \00E9rt\00E9kkel. Azaz, ha a(z) \201E%\201D szerepel, a m\00F3dszer v\00E9gre lesz hajtva az \00F6sszes sorra, amelyn\00E9l \00E9rt\00E9k van a forr\00E1s oszlopban.^O
+			A:txMetMethodName^Hat\00E1rozza meg, hogy milyen IFS vagy saj\00E1t m\00F3dszert kell futtatni.^O
+			A:txMethodListTitle^Hasznos\00EDtott/L\00E9trehozott m\00F3dszerek/API-k^O
+			A:txPadCharLeft^Ebben a mez\0151ben megadhat egy karaktert, amely le lesz v\00E1gva az oszlop bal oldal\00E1r\00F3l, ill. hozz\00E1 lesz adva, amikor f\00E1jlb\00F3l olvas\00E1s/f\00E1jlba \00EDr. (ltrim/lpad)^O
+			A:txPadCharRight^Ebben a mez\0151ben megadhat egy karaktert, amely le lesz v\00E1gva az oszlop jobb oldal\00E1r\00F3l, ill. hozz\00E1 lesz adva, amikor f\00E1jlb\00F3l olvas\00E1s/f\00E1jlba \00EDr. (rtrim/rpad)^O
+			A:txPos^Ebben a mez\0151ben megadhatja az oszlopok hely\00E9t egy adott f\00E1jlban. Ha pl. CSV-f\00E1jlt haszn\00E1l, ez a mez\0151 1, 2, 3 stb. lesz.^O
+			A:txSourceColumn^Forr\00E1s oszlop f\00E1jlb\00F3l, t\00E1bl\00E1zatb\00F3l vagy n\00E9zetb\0151l, amelyet az IFS adatb\00E1zis oszlopba rakunk^O
+			A:txTitleDocPage^Defin\00EDci\00F3k / Oszlop megnevez\00E9sek^O
+			A:txViewInfo^F\0151 Forr\00E1s/C\00E9l inform\00E1ci\00F3k^O
+		CE:
+		CS:SOURCE_COLUMN^LU
+			A:Title^Forr\00E1s oszlop^O
+		CE:
+		CS:SOURCE_NAME^LU
+			A:Title^Forr\00E1s n\00E9v^O
+		CE:
+		CS:SOURCE_OWNER^LU
+			A:Title^Forr\00E1s tulajdonos^O
+		CE:
+		CS:THOUSAND_SEPARATOR^LU
+			A:Title^Ezres elv\00E1laszt\00F3^O
+		CE:
+		CS:VIEW_NAME^LU
+			A:Title^C\00E9l n\00E9v^O
+		CE:
+		CS:WHERE_CLAUSE^LU
+			A:Title^Hol^O
+		CE:
+	CE:
+	CS:INTFACE_INFO_SERVICES_RPV^LU
+	CE:
+CE:
+CS:IntfaceEvents^LU
+	A:Prompt^Intface esem\00E9nyek^O
+CE:
+CS:IntfaceExcelConnect^LU
+	A:Prompt^Intface Excel kapcsol\00E1s^O
+CE:
+CS:IntfaceExecIntervalType^LU
+	A:Prompt^Intface v\00E9greh. bels\0151 t\00EDpus^O
+	CS:1440^LU
+		A:Text^Perc^O
+	CE:
+	CS:24^LU
+		A:Text^\00D3ra^O
+	CE:
+	CS:86400^LU
+		A:Text^M\00E1sodperc^O
+	CE:
+CE:
+CS:IntfaceExecution^LU
+	A:Prompt^Intface v\00E9grehajt\00E1s^O
+	CS:INTFACE_EXECUTION^LU
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:IC_TABLE_NAME^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionDetail^LU
+	A:Prompt^Intface v\00E9grehajt\00E1s r\00E9szlet^O
+	CS:INTFACE_EXECUTION_DETAIL^LU
+		CS:ATTRIBUTE_STRING^LU
+		CE:
+		CS:DATE_EXECUTED^LU
+		CE:
+		CS:ERROR_MESSAGE^LU
+		CE:
+		CS:EXECUTED_BY^LU
+		CE:
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:FILE_STRING^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+		CS:LINE_NO^LU
+		CE:
+		CS:STATUS^LU
+		CE:
+		CS:STATUS_DB^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionUtil^LU
+	CS:BLANKCOLUMNS^LU
+		A:Text^Vagy a Forr\00E1s oszlopnak vagy az alap\00E9rtelmezett \00E9rt\00E9knek rendelkeznie kell \00E9rt\00E9kkel^O
+	CE:
+	CS:CHKCOUNT^LU
+		A:Text^:P1 sor ellen\0151rizve^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^COMMITSEQ szab\00E1llyal v\00E9gleges\00EDtett sorok: :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Ez a feladat nem ind\00EDthat\00F3. A kapcsol\00F3d\00F3 :P1 feladatban hib\00E1k vannak.^O
+	CE:
+	CS:CREIND^LU
+		A:Text^:P1-index l\00E9trehozva :P2 oszlopn\00E1l^O
+	CE:
+	CS:DUPEXIST^LU
+		A:Text^K\00E9t forr\00E1soszlop l\00E9tezik. A v\00E9grehajt\00E1s el\0151tt sz\00FCntesse meg a duplik\00E1lt elemeket.^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^M\00F3dszer sz. :P1 - Feladat az. \00E9rt\00E9ke nem egyezhet a f\0151 feladat\00E9val.^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Hiba n\00E9lk\00FCl v\00E9grehajtva^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^V\00C9GREHAJT\00C1SI M\00D3DSZER SZ. :P1 :^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^COMMIT vagy ROLLBACK miatt :P1 befejezetlen tranzakci\00F3 a h\00EDvott m\00F3dszerben.^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Hi\00E1nyos kiv\00E1laszt\00E1s nem lett v\00E9grehajtva - :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Ellen\0151rizze az eredm\00E9nyt. A tranzakci\00F3k r\00E9szben v\00E9gleges\00EDtettek lehetnek^O
+	CE:
+	CS:INVALIDLENGTH^LU
+		A:Text^A forr\00E1soszlop nem haladhatja meg a harminc karaktert^O
+	CE:
+	CS:JOBRUNERROR^LU
+		A:Text^Hiba a(z) :P1 feladat v\00E9grehajt\00E1sakor^O
+	CE:
+	CS:LNGTHINVAL^LU
+		A:Text^30 karaktert meghalad\00F3 forr\00E1soszlop van. A v\00E9grehajt\00E1s el\0151tt rendezze a forr\00E1soszlopok hosszait.^O
+	CE:
+	CS:LOADERR^LU
+		A:Text^Hiba :P1 adatbet\00F6lt\00E9si feladat info bet\00F6lt\00E9sekor^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 ELLEN\0150RZ\00C9S opci\00F3val^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, hib\00E1k: :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^\00DAj sorok : :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Feldolgozott sorok: :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Sorok friss\00EDt\00E9se  : :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^:P1 sor \00E1tlaga percenk\00E9nt^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 sor v\00E9gleges\00EDtve^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^:P1 sor kiv\00E1lasztva^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 sorn\00E1l hiba^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Eltelt id\0151: :P1 \00F3ra :P2 perc^O
+	CE:
+	CS:NODET^LU
+		A:Text^:P1-hez nincsenek r\00E9szletek^O
+	CE:
+	CS:NONAME^LU
+		A:Text^A Feladat azonos\00EDt\00F3 \00E9rt\00E9ke hi\00E1nyzik a(z) :P1 sz\00E1m\00FA m\00F3dszer attr-sztringj\00E9n\00E9l.^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^OBJID nincs kiv\00E1lasztva, de az ADDOBJID szab\00E1ly akt\00EDv.^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^\00DAjraind\00EDt\00E1s nem lehets\00E9ges - :P1 nem tartalmaz sor azonos\00EDt\00F3t.^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^Nem lett kiv\00E1laszt\00E1s meghat\00E1rozva.^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1-nek :P2 hiba sorai vannak, \00E9s nem ind\00EDthat\00F3.^O
+	CE:
+	CS:NULLCOLS^LU
+		A:Text^Vannak olyan rekordok, amelyek eset\00E9ben a forr\00E1soszlop \00E9s az alap\00E9rtelmezett \00E9rt\00E9k is hi\00E1nyzik. V\00E9grehajt\00E1s el\0151tt jav\00EDtsa.^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Hiba a kiv\00E1laszt\00E1skor :P1 - :P2^O
+	CE:
+	CS:SOURCEDUPLIC^LU
+		A:Text^A forr\00E1soszlopnak egyedinek kell lennie.^O
+	CE:
+	CS:STATINSERT^LU
+		A:Text^Besz\00FArva^O
+	CE:
+	CS:STATNOOP^LU
+		A:Text^Nincs m\0171velet^O
+	CE:
+	CS:STATNOTEXT^LU
+		A:Text^Objektum nem l\00E9tezik.^O
+	CE:
+	CS:STATOK^LU
+		A:Text^\00C9rv\00E9nyes\00EDt\00E9s OK^O
+	CE:
+	CS:STATPROC^LU
+		A:Text^Feldolgozva^O
+	CE:
+	CS:STATUPDATE^LU
+		A:Text^Aktualiz\00E1lva^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Kezd\00E9si id\0151 - :P1   :P2^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^:P3 \00E9rt\00E9k t\00FAll\00E9pi a(z) :P1 oszlophoz meghat\00E1rozott :P2 hossz\00FAs\00E1got.^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Hiba t\00F6rt\00E9nt :P1 :P2 \00E9rt\00E9kkel val\00F3 kicsomagol\00E1sakor^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Hiba :P2 \00E9rt\00E9k :P1-re konvert\00E1l\00E1sakor^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Hiba :P2 d\00E1tuma \00E9rt\00E9k :P1-re val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Hiba :P2 alap\00E9rt. \00E9rt\00E9k :P1-re val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Hiba :P2 numerikus \00E9rt\00E9k :P1-re val\00F3 form\00E1z\00E1sakor^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Hiba az oszlop \00E9rt\00E9kek oszlop elv\00E1laszt\00F3 szerinti olvas\00E1sakor^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Hiba :P2 sztring \00E9rt\00E9k :P1-re val\00F3 form\00E1z\00E1sakor^O
+	CE:
+CE:
+CS:IntfaceFileLocation^LU
+	A:Prompt^Intface f\00E1jl helye^O
+	CS:1^LU
+		A:Text^Szerveren^O
+	CE:
+	CS:2^LU
+		A:Text^Kliensen^O
+	CE:
+	CS:3^LU
+		A:Text^Nincs f\00E1jl^O
+	CE:
+CE:
+CS:IntfaceFormatChar^LU
+	A:Prompt^Intface form\00E1t. kar.^O
+	CS:124^LU
+		A:Text^<f\00FCgg\0151leges vonal>^O
+	CE:
+	CS:13^LU
+		A:Text^<kocsi vissza>^O
+	CE:
+	CS:164^LU
+		A:Text^<p\00E9nznem jel>^O
+	CE:
+	CS:32^LU
+		A:Text^<sz\00F3k\00F6z>^O
+	CE:
+	CS:34^LU
+		A:Text^<dupla id\00E9z\0151jel>^O
+	CE:
+	CS:35^LU
+		A:Text^<kett\0151s kereszt>^O
+	CE:
+	CS:39^LU
+		A:Text^<szimpla id\00E9z\0151jel>^O
+	CE:
+	CS:42^LU
+		A:Text^<csillag>^O
+	CE:
+	CS:44^LU
+		A:Text^<vessz\0151>^O
+	CE:
+	CS:46^LU
+		A:Text^<pont>^O
+	CE:
+	CS:48^LU
+		A:Text^<nulla>^O
+	CE:
+	CS:59^LU
+		A:Text^<pontosvessz\0151>^O
+	CE:
+	CS:9^LU
+		A:Text^<tabul\00E1tor>^O
+	CE:
+CE:
+CS:IntfaceGroup^LU
+	A:Prompt^Intface csoport^O
+	CS:INTFACE_GROUP^LU
+	CE:
+CE:
+CS:IntfaceHeader^LU
+	A:Prompt^Intface fejl\00E9c^O
+	CS:BATCHJOBCOMP^LU
+		A:Text^:P1 adatbet\00F6lt\00E9si feladat v\00E9grehajt\00E1sa befejez\0151d\00F6tt^O
+	CE:
+	CS:BATCHJOBERROR^LU
+		A:Text^A(z) :P1 adatbet\00F6lt\00E9si feladat v\00E9grehajt\00E1sa hib\00E1val/hib\00E1kkal fejez\0151d\00F6tt be. Tov\00E1bbi inform\00E1ci\00F3k\00E9rt l\00E1sd az Adatbet\00F6lt\00E9si feladat t\00F6rt\00E9net ablakot.^O
+	CE:
+	CS:BCKFILE^LU
+		A:Text^Backup f\00E1jl neve: :P1^O
+	CE:
+	CS:BCKPATH^LU
+		A:Text^Backup f\00E1jl \00FAtvonala: :P1^O
+	CE:
+	CS:COPYERR^LU
+		A:Text^Hiba a l\00E9trehoz\00E1skor :P1 - :P2^O
+	CE:
+	CS:COPYOK^LU
+		A:Text^:P1 adatbet\00F6lt\00E9si feladat l\00E9trej\00F6tt^O
+	CE:
+	CS:DELFILE^LU
+		A:Text^:P1 f\00E1jl t\00F6rl\00E9sre ker\00FClt^O
+	CE:
+	CS:DEPREC^LU
+		A:Text^Az adatbet\00F6lt\00E9si gyorsjelent\00E9s export funkci\00F3 m\00E1r nem \00E9rv\00E9nyes. Helyette haszn\00E1lja a Gyorsjelent\00E9sek be\00E9p\00EDtett Import/Export funkci\00F3j\00E1t.^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Alap\00E9rt.-where nem haszn\00E1latos a(z) :P1 ir\00E1nyhoz.^O
+	CE:
+	CS:EXECNO^LU
+		A:Text^V\00E9grehajt\00E1s sz. :P1^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Hiba export\00E1l\00E1skor :P1 - :P2^O
+	CE:
+	CS:EXPTXT1^LU
+		A:Text^Export\00E1lt adatbet\00F6lt\00E9si feladatok:^O
+	CE:
+	CS:EXPTXT2^LU
+		A:Text^Export\00E1lt adatbet\00F6lt\00E9si csoportok:^O
+	CE:
+	CS:EXPTXT3^LU
+		A:Text^Export\00E1lt konverzi\00F3 list\00E1k:^O
+	CE:
+	CS:EXPTXT4^LU
+		A:Text^Export\00E1lt triggerek:^O
+	CE:
+	CS:EXPTXT5^LU
+		A:Text^Export\00E1lt csomagok:^O
+	CE:
+	CS:EXPTXT6^LU
+		A:Text^L\00E9trehozott f\00E1jlok:^O
+	CE:
+	CS:EXPTXT7^LU
+		A:Text^NEM export\00E1lt konverzi\00F3s list\00E1k:^O
+	CE:
+	CS:IMPERR^LU
+		A:Text^Hiba import\00E1l\00E1skor :P1 - :P2^O
+	CE:
+	CS:IMPTXT1^LU
+		A:Text^Import\00E1lt \00FAj adatbet\00F6lt\00E9si feladatok:^O
+	CE:
+	CS:IMPTXT10^LU
+		A:Text^\00DAjraind\00EDtand\00F3 replik\00E1ci\00F3 feladatok:^O
+	CE:
+	CS:IMPTXT2^LU
+		A:Text^Import\00E1lt \00FAj csoportok:^O
+	CE:
+	CS:IMPTXT3^LU
+		A:Text^Import\00E1lt konverzi\00F3s list\00E1k:^O
+	CE:
+	CS:IMPTXT4^LU
+		A:Text^NEM beillesztett adatbet\00F6lt\00E9si feladatok:^O
+	CE:
+	CS:IMPTXT5^LU
+		A:Text^NEM beillesztett csoportok :^O
+	CE:
+	CS:IMPTXT6^LU
+		A:Text^NEM beillesztett konverzi\00F3s list\00E1k:^O
+	CE:
+	CS:IMPTXT7^LU
+		A:Text^Import\00E1lt \00E9s lecser\00E9lt adatbet\00F6lt\00E9si feladatok:^O
+	CE:
+	CS:IMPTXT8^LU
+		A:Text^Import\00E1lt \00E9s lecser\00E9lt csoportok:^O
+	CE:
+	CS:IMPTXT9^LU
+		A:Text^Import\00E1lt \00E9s lecser\00E9lt konv. list\00E1k:^O
+	CE:
+	CS:INTFACE_ALLOWED_JOBS^LU
+		CS:DESCRIPTION^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+	CS:INTFACE_CHARACTERSET_LOV^LU
+	CE:
+	CS:INTFACE_HEADER^LU
+	CE:
+	CS:INTFACE_REPL_EXPORT_INFO^LU
+	CE:
+	CS:INTFACE_TABLE_NAME_LOV^LU
+	CE:
+	CS:JOBBATERR^LU
+		A:Text^Halasztott h\00EDv\00E1s sikertelen: :P1 - :P2^O
+	CE:
+	CS:LISTERR^LU
+		A:Text^Az \00E9rt\00E9klista nem kezd\0151dhet pontosvessz\0151vel.^O
+	CE:
+	CS:LONGNAME^LU
+		A:Text^:P1 feladat az. t\00FAl hossz\00FA. Nem haladhatja meg a 24 karaktert.^O
+	CE:
+	CS:MOVPATH^LU
+		A:Text^F\00E1jl\00E1thelyez\00E9s \00FAtvonala: :P1^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Eltelt id\0151: :P1 \00F3ra :P2 perc^O
+	CE:
+	CS:NAMEERR^LU
+		A:Text^Ha a t\00EDpus = :P1, a n\00E9v nem lehet hosszabb :P2 karaktern\00E9l (:P3).^O
+	CE:
+	CS:NOCOLUMN^LU
+		A:Text^Nem l\00E9teznek f\00E1jlb\00F3l oszlopok a feladatban^O
+	CE:
+	CS:NOFILE_ERROR^LU
+		A:Text^A(z) \201E:P1\201D f\00E1jlhely nem haszn\00E1lhat\00F3 az adat\00E1thelyez\00E9si feladatokhoz, ahol az Ir\00E1ny be\00E1ll\00EDt\00E1sa: \201E:P2\201D vagy \201E:P3\201D.^O
+	CE:
+	CS:NOMAN^LU
+		A:Text^Manu\00E1lis m\00F3dban val\00F3 ind\00EDt\00E1skor meg kell adni egy WHERE-felt\00E9telt a f\0151n\00E9zethez a strukt\00FAr\00E1ban.^O
+	CE:
+	CS:NOPRIV^LU
+		A:Text^\00D6n (:P1) nem jogosult \00FAj Adat\00E1thelyez\00E9si feladatok l\00E9trehoz\00E1s\00E1ra^O
+	CE:
+	CS:NOREPL^LU
+		A:Text^:P1 nem ind\00EDthat\00F3 k\00F6tegelve. A triggerek nincsenek bekapcsolva.^O
+	CE:
+	CS:NOTRIG^LU
+		A:Text^A triggerek l\00E9trej\00F6ttek. Nem v\00E1ltoztathatja a m\00F3dot :P1-re.^O
+	CE:
+	CS:NOWHERE^LU
+		A:Text^A Where-felt\00E9telt meg kell adni a k\00E9zi m\00F3d\00FA replik\00E1ci\00F3-feladatokn\00E1l.^O
+	CE:
+	CS:QUICKERR^LU
+		A:Text^:P1 elj\00E1r\00E1s n\00E9v csak a GYORSJELENT\00C9S n\00E9zet n\00E9vvel egy\00FCtt haszn\00E1lhat\00F3.^O
+	CE:
+	CS:RANFILE^LU
+		A:Text^F\00E1jln\00E9v \00E1tnevez\00E9se : :P1^O
+	CE:
+	CS:RENPATH^LU
+		A:Text^F\00E1jl el\00E9r\00E9si \00FAt \00E1tnevez\00E9se : :P1^O
+	CE:
+	CS:SELECTOK^LU
+		A:Text^Kiv\00E1laszt\00E1si utas\00EDt\00E1s rendben, elemezve \00E9s v\00E9grehajtva 1 sorra.^O
+	CE:
+	CS:SELLENGTH^LU
+		A:Text^\00C1ll\00EDt\00E1s hossza: :P1 karakter^O
+	CE:
+	CS:SERVOK^LU
+		A:Text^:P1 szerver folyamata elkezd\0151d\00F6tt :P2-hez.^O
+	CE:
+	CS:STARTBATERR^LU
+		A:Text^Nem ind\00EDthat\00F3 :P1 - :P2^O
+	CE:
+	CS:STARTJOBERR^LU
+		A:Text^Nem ind\00EDthat\00F3 :P1 - :P2^O
+	CE:
+	CS:STARTOK^LU
+		A:Text^:P1 adatbet\00F6lt\00E9si feladat elkezd\0151d\00F6tt a h\00E1tt\00E9rben^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Bef. id\0151pontja - :P1  :P2^O
+	CE:
+	CS:TRIGDEL^LU
+		A:Text^A triggereket el kell vetni, miel\0151tt t\00F6r\00F6lhetn\00E9 ezt a feladatot.^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^:P1 \00E9rt\00E9k nem lehet az \00E9rt\00E9klista r\00E9sze^O
+	CE:
+	CS:WHENERR^LU
+		A:Text^A trigger When-\00E1ll\00EDt\00E1s\00E1t \00E1t kell helyezni a(z) :P1 osztlopb\00F3l a(z) :P2 oszlopokba^O
+	CE:
+	CS:WILDERR^LU
+		A:Text^Helyettes\00EDt\0151 karakter f\00E1jln\00E9vben csak akkor haszn\00E1lhat\00F3, ha adatokat export\00E1l szerver f\00E1jlokba.^O
+	CE:
+	CS:WRONGCOL^LU
+		A:Text^:P1 oszlop nem l\00E9tezik :P2 feladatban^O
+	CE:
+	CS:WRONGDIR^LU
+		A:Text^SZINKR\00C9SZLET szab\00E1ly csak f\00E1jlok olvas\00E1sakor haszn\00E1lhat\00F3.^O
+	CE:
+CE:
+CS:IntfaceJobDetail^LU
+	A:Prompt^Intface feladat r\00E9szlet^O
+	CS:CLIENTCLEAN^LU
+		A:Text^A T\00D6RL\00C9S szab\00E1ly EL\0150TT \00E9rt\00E9kkel nem enged\00E9lyezett kliens f\00E1jln\00E1l.^O
+	CE:
+	CS:CLOSEFILERR^LU
+		A:Text^Hiba a(z) :P1 f\00E1jl bez\00E1r\00E1sakor.^O
+	CE:
+	CS:CLOSEJOBERR^LU
+		A:Text^Hiba a(z) :P1 feladat bez\00E1r\00E1sakor.^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^:P1 kapcsol\00F3d\00F3 feladatnak hib\00E1s sorai vannak^O
+	CE:
+	CS:CONNJOBERR^LU
+		A:Text^:P1 feladat nem ind\00EDthat\00F3.^O
+	CE:
+	CS:EMPTYFILE^LU
+		A:Text^:P1 f\00E1jl nem l\00E9tezik a(z) :P2-n, a feladat nem kezd\0151d\00F6tt el^O
+	CE:
+	CS:HISTERR^LU
+		A:Text^Hiba a t\00F6rt\00E9net l\00E9trehoz\00E1sakor :P1^O
+	CE:
+	CS:INITJOBERR^LU
+		A:Text^Nem siker\00FClt inicializ\00E1lni a(z) :P1 feladatot^O
+	CE:
+	CS:INTFACE_JOB_DETAIL^LU
+	CE:
+	CS:LOADFILERR^LU
+		A:Text^Hiba :P1 f\00E1jl bet\00F6lt\00E9sekor :P2-r\0151l^O
+	CE:
+	CS:NOFILE^LU
+		A:Text^:P1 f\00E1jl nem l\00E9tezik a(z) :P2-n, a feladat nem kezd\0151d\00F6tt el^O
+	CE:
+	CS:PREPERR^LU
+		A:Text^Hiba :P1 r\00E9szletek el\0151k\00E9sz\00EDt\00E9sekor^O
+	CE:
+	CS:SERVFILEERR^LU
+		A:Text^F\00E1jlkezel\00E9si hiba - :P1^O
+	CE:
+	CS:UNPACKEND^LU
+		A:Text^:P1 feladathoz a kicsomagol\00E1s k\00E9sz.^O
+	CE:
+	CS:UNPACKERR^LU
+		A:Text^Hiba t\00F6rt\00E9nt a kicsomagol\00E1skor ==> :P1^O
+	CE:
+CE:
+CS:IntfaceJobHistDetail^LU
+	A:Prompt^Intface feladat t\00F6rt. r\00E9szlet^O
+	CS:INTFACE_JOB_HIST_DETAIL^LU
+	CE:
+CE:
+CS:IntfaceJobHistHead^LU
+	A:Prompt^Intface feladat t\00F6rt. c\00EDm^O
+	CS:INTFACE_JOB_HIST_HEAD^LU
+	CE:
+CE:
+CS:IntfaceJobStatus^LU
+	A:Prompt^Intface feladat st\00E1tusz^O
+	CS:1^LU
+		A:Text^Nincs f\00E1jl^O
+	CE:
+	CS:2^LU
+		A:Text^Bet\00F6ltve^O
+	CE:
+	CS:3^LU
+		A:Text^Sor hiba^O
+	CE:
+	CS:4^LU
+		A:Text^Sor rendben^O
+	CE:
+	CS:5^LU
+		A:Text^Feladat rendben^O
+	CE:
+	CS:6^LU
+		A:Text^V\00E9grehajt\00E1s^O
+	CE:
+	CS:7^LU
+		A:Text^Feladat sikertelen^O
+	CE:
+CE:
+CS:IntfaceMethodAction^LU
+	A:Prompt^Intface m\00F3dszer m\0171velet^O
+	CS:1^LU
+		A:Text^Hurok el\0151tt^O
+	CE:
+	CS:2^LU
+		A:Text^Hurokban^O
+	CE:
+	CS:3^LU
+		A:Text^Hurok ut\00E1n^O
+	CE:
+	CS:4^LU
+		A:Text^Nincs v\00E9grehajt\00E1s^O
+	CE:
+CE:
+CS:IntfaceMethodList^LU
+	A:Prompt^Intface m\00F3dszer lista^O
+	CS:CHKCOUNT^LU
+		A:Text^:P1 sor ellen\0151rizve^O
+	CE:
+	CS:CLREMAP^LU
+		A:Text^AB-oszlopba mozgatva^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^COMMITSEQ szab\00E1llyal v\00E9gleges\00EDtett sorok: :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Ez a feladat nem ind\00EDthat\00F3. A kapcsol\00F3d\00F3 :P1 feladatban hib\00E1k vannak.^O
+	CE:
+	CS:CREATEERROR^LU
+		A:Text^Hiba a(z) :P1 - :P2 t\00E1bl\00E1zat l\00E9trehoz\00E1skor ^O
+	CE:
+	CS:CREATEVIEWERR^LU
+		A:Text^Hiba a(z) :P1 - :P2 n\00E9zet l\00E9trehoz\00E1skor ^O
+	CE:
+	CS:CREIND^LU
+		A:Text^:P1-index l\00E9trehozva :P2 oszlopn\00E1l^O
+	CE:
+	CS:CRETAB^LU
+		A:Text^L\00E9trehozott t\00E1bl\00E1zat :P1 (^O
+	CE:
+	CS:DATEVAL^LU
+		A:Text^Alap\00E9rtelmezett \00E9rt\00E9k rendszerd\00E1tum a PREPARE-b\0151l^O
+	CE:
+	CS:DBREMAP^LU
+		A:Text^Kliens \00E9rt\00E9kb\0151l lek\00E9pezve^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^M\00F3dszer sz. :P1 - Feladat az. \00E9rt\00E9ke nem egyezhet a f\0151 feladat\00E9val.^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Hiba n\00E9lk\00FCl v\00E9grehajtva^O
+	CE:
+	CS:GRANTERROR^LU
+		A:Text^Hiba a(z) :P1 n\00E9zet enged\00E9lyez\00E9sekor IFS rendszerhaszn\00E1l\00F3 (IFSSYS) sz\00E1m\00E1ra - :P2^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^V\00C9GREHAJT\00C1SI M\00D3DSZER SZ. :P1 :^O
+	CE:
+	CS:ILLARGTYPE^LU
+		A:Text^:P1 argumentumnak \00E9rv\00E9nytelen a t\00EDpusa. Csak a DATE VARCHAR2 NUMBER adatt\00EDpus enged\00E9lyezett.^O
+	CE:
+	CS:ILLMETH^LU
+		A:Text^:P1 m\00F3dszer egy f\00FCggv\00E9ny. Csak elj\00E1r\00E1sok megengedettek.^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^COMMIT vagy ROLLBACK miatt :P1 befejezetlen tranzakci\00F3 a h\00EDvott m\00F3dszerben.^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Hi\00E1nyos kiv\00E1laszt\00E1s nem lett v\00E9grehajtva - :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Ellen\0151rizze az eredm\00E9nyt. A tranzakci\00F3k r\00E9szben v\00E9gleges\00EDtettek lehetnek^O
+	CE:
+	CS:INDEXERROR^LU
+		A:Text^Hiba index l\00E9trehoz\00E1skor :P1 - :P2^O
+	CE:
+	CS:INSTAB^LU
+		A:Text^Besz\00FAr\00E1s :P1 t\00E1bl\00E1ba :P2 sorral^O
+	CE:
+	CS:INTFACE_EXCEL_INPUT_DEFAULT^LU
+	CE:
+	CS:INTFACE_EXCEL_INPUT_FORMAT^LU
+	CE:
+	CS:INTFACE_METHOD_LIST^LU
+	CE:
+	CS:KEEPALL^LU
+		A:Text^MIND szab\00E1ly nem haszn\00E1lhat\00F3, ha egy m\00E1sik feladat kapcsol\00F3dik :P1-hez (:P2).^O
+	CE:
+	CS:KEEPERR^LU
+		A:Text^MINDHIBA szab\00E1ly csak akkor haszn\00E1lhat\00F3, ha kapcsol\00F3dik egy m\00E1sik feladat :P1-hez.^O
+	CE:
+	CS:MAKEOTHER^LU
+		A:Text^Hiba az attrib\00FAtum \00E9s hivatkoz\00E1sok l\00E9trehoz\00E1sakor - :P1^O
+	CE:
+	CS:MANDDEF^LU
+		A:Text^<MISSING MANDATORY DEFAULT_VALUE>^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 ELLEN\0150RZ\00C9S opci\00F3val^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, hib\00E1k: :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^\00DAj sorok : :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Feldolgozott sorok: :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Sorok friss\00EDt\00E9se  : :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^:P1 sor \00E1tlaga percenk\00E9nt^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 sor v\00E9gleges\00EDtve^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^:P1 sor kiv\00E1lasztva^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 sorn\00E1l hiba^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Eltelt id\0151: :P1 \00F3ra :P2 perc^O
+	CE:
+	CS:NONAME^LU
+		A:Text^A Feladat azonos\00EDt\00F3 \00E9rt\00E9ke hi\00E1nyzik a(z) :P1 sz\00E1m\00FA m\00F3dszer attr-sztringj\00E9n\00E9l.^O
+	CE:
+	CS:NONBASEVIEW^LU
+		A:Text^Nem siker\00FClt standard m\00F3dszereket azonos\00EDtani a(z) \201E:P1\201D n\00E9zethez a M\00F3dszerlista k\00E9sz\00EDt\00E9se k\00F6zben. A [N\00E9zet neve] az IFS Logikai egys\00E9g egy alapn\00E9zete kell, hogy legyen.^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^OBJID nincs kiv\00E1lasztva, de az ADDOBJID szab\00E1ly akt\00EDv.^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^\00DAjraind\00EDt\00E1s nem lehets\00E9ges - :P1 nem tartalmaz sor azonos\00EDt\00F3t.^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^Nem lett kiv\00E1laszt\00E1s meghat\00E1rozva.^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1-nek :P2 hiba sorai vannak, \00E9s nem ind\00EDthat\00F3.^O
+	CE:
+	CS:NOTEDEF^LU
+		A:Text^D\00F6nts\00F6n az Alap\00E9rt. \00E9rt\00E9k haszn\00E1lata mellett. Az OPCION\00C1LIS-ok t\00F6r\00F6lhet\0151k^O
+	CE:
+	CS:NOTINLOOP^LU
+		A:Text^:P1 elj\00E1r\00E1st hurkon bel\00FCl kell ind\00EDtani.^O
+	CE:
+	CS:NOTOUTLOOP^LU
+		A:Text^:P1 elj\00E1r\00E1s nem ind\00EDthat\00F3 hurkon bel\00FCl.^O
+	CE:
+	CS:NOVIEW^LU
+		A:Text^Adja meg a view_name elemet csak a bels\0151 hurokban^O
+	CE:
+	CS:OPTDEF^LU
+		A:Text^<MISSING OPTIONAL DEFAULT_VALUE>^O
+	CE:
+	CS:PREPVAL^LU
+		A:Text^:P1 alap\00E9rtelmezett \00E9rt\00E9k a PREPARE-b\0151l^O
+	CE:
+	CS:RENAMTAB^LU
+		A:Text^:P1 t\00E1bl\00E1zat :P2 rekordokkal \00E1tnevezve :P3-ra.^O
+	CE:
+	CS:RESTART^LU
+		A:Text^:P1 t\00E1bl\00E1zatba sz\00FAr\00E1s \00FAjraind\00EDt\00E1sa^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Hiba a kiv\00E1laszt\00E1skor :P1 - :P2^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^:P1 oszlop n\00E9v k\00E9t\00E9rtelm\0171en defini\00E1lt^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Kezd\00E9si id\0151 - :P1   :P2^O
+	CE:
+CE:
+CS:IntfaceMethodListAttrib^LU
+	A:Prompt^Intface m\00F3dszer lista tulajd.^O
+	CS:INTFACE_METHOD_LIST_ATTRIB^LU
+	CE:
+	CS:WRONGSEQ1^LU
+		A:Text^:P1 EXECUTE_SEQ nem l\00E9tezik^O
+	CE:
+	CS:WRONGSEQ2^LU
+		A:Text^A hivatkozott EXECUTE_SEQ elemnek meg kell el\0151znie ezt^O
+	CE:
+CE:
+CS:IntfaceMode^LU
+	A:Prompt^Intface m\00F3d^O
+	CS:1^LU
+		A:Text^K\00E9zi^O
+	CE:
+	CS:2^LU
+		A:Text^Automatikus^O
+	CE:
+	CS:3^LU
+		A:Text^K\00F6teg^O
+	CE:
+CE:
+CS:IntfacePrUser^LU
+	A:Prompt^Intface Pr felhaszn\00E1l\00F3^O
+	CS:INTFACE_PR_USER^LU
+	CE:
+CE:
+CS:IntfacePrefixOption^LU
+	A:Prompt^Intface El\0151tag opci\00F3^O
+	CS:1^LU
+		A:Text^N\00E9zetN\00E9v^O
+	CE:
+	CS:2^LU
+		A:Text^N\00E9zetN\00E9vEgy\00E9ni^O
+	CE:
+	CS:3^LU
+		A:Text^Nincs el\0151tag^O
+	CE:
+CE:
+CS:IntfacePrivilege^LU
+	A:Prompt^Intface jogosults\00E1g^O
+	CS:1^LU
+		A:Text^Nem friss\00EDthet\0151^O
+	CE:
+	CS:2^LU
+		A:Text^Friss\00EDt\00E9sMegengedett^O
+	CE:
+CE:
+CS:IntfaceProcedures^LU
+	A:Prompt^Intface elj\00E1r\00E1sok^O
+	CS:CHECK_BY_METHOD_NEW^LU
+		A:Text^Sorok ellen\0151rz\00E9se a f\00E1jlb\00F3l az \00DCzleti logika szerint^O
+	CE:
+	CS:CREATE_OUTPUT_FILE^LU
+		A:Text^Adatok f\00E1jlba \00EDr\00E1sa^O
+	CE:
+	CS:CREATE_TABLE_FROM_FI^LU
+		A:Text^T\00E1bl\00E1zat l\00E9trehoz\00E1sa f\00E1jlb\00F3l^O
+	CE:
+	CS:EXCEL_MIGRATION^LU
+		A:Text^Adatbet\00F6lt\00E9s Excel f\00E1jlb\00F3l^O
+	CE:
+	CS:FNDMIG_EXPORT^LU
+		A:Text^Adatbet\00F6lt\00E9si meghat\00E1roz\00E1sok export\00E1l\00E1sa f\00E1jlba^O
+	CE:
+	CS:FNDMIG_IMPORT^LU
+		A:Text^Adatbet\00F6lt\00E9si meghat\00E1roz\00E1sok import\00E1l\00E1sa f\00E1jlb\00F3l^O
+	CE:
+	CS:INSERT_BY_METHOD_NEW^LU
+		A:Text^Sorok beilleszt\00E9se f\00E1jlb\00F3l^O
+	CE:
+	CS:INSERT_OR_UPDATE^LU
+		A:Text^Sorok besz\00FAr\00E1sa vagy friss\00EDt\00E9se f\00E1jlb\00F3l^O
+	CE:
+	CS:INTFACE_PROCEDURES^LU
+	CE:
+	CS:INTFACE_PROC_LOV_EXCL_REPL^LU
+	CE:
+	CS:INTFACE_PROC_LOV_INCL_REPL^LU
+	CE:
+	CS:MIGRATE_SOURCE_DATA^LU
+		A:Text^Adatbet\00F6lt\00E9s t\00E1bl\00E1zatb\00F3l/n\00E9zetb\0151l^O
+	CE:
+	CS:REPLICATION^LU
+		A:Text^Replik\00E1ci\00F3^O
+	CE:
+	CS:REPL_DATA_OUT^LU
+		A:Text^Adatstrukt\00FAra replik\00E1ci\00F3ja^O
+	CE:
+CE:
+CS:IntfaceQuickReportUtil^LU
+	CS:DEPREC^LU
+		A:Text^Ez a funkci\00F3 m\00E1r nem \00E9rv\00E9nyes. Helyette haszn\00E1lja a Gyorsjelent\00E9sek be\00E9p\00EDtett Import/Export funkci\00F3j\00E1t.^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Hiba export\00E1l\00E1skor :P1 - :P2^O
+	CE:
+	CS:EXPOK^LU
+		A:Text^Export\00E1lt :P1 jelent\00E9sek^O
+	CE:
+CE:
+CS:IntfaceReplElemType^LU
+	A:Prompt^Intface repl. elem t\00EDpus^O
+	CS:AGGREGATE^LU
+		A:Text^\00D6sszes^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^T\00F6mb^O
+	CE:
+CE:
+CS:IntfaceReplMaintUtil^LU
+	CS:EXECERR^LU
+		A:Text^Hiba t\00F6rt\00E9nt - :P1^O
+	CE:
+	CS:INTFACE_REPL_DB_OBJECTS^LU
+	CE:
+	CS:INTFACE_SERVER_PROCESSES^LU
+	CE:
+	CS:LOGOK^LU
+		A:Text^Napl\00F3 t\00E1bl\00E1zat :P1 sorral sikeresen feldolgozva :P2-h\00F6z^O
+	CE:
+	CS:NOUPDATE^LU
+		A:Text^Nem m\00F3dos\00EDthatja :P1-et, mert replik\00E1ci\00F3 van folyamatban. Minden trigger be van kapcsolva.^O
+	CE:
+	CS:REPLFAIL^LU
+		A:Text^:P1 replik\00E1ci\00F3 feladat sikertelen - :P2^O
+	CE:
+	CS:REPLOK^LU
+		A:Text^:P1 elj\00E1r\00E1s sikeresen lefuttatva^O
+	CE:
+CE:
+CS:IntfaceReplMessType^LU
+	A:Prompt^Intface repl. \00FCz. t\00EDpus^O
+	CS:BIZAPI^LU
+		A:Text^BizApi^O
+	CE:
+	CS:TRACE^LU
+		A:Text^Megjelen. nyom^O
+	CE:
+CE:
+CS:IntfaceReplOutLog^LU
+	A:Prompt^Intface Repl Out Log^O
+	CS:INTFACE_REPL_OUT_LOG^LU
+	CE:
+CE:
+CS:IntfaceReplPackageUtil^LU
+	CS:COMPERR^LU
+		A:Text^Csomag \00F6ssze\00E1ll\00EDt\00E1si hiba :P1^O
+	CE:
+	CS:ERR1PAR^LU
+		A:Text^Az egyed\00FCli sorokn\00E1l nem szerepelhet semmilyen \00E9rt\00E9k a Sz\00FCl\0151 sorozat oszlopban.^O
+	CE:
+	CS:ERR2PAR^LU
+		A:Text^Egy sornak sz\00FCl\0151nek kell lennie = nincs \00E9rt\00E9k a Sz\00FCl\0151 sorozat oszlopban.^O
+	CE:
+	CS:ERRLONG^LU
+		A:Text^Forr\00E1s t\00FAl hossz\00FA, nem lehet be\00EDrni az Intface_Job_Detail-be - :P1^O
+	CE:
+	CS:KEYERR^LU
+		A:Text^:P1 sz\00FCl\0151kulcs nem l\00E9tezik a strukt\00FAr\00E1kban :P2 el\0151tt.^O
+	CE:
+	CS:LONGSRC^LU
+		A:Text^Forr\00E1s t\00FAl hossz\00FA. F\00E1jl exportja Feladat v\00E9grehajt\00E1s ablakb\00F3l, \00E9s telep\00EDt\00E9s Adminb\00F3l.^O
+	CE:
+	CS:NODATA^LU
+		A:Text^Legal\00E1bb egy sorban be kell jel\00F6lni a Besz\00FAr\00E1skor vagy Friss\00EDt\00E9skor n\00E9gyzetet.^O
+	CE:
+	CS:OTHERS^LU
+		A:Text^Csomag \00F6ssze\00E1ll\00EDt\00E1si hiba - :P1^O
+	CE:
+CE:
+CS:IntfaceReplRecType^LU
+	A:Prompt^Intface repl. rek. t\00EDpus^O
+	CS:AGGREGATE^LU
+		A:Text^\00D6sszes^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^T\00F6mb^O
+	CE:
+CE:
+CS:IntfaceReplStructCols^LU
+	A:Prompt^Intface repl. struk. oszl.^O
+	CS:INTFACE_REPL_STRUCT_COLS^LU
+	CE:
+CE:
+CS:IntfaceReplStructure^LU
+	A:Prompt^Intface repl. strukt\00FAra^O
+	CS:ERRSEQ^LU
+		A:Text^Sz\00FCl\0151 sorozat nem egyezhet a Sorozattal.^O
+	CE:
+	CS:INSERR^LU
+		A:Text^A Kiindul\00E1si pontt\00F3l felfel\00E9 az \00F6sszes sorban a Besz\00FAr\00E1skor oszlopot be kell jel\00F6lni, \00E9s a TriggerT\00E1bla oszlopot defini\00E1lni kell.^O
+	CE:
+	CS:INTFACE_REPL_PARENT_LOV^LU
+	CE:
+	CS:INTFACE_REPL_STRUCTURE^LU
+	CE:
+	CS:INTFACE_REPL_TABLE_LOV^LU
+	CE:
+	CS:MULTIPLESTART^LU
+		A:Text^Csak egy Kezd\0151pontot defini\00E1lhat a feladathoz.^O
+	CE:
+	CS:NONUNIQUE^LU
+		A:Text^:P1-hez nincs egyedi master meghat\00E1rozva. Csak egy t\00E9teln\00E9l lehet a ParentSeq egyenl\0151 NULL.^O
+	CE:
+	CS:NOSEQ^LU
+		A:Text^Ez a Sz\00FCl\0151 sorozat nem haszn\00E1lhat\00F3. Nincsenek :P1 sorozat\00FA sorok.^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^:P1-= :P2, az \00E9rt\00E9k nem lehet nagyobb, mint 99^O
+	CE:
+CE:
+CS:IntfaceReplTriggersUtil^LU
+	CS:ALTERR^LU
+		A:Text^:P1 - :P2 Trigger megv\00E1ltoztat\00E1si hiba^O
+	CE:
+	CS:COMPERR^LU
+		A:Text^Hiba t\00F6rt\00E9nt a(z) :P1 triggern\00E9l^O
+	CE:
+	CS:DROPERR^LU
+		A:Text^Hiba - :P1 - :P2 trigger elhagy\00E1sa^O
+	CE:
+	CS:NODEF^LU
+		A:Text^Meg kell adnia egy T\00E1blaNevet, \00E9s be kell jel\00F6lnie a Besz\00FAr\00E1skor vagy Friss\00EDt\00E9skor n\00E9gyzetet legal\00E1bb egy strukt\00FAra elemn\00E9l.^O
+	CE:
+CE:
+CS:IntfaceReplicCriteria^LU
+	A:Prompt^Intface repl. felt\00E9telek^O
+	CS:1^LU
+		A:Text^Telephely^O
+	CE:
+	CS:2^LU
+		A:Text^V\00E1llalat^O
+	CE:
+CE:
+CS:IntfaceReplicationLog^LU
+	A:Prompt^Intface Replik\00E1ci\00F3 napl\00F3^O
+	CS:INTFACE_REPLICATION_LOG^LU
+	CE:
+CE:
+CS:IntfaceRuleFlag^LU
+	A:Prompt^Intface Szab\00E1ly jelz\0151^O
+	CS:1^LU
+		A:Text^Akt\00EDv^O
+	CE:
+	CS:2^LU
+		A:Text^Inakt\00EDv^O
+	CE:
+CE:
+CS:IntfaceRuleValue^LU
+	A:Prompt^Intface Szab\00E1ly \00E9rt\00E9k^O
+	CS:1^LU
+		A:Text^Nincs megengedett \00E9rt\00E9k.^O
+	CE:
+	CS:2^LU
+		A:Text^K\00F6telez\0151 sz\00E1m^O
+	CE:
+	CS:3^LU
+		A:Text^K\00F6telez\0151 sztring^O
+	CE:
+	CS:4^LU
+		A:Text^K\00F6telez\0151 d\00E1tum^O
+	CE:
+	CS:5^LU
+		A:Text^Opcion\00E1lis^O
+	CE:
+CE:
+CS:IntfaceRules^LU
+	A:Prompt^Intface szab\00E1lyok^O
+	CS:CHECKRULEERROR^LU
+		A:Text^A(z) :P1 szab\00E1ly nem \00E9rv\00E9nyes a(z) :P2 gy\00E1rt\00F3n\00E9vhez.^O
+	CE:
+	CS:ERRCONN^LU
+		A:Text^:P1 feladat m\00E1r kapcsol\00F3dik :P2-h\00F6z.^O
+	CE:
+	CS:ERRCONN2^LU
+		A:Text^A(z) :P1 feladatnak a CREATE_TABLE_FROM_FILE elj\00E1r\00E1st kell haszn\00E1lnia^O
+	CE:
+	CS:ERRORVAL1^LU
+		A:Text^\00C9rv\00E9nyes \00E9rt\00E9kek: MIND, MINDHIBA vagy NINCSBACKUP^O
+	CE:
+	CS:ERRORVAL2^LU
+		A:Text^\00C9rv\00E9nyes \00E9rt\00E9kek: BESZ\00DAR vagy FRISS\00CDT^O
+	CE:
+	CS:ERRORVAL3^LU
+		A:Text^\00C9rv\00E9nyes \00E9rt\00E9kek: EL\0150TT vagy UT\00C1N^O
+	CE:
+	CS:FILERULEERR^LU
+		A:Text^:P1 szab\00E1ly nem lehet akt\00EDv, am\00EDg :P2 akt\00EDv.^O
+	CE:
+	CS:INTFACE_RULES^LU
+	CE:
+	CS:INTFACE_RULES_LOV^LU
+	CE:
+	CS:REPLUSR1^LU
+		A:Text^Ez a szab\00E1ly csak REPLIK\00C1CI\00D3S feladatokhoz haszn\00E1lhat\00F3.^O
+	CE:
+	CS:REPLUSR2^LU
+		A:Text^Alternat\00EDv felhaszn\00E1l\00F3 nincs meghat\00E1rozva az Admin.exe Rendszerparam\00E9terek alatt^O
+	CE:
+	CS:REPLUSR3^LU
+		A:Text^Alternat\00EDv felhaszn\00E1l\00F3 nem hat\00E1rozhat\00F3 meg egyenl\0151k\00E9nt az Admin.exe Rendszerparam\00E9terek alatti Appowner (alkalmaz\00E1stulajdonos) elemmel.^O
+	CE:
+CE:
+CS:IntfaceServerFile^LU
+	A:Prompt^Intface szerver f\00E1jl^O
+	CS:CNTERR^LU
+		A:Text^Hiba l\00E9pett fel a rekordok sz\00E1mol\00E1sa k\00F6zben^O
+	CE:
+	CS:CREERR^LU
+		A:Text^Rekordok elutas\00EDtva. Ellen\0151rizze a napl\00F3f\00E1jlt a kezd\0151 ablakn\00E1l.^O
+	CE:
+	CS:INTFACE_SERVER_DIR_LOV^LU
+		CS:NAME^LU
+		CE:
+		CS:PATH^LU
+		CE:
+	CE:
+	CS:INTFACE_SERVER_FILES_LOV^LU
+		CS:FILE_DATE^LU
+		CE:
+		CS:FILE_NAME^LU
+		CE:
+		CS:FILE_SIZE^LU
+		CE:
+	CE:
+	CS:NOFILE^LU
+		A:Text^:P1 f\00E1jl nem l\00E9tezik a(z) :P2-n^O
+	CE:
+	CS:NOICTAB^LU
+		A:Text^:P1 t\00E1bl\00E1zat nem l\00E9tezik.^O
+	CE:
+	CS:NOINS^LU
+		A:Text^Besz\00FAr\00E1s az IC-t\00E1bl\00E1ba nem siker\00FClt. A jobb eg\00E9rgombos F\00E1jl kicsomagol\00E1s pont a Feladat v\00E9grehajt\00E1s ablakban form\00E1z\00E1si hib\00E1kat fog mutatni. :P1^O
+	CE:
+	CS:NOSERV^LU
+		A:Text^A f\00E1jl hely\00E9nek :P1-nek kell lennie, nem :P2-nek. M\00F3dos\00EDtsa a feladat fejl\00E9cet.^O
+	CE:
+	CS:NOTAB^LU
+		A:Text^K\00FCls\0151 t\00E1bl\00E1zat nem lett l\00E9trehozva. :P1^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^:P1 oszlop n\00E9v k\00E9t\00E9rtelm\0171en defini\00E1lt^O
+	CE:
+CE:
+CS:IntfaceTableMigrations^LU
+	A:Prompt^T\00E1bla adatbet\00F6lt\00E9si param\00E9terek^O
+	CS:INTFACE_TABLE_MIGRATIONS^LU
+	CE:
+	CS:NOCOL^LU
+		A:Text^Nincs friss\00EDthet\0151 oszlop.^O
+	CE:
+	CS:PROCERR^LU
+		A:Text^:P1 hiba^O
+	CE:
+	CS:TABERR^LU
+		A:Text^:P2 nem friss\00EDthet\0151. :P1^O
+	CE:
+CE:
+CS:IntfaceUser^LU
+	A:Prompt^Intface felhaszn\00E1l\00F3^O
+	CS:INTFACE_USER^LU
+	CE:
+CE:
+CS:IntfaceUtil^LU
+	CS:COMPILE_ERRORS^LU
+		A:Text^Ford\00EDt\00E1si hiba a triggerekhez :P1^O
+	CE:
+	CS:UPDERR^LU
+		A:Text^Csak IC t\00E1bla friss\00EDthet\0151.^O
+	CE:
+CE:
+CS:IntfaceViews^LU
+	A:Prompt^Intface n\00E9zetek^O
+	CS:INTFACE_SOURCE_COL_LOV^LU
+	CE:
+	CS:INTFACE_VIEWS^LU
+	CE:
+	CS:INTFACE_VIEWS_COL_INFO^LU
+	CE:
+CE:
+CS:IntfaceXsdUtil^LU
+	CS:XSDCRE^LU
+		A:Text^XSD kliensf\00E1jlk\00E9nt l\00E9trehozva, :P1 sor^O
+	CE:
+CE:

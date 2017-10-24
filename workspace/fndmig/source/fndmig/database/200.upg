@@ -1,0 +1,1022 @@
+-----------------------------------------------------------------------------
+--
+--  Module: FNDMIG
+--
+--  Function: Upgrade database from FNDMIG 1.2.0 to 2.0.0 
+--
+--  IFS/Design Template 2.1
+--
+--  Date    Sign   History
+--  ------  ----   ----------------------------------------------------------
+--  100308  CHMU   Created.
+--  110224  YOTHLK EANE-4547 , Modified, Added rowkey to all tables.  
+-----------------------------------------------------------------------------
+SET SERVEROUTPUT ON
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_1');
+PROMPT Remove MAKE_MESSAGE_FROM_ATTR, UPDATE_ALL_IC_ROWS and UPDATE_ROWS_FROM_CONV_LIST from Intface_Procedures_TAB
+
+BEGIN
+   DELETE FROM intface_procedures_tab
+   WHERE procedure_name IN ('MAKE_MESSAGE_FROM_ATTR','UPDATE_ALL_IC_ROWS','UPDATE_ROWS_FROM_CONV_LIST');
+EXCEPTION
+   WHEN OTHERS THEN
+      NULL;
+END;
+/
+
+
+-----------------------------------------------------------------------------
+--------------------- Custom Fields Upgrade ---------------------------------
+-----------------------------------------------------------------------------
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_2');
+PROMPT Add Column ROWKEY to INTFACE_CONV_LIST_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_CONV_LIST_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_3');
+PROMPT Create new index INTFACE_CONV_LIST_RK on INTFACE_CONV_LIST_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_CONV_LIST_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_CONV_LIST_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_4');
+PROMPT Add Column ROWKEY to INTFACE_CONV_LIST_COLS_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_CONV_LIST_COLS_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_5');
+PROMPT Create new index INTFACE_CONV_LIST_COLS_RK on INTFACE_CONV_LIST_COLS_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_CONV_LIST_COLS_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_CONV_LIST_COLS_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_6');
+PROMPT Add Column ROWKEY to INTFACE_DEFAULT_RULES_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_DEFAULT_RULES_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_7');
+PROMPT Create new index INTFACE_DEFAULT_RULES_RK on INTFACE_DEFAULT_RULES_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_DEFAULT_RULES_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_DEFAULT_RULES_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_8');
+PROMPT Add Column ROWKEY to INTFACE_DETAIL_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_DETAIL_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_9');
+PROMPT Create new index INTFACE_DETAIL_RK on INTFACE_DETAIL_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_DETAIL_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_DETAIL_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_10');
+PROMPT Add Column ROWKEY to INTFACE_HEADER_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_HEADER_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_11');
+PROMPT Create new index INTFACE_HEADER_RK on INTFACE_HEADER_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_HEADER_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_HEADER_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_12');
+PROMPT Add Column ROWKEY to INTFACE_JOB_DETAIL_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_JOB_DETAIL_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_13');
+PROMPT Create new index INTFACE_JOB_DETAIL_RK on INTFACE_JOB_DETAIL_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_JOB_DETAIL_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_JOB_DETAIL_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_14');
+PROMPT Add Column ROWKEY to INTFACE_JOB_HIST_HEAD_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_JOB_HIST_HEAD_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_15');
+PROMPT Create new index INTFACE_JOB_HIST_HEAD_RK on INTFACE_JOB_HIST_HEAD_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_JOB_HIST_HEAD_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_JOB_HIST_HEAD_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_16');
+PROMPT Add Column ROWKEY to INTFACE_JOB_HIST_DETAIL_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_JOB_HIST_DETAIL_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_17');
+PROMPT Create new index INTFACE_JOB_HIST_DETAIL_RK on INTFACE_JOB_HIST_DETAIL_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_JOB_HIST_DETAIL_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_JOB_HIST_DETAIL_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_18');
+PROMPT Add Column ROWKEY to INTFACE_PROCEDURES_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_PROCEDURES_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_19');
+PROMPT Create new index INTFACE_PROCEDURES_RK on INTFACE_PROCEDURES_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_PROCEDURES_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_PROCEDURES_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_20');
+PROMPT Add Column ROWKEY to INTFACE_PR_USER_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_PR_USER_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_21');
+PROMPT Create new index INTFACE_PR_USER_RK on INTFACE_PR_USER_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_PR_USER_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_PR_USER_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_22');
+PROMPT Add Column ROWKEY to INTFACE_RULES_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_RULES_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_23');
+PROMPT Create new index INTFACE_RULES_RK on INTFACE_RULES_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_RULES_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_RULES_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_24');
+PROMPT Add Column ROWKEY to INTFACE_USER_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_USER_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_25');
+PROMPT Create new index INTFACE_USER_RK on INTFACE_USER_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_USER_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_USER_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_26');
+PROMPT Add Column ROWKEY to INTFACE_METHOD_LIST_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_METHOD_LIST_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_27');
+PROMPT Create new index INTFACE_METHOD_LIST_RK on INTFACE_METHOD_LIST_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_METHOD_LIST_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_METHOD_LIST_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_28');
+PROMPT Add Column ROWKEY to INTFACE_GROUP_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_GROUP_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_29');
+PROMPT Create new index INTFACE_GROUP_RK on INTFACE_GROUP_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_GROUP_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_GROUP_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_30');
+PROMPT Add Column ROWKEY to INTFACE_METHOD_LIST_ATTRIB_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_METHOD_LIST_ATTRIB_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_31');
+PROMPT Create new index INTFACE_METHOD_LIST_ATTRIB_RK on INTFACE_METHOD_LIST_ATTRIB_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_METHOD_LIST_ATTRIB_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_METHOD_LIST_ATTRIB_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_32');
+PROMPT Add Column ROWKEY to INTFACE_REPLICATION_LOG_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_REPLICATION_LOG_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_33');
+PROMPT Create new index INTFACE_REPLICATION_LOG_RK on INTFACE_REPLICATION_LOG_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_REPLICATION_LOG_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_REPLICATION_LOG_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_34');
+PROMPT Add Column ROWKEY to INTFACE_INFO_SERVICES_RPT.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_INFO_SERVICES_RPT';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_35');
+PROMPT Create new index INTFACE_INFO_SERVICES_RPT_RK on INTFACE_INFO_SERVICES_RPT.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_INFO_SERVICES_RPT';
+	index_name_  VARCHAR2(30)  := 'INTFACE_INFO_SERVICES_RPT_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_36');
+PROMPT Add Column ROWKEY to INTFACE_HEADER_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_HEADER_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_37');
+PROMPT Create new index INTFACE_HEADER_RK on INTFACE_HEADER_RPT.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_HEADER_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_HEADER_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_38');
+PROMPT Add Column ROWKEY to INTFACE_REPL_STRUCTURE_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_REPL_STRUCTURE_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_39');
+PROMPT Create new index intface_repl_structure_pk on intface_repl_structure_tab.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_REPL_STRUCTURE_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_REPL_STRUCTURE_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_40');
+PROMPT Add Column ROWKEY to INTFACE_REPL_STRUCT_COLS_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_REPL_STRUCT_COLS_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_41');
+PROMPT Create new index intface_repl_struct_cols_pk on intface_repl_struct_cols_tab.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_REPL_STRUCT_COLS_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_REPL_STRUCT_COLS_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_42');
+PROMPT Add Column ROWKEY to INTFACE_REPL_OUT_LOG_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_REPL_OUT_LOG_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_43');
+PROMPT Create new index intface_repl_out_log_pk on intface_repl_out_log_tab.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_REPL_OUT_LOG_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_REPL_OUT_LOG_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+
+-----------------------------------------------------------------------------
+-- PLEASE CUT & PASTE BELOW SECTION TO APPROPRIATE LOCATION
+-----------------------------------------------------------------------------
+--110224	YOTHLK	EANE-4547 , Modified, Added rowkey to all tables.
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_44');
+PROMPT Add Column ROWKEY to INTFACE_CONV_LIST_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_CONV_LIST_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_45');
+PROMPT Create new index INTFACE_CONV_LIST_RK on INTFACE_CONV_LIST_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_CONV_LIST_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_CONV_LIST_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_46');
+PROMPT Add Column ROWKEY to INTFACE_CONV_LIST_COLS_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_CONV_LIST_COLS_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_47');
+PROMPT Create new index INTFACE_CONV_LIST_COLS_RK on INTFACE_CONV_LIST_COLS_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_CONV_LIST_COLS_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_CONV_LIST_COLS_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_48');
+PROMPT Add Column ROWKEY to INTFACE_DEFAULT_RULES_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_DEFAULT_RULES_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_49');
+PROMPT Create new index INTFACE_DEFAULT_RULES_RK on INTFACE_DEFAULT_RULES_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_DEFAULT_RULES_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_DEFAULT_RULES_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_50');
+PROMPT Add Column ROWKEY to INTFACE_DETAIL_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_DETAIL_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_51');
+PROMPT Create new index INTFACE_DETAIL_RK on INTFACE_DETAIL_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_DETAIL_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_DETAIL_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_52');
+PROMPT Add Column ROWKEY to INTFACE_HEADER_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_HEADER_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_53');
+PROMPT Create new index INTFACE_HEADER_RK on INTFACE_HEADER_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_HEADER_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_HEADER_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_54');
+PROMPT Add Column ROWKEY to INTFACE_JOB_DETAIL_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_JOB_DETAIL_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_55');
+PROMPT Create new index INTFACE_JOB_DETAIL_RK on INTFACE_JOB_DETAIL_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_JOB_DETAIL_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_JOB_DETAIL_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_56');
+PROMPT Add Column ROWKEY to INTFACE_JOB_HIST_HEAD_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_JOB_HIST_HEAD_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_57');
+PROMPT Create new index INTFACE_JOB_HIST_HEAD_RK on INTFACE_JOB_HIST_HEAD_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_JOB_HIST_HEAD_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_JOB_HIST_HEAD_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_58');
+PROMPT Add Column ROWKEY to INTFACE_JOB_HIST_DETAIL_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_JOB_HIST_DETAIL_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_59');
+PROMPT Create new index INTFACE_JOB_HIST_DETAIL_RK on INTFACE_JOB_HIST_DETAIL_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_JOB_HIST_DETAIL_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_JOB_HIST_DETAIL_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_60');
+PROMPT Add Column ROWKEY to INTFACE_PROCEDURES_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_PROCEDURES_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_61');
+PROMPT Create new index INTFACE_PROCEDURES_RK on INTFACE_PROCEDURES_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_PROCEDURES_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_PROCEDURES_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_62');
+PROMPT Add Column ROWKEY to INTFACE_PR_USER_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_PR_USER_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_63');
+PROMPT Create new index INTFACE_PR_USER_RK on INTFACE_PR_USER_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_PR_USER_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_PR_USER_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_64');
+PROMPT Add Column ROWKEY to INTFACE_RULES_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_RULES_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_65');
+PROMPT Create new index INTFACE_RULES_RK on INTFACE_RULES_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_RULES_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_RULES_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_66');
+PROMPT Add Column ROWKEY to INTFACE_USER_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_USER_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_67');
+PROMPT Create new index INTFACE_USER_RK on INTFACE_USER_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_USER_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_USER_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_68');
+PROMPT Add Column ROWKEY to INTFACE_METHOD_LIST_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_METHOD_LIST_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_69');
+PROMPT Create new index INTFACE_METHOD_LIST_RK on INTFACE_METHOD_LIST_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_METHOD_LIST_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_METHOD_LIST_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_70');
+PROMPT Add Column ROWKEY to INTFACE_GROUP_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_GROUP_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_71');
+PROMPT Create new index INTFACE_GROUP_RK on INTFACE_GROUP_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_GROUP_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_GROUP_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_72');
+PROMPT Add Column ROWKEY to INTFACE_METHOD_LIST_ATTRIB_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_METHOD_LIST_ATTRIB_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_73');
+PROMPT Create new index INTFACE_METHOD_LIST_ATTRIB_RK on INTFACE_METHOD_LIST_ATTRIB_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_METHOD_LIST_ATTRIB_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_METHOD_LIST_ATTRIB_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_74');
+PROMPT Add Column ROWKEY to INTFACE_REPLICATION_LOG_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_REPLICATION_LOG_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_75');
+PROMPT Create new index INTFACE_REPLICATION_LOG_RK on INTFACE_REPLICATION_LOG_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_REPLICATION_LOG_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_REPLICATION_LOG_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_76');
+PROMPT Add Column ROWKEY to INTFACE_INFO_SERVICES_RPT.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_INFO_SERVICES_RPT';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_77');
+PROMPT Create new index INTFACE_INFO_SERVICES_RPT_RK on INTFACE_INFO_SERVICES_RPT.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_INFO_SERVICES_RPT';
+	index_name_  VARCHAR2(30)  := 'INTFACE_INFO_SERVICES_RPT_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_78');
+PROMPT Add Column ROWKEY to INTFACE_HEADER_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_HEADER_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_79');
+PROMPT Create new index INTFACE_HEADER_RK on INTFACE_HEADER_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_HEADER_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_HEADER_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_80');
+PROMPT Add Column ROWKEY to INTFACE_REPL_STRUCTURE_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_REPL_STRUCTURE_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_81');
+PROMPT Create new index INTFACE_REPL_STRUCTURE_RK on INTFACE_REPL_STRUCTURE_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_REPL_STRUCTURE_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_REPL_STRUCTURE_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_82');
+PROMPT Add Column ROWKEY to INTFACE_REPL_STRUCT_COLS_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_REPL_STRUCT_COLS_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_83');
+PROMPT Create new index INTFACE_REPL_STRUCT_COLS_RK on INTFACE_REPL_STRUCT_COLS_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_REPL_STRUCT_COLS_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_REPL_STRUCT_COLS_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_84');
+PROMPT Add Column ROWKEY to INTFACE_REPL_OUT_LOG_TAB.
+DECLARE
+	columns_       Database_SYS.ColumnTabType;
+	table_name_    VARCHAR2(30) := 'INTFACE_REPL_OUT_LOG_TAB';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY', 'VARCHAR2(50)', 'Y', '$DEFAULT_NULL$', NULL);
+	Database_SYS.Alter_Table(table_name_, columns_);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Timestamp_85');
+PROMPT Create new index INTFACE_REPL_OUT_LOG_RK on INTFACE_REPL_OUT_LOG_TAB.
+DECLARE
+	columns_     Database_SYS.ColumnTabType;
+	table_name_  VARCHAR2(30)  := 'INTFACE_REPL_OUT_LOG_TAB';
+	index_name_  VARCHAR2(30)  := 'INTFACE_REPL_OUT_LOG_RK';
+BEGIN
+	Database_SYS.Reset_Column_Table(columns_);
+	Database_SYS.Set_Table_Column(columns_, 'ROWKEY');
+	Database_SYS.Create_Constraint(table_name_, index_name_, columns_, 'U', '&IFSAPP_INDEX', NULL, TRUE, TRUE);
+END;
+/
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','200.upg','Done');

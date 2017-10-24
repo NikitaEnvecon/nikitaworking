@@ -1,0 +1,1702 @@
+-------------------------------------------------------
+File Type: IFS Foundation Translation File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Language: sv
+Culture: sv-SE
+Fittings: Standard
+Layer: Core
+Main Type: LU
+Sub Type: Logical Unit
+-------------------------------------------------------
+CS:IntfaceChangeDefaults^LU
+	A:Prompt^Intface \00E4ndra standard^O
+	CS:1^LU
+		A:Text^Till\00E5tet^O
+	CE:
+	CS:2^LU
+		A:Text^Inte till\00E5tet^O
+	CE:
+	CS:3^LU
+		A:Text^Fast v\00E4rde^O
+	CE:
+CE:
+CS:IntfaceConvList^LU
+	A:Prompt^Intface ers\00E4ttningslista^O
+	CS:INTFACE_CONV_LIST^LU
+	CE:
+CE:
+CS:IntfaceConvListCols^LU
+	A:Prompt^Intface ers\00E4ttningslista kolumner^O
+	CS:INTFACE_CONV_LIST_COLS^LU
+	CE:
+CE:
+CS:IntfaceDefaultRules^LU
+	A:Prompt^Intface standardregler^O
+	CS:ADDOBJID^LU
+		A:Text^Skapa extra kolumndetalj f\00F6r OBJID^O
+	CE:
+	CS:CHECKOPTION^LU
+		A:Text^Utf\00F6r metoder New och Modify med CHECK-alternativ^O
+	CE:
+	CS:CLEANUP^LU
+		A:Text^Rensa feldetaljer automatiskt^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Antal rader mellan varje commit^O
+	CE:
+	CS:CONNJOB^LU
+		A:Text^Starta detta jobbet f\00F6rst^O
+	CE:
+	CS:CREATEDET^LU
+		A:Text^Skapa nya kolumndetaljer baserad p\00E5 vyer i MethodLista^O
+	CE:
+	CS:CRETABCONF^LU
+		A:Text^Alternativ f\00F6r container tabell^O
+	CE:
+	CS:EVENTMESS^LU
+		A:Text^Meddela Event Server n\00E4r jobbet \00E4r klart^O
+	CE:
+	CS:EXITLINES^LU
+		A:Text^Sluta l\00E4sa fil efter detta radnummer^O
+	CE:
+	CS:FETCHCONDITION^LU
+		A:Text^Anger om jobbet kan h\00E4mta data. Om flera LU:er anv\00E4nds ska du ange sammanfogningsvillkoret^O
+	CE:
+	CS:FILEBKP^LU
+		A:Text^Backupa fil efter lyckat slutf\00F6rande^O
+	CE:
+	CS:FILEHEAD^LU
+		A:Text^Skapa filhuvud med kolumn namn. CSV-filer enbart^O
+	CE:
+	CS:IGNOREADERROR^LU
+		A:Text^Forts\00E4tt l\00E4sa fil \00E4ven om fel intr\00E4ffar^O
+	CE:
+	CS:IGNOREXEERROR^LU
+		A:Text^Forts\00E4tt procedur \00E4ven om fel intr\00E4ffar^O
+	CE:
+	CS:INSUPD^LU
+		A:Text^Exekvera antingen INSERT eller UPDATE^O
+	CE:
+	CS:INTFACE_DEFAULT_RULES^LU
+	CE:
+	CS:NOCLEANUP^LU
+		A:Text^Spara alla jobbdetaljer f\00F6r klientfiler^O
+	CE:
+	CS:SAVEJOBDAYS^LU
+		A:Text^Antal dagar jobbhistorik sparas^O
+	CE:
+	CS:SAVEJOBERR^LU
+		A:Text^Spara enbart fel i historiklogg^O
+	CE:
+	CS:SERVFILOAD^LU
+		A:Text^Ladda serverfil innan jobbet startas^O
+	CE:
+	CS:SKIPLINES^LU
+		A:Text^Starta l\00E4sta filer efter detta radnummer^O
+	CE:
+	CS:SYNCDETAILS^LU
+		A:Text^Synka jobbdetaljer med kolumner i filhuvud^O
+	CE:
+	CS:TRUNCVAL^LU
+		A:Text^Trunkera v\00E4rden \00F6verskrider kolumnl\00E4ngd^O
+	CE:
+CE:
+CS:IntfaceDetail^LU
+	A:Prompt^Intface-detaljer^O
+	CS:CHECKERROR^LU
+		A:Text^Kontroll av :P1 misslyckade - :P2 (Felet orsakas av rad.:P3)^O
+	CE:
+	CS:CLIENTVAL^LU
+		A:Text^Klientv\00E4rden^O
+	CE:
+	CS:COLOUTDAT^LU
+		A:Text^Fel vid formattering :P1 med datumv\00E4rde :P2^O
+	CE:
+	CS:COLOUTDAT2^LU
+		A:Text^Fel vid formattering av datumkolumn :P1^O
+	CE:
+	CS:COLOUTNUM^LU
+		A:Text^Fel vid formattering :P1 med numeriskt v\00E4rde :P2^O
+	CE:
+	CS:COLOUTNUM2^LU
+		A:Text^Fel vid formattering av numerisk kolumn :P1^O
+	CE:
+	CS:COLUMNOUT^LU
+		A:Text^Fel vid formattering :P1 med v\00E4rde :P2^O
+	CE:
+	CS:COLUMNOUT2^LU
+		A:Text^Fel vid formattering av kolumn :P1^O
+	CE:
+	CS:COMMITCNT^LU
+		A:Text^:P1 Antal rader bekr\00E4ftade : :P2^O
+	CE:
+	CS:CREERRORATTR^LU
+		A:Text^Skapa fil fr\00E5n :P1 misslyckades.^O
+	CE:
+	CS:CREFORMAT^LU
+		A:Text^Skapa fil misslyckades - :P1^O
+	CE:
+	CS:CREINTFACEOK^LU
+		A:Text^Migreringsjobb :P1 klart^O
+	CE:
+	CS:DBVAL^LU
+		A:Text^DB-v\00E4rden^O
+	CE:
+	CS:ERRDEFAULT^LU
+		A:Text^:P1 only used when direction = :P2^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Std-where ej anv\00E4nt f\00F6r riktning = :P1^O
+	CE:
+	CS:FILENOTFOUND^LU
+		A:Text^Kan inte hitta fil :P1 p\00E5 s\00F6kv\00E4g :P2.^O
+	CE:
+	CS:FORMATERROR^LU
+		A:Text^Formattiering gick fel - :P1. (Felet orsakas av rad: :P2)^O
+	CE:
+	CS:INSCHECK^LU
+		A:Text^:P1 nya rader kontrollerade OK^O
+	CE:
+	CS:INSCHECKERR^LU
+		A:Text^:P1 rader kontrollerade med fel^O
+	CE:
+	CS:INSERRORNEW^LU
+		A:Text^Infoga i :P1 misslyckades - :P2 (Felet orsakas av rad: :P3)^O
+	CE:
+	CS:INSINTERR^LU
+		A:Text^:P1 rader fel^O
+	CE:
+	CS:INSINTINS^LU
+		A:Text^:P1 nya rader skapade^O
+	CE:
+	CS:INSINTNOROWS^LU
+		A:Text^Inga rader processade^O
+	CE:
+	CS:INSINTOK^LU
+		A:Text^Migreringsjobb :P1 klart^O
+	CE:
+	CS:INTFACE_DETAIL^LU
+		CS:SOURCE_NAME^LU
+		CE:
+		CS:SOURCE_OWNER^LU
+		CE:
+	CE:
+	CS:INTFACE_DETAIL_COL_LOV^LU
+	CE:
+	CS:LOADERR^LU
+		A:Text^Fel vid laddning av migreringsjobb info :P1^O
+	CE:
+	CS:NODET^LU
+		A:Text^Inga detaljer funna f\00F6r :P1^O
+	CE:
+	CS:NOROWS^LU
+		A:Text^Inga rader processade^O
+	CE:
+	CS:NOVAL^LU
+		A:Text^Inga DB/klientv\00E4rden f\00F6r :P1^O
+	CE:
+	CS:ROWSFAILED^LU
+		A:Text^:P1 rader fel^O
+	CE:
+	CS:ROWSWRITTEN^LU
+		A:Text^:P1 rader skrivna^O
+	CE:
+	CS:STRINGOUT^LU
+		A:Text^Fel vid formattering :P1 med v\00E4rde :P2^O
+	CE:
+	CS:STRINGOUT2^LU
+		A:Text^Fel vid formattering av kolumn :P1^O
+	CE:
+	CS:STRINGOUTCONV^LU
+		A:Text^Fel vid omvandling av v\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:STRINGOUTCONV2^LU
+		A:Text^Fel vid konvertering av kolumn :P1^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^Specifierad l\00E4ngd :P2 f\00F6r kolumn :P1 \00E4r \00F6verskriden av v\00E4rde :P3. Regel TRUNCVAL kan l\00F6sa detta.^O
+	CE:
+	CS:TOOLONG2^LU
+		A:Text^Specifierad l\00E4ngd :P2 f\00F6r kolumn :P1 \00E4r \00F6verskriden. Regel TRUNCVAL kan l\00F6sa detta.^O
+	CE:
+	CS:UNPACKPOS^LU
+		A:Text^Fel vid uppackning av :P1 med v\00E4rde :P2^O
+	CE:
+	CS:UNPACKPOS2^LU
+		A:Text^Fel vid upppackning av kolumn: P1^O
+	CE:
+	CS:UNPACKPOSCONV^LU
+		A:Text^Fel vid omvandling av v\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKPOSDAT^LU
+		A:Text^Fel vid formattering av datumv\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKPOSDAT2^LU
+		A:Text^Fel vid formattering av datumkolumn :P1^O
+	CE:
+	CS:UNPACKPOSDEF^LU
+		A:Text^Fel vid formatering av standardv\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKPOSNUM^LU
+		A:Text^Fel vid formattering av numeriskt v\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKPOSNUM2^LU
+		A:Text^Fel vid formattering av numerisk kolumn :P1^O
+	CE:
+	CS:UNPACKPOSSTR^LU
+		A:Text^Fel vid formattering av str\00E4ng v\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKPOSSTR2^LU
+		A:Text^Fel vid formatering av str\00E4ngkolumn :P1^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Fel vid uppackning av :P1 med v\00E4rde :P2^O
+	CE:
+	CS:UNPACKSEP2^LU
+		A:Text^Fel vid upppackning av kolumn: P1^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Fel vid omvandling av v\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Fel vid formattering av datumv\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKSEPDAT2^LU
+		A:Text^Fel vid formattering av datumkolumn :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Fel vid formatering av standardv\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Fel vid formattering av numeriskt v\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKSEPNUM2^LU
+		A:Text^Fel vid formattering av numerisk kolumn :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Fel vid l\00E4sande av kolumn efter kolumnseparator^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Fel vid formattering av str\00E4ngv\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKSEPSTR2^LU
+		A:Text^Fel vid formatering av str\00E4ngkolumn :p1^O
+	CE:
+	CS:UPDERRORCHK^LU
+		A:Text^Fel :P1 utf\00F6rande av :P2^O
+	CE:
+	CS:UPDERRORUPD^LU
+		A:Text^Uppdatering av :P1 fel - :P2 (Felet orsakas av rad: :P3)^O
+	CE:
+	CS:UPDINTFACEOK^LU
+		A:Text^Migreringsjobb :P1 klart^O
+	CE:
+	CS:UPDINTFERR^LU
+		A:Text^:P1 rader fel^O
+	CE:
+	CS:UPDINTFINS^LU
+		A:Text^:P1 nya rader skapade^O
+	CE:
+	CS:UPDINTFUPD^LU
+		A:Text^:P1 rader \00E4ndrade^O
+	CE:
+	CS:VALFOUND^LU
+		A:Text^DB/Klientv\00E4rden funna^O
+	CE:
+	CS:WRNOROWS^LU
+		A:Text^Inga rader processade^O
+	CE:
+CE:
+CS:IntfaceDirection^LU
+	A:Prompt^Intface-riktning^O
+	CS:1^LU
+		A:Text^Fil in^O
+	CE:
+	CS:2^LU
+		A:Text^Fil ut^O
+	CE:
+	CS:3^LU
+		A:Text^Inga^O
+	CE:
+	CS:4^LU
+		A:Text^K\00E4llmigrering^O
+	CE:
+	CS:5^LU
+		A:Text^ReplikStruktur^O
+	CE:
+	CS:6^LU
+		A:Text^Excelmigrering^O
+	CE:
+CE:
+CS:IntfaceDocumentation^LU
+	A:Prompt^Intface-dokumentation^O
+	CS:INFTXTDETAIL^LU
+		A:Text^Ej anv\00E4nd^O
+	CE:
+	CS:INFTXTHEADER^LU
+		A:Text^Ej anv\00E4nd^O
+	CE:
+	CS:INFTXTMETHLI^LU
+		A:Text^Ej anv\00E4nd^O
+	CE:
+	CS:INTFACE_DOCUMENTATION_REP^LU
+		A:Title^Migreringsdokumentation^O
+		CS:ACTION^LU
+			A:Title^Handling^O
+		CE:
+		CS:AMOUNT_FACTOR^LU
+			A:Title^V\00E4rdefaktor^O
+		CE:
+		CS:ATTR_SEQ^LU
+			A:Title^Attr.sekv.^O
+		CE:
+		CS:BLOCK_TYPE^LU
+			A:Title^Blocktyp^O
+		CE:
+		CS:CHANGE_DEFAULTS^LU
+			A:Title^\00C4ndra standard^O
+		CE:
+		CS:COLS_USING_LIST^LU
+			A:Title^Kolumner anv\00E4nder omvandlingslista:^O
+		CE:
+		CS:COLUMN_EMBRACE^LU
+			A:Title^Kolumnomslutning^O
+		CE:
+		CS:COLUMN_NAME^LU
+			A:Title^M\00E5lkolumn^O
+		CE:
+		CS:COLUMN_SEPARATOR^LU
+			A:Title^Kolumnseparator^O
+		CE:
+		CS:CONVERT_ATTR^LU
+			A:Title^Konvertera attr^O
+		CE:
+		CS:CONV_LIST_DESCR^LU
+			A:Title^Omvandlingslista beskr.^O
+		CE:
+		CS:CONV_LIST_ID^LU
+			A:Title^Omvandlingslista^O
+		CE:
+		CS:DATA_TYPE^LU
+			A:Title^Datatyp^O
+		CE:
+		CS:DATE_FORMAT^LU
+			A:Title^Dataformat^O
+		CE:
+		CS:DECIMAL_LENGTH^LU
+			A:Title^Decimall\00E4ngd^O
+		CE:
+		CS:DECIMAL_POINT^LU
+			A:Title^Decimaltecken^O
+		CE:
+		CS:DEFAULT_VALUE^LU
+			A:Title^Standardv\00E4rde^O
+		CE:
+		CS:DEFAULT_WHERE^LU
+			A:Title^Standard-Where^O
+		CE:
+		CS:DESCR_COLUMN_NAME^LU
+			A:Title^Kolumnbeskrivning^O
+		CE:
+		CS:DIRECTION^LU
+			A:Title^Riktning^O
+		CE:
+		CS:DIRECTION_DB^LU
+			A:Title^Riktning DB^O
+		CE:
+		CS:EXECUTED_BY^LU
+			A:Title^Exekverad av^O
+		CE:
+		CS:EXECUTE_SEQ^LU
+			A:Title^Exekvera Seq^O
+		CE:
+		CS:FILE_LOCATION^LU
+			A:Title^Filplats^O
+		CE:
+		CS:FILE_LOCATION_DB^LU
+			A:Title^Filplats DB^O
+		CE:
+		CS:FLAGS^LU
+			A:Title^Flaggor^O
+		CE:
+		CS:GROUP_DESCRIPTION^LU
+			A:Title^Gruppbeskrivning^O
+		CE:
+		CS:GROUP_ID^LU
+			A:Query^Grupp-Id:^O
+			A:Title^Grupp-Id^O
+		CE:
+		CS:INFO_TEXT_DETAIL^LU
+			A:Title^Info:^O
+		CE:
+		CS:INFO_TEXT_HEADER^LU
+			A:Title^Info:^O
+		CE:
+		CS:INFO_TEXT_METH_LIST^LU
+			A:Title^Info:^O
+		CE:
+		CS:INTFACE_DESCR^LU
+			A:Title^Migreringsbeskrivning^O
+		CE:
+		CS:INTFACE_FILE^LU
+			A:Title^Fil^O
+		CE:
+		CS:INTFACE_IN^LU
+			A:Query^Migreringsjobb-ID:^O
+		CE:
+		CS:INTFACE_NAME^LU
+			A:Title^Migreringsjobb-ID^O
+		CE:
+		CS:INTFACE_PATH^LU
+			A:Title^S\00F6kv\00E4g^O
+		CE:
+		CS:IntfaceDoc.rdl^LU
+			A:Title^Migreringsdokument^O
+		CE:
+		CS:LAST_EXECUTED^LU
+			A:Title^Senast exekverad^O
+		CE:
+		CS:LAST_INFO^LU
+			A:Title^Senaste Info^O
+		CE:
+		CS:LENGTH^LU
+			A:Title^L\00E4ngd^O
+		CE:
+		CS:MET_COLUMN_NAME^LU
+			A:Title^Regelkolumn^O
+		CE:
+		CS:MET_COLUMN_VALUE^LU
+			A:Title^Regelv\00E4rde^O
+		CE:
+		CS:MET_METHOD_NAME^LU
+			A:Title^Metod^O
+		CE:
+		CS:MET_VIEW_NAME^LU
+			A:Title^Vy^O
+		CE:
+		CS:MINUS_POS^LU
+			A:Title^Minus pos^O
+		CE:
+		CS:NEW_VALUE^LU
+			A:Title^Nytt v\00E4rde^O
+		CE:
+		CS:NOTE_TEXT_DETAIL^LU
+			A:Title^Kommentarer^O
+		CE:
+		CS:NOTE_TEXT_GROUP^LU
+			A:Title^Kommentarer^O
+		CE:
+		CS:NOTE_TEXT_HEADER^LU
+			A:Title^Kommentarer^O
+		CE:
+		CS:NOTE_TEXT_METH_LIST^LU
+			A:Title^Kommentarer^O
+		CE:
+		CS:OLD_VALUE^LU
+			A:Title^Gammalt v\00E4rde^O
+		CE:
+		CS:ORDER_BY_CLAUSE^LU
+			A:Title^Sortera p\00E5^O
+		CE:
+		CS:ORDER_BY_COL^LU
+			A:Title^Sortera p\00E5^O
+		CE:
+		CS:PAD_CHAR_LEFT^LU
+			A:Title^Pad Char v\00E4nster^O
+		CE:
+		CS:PAD_CHAR_RIGHT^LU
+			A:Title^Pad Char h\00F6ger^O
+		CE:
+		CS:POS^LU
+			A:Title^Pos^O
+		CE:
+		CS:PRINT_DETAIL^LU
+			A:Query^Skriv ut kolumnmappning:^O
+		CE:
+		CS:PRINT_DOC_INFO^LU
+			A:Query^Skriv ut dokumentinformation:^O
+		CE:
+		CS:PRINT_HEADER^LU
+			A:Query^Skriv ut rubrikinfo:^O
+		CE:
+		CS:PRINT_MAP_VALUE^LU
+			A:Query^Skriv ut mappade v\00E4rden:^O
+		CE:
+		CS:PRINT_METH_LIST^LU
+			A:Query^Skriv ut metodlista:^O
+		CE:
+		CS:PROCEDURE_NAME^LU
+			A:Title^Procedurnamn^O
+		CE:
+		CS:REFERENCES^LU
+			A:Title^Referenser^O
+		CE:
+		CS:Report Constants^LU
+			A:txAction^Anv\00E4nds f\00F6r specificering om metoden ska k\00F6ras f\00F6re eller efter valda rader frpn k\00E4llan \00E4r hanterade, eller om den ska exekveras f\00F6r varje rad som h\00E4mtas fr\00E5n k\00E4llan.^O
+			A:txAmountFactor^Detta f\00E4lt anv\00E4nds f\00F6r att ge en n\00E4mnare f\00F6r omkalkylering av v\00E4rdet i k\00E4llkolumnen om det beh\00F6vs f\00F6re \00F6verf\00F6ring till IFS databas kolumn.^O
+			A:txChangeDefaults^Detta f\00E4lt anger om det \00E4r till\00E5tet eller inte att \00E4ndra standardv\00E4rdet n\00E4r ett migreringsjobb k\00F6rs.^O
+			A:txColumnName^Databas kolumn i IFS dit k\00E4llv\00E4rde skall bli flyttat till^O
+			A:txDataType^Datatyp p\00E5 databaskolumn. Numeriska, alfanumeriska eller datumv\00E4rden.^O
+			A:txDecimalLength^Antal decimaler att anv\00E4nda vid l\00E4sa/skriva till fil.^O
+			A:txDefaultValue^Detta f\00E4lt anv\00E4nds f\00F6r att ange ett v\00E4rde om det inte finns n\00E5got v\00E4rde i k\00E4llkolumnen. Om ingen k\00E4llkolumn \00E4r angiven anv\00E4nds detta v\00E4rde p\00E5 alla rader.^O
+			A:txDescrColumnName^Beskrivning av databaskolumn^O
+			A:txDetailTitle^Specificering av kolumnmappning^O
+			A:txExecuteSeq^Specifier i vilken ordning metoderna i metodlistan ska k\00F6ras^O
+			A:txFileInfo^FilInformation^O
+			A:txFlags^IFS-attributflaggor. Flaggorna beskriver olika attribut som \00E4r kopplade till IFS-databaskolumnen. Kan inneh\00E5lla ett eller flera av f\00F6ljande v\00E4rden:^O
+			A:txFlagsI^I = Infoga till\00E5ten^O
+			A:txFlagsK^K = Key (fr\00E4mmande nyckel)^O
+			A:txFlagsM^M = Mandatory (Obligatorisk)^O
+			A:txFlagsP^P = \00D6verordnad nyckel^O
+			A:txFlagsU^U = Uppdatering till\00E5ten^O
+			A:txHeaderColMapping^F\00F6rklaring av kolumner anv\00E4nda i Kolumnmappning^O
+			A:txHeaderMethodList^F\00F6rklaring av kolumner anv\00E4nda i metodlista^O
+			A:txHeaderTitle^Specificering av migreringsrutiner f\00F6r^O
+			A:txLastExecutionInfo^Senaste exekveringsinfo^O
+			A:txLength^Detta f\00E4lt specificerar max l\00E4ngd till\00E5ten f\00F6r en IFS databas kolumn. F\00E4ltet anv\00E4nds i kombination med Pos-f\00E4ltet f\00F6r att l\00E4sa/skriva filer med fast kolumnl\00E4ngd.^O
+			A:txMapTitle^Specifik kolumnv\00E4rdesmappning^O
+			A:txMetColumnName^Anv\00E4nds f\00F6r att specificera att en metod enbart ska k\00F6ras beroende p\00E5 v\00E4rdet i denna k\00E4llkolumn.^O
+			A:txMetColumnValue^Denna metod kommer enbart k\00F6ras om v\00E4rdet i k\00E4llkolumnen \00E4r lika med detta v\00E4rde. Om t.ex '%' \00E4r angivet, s\00E5 kommer denna metod k\00F6ras f\00F6r alla rader som har detta v\00E4rde i k\00E4llkolumnen.^O
+			A:txMetMethodName^Specificera vilken IFS eller egendefinierad metod som ska k\00F6ras^O
+			A:txMethodListTitle^Anv\00E4nda/skapade metoder/API:er^O
+			A:txPadCharLeft^Detta f\00E4lt anv\00E4nds f\00F6r att ange ett tecken som ska tas bort eller adderas p\00E5 v\00E4nster sidan av kolumnen vid l\00E4sning fr\00E5n/skrivning till en fil. (ltrim/lpad)^O
+			A:txPadCharRight^Detta f\00E4lt anv\00E4nds f\00F6r att ange ett tecken som ska tas bort eller adderas p\00E5 h\00F6ger sidan av kolumnen vid l\00E4sning fr\00E5n/skrivning till en fil. (rtrim/rpad)^O
+			A:txPos^Detta f\00E4lt anv\00E4nds f\00F6r att ange kolumnens l\00E4ge i den specificerade filen. Om t.ex en CSV-fil anv\00E4nds kommer detta v\00E4rde att bli 1,2,3 o.s.v.^O
+			A:txSourceColumn^K\00E4llkolumn fr\00E5n fil, tabell eller vy att s\00E4tta in i IFS databaskolumn^O
+			A:txTitleDocPage^Definitioner / Kolumnbeskrivningar^O
+			A:txViewInfo^Huvudk\00E4lla/M\00E5linformation^O
+		CE:
+		CS:SOURCE_COLUMN^LU
+			A:Title^K\00E4llkolumn^O
+		CE:
+		CS:SOURCE_NAME^LU
+			A:Title^K\00E4llnamn^O
+		CE:
+		CS:SOURCE_OWNER^LU
+			A:Title^K\00E4ll\00E4gare^O
+		CE:
+		CS:THOUSAND_SEPARATOR^LU
+			A:Title^Tusenseparator^O
+		CE:
+		CS:VIEW_NAME^LU
+			A:Title^M\00E5lnamn^O
+		CE:
+		CS:WHERE_CLAUSE^LU
+			A:Title^Where-villkor^O
+		CE:
+	CE:
+	CS:INTFACE_INFO_SERVICES_RPV^LU
+	CE:
+CE:
+CS:IntfaceEvents^LU
+	A:Prompt^Intface-h\00E4ndelser^O
+CE:
+CS:IntfaceExcelConnect^LU
+	A:Prompt^Intface, Excel Connect^O
+CE:
+CS:IntfaceExecIntervalType^LU
+	A:Prompt^Intface Exec-intervalltyp^O
+	CS:1440^LU
+		A:Text^Minuter^O
+	CE:
+	CS:24^LU
+		A:Text^Timmar^O
+	CE:
+	CS:86400^LU
+		A:Text^Sekunder^O
+	CE:
+CE:
+CS:IntfaceExecution^LU
+	A:Prompt^Intface k\00F6rning^O
+	CS:INTFACE_EXECUTION^LU
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:IC_TABLE_NAME^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionDetail^LU
+	A:Prompt^Intface k\00F6rningsdetalj^O
+	CS:INTFACE_EXECUTION_DETAIL^LU
+		CS:ATTRIBUTE_STRING^LU
+		CE:
+		CS:DATE_EXECUTED^LU
+		CE:
+		CS:ERROR_MESSAGE^LU
+		CE:
+		CS:EXECUTED_BY^LU
+		CE:
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:FILE_STRING^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+		CS:LINE_NO^LU
+		CE:
+		CS:STATUS^LU
+		CE:
+		CS:STATUS_DB^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionUtil^LU
+	CS:BLANKCOLUMNS^LU
+		A:Text^N\00E5gon av k\00E4llkolumn eller standardv\00E4rde m\00E5ste ha ett v\00E4rde^O
+	CE:
+	CS:CHKCOUNT^LU
+		A:Text^:P1 rader kontrollerade^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Rader utf\00F6rda av regel COMMITSEQ : :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Kan inte starta detta jobbet. Kopplade jobb :P1 har fel.^O
+	CE:
+	CS:CREIND^LU
+		A:Text^Skapat :P1 index p\00E5 kolumn :P2^O
+	CE:
+	CS:DUPEXIST^LU
+		A:Text^Det finns duplicerade k\00E4llkolumner. L\00F6s dupliceringarna f\00F6re k\00F6rning^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^Metod nr. :P1 - V\00E4rde f\00F6r jobb-ID kan inte vara samma som huvudjobb^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Genomf\00F6rt utan fel^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^EXEKVERAR METHOD NO. :P1 :^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^:P1 ej kompletta transaktioner p.g.a. COMMIT eller ROLLBACK i en anropad metod^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Ej komplett val ej exekverad - :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Kontrollresultat. Transaktioner kan vara partiellt bekr\00E4ftade^O
+	CE:
+	CS:INVALIDLENGTH^LU
+		A:Text^K\00E4llkolumn f\00E5r inte \00F6verskrida trettio tecken^O
+	CE:
+	CS:JOBRUNERROR^LU
+		A:Text^Fel vid k\00F6rning av jobb :P1^O
+	CE:
+	CS:LNGTHINVAL^LU
+		A:Text^Det finns k\00E4llkolumner som \00F6verskrider 30 tecken. \00C5tg\00E4rda k\00E4llkolumnernas l\00E4ngd f\00F6re k\00F6rning^O
+	CE:
+	CS:LOADERR^LU
+		A:Text^Fel vid laddning av migreringsjobb info :P1^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 med CHECK-val^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, Fel : :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Nya rader : :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Processade rader : :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Updaterade rader : :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^Snitt :P1 rader per minut^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 rader bekr\00E4ftade^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^:P1 rader valda^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 rader fel^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Anv\00E4nt :P1 timmar och :P2 minuter^O
+	CE:
+	CS:NODET^LU
+		A:Text^Inga detaljer funna f\00F6r :P1^O
+	CE:
+	CS:NONAME^LU
+		A:Text^V\00E4rde f\00F6r Jobb-ID saknas p\00E5 attr-str\00E4ng f\00F6r metod nr. :P1^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^OBJID inte vald, men regeln ADDOBJID \00E4r aktiv^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Omstart om\00F6jlig - :P1 inneh\00E5ller inget rad-id^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^Ingen select specifierad^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1 har :P2 felrader och kan inte startas^O
+	CE:
+	CS:NULLCOLS^LU
+		A:Text^Det finns poster d\00E4r b\00E5de k\00E4llkolumn och standardv\00E4rde saknas. L\00F6s detta f\00F6re k\00F6rning.^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Fel i select :P1 - :P2^O
+	CE:
+	CS:SOURCEDUPLIC^LU
+		A:Text^K\00E4llkolumn ska vara unik.^O
+	CE:
+	CS:STATINSERT^LU
+		A:Text^Infogad^O
+	CE:
+	CS:STATNOOP^LU
+		A:Text^Ingen operation^O
+	CE:
+	CS:STATNOTEXT^LU
+		A:Text^Objektet finns inte^O
+	CE:
+	CS:STATOK^LU
+		A:Text^Validera OK^O
+	CE:
+	CS:STATPROC^LU
+		A:Text^Behandlad^O
+	CE:
+	CS:STATUPDATE^LU
+		A:Text^Uppdaterad^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Starttid - :P1 :P2^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^Specifierad l\00E4ngd :P2 f\00F6r kolumn :P1 \00E4r \00F6verskriden av v\00E4rde :P3.^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Fel vid uppackning av :P1 med v\00E4rde :P2^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Fel vid omvandling av v\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Fel vid formattering av datumv\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Fel vid formatering av standardv\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Fel vid formattering av numeriskt v\00E4rde :P2 f\00F6r :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Fel vid l\00E4sande av kolumn efter kolumnseparator^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Fel vid formattering av str\00E4ngv\00E4rde :P2 f\00F6r :P1^O
+	CE:
+CE:
+CS:IntfaceFileLocation^LU
+	A:Prompt^Intface-filplats^O
+	CS:1^LU
+		A:Text^OnServer^O
+	CE:
+	CS:2^LU
+		A:Text^OnKlient^O
+	CE:
+	CS:3^LU
+		A:Text^IngenFil^O
+	CE:
+CE:
+CS:IntfaceFormatChar^LU
+	A:Prompt^Intface-formattecken^O
+	CS:124^LU
+		A:Text^<vertikalstreck>^O
+	CE:
+	CS:13^LU
+		A:Text^<vagnretur>^O
+	CE:
+	CS:164^LU
+		A:Text^<valutatecken>^O
+	CE:
+	CS:32^LU
+		A:Text^<space>^O
+	CE:
+	CS:34^LU
+		A:Text^<double quotation>^O
+	CE:
+	CS:35^LU
+		A:Text^<hash>^O
+	CE:
+	CS:39^LU
+		A:Text^<single quotation>^O
+	CE:
+	CS:42^LU
+		A:Text^<asterisk>^O
+	CE:
+	CS:44^LU
+		A:Text^<komma>^O
+	CE:
+	CS:46^LU
+		A:Text^<point>^O
+	CE:
+	CS:48^LU
+		A:Text^<zero>^O
+	CE:
+	CS:59^LU
+		A:Text^<semicolon>^O
+	CE:
+	CS:9^LU
+		A:Text^<tab>^O
+	CE:
+CE:
+CS:IntfaceGroup^LU
+	A:Prompt^Intface-grupp^O
+	CS:INTFACE_GROUP^LU
+	CE:
+CE:
+CS:IntfaceHeader^LU
+	A:Prompt^Intface-huvud^O
+	CS:BATCHJOBCOMP^LU
+		A:Text^Migreringsjobb :P1-k\00F6rning klar.^O
+	CE:
+	CS:BATCHJOBERROR^LU
+		A:Text^Migreringsjobb :P1-k\00F6rning avslutades med fel. Mer information finns i f\00F6nstret Migreringsjobb Historik.^O
+	CE:
+	CS:BCKFILE^LU
+		A:Text^Backup-filnamn : :P1^O
+	CE:
+	CS:BCKPATH^LU
+		A:Text^Backup-fils\00F6kv\00E4g : :P1^O
+	CE:
+	CS:COPYERR^LU
+		A:Text^Fel skapande :P1 - :P2^O
+	CE:
+	CS:COPYOK^LU
+		A:Text^Migreringsjobb :P1 skapat^O
+	CE:
+	CS:DELFILE^LU
+		A:Text^Fil :P1 har blivit raderad^O
+	CE:
+	CS:DEPREC^LU
+		A:Text^Datamigreringens snabbrapportsexportfunktion \00E4r ogiltg. Anv\00E4nd ist\00E4llet den inbyggda funktionen Importera/Exportera i snabbrapporter.^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Std-where ej anv\00E4nt f\00F6r riktning = :P1^O
+	CE:
+	CS:EXECNO^LU
+		A:Text^Exekveringsnr: P1^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Fel vid export :P1 - :P2^O
+	CE:
+	CS:EXPTXT1^LU
+		A:Text^Exporterade migreringsjobb :^O
+	CE:
+	CS:EXPTXT2^LU
+		A:Text^Exporterade migreringsgrupper :^O
+	CE:
+	CS:EXPTXT3^LU
+		A:Text^Exporterade omvandlingslistor :^O
+	CE:
+	CS:EXPTXT4^LU
+		A:Text^Exporterade triggrar :^O
+	CE:
+	CS:EXPTXT5^LU
+		A:Text^Exporterade paket :^O
+	CE:
+	CS:EXPTXT6^LU
+		A:Text^Skapade filer :^O
+	CE:
+	CS:EXPTXT7^LU
+		A:Text^Omr\00E4kningslista INTE exporterad :^O
+	CE:
+	CS:IMPERR^LU
+		A:Text^Fel vid import :P1 - :P2^O
+	CE:
+	CS:IMPTXT1^LU
+		A:Text^Importerade nya migreringsjobb :^O
+	CE:
+	CS:IMPTXT10^LU
+		A:Text^Replikeringsjobb som m\00E5ste \00E5terstartas :^O
+	CE:
+	CS:IMPTXT2^LU
+		A:Text^Importerade nya grupper :^O
+	CE:
+	CS:IMPTXT3^LU
+		A:Text^Importerade omvandlingslistor :^O
+	CE:
+	CS:IMPTXT4^LU
+		A:Text^Migreringsjobb INTE skapat^O
+	CE:
+	CS:IMPTXT5^LU
+		A:Text^Grupper INTE skapade :^O
+	CE:
+	CS:IMPTXT6^LU
+		A:Text^Omvandlingslista EJ skapad :^O
+	CE:
+	CS:IMPTXT7^LU
+		A:Text^Importerade och ersatta migreringsjobb :^O
+	CE:
+	CS:IMPTXT8^LU
+		A:Text^Importerade och ersatta grupper :^O
+	CE:
+	CS:IMPTXT9^LU
+		A:Text^Importerade och ersatta omvandlings.listor :^O
+	CE:
+	CS:INTFACE_ALLOWED_JOBS^LU
+		CS:DESCRIPTION^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+	CS:INTFACE_CHARACTERSET_LOV^LU
+	CE:
+	CS:INTFACE_HEADER^LU
+	CE:
+	CS:INTFACE_REPL_EXPORT_INFO^LU
+	CE:
+	CS:INTFACE_TABLE_NAME_LOV^LU
+	CE:
+	CS:JOBBATERR^LU
+		A:Text^Senarelagt anrop misslyckades f\00F6r :P1 - :P2^O
+	CE:
+	CS:LISTERR^LU
+		A:Text^V\00E4rdelista ska inte b\00F6rja med semikolon^O
+	CE:
+	CS:LONGNAME^LU
+		A:Text^Jobb-ID :P1 f\00F6r l\00E5ng. F\00E5r ej \00F6verskrida 24 tecken^O
+	CE:
+	CS:MOVPATH^LU
+		A:Text^Flytta fils\00F6kv\00E4gen : :P1^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Anv\00E4nt :P1 timmar och :P2 minuter^O
+	CE:
+	CS:NAMEERR^LU
+		A:Text^N\00E4r du skriver = :P1. s\00E5 b\00F6r namnet inte vara l\00E4ngre \00E4n :P2 tecken (:P3)^O
+	CE:
+	CS:NOCOLUMN^LU
+		A:Text^Inga kolumner fr\00E5n fil finns i Jobbet^O
+	CE:
+	CS:NOFILE_ERROR^LU
+		A:Text^Fillokalisering ":P1" kan inte anv\00E4ndas f\00F6r migreringsjobb med riktning inst\00E4lld p\00E5 ":P2" eller ":P3".^O
+	CE:
+	CS:NOMAN^LU
+		A:Text^N\00E4r du startar i l\00E4get Manual, m\00E5ste du specificera ett WHERE-villkor f\00F6r huvudvy i strukturen^O
+	CE:
+	CS:NOPRIV^LU
+		A:Text^Du (:P1) har inte beh\00F6righet att skapa nya datamigreringsjobb^O
+	CE:
+	CS:NOREPL^LU
+		A:Text^Kan inte starta :P1 i batch. Triggrar \00E4r inte aktiverade^O
+	CE:
+	CS:NOTRIG^LU
+		A:Text^Triggrar \00E4r genererade. Du kan inte \00E4ndra l\00E4ge till :P1^O
+	CE:
+	CS:NOWHERE^LU
+		A:Text^Where-villkor m\00E5ste anges f\00F6r replikeringsjobb med l\00E4ge=Manual^O
+	CE:
+	CS:QUICKERR^LU
+		A:Text^Procedurnamn :P1 kan enbart anv\00E4ndas tillsammans med vynamn QUICK_REPORT^O
+	CE:
+	CS:RANFILE^LU
+		A:Text^D\00F6p om filnamn : :P1^O
+	CE:
+	CS:RENPATH^LU
+		A:Text^D\00F6p om fils\00F6ksv\00E4gen : :P1^O
+	CE:
+	CS:SELECTOK^LU
+		A:Text^Select-sats OK, parsad och exekverad f\00F6r 1 rad^O
+	CE:
+	CS:SELLENGTH^LU
+		A:Text^L\00E4ngd p\00E5 sats: :P1 tecken^O
+	CE:
+	CS:SERVOK^LU
+		A:Text^Databasuppgift :P1 \00E4r schemalagd f\00F6r migreringsjobb :P2.^O
+	CE:
+	CS:STARTBATERR^LU
+		A:Text^Kan ej starta :P1 - :P2^O
+	CE:
+	CS:STARTJOBERR^LU
+		A:Text^Kan ej starta :P1 - :P2^O
+	CE:
+	CS:STARTOK^LU
+		A:Text^Migreringsjobb :P1 startat i bakgrund^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Sluttid - :P1   :P2^O
+	CE:
+	CS:TRIGDEL^LU
+		A:Text^Triggrar m\00E5ste tas bort innan du kan ta bort detta jobb^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^Fr\00E5nv\00E4rde :P1 kan inte vara en del av v\00E4rdelista^O
+	CE:
+	CS:WHENERR^LU
+		A:Text^When-status f\00F6r trigger ska flyttas fr\00E5n kolumn :P1 till :P2^O
+	CE:
+	CS:WILDERR^LU
+		A:Text^Wildcards i filnamn kan bara anv\00E4ndas vid export av data till serverfiler^O
+	CE:
+	CS:WRONGCOL^LU
+		A:Text^Kolumn :P1 finns inte i jobb :P2^O
+	CE:
+	CS:WRONGDIR^LU
+		A:Text^Regel SYNCDETAILS kan bara anv\00E4ndas vid fill\00E4sning^O
+	CE:
+CE:
+CS:IntfaceJobDetail^LU
+	A:Prompt^Intface jobbdetalj^O
+	CS:CLIENTCLEAN^LU
+		A:Text^Regel CLEANUP med v\00E4rde BEFORE \00E4r ej till\00E5ten f\00F6r denna klientfil^O
+	CE:
+	CS:CLOSEFILERR^LU
+		A:Text^Fel vid filst\00E4ngning :P1^O
+	CE:
+	CS:CLOSEJOBERR^LU
+		A:Text^Fel vid jobbst\00E4ngning :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Kopplat jobb :P1 har felrader^O
+	CE:
+	CS:CONNJOBERR^LU
+		A:Text^Kan inte starta jobb. :P1^O
+	CE:
+	CS:EMPTYFILE^LU
+		A:Text^Fil :P1 i :P2 \00E4r tom, jobbet startades inte^O
+	CE:
+	CS:HISTERR^LU
+		A:Text^Fel vid skapande av historik :P1^O
+	CE:
+	CS:INITJOBERR^LU
+		A:Text^Fel vid initiering av job :P1^O
+	CE:
+	CS:INTFACE_JOB_DETAIL^LU
+	CE:
+	CS:LOADFILERR^LU
+		A:Text^Fel vid filladdning :P1 on :P2^O
+	CE:
+	CS:NOFILE^LU
+		A:Text^Fil :P1 finns inte i :P2, jobbet startades inte^O
+	CE:
+	CS:PREPERR^LU
+		A:Text^Fel vid detaljf\00F6rberedelse :P1^O
+	CE:
+	CS:SERVFILEERR^LU
+		A:Text^Fel vid filhantering - :P1^O
+	CE:
+	CS:UNPACKEND^LU
+		A:Text^Uppackning klar f\00F6r jobb :P1^O
+	CE:
+	CS:UNPACKERR^LU
+		A:Text^Fel vid upppackning ==> :P1^O
+	CE:
+CE:
+CS:IntfaceJobHistDetail^LU
+	A:Prompt^Intface jobbhist. detalj^O
+	CS:INTFACE_JOB_HIST_DETAIL^LU
+	CE:
+CE:
+CS:IntfaceJobHistHead^LU
+	A:Prompt^Intface jobbhist. huvud^O
+	CS:INTFACE_JOB_HIST_HEAD^LU
+	CE:
+CE:
+CS:IntfaceJobStatus^LU
+	A:Prompt^Intface jobbstatus^O
+	CS:1^LU
+		A:Text^Ingen fil^O
+	CE:
+	CS:2^LU
+		A:Text^Laddad^O
+	CE:
+	CS:3^LU
+		A:Text^Radfel^O
+	CE:
+	CS:4^LU
+		A:Text^Rad Ok^O
+	CE:
+	CS:5^LU
+		A:Text^Jobb Ok^O
+	CE:
+	CS:6^LU
+		A:Text^Exekverar^O
+	CE:
+	CS:7^LU
+		A:Text^Jobb misslyckades^O
+	CE:
+CE:
+CS:IntfaceMethodAction^LU
+	A:Prompt^Intface Method Handling^O
+	CS:1^LU
+		A:Text^F\00F6reLoop^O
+	CE:
+	CS:2^LU
+		A:Text^InLoop^O
+	CE:
+	CS:3^LU
+		A:Text^EfterLoop^O
+	CE:
+	CS:4^LU
+		A:Text^IngenExekvering^O
+	CE:
+CE:
+CS:IntfaceMethodList^LU
+	A:Prompt^Intface-metodlista^O
+	CS:CHKCOUNT^LU
+		A:Text^:P1 rader kontrollerade^O
+	CE:
+	CS:CLREMAP^LU
+		A:Text^flyttad till DB-kolumn^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Rader utf\00F6rda av regel COMMITSEQ : :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Kan inte starta detta jobbet. Kopplade jobb :P1 har fel.^O
+	CE:
+	CS:CREATEERROR^LU
+		A:Text^Fel vid skapande av tabell :P1 - :P2^O
+	CE:
+	CS:CREATEVIEWERR^LU
+		A:Text^Fel vid skapande av vy :P1 - :P2^O
+	CE:
+	CS:CREIND^LU
+		A:Text^Skapat :P1 index p\00E5 kolumn :P2^O
+	CE:
+	CS:CRETAB^LU
+		A:Text^Skapat tabell :P1^O
+	CE:
+	CS:DATEVAL^LU
+		A:Text^Standardv\00E4rde sysdate fr\00E5n PREPARE^O
+	CE:
+	CS:DBREMAP^LU
+		A:Text^Ommappad fr\00E5n klientv\00E4rde^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^Metod nr. :P1 - V\00E4rde f\00F6r jobb-ID kan inte vara samma som huvudjobb^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Genomf\00F6rt utan fel^O
+	CE:
+	CS:GRANTERROR^LU
+		A:Text^Fel vid beviljande av vy :P1 till IFS Systemanv\00E4ndare (IFSSYS) - :P2^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^EXEKVERAR METHOD NO. :P1 :^O
+	CE:
+	CS:ILLARGTYPE^LU
+		A:Text^Argument :P1 har ogiltig typ. Bara datatyp DATE VARCHAR2 NUMBER till\00E5ten^O
+	CE:
+	CS:ILLMETH^LU
+		A:Text^Method :P1 \00E4r en funktion. Enbart procedurer till\00E5tna^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^:P1 ej kompletta transaktioner p.g.a. COMMIT eller ROLLBACK i en anropad metod^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Ej komplett val ej exekverad - :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Kontrollresultat. Transaktioner kan vara partiellt bekr\00E4ftade^O
+	CE:
+	CS:INDEXERROR^LU
+		A:Text^Fel vid skapande av index :P1 - :P2^O
+	CE:
+	CS:INSTAB^LU
+		A:Text^L\00E4gg till i tabell :P1 med :P2 rader^O
+	CE:
+	CS:INTFACE_EXCEL_INPUT_DEFAULT^LU
+	CE:
+	CS:INTFACE_EXCEL_INPUT_FORMAT^LU
+	CE:
+	CS:INTFACE_METHOD_LIST^LU
+	CE:
+	CS:KEEPALL^LU
+		A:Text^Regel KEEPALL kan ej anv\00E4ndas n\00E4r annat jobb \00E4r kopplat till :P1 (:P2)^O
+	CE:
+	CS:KEEPERR^LU
+		A:Text^Regel KEEPALL kan enbart anv\00E4ndas n\00E4r annat jobb \00E4r kopplat till :P1^O
+	CE:
+	CS:MAKEOTHER^LU
+		A:Text^Fel vid skapande av attribut och referenser - :P1^O
+	CE:
+	CS:MANDDEF^LU
+		A:Text^<MISSAD OBLIGATORISKT STANDARD_V\00C4RDE>^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 med CHECK-val^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, Fel : :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Nya rader : :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Processade rader : :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Updaterade rader : :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^Snitt :P1 rader per minut^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^:P1 rader bekr\00E4ftade^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^:P1 rader valda^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^:P1 rader fel^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^Anv\00E4nt :P1 timmar och :P2 minuter^O
+	CE:
+	CS:NONAME^LU
+		A:Text^V\00E4rde f\00F6r Jobb-ID saknas p\00E5 attr-str\00E4ng f\00F6r metod nr. :P1^O
+	CE:
+	CS:NONBASEVIEW^LU
+		A:Text^Lyckades inte identifiera std-metoder f\00F6r vy ":P1" vid f\00F6rs\00F6k att generera Method List. [Visa namn] m\00E5ste finnas i basvyn av en IFS Logisk Enhet (Logical Unit).^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^OBJID inte vald, men regeln ADDOBJID \00E4r aktiv^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Omstart om\00F6jlig - :P1 inneh\00E5ller inget rad-id^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^Ingen select specifierad^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1 har :P2 felrader och kan inte startas^O
+	CE:
+	CS:NOTEDEF^LU
+		A:Text^V\00E4lj anv\00E4ndning av standardv\00E4rde. Ej obligatoriska kan tas bort^O
+	CE:
+	CS:NOTINLOOP^LU
+		A:Text^Procedur :P1 m\00E5ste startas inuti en loop^O
+	CE:
+	CS:NOTOUTLOOP^LU
+		A:Text^Procedur :P1 kan inte startas inuti en loop^O
+	CE:
+	CS:NOVIEW^LU
+		A:Text^Specificera vy_namn enbart inuti loop^O
+	CE:
+	CS:OPTDEF^LU
+		A:Text^<MISSAT ALTERNATIVT STANDARD_V\00C4RDE>^O
+	CE:
+	CS:PREPVAL^LU
+		A:Text^Standardv\00E4rde :P1 fr\00E5n PREPARE^O
+	CE:
+	CS:RENAMTAB^LU
+		A:Text^D\00F6pt om tabell :P1 med :P2 rader till :P3^O
+	CE:
+	CS:RESTART^LU
+		A:Text^\00C5terstarta infoga i tabell :P1^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^Fel i select :P1 - :P2^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^Kolumnnamn :P1 \00E4r oklart definierat^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Starttid - :P1 :P2^O
+	CE:
+CE:
+CS:IntfaceMethodListAttrib^LU
+	A:Prompt^Intface Method Lista Attrib^O
+	CS:INTFACE_METHOD_LIST_ATTRIB^LU
+	CE:
+	CS:WRONGSEQ1^LU
+		A:Text^EXECUTE_SEQ :P1 finns inte^O
+	CE:
+	CS:WRONGSEQ2^LU
+		A:Text^Refererad EXECUTE_SEQ m\00E5ste vara f\00F6re denna^O
+	CE:
+CE:
+CS:IntfaceMode^LU
+	A:Prompt^Intface l\00E4ge^O
+	CS:1^LU
+		A:Text^Manuell^O
+	CE:
+	CS:2^LU
+		A:Text^Automatisk^O
+	CE:
+	CS:3^LU
+		A:Text^Batch^O
+	CE:
+CE:
+CS:IntfacePrUser^LU
+	A:Prompt^Intface per anv\00E4ndare^O
+	CS:INTFACE_PR_USER^LU
+	CE:
+CE:
+CS:IntfacePrefixOption^LU
+	A:Prompt^Intface-prefixval^O
+	CS:1^LU
+		A:Text^VyNamn^O
+	CE:
+	CS:2^LU
+		A:Text^VyNamnUnik^O
+	CE:
+	CS:3^LU
+		A:Text^IngetPrefix^O
+	CE:
+CE:
+CS:IntfacePrivilege^LU
+	A:Prompt^Intface-privilegium^O
+	CS:1^LU
+		A:Text^IngenUpdatTill\00E5ten^O
+	CE:
+	CS:2^LU
+		A:Text^UpdateringTill\00E5ten^O
+	CE:
+CE:
+CS:IntfaceProcedures^LU
+	A:Prompt^Intface-procedurer^O
+	CS:CHECK_BY_METHOD_NEW^LU
+		A:Text^Kontrollera rader fr\00E5n fil tillh\00F6rande Business Logic^O
+	CE:
+	CS:CREATE_OUTPUT_FILE^LU
+		A:Text^Skriv data till fil^O
+	CE:
+	CS:CREATE_TABLE_FROM_FI^LU
+		A:Text^Skapa tabell fr\00E5n fil^O
+	CE:
+	CS:EXCEL_MIGRATION^LU
+		A:Text^Datamigrering fr\00E5n Excel-fil^O
+	CE:
+	CS:FNDMIG_EXPORT^LU
+		A:Text^Exportera datamigreringsdefinitioner till fil^O
+	CE:
+	CS:FNDMIG_IMPORT^LU
+		A:Text^Importera datamigreringsdefinitioner fr\00E5n fil^O
+	CE:
+	CS:INSERT_BY_METHOD_NEW^LU
+		A:Text^Skapa rader fr\00E5n fil^O
+	CE:
+	CS:INSERT_OR_UPDATE^LU
+		A:Text^Skapa eller uppdatera rader fr\00E5n fil^O
+	CE:
+	CS:INTFACE_PROCEDURES^LU
+	CE:
+	CS:INTFACE_PROC_LOV_EXCL_REPL^LU
+	CE:
+	CS:INTFACE_PROC_LOV_INCL_REPL^LU
+	CE:
+	CS:MIGRATE_SOURCE_DATA^LU
+		A:Text^Datamigrering fr\00E5n tabell/vy^O
+	CE:
+	CS:REPLICATION^LU
+		A:Text^Replikering^O
+	CE:
+	CS:REPL_DATA_OUT^LU
+		A:Text^Replikera datastrukturer^O
+	CE:
+CE:
+CS:IntfaceQuickReportUtil^LU
+	CS:DEPREC^LU
+		A:Text^Den h\00E4r funktionen \00E4r ogiltg. Anv\00E4nd ist\00E4llet den inbyggda funktionen Importera/Exportera i snabbrapporter.^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Fel vid export :P1 - :P2^O
+	CE:
+	CS:EXPOK^LU
+		A:Text^Exporterade :P1-rapporter^O
+	CE:
+CE:
+CS:IntfaceReplElemType^LU
+	A:Prompt^Intface Repl-elem.typ^O
+	CS:AGGREGATE^LU
+		A:Text^Aggregat^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Array^O
+	CE:
+CE:
+CS:IntfaceReplMaintUtil^LU
+	CS:EXECERR^LU
+		A:Text^Fel uppst\00E5tt - :P1^O
+	CE:
+	CS:INTFACE_REPL_DB_OBJECTS^LU
+	CE:
+	CS:INTFACE_SERVER_PROCESSES^LU
+	CE:
+	CS:LOGOK^LU
+		A:Text^Loggtabell med :P1 rader har bearbetats f\00F6r :P2^O
+	CE:
+	CS:NOUPDATE^LU
+		A:Text^Du kan inte uppdatera :P1 eftersom replikering k\00F6rs. Alla triggrar \00E4r aktiva.^O
+	CE:
+	CS:REPLFAIL^LU
+		A:Text^Replikeringsjobb :P1 gick fel - :P2^O
+	CE:
+	CS:REPLOK^LU
+		A:Text^Procedur :P1 lyckligt genomf\00F6rd^O
+	CE:
+CE:
+CS:IntfaceReplMessType^LU
+	A:Prompt^Intface Repl-meddelandetyp^O
+	CS:BIZAPI^LU
+		A:Text^BizApi^O
+	CE:
+	CS:TRACE^LU
+		A:Text^VisaMeddelande^O
+	CE:
+CE:
+CS:IntfaceReplOutLog^LU
+	A:Prompt^Intface Repl Out Log^O
+	CS:INTFACE_REPL_OUT_LOG^LU
+	CE:
+CE:
+CS:IntfaceReplPackageUtil^LU
+	CS:COMPERR^LU
+		A:Text^Fel vid kompilering av paket :P1^O
+	CE:
+	CS:ERR1PAR^LU
+		A:Text^Singelrader ska inte ha n\00E5got v\00E4rde i kolumn \00D6verliggande sekvens^O
+	CE:
+	CS:ERR2PAR^LU
+		A:Text^Ett v\00E4rde skall vara \00F6verordnat = utan v\00E4rde i kolumn \00D6verordnad sekvens^O
+	CE:
+	CS:ERRLONG^LU
+		A:Text^K\00E4lla f\00F6r l\00E5ng, kan ej skriva till Intface_Job_Detail - :P1^O
+	CE:
+	CS:KEYERR^LU
+		A:Text^\00D6verordnad nyckel :P1 finns inte i strukturer f\00F6re :P2^O
+	CE:
+	CS:LONGSRC^LU
+		A:Text^K\00E4lla f\00F6r l\00E5ng. Exportera fil fr\00E5n ExecuteJob f\00F6nster och utplacera fr\00E5n Admin^O
+	CE:
+	CS:NODATA^LU
+		A:Text^Minst en rad m\00E5ste vara markerad med On Insert eller On Update^O
+	CE:
+	CS:OTHERS^LU
+		A:Text^Fel vid kompilering av paket  - :P1^O
+	CE:
+CE:
+CS:IntfaceReplRecType^LU
+	A:Prompt^Intface Repl Radtyp^O
+	CS:AGGREGATE^LU
+		A:Text^Aggregat^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Array^O
+	CE:
+CE:
+CS:IntfaceReplStructCols^LU
+	A:Prompt^Intface Repl strukt kol^O
+	CS:INTFACE_REPL_STRUCT_COLS^LU
+	CE:
+CE:
+CS:IntfaceReplStructure^LU
+	A:Prompt^Intface Repl struktur^O
+	CS:ERRSEQ^LU
+		A:Text^\00D6verliggande sekvens kan inte vara lika med Seq^O
+	CE:
+	CS:INSERR^LU
+		A:Text^Alla rader fr\00E5n Startpunkt och upp\00E5t m\00E5ste ha kolumn OnInsert kontrollerad och kolumn TriggerTable definierad^O
+	CE:
+	CS:INTFACE_REPL_PARENT_LOV^LU
+	CE:
+	CS:INTFACE_REPL_STRUCTURE^LU
+	CE:
+	CS:INTFACE_REPL_TABLE_LOV^LU
+	CE:
+	CS:MULTIPLESTART^LU
+		A:Text^Du kan enbart definiera en Startpunkt f\00F6r ett jobb^O
+	CE:
+	CS:NONUNIQUE^LU
+		A:Text^Inget unikt huvud definierat f\00F6r :P1. Endast en post ska ha ParentSeq lika med NULL^O
+	CE:
+	CS:NOSEQ^LU
+		A:Text^Kan inte anv\00E4nda denna \00D6verliggande sekvens. Inga rader med Seq :P1^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^:P1 = :P2, v\00E4rdet b\00F6r inte vara st\00F6rre \00E4n 99^O
+	CE:
+CE:
+CS:IntfaceReplTriggersUtil^LU
+	CS:ALTERR^LU
+		A:Text^Fel vid \00E4ndring av trigger :P1 - :P2^O
+	CE:
+	CS:COMPERR^LU
+		A:Text^Fel upptr\00E4dde f\00F6r trigger :P1^O
+	CE:
+	CS:DROPERR^LU
+		A:Text^Fel vid borttagning av trigger :P1 - :P2^O
+	CE:
+	CS:NODEF^LU
+		A:Text^Du m\00E5ste ange ett TabellNamn och markera OnInsert eller OnUpdate f\00F6r minst en struktur^O
+	CE:
+CE:
+CS:IntfaceReplicCriteria^LU
+	A:Prompt^Intface replikriterium^O
+	CS:1^LU
+		A:Text^Kontrakt^O
+	CE:
+	CS:2^LU
+		A:Text^F\00F6retag^O
+	CE:
+CE:
+CS:IntfaceReplicationLog^LU
+	A:Prompt^Intface replikeringslogg^O
+	CS:INTFACE_REPLICATION_LOG^LU
+	CE:
+CE:
+CS:IntfaceRuleFlag^LU
+	A:Prompt^Intface regelflagga^O
+	CS:1^LU
+		A:Text^Aktiv^O
+	CE:
+	CS:2^LU
+		A:Text^Inaktiv^O
+	CE:
+CE:
+CS:IntfaceRuleValue^LU
+	A:Prompt^Intface regelv\00E4rde^O
+	CS:1^LU
+		A:Text^Inget v\00E4rde till\00E5tet^O
+	CE:
+	CS:2^LU
+		A:Text^Oblikatoriskt nummer^O
+	CE:
+	CS:3^LU
+		A:Text^Obligatorisk str\00E4ng^O
+	CE:
+	CS:4^LU
+		A:Text^Obligatoriskt datum^O
+	CE:
+	CS:5^LU
+		A:Text^Valfri^O
+	CE:
+CE:
+CS:IntfaceRules^LU
+	A:Prompt^Intface-regler^O
+	CS:CHECKRULEERROR^LU
+		A:Text^Regel :P1 \00E4r inte giltig f\00F6r procedurnamn :P2.^O
+	CE:
+	CS:ERRCONN^LU
+		A:Text^Jobb :P1 \00E4r redan kopplat till :P2^O
+	CE:
+	CS:ERRCONN2^LU
+		A:Text^Jobb :P1 m\00E5ste anv\00E4nda process CREATE_TABLE_FROM_FILE^O
+	CE:
+	CS:ERRORVAL1^LU
+		A:Text^Giltiga v\00E4rden \00E4r KEEPALL , KEEPERR el. INGENBACKUP^O
+	CE:
+	CS:ERRORVAL2^LU
+		A:Text^Giltiga v\00E4rden \00E4r INSERT eller UPDATE^O
+	CE:
+	CS:ERRORVAL3^LU
+		A:Text^Giltiga v\00E4rde \00E4r BEFORE eller AFTER^O
+	CE:
+	CS:FILERULEERR^LU
+		A:Text^Regel :P1 kan inte aktiveras n\00E4r :P2 \00E4r aktiv^O
+	CE:
+	CS:INTFACE_RULES^LU
+	CE:
+	CS:INTFACE_RULES_LOV^LU
+	CE:
+	CS:REPLUSR1^LU
+		A:Text^Denna regel kan endast anv\00E4ndas f\00F6r REPLICATION-jobb^O
+	CE:
+	CS:REPLUSR2^LU
+		A:Text^Alternativa anv\00E4ndare \00E4r inte definierade i systemparametrar i Admin.exe^O
+	CE:
+	CS:REPLUSR3^LU
+		A:Text^Alternativa anv\00E4ndare kan inte definieras likadant som app\00E4gare i systemparametrar i Admin.exe^O
+	CE:
+CE:
+CS:IntfaceServerFile^LU
+	A:Prompt^Intface serverfil^O
+	CS:CNTERR^LU
+		A:Text^Ett fel intr\00E4ffade vid r\00E4kning av poster^O
+	CE:
+	CS:CREERR^LU
+		A:Text^Posterna kasserades. Kontrollera loggfilen fr\00E5n startf\00F6nstret^O
+	CE:
+	CS:INTFACE_SERVER_DIR_LOV^LU
+		CS:NAME^LU
+		CE:
+		CS:PATH^LU
+		CE:
+	CE:
+	CS:INTFACE_SERVER_FILES_LOV^LU
+		CS:FILE_DATE^LU
+		CE:
+		CS:FILE_NAME^LU
+		CE:
+		CS:FILE_SIZE^LU
+		CE:
+	CE:
+	CS:NOFILE^LU
+		A:Text^Filen :P1 finns inte i :P2^O
+	CE:
+	CS:NOICTAB^LU
+		A:Text^Tabell :P1 finns inte^O
+	CE:
+	CS:NOINS^LU
+		A:Text^Till\00E4gg i IC-tabellen misslyckades. H\00F6ger musknapp Packa upp fil i f\00F6nster Exekvera jobb kommer att visa formatfel. :P1^O
+	CE:
+	CS:NOSERV^LU
+		A:Text^Filen m\00E5ste finnas i :P1, inte :P2. Uppdatera jobbhuvud.^O
+	CE:
+	CS:NOTAB^LU
+		A:Text^Tabellen skapades inte: :P1^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^Kolumnnamn :P1 \00E4r oklart definierat^O
+	CE:
+CE:
+CS:IntfaceTableMigrations^LU
+	A:Prompt^Tabellmigreringsparametrar^O
+	CS:INTFACE_TABLE_MIGRATIONS^LU
+	CE:
+	CS:NOCOL^LU
+		A:Text^Inga kolumner f\00F6r uppdatering^O
+	CE:
+	CS:PROCERR^LU
+		A:Text^Fel :P1 intr\00E4ffade p\00E5 :P2^O
+	CE:
+	CS:TABERR^LU
+		A:Text^Kan inte uppdatera :P2.:P1^O
+	CE:
+CE:
+CS:IntfaceUser^LU
+	A:Prompt^Intface-anv\00E4ndare^O
+	CS:INTFACE_USER^LU
+	CE:
+CE:
+CS:IntfaceUtil^LU
+	CS:COMPILE_ERRORS^LU
+		A:Text^Kompileringsfel f\00F6r triggrar :P1^O
+	CE:
+	CS:UPDERR^LU
+		A:Text^Du kan inte uppdatera andra system \00E4n IC-system^O
+	CE:
+CE:
+CS:IntfaceViews^LU
+	A:Prompt^Intface-vyer^O
+	CS:INTFACE_SOURCE_COL_LOV^LU
+	CE:
+	CS:INTFACE_VIEWS^LU
+	CE:
+	CS:INTFACE_VIEWS_COL_INFO^LU
+	CE:
+CE:
+CS:IntfaceXsdUtil^LU
+	CS:XSDCRE^LU
+		A:Text^XSD skapades som klientfil, :P1 rader^O
+	CE:
+CE:

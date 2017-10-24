@@ -1,0 +1,214 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceMethodList
+--  Component:    FNDMIG
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+COLUMN Lang_Code IS
+   Flags      = 'KMI--'
+   Datatype   = 'STRING(5)'
+   Prompt     = 'Language Code';
+
+COLUMN Pos IS
+   Flags      = 'KMI--'
+   Datatype   = 'NUMBER'
+   Prompt     = 'Position';
+
+COLUMN Description IS
+   Flags      = 'A----'
+   Datatype   = 'STRING(30)'
+   Prompt     = 'Description';
+
+COLUMN Data_Type IS
+   Flags      = 'AM---'
+   Datatype   = 'STRING(10)'
+   Prompt     = 'Data Type';
+
+COLUMN Length IS
+   Flags      = 'AM---'
+   Datatype   = 'NUMBER'
+   Prompt     = 'Length';
+
+COLUMN Primary_Key IS
+   Flags      = 'A----'
+   Datatype   = 'STRING(3)'
+   Prompt     = 'Primary Key';
+
+COLUMN Mandatory IS
+   Flags      = 'A----'
+   Datatype   = 'STRING(3)'
+   Prompt     = 'Mandatory';
+
+COLUMN Default_Value IS
+   Flags      = 'A----'
+   Datatype   = 'STRING(2000)'
+   Prompt     = 'Default Value';
+
+COLUMN Qr_Text IS
+   Flags      = 'A----'
+   Datatype   = 'STRING(4000)'
+   Prompt     = 'Note Text for Quick Report';
+
+COLUMN Source_Column IS
+   Flags      = 'A----'
+   Datatype   = 'STRING(2000)'
+   Prompt     = 'Source Column';
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+VIEW Intface_Excel_Input_Default IS
+   Prompt = 'Intface Method List'
+   Column_Name.Flags = 'KMI--'
+   Column_Name.Datatype = 'STRING(30)'
+   Note_Text.Flags = 'A----'
+   Note_Text.Datatype = 'STRING(4000)'
+   Note_Text.Prompt = 'Note Text for ODBC'
+SELECT DISTINCT id.intface_name,
+                lst.lang_code,
+                id.pos,
+                ucc.column_name,
+                SUBSTR(lst.text,1,30) description,
+                id.data_type,
+                id.length,
+                DECODE(SUBSTR(Dictionary_SYS.Comment_Value_('FLAGS',ucc.comments),1,1),'P','Yes','K','Yes',NULL) primary_key,
+                DECODE(SUBSTR(Dictionary_SYS.Comment_Value_('FLAGS',ucc.comments),2,1),'M','Yes',NULL) mandatory,
+                id.default_value,
+--              Columns NOTE_TEXT and QR_TEXT holds the same information.
+--              NOTE_TEXT is formatted for ODBC-query
+--              and QR_TEXT  is formatted for Quick Report
+                TRANSLATE(DECODE(NVL(id.note_text,'X'),'X',
+                   DECODE(NVL(Dictionary_SYS.Comment_Value_('REF',ucc.comments),'X'),'X',NULL,'Reference: '||
+                   Dictionary_SYS.Comment_Value_('REF',ucc.comments)),id.note_text),CHR(10)||CHR(13),CHR(10))||
+                   DECODE(NVL(id.db_client_values,'X'),'X',NULL,CHR(10)||DECODE(SUBSTR(TRANSLATE(
+                   SUBSTR(id.db_client_values,1,(INSTR(id.db_client_values,'DB')-5))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,'DB'),
+                   (INSTR(id.db_client_values,':')-INSTR(id.db_client_values,'DB')+1))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,':')+5,
+                   LENGTH(id.db_client_values)-(INSTR(id.db_client_values,':')+6)),
+                   CHR(10)||CHR(13),CHR(10)),1,1),CHR(10),NULL,TRANSLATE(
+                   SUBSTR(id.db_client_values,1,(INSTR(id.db_client_values,'DB')-5))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,'DB'),
+                   (INSTR(id.db_client_values,':')-INSTR(id.db_client_values,'DB')+1))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,':')+5,
+                   LENGTH(id.db_client_values)-(INSTR(id.db_client_values,':')+6)),
+                   CHR(10)||CHR(13),CHR(10)))) note_text,
+                DECODE(nvl(id.note_text,'X'),'X',
+                   DECODE(nvl(Dictionary_SYS.Comment_Value_('REF',ucc.comments),'X'),'X',NULL,'Reference: '||
+                   Dictionary_SYS.Comment_Value_('REF',ucc.comments)),id.note_text)||
+                   DECODE(nvl(id.db_client_values,'X'),'X',NULL,CHR(10)||CHR(13)||DECODE(SUBSTR(TRANSLATE(
+                   SUBSTR(id.db_client_values,1,(INSTR(id.db_client_values,'DB')-5))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,'DB'),
+                   (INSTR(id.db_client_values,':')-INSTR(id.db_client_values,'DB')+1))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,':')+5,
+                   LENGTH(id.db_client_values)-(INSTR(id.db_client_values,':')+6)),
+                   CHR(10)||CHR(13),CHR(10)),1,1),CHR(10),NULL,TRANSLATE(
+                   SUBSTR(id.db_client_values,1,(INSTR(id.db_client_values,'DB')-5))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,'DB'),
+                   (INSTR(id.db_client_values,':')-INSTR(id.db_client_values,'DB')+1))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,':')+5,
+                   LENGTH(id.db_client_values)-(INSTR(id.db_client_values,':')+6)),
+                   CHR(10)||CHR(13),CHR(10)))) qr_text,
+                id.source_column,
+                iml.OBJKEY                     objkey
+FROM   dba_col_comments ucc,
+       dba_tab_comments utc,
+       intface_method_list iml,
+       intface_detail id,
+       language_sys_tab lst
+WHERE  lst.type         = 'Column'
+AND    ucc.table_name   = utc.table_name
+AND    lst.path         = ucc.table_name || '.' || ucc.column_name
+AND    lst.attribute    = 'Prompt'
+AND    iml.view_name    = ucc.table_name
+AND    iml.intface_name = id.intface_name
+AND    ucc.column_name  = SUBSTR(id.column_name,INSTR(id.column_name,'.')+1,99)
+AND    (id.source_column IS NULL
+  OR    id.source_column LIKE '%API.GET%')
+AND    ucc.owner        = utc.owner
+AND    ucc.owner        = Fnd_Session_API.Get_App_Owner;
+
+VIEW Intface_Excel_Input_Format IS
+   Prompt = 'Intface Method List'
+   Column_Name.Flags = 'KMI--'
+   Column_Name.Datatype = 'STRING(30)'
+   Note_Text.Flags = 'A----'
+   Note_Text.Datatype = 'STRING(4000)'
+   Note_Text.Prompt = 'Note Text for ODBC'
+SELECT DISTINCT id.intface_name,
+                lst.lang_code,
+                id.pos,
+                ucc.column_name,
+                SUBSTR(lst.text,1,30) description,
+                id.data_type,
+                id.length,
+                DECODE(SUBSTR(Dictionary_SYS.Comment_Value_('FLAGS',ucc.comments),1,1),'P','Yes','K','Yes',NULL) primary_key,
+                DECODE(SUBSTR(Dictionary_SYS.Comment_Value_('FLAGS',ucc.comments),2,1),'M','Yes',NULL) mandatory,
+                id.default_value,
+--              Columns NOTE_TEXT and QR_TEXT holds the same information.
+--              NOTE_TEXT is formatted for ODBC-query
+--              and QR_TEXT is formatted for Quick Report
+                TRANSLATE(DECODE(NVL(id.note_text,'X'),'X',
+                   DECODE(NVL(Dictionary_SYS.Comment_Value_('REF',ucc.comments),'X'),'X',NULL,'Entered in form: '||
+                   Dictionary_SYS.Comment_Value_('REF',ucc.comments)),
+                   id.note_text),CHR(10)||CHR(13),CHR(10))||
+                   DECODE(NVL(id.db_client_values,'X'),'X',NULL,CHR(10)||DECODE(SUBSTR(TRANSLATE(
+                   SUBSTR(id.db_client_values,1,(INSTR(id.db_client_values,'DB')-5))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,'DB'),
+                   (INSTR(id.db_client_values,':')-INSTR(id.db_client_values,'DB')+1))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,':')+5,
+                   LENGTH(id.db_client_values)-(INSTR(id.db_client_values,':')+6)),
+                   CHR(10)||CHR(13),CHR(10)),1,1),CHR(10),NULL,TRANSLATE(
+                   SUBSTR(id.db_client_values,1,(INSTR(id.db_client_values,'DB')-5))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,'DB'),
+                   (INSTR(id.db_client_values,':')-INSTR(id.db_client_values,'DB')+1))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,':')+5,
+                   LENGTH(id.db_client_values)-(INSTR(id.db_client_values,':')+6)),
+                   CHR(10)||CHR(13),CHR(10)))) note_text,
+                DECODE(NVL(id.note_text,'X'),'X',
+                   DECODE(NVL(Dictionary_SYS.Comment_Value_('REF',ucc.comments),'X'),'X',NULL,'Entered in form: '||
+                   Dictionary_SYS.Comment_Value_('REF',ucc.comments)),
+                   id.note_text)||
+                   DECODE(NVL(id.db_client_values,'X'),'X',NULL,CHR(13)||CHR(10)||DECODE(SUBSTR(TRANSLATE(
+                   SUBSTR(id.db_client_values,1,(INSTR(id.db_client_values,'DB')-5))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,'DB'),
+                   (INSTR(id.db_client_values,':')-INSTR(id.db_client_values,'DB')+1))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,':')+5,
+                   LENGTH(id.db_client_values)-(INSTR(id.db_client_values,':')+6)),
+                   CHR(10)||CHR(13),CHR(10)),1,1),CHR(10),NULL,TRANSLATE(
+                   SUBSTR(id.db_client_values,1,(INSTR(id.db_client_values,'DB')-5))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,'DB'),
+                   (INSTR(id.db_client_values,':')-INSTR(id.db_client_values,'DB')+1))||CHR(10)||
+                   SUBSTR(id.db_client_values,INSTR(id.db_client_values,':')+5,
+                   LENGTH(id.db_client_values)-(INSTR(id.db_client_values,':')+6)),
+                   CHR(10)||CHR(13),CHR(10)))) qr_text,
+                   id.source_column,
+                   iml.OBJKEY                    objkey
+FROM   dba_col_comments ucc,
+       dba_tab_comments utc,
+       language_sys_tab lst,
+       intface_method_list iml,
+       intface_detail id
+WHERE  lst.type         = 'Column'
+AND    ucc.table_name   = utc.table_name
+AND    lst.path         = ucc.table_name || '.' || ucc.column_name
+AND    lst.attribute    = 'Prompt'
+AND    iml.view_name    = ucc.table_name
+AND    iml.intface_name = id.intface_name
+AND    ucc.column_name  = SUBSTR(id.column_name,INSTR(id.column_name,'.')+1,99)
+AND    id.source_column IS NOT NULL
+AND    id.source_column NOT LIKE '%API.GET%'
+AND    ucc.owner        = utc.owner
+AND    ucc.owner        = Fnd_Session_API.Get_App_Owner;
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This is a sample file containing client settings that can be adjusted for an installation.
+If you want to change a setting, rename or copy this file removing the "_sample" suffix (Ifs.Fnd.Explorer.appsettings) and
+uncommend desired setting (or settings) changing its value. The installation must then be re-signed using F1Mage (if using ClickOnce deployment).
+The sample file can be updated during a binary patch delivery, but the appsettings file will not be altered. -->
+<appSettings>
+	<!-- Writes (append) exceptions to a log file : Ifs.Fnd.Explorer.exe_error_log -->
+	<!-- <add key="errorLogging" value="false" /> -->
+
+	<!-- Number of records fetched in per chunk when populating/searching in a window -->
+	<!-- <add key="defaultFetchSize" value="103" /> -->
+
+	<!--  Decides whether the functionality to remember password between sessions should be enabled -->
+	<!-- <add key="disableRememberPassword" value="false" /> -->
+
+	<!-- Decides whether the last user name should be remembered between sessions-->
+	<!-- <add key="disableRememberUser" value="false" /> -->
+
+	<!-- Tells the server, whether the client accepts GZipped responses -->
+	<!-- <add key="AllowGZipForInvoke" value="true" /> -->
+
+	<!-- If set as true,  overflow in numeric fields  will be truncated to MinValue/MaxValue of decimal data type -->
+	<!-- <add key="useDecimalPrecisionOverflowFallback" value="false" /> -->
+
+	<!-- If running as ClickOnce deployed application, look for framework files updates -->
+	<!-- <add key="EnableUpdates" value="true" /> -->
+
+	<!-- Stores the ClickOnce update check interval -->
+	<!-- <add key="UpdateInterval" value="60" /> -->
+
+	<!-- Allows using roaming profiles , given that roaming profiles are configured on Windows -->
+	<!-- <add key="useRoamingProfiles" value="false" /> -->
+
+	<!-- If set, EE will try to find out if internet proxy is set up and use it for communicating with application server -->
+	<!-- <add key="proxyAutodetect" value="false" /> -->
+
+	<!-- If set, EE will paint it's window with a standard window border, instead of the custom border. -->
+	<!-- <add key="disableCustomBorder" value="false" /> -->
+
+  <!-- Number of maximum concurrent server calls from IFS Lobby. Default if not specified here is 5. -->
+  <!-- <add key="maxConcurrentLobbyCalls" value="5" />  -->
+
+  <!-- Sets the timeout in milliseconds to wait before the request times out for server calls from an IFS Lobby element. Default if not specified here is 60000. For Infinite use -1 -->
+  <!-- <add key="timeoutLobbyElement" value="60000" /> -->
+</appSettings>
+

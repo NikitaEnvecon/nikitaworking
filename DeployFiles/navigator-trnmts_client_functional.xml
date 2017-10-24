@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FndNavigator xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Legacy="false" Source="trnmts\client\navigator-functional.xml">
+  <FndNavigatorEntries>
+    <FndNavigatorEntry>
+      <Key>MODERN_TRAD_SOLUTINS</Key>
+      <Name>Modern Trade Solutions</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>NAVIGATOR_Root</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>MODERN_TRAD_SOLUTINS.SUPETS</Key>
+      <Name>Supermarkets</Name>
+      <Url>ifsapf:tbwSuperMarket</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>MODERN_TRAD_SOLUTINS</ParentKey>
+      <Ordinal>200</Ordinal>
+    </FndNavigatorEntry>
+  </FndNavigatorEntries>
+  <FndShortcutItems />
+</FndNavigator>

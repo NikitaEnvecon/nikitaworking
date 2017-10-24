@@ -1,0 +1,49 @@
+-----------------------------------------------------------------------------------------
+--
+--  Module:   ACCRUL 
+--
+--  File:     160105_126575_ACCRUL.cdb
+--
+--  Purpose:  Modify correction column in EXT_TRANSACTIONS_TAB.
+--
+--  Date     Sign      History
+--  ------   ------    ---------------------------------------------------------------------------
+--  160105   SAVMLK    Bug 126575 Corrected.
+--------------------------------------------------------------------------------------------------
+ 
+PROMPT Starting 160105_126575_ACCRUL.cdb
+
+SET SERVEROUTPUT ON
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160105_126575_ACCRUL.cdb','Timestamp_1');
+PROMPT Modifying column CORRECTION of EXT_TRANSACTIONS_TAB 
+  
+BEGIN
+   IF NOT Database_SYS.Is_Db_Patch_Registered('ACCRUL', 126575) THEN
+       UPDATE EXT_TRANSACTIONS_TAB E
+       SET  E.correction= 'FALSE'
+       WHERE  E.correction IS NULL;
+       
+      COMMIT;
+   END IF;
+END;
+/   
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160105_126575_ACCRUL.cdb','Timestamp_2');
+PROMPT Modify column CORRECTION to mandatory in EXT_TRANSACTIONS_TAB 
+  
+DECLARE
+   table_name_ VARCHAR2(30) := 'EXT_TRANSACTIONS_TAB';
+   column_           Database_SYS.ColRec;
+BEGIN
+   IF NOT Database_SYS.Is_Db_Patch_Registered('ACCRUL', 126575) THEN
+      column_ := Database_SYS.Set_Column_Values('CORRECTION', 'VARCHAR2(5)', 'N');
+      Database_SYS.Alter_Table_Column(table_name_, 'M', column_, TRUE);	   
+      
+      Database_SYS.Register_Db_Patch('ACCRUL', 126575, 'Modified correction column.'); 
+      COMMIT;
+   END IF;      
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('ACCRUL','160105_126575_ACCRUL.cdb','Done');
+SET SERVEROUTPUT OFF

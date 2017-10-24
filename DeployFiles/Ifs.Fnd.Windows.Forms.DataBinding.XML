@@ -1,0 +1,1408 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ifs.Fnd.Windows.Forms.DataBinding</name>
+    </assembly>
+    <members>
+        <member name="T:Ifs.Fnd.Data.FndAggregateBindingList">
+            <summary>
+            Summary description for FndAggregateBindingList.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndDetailBindingList">
+            <summary>
+            Summary description for FndDetailBindingList.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndBindingListBase">
+            <summary>
+            Base class for binding list classes
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.IFndBindingList">
+            <summary>
+            Defines the interface to use between complex data bound controls and binding lists
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.IFndBindingList.EndEdit">
+            <summary>
+            Ends a row edit and possibly trigs a reorder
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.IFndBindingList.Position">
+            <summary>
+            Gets or sets the position in the list that bound controls should point to. 
+            </summary>
+            <remarks>Used by databinding in order to synchronize simple bound controls and also for populating detail binding sources</remarks>
+        </member>
+        <member name="P:Ifs.Fnd.Data.IFndBindingList.SelectedIndices">
+            <summary>
+            Gets or sets the indexes of the selected rows
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Data.IFndBindingList.ColumnChanged">
+            <summary>
+            Occurs when an attribute on a row has changed. Event arguments contains information about row and column.
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Data.IFndBindingList.SelectionChanged">
+            <summary>
+            Occurs when selection changes
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Data.IFndBindingList.PositionChanged">
+            <summary>
+            Occurs when position changes
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Data.IFndBindingList.ListChanged">
+            <summary>
+            Occurs when the list changes or an item in the list changes
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.#ctor">
+            <summary>
+            Initializes a new instance of the FndBindingListBase class.
+            Warning: Use the constructor FndBindingListBase(IContainer container) instead!
+            If you use this constructor, you must manually call Dispose() on this object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the FndBindingListBase class and associates it with the specified container.
+            </summary>
+            <param name="container">The container to add this component to</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.DisposeCachedBindingLists(System.Boolean)">
+            <summary>
+            Internal framework use only
+            </summary>
+            <param name="disposing">True to dispose</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.DisposeCachedBindingLists(System.Boolean,System.String)">
+            <summary>
+            Internal framework use only
+            </summary>
+            <param name="disposing">True to dispose</param>
+            <param name="name">The name of the container control that owns the bindinglist</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the System.ComponentModel.Component
+            and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.RemoveAt(System.Int32)">
+            <summary>
+            Removes an item at the specified index
+            </summary>
+            <param name="index">The zero-based index of the item to remove</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.Insert(System.Int32,System.Object)">
+            <summary>
+            Inserts an item to the list at the specified position
+            </summary>
+            <param name="index">The zero-based index at which value should be inserted</param>
+            <param name="value">The System.Object to insert into the System.Collections.IList</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.Remove(System.Object)">
+            <summary>
+            Removes the first occurrence of a specific row from the list
+            </summary>
+            <param name="value">The row to remove from the list</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.Contains(System.Object)">
+            <summary>
+            Determines whether the list contains a specific row
+            </summary>
+            <param name="value">The row to locate in the list</param>
+            <returns>true if the row is found in the list; otherwise, false</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.Clear">
+            <summary>
+            Removes all items from the list
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.ClearSort">
+            <summary>
+            Resets all record sort related items
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.IndexOf(System.Object)">
+            <summary>
+            Determines the index of a specific row in the list
+            </summary>
+            <param name="value">The row to locate in the list</param>
+            <returns>The index of the row if found in the list; otherwise, -1.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.Add(System.Object)">
+            <summary>
+            Adds an item to the list
+            </summary>
+            <param name="value">The row to add to the list</param>
+            <returns>The position into which the new element was inserted</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies the elements of the System.Collections.ICollection to an System.Array, starting at a particular System.Array index
+            </summary>
+            <param name="array">The one-dimensional System.Array that is the destination of the elements copied from System.Collections.ICollection. The System.Array must have zero-based indexing.</param>
+            <param name="index">The zero-based index in array at which copying begins</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.GetEnumerator">
+            <summary>
+             Returns an enumerator that can iterate through a collection
+            </summary>
+            <returns>An System.Collections.IEnumerator that can be used to iterate through the collection</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.AddIndex(System.ComponentModel.PropertyDescriptor)">
+            <summary>
+            Adds the System.ComponentModel.PropertyDescriptor to the indexes used for searching
+            </summary>
+            <param name="property">The System.ComponentModel.PropertyDescriptor to add to the indexes used for searching</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.ApplyWhere(Ifs.Fnd.Data.FndCondition)">
+            <summary>
+            Filters the list based on the specified FndCondition
+            </summary>
+            <param name="condition">Complex condition to filter on</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.RemoveWhere">
+            <summary>
+            Removes filtering added with ApplyWhere
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.ApplySort(Ifs.Fnd.Data.FndDataColumn[],System.ComponentModel.ListSortDirection[])">
+            <summary>
+            Sorts the list based on specified columns and directions
+            </summary>
+            <param name="sortProperties">Columns to sort by</param>
+            <param name="sortDirections">Directions to sort by</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.ApplySort(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)">
+            <summary>
+            Sorts the list based on a System.ComponentModel.PropertyDescriptor and a System.ComponentModel.ListSortDirection.
+            </summary>
+            <param name="property">Column to sort by</param>
+            <param name="direction">Direction to sort by</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.SetComparer(Ifs.Fnd.Data.FndDataColumn,Ifs.Fnd.Data.FndCompareHandler,System.Boolean)">
+            <summary>
+            Sets custom comparer for the specified column that will be used when sorting on that column
+            </summary>
+            <param name="column">Column to use custom comparsion for</param>
+            <param name="comparer">Delegate that will be called for comparsion</param>
+            <param name="overwrite">Overwrite if comparer is already set</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.Find(System.ComponentModel.PropertyDescriptor,System.Object)">
+            <summary>
+            Returns the index of the row that has the given System.ComponentModel.PropertyDescriptor
+            </summary>
+            <param name="property">The System.ComponentModel.PropertyDescriptor to search on</param>
+            <param name="key">The value of the property parameter to search for</param>
+            <returns>The index of the row that has the given System.ComponentModel.PropertyDescriptor</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.RemoveSort">
+            <summary>
+            Removes any sort applied using System.ComponentModel.IBindingList.ApplySort(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.AddNew">
+            <summary>
+            Adds a new item to the list.
+            </summary>
+            <returns>The item added to the list</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.RemoveIndex(System.ComponentModel.PropertyDescriptor)">
+            <summary>
+            Removes the System.ComponentModel.PropertyDescriptor from the indexes used for searching
+            </summary>
+            <param name="property">The System.ComponentModel.PropertyDescriptor to remove from the indexes used for searching</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.GetItemProperties(System.ComponentModel.PropertyDescriptor[])">
+            <summary>
+            Returns the System.ComponentModel.PropertyDescriptorCollection that represents the properties on each item used to bind data
+            </summary>
+            <param name="listAccessors">An array of System.ComponentModel.PropertyDescriptor objects to find in the collection as bindable. This can be null.</param>
+            <returns>The System.ComponentModel.PropertyDescriptorCollection that represents the properties on each item used to bind data</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.GetListName(System.ComponentModel.PropertyDescriptor[])">
+            <summary>
+            Returns the name of the list.
+            </summary>
+            <param name="listAccessors"> An array of System.ComponentModel.PropertyDescriptor objects, the list name for which is returned. This can be null</param>
+            <returns>The name of the list</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.BeginInit">
+            <summary>
+            Signals the object that initialization is starting
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.EndInit">
+            <summary>
+            Signals the object that initialization is complete
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.OnListChanged(System.ComponentModel.ListChangedEventArgs)">
+            <summary>
+            Raises the ListChanged event
+            </summary>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.OnPositionChanged">
+            <summary>
+            Raises the PositionChanged event
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.OnColumnChanged(Ifs.Fnd.Data.FndDataPathEventArgs)">
+            <summary>
+            Raises the ColumnChanged event
+            </summary>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.OnSelectionChanged">
+            <summary>
+            Raises the SelectionChanged event
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.Suspend">
+            <summary>
+            Suspends event raising
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.Resume">
+            <summary>
+            Resumes event raising
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.ResumeAt(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Resumes event raising, and sets the position to the dararow specified
+            </summary>
+            <param name="row">Currently selected row</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.ResumeAt(System.Int32)">
+            <summary>
+            Resumes event raising, and sets the position to the index specified
+            </summary>
+            <param name="index">Currently selected index</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndBindingListBase.EndEdit">
+            <summary>
+            Ends a row edit and possibly trigs a reorder
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Data.FndBindingListBase.PositionChanged">
+            <summary>
+            Occurs when position changes
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Data.FndBindingListBase.ColumnChanged">
+            <summary>
+            Occurs when an attribute on a row has changed. Event arguments contains information about row and column.
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Data.FndBindingListBase.RowChanged">
+            <summary>
+            Occurs when all attributes on a row has changed. 
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Data.FndBindingListBase.SelectionChanged">
+            <summary>
+            Occurs when selection changes
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Data.FndBindingListBase.ListChanged">
+            <summary>
+            Occurs when the list changes or an item in the list changes
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Data.FndBindingListBase.RefreshDetails">
+            <summary>
+            Occurs after a ListChanged with type Reset
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the System.Collections.IList is read-only
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.Item(System.Int32)">
+            <summary>
+            Gets or sets a row in this list
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.IsFixedSize">
+            <summary>
+            Gets a value indicating whether the list has a fixed size
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.IsSynchronized">
+            <summary>
+            Gets a value indicating whether access to the System.Collections.ICollection is synchronized (thread-safe)
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.Count">
+            <summary>
+            Gets the number of elements contained in the System.Collections.ICollection
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.SyncRoot">
+            <summary>
+            Gets an object that can be used to synchronize access to the System.Collections.ICollection
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.AllowNew">
+            <summary>
+            Gets whether you can add items to the list using System.ComponentModel.IBindingList.AddNew
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.SortProperty">
+            <summary>
+            Gets the System.ComponentModel.PropertyDescriptor that is being used for sorting
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.SortProperties">
+            <summary>
+            Gets the columns that is being used for sorting
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.SupportsSorting">
+            <summary>
+            Gets whether the list supports sorting.  
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.IsSorted">
+            <summary>
+            Gets whether the items in the list are sorted
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.AllowRemove">
+            <summary>
+            Gets whether you can remove items from the list, using System.Collections.IList.Remove(System.Object) or System.Collections.IList.RemoveAt(System.Int32)
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.SupportsSearching">
+            <summary>
+            Gets whether the list supports searching using the System.ComponentModel.IBindingList.Find(System.ComponentModel.PropertyDescriptor,System.Object) method
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.SortDirection">
+            <summary>
+            Gets the direction of the sort.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.SupportsChangeNotification">
+            <summary>
+            Gets whether a System.ComponentModel.IBindingList.ListChanged event is raised when the list changes or an item in the list changes. 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.AllowEdit">
+            <summary>
+            Gets whether you can update items in the list.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.ContainerControl">
+            <summary>
+            Gets or sets the ContainerControl used to access BindingContext
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.Position">
+            <summary>
+            Gets or sets the position in the list
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.Current">
+            <summary>
+            Gets the current row in the list
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.SelectedIndices">
+            <summary>
+            Gets or sets the indexes of the selected rows
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.AllColumns">
+            <summary>
+            All columns, including arrays
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndBindingListBase.SpecialColumns">
+            <summary>
+            Collection of shortcut columns
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Data.FndDetailBindingList.deferredPopulateRequestMonitor">
+            <summary>
+            Used to hold the DeferredPopulateRequestMonitor associated with the binding list
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndDetailBindingList.#ctor">
+            <summary>
+            Initializes a new instance of the FndDetailBindingList class.
+            Warning: Use the constructor FndDetailBindingList(IContainer container) instead!
+            If you use this constructor, you must manually call Dispose() on this object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndDetailBindingList.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the FndDetailBindingList class and associates it with the specified container.
+            </summary>
+            <param name="container">The container to add this component to</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndDetailBindingList.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the System.ComponentModel.Component
+            and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndDetailBindingList.EndInit">
+            <summary>
+            Signals the object that initialization is complete
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndDetailBindingList.MasterBindingList">
+            <summary>
+            Master binding list that together with DetailAttributeName specifies this detail binding list
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndDetailBindingList.DetailAttributeName">
+            <summary>
+            Attribute name that together with MasterBindingList specifies this detail binding list
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndDetailBindingList.Deferred">
+            <summary>
+            Specifies whether the populate is deferred or not
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndDetailBindingList.DeferredPopulateRequestMonitor">
+            <summary>
+            Gets or sets the DeferredPopulateRequestMonitor of the binding list
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndDetailBindingList.AllColumns">
+            <summary>
+            All columns, including arrays
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndAggregateBindingList.#ctor">
+            <summary>
+            Creates new instance of FndAggregateBindingList
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndAggregateBindingList.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Creates new instance of FndAggregateBindingList
+            </summary>
+            <param name="container">component collection of parent</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndAggregateBindingList.IndexOf(System.Object)">
+            <summary>
+            Determines the index of a specific row in the list
+            </summary>
+            <param name="value">The row to locate in the list</param>
+            <returns>The index of the row if found in the list; otherwise, -1.</returns>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndAggregateBindingList.Item(System.Int32)">
+            <summary>
+            Gets or sets a row in this list
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndAggregateBindingList.Count">
+            <summary>
+            Gets the number of elements contained in the System.Collections.ICollection
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndBinding">
+            <summary>
+            Represents the simple binding between the property value of an object and the property value of a control.  
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBinding.#ctor(System.Windows.Forms.Control,System.String,Ifs.Fnd.Data.FndBindingListBase,System.String)">
+            <summary>
+            Initializes a new instance of the FndBinding class 
+            that simple-binds the specified control property 
+            to the specified data member of the specified data source.
+            </summary>
+            <param name="control">The control that the binding belongs to. </param>
+            <param name="propertyName">The name of the control property to bind.</param>
+            <param name="dataSource">An FndBindingListBase that represents the data source.</param>
+            <param name="dataMember">The property or list to bind to.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBinding.#ctor(System.Windows.Forms.Control,System.String,Ifs.Fnd.Data.FndBindingListBase,System.String,Ifs.Fnd.Data.DeferredPopulate.FndDeferredPopulateRequestMonitor)">
+            <summary>
+            Initializes a new instance of the FndBinding class 
+            that simple-binds the specified control property 
+            to the specified data member of the specified data source.
+            </summary>
+            <param name="control">The control that the binding belongs to. </param>
+            <param name="propertyName">The name of the control property to bind.</param>
+            <param name="dataSource">An FndBindingListBase that represents the data source.</param>
+            <param name="dataMember">The property or list to bind to.</param>
+            <param name="deferredPopulateRequestMonitor">A DeferredPopulateRequestMonitor containing a control used to trigger deferred populate of the binding.</param>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBinding.IsValidBinding">
+            <summary>
+            Indicates that ctor was called with valid values
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBinding.IsBoundToAttribute">
+            <summary>
+            Indicates that control property is bound an attribute in a row
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBinding.UIDirty">
+            <summary>
+            Gets or sets current UI dirty state. This property is used to check if the focused control 
+            have any unsaved edits.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBinding.Control">
+            <summary>
+            Gets the control that the binding belongs to.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBinding.PropertyName">
+            <summary>
+            Gets the name of the control's data-bound property.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBinding.DataSource">
+            <summary>
+            Gets the data source for this binding.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBinding.DataMember">
+            <summary>
+            Gets the property or list to bind to.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBinding.Column">
+            <summary>
+            Gets the column in the dataset that the control is bind to.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBinding.Deferred">
+            <summary>
+            Specifies whether the populate is deferred or not
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBinding.DeferredPopulateRequestMonitor">
+            <summary>
+            Gets or sets the DeferredPopulateRequestMonitor associated with the FndBinding
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndBindingCollection">
+            <summary>
+            Represents a collection of FndBinding objects for a control. 
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingCollection.#ctor(System.Windows.Forms.Control,Ifs.Fnd.Windows.Forms.FndBinding[])">
+            <summary>
+            Initializes a new instance of the FndBindingCollection class.  
+            </summary>
+            <param name="control">The control that these bindings belongs to</param>
+            <param name="bindings">An array of FndBinding objects</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingCollection.Add(Ifs.Fnd.Windows.Forms.FndBinding)">
+            <summary>
+            Adds a new FndBinding object to this collection
+            </summary>
+            <param name="binding"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingCollection.FindPropBinding(System.String)">
+            <summary>
+            Finds an FndBinding object for the specified property name
+            </summary>
+            <param name="propertyName">The property name to find an FndBinding for</param>
+            <returns>An FndBinding object if found, null otherwise</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingCollection.Remove(System.String)">
+            <summary>
+            Removes binding for the specified property name
+            </summary>
+            <param name="propertyName">The property name to remove binding for</param>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBindingCollection.Control">
+            <summary>
+            Gets the control that this collection belongs to.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBindingCollection.Item(System.Int32)">
+            <summary>
+            Gets an FndBinding at the specified index in this collection
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndColumnChangedEventArgs">
+            <summary>
+            Event arguments for ColumnChanged event
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndColumnChangedEventArgs.#ctor(Ifs.Fnd.Data.FndDataColumn,System.Int32)">
+            <summary>
+            Created a new instance of this class
+            </summary>
+            <param name="column">Column that changed</param>
+            <param name="index">Index of the row</param>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndColumnChangedEventArgs.Column">
+            <summary>
+            Gets the column that changed
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndColumnChangedEventArgs.Index">
+            <summary>
+            Gets the index of the row that changed
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndColumnChangedEventHandler">
+            <summary>
+            Event handler signature for column changed events
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndCompareHandler">
+            <summary>
+            Function signature for custom sorting
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndBindingManager">
+            <summary>
+            Provides functionality for managing FndBindings for controls
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.#ctor">
+            <summary>
+            Creates an instance of the FndBindingManager class
+            Warning: Use the constructor FndBindingManager(IContainer container) instead!
+            If you use this constructor, you must manually call Dispose() on this object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the FndBindingManager class and associates it with the specified container.
+            </summary>
+            <param name="container">The container to add this component to</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.DisposeCachedBindingManagers(System.Boolean)">
+            <summary>
+            Internal framework use only
+            </summary>
+            <param name="disposing">True to dispose</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the System.ComponentModel.Component
+            and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetBindings(System.Windows.Forms.Control)">
+            <summary>
+            GetBindings returns the binding collection for a given control.
+            </summary>
+            <param name="control">The control for which the bindings will be returned.</param>
+            <returns>Collection with current bindings</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetBinding(System.Windows.Forms.Control,System.String)">
+            <summary>
+            Returns a binding for the specified control and property if bound.
+            </summary>
+            <param name="control">Control for which the binding should be returned</param>
+            <param name="property">Parameter that is bounded</param>
+            <returns>returns a binding object if the property is bound and null if not</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetMeta(System.Windows.Forms.Control)">
+            <summary>
+            Get meta for bounded attribute for the control specified default property.
+            If the control does not have a default property or if the default property
+            is not bounded this method returns an empty string.
+            </summary>
+            <param name="control">Control for which the meta should be returned</param>
+            <returns>Meta for the bounded attribute if bounded and empty string if not</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetDefaultBinding(System.Windows.Forms.Control)">
+            <summary>
+            Get meta for bounded attribute for the control specified default property.
+            If the control does not have a default property or if the default property
+            is not bounded this method returns an empty string.
+            </summary>
+            <param name="control">Control for which the meta should be returned</param>
+            <returns>Meta for the bounded attribute if bounded and empty string if not</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetDefaultBinding(System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            Get meta for bounded attribute for the control specified default property.
+            If the control does not have a default property or if the default property
+            is not bounded this method returns an empty string.
+            </summary>
+            <param name="control">Control for which the meta should be returned</param>
+            <param name="compound">true if the control could be part of a compound control.
+            This property is used where the control could be part of a compound control and this case
+            the method will search for the first parent that are bounded and return meta for that control
+            rather than the supplied control itself.</param>
+            <returns>Meta for the bounded attribute if bounded and empty string if not</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetMeta(System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            Get meta for bounded attribute for the control specified default property.
+            If the control does not have a default property or if the default property
+            is not bounded this method returns an empty string.
+            </summary>
+            <param name="control">Control for which the meta should be returned</param>
+            <param name="compound">true if the control could be part of a compound control.
+            This property is used where the control could be part of a compound control and this case
+            the method will search for the first parent that are bounded and return meta for that control
+            rather than the supplied control itself.</param>
+            <returns>Meta for the bounded attribute if bounded and empty string if not</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetMeta(System.Windows.Forms.Control,System.String)">
+            <summary>
+            Get meta for the bounded attribute for the specified property.
+            If the property specified is not bounded this method will return an empty string.
+            </summary>
+            <param name="control">Control for which the meta should be returned</param>
+            <param name="property">Bounded property to get meta for</param>
+            <returns>Meta for the bounded attribute if the property is bounded and empty string if not</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetMeta(System.Windows.Forms.Control,System.String,System.Boolean)">
+            <summary>
+            Get meta for the bounded attribute for the specified property.
+            If the property specified is not bounded this method will return an empty string.
+            </summary>
+            <param name="control">Control for which the meta should be returned</param>
+            <param name="property">Bounded property to get meta for</param>
+            <param name="compound">true if the control could be part of a compound control.
+            This property is used where the control could be part of a compound control and this case
+            the method will search for the first parent that are bounded and return meta for that control
+            rather than the supplied control itself.</param>
+            <returns>Meta for the bounded attribute if the property is bounded and empty string if not</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetDefaultBinding(System.Windows.Forms.Control,System.String,System.Boolean)">
+            <summary>
+            Get meta for the bounded attribute for the specified property.
+            If the property specified is not bounded this method will return an empty string.
+            </summary>
+            <param name="control">Control for which the meta should be returned</param>
+            <param name="property">Bounded property to get meta for</param>
+            <param name="compound">true if the control could be part of a compound control.
+            This property is used where the control could be part of a compound control and this case
+            the method will search for the first parent that are bounded and return meta for that control
+            rather than the supplied control itself.</param>
+            <returns>Meta for the bounded attribute if the property is bounded and empty string if not</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.InitiateUIDirtyHandler(System.Windows.Forms.Control,System.EventHandler)">
+            <summary>
+            Initates the BindingContext object that keeps track of binded controls and their edit state. 
+            This is used where one needs to keep track of edit state changes. Typically this is to enable 
+            save functionality.
+            </summary>
+            <param name="parent">parent control on which the BindingManager is placed. E.g. the domain for which
+            the BindingContext should control handle controls</param>
+            <param name="UIDirtyChanged">EventHandler to handle the notification event thrown when the context changes</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.UnSubscribeUIDirtyHandler(System.EventHandler)">
+            <summary>
+            Unsubscribe handler from UIDirtyChanged event.
+            </summary>
+            <param name="UIDirtyChanged">EventHandler registered in InitiateUIDirtyHandler</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.EndCurrentEdit">
+            <summary>
+            End control edit mode and persist it's value to the dataset. This method should be called
+            when the dataset needs to be updated. Typically this is when a form or a feature should save.
+            If a control is currently in edit mode it's value will be moved to the dataset and validated.
+            
+            If IEditableObject is implemented on the control the IEditableObject.EndEdit is also called.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetDefaultProperty(System.Windows.Forms.Control)">
+            <summary>
+            Get default property for the bounded control
+            This method is used to decide from which binding meta should be retreived. 
+            The default property holds for example the field description for a control.
+            </summary>
+            <remarks>
+            This method will fall back if the control is not implementing the IBoundControlMeta interface
+            to check for the .Net standard DefaultProperty attribute. This fallback is typically for 
+            third party controls. 
+            </remarks>
+            <param name="control">Control to operate on</param>
+            <returns>Returns the default property or an empty string.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetBindingManager(System.Windows.Forms.Control,Ifs.Fnd.Windows.Forms.FndBindingManager@,System.Windows.Forms.Control@)">
+            <summary>
+            Finds the probable binding manager for the requested control.
+            This method searches from the giving control and up trough it's parents to find
+            the container that implements the IBindingContainer interface. 
+            This container probably the container that has the FndBindingManager that is used by this control.
+            </summary>
+            <param name="control">The control to find the binding manager for</param>
+            <param name="bindingManager">will contain the binding manager</param>
+            <param name="bindingContainer">will contain the binding manager parent</param>
+            <returns>true if a binding manager is found or false if not</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetFirstBounded(System.Windows.Forms.Control,Ifs.Fnd.Windows.Forms.FndBindingManager,System.Windows.Forms.Control)">
+            <summary>
+            Find first control or parent that have bindings.
+            This method is used for compound controls to get the control.
+            </summary>
+            <param name="control">Control to start from</param>
+            <param name="bindingManager">The binding manager to operate on</param>
+            <param name="bindingContainer">The binding container control</param>
+            <returns>Returns the first control parent level that have bindings or if none found null</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.GetFndBindings(System.Windows.Forms.Control)">
+            <summary>
+            Gets bindings for the specified control
+            </summary>
+            <param name="control">The control to return bindings for</param>
+            <returns>FndBindingCollection for the specified control</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.SetFndBindings(System.Windows.Forms.Control,Ifs.Fnd.Windows.Forms.FndBindingCollection)">
+            <summary>
+            Sets bindings for the specified control
+            </summary>
+            <param name="control">The control to set bindings for</param>
+            <param name="value">FndBindingCollection for the specified control</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndBindingManager.CanExtend(System.Object)">
+            <summary>
+            Specifies whether this object can provide its extender properties to the specified object
+            </summary>
+            <param name="extendee">The System.Object to receive the extender properties.</param>
+            <returns>true if this object can provide extender properties to the specified object; otherwise, false.</returns>
+        </member>
+        <member name="E:Ifs.Fnd.Windows.Forms.FndBindingManager.UIDirtyChanged">
+            <summary>
+            Raised when the UI dirty state changes
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBindingManager.UIDirty">
+            <summary>
+            Gets current UI dirty state. This property is used to check if the focused control 
+            have any unsaved edits.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndBindingManager.AllBindings">
+            <summary>
+            Gets all bindings
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndClientConditionEngine">
+            <summary>
+            Client condition engine for binding lists
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientConditionEngine.#ctor(Ifs.Fnd.Data.FndCondition)">
+            <summary>
+            Creates a new instance of this object.
+            </summary>
+            <param name="condition">Complex condition</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientConditionEngine.PassesWhereClause(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Checks if the specific row passes all condition in this object
+            </summary>
+            <param name="row">The row to check</param>
+            <returns>true if row passes; otherwise false</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientConditionEngine.PassesCondition(Ifs.Fnd.Data.FndDataRow,Ifs.Fnd.Data.FndSimpleCondition)">
+            <summary>
+            Checks if the specified row passes a specified condition
+            </summary>
+            <param name="row">The row to check</param>
+            <param name="condition"></param>
+            <returns>true if row passes; otherwise false</returns>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndClientFunction">
+            <summary>
+            Represents the function that generates the value for the column
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndClientFunctionColumn">
+            <summary>
+            Shortcut column used to expose path oriented values in lists for aggregates.
+            </summary>
+            																		  
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.#ctor">
+            <summary>
+            Initializes a new instance of the FndShortcutColumn class
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the FndShortcutColumn class
+            </summary>
+            <param name="name">Name of column</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.Dispose">
+            <summary>
+            Releases the resources used by the Component.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.Dispose(System.Boolean)">
+            <summary>
+            Releases the resources used by the Component.
+            </summary>
+            <param name="disposing">Releases the unmanaged resources used by the Component and optionally releases the managed resources.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.GetAttributeInfo(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Gets the attribute Information for a column in a row.
+            </summary>
+            <param name="dataRow">A datarow the column is included in</param>
+            <returns>Attribute information</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.GetValue(System.Object)">
+            <summary>
+            Gets an attribute value for a FndDataRow
+            </summary>
+            <remarks>
+            This is used by the DataBinding model
+            </remarks>
+            <param name="component">A datarow</param>
+            <returns>The attribute value</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.SetValue(System.Object,System.Object)">
+            <summary>
+            Sets an attribute value in a FndDataRow
+            </summary>
+            <remarks>
+            This is used by the DataBinding model
+            </remarks>
+            <param name="component">A datarow</param>
+            <param name="value">The attribute value</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.GetConverter">
+            <summary>
+            Returns a type converter for this object.
+            </summary>
+            <returns>A TypeConverter that is the converter for this object, or a null reference (Nothing in Visual Basic) if there is no TypeConverter for this object.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.GetEvents(System.Attribute[])">
+            <summary>
+            Returns the events for this instance of a component.
+            </summary>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.GetComponentName">
+            <summary>
+            Returns the name of this object.
+            </summary>
+            <returns>The name of the object, or a null reference (Nothing in Visual Basic) if object does not have a name.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.GetPropertyOwner(System.ComponentModel.PropertyDescriptor)">
+            <summary>
+            Returns the object that this value is a member of.
+            </summary>
+            <param name="pd">A PropertyDescriptor that represents the property whose owner is to be found. </param>
+            <returns>An Object that represents the owner of the specified property.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.GetAttributes">
+            <summary>
+            Returns a collection of type Attribute for this object.
+            </summary>
+            <returns>An AttributeCollection with the attributes for this object.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.GetProperties(System.Attribute[])">
+            <summary>
+            Returns the properties for this instance of a component.
+            </summary>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.GetEditor(System.Type)">
+            <summary>
+            Returns an editor of the specified type for this object.
+            </summary>
+            <param name="editorBaseType">A Type that represents the editor for this object.</param>
+            <returns>An Object of the specified type that is the editor for this object, or a null reference (Nothing in Visual Basic) if the editor cannot be found.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.GetDefaultProperty">
+            <summary>
+            Returns the default property for this object.
+            </summary>
+            <returns>A PropertyDescriptor that represents the default property for this object, or a null reference (Nothing in Visual Basic) if this object does not have properties.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.GetDefaultEvent">
+            <summary>
+            Returns the default event for this object.
+            </summary>
+            <returns>An EventDescriptor that represents the default event for this object, or a null reference (Nothing in Visual Basic) if this object does not have events.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientFunctionColumn.GetClassName">
+            <summary>
+            Returns the class name of this object.
+            </summary>
+            <returns>The class name of the object, or a null reference (Nothing in Visual Basic) if the class does not have a name.</returns>
+        </member>
+        <member name="E:Ifs.Fnd.Data.FndClientFunctionColumn.ClientFunction">
+            <summary>
+            Represents the method which evaluates the value the function column 
+            </summary>
+        </member>
+        <member name="E:Ifs.Fnd.Data.FndClientFunctionColumn.Disposed">
+            <summary>
+            Represents the method that handles the Disposed event of a component.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndClientFunctionColumn.Site">
+            <summary>
+            Gets or sets the ISite associated with the IComponent.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndClientFunctionColumn.Bindinglist">
+            <summary>
+            gets or sets the binding list assosiated with the function column
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndClientFunctionColumn.ColumnName">
+            <summary>
+            ColumnName of the FndClientFunctionColumn
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndClientFunctionColumn.Name">
+            <summary>
+            Name of the FndClientFunctionColumn
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndClientFunctionColumn.IsReadOnly">
+            <summary>
+            Gets bool value indicating if value is read only
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndClientSortEngine">
+            <summary>
+            Helper class for applying sort on binding lists
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientSortEngine.#ctor(Ifs.Fnd.Data.FndDataColumn[],System.ComponentModel.ListSortDirection[],System.Collections.Hashtable,System.Collections.ICollection)">
+            <summary>
+            Creates a new instance of sort engine
+            </summary>
+            <param name="sortProperties">Array of columns to sort on</param>
+            <param name="sortDirections">Array of directions</param>
+            <param name="customComparers">Custom comparers, key is FndDataColumn, value is FndCompareHandler</param>
+            <param name="previousSortedList">Already existing ICollection (may or may not be sorted) to compare records when they are equal. To achieve a stable sort.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientSortEngine.Compare(System.Object,System.Object)">
+            <summary>
+            Compares arguments according to the arrays sent to the FndClientSortEngine constructor
+            </summary>
+            <param name="x">First object</param>
+            <param name="y">Second object</param>
+            <returns>0 if equal, 1 if x is larger, -1 if y is larger</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientSortEngine.CompareWithPreviousSortedList(System.Collections.IEnumerable,System.Object,System.Object)">
+            <summary>
+            Compares arguments with relevance to their position in the list provided using Enumerator
+            </summary>
+            <param name="previousList">Previously Sorted List</param>
+            <param name="x">First object</param>
+            <param name="y">Second object</param>
+            <returns>0 if equal, 1 if x is larger, -1 if y is larger</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndClientSortEngine.CompareAttributeValues(System.Object,System.Object)">
+            <summary>
+            Compares arguments
+            </summary>
+            <param name="x">First object</param>
+            <param name="y">Second object</param>
+            <returns>0 if equal, 1 if x is larger, -1 if y is larger</returns>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndDataIndex">
+            <summary>
+            Data index
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndDataIndex.CheckItemMoved(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Checks if row has moved in sorted list
+            </summary>
+            <param name="row">Row to check</param>
+            <returns>ListChangedEventArgs for event if row has moved, otherwise null</returns>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndMasterBindingList">
+            <summary>
+            Summary description for FndMasterBindingList.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndMasterBindingList.#ctor">
+            <summary>
+            Initializes a new instance of the FndMasterBindingList class.
+            Warning: Use the constructor FndMasterBindingList(IContainer container) instead!
+            If you use this constructor, you must manually call Dispose() on this object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndMasterBindingList.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the FndMasterBindingList class and associates it with the specified container.
+            </summary>
+            <param name="container">The container to add this component to</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndMasterBindingList.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the System.ComponentModel.Component
+            and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndMasterBindingList.DataSet">
+            <summary>
+            The dataset containing the table to bind this list to
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndSelectedIndexCollection">
+            <summary>
+            Represents the typed collection of indices of selected bindinglist items.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndSelectedIndexCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <b>FndSelectedIndexCollection</b> class.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndSelectedIndexCollection.Add(System.Int32)">
+            <summary>
+            Adds an object to the end of the <b>FndSelectedIndexCollection</b>.
+            </summary>
+            <value>The item to be added to the end of the CollectionBase.</value>
+            <returns>The CollectionBase index at which the value has been added</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndSelectedIndexCollection.IndexOf(System.Int32)">
+            <summary>
+            Overloaded. Returns the zero-based index of the first occurrence of a value in the <b>FndSelectedIndexCollection</b> or in a portion of it.
+            </summary>
+            <param name="value">The Object to locate in the CollectionBase</param>
+            <returns>The zero-based index of the first occurrence of value within the entire CollectionBase, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndSelectedIndexCollection.Insert(System.Int32,System.Int32)">
+            <summary>
+            Inserts an element into the <b>FndSelectedIndexCollection</b> at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which value should be inserted.</param>
+            <param name="value">The Object to insert.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndSelectedIndexCollection.Remove(System.Int32)">
+            <summary>
+            Removes the first occurrence of a specific object from the <b>FndSelectedIndexCollection</b>.
+            </summary>
+            <param name="value">The Object to remove from the CollectionBase.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndSelectedIndexCollection.Contains(System.Int32)">
+            <summary>
+            Determines whether an element is in the <b>FndSelectedIndexCollection</b>.
+            </summary>
+            <param name="value">The Object to locate in the CollectionBase.</param>
+            <returns>true if the CollectionBase contains the specified value; otherwise, false.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndSelectedIndexCollection.AddRange(Ifs.Fnd.Data.FndSelectedIndexCollection)">
+            <summary>
+            Adds the elements of an ICollection to the end of the <b>FndSelectedIndexCollection</b>.
+            </summary>
+            <param name="selectedIndex">A collection of selectedIndex to the collection.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndSelectedIndexCollection.AddRange(System.Int32[])">
+            <summary>
+            Adds the elements of an Array of columns to the end of the <b>FndSelectedIndexCollection</b>.
+            </summary>
+            <param name="selectedIndex">An array of selectedIndex  to add to the collection.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndSelectedIndexCollection.CopyTo(System.Int32[],System.Int32)">
+            <summary>
+            Overloaded. Copies the <b>FndSelectedIndexCollection</b> or a portion of it to a one-dimensional array.
+            </summary>
+            <param name="item">The destination array.</param>
+            <param name="index">The index in the destination array at which storing begins.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndSelectedIndexCollection.CopyTo(System.Int32[])">
+            <summary>
+            Overloaded. Copies the <b>FndSelectedIndexCollection</b> or a portion of it to a one-dimensional array.
+            </summary>
+            <param name="item">The destination array.</param>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndSelectedIndexCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index. 
+            </summary>
+            <param name="index">The zero-based index of the element to get or set. </param>
+            <value>A FndSelectedIndex of the desired index.</value>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndShortcutColumn">
+            <summary>
+            Shortcut column used to expose path oriented values in lists for aggregates.
+            </summary>
+            
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndShortcutColumn.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the FndShortcutColumn class
+            </summary>
+            <param name="name">Name of column</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndShortcutColumn.#ctor">
+            <summary>
+            Initializes a new instance of the FndShortcutColumn class
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndShortcutColumn.GetAttributeInfo(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Gets the attribute Information for a column in a row.
+            </summary>
+            <param name="dataRow">A datarow the column is included in</param>
+            <returns>Attribute information</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndShortcutColumn.GetValue(System.Object)">
+            <summary>
+            Gets an attribute value for a FndDataRow
+            </summary>
+            <remarks>
+            This is used by the DataBinding model
+            </remarks>
+            <param name="component">A datarow</param>
+            <returns>The attribute value</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndShortcutColumn.SetValue(System.Object,System.Object)">
+            <summary>
+            Sets an attribute value in a FndDataRow
+            </summary>
+            <remarks>
+            This is used by the DataBinding model
+            </remarks>
+            <param name="component">A datarow</param>
+            <param name="value">The attribute value</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndShortcutColumn.GetShortcutColumnType(System.String)">
+            <summary>
+            Return the type of the target column
+            </summary>
+            <param name="targetlocation">Target location of the shortcut column</param>
+            <returns>The type of the Target Column</returns>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndShortcutColumn.Target">
+            <summary>
+            Sets or Gets full address for shortcut column
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndShortcutColumn.Bindinglist">
+            <summary>
+            gets and sets the binding list assosiated with this Shortcut column
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndShortcutColumn.IsReadOnly">
+            <summary>
+            Gets bool value indicating if value is read only
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndShortcutColumn.TermPath">
+            <summary>
+            Term for the column
+            </summary>
+            <remarks>ID for the term, typically used for field labels and column headers</remarks>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndSpecialColumnCollection">
+            <summary>
+            Collection of shortcut columns. 
+            The reason for the name of the class (SpecialColumnCollection) is that
+            it is intended for future use to include also unbound columns.
+            Now it only contains shortcut columns (and you could be tempted to 
+            rename the collection ShortcutColumnCollection)
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Data.FndSpecialColumnCollection.Item(System.Int32)">
+            <summary>
+            Returns an item within this collection
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Data.FndStandaloneBindingList">
+            <summary>
+            A standalone binding list that exposes databinding capabilities for any data table.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndStandaloneBindingList.#ctor(Ifs.Fnd.Data.FndDataTable)">
+            <summary>
+            Creates a new instance of FndStandaloneBindingList
+            </summary>
+            <param name="table">The table to expose databinding for</param>
+        </member>
+        <member name="M:Ifs.Fnd.Data.FndStandaloneBindingList.#ctor(Ifs.Fnd.Data.FndDataTable,System.ComponentModel.IContainer)">
+            <summary>
+            Creates a new instance of FndStandaloneBindingList
+            </summary>
+            <param name="table">The table to expose databinding for</param>
+            <param name="container">component collection of parent</param>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndUIClue">
+            <summary>
+            Summary description for UIClue.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndUIClue.ClueType">
+            <summary>
+            Gets the type of clue that this UIClue is representing.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndUIClue.Target">
+            <summary>
+            Gets the target control for the UIClue.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndUIClue.Info">
+            <summary>
+            Gets or sets the info contents of this clue.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.FndUIClue.Caption">
+            <summary>
+            Gets or sets the clue caption.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.FndClueType">
+            <summary>
+            Enumeration for the different types of UI clues that the FndUIHintManager 
+            can store.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndUIClueInfo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndUIClueInfo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.FndUIClueManager.SetControlHints(System.Windows.Forms.Control,Ifs.Fnd.Data.FndAttributeInfo)">
+            <summary>
+            Set UIClues for a control according to the value and metadata contained within
+            the supplied attribute info. This method is called from the BindingManager whenever a
+            the row value for a bounded control is updated.
+            </summary>
+            <param name="control">Target control to display hints for.</param>
+            <param name="attributeInfo">Attribute info that should be reflected</param>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.DataBinding.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.DataBinding.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.DataBinding.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

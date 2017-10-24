@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ifs.Fnd.Windows.Forms.Interfaces</name>
+    </assembly>
+    <members>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.FndLinearGradientBrushFactory">
+            <summary>
+             Class to work around a problem in GDI+ with LinearGradientBrush
+            If you ask for a brush with a zero length vector using 2 points, you 
+            will get an "Out of memory" exception.
+            
+            It would have been nice with a FndLinearGradientBrush : LinearGradientBrush
+            but since LinearGradientBrush is a sealed class, we have to do a factory instead
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndLinearGradientBrushFactory.CreateLinearGradientBrush(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Create a linear brush - with a safe check for Out of Memory exception when the vector p1->p2 is length=0
+            Note: Make sure to Dispose the brush returned when finished with it
+            </summary>
+            <example>
+            using (LinearGradientBrush brush = FndLinearGradientBrushFactory.CreateLinearGradientBrush(
+            	p1,
+            	p2,
+            	color1,
+            	color2))
+            {
+            	Graphics.FromHwnd(this.Handle).FillRectangle(brush, e.ClipRectangle);
+            }
+            </example>
+            <param name="p1">Starting point of the linear gradient</param>
+            <param name="p2">End point of the linear gradient</param>
+            <param name="color1">Starting color of the linear gradient</param>
+            <param name="color2">End color of the linear gradient</param>
+            <returns>Returns a new instance of LinearGradientBrush. Make sure to Dispose the brush returned when finished with it</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndLinearGradientBrushFactory.CreateLinearGradientBrush(System.Drawing.PointF,System.Drawing.PointF,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Create a linear brush - with a safe check for Out of Memory exception when the vector p1->p2 is length=0
+            Note: Make sure to Dispose the brush returned when finished with it
+            </summary>
+            <param name="p1">Starting point of the linear gradient</param>
+            <param name="p2">End point of the linear gradient</param>
+            <param name="color1">Starting color of the linear gradient</param>
+            <param name="color2">End color of the linear gradient</param>
+            <returns>Returns a new instance of LinearGradientBrush. Make sure to Dispose the brush returned when finished with it</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndLinearGradientBrushFactory.CreateLinearGradientBrush(System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Color,System.Drawing.Drawing2D.LinearGradientMode)">
+            <summary>
+            Create a linear brush - with a safe check for Out of Memory exception when the rectangle is empty
+            Note: Make sure to Dispose the brush returned when finished with it
+            </summary>
+            <example>
+            using (LinearGradientBrush brush = FndLinearGradientBrushFactory.CreateLinearGradientBrush(
+            	rect,
+            	color1,
+            	color2,
+            	LinearGradientMode.Vertical))
+            {
+            	Graphics.FromHwnd(this.Handle).FillRectangle(brush, e.ClipRectangle);
+            }
+            </example>
+            <param name="rect">Rectangle of the linear gradient</param>
+            <param name="color1">Starting color of the linear gradient</param>
+            <param name="color2">End color of the linear gradient</param>
+            <param name="linearGradientMode">The orientation of the gradient</param>
+            <returns>Returns a new instance of LinearGradientBrush. Make sure to Dispose the brush returned when finished with it</returns>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndControlBindingChanges">
+            <summary>
+            Summary description for IFndBindingsChanges.
+            This interface could be implemented by a control
+            to get notification about changes in the 
+            FndBinding objects attatched to the control. 
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndControlBindingChanges.BindingAdded(System.Object)">
+            <summary>
+            Notifies the control that a binding is added.
+            </summary>
+            <param name="binding">The binding object that is added.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndControlBindingChanges.BindingRefreshed(System.Object)">
+            <summary>
+            Notifies the control that a binding is refreshed.
+            </summary>
+            <param name="binding">The binding object that is refreshed.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndControlBindingChanges.BindingRemoved(System.Object)">
+            <summary>
+            Notifies the control that a binding is removed.
+            </summary>
+            <param name="binding">The binding object that is removed.</param>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndBindingContainer">
+            <summary>
+            Interface to be implemented by containers that hold a FndBindingManager.
+            The framework searches for a parent with this interface implemented whenever a 
+            child control is requesting it's bindings.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.IFndBindingContainer.FndBindingManager">
+            <summary>
+            Gets the FndBindingManager for the container
+            </summary>
+            <remarks>Type is component rather than FndBindingManager in order to not having to add an 
+            assembly reference to the DataBinding assembly.</remarks>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndBoundMeta">
+            <summary>
+            Interface that should be implemented by framework controls that should support 
+            framework services that need to collect meta data from for the control
+            Example of these services are "What's this" and "Tooltip".
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.IFndBoundMeta.DefaultProperty">
+            <summary>
+            Default property for the control from a databinding point of view. Framework services 
+            will use this property to find out what property that is the main bounded property. 
+            This is the property for which the framework will retreive bounded meta to push to the control.
+            For example the text property for a FndTextBox is supposed to be the one that is bounded 
+            to the attribute that holds the termId for the control label.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndMandatory">
+            <summary>
+            Interface that should be implemented by framework controls that need mandatory information.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.IFndMandatory.Mandatory">
+            <summary>
+            Gets or sets the control mandatory state. 
+            </summary>
+            <remarks>
+            This property will for a bounded control be controled by the binding object
+            </remarks>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndUpdatable">
+            <summary>
+            IFndUpdatable shall be implemented by all controls to provide a common
+            interface to be used when setting a control to read only.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.IFndUpdatable.Updatable">
+            <summary>
+            Gets or sets a value indicating whether the control is updatable or not.
+            </summary>
+            <remarks>
+            If AutoHandleUpdatable is set for a data bound control this property will get it's value
+            pushed trough the databinding. This means that any value set programatically will be 
+            overriden. 
+            </remarks>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.IFndUpdatable.AutoHandleUpdatable">
+            <summary>
+            Gets or sets a value indicating whether the updatable state of the control
+            is automatically handled or not.
+            </summary>
+            <remarks>
+            This property will only have effect if the control is databound. It's the 
+            binding mechanism that push the updatable state to the control.
+            </remarks>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndDataSourceAccessor">
+            <summary>
+            Interface implemented by controls using complex databinding in order for the consumer to detect query include/exclude
+            </summary>
+            <remarks>This interface is consumed by FndDataFeatureBase when doing query include/exclude</remarks>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndDataSourceAccessor.GetDataMembersForDataSource(System.Object)">
+            <summary>
+            Returns a list of datamembers for the specified datasource
+            </summary>
+            <param name="dataSource">The datasource</param>
+            <returns>A list of datamembers for the specified datasource</returns>
+            <example>
+            <code>
+            public string [] GetDataMembersForDataSource(object dataSource)
+            {
+            	if(dataSource == this.dataSource)
+            	{
+            		return new string [] {"Order.Lines.Qty", "Order.Lines.LineNo"};
+            	}
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndImageResource">
+            <summary>
+            Summary description for IFndImageResource.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndImageResource.GetResource">
+            <summary>
+            Returns the image for the image resource string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.IFndImageResource.ImageResource">
+            <summary>
+            Gets or sets the Image Resource string for a themeable command. 
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndListCommand">
+            <summary>
+            Objects like the data grid that can hold a reference box should implement 
+            this in order to be able to get the list command from the reference box
+            (used in search dialog)
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndListCommand.GetListCommand(Ifs.Fnd.Data.FndDataColumn)">
+            <summary>
+            Returns the list command that should be used for LOV 
+            for a particular data column
+            </summary>
+            <param name="col">The column to fetch the list command for</param>
+            <returns>Server list command (as set in a reference box)</returns>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndNameable">
+            <summary>
+            Implement IFndNameable to make sure the class return a name for the object. 
+            Required if properties on the object should be part of the user profile.
+            Controls already have a name property. But for example an object collection do not have a name property. 
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.IFndNameable.Name">
+            <summary>
+            Interface for Nameable.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.NotCustomizableAttribute">
+            <summary>
+            Summary description for ICustomizableAttribute.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.NotCustomizableAttribute.#ctor">
+            <summary>
+            Defines that the class is not customizable.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndSupportUIHighlight">
+            <summary>
+            IFndSupportUIHighlight provides methods for highlighting UI elements
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndSupportUIHighlight.HighLight``1(``0)">
+            <summary>
+            Highlight UI element
+            </summary>
+            <typeparam name="T">Type of the element</typeparam>
+            <param name="element">Can be an index or a key to adress a part of the UI to highlight</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndSupportUIHighlight.HighLight(System.Object)">
+            <summary>
+            Highlight UI element
+            </summary>
+            <param name="element">An object which represents the element to highlight. Can be null for no particular element</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndSupportUIHighlight.ClearHighlight">
+            <summary>
+            Clear any set highlight
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndThemeable">
+            <summary>
+            IFndThemeable shall be used by all controls (not features and plugins) 
+            that can be themeable but also has a default theme. 
+            If a control is themed is decided by the control it's hosted hosted by.
+            Ex. Themes is not applied to these controls if they are hosted in dialogs
+            Themeing is managed by FndThemeManager.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndThemeable.SetTheme">
+            <summary>
+            Should invoke a reset of the control properties that have been themed.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndThemedContainer">
+            <summary>
+            Controls implementing this interface are either always themed or non themed.
+            If they are themed is only determined by its IsThemed property.
+            IFndNotThemeableContainer does not affect these controls.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.IFndThemedContainer.UseThemes">
+            <summary>
+            Indicated if the control should be themed or not
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndThemeables">
+            <summary>
+            IFndThemeables shall be used by all controls which
+            consists of IFndThemeable components which are not Control themselves.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.IFndThemeables.Themeables">
+            <summary>
+            Array of IFndThemeable, IFndThemeables
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndUIClue">
+            <summary>
+            Interface IFndUIClue is an interface for framework controls that by it's complexity
+            needs to handle UIClue drawing internaly.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndUIClue.AddErrorClue(System.Windows.Forms.Control,System.String)">
+            <summary>
+            This method will be called when a child control gets an error clue.
+            Implement a GUI to show the error.
+            </summary>
+            <param name="sourceControl">The child source control.</param>
+            <param name="info">The error message.</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndUIClue.RemoveErrorClue(System.Windows.Forms.Control)">
+            <summary>
+            This method will be called when a child controls error clue is removed.
+            </summary>
+            <param name="sourceControl">The child source control.</param>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndWhatsThisContainerControl">
+            <summary>
+            IFndTranslatables shall be used by all controls 
+            that consists of painted labels that wants to be translatable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndWhatsThisContainerControl.GetTranslatableAt(System.Int32,System.Int32)">
+            <summary>
+            Array of whats this translatable controls.
+            </summary>
+            <param name="x">X coordinate within control.</param>
+            <param name="y">Y coordinate within control.</param>
+            <returns>WhatsThis object at requsted location, null if no object found. </returns>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndWhatsThisImplementer">
+            <summary>
+            IFndWhatsThisImplementer is implemented by any FeatureShim who needs to handle what's this
+            implementation within the shim class. ex: FndWebPageFeatureShim.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndWhatsThisImplementer.ShowWhatsThis">
+            <summary>
+            Called by FndWhatsThis when the what's this command is activated.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.FndMruFactory">
+            <summary>
+            Helper class to instantiate IFndUserProfileMru
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMruFactory.CreateInstance(Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntry)">
+            <summary>
+            Creates an instance of IFndUserProfileMru using FndMRUEntry. FndMRUEntry is
+            normally read from the profile
+            </summary>
+            <param name="interactionEntry">FndMRUEntry</param>
+            <returns>IFndUserProfileMru instance</returns>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.IFndUserProfileMru">
+            <summary>
+            Handles Most recently Used list available from Textboxes and derivates.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndUserProfileMru.Add(System.String)">
+            <summary>
+            Adds text to Most Recently Used List
+            </summary>
+            <param name="text">Text to add.</param>
+            <returns><b>true</b> if the text was added to the Most Recently Used List.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndUserProfileMru.Add(Ifs.Fnd.Data.FndDataRow,System.String,System.String)">
+            <summary>
+            Adds or updates Text in Most Recently Used List. 
+            </summary>
+            <param name="row">Complete DataRow for MRU value to add.</param>
+            <param name="searchString">Possible columns to search on</param>
+            <param name="formattedText">The formatted Text</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndUserProfileMru.Clear">
+            <summary>
+            Clears the Most Recently Used List
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndUserProfileMru.GetTextSuggestions(System.String)">
+            <summary>
+            Returns a list of text suggestions.
+            </summary>
+            <param name="enteredText">The text that the items in the arrayList begins with.</param>
+            <returns>ArrayList of text suggestions</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndUserProfileMru.GetReferenceSuggestions(System.String)">
+            <summary>
+            Returns a list of reference suggestions.
+            </summary>
+            <param name="enteredText">The text that the items in the arrayList begins with</param>
+            <returns>ArrayList of MruSuggestions</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndUserProfileMru.RemoveTextSuggestion(System.String)">
+            <summary>
+            Removes a suggestion.
+            </summary>
+            <param name="text">The text that should be removed</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.IFndUserProfileMru.RemoveReferenceSuggestion(System.String)">
+            <summary>
+            Removes a suggestion.
+            </summary>
+            <param name="text">The text that should be removed</param>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.MostRecentlyUsed">
+            <summary>
+            Handles Most recently Used list available from Textboxes and derivates.
+            Automatically persists values in User Profile.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.MostRecentlyUsed.#ctor">
+            <summary>
+            Initializes a new MostRecentlyUsed object.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.MostRecentlyUsed.#ctor(Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntry)">
+            <summary>
+            Initializes a new MostRecentlyUsed.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.MostRecentlyUsed.GetSuggestions(System.String,System.Boolean)">
+            <summary>
+            Returns a list of reference suggestions. Contains only text if reference is false.
+            </summary>
+            <param name="enteredText">The text that the items in the arrayList begins with</param>
+            <param name="reference">If true, Checks for multiple search texts for each entry</param>
+            <returns>The previously entered texts</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.MostRecentlyUsed.Remove(System.String,System.Boolean)">
+            <summary>
+            Removes a suggestion.
+            </summary>
+            <param name="text">The text that should be removed</param>
+            <param name="reference">If true, Checks for multiple search texts for each entry</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.MostRecentlyUsed.Add(System.String)">
+            <summary>
+            Adds or updates Text in Most Recently Used List. 
+            </summary>
+            <param name="text">Text to add.</param>
+            <returns>true, if the text was added to the current list of Most Recently Used.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.MostRecentlyUsed.Add(Ifs.Fnd.Data.FndDataRow,System.String,System.String)">
+            <summary>
+            Adds or updates Text in Most Recently Used List. 
+            </summary>
+            <param name="row">Complete DataRow for MRU value to add.</param>
+            <param name="searchString">Possible columns to search on</param>
+            <param name="formattedText">The formatted Text</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.MostRecentlyUsed.Clear">
+            <summary>
+            Clears the Most Recently Used List
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.MostRecentlyUsed.RemoveTextSuggestion(System.String)">
+            <summary>
+            Removes a suggestion.
+            </summary>
+            <param name="text">The text that should be removed</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.MostRecentlyUsed.RemoveReferenceSuggestion(System.String)">
+            <summary>
+            Removes a suggestion.
+            </summary>
+            <param name="text">The text that should be removed</param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.MostRecentlyUsed.GetTextSuggestions(System.String)">
+            <summary>
+            Returns a list of text suggestions.
+            </summary>
+            <param name="enteredText">The text that the items in the arrayList begins with.</param>
+            <returns>ArrayList of text suggestions</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.MostRecentlyUsed.GetReferenceSuggestions(System.String)">
+            <summary>
+            Returns a list of reference suggestions.
+            </summary>
+            <param name="enteredText">The text that the items in the arrayList begins with</param>
+            <returns>ArrayList of MruSuggestions</returns>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion">
+            <summary>
+            Represent one suggestion that is a possible candidate for what the user is going to write
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.#ctor(System.String,System.Int32,System.DateTime,System.String,System.String[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="id"></param>
+            <param name="frequency"></param>
+            <param name="lastTimeUsed"></param>
+            <param name="text"></param>
+            <param name="keyValues"></param>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.GetKeyValues">
+            <summary>
+            Returns the key Values used for lookup
+            </summary>
+            <returns>key Values used for lookup</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.CompareTo(System.Object)">
+            <summary>
+            Used when sorting with the best suggestion first and the worst last.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.Equals(System.Object)">
+            <summary>
+            Determines whether the specified MruSuggestion is equal to the current MruSuggestion
+            </summary>
+            <param name="obj">The MruSuggestion to compare with the current MruSuggestion</param>
+            <returns>true if the specified MruSuggestion is equal to the current MruSuggestion; otherwise, false.</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type, suitable for use in hashing algorithms and data structures like a hash table. 
+            </summary>
+            <returns>A hash code for the MruSuggestion</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.op_Equality(Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion,Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion)">
+            <summary>
+            Determines whether the MruSuggestion instances are equal.
+            </summary>
+            <param name="s1">The first MruSuggestion to Compare</param>
+            <param name="s2">The second MruSuggestion to Compare</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.op_Inequality(Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion,Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion)">
+            <summary>
+            The inequality operator returns false if its operands are equal, true otherwise.
+            </summary>
+            <param name="s1">A MruSuggestion</param>
+            <param name="s2">A MruSuggestion</param>
+            <returns>true if the MruSuggestion are equal, false otherwise</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.op_LessThan(Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion,Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion)">
+            <summary>
+            Less than relational operator that returns true if the first MruSuggestion is less than the second, false otherwise.
+            </summary>
+            <param name="s1">The first MruSuggestion</param>
+            <param name="s2">The second MruSuggestion</param>
+            <returns>true if the first MruSuggestion is less than the second, false otherwise</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.op_GreaterThan(Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion,Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion)">
+            <summary>
+            Greater than relational operator that returns true if the first MruSuggestion is greater than the second, false otherwise.
+            </summary>
+            <param name="s1">The first MruSuggestion</param>
+            <param name="s2">The second MruSuggestion</param>
+            <returns>true if the first MruSuggestion is greater than the second, false otherwise</returns>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.Id">
+            <summary>
+            Unique id for the object.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.Frequency">
+            <summary>
+            How many times has this text been used.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.LastTimeUsed">
+            <summary>
+            Time this text was last used.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.FndMruSuggestion.Text">
+            <summary>
+            The text to display
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntry">
+            <summary>
+            FndMRUEntry holds a set of MRU values for a specific item (textbox in a feature)
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntry.Deserialize(Ifs.Fnd.Data.FndDataRow)">
+            <summary>
+            Deserializes one FndMRUEntry from a FndDataRow. See FndRecordSerializer
+            for details about serialization/deserialization.
+            </summary>
+            <param name="row">FndDataRow to deserialize</param>
+            <returns>FndMRUEntry instance</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntry.Serialize(Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntry)">
+            <summary>
+            Serializes one FndMRUEntry to a FndDataRow. See FndRecordSerializer
+            for details about serialization/deserialization.
+            </summary>
+            <param name="entry">FndMRUEntry to serialize</param>
+            <returns>FndDataRow instance</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntry.SerializeList(System.Collections.Generic.List{Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntry})">
+            <summary>
+            Serializes a list of FndMRUEntry to a FndDataTable. See FndRecordSerializer
+            for details about serialization/deserialization.
+            </summary>
+            <param name="list">List of FndMRUEntry</param>
+            <returns>FndDataTable instance</returns>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntry.DeserializeList(Ifs.Fnd.Data.FndDataTable)">
+            <summary>
+            Deserializes a FndDataTable to a list of FndMRUEntry. See FndRecordSerializer
+            for details about serialization/deserialization.
+            </summary>
+            <param name="table">FndDataTable to deserialize</param>
+            <returns>List of FndMRUEntry</returns>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntry.EntryId">
+            <summary>
+            Gets or set identifier for a specific FndMRUEntry. This is preferably a GUID 
+            to be unique.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntry.Description">
+            <summary>
+            Gets or sets an optional FndMRUEntry description.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntry.Values">
+            <summary>
+            Get a list of FndMRUEntryValue
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntryValue">
+            <summary>
+            FndMRUEntryValue holds the characteristics for a value in a list for a MRU item
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntryValue.EntryValueId">
+            <summary>
+            Gets or set identifier for a specific FndMRUEntryValue. This is preferably a GUID 
+            to be unique.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntryValue.EntryValue">
+            <summary>
+            Gets or sets the actual MRU value entered by the user.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntryValue.LastTimeUsed">
+            <summary>
+            Gets or sets the date/time when MRU value was last used by the user.
+            </summary>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.FndMRUEntryValue.Frequency">
+            <summary>
+            Gets or sets the number of times (count) when MRU value have been used by the user.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.UserProfilePersistentAttribute">
+            <summary>
+            UserProfileableAttribute defines a property to be part of the user profile.
+            Properties that supports IEnumerable such as collections can be set to profileable to make it possible to define items in the collection profileable.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.UserProfilePersistentAttribute.#ctor">
+            <summary>
+            Defines that the property is part of the user profile.
+            </summary>
+        </member>
+        <member name="M:Ifs.Fnd.Windows.Forms.Interfaces.UserProfilePersistentAttribute.#ctor(Ifs.Fnd.Windows.Forms.Interfaces.UserProfileAttributeType)">
+            <summary>
+            Defines that the property is part of the user profile.
+            </summary>
+            <param name="attributeType">Defines profile attribute type.</param>
+        </member>
+        <member name="P:Ifs.Fnd.Windows.Forms.Interfaces.UserProfilePersistentAttribute.AttributeType">
+            <summary>
+            Attribute Type.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.UserProfileAttributeType">
+            <summary>
+            User Profile Attribute Type Enumeration.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.Interfaces.UserProfileAttributeType.Default">
+            <summary>
+            Ordinary User Profile behaviour.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.Interfaces.UserProfileAttributeType.Mru">
+            <summary>
+            Most Recently Used List.
+            </summary>
+        </member>
+        <member name="T:Ifs.Fnd.Windows.Forms.Interfaces.UserProfileMruType">
+            <summary>
+            Attribute Type Enumeration.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.Interfaces.UserProfileMruType.Local">
+            <summary>
+            Most Recently Used values will be local for a specific control.
+            </summary>
+        </member>
+        <member name="F:Ifs.Fnd.Windows.Forms.Interfaces.UserProfileMruType.Global">
+            <summary>
+            Most Recently Used values will be shared between controls that use Global MRU and have the same term specified.
+            </summary>
+        </member>
+    </members>
+</doc>

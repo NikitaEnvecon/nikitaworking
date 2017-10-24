@@ -1,0 +1,144 @@
+-----------------------------------------------------------------------------
+--
+--  Module: FNDMIG
+--
+--  Function: Upgrade database from FNDMIG 1.1.0 to 1.2.0
+--
+--  IFS/Design Template 2.1
+--
+--  Date    Sign   History
+--  ------  ----   -----------------------------------------------------------
+--  070828  JHMASE Bug #67488 (070828_67488_Fndmig.cdb)
+--  070802  DUWILK Modify S40 column length in table INTFACE_INFO_SERVICES_RPT (Bug#66202)
+--  070308  JHMASE (060330_56862_Fndmig.cdb, 
+--                  060614_58778_Fndmig.cdb and 
+--                  061202_61381_Fndmig.cdb) 
+-----------------------------------------------------------------------------
+
+SET SERVEROUTPUT ON
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','120.upg','Timestamp_1');
+PROMPT Insert new rules
+
+DECLARE
+   CURSOR find_existing_repl IS
+      SELECT intface_name
+      FROM   intface_header_tab
+      WHERE  procedure_name = 'REPLICATION';
+   CURSOR find_existing_cre IS
+      SELECT intface_name
+      FROM   intface_header_tab
+      WHERE  procedure_name = 'CREATE_TABLE_FROM_FILE';
+   PROCEDURE InsertRules (
+       rule_id_        IN VARCHAR2,
+       description_    IN VARCHAR2,
+       procedure_name_ IN VARCHAR2,
+       rule_flag_      IN VARCHAR2,
+       value_flag_     IN VARCHAR2,
+       rule_value_     IN VARCHAR2 DEFAULT NULL )
+   IS
+   BEGIN
+      INSERT INTO intface_default_rules_tab (rule_id, description,
+         procedure_name, rule_flag, value_flag, rule_value, rowversion)
+      VALUES (rule_id_, description_,
+         procedure_name_, rule_flag_, value_flag_, rule_value_, sysdate);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+   END InsertRules;
+BEGIN
+   -- Insert new default rule
+   InsertRules('BUILDTRIGGERIF', 'Build IF-statement for updateable columns', 'REPLICATION', '1', '1');
+   InsertRules('FILEMOV', 'Move file after successful completion', '*', '2', '3');
+   InsertRules('FILERENAM', 'Rename file after successful completion', '*', '2', '5');
+   InsertRules('FILEDEL', 'Delete file after successful completion', '*', '2', '1');
+   InsertRules('CHKSERVERFILE', 'Execute job only if serverfile exists', '*', '2', '5');
+   InsertRules('MAPDBCOL', 'Remap IIDs client-default to DB-default', 'REPLICATION', '2', '1');
+   InsertRules('MAPDBCOL', 'Remap IIDs client-default to DB-default', 'MIGRATE%', '2', '1');
+   InsertRules('KEEPBLANKS', 'Do NOT trim off leading or trailing blanks from input file', '*', '2', '1');
+   InsertRules('EXTTABLE', 'Create External Table and insert directly into IC-table', 'CREATE_TABLE%', '2', '5');
+   InsertRules('REMLOG', 'Remove logfile if External Table was created OK', 'CREATE_TABLE%', '1', '1');
+   InsertRules('KEEPTRIGGER', 'Do NOT generate standard trigger-code', 'REPLICATION%', '2', '1');
+
+   -- Add default rules that may be missing
+   InsertRules('NONULLVAL','Do not include selected items with null-value in attr-string', 'MIGRATE%', '2', '1');
+   InsertRules('NONULLVAL','Do not include selected items with null-value in attr-string', 'REPLICATION', '2', '1');
+   
+   -- Make rule_value optional. May be used to enter a Reject Limit
+   -- for the Create External Table statement
+   UPDATE intface_default_rules_tab
+   SET value_flag = '5'
+   WHERE rule_id = 'EXTTABLE';
+
+   -- Insert new rule on existing jobs (in Active mode)
+   FOR rec_ IN find_existing_repl LOOP
+      BEGIN
+         INSERT INTO intface_rules_tab (
+            intface_name, rule_id, rule_flag, rowversion )
+         VALUES (
+            rec_.intface_name, 'BUILDTRIGGERIF', '1', SYSDATE );
+      EXCEPTION
+         WHEN DUP_VAL_ON_INDEX THEN
+            NULL;
+         WHEN OTHERS THEN
+            dbms_output.put_line(sqlerrm);
+      END;
+   END LOOP;
+   FOR rec_ IN find_existing_cre LOOP
+      BEGIN
+         INSERT INTO intface_rules_tab (
+            intface_name, rule_id, rule_flag, rowversion )
+         VALUES (
+            rec_.intface_name, 'EXTTABLE', '2', SYSDATE );
+      EXCEPTION
+         WHEN DUP_VAL_ON_INDEX THEN
+            NULL;
+         WHEN OTHERS THEN
+            dbms_output.put_line(sqlerrm);
+      END;
+      BEGIN
+         INSERT INTO intface_rules_tab (
+            intface_name, rule_id, rule_flag, rowversion )
+         VALUES (
+            rec_.intface_name, 'REMLOG', '1', SYSDATE );
+      EXCEPTION
+         WHEN DUP_VAL_ON_INDEX THEN
+            NULL;
+         WHEN OTHERS THEN
+            dbms_output.put_line(sqlerrm);
+      END;
+   END LOOP;
+END;
+/
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','120.upg','Timestamp_2');
+PROMPT Drop obsolete LOV view
+BEGIN
+   Installation_SYS.Remove_View('INTFACE_PROCEDURES_LOV', TRUE);
+END;
+/
+
+
+
+-----------------------------------------------------------------------------
+--- Modify S40 column length in table INTFACE_INFO_SERVICES_RPT
+-----------------------------------------------------------------------------
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','120.upg','Timestamp_3');
+PROMPT MODIFYING S40 COLUMN LENGTH IN TABLE INTFACE_INFO_SERVICES_RPT
+
+DECLARE
+   column_ Installation_SYS.ColRec;
+BEGIN
+   column_ := Installation_SYS.Set_Column_Values('S40', 'VARCHAR2(4000)');
+   Installation_SYS.Alter_Table_Column('INTFACE_INFO_SERVICES_RPT', 'MODIFY', column_, TRUE);
+END;
+/
+
+
+
+
+
+exec Installation_SYS.Log_Detail_Time_Stamp('FNDMIG','120.upg','Done');

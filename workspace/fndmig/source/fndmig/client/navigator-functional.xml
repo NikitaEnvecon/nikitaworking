@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FndNavigator xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Legacy="false" Source="fndmig\client\navigator-functional.xml">
+  <FndNavigatorEntries>
+    <FndNavigatorEntry>
+      <Key>FNDMIG_ROOT</Key>
+      <Name>Data Migration</Name>
+      <Url />
+      <Type>Folder</Type>
+      <ParentKey>IFS_SOLU_MANAGE.DATA_MANANT</ParentKey>
+      <Ordinal>300</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>FNDMIG_ROOT-IntfaceHeader</Key>
+      <Name>Migration Job</Name>
+      <Url>ifsapf:frmIntfaceHeader</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>FNDMIG_ROOT</ParentKey>
+      <Ordinal>100</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>FNDMIG_ROOT-OverviewIntfaceHeader</Key>
+      <Name>Migration Jobs</Name>
+      <Url>ifsapf:tbwIntfaceHeader</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>FNDMIG_ROOT</ParentKey>
+      <Ordinal>200</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>FNDMIG_ROOT-OverviewIntfaceDetail</Key>
+      <Name>Migration Job Details</Name>
+      <Url>ifsapf:tbwIntfaceDetailOverview</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>FNDMIG_ROOT</ParentKey>
+      <Ordinal>300</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>FNDMIG_ROOT-IntfaceStart</Key>
+      <Name>Execute Job</Name>
+      <Url>ifsapf:frmIntfaceStart</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>FNDMIG_ROOT</ParentKey>
+      <Ordinal>400</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>FNDMIG_ROOT-IntfaceHistory</Key>
+      <Name>Migration Job History</Name>
+      <Url>ifsapf:frmIntfaceJobHistHead</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>FNDMIG_ROOT</ParentKey>
+      <Ordinal>500</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>FNDMIG_ROOT-OverviewIntfaceHistory</Key>
+      <Name>Migration Jobs History</Name>
+      <Url>ifsapf:tbwIntfaceJobHistHead</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>FNDMIG_ROOT</ParentKey>
+      <Ordinal>600</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>FNDMIG_ROOT-IntfaceReplStruct</Key>
+      <Name>Replication Structure</Name>
+      <Url>ifsapf:frmIntfaceReplStruct</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>FNDMIG_ROOT</ParentKey>
+      <Ordinal>700</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>FNDMIG_ROOT-intfaceReplDbObjects</Key>
+      <Name>Replication Objects</Name>
+      <Url>ifsapf:tbwIntfaceReplDbObjects</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>FNDMIG_ROOT</ParentKey>
+      <Ordinal>800</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>FNDMIG_ROOT-IntfaceReplOutLog</Key>
+      <Name>Replication Output Log</Name>
+      <Url>ifsapf:tbwIntfaceReplOutLog</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>FNDMIG_ROOT</ParentKey>
+      <Ordinal>900</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>FNDMIG_ROOT-IntfaceServerProcesses</Key>
+      <Name>Scheduled Migration Jobs</Name>
+      <Url>ifsapf:tbwIntfaceServerProcesses</Url>
+      <Type>TableWindow</Type>
+      <ParentKey>FNDMIG_ROOT</ParentKey>
+      <Ordinal>1000</Ordinal>
+    </FndNavigatorEntry>
+    <FndNavigatorEntry>
+      <Key>FNDMIG_ROOT-IntfaceBasic</Key>
+      <Name>Data Migration Basic Data</Name>
+      <Url>ifsapf:frmIntfaceBasic</Url>
+      <Type>FormWindow</Type>
+      <ParentKey>FNDMIG_ROOT</ParentKey>
+      <Ordinal>1100</Ordinal>
+    </FndNavigatorEntry>
+  </FndNavigatorEntries>
+  <FndShortcutItems />
+</FndNavigator>

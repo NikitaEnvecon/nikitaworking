@@ -1,0 +1,1702 @@
+-------------------------------------------------------
+File Type: IFS Foundation Translation File
+Type version: 1.00
+-------------------------------------------------------
+Module: FNDMIG
+Language: pl
+Culture: pl-PL
+Fittings: Standard
+Layer: Core
+Main Type: LU
+Sub Type: Logical Unit
+-------------------------------------------------------
+CS:IntfaceChangeDefaults^LU
+	A:Prompt^Zmiana domy\015Blnych warto\015Bci interfejsu^O
+	CS:1^LU
+		A:Text^Dozwolone^O
+	CE:
+	CS:2^LU
+		A:Text^Niedozwolone^O
+	CE:
+	CS:3^LU
+		A:Text^Warto\015B\0107 sta\0142a^O
+	CE:
+CE:
+CS:IntfaceConvList^LU
+	A:Prompt^Interfejs \2013 lista konwersji^O
+	CS:INTFACE_CONV_LIST^LU
+	CE:
+CE:
+CS:IntfaceConvListCols^LU
+	A:Prompt^Interfejs \2013 lista konwersji kolumn^O
+	CS:INTFACE_CONV_LIST_COLS^LU
+	CE:
+CE:
+CS:IntfaceDefaultRules^LU
+	A:Prompt^Domy\015Blne regu\0142y interfejsu^O
+	CS:ADDOBJID^LU
+		A:Text^Utw\00F3rz dodatkow\0105 kolumn\0119 szczeg\00F3\0142\00F3w OBJID^O
+	CE:
+	CS:CHECKOPTION^LU
+		A:Text^Wykonuj metody Nowe i Modyfikuj z opcj\0105 CHECK^O
+	CE:
+	CS:CLEANUP^LU
+		A:Text^Automatycznie wyczy\015B\0107 szczeg\00F3\0142y b\0142\0119d\00F3w^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Liczba wierszy mi\0119dzy zatwierdzeniami^O
+	CE:
+	CS:CONNJOB^LU
+		A:Text^Uruchom to zadanie jako pierwsze^O
+	CE:
+	CS:CREATEDET^LU
+		A:Text^Utw\00F3rz now\0105 kolumn\0119 szczeg\00F3\0142\00F3w opart\0105 na widokach na li\015Bcie metod (MethodList)^O
+	CE:
+	CS:CRETABCONF^LU
+		A:Text^Opcje tabeli kontenera^O
+	CE:
+	CS:EVENTMESS^LU
+		A:Text^Powiadom serwer zdarze\0144, gdy zadanie zostanie uko\0144czone^O
+	CE:
+	CS:EXITLINES^LU
+		A:Text^Zako\0144cz odczytywanie pliku po nast\0119puj\0105cym numerze linii^O
+	CE:
+	CS:FETCHCONDITION^LU
+		A:Text^Okre\015Bla, czy zadanie mo\017Ce s\0142u\017Cy\0107 do pobierania danych. Je\015Bli u\017Cyto wielu LU, nale\017Cy okre\015Bli\0107 warunek po\0142\0105czenia^O
+	CE:
+	CS:FILEBKP^LU
+		A:Text^Utw\00F3rz kopi\0119 zapasow\0105 pliku po pomy\015Blnym zako\0144czeniu^O
+	CE:
+	CS:FILEHEAD^LU
+		A:Text^Utw\00F3rz nag\0142\00F3wek pliku z nazwami kolumn. Tylko pliki CSV^O
+	CE:
+	CS:IGNOREADERROR^LU
+		A:Text^Kontynuuj odczytywanie pliku, nawet je\015Bli wyst\0119puj\0105 b\0142\0119dy^O
+	CE:
+	CS:IGNOREXEERROR^LU
+		A:Text^Kontynuuj procedur\0119, nawet je\015Bli wyst\0119puj\0105 b\0142\0119dy^O
+	CE:
+	CS:INSUPD^LU
+		A:Text^Wykonaj operacj\0119 INSERT lub UPDATE^O
+	CE:
+	CS:INTFACE_DEFAULT_RULES^LU
+	CE:
+	CS:NOCLEANUP^LU
+		A:Text^Zachowaj wszystkie szczeg\00F3\0142y zadania dotycz\0105ce plik\00F3w klienta^O
+	CE:
+	CS:SAVEJOBDAYS^LU
+		A:Text^Liczba dni historii zada\0144, kt\00F3re zostan\0105 zapisane^O
+	CE:
+	CS:SAVEJOBERR^LU
+		A:Text^Zapisuj tylko b\0142\0119dy w dzienniku historii^O
+	CE:
+	CS:SERVFILOAD^LU
+		A:Text^Za\0142aduj plik serwera przed rozpocz\0119ciem zadania^O
+	CE:
+	CS:SKIPLINES^LU
+		A:Text^Rozpocznij odczytywanie pliku po nast\0119puj\0105cym numerze linii^O
+	CE:
+	CS:SYNCDETAILS^LU
+		A:Text^Synchronizuj szczeg\00F3\0142y zadania z kolumnami w nag\0142\00F3wku pliku^O
+	CE:
+	CS:TRUNCVAL^LU
+		A:Text^Skracaj warto\015Bci przekraczaj\0105ce d\0142ugo\015B\0107 kolumny^O
+	CE:
+CE:
+CS:IntfaceDetail^LU
+	A:Prompt^Szczeg\00F3\0142y interfejsu^O
+	CS:CHECKERROR^LU
+		A:Text^Kontrola :P1 zako\0144czona niepowodzeniem \2013 :P2 (B\0142\0105d spowodowany lini\0105: :P3)^O
+	CE:
+	CS:CLIENTVAL^LU
+		A:Text^Warto\015Bci klienta^O
+	CE:
+	CS:COLOUTDAT^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania :P1 z warto\015Bci\0105 daty :P2^O
+	CE:
+	CS:COLOUTDAT2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania kolumny daty :P1^O
+	CE:
+	CS:COLOUTNUM^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania :P1 z warto\015Bci\0105 numeryczn\0105 :P2^O
+	CE:
+	CS:COLOUTNUM2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania kolumny numerycznej :P1^O
+	CE:
+	CS:COLUMNOUT^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania :P1 z warto\015Bci\0105 :P2^O
+	CE:
+	CS:COLUMNOUT2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania kolumny :P1^O
+	CE:
+	CS:COMMITCNT^LU
+		A:Text^:P1 liczba zatwierdzonych wierszy :P2^O
+	CE:
+	CS:CREERRORATTR^LU
+		A:Text^Tworzenie pliku z :P1 zosta\0142o zako\0144czone niepowodzeniem.^O
+	CE:
+	CS:CREFORMAT^LU
+		A:Text^Pr\00F3ba utworzenia pliku zosta\0142a zako\0144czona niepowodzeniem \2013 :P1^O
+	CE:
+	CS:CREINTFACEOK^LU
+		A:Text^Zadanie migracji :P1 zosta\0142o zako\0144czone^O
+	CE:
+	CS:DBVAL^LU
+		A:Text^Warto\015Bci BD^O
+	CE:
+	CS:ERRDEFAULT^LU
+		A:Text^:P1 jest stosowane tylko wtedy, gdy kierunek to :P2^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Domy\015Blne, je\015Bli nieu\017Cywane w kierunku = :P1^O
+	CE:
+	CS:FILENOTFOUND^LU
+		A:Text^Nie mo\017Cna znale\017A\0107 pliku :P1 na \015Bcie\017Cce :P2.^O
+	CE:
+	CS:FORMATERROR^LU
+		A:Text^Pr\00F3ba sformatowania zosta\0142a zako\0144czona niepowodzeniem \2013 :P1. (B\0142\0105d zosta\0142 spowodowany przez lini\0119: :P2)^O
+	CE:
+	CS:INSCHECK^LU
+		A:Text^Liczba pomy\015Blnie sprawdzonych nowych wierszy: :P1^O
+	CE:
+	CS:INSCHECKERR^LU
+		A:Text^Liczba sprawdzonych wierszy z b\0142\0119dem: :P1^O
+	CE:
+	CS:INSERRORNEW^LU
+		A:Text^Wstawianie do :P1 zako\0144czone niepowodzeniem \2013 :P2 (B\0142\0105d spowodowany lini\0105: :P3)^O
+	CE:
+	CS:INSINTERR^LU
+		A:Text^Liczba wierszy zwracaj\0105cych b\0142\0105d: :P1^O
+	CE:
+	CS:INSINTINS^LU
+		A:Text^Liczba wstawionych nowych wierszy: :P1^O
+	CE:
+	CS:INSINTNOROWS^LU
+		A:Text^Nie przetworzono wierszy^O
+	CE:
+	CS:INSINTOK^LU
+		A:Text^Zadanie migracji :P1 zosta\0142o zako\0144czone^O
+	CE:
+	CS:INTFACE_DETAIL^LU
+		CS:SOURCE_NAME^LU
+		CE:
+		CS:SOURCE_OWNER^LU
+		CE:
+	CE:
+	CS:INTFACE_DETAIL_COL_LOV^LU
+	CE:
+	CS:LOADERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas \0142adowania danych zadania migracji :P1^O
+	CE:
+	CS:NODET^LU
+		A:Text^Nie znaleziono szczeg\00F3\0142\00F3w :P1^O
+	CE:
+	CS:NOROWS^LU
+		A:Text^Nie przetworzono wierszy^O
+	CE:
+	CS:NOVAL^LU
+		A:Text^Brak BD/warto\015Bci klient\00F3w :P1^O
+	CE:
+	CS:ROWSFAILED^LU
+		A:Text^Liczba wierszy zwracaj\0105cych b\0142\0105d: :P1^O
+	CE:
+	CS:ROWSWRITTEN^LU
+		A:Text^Liczba wierszy zapisanych: :P1^O
+	CE:
+	CS:STRINGOUT^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania :P1 z warto\015Bci\0105 :P2^O
+	CE:
+	CS:STRINGOUT2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania kolumny :P1^O
+	CE:
+	CS:STRINGOUTCONV^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas konwertowania warto\015Bci :P2 do :P1^O
+	CE:
+	CS:STRINGOUTCONV2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas konwertowania kolumny :P1^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^Warto\015B\0107 :P3 w kolumnie :P1 jest d\0142u\017Csza od zdefiniowanego limitu :P2. Problem mo\017Cna rozwi\0105za\0107 z u\017Cyciem regu\0142y TRUNCVAL.^O
+	CE:
+	CS:TOOLONG2^LU
+		A:Text^Warto\015B\0107 w kolumnie :P1 jest d\0142u\017Csza od zdefiniowanego limitu :P2. Problem mo\017Cna rozwi\0105za\0107 z u\017Cyciem regu\0142y TRUNCVAL.^O
+	CE:
+	CS:UNPACKPOS^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas rozpakowywania P1 z warto\015Bci\0105 :P2^O
+	CE:
+	CS:UNPACKPOS2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas rozpakowywania kolumny :P1^O
+	CE:
+	CS:UNPACKPOSCONV^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas konwertowania warto\015Bci :P2 do :P1^O
+	CE:
+	CS:UNPACKPOSDAT^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania warto\015Bci daty :P2 do :P1^O
+	CE:
+	CS:UNPACKPOSDAT2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania kolumny daty :P1^O
+	CE:
+	CS:UNPACKPOSDEF^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania warto\015Bci domy\015Blnej :P2 do :P1^O
+	CE:
+	CS:UNPACKPOSNUM^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania warto\015Bci numerycznej :P2 do :P1^O
+	CE:
+	CS:UNPACKPOSNUM2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania kolumny numerycznej :P1^O
+	CE:
+	CS:UNPACKPOSSTR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania warto\015Bci ci\0105gu :P2 do :P1^O
+	CE:
+	CS:UNPACKPOSSTR2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania kolumny ci\0105gu :P1^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas rozpakowywania P1 z warto\015Bci\0105 :P2^O
+	CE:
+	CS:UNPACKSEP2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas rozpakowywania kolumny :P1^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas konwertowania warto\015Bci :P2 do :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania warto\015Bci daty :P2 do :P1^O
+	CE:
+	CS:UNPACKSEPDAT2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania kolumny daty :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania warto\015Bci domy\015Blnej :P2 do :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania warto\015Bci numerycznej :P2 do :P1^O
+	CE:
+	CS:UNPACKSEPNUM2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania kolumny numerycznej :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d odczytywania warto\015Bci kolumn wg separatora kolumn^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania warto\015Bci ci\0105gu :P2 do :P1^O
+	CE:
+	CS:UNPACKSEPSTR2^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania kolumny ci\0105gu :P1^O
+	CE:
+	CS:UPDERRORCHK^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d :P1 podczas wykonywania :P2^O
+	CE:
+	CS:UPDERRORUPD^LU
+		A:Text^Pr\00F3ba aktualizacji :P1 zosta\0142a zako\0144czona niepowodzeniem \2013 :P2 (B\0142\0105d spowodowany lini\0105: :P3)^O
+	CE:
+	CS:UPDINTFACEOK^LU
+		A:Text^Zadanie migracji :P1 zosta\0142o zako\0144czone^O
+	CE:
+	CS:UPDINTFERR^LU
+		A:Text^Liczba wierszy zwracaj\0105cych b\0142\0105d: :P1^O
+	CE:
+	CS:UPDINTFINS^LU
+		A:Text^Liczba wstawionych nowych wierszy: :P1^O
+	CE:
+	CS:UPDINTFUPD^LU
+		A:Text^Liczba wierszy zmodyfikowanych: :P1^O
+	CE:
+	CS:VALFOUND^LU
+		A:Text^Znalezione warto\015Bci BD/Klienta^O
+	CE:
+	CS:WRNOROWS^LU
+		A:Text^Nie przetworzono wierszy^O
+	CE:
+CE:
+CS:IntfaceDirection^LU
+	A:Prompt^Interfejs \2013 kierunek^O
+	CS:1^LU
+		A:Text^Plik w^O
+	CE:
+	CS:2^LU
+		A:Text^Plik wyj\015Bciowy^O
+	CE:
+	CS:3^LU
+		A:Text^\017Baden^O
+	CE:
+	CS:4^LU
+		A:Text^Migracja \017Ar\00F3de\0142^O
+	CE:
+	CS:5^LU
+		A:Text^ReplicStructure^O
+	CE:
+	CS:6^LU
+		A:Text^Migracja Excel^O
+	CE:
+CE:
+CS:IntfaceDocumentation^LU
+	A:Prompt^Dokumentacja interfejsu^O
+	CS:INFTXTDETAIL^LU
+		A:Text^Nieu\017Cywane^O
+	CE:
+	CS:INFTXTHEADER^LU
+		A:Text^Nieu\017Cywane^O
+	CE:
+	CS:INFTXTMETHLI^LU
+		A:Text^Nieu\017Cywane^O
+	CE:
+	CS:INTFACE_DOCUMENTATION_REP^LU
+		A:Title^Dokumentacja migracji^O
+		CS:ACTION^LU
+			A:Title^Dzia\0142anie^O
+		CE:
+		CS:AMOUNT_FACTOR^LU
+			A:Title^Wsp\00F3\0142czynnik kwoty^O
+		CE:
+		CS:ATTR_SEQ^LU
+			A:Title^Sekwencja atrybutu^O
+		CE:
+		CS:BLOCK_TYPE^LU
+			A:Title^Typ bloku^O
+		CE:
+		CS:CHANGE_DEFAULTS^LU
+			A:Title^Zmie\0144 domy\015Blne^O
+		CE:
+		CS:COLS_USING_LIST^LU
+			A:Title^Kolumny korzystaj\0105ce z listy konwersji:^O
+		CE:
+		CS:COLUMN_EMBRACE^LU
+			A:Title^Otocznie kolumny^O
+		CE:
+		CS:COLUMN_NAME^LU
+			A:Title^Kolumna docelowa^O
+		CE:
+		CS:COLUMN_SEPARATOR^LU
+			A:Title^Separator kolumny^O
+		CE:
+		CS:CONVERT_ATTR^LU
+			A:Title^Konwertuj atr.^O
+		CE:
+		CS:CONV_LIST_DESCR^LU
+			A:Title^Konw. opisy list^O
+		CE:
+		CS:CONV_LIST_ID^LU
+			A:Title^Lista konwersji^O
+		CE:
+		CS:DATA_TYPE^LU
+			A:Title^Typ danych^O
+		CE:
+		CS:DATE_FORMAT^LU
+			A:Title^Format daty^O
+		CE:
+		CS:DECIMAL_LENGTH^LU
+			A:Title^Liczba cyfr po przecinku^O
+		CE:
+		CS:DECIMAL_POINT^LU
+			A:Title^Symbol dziesi\0119tny^O
+		CE:
+		CS:DEFAULT_VALUE^LU
+			A:Title^Warto\015B\0107 domy\015Blna^O
+		CE:
+		CS:DEFAULT_WHERE^LU
+			A:Title^Domy\015Blne - gdzie^O
+		CE:
+		CS:DESCR_COLUMN_NAME^LU
+			A:Title^Opis kolumny^O
+		CE:
+		CS:DIRECTION^LU
+			A:Title^Kierunek^O
+		CE:
+		CS:DIRECTION_DB^LU
+			A:Title^Kierunek BD^O
+		CE:
+		CS:EXECUTED_BY^LU
+			A:Title^Wykonane przez^O
+		CE:
+		CS:EXECUTE_SEQ^LU
+			A:Title^Wykonaj sekwencj\0119^O
+		CE:
+		CS:FILE_LOCATION^LU
+			A:Title^Lokalizacja pliku^O
+		CE:
+		CS:FILE_LOCATION_DB^LU
+			A:Title^Lokalizacja pliku BD^O
+		CE:
+		CS:FLAGS^LU
+			A:Title^Flagi^O
+		CE:
+		CS:GROUP_DESCRIPTION^LU
+			A:Title^Opis grupy^O
+		CE:
+		CS:GROUP_ID^LU
+			A:Query^ID grupy:^O
+			A:Title^ID grupy^O
+		CE:
+		CS:INFO_TEXT_DETAIL^LU
+			A:Title^Info:^O
+		CE:
+		CS:INFO_TEXT_HEADER^LU
+			A:Title^Info:^O
+		CE:
+		CS:INFO_TEXT_METH_LIST^LU
+			A:Title^Info:^O
+		CE:
+		CS:INTFACE_DESCR^LU
+			A:Title^Opis migracji^O
+		CE:
+		CS:INTFACE_FILE^LU
+			A:Title^Plik^O
+		CE:
+		CS:INTFACE_IN^LU
+			A:Query^ID zadania migracji:^O
+		CE:
+		CS:INTFACE_NAME^LU
+			A:Title^ID zadania migracji^O
+		CE:
+		CS:INTFACE_PATH^LU
+			A:Title^\015Acie\017Cka^O
+		CE:
+		CS:IntfaceDoc.rdl^LU
+			A:Title^Dokument migracji^O
+		CE:
+		CS:LAST_EXECUTED^LU
+			A:Title^Ostatnio wykonane^O
+		CE:
+		CS:LAST_INFO^LU
+			A:Title^Informacje o ostatnim^O
+		CE:
+		CS:LENGTH^LU
+			A:Title^D\0142ugo\015B\0107^O
+		CE:
+		CS:MET_COLUMN_NAME^LU
+			A:Title^Kolumna regu\0142y^O
+		CE:
+		CS:MET_COLUMN_VALUE^LU
+			A:Title^Warto\015B\0107 regu\0142y^O
+		CE:
+		CS:MET_METHOD_NAME^LU
+			A:Title^Metoda^O
+		CE:
+		CS:MET_VIEW_NAME^LU
+			A:Title^Widok^O
+		CE:
+		CS:MINUS_POS^LU
+			A:Title^Poz. ujemna^O
+		CE:
+		CS:NEW_VALUE^LU
+			A:Title^Nowa warto\015B\0107^O
+		CE:
+		CS:NOTE_TEXT_DETAIL^LU
+			A:Title^Komentarze^O
+		CE:
+		CS:NOTE_TEXT_GROUP^LU
+			A:Title^Komentarze^O
+		CE:
+		CS:NOTE_TEXT_HEADER^LU
+			A:Title^Komentarze^O
+		CE:
+		CS:NOTE_TEXT_METH_LIST^LU
+			A:Title^Komentarze^O
+		CE:
+		CS:OLD_VALUE^LU
+			A:Title^Stara warto\015B\0107^O
+		CE:
+		CS:ORDER_BY_CLAUSE^LU
+			A:Title^Zamawiaj\0105cy^O
+		CE:
+		CS:ORDER_BY_COL^LU
+			A:Title^Zamawiaj\0105cy^O
+		CE:
+		CS:PAD_CHAR_LEFT^LU
+			A:Title^Dodaj znak z lewej^O
+		CE:
+		CS:PAD_CHAR_RIGHT^LU
+			A:Title^Dodaj znak z prawej^O
+		CE:
+		CS:POS^LU
+			A:Title^Poz.^O
+		CE:
+		CS:PRINT_DETAIL^LU
+			A:Query^Mapowanie kolumny drukowania:^O
+		CE:
+		CS:PRINT_DOC_INFO^LU
+			A:Query^Informacje o drukowanym dokumencie:^O
+		CE:
+		CS:PRINT_HEADER^LU
+			A:Query^Drukuj informacje nag\0142\00F3wka:^O
+		CE:
+		CS:PRINT_MAP_VALUE^LU
+			A:Query^Drukuj mapowane warto\015Bci:^O
+		CE:
+		CS:PRINT_METH_LIST^LU
+			A:Query^Drukuj list\0119 metod:^O
+		CE:
+		CS:PROCEDURE_NAME^LU
+			A:Title^Nazwa procedury^O
+		CE:
+		CS:REFERENCES^LU
+			A:Title^Referencje^O
+		CE:
+		CS:Report Constants^LU
+			A:txAction^U\017Cywane w celu okre\015Blenia, czy dana metoda powinna zosta\0107 uruchomiona przed lub po obs\0142udze wybranych wierszy ze \017Ar\00F3d\0142a, czy te\017C czy nale\017Cy wykona\0107 je jeden raz dla ka\017Cdego wiersza pobranego ze \017Ar\00F3d\0142a.^O
+			A:txAmountFactor^To pole s\0142u\017Cy do nadawania mianownika s\0142u\017C\0105cego do ponownego obliczenia warto\015Bci kolumny \017Ar\00F3d\0142owej przed przeniesieniem ich do kolumny bazy danych IFS.^O
+			A:txChangeDefaults^To pole okre\015Bla, czy mo\017Cna zmieni\0107 warto\015B\0107 domy\015Bln\0105 podczas uruchamiania zadania migracji.^O
+			A:txColumnName^Kolumna bazy danych w IFS, do kt\00F3rej powinna by\0107 przetransferowana warto\015B\0107 \017Ar\00F3d\0142owa.^O
+			A:txDataType^Typ danych kolumny bazy danych. Dozwolone s\0105 warto\015Bci numeryczne, alfanumeryczne lub daty.^O
+			A:txDecimalLength^Liczba cyfr po przecinku u\017Cywanych podczas \0142adowania/zapisywania do pliku.^O
+			A:txDefaultValue^To pole s\0142u\017Cy do okre\015Blania warto\015Bci, je\015Bli nie ma warto\015Bci w kolumnie \017Ar\00F3d\0142owej. Je\015Bli nie okre\015Blono kolumny \017Ar\00F3d\0142owej, do wszystkich wierszy zostanie zastosowana warto\015B\0107 standardowa.^O
+			A:txDescrColumnName^Opis kolumny bazy danych^O
+			A:txDetailTitle^Specyfikacja mapowania kolumn^O
+			A:txExecuteSeq^Okre\015Bl kolejno\015B\0107 wykonywania metod z listy metod.^O
+			A:txFileInfo^Informacja o pliku^O
+			A:txFlags^Flagi atrybut\00F3w IFS. Flagi opisuj\0105 r\00F3\017Cne atrybuty po\0142\0105czone z kolumn\0105 bazy danych IFS i mog\0105 zawiera\0107 przynajmniej jedn\0105 z nast\0119puj\0105cych warto\015Bci:^O
+			A:txFlagsI^W = Wstawianie dozwolone^O
+			A:txFlagsK^K = Klucz (Klucz zewn\0119trzny)^O
+			A:txFlagsM^O = Obowi\0105zkowe^O
+			A:txFlagsP^N = Klucz nadrz\0119dny^O
+			A:txFlagsU^A = Aktualizacja dozwolona^O
+			A:txHeaderColMapping^Obja\015Bnienie kolumn u\017Cywanych w mapowaniu kolumn^O
+			A:txHeaderMethodList^Obja\015Bnienie kolumn u\017Cywanych w li\015Bcie metod^O
+			A:txHeaderTitle^Specyfikacja program\00F3w migracji dla^O
+			A:txLastExecutionInfo^Informacje o ostatnim wykonaniu^O
+			A:txLength^To pole okre\015Bla maksymaln\0105 d\0142ugo\015B\0107 dozwolon\0105 w kolumnie bazy danych IFS. To pole jest u\017Cywane w po\0142\0105czeniu z polem POS w celu odczytywania/zapisywania plik\00F3w ze sta\0142\0105 szeroko\015Bci\0105 kolumny.^O
+			A:txMapTitle^Mapowanie warto\015Bci konkretnych kolumn^O
+			A:txMetColumnName^U\017Cywane w celu okre\015Blenia, \017Ce dan\0105 metod\0119 nale\017Cy uruchomi\0107 wy\0142\0105cznie w zale\017Cno\015Bci od warto\015Bci tej kolumny \017Ar\00F3d\0142owej.^O
+			A:txMetColumnValue^Metoda zostanie uruchomiona, je\015Bli warto\015B\0107 kolumny \017Ar\00F3d\0142a jest r\00F3wna tej warto\015Bci. Na przyk\0142ad: je\015Bli wprowadzisz '%', metoda zostanie wykonana dla wszystkich wierszy zawieraj\0105cych warto\015B\0107 w kolumnie \017Ar\00F3d\0142owej.^O
+			A:txMetMethodName^Okre\015Bl w\0142asn\0105 metod\0119 lub metod\0119 IFS, kt\00F3r\0105 nale\017Cy uruchomi\0107.^O
+			A:txMethodListTitle^U\017Cyte/utworzone metody/API^O
+			A:txPadCharLeft^To pole s\0142u\017Cy do okre\015Blania znaku, kt\00F3re powinno zosta\0107 usuni\0119te lub dodane do lewej strony kolumny podczas odczytywania lub zapisywania do pliku (ltrim/lpad)^O
+			A:txPadCharRight^To pole s\0142u\017Cy do okre\015Blania znaku, kt\00F3re powinno zosta\0107 usuni\0119te lub dodane do prawej strony kolumny podczas odczytywania lub zapisywania do pliku (ltrim/lpad)^O
+			A:txPos^To pole s\0142u\017Cy do okre\015Blania po\0142o\017Cenia kolumn w okre\015Blonym pliku. Je\015Bli np. zastosujesz plik CSV, to pole b\0119dzie mia\0142o warto\015B\0107 1, 2, 3 itp.^O
+			A:txSourceColumn^Kolumna \017Ar\00F3d\0142owa z pliku, tabeli lub widoku, kt\00F3ra zostanie wstawiona do kolumny bazy danych IFS^O
+			A:txTitleDocPage^Definicje / opisy kolumn^O
+			A:txViewInfo^Informacje o g\0142\00F3wnym el. \017Ar\00F3d\0142owym/docelowym^O
+		CE:
+		CS:SOURCE_COLUMN^LU
+			A:Title^Kolumna \017Ar\00F3d\0142owa^O
+		CE:
+		CS:SOURCE_NAME^LU
+			A:Title^Nazwa \017Ar\00F3d\0142a^O
+		CE:
+		CS:SOURCE_OWNER^LU
+			A:Title^W\0142a\015Bciciel \017Ar\00F3d\0142a^O
+		CE:
+		CS:THOUSAND_SEPARATOR^LU
+			A:Title^Separator tysi\0119cy^O
+		CE:
+		CS:VIEW_NAME^LU
+			A:Title^Nazwa docelowa^O
+		CE:
+		CS:WHERE_CLAUSE^LU
+			A:Title^Gdzie^O
+		CE:
+	CE:
+	CS:INTFACE_INFO_SERVICES_RPV^LU
+	CE:
+CE:
+CS:IntfaceEvents^LU
+	A:Prompt^Interfejs \2013 zdarzenia^O
+CE:
+CS:IntfaceExcelConnect^LU
+	A:Prompt^Interfejs \2013 pod\0142\0105cz Excel^O
+CE:
+CS:IntfaceExecIntervalType^LU
+	A:Prompt^Interfejs \2013 typ przedzia\0142u wykonywania^O
+	CS:1440^LU
+		A:Text^Minuty^O
+	CE:
+	CS:24^LU
+		A:Text^Godz.^O
+	CE:
+	CS:86400^LU
+		A:Text^Sekundy^O
+	CE:
+CE:
+CS:IntfaceExecution^LU
+	A:Prompt^Interfejs \2013 wykonanie^O
+	CS:INTFACE_EXECUTION^LU
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:IC_TABLE_NAME^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionDetail^LU
+	A:Prompt^Interfejs \2013 szczeg\00F3\0142y wykonania^O
+	CS:INTFACE_EXECUTION_DETAIL^LU
+		CS:ATTRIBUTE_STRING^LU
+		CE:
+		CS:DATE_EXECUTED^LU
+		CE:
+		CS:ERROR_MESSAGE^LU
+		CE:
+		CS:EXECUTED_BY^LU
+		CE:
+		CS:EXECUTION_ID^LU
+		CE:
+		CS:FILE_STRING^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+		CS:LINE_NO^LU
+		CE:
+		CS:STATUS^LU
+		CE:
+		CS:STATUS_DB^LU
+		CE:
+	CE:
+CE:
+CS:IntfaceExecutionUtil^LU
+	CS:BLANKCOLUMNS^LU
+		A:Text^Kolumna \017Ar\00F3d\0142owa lub warto\015B\0107 domy\015Blna musi mie\0107 warto\015B\0107^O
+	CE:
+	CS:CHKCOUNT^LU
+		A:Text^Liczba sprawdzonych wierszy: :P1^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Wiersze potwierdzone regu\0142\0105 COMMITSEQ: :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Nie mo\017Cna uruchomi\0107 tego zadania. Po\0142\0105czone zadanie :P1 zawiera b\0142\0119dy.^O
+	CE:
+	CS:CREIND^LU
+		A:Text^Utworzono indeks :P1 w kolumnie :p2^O
+	CE:
+	CS:DUPEXIST^LU
+		A:Text^Istniej\0105 zdublowane kolumny \017Ar\00F3d\0142a. Rozwi\0105\017C duplikaty przez wykonaniem^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^Metoda nr :P1 \2013 warto\015B\0107 zadania o ID nie mo\017Ce by\0107 taka sama, jak zadania g\0142\00F3wnego^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Wykonane bez b\0142\0119du^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^WYKONYWANIE METODY NR :P1\00A0:^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^Liczba niekompletnych spowodowanych poleceniem COMMIT lub ROLLBACK w wywo\0142anej metodzie: :P1^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Niekompletne zaznaczenie nie zosta\0142o wykonane \2013 :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Sprawd\017A wynik. By\0107 mo\017Ce cz\0119\015Bciowo potwierdzono transakcje^O
+	CE:
+	CS:INVALIDLENGTH^LU
+		A:Text^Zawarto\015B\0107 kolumny \017Ar\00F3d\0142owej nie powinna przekracza\0107 30 znak\00F3w^O
+	CE:
+	CS:JOBRUNERROR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas wykonywania zadania :P1^O
+	CE:
+	CS:LNGTHINVAL^LU
+		A:Text^Wykryto kolumny \017Ar\00F3d\0142owe przekraczaj\0105ce 30 znak\00F3w. Nale\017Cy rozwi\0105za\0107 ten problem przed jego wykonaniem^O
+	CE:
+	CS:LOADERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas \0142adowania danych zadania migracji :P1^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 z opcj\0105 CHECK^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, b\0142\0119dy : :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Liczba nowych rekord\00F3w: :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Liczba przetwarzanych wierszy: :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Liczba zaktualizowanych rekord\00F3w: :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^\015Arednia liczba wierszy :P1 na minut\0119^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^Liczba potwierdzonych wierszy: :P1^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^Liczba wybranych rekord\00F3w: :P1^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^Liczba wierszy zwracaj\0105cych b\0142\0105d: :P1^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^U\017Cywano :P1 godz. i :P2 min.^O
+	CE:
+	CS:NODET^LU
+		A:Text^Nie znaleziono szczeg\00F3\0142\00F3w :P1^O
+	CE:
+	CS:NONAME^LU
+		A:Text^Nie znaleziono warto\015Bci ID zadania w wierszu atrybutu dotycz\0105cego metody nr :P1^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^OBJID nie znajduje si\0119 w zaznaczeniu, ale regu\0142a ADDOBJID jest aktywna^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Nie mo\017Cna uruchomi\0107 ponownie \2013 :P1 nie zawiera ID wiersza^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^Nie okre\015Blono zaznaczenia^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1 zawiera linie :P2 b\0142\0119du i nie mo\017Ce zosta\0107 uruchomione^O
+	CE:
+	CS:NULLCOLS^LU
+		A:Text^Wykryto rekordy, w kt\00F3rych nie ma ani kolumny \017Ar\00F3d\0142owej, ani warto\015Bci domy\015Blnej. Przed wykonaniem nale\017Cy rozwi\0105za\0107 ten problem.^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^B\0142\0105d podczas wybierania :P1 \2013 :P2^O
+	CE:
+	CS:SOURCEDUPLIC^LU
+		A:Text^Kolumna \017Ar\00F3d\0142owa musi by\0107 unikatowa.^O
+	CE:
+	CS:STATINSERT^LU
+		A:Text^Wstawione^O
+	CE:
+	CS:STATNOOP^LU
+		A:Text^Brak operacji^O
+	CE:
+	CS:STATNOTEXT^LU
+		A:Text^Obiekt nie istnieje^O
+	CE:
+	CS:STATOK^LU
+		A:Text^Walidacja OK^O
+	CE:
+	CS:STATPROC^LU
+		A:Text^Przetworzone^O
+	CE:
+	CS:STATUPDATE^LU
+		A:Text^Zaktualizowano^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Godzina rozpocz\0119cia \2013 :P1 :P2^O
+	CE:
+	CS:TOOLONG^LU
+		A:Text^Warto\015B\0107 :P3 w kolumnie :P1 jest d\0142u\017Csza od zdefiniowanego limitu :P2.^O
+	CE:
+	CS:UNPACKSEP^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas rozpakowywania P1 z warto\015Bci\0105 :P2^O
+	CE:
+	CS:UNPACKSEPCONV^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas konwertowania warto\015Bci :P2 do :P1^O
+	CE:
+	CS:UNPACKSEPDAT^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania warto\015Bci daty :P2 do :P1^O
+	CE:
+	CS:UNPACKSEPDEF^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania warto\015Bci domy\015Blnej :P2 do :P1^O
+	CE:
+	CS:UNPACKSEPNUM^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania warto\015Bci numerycznej :P2 do :P1^O
+	CE:
+	CS:UNPACKSEPSEP^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d odczytywania warto\015Bci kolumn wg separatora kolumn^O
+	CE:
+	CS:UNPACKSEPSTR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas formatowania warto\015Bci ci\0105gu :P2 do :P1^O
+	CE:
+CE:
+CS:IntfaceFileLocation^LU
+	A:Prompt^Interfejs \2013 lokalizacja pliku^O
+	CS:1^LU
+		A:Text^OnServer^O
+	CE:
+	CS:2^LU
+		A:Text^OnClient^O
+	CE:
+	CS:3^LU
+		A:Text^NoFile^O
+	CE:
+CE:
+CS:IntfaceFormatChar^LU
+	A:Prompt^Interfejs \2013 format znak\00F3w^O
+	CS:124^LU
+		A:Text^<kreska pionowa>^O
+	CE:
+	CS:13^LU
+		A:Text^<powr\00F3t karetki>^O
+	CE:
+	CS:164^LU
+		A:Text^<znak waluty>^O
+	CE:
+	CS:32^LU
+		A:Text^<spacja>^O
+	CE:
+	CS:34^LU
+		A:Text^<podw\00F3jna oferta>^O
+	CE:
+	CS:35^LU
+		A:Text^<hash>^O
+	CE:
+	CS:39^LU
+		A:Text^<pojedyncza oferta>^O
+	CE:
+	CS:42^LU
+		A:Text^<gwiazdka>^O
+	CE:
+	CS:44^LU
+		A:Text^<przecinek>^O
+	CE:
+	CS:46^LU
+		A:Text^<punkt>^O
+	CE:
+	CS:48^LU
+		A:Text^<zero>^O
+	CE:
+	CS:59^LU
+		A:Text^<\015Brednik>^O
+	CE:
+	CS:9^LU
+		A:Text^<tab>^O
+	CE:
+CE:
+CS:IntfaceGroup^LU
+	A:Prompt^Grupa interfejsu^O
+	CS:INTFACE_GROUP^LU
+	CE:
+CE:
+CS:IntfaceHeader^LU
+	A:Prompt^Interfejs \2013 nag\0142\00F3wek^O
+	CS:BATCHJOBCOMP^LU
+		A:Text^Zadanie migracji :P1 zosta\0142o wykonane.^O
+	CE:
+	CS:BATCHJOBERROR^LU
+		A:Text^Zadanie migracji :P1 zosta\0142o zako\0144czone z b\0142\0119dami. Wi\0119cej informacji mo\017Cna znale\017A\0107 w oknie Historia zada\0144 migracji.^O
+	CE:
+	CS:BCKFILE^LU
+		A:Text^Nazwa pliku kopii zapasowej: :P1^O
+	CE:
+	CS:BCKPATH^LU
+		A:Text^\015Acie\017Cka do pliku kopii zapasowej: :P1^O
+	CE:
+	CS:COPYERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas tworzenia :P1 \2013 :P2^O
+	CE:
+	CS:COPYOK^LU
+		A:Text^Zadanie migracji :P1 zosta\0142o utworzone^O
+	CE:
+	CS:DELFILE^LU
+		A:Text^Plik :P1 zosta\0142 usuni\0119ty^O
+	CE:
+	CS:DEPREC^LU
+		A:Text^Funkcja eksportu podr\0119cznego raportu migracji danych jest zdeprecjonowana. Zamiast tego nale\017Cy u\017Cywa\0107 funkcji Importuj/Eksportuj w funkcji Raportowanie podr\0119czne.^O
+	CE:
+	CS:ERRWHERE^LU
+		A:Text^Domy\015Blne, je\015Bli nieu\017Cywane w kierunku = :P1^O
+	CE:
+	CS:EXECNO^LU
+		A:Text^Nr wykonania :P1^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas eksportowania :P1 \2013 :P2^O
+	CE:
+	CS:EXPTXT1^LU
+		A:Text^Eksportowane zadania migracji:^O
+	CE:
+	CS:EXPTXT2^LU
+		A:Text^Eksportowane grupy migracji:^O
+	CE:
+	CS:EXPTXT3^LU
+		A:Text^Eksportowane listy konwersji:^O
+	CE:
+	CS:EXPTXT4^LU
+		A:Text^Eksportowane wyzwalacze:^O
+	CE:
+	CS:EXPTXT5^LU
+		A:Text^Wyeksportowane pakiety:^O
+	CE:
+	CS:EXPTXT6^LU
+		A:Text^Utworzone pliki:^O
+	CE:
+	CS:EXPTXT7^LU
+		A:Text^Listy konwersji, kt\00F3rych NIE wyeksportowano:^O
+	CE:
+	CS:IMPERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas importowania :P1 \2013 :P2^O
+	CE:
+	CS:IMPTXT1^LU
+		A:Text^Zaimportowane nowe zadania migracji:^O
+	CE:
+	CS:IMPTXT10^LU
+		A:Text^Zadania replikacji, kt\00F3re nale\017Cy uruchomi\0107 ponownie:^O
+	CE:
+	CS:IMPTXT2^LU
+		A:Text^Zaimportowane nowe grupy:^O
+	CE:
+	CS:IMPTXT3^LU
+		A:Text^Zaimportowane listy konwersji:^O
+	CE:
+	CS:IMPTXT4^LU
+		A:Text^Zadania migracji, kt\00F3rych NIE wstawiono:^O
+	CE:
+	CS:IMPTXT5^LU
+		A:Text^Grupy, kt\00F3rych NIE wstawiono:^O
+	CE:
+	CS:IMPTXT6^LU
+		A:Text^Listy konwersji, kt\00F3rych NIE wyeksportowano:^O
+	CE:
+	CS:IMPTXT7^LU
+		A:Text^Zaimportowane i zast\0105pione zadania migracji:^O
+	CE:
+	CS:IMPTXT8^LU
+		A:Text^Zaimportowane i zast\0105pione grupy:^O
+	CE:
+	CS:IMPTXT9^LU
+		A:Text^Zaimportowane i zast\0105pione listy konw.:^O
+	CE:
+	CS:INTFACE_ALLOWED_JOBS^LU
+		CS:DESCRIPTION^LU
+		CE:
+		CS:INTFACE_NAME^LU
+		CE:
+	CE:
+	CS:INTFACE_CHARACTERSET_LOV^LU
+	CE:
+	CS:INTFACE_HEADER^LU
+	CE:
+	CS:INTFACE_REPL_EXPORT_INFO^LU
+	CE:
+	CS:INTFACE_TABLE_NAME_LOV^LU
+	CE:
+	CS:JOBBATERR^LU
+		A:Text^Po\0142\0105czenie odroczone zosta\0142o zako\0144czone niepowodzeniem dla :P1 \0618\2013 :P2^O
+	CE:
+	CS:LISTERR^LU
+		A:Text^Warto\015B\0107 listy nie mo\017Ce zaczyna\0107 si\0119 od \015Brednika^O
+	CE:
+	CS:LONGNAME^LU
+		A:Text^Zadanie o ID :P1 jest zbyt d\0142ugie \2013 nie mo\017Ce przekracza\0107 24 znak\00F3w^O
+	CE:
+	CS:MOVPATH^LU
+		A:Text^\015Acie\017Cka przeniesienia pliku: :P1^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^U\017Cywano :P1 godz. i :P2 min.^O
+	CE:
+	CS:NAMEERR^LU
+		A:Text^Gdy typ = :P1, nazwa mo\017Ce mie\0107 wi\0119cej ni\017C :P2 znak\00F3w (:P3)^O
+	CE:
+	CS:NOCOLUMN^LU
+		A:Text^Brak kolumn z pliku w zadaniu^O
+	CE:
+	CS:NOFILE_ERROR^LU
+		A:Text^Nie mo\017Cna u\017Cy\0107 lokalizacji pliku ":P1" do zada\0144 migracji, w kt\00F3rych Kierunek ma warto\015B\0107 ":P2" lub ":P3".^O
+	CE:
+	CS:NOMAN^LU
+		A:Text^Podczas uruchamiania trybie r\0119cznym nale\017Cy okre\015Bli\0107 klauzul\0119 WHERE dotycz\0105c\0105 g\0142\00F3wnego widoku w strukturze^O
+	CE:
+	CS:NOPRIV^LU
+		A:Text^Nie masz (jako u\017Cytkownik :P1) uprawnie\0144 do tworzenia nowych zada\0144 migracji danych^O
+	CE:
+	CS:NOREPL^LU
+		A:Text^Nie mo\017Cna uruchomi\0107 :P1 w trybie wsadowym. Nie w\0142\0105czono wyzwalaczy^O
+	CE:
+	CS:NOTRIG^LU
+		A:Text^Wygenerowano wyzwalacze. Nie mo\017Cna zmieni\0107 trybu na :P1^O
+	CE:
+	CS:NOWHERE^LU
+		A:Text^Klauzul\0119 WHERE nale\017Cy wprowadzi\0107 w zadaniach replikacji w trybie r\0119cznym^O
+	CE:
+	CS:QUICKERR^LU
+		A:Text^Nazw\0119 procedury :P1 mo\017Cna stosowa\0107 wy\0142\0105cznie z nazw\0105 widoku QUICK_REPORT^O
+	CE:
+	CS:RANFILE^LU
+		A:Text^Zmiana nazwy pliku: :P1^O
+	CE:
+	CS:RENPATH^LU
+		A:Text^Zmie\0144 \015Bcie\017Ck\0119 pliku: :P1^O
+	CE:
+	CS:SELECTOK^LU
+		A:Text^Wybierz polecenie OK, przeanalizowane i wykonane w 1 wierszu^O
+	CE:
+	CS:SELLENGTH^LU
+		A:Text^D\0142ugo\015B\0107 polecenia: :P1 znak\00F3w^O
+	CE:
+	CS:SERVOK^LU
+		A:Text^Zadanie bazy danych :P1 zosta\0142o zaplanowanie do zadania migracji :P2.^O
+	CE:
+	CS:STARTBATERR^LU
+		A:Text^Nie mo\017Cna uruchomi\0107 :P1 \2013 :P2^O
+	CE:
+	CS:STARTJOBERR^LU
+		A:Text^Nie mo\017Cna uruchomi\0107 :P1 \2013 :P2^O
+	CE:
+	CS:STARTOK^LU
+		A:Text^Zadanie migracji :P1 zosta\0142o rozpocz\0119te w tle^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Godzina zako\0144czenia \2013 :P1 :P2^O
+	CE:
+	CS:TRIGDEL^LU
+		A:Text^Przed usuni\0119ciem tego zadania nale\017Cy usun\0105\0107 wyzwalacze^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^Warto\015B\0107 od :P1 nie mo\017Ce by\0107 cz\0119\015Bci\0105 listy warto\015Bci^O
+	CE:
+	CS:WHENERR^LU
+		A:Text^Polecenie WHEN wyzwalacza nale\017Cy przenie\015B\0107 z kolumny :P1 do :P2^O
+	CE:
+	CS:WILDERR^LU
+		A:Text^Znaki uniwersalne w nazwach pliku mo\017Cna stosowa\0107 wy\0142\0105cznie podczas eksportowania danych do plik\00F3w serwera^O
+	CE:
+	CS:WRONGCOL^LU
+		A:Text^Kolumna :P1 nie istnieje w zadaniu :P2^O
+	CE:
+	CS:WRONGDIR^LU
+		A:Text^Regu\0142a SYNCDETAILS mo\017Ce by\0107 stosowana wy\0142\0105cznie podczas odczytu plik\00F3w^O
+	CE:
+CE:
+CS:IntfaceJobDetail^LU
+	A:Prompt^Interfejs \2013 szczeg\00F3\0142y zadania^O
+	CS:CLIENTCLEAN^LU
+		A:Text^Regu\0142a CLEANUP z warto\015Bci\0105 BEFORE nie jest dozwolona w przypadku pliku klienta^O
+	CE:
+	CS:CLOSEFILERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas zamykania pliku :P1^O
+	CE:
+	CS:CLOSEJOBERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas zamykania zadania :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Po\0142\0105czone zadanie :P1 zawiera linie b\0142\0119du^O
+	CE:
+	CS:CONNJOBERR^LU
+		A:Text^Nie mo\017Cna uruchomi\0107 zadania. :P1^O
+	CE:
+	CS:EMPTYFILE^LU
+		A:Text^Plik :P1 w :P2 jest pusty, zadanie nie zosta\0142o uruchomione^O
+	CE:
+	CS:HISTERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas tworzenia historii :P1^O
+	CE:
+	CS:INITJOBERR^LU
+		A:Text^Nie powiod\0142o si\0119 uruchomienie zadania :P1^O
+	CE:
+	CS:INTFACE_JOB_DETAIL^LU
+	CE:
+	CS:LOADFILERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas \0142adowania pliku :P1 w :P2^O
+	CE:
+	CS:NOFILE^LU
+		A:Text^Plik :P1 nie istnieje w :P2, zadanie nie zosta\0142o uruchomione^O
+	CE:
+	CS:PREPERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas przygotowywania szczeg\00F3\0142\00F3w :P1^O
+	CE:
+	CS:SERVFILEERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d w obs\0142udze pliku \2013 :P1^O
+	CE:
+	CS:UNPACKEND^LU
+		A:Text^Zako\0144czono wyodr\0119bnienia w zadaniu :P1^O
+	CE:
+	CS:UNPACKERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas odpakowywania ==> :P1^O
+	CE:
+CE:
+CS:IntfaceJobHistDetail^LU
+	A:Prompt^Interfejs \2013 szczeg\00F3\0142y historii zadania^O
+	CS:INTFACE_JOB_HIST_DETAIL^LU
+	CE:
+CE:
+CS:IntfaceJobHistHead^LU
+	A:Prompt^Interfejs \2013 nag\0142\00F3wek historii zadania^O
+	CS:INTFACE_JOB_HIST_HEAD^LU
+	CE:
+CE:
+CS:IntfaceJobStatus^LU
+	A:Prompt^Interfejs \2013 status zadania^O
+	CS:1^LU
+		A:Text^Brak pliku^O
+	CE:
+	CS:2^LU
+		A:Text^Za\0142adowano^O
+	CE:
+	CS:3^LU
+		A:Text^B\0142\0105d linii^O
+	CE:
+	CS:4^LU
+		A:Text^Linia OK^O
+	CE:
+	CS:5^LU
+		A:Text^Zadanie OK^O
+	CE:
+	CS:6^LU
+		A:Text^Wykonywane^O
+	CE:
+	CS:7^LU
+		A:Text^Niepowodzenie zadania^O
+	CE:
+CE:
+CS:IntfaceMethodAction^LU
+	A:Prompt^Interfejs \2013 dzia\0142anie metody^O
+	CS:1^LU
+		A:Text^BeforeLoop^O
+	CE:
+	CS:2^LU
+		A:Text^InLoop^O
+	CE:
+	CS:3^LU
+		A:Text^AfterLoop^O
+	CE:
+	CS:4^LU
+		A:Text^NoExecution^O
+	CE:
+CE:
+CS:IntfaceMethodList^LU
+	A:Prompt^Interfejs \2013 lista metod^O
+	CS:CHKCOUNT^LU
+		A:Text^Liczba sprawdzonych wierszy: :P1^O
+	CE:
+	CS:CLREMAP^LU
+		A:Text^przeniesiono do kolumny BD^O
+	CE:
+	CS:COMMITSEQ^LU
+		A:Text^Wiersze potwierdzone regu\0142\0105 COMMITSEQ: :P1^O
+	CE:
+	CS:CONNERR^LU
+		A:Text^Nie mo\017Cna uruchomi\0107 tego zadania. Po\0142\0105czone zadanie :P1 zawiera b\0142\0119dy.^O
+	CE:
+	CS:CREATEERROR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas tworzenia tabeli :P1 \2013 :P2^O
+	CE:
+	CS:CREATEVIEWERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas tworzenia widoku :P1 \2013 :P2^O
+	CE:
+	CS:CREIND^LU
+		A:Text^Utworzono indeks :P1 w kolumnie :p2^O
+	CE:
+	CS:CRETAB^LU
+		A:Text^Utworzono tabel\0119 :P1 (^O
+	CE:
+	CS:DATEVAL^LU
+		A:Text^Domy\015Blna warto\015B\0107 daty systemowej z PREPARE^O
+	CE:
+	CS:DBREMAP^LU
+		A:Text^Zremapowane z warto\015Bci klienta^O
+	CE:
+	CS:DUPNAME^LU
+		A:Text^Metoda nr :P1 \2013 warto\015B\0107 zadania o ID nie mo\017Ce by\0107 taka sama, jak zadania g\0142\00F3wnego^O
+	CE:
+	CS:EXEOK^LU
+		A:Text^Wykonane bez b\0142\0119du^O
+	CE:
+	CS:GRANTERROR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas nadawania widoku :P1 do u\017Cytkownika systemowego IFS (IFSSYS) \2013 :P2^O
+	CE:
+	CS:HEADMSG^LU
+		A:Text^WYKONYWANIE METODY NR :P1\00A0:^O
+	CE:
+	CS:ILLARGTYPE^LU
+		A:Text^Argument :P1 ma nieprawid\0142owy typ. Dozwolony jest tylko typ danych DATA VARCHAR2 NUMBER^O
+	CE:
+	CS:ILLMETH^LU
+		A:Text^Metoda :P1 jest funkcj\0105. Dozwolone s\0105 jedynie procedury^O
+	CE:
+	CS:INCOMPLETE^LU
+		A:Text^Liczba niekompletnych spowodowanych poleceniem COMMIT lub ROLLBACK w wywo\0142anej metodzie: :P1^O
+	CE:
+	CS:INCOMPLSELECT^LU
+		A:Text^Niekompletne zaznaczenie nie zosta\0142o wykonane \2013 :P1^O
+	CE:
+	CS:INCOMPLTRANS^LU
+		A:Text^Sprawd\017A wynik. By\0107 mo\017Ce cz\0119\015Bciowo potwierdzono transakcje^O
+	CE:
+	CS:INDEXERROR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas tworzenia indeksu :P1 \2013 :P2^O
+	CE:
+	CS:INSTAB^LU
+		A:Text^Wstawianie do tabeli :P1 z wierszami w liczbie :P2^O
+	CE:
+	CS:INTFACE_EXCEL_INPUT_DEFAULT^LU
+	CE:
+	CS:INTFACE_EXCEL_INPUT_FORMAT^LU
+	CE:
+	CS:INTFACE_METHOD_LIST^LU
+	CE:
+	CS:KEEPALL^LU
+		A:Text^Nie mo\017Cna zastosowa\0107 regu\0142y KEEPALL, gdy do :P1 pod\0142\0105czone jest inne zadanie (:P2)^O
+	CE:
+	CS:KEEPERR^LU
+		A:Text^Regu\0142\0119 KEEPERR mo\017Cna zastosowa\0107 tylko wtedy, gdy do :P1 pod\0142\0105czone jest inne zadanie^O
+	CE:
+	CS:MAKEOTHER^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas tworzenia atrybutu i odniesie\0144 \2013 :P1^O
+	CE:
+	CS:MANDDEF^LU
+		A:Text^<BRAK OBOWI\0104ZKOWEJ WARTO\015ACI DOMY\015ALNEJ>^O
+	CE:
+	CS:METHCHK^LU
+		A:Text^:P1 :P2 z opcj\0105 CHECK^O
+	CE:
+	CS:METHFAILED^LU
+		A:Text^, b\0142\0119dy : :P1^O
+	CE:
+	CS:METHINS^LU
+		A:Text^Liczba nowych rekord\00F3w: :P1^O
+	CE:
+	CS:METHNAME^LU
+		A:Text^:P1 :P2^O
+	CE:
+	CS:METHPRC^LU
+		A:Text^Liczba przetwarzanych wierszy: :P1^O
+	CE:
+	CS:METHUPD^LU
+		A:Text^Liczba zaktualizowanych rekord\00F3w: :P1^O
+	CE:
+	CS:MSGAVG^LU
+		A:Text^\015Arednia liczba wierszy :P1 na minut\0119^O
+	CE:
+	CS:MSGCOMMIT^LU
+		A:Text^Liczba potwierdzonych wierszy: :P1^O
+	CE:
+	CS:MSGCOUNT^LU
+		A:Text^Liczba wybranych rekord\00F3w: :P1^O
+	CE:
+	CS:MSGERR^LU
+		A:Text^Liczba wierszy zwracaj\0105cych b\0142\0105d: :P1^O
+	CE:
+	CS:MSGLAPSE^LU
+		A:Text^U\017Cywano :P1 godz. i :P2 min.^O
+	CE:
+	CS:NONAME^LU
+		A:Text^Nie znaleziono warto\015Bci ID zadania w wierszu atrybutu dotycz\0105cego metody nr :P1^O
+	CE:
+	CS:NONBASEVIEW^LU
+		A:Text^Pr\00F3ba zidentyfikowania standardowych metod widoku ":P1\201D podczas generowania listy metod. [Nazwa widoku] musi by\0107 widokiem bazowym jednostki logicznej IFS.^O
+	CE:
+	CS:NOOBJID^LU
+		A:Text^OBJID nie znajduje si\0119 w zaznaczeniu, ale regu\0142a ADDOBJID jest aktywna^O
+	CE:
+	CS:NORESTART^LU
+		A:Text^Nie mo\017Cna uruchomi\0107 ponownie \2013 :P1 nie zawiera ID wiersza^O
+	CE:
+	CS:NOSELECT^LU
+		A:Text^Nie okre\015Blono zaznaczenia^O
+	CE:
+	CS:NOSTART^LU
+		A:Text^:P1 zawiera linie :P2 b\0142\0119du i nie mo\017Ce zosta\0107 uruchomione^O
+	CE:
+	CS:NOTEDEF^LU
+		A:Text^Okre\015Bl, czy ma by\0107 stosowana warto\015B\0107 domy\015Blna. Mo\017Cna usun\0105\0107 parametry opcjonalne^O
+	CE:
+	CS:NOTINLOOP^LU
+		A:Text^Procedur\0119 :P1 mo\017Cna uruchomi\0107 wewn\0105trz p\0119tli^O
+	CE:
+	CS:NOTOUTLOOP^LU
+		A:Text^Nie mo\017Cna uruchomi\0107 procedury :P1 wewn\0105trz p\0119tli^O
+	CE:
+	CS:NOVIEW^LU
+		A:Text^Okre\015Bl parametr view_name tylko wewn\0105trz p\0119tli^O
+	CE:
+	CS:OPTDEF^LU
+		A:Text^<BRAK OPCJONALNEJ WARTO\015ACI DOMY\015ALNEJ>^O
+	CE:
+	CS:PREPVAL^LU
+		A:Text^Domy\015Blna warto\015B\0107 :P1 z PREPARE^O
+	CE:
+	CS:RENAMTAB^LU
+		A:Text^Zmieniono tabel\0119 :P1 zawieraj\0105c\0105 :P2 rekord\00F3w na :P3^O
+	CE:
+	CS:RESTART^LU
+		A:Text^Uruchom ponownie wstawianie do tabeli :P1^O
+	CE:
+	CS:SELECTSTMT^LU
+		A:Text^B\0142\0105d podczas wybierania :P1 \2013 :P2^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^Nazwa kolumny :P1 zawiera niejednoznaczn\0105 definicj\0119^O
+	CE:
+	CS:TIMESTAMP1^LU
+		A:Text^Godzina rozpocz\0119cia \2013 :P1 :P2^O
+	CE:
+CE:
+CS:IntfaceMethodListAttrib^LU
+	A:Prompt^Interfejs \2013 atryb. listy metod^O
+	CS:INTFACE_METHOD_LIST_ATTRIB^LU
+	CE:
+	CS:WRONGSEQ1^LU
+		A:Text^EXECUTE_SEQ :P1 nie istnieje^O
+	CE:
+	CS:WRONGSEQ2^LU
+		A:Text^Polecenie EXECUTE_SEQ, do kt\00F3rego wyst\0119puje odniesienie, musi zosta\0107 wykonane przed tym^O
+	CE:
+CE:
+CS:IntfaceMode^LU
+	A:Prompt^Interfejs \2013 tryb^O
+	CS:1^LU
+		A:Text^R\0119czne^O
+	CE:
+	CS:2^LU
+		A:Text^Automatycznie^O
+	CE:
+	CS:3^LU
+		A:Text^Paczka^O
+	CE:
+CE:
+CS:IntfacePrUser^LU
+	A:Prompt^Interfejs \2013 u\017Cytkownik pr.^O
+	CS:INTFACE_PR_USER^LU
+	CE:
+CE:
+CS:IntfacePrefixOption^LU
+	A:Prompt^Opcja prefiksu interfejsu^O
+	CS:1^LU
+		A:Text^ViewName^O
+	CE:
+	CS:2^LU
+		A:Text^ViewNameUnique^O
+	CE:
+	CS:3^LU
+		A:Text^NoPrefix^O
+	CE:
+CE:
+CS:IntfacePrivilege^LU
+	A:Prompt^Interfejs \2013 przywileje^O
+	CS:1^LU
+		A:Text^NoUpdateAllowed^O
+	CE:
+	CS:2^LU
+		A:Text^UpdateAllowed^O
+	CE:
+CE:
+CS:IntfaceProcedures^LU
+	A:Prompt^Procedury interfejsu^O
+	CS:CHECK_BY_METHOD_NEW^LU
+		A:Text^Sprawd\017A wiersze z pliku zgodnie z logik\0105 biznesow\0105^O
+	CE:
+	CS:CREATE_OUTPUT_FILE^LU
+		A:Text^Zapisywanie danych do pliku^O
+	CE:
+	CS:CREATE_TABLE_FROM_FI^LU
+		A:Text^Utw\00F3rz tabel\0119 z pliku^O
+	CE:
+	CS:EXCEL_MIGRATION^LU
+		A:Text^Migracja danych z pliku Excel^O
+	CE:
+	CS:FNDMIG_EXPORT^LU
+		A:Text^Eksportuj definicje migracji danych do pliku^O
+	CE:
+	CS:FNDMIG_IMPORT^LU
+		A:Text^Importuj definicje migracji danych z pliku^O
+	CE:
+	CS:INSERT_BY_METHOD_NEW^LU
+		A:Text^Wstaw wiersze z pliku^O
+	CE:
+	CS:INSERT_OR_UPDATE^LU
+		A:Text^Wstaw lub aktualizuj wiersze z pliku^O
+	CE:
+	CS:INTFACE_PROCEDURES^LU
+	CE:
+	CS:INTFACE_PROC_LOV_EXCL_REPL^LU
+	CE:
+	CS:INTFACE_PROC_LOV_INCL_REPL^LU
+	CE:
+	CS:MIGRATE_SOURCE_DATA^LU
+		A:Text^Migracja danych z tabeli/widoku^O
+	CE:
+	CS:REPLICATION^LU
+		A:Text^Replikacja^O
+	CE:
+	CS:REPL_DATA_OUT^LU
+		A:Text^Replikacja struktur danych^O
+	CE:
+CE:
+CS:IntfaceQuickReportUtil^LU
+	CS:DEPREC^LU
+		A:Text^Ta funkcja jest zdeprecjonowana. Zamiast tego nale\017Cy u\017Cywa\0107 funkcji Importuj/Eksportuj w funkcji Raportowanie podr\0119czne.^O
+	CE:
+	CS:EXPERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas eksportowania :P1 \2013 :P2^O
+	CE:
+	CS:EXPOK^LU
+		A:Text^Wyeksportowane raporty :P1^O
+	CE:
+CE:
+CS:IntfaceReplElemType^LU
+	A:Prompt^Interfejs \2013 typ elem. repl.^O
+	CS:AGGREGATE^LU
+		A:Text^Zsumuj^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Macierz^O
+	CE:
+CE:
+CS:IntfaceReplMaintUtil^LU
+	CS:EXECERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d \2013 :P1^O
+	CE:
+	CS:INTFACE_REPL_DB_OBJECTS^LU
+	CE:
+	CS:INTFACE_SERVER_PROCESSES^LU
+	CE:
+	CS:LOGOK^LU
+		A:Text^Pomy\015Blnie przetworzono tabel\0119 dziennik\00F3w z liczb\0105 wierszy: :P1 na potrzeby :P2^O
+	CE:
+	CS:NOUPDATE^LU
+		A:Text^Nie mo\017Cna aktualizowa\0107 :P1, poniewa\017C trwa replikacja. Wszystkie wyzwalacze s\0105 w\0142\0105czone.^O
+	CE:
+	CS:REPLFAIL^LU
+		A:Text^Zadanie replikacji :P1 zosta\0142o zako\0144czone niepowodzeniem \2013 :P2^O
+	CE:
+	CS:REPLOK^LU
+		A:Text^Pomy\015Blnie przetworzono procedur\0119 :P1^O
+	CE:
+CE:
+CS:IntfaceReplMessType^LU
+	A:Prompt^Interfejs \2013 typ komunikatu repl.^O
+	CS:BIZAPI^LU
+		A:Text^BizApi^O
+	CE:
+	CS:TRACE^LU
+		A:Text^DisplayTrace^O
+	CE:
+CE:
+CS:IntfaceReplOutLog^LU
+	A:Prompt^Interfejs \2013 dziennik wyj. repl.^O
+	CS:INTFACE_REPL_OUT_LOG^LU
+	CE:
+CE:
+CS:IntfaceReplPackageUtil^LU
+	CS:COMPERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas kompilowania pakietu :P1^O
+	CE:
+	CS:ERR1PAR^LU
+		A:Text^Pojedyncze wiersze nie powinny zawiera\0107 warto\015Bci w kolumnie Sekwencja nadrz\0119dna^O
+	CE:
+	CS:ERR2PAR^LU
+		A:Text^Jeden rz\0105d powinien by\0107 nadrz\0119dny, tj. nie zawiera\0107 warto\015Bci w kolumnie Sekwencja nadrz\0119dna^O
+	CE:
+	CS:ERRLONG^LU
+		A:Text^\0179r\00F3d\0142o jest zbyt d\0142ugie, nie mo\017Cna zapisa\0107 do Intface_Job_Detail \2013 :P1^O
+	CE:
+	CS:KEYERR^LU
+		A:Text^Klucz nadrz\0119dny :P1 nie istnieje w strukturach przed :P2^O
+	CE:
+	CS:LONGSRC^LU
+		A:Text^\0179r\00F3d\0142o jest zbyt d\0142ugie. Wyeksportuj plik z okna Wykonywanie zadania i wdr\00F3\017C go z okna Admin^O
+	CE:
+	CS:NODATA^LU
+		A:Text^Przynajmniej jeden wiersz powinien by\0107 oznaczony jako Przy wstawieniu lub Przy aktualizacji^O
+	CE:
+	CS:OTHERS^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas kompilowania pakietu \2013 :P1^O
+	CE:
+CE:
+CS:IntfaceReplRecType^LU
+	A:Prompt^Interfejs \2013 typ rek. repl.^O
+	CS:AGGREGATE^LU
+		A:Text^Zsumuj^O
+	CE:
+	CS:ARRAY^LU
+		A:Text^Macierz^O
+	CE:
+CE:
+CS:IntfaceReplStructCols^LU
+	A:Prompt^Interfejs \2013 kolumny strukt. repl.^O
+	CS:INTFACE_REPL_STRUCT_COLS^LU
+	CE:
+CE:
+CS:IntfaceReplStructure^LU
+	A:Prompt^Interfejs \2013 struktura repl.^O
+	CS:ERRSEQ^LU
+		A:Text^Sekwencja nadrz\0119dna nie mo\017Ce by\0107 r\00F3wna sekwencji^O
+	CE:
+	CS:INSERR^LU
+		A:Text^Wszystkie wiersze pocz\0105wszy od punktu standardowego musz\0105 zawiera\0107 zaznaczon\0105 kolumn\0119 OnInsert i zdefiniowan\0105 kolumn\0105 TriggerTable^O
+	CE:
+	CS:INTFACE_REPL_PARENT_LOV^LU
+	CE:
+	CS:INTFACE_REPL_STRUCTURE^LU
+	CE:
+	CS:INTFACE_REPL_TABLE_LOV^LU
+	CE:
+	CS:MULTIPLESTART^LU
+		A:Text^Mo\017Cna zdefiniowa\0107 tylko jeden punkt pocz\0105tkowy zadania^O
+	CE:
+	CS:NONUNIQUE^LU
+		A:Text^Nie zdefiniowano unikatowego elementu g\0142\00F3wnego dla :P1. Warto\015B\0107 ParentSeq r\00F3wna NULL powinna istnie\0107 tylko w jednej pozycji.^O
+	CE:
+	CS:NOSEQ^LU
+		A:Text^Nie mo\017Cna u\017Cy\0107 tej sekwencji nadrz\0119dnej. Brak linii w sekwencji :P1^O
+	CE:
+	CS:VALUEERR^LU
+		A:Text^:P1 = :P2, warto\015B\0107 nie mo\017Ce by\0107 wi\0119ksza ni\017C 99^O
+	CE:
+CE:
+CS:IntfaceReplTriggersUtil^LU
+	CS:ALTERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas modyfikowania wyzwalacza :P1 \2013 :P2^O
+	CE:
+	CS:COMPERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d do wyzwalacza :P1^O
+	CE:
+	CS:DROPERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas przerywania wyzwalacza :P1 \2013 :P2^O
+	CE:
+	CS:NODEF^LU
+		A:Text^Nale\017Cy wprowadzi\0107 nazw\0119 TableName oraz zaznaczy\0107 OnInsert lub OnUpdate przynajmniej przy jednej pozycji struktury^O
+	CE:
+CE:
+CS:IntfaceReplicCriteria^LU
+	A:Prompt^Interfejs \2013 kryteria replik.^O
+	CS:1^LU
+		A:Text^Kontrakt^O
+	CE:
+	CS:2^LU
+		A:Text^Firma^O
+	CE:
+CE:
+CS:IntfaceReplicationLog^LU
+	A:Prompt^Dziennik replikacji interfejsu^O
+	CS:INTFACE_REPLICATION_LOG^LU
+	CE:
+CE:
+CS:IntfaceRuleFlag^LU
+	A:Prompt^Interfejs \2013 flaga regu\0142y^O
+	CS:1^LU
+		A:Text^Aktywny^O
+	CE:
+	CS:2^LU
+		A:Text^Nieaktywne^O
+	CE:
+CE:
+CS:IntfaceRuleValue^LU
+	A:Prompt^Interfejs \2013 warto\015B\0107 regu\0142y^O
+	CS:1^LU
+		A:Text^Nie zdefiniowano warto\015Bci^O
+	CE:
+	CS:2^LU
+		A:Text^Liczba obowi\0105zkowa^O
+	CE:
+	CS:3^LU
+		A:Text^Ci\0105g obowi\0105zkowy^O
+	CE:
+	CS:4^LU
+		A:Text^Data obowi\0105zkowa^O
+	CE:
+	CS:5^LU
+		A:Text^Opcjonalne^O
+	CE:
+CE:
+CS:IntfaceRules^LU
+	A:Prompt^Interfejs \2013 regu\0142y^O
+	CS:CHECKRULEERROR^LU
+		A:Text^Regu\0142a :P1 nie jest prawid\0142owa dla procedury o nazwie :P2.^O
+	CE:
+	CS:ERRCONN^LU
+		A:Text^Zadanie :P1 jest ju\017C powi\0105zane z :P2^O
+	CE:
+	CS:ERRCONN2^LU
+		A:Text^Zadanie :P1 musi u\017Cywa\0107 procedury CREATE_TABLE_FROM_FILE^O
+	CE:
+	CS:ERRORVAL1^LU
+		A:Text^Prawid\0142owe warto\015Bci to KEEPALL, KEEPERR lub NOBACKUP^O
+	CE:
+	CS:ERRORVAL2^LU
+		A:Text^Prawid\0142owe warto\015Bci to INSERT lub UPDATE^O
+	CE:
+	CS:ERRORVAL3^LU
+		A:Text^Prawid\0142owe warto\015Bci to BEFORE lub AFTER^O
+	CE:
+	CS:FILERULEERR^LU
+		A:Text^Regu\0142a :P1 nie mo\017Ce by\0107 aktywna, dop\00F3ki :P2 pozostaje aktywna^O
+	CE:
+	CS:INTFACE_RULES^LU
+	CE:
+	CS:INTFACE_RULES_LOV^LU
+	CE:
+	CS:REPLUSR1^LU
+		A:Text^Ta regu\0142a s\0142u\017Cy jedynie do zada\0144 replikacji^O
+	CE:
+	CS:REPLUSR2^LU
+		A:Text^Nie zdefiniowano alternatywnego u\017Cytkownika w aplikacji Admin.exe^O
+	CE:
+	CS:REPLUSR3^LU
+		A:Text^Nie mo\017Cna zdefiniowa\0107 alternatywnego u\017Cytkownika, kt\00F3ry by\0142by r\00F3wnowa\017Cny u\017Cytkownikowi Appowner w funkcji Parametry systemowe w aplikacji Admin.exe^O
+	CE:
+CE:
+CS:IntfaceServerFile^LU
+	A:Prompt^Plik serwera interfejsu^O
+	CS:CNTERR^LU
+		A:Text^Wyst\0105pi\0142 b\0142\0105d podczas zliczania rekord\00F3w^O
+	CE:
+	CS:CREERR^LU
+		A:Text^Odrzucono niekt\00F3re rekordy. Przejd\017A do okna startowego, a nast\0119pnie sprawd\017A plik dziennika^O
+	CE:
+	CS:INTFACE_SERVER_DIR_LOV^LU
+		CS:NAME^LU
+		CE:
+		CS:PATH^LU
+		CE:
+	CE:
+	CS:INTFACE_SERVER_FILES_LOV^LU
+		CS:FILE_DATE^LU
+		CE:
+		CS:FILE_NAME^LU
+		CE:
+		CS:FILE_SIZE^LU
+		CE:
+	CE:
+	CS:NOFILE^LU
+		A:Text^Plik :P1 nie istnieje w :P2^O
+	CE:
+	CS:NOICTAB^LU
+		A:Text^Tabela :P1 nie istnieje^O
+	CE:
+	CS:NOINS^LU
+		A:Text^Wstawianie do tabeli IC zosta\0142o zako\0144czone niepowodzeniem. Klikni\0119cie prawym przyciskiem myszy pozycji Odpakuj plik w oknie Wykonywanie zada\0144 spowoduje wy\015Bwietlenie b\0142\0119d\00F3w formatowania. :P1^O
+	CE:
+	CS:NOSERV^LU
+		A:Text^Lokalizacja pliku musi mie\0107 warto\015B\0107 :P1, a nie :P2. Zaktualizuj nag\0142\00F3wek zadania^O
+	CE:
+	CS:NOTAB^LU
+		A:Text^Nie stworzono tabeli zewn\0119trznej. :P1^O
+	CE:
+	CS:SYNTAXERROR^LU
+		A:Text^Nazwa kolumny :P1 zawiera niejednoznaczn\0105 definicj\0119^O
+	CE:
+CE:
+CS:IntfaceTableMigrations^LU
+	A:Prompt^Parametry migracji tabeli^O
+	CS:INTFACE_TABLE_MIGRATIONS^LU
+	CE:
+	CS:NOCOL^LU
+		A:Text^Brak kolumn do zaktualizowania^O
+	CE:
+	CS:PROCERR^LU
+		A:Text^B\0142\0105d :P1^O
+	CE:
+	CS:TABERR^LU
+		A:Text^Nie mo\017Cna zaktualizowa\0107: P2.:P1^O
+	CE:
+CE:
+CS:IntfaceUser^LU
+	A:Prompt^Interfejs \2013 u\017Cytkownik^O
+	CS:INTFACE_USER^LU
+	CE:
+CE:
+CS:IntfaceUtil^LU
+	CS:COMPILE_ERRORS^LU
+		A:Text^B\0142\0105d kompilowania dla wyzw. :P1^O
+	CE:
+	CS:UPDERR^LU
+		A:Text^Nie mo\017Cna aktualizowa\0107 innych tabel ni\017C tabele IC^O
+	CE:
+CE:
+CS:IntfaceViews^LU
+	A:Prompt^Interfejs \2013 widoki^O
+	CS:INTFACE_SOURCE_COL_LOV^LU
+	CE:
+	CS:INTFACE_VIEWS^LU
+	CE:
+	CS:INTFACE_VIEWS_COL_INFO^LU
+	CE:
+CE:
+CS:IntfaceXsdUtil^LU
+	CS:XSDCRE^LU
+		A:Text^Utworzono XSD jako plik klienta, liczba linii: :P1^O
+	CE:
+CE:

@@ -1,0 +1,130 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: CompanyFinance
+--  Component:    ACCRUL
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+--  150605  Umdolk  Added Master_Company view, this will be referred from GROCON.
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+COLUMN Reference_Currency IS
+   Flags      = 'KM---'
+   Datatype   = 'STRING'
+   Prompt     = 'Reference Currency'
+   Ref        = 'IsoCurrency';
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+
+@Override
+VIEW Company_Finance IS
+WHERE  EXISTS (SELECT 1 FROM user_finance_auth_pub WHERE company_finance_tab.company = company);
+
+VIEW Company_Finance1 IS
+   Prompt = 'Company finance'
+   Company.Flags = 'PM---'
+   Description.Flags = 'A----'
+   Description.Datatype = 'STRING'
+   Description.Prompt = 'description'
+SELECT company                        company,
+       DECODE(Currency_Code_API.Get_Emu(company,currency_code),'TRUE','EUR',currency_code)
+                                      reference_currency,
+       Iso_Currency_API.Get_Description(DECODE(Currency_Code_API.Get_Emu(company,currency_code),'TRUE','EUR',currency_code))
+                                      description,
+       rowkey                                                                                                              objkey
+FROM   COMPANY_FINANCE_TAB;
+
+VIEW Company_Finance_Auth IS
+   Prompt = 'Company Finance Authorize'
+   Company.Flags = 'K----'
+   Cons_Company.Flags = 'A----'
+   Cons_Company.Prompt = 'Consolidation Company'
+   Description.Datatype = 'STRING(100)/UPPERCASE'
+   Currency_Code.Flags = 'A---L'
+   Valid_From.Flags = 'A----'
+   Consolidation_File.Flags = 'A----'
+SELECT T.company                    company,
+   T.cons_company                   cons_company,
+   Company_api.Get_name(T.Company)  description,
+   T.currency_code                  currency_code,
+   T.valid_from                     valid_from,
+   T.consolidation_file             consolidation_file,
+   Correction_Type_API.Decode(correction_type)
+                                    correction_type,
+   T.correction_type                correction_type_db,
+   T.rowkey                        objkey
+FROM   COMPANY_FINANCE_TAB T, user_finance_auth_pub U
+WHERE  T.company = U.company;
+
+VIEW Company_Finance_Auth1 IS
+   Prompt = 'Company Finance Authorize1'
+   Company.Flags = 'K----'
+SELECT company         company,
+       objkey          objkey
+FROM   user_finance_auth_pub;
+
+VIEW Company_Finance_Adm IS
+   Prompt = 'Company finance'
+   Parallel_Acc_Currency.Datatype = 'STRING'
+   Def_Amount_Method_Db.Datatype = 'STRING(20)'
+   City_Tax_Code.Ref = 'StatutoryFeeNonVAT(company)'
+   State_Tax_Code.Ref = 'StatutoryFeeNonVAT(company)'
+   County_Tax_Code.Ref = 'StatutoryFeeNonVAT(company)'
+   District_Tax_Code.Ref = 'StatutoryFeeNonVAT(company)'
+SELECT T.company                                    company,
+       cons_company                                 cons_company,
+       Company_API.Get_Name(T.company)              description,
+       currency_code                                currency_code,
+       valid_from                                   valid_from,
+       consolidation_file                           consolidation_file,
+       Correction_Type_API.Decode(correction_type)  correction_type,
+       correction_type                              correction_type_db,
+       parallel_acc_currency                        parallel_acc_currency,
+       time_stamp                                   time_stamp,
+       cons_code_part_value                         cons_code_part_value,
+       Accounting_Code_Parts_Api.Get_Codepart_Function_db(cons_company, 'CONSOL')   cons_code_part,
+       to_char(recalculation_date, 'YYYYMMDD')      recalculation_date,
+       level_in_percent                             level_in_percent,
+       level_in_acc_currency                        level_in_acc_currency,
+       Def_Amount_Method_API.Decode(def_amount_method) def_amount_method,
+       def_amount_method                            def_amount_method_db,
+       creation_finished                            creation_finished,
+       city_tax_code                                city_tax_code,
+       state_tax_code                               state_tax_code,
+       county_tax_code                              county_tax_code,
+       district_tax_code                            district_tax_code,
+       Tax_Rounding_Method_API.Decode(tax_rounding_method) tax_rounding_method,
+       tax_rounding_method                                 tax_rounding_method_db,
+       use_vou_no_period                                   use_vou_no_period,
+       T.rowid                                            objid,
+       ltrim(lpad(to_char(rowversion,'YYYYMMDDHH24MISS'),2000))                                         objversion,
+       rowkey                                             objkey
+FROM   COMPANY_FINANCE_TAB T
+WHERE  EXISTS (SELECT 1 
+               FROM user_profile_entry U
+               WHERE T.company = U.entry_value
+               AND U.entry_code = 'COMPANY')
+OR     Security_SYS.Has_System_Privilege('ADMINISTRATOR') = 'TRUE';
+
+VIEW MASTER_COMPANY IS
+   Prompt = 'Master Company'
+   Master_Company.DataType = 'STRING(20)'   
+   Master_Company.Flags = 'K----'
+SELECT a.company             master_company, 
+       b.name                description,
+       a.currency_code       currency_code,
+       a.rowkey              objkey
+FROM  COMPANY_FINANCE_TAB a, COMPANY_TAB b
+WHERE a.company = b.company 
+AND   b.master_company = 'TRUE';
+   

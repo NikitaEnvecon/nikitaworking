@@ -1,0 +1,103 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: IntfaceViews
+--  Component:    FNDMIG
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Core;
+
+-------------------- COMMON COLUMN DEFINITIONS ------------------------------
+
+-------------------- PUBLIC VIEW DEFINITIONS --------------------------------
+
+
+-------------------- PRIVATE VIEW DEFINITIONS -------------------------------
+
+VIEW Intface_Views IS
+   Prompt = 'Intface Views'
+   Refbase = 'VIEW'
+   View_Name.Flags = 'KMI-L'
+   View_Name.Datatype = 'STRING(100)/UPPERCASE'
+   View_Name.Prompt = 'View Name'
+SELECT view_name                       view_name
+FROM   dba_views, dual
+WHERE  owner = Fnd_Session_API.Get_App_Owner;
+
+VIEW Intface_Views_Col_Info IS
+   Prompt = 'Ifsapp View Col Info'
+   View_Name.Flags = 'PMI-L'
+   View_Name.Datatype = 'STRING(30)'
+   View_Name.Prompt = 'View Name'
+   Column_Name.Flags = 'KMI--'
+   Column_Name.Datatype = 'STRING(30)'
+   Column_Name.Prompt = 'Column Name'
+   Data_Type.Flags = 'AMI--'
+   Data_Type.Datatype = 'STRING(9)'
+   Data_Type.Prompt = 'Data Type'
+   Data_Length.Flags = 'AMI--'
+   Data_Length.Datatype = 'NUMBER'
+   Data_Length.Prompt = 'Data Length'
+   Data_Precision.Flags = 'AMI--'
+   Data_Precision.Datatype = 'NUMBER'
+   Data_Precision.Prompt = 'Data Precision'
+   Data_Scale.Flags = 'AMI--'
+   Data_Scale.Datatype = 'NUMBER'
+   Data_Scale.Prompt = 'Data Scale'
+   Nullable.Flags = 'AMI--'
+   Nullable.Datatype = 'STRING(1)'
+   Nullable.Prompt = 'Nullable'
+SELECT table_name                                            view_name,
+       column_name                                           column_name,
+       data_type                                             data_type,
+       decode(data_type,'VARCHAR2',char_length,data_length)  data_length,
+       data_precision                                        data_precision,
+       data_scale                                            data_scale,
+       column_id                                             column_id,
+       nullable                                              nullable
+FROM   dba_tab_columns a, dba_views b
+WHERE  table_name = view_name
+AND    a.owner    = b.owner
+AND    a.owner    = Fnd_Session_API.Get_App_Owner;
+
+VIEW Intface_Source_Col_Lov IS
+   Prompt = 'Source Col LOV'
+   Source_Name.Flags = 'KMI--'
+   Source_Name.Datatype = 'STRING(30)'
+   Source_Name.Prompt = 'Source Name'
+   Source_Owner.Flags = 'KMI--'
+   Source_Owner.Datatype = 'STRING(30)'
+   Source_Owner.Prompt = 'Source Owner'
+   Column_Name.Flags = 'KMI-L'
+   Column_Name.Datatype = 'STRING(30)'
+   Column_Name.Prompt = 'Column Name'
+   Data_Type.Flags = 'AMI-L'
+   Data_Type.Datatype = 'STRING(9)'
+   Data_Type.Prompt = 'Data Type'
+   Data_Length.Flags = 'AMI-L'
+   Data_Length.Datatype = 'NUMBER'
+   Data_Length.Prompt = 'Data Length'
+   Data_Precision.Flags = 'AMI--'
+   Data_Precision.Datatype = 'NUMBER'
+   Data_Precision.Prompt = 'Data Precision'
+   Data_Scale.Flags = 'AMI--'
+   Data_Scale.Datatype = 'NUMBER'
+   Data_Scale.Prompt = 'Data Scale'
+   Nullable.Flags = 'AMI--'
+   Nullable.Datatype = 'STRING(1)'
+   Nullable.Prompt = 'Nullable'
+SELECT table_name                                            source_name,
+       owner                                                 source_owner,
+       column_name                                           column_name,
+       data_type                                             data_type,
+       decode(data_type,'VARCHAR2',char_length,data_length)  data_length,
+       data_precision                                        data_precision,
+       data_scale                                            data_scale,
+       column_id                                             column_id,
+       nullable                                              nullable
+FROM   all_tab_columns, dual;
+

@@ -1,0 +1,272 @@
+-----------------------------------------------------------------------------
+--
+--  Module:FNDMIG
+--
+--  Purpose : Insert basic data in Intface_Procedures according
+--            to procedures available from LU IntfaceUtil.
+--
+--  Date    Sign   History
+--  ------  ----   -----------------------------------------------------------
+--  080402  JHMASE Bug #72850 - Removed MAKE_MESSAGE_FROM_ATTR
+--  040507  TRLY   Bug #44483 - Replication of Object structures
+--  040407  JHMASE Bug #43996 - Max Open Cursors failure on install
+--  040210  JHMASE Bug #42618 - Corrections
+--  030830  TRLY   Changed INTFACE_EXPORT/IMPOORT to FNDMIG_EXPORT/IMPORT
+--  030708  TRLY   Prepared for new module FNDMIG
+--  020220  TRLY   Patch1 for v.3.0.0 - Removed procedure CHECK_BY_METHOD_NEW
+--  010809  TRLY   Created
+-----------------------------------------------------------------------------
+
+PROMPT Insert Procedures
+
+SET SERVEROUTPUT ON
+DECLARE
+   proc_exists_ BOOLEAN;
+--   CURSOR get_proc IS
+--      SELECT DISTINCT object_name object_name,
+--              decode(instr(object_name,'CREATE_OUTPUT_FILE'),0,                                -- No 1
+--                decode(instr(object_name,'INSERT_BY_METHOD_NEW'),0,                           -- No 2
+--                  decode(instr(object_name,'INSERT_OR_UPDATE'),0,                            -- No 3
+--                    decode(instr(object_name,'CREATE_TABLE_FROM_FILE'),0,                   -- No 4
+--                      decode(instr(object_name,'MIGRATE_SOURCE_DATA'),0,                   -- No 5
+--                        decode(instr(object_name,'FNDMIG_EXPORT'),0,                      -- No 6
+--                          decode(instr(object_name,'FNDMIG_IMPORT'),0,                   -- No 7
+--                            decode(instr(object_name,'CHECK_BY_METHOD_NEW'),0,          -- No 8
+--                              decode(instr(object_name,'REPLICATION'),0,               -- No 9
+--                                decode(instr(object_name,'REPLIC_DATA_OUT'),0,        -- No 10
+--                                  decode(instr(object_name,'QUICK_REPORTS_OUT'),0,   -- No 11
+--                                    lower(object_name),                             -- Not an Intface Standard procedure
+--                                  'Export QuickReports'),                            -- No 11
+--                                'Replicate Data Structures'),                         -- No 10
+--                              'Replication'),                                          -- No 9
+--                            'Insert rows from file'),                                   -- No 8
+--                          'Import Migration definitions from file'),                     -- No 7
+--                        'Export Migration definitions to file'),                          -- No 6
+--                      'Data migration from table/view'),                                   -- No 5
+--                    'Create table from file'),                                              -- No 4
+--                  'Insert or Update rows from file'),                                        -- No 3
+--                'Insert rows from file'),                                                     -- No 2
+--              'Write data to file') description,                                               -- No 1
+--          -- Find direction. By default, jobs that write to file should have OUT as part of procedure name
+--          decode(object_name,'REPLIC_DATA_OUT',
+--             '5',             -- ReplicStructure
+--               'FNDMIG_EXPORT',
+--             '2',             -- Direction Out
+--             decode(instr(object_name,'OUT'),0,
+--                decode(instr(object_name,'MIGRATE_SOURCE_DATA'),0,
+--                  decode(instr(object_name,'REPLICATION'),0,
+--                     '1',     -- Default direction In
+--                   '4'),      -- Replication
+--                 '4'),        -- Data migration
+--             '2')) direction  -- Direction Out
+--   FROM user_arguments
+--   WHERE package_name = 'INTFACE_UTIL_API'
+--   AND object_name NOT IN ('INIT','MAKE_MESSAGE_FROM_ATTR')
+--   AND substr(object_name,length(object_name),1) != '_';
+
+   PROCEDURE Insert_Row_ (
+      procedure_name_ IN VARCHAR2, 
+      description_    IN VARCHAR2, 
+      direction_      IN VARCHAR2 )
+   IS
+   BEGIN
+      INSERT INTO intface_procedures_tab (procedure_name, description, direction, rowversion)
+      VALUES (procedure_name_, description_, direction_, SYSDATE);
+   EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+         NULL;
+      WHEN OTHERS THEN
+         dbms_output.put_line(sqlerrm);
+   END Insert_Row_;
+BEGIN
+--   FOR rec_ IN get_proc LOOP
+--      BEGIN
+--         proc_exists_ := TRUE;
+--         Intface_Procedures_API.Exist(rec_.object_name);
+--      EXCEPTION
+--         WHEN OTHERS THEN
+--            proc_exists_ := FALSE;
+--      END;
+--      IF proc_exists_ THEN
+--        NULL;
+--      ELSE
+--        INSERT INTO intface_procedures_tab (
+--          PROCEDURE_NAME, DESCRIPTION, DIRECTION, ROWVERSION )
+--        VALUES (
+--          rec_.object_name, rec_.description, rec_.direction, sysdate );
+--      END IF;
+--   END LOOP;
+   Insert_Row_('CHECK_BY_METHOD_NEW','Insert rows from file','1');
+   Insert_Row_('CREATE_OUTPUT_FILE','Write data to file','2');
+   Insert_Row_('CREATE_TABLE_FROM_FILE','Create table from file','1');
+   Insert_Row_('FNDMIG_EXPORT','Export all Migration definitions to file','2');
+   Insert_Row_('FNDMIG_IMPORT','Import all Migration definitions from file','1');
+   Insert_Row_('INSERT_BY_METHOD_NEW','Insert rows from file','1');
+   Insert_Row_('INSERT_OR_UPDATE','Insert or update rows from file','1');
+   Insert_Row_('MIGRATE_SOURCE_DATA','Data migration from table/view','4');
+   Insert_Row_('REPLICATION','Replication','4');
+   Insert_Row_('REPLIC_DATA_OUT','Replicate Data Structures','5');
+   Insert_Row_('EXCEL_MIGRATION','Data Migration from Excel file','6');
+   BEGIN
+      DELETE FROM intface_procedures_tab
+      WHERE procedure_name IN ('MAKE_MESSAGE_FROM_ATTR','UPDATE_ALL_IC_ROWS','UPDATE_ROWS_FROM_CONV_LIST');
+   EXCEPTION
+      WHEN OTHERS THEN
+         NULL;
+   END;
+END;
+/
+COMMIT;
+
+PROMPT Upgrade AttribList
+
+DECLARE
+   CURSOR intfaces IS
+      SELECT intface_name, procedure_name
+      FROM   intface_header_tab
+      WHERE  Intface_Direction_API.Encode(Intface_Procedures_API.Get_Direction(procedure_name)) = '4'
+      AND    intface_name IN (SELECT intface_name
+                           FROM intface_method_list_tab
+                           WHERE convert_attr is not null
+                           MINUS
+                           SELECT intface_name
+                           FROM intface_method_list_attrib_tab);
+
+   PROCEDURE Convert_Old_To_New (intface_name_ IN VARCHAR2) IS
+      CURSOR c1 (name_ VARCHAR2) IS
+         SELECT *
+         FROM   intface_method_list_tab
+         WHERE  intface_name = name_
+         ORDER BY execute_seq;
+
+      first_row_           intface_method_list_tab%ROWTYPE;
+      second_row_          intface_method_list_tab%ROWTYPE;
+      continue_            BOOLEAN := TRUE;
+      first_package_name_  VARCHAR2(30);
+      first_method_name_   VARCHAR2(30);
+      second_package_name_ VARCHAR2(30);
+      second_method_name_  VARCHAR2(30);
+      on_new_              VARCHAR2(5);
+      on_modify_           VARCHAR2(5);
+      pos_                 NUMBER;
+
+      FUNCTION Is_New (method_name_ IN VARCHAR2) RETURN BOOLEAN IS
+      BEGIN
+         IF ( NVL(method_name_,'NULL') = 'NEW__' ) THEN
+            RETURN TRUE;
+         END IF;
+         RETURN FALSE;
+      END;
+
+      FUNCTION Is_Modify (method_name_ IN VARCHAR2) RETURN BOOLEAN IS
+      BEGIN
+         IF ( NVL(method_name_,'NULL') = 'MODIFY__' ) THEN
+            RETURN TRUE;
+         END IF;
+         RETURN FALSE;
+      END;
+
+      FUNCTION Is_New_ (method_name_ IN VARCHAR2) RETURN VARCHAR2 IS
+      BEGIN
+         IF Is_New(method_name_) THEN
+            RETURN 'TRUE';
+         END IF;
+         RETURN 'FALSE';
+      END;
+
+      FUNCTION Is_Modify_ (method_name_ IN VARCHAR2) RETURN VARCHAR2 IS
+      BEGIN
+         IF Is_Modify(method_name_) THEN
+            RETURN 'TRUE';
+         END IF;
+         RETURN 'FALSE';
+      END;
+
+      FUNCTION Is_New_Or_Modify (method_name_ IN VARCHAR2) RETURN BOOLEAN IS
+      BEGIN
+         IF    Is_New(method_name_) THEN
+            RETURN TRUE;
+         ELSIF Is_Modify(method_name_) THEN
+            RETURN TRUE;
+         END IF;
+         RETURN FALSE;
+      END;
+   BEGIN
+      OPEN c1 (intface_name_);
+      FETCH c1 INTO first_row_;
+      LOOP
+         FETCH c1 INTO second_row_;
+         EXIT WHEN c1%NOTFOUND;
+         pos_ := INSTR(first_row_.method_name,'.',-1);
+         IF ( pos_ > 0 ) THEN
+            first_package_name_ := SUBSTR(first_row_.method_name,1,pos_-1);
+            first_method_name_  := SUBSTR(first_row_.method_name,pos_+1);
+         ELSE
+            first_package_name_ := NULL;
+            first_method_name_  := NULL;
+         END IF;
+         pos_ := INSTR(second_row_.method_name,'.',-1);
+         IF ( pos_ > 0 ) THEN
+            second_package_name_ := SUBSTR(second_row_.method_name,1,pos_-1);
+            second_method_name_  := SUBSTR(second_row_.method_name,pos_+1);
+         ELSE
+            second_package_name_ := NULL;
+            second_method_name_  := NULL;
+         END IF;
+
+         IF ( NVL(first_row_.column_name,'NULL')  = NVL(second_row_.column_name,'NULL')    AND
+              NVL(first_row_.column_value,'NULL') = NVL(second_row_.column_value,'NULL') ) THEN
+            IF ( NVL(first_package_name_,'FIRST') = NVL(second_package_name_,'SECOND')  AND
+                 NVL(first_row_.view_name,'NULL') = NVL(second_row_.view_name,'NULL') ) THEN
+               IF ( Is_Modify(first_method_name_) AND Is_New(second_method_name_) )  THEN
+                  UPDATE intface_method_list_tab
+                     SET method_name = second_package_name_, on_new = 'TRUE', on_modify = 'TRUE'
+                   WHERE intface_name = second_row_.intface_name
+                     AND execute_seq  = second_row_.execute_seq;
+                  DELETE FROM intface_method_list_tab
+                   WHERE intface_name = first_row_.intface_name
+                     AND execute_seq  = first_row_.execute_seq;
+                  DELETE FROM intface_method_list_attrib_tab
+                   WHERE intface_name = first_row_.intface_name
+                     AND execute_seq  = first_row_.execute_seq;
+                  FETCH c1 INTO second_row_;
+                  EXIT WHEN c1%NOTFOUND;
+               END IF;
+            ELSIF ( NVL(first_package_name_,'FIRST') != NVL(second_package_name_,'SECOND') ) THEN
+               IF ( Is_New_Or_Modify(first_method_name_) ) THEN
+                  on_new_    := Is_New_(first_method_name_);
+                  on_modify_ := Is_Modify_(first_method_name_);
+                  UPDATE intface_method_list_tab
+                  SET method_name = first_package_name_, on_modify = on_modify_, on_new = on_new_
+                   WHERE intface_name = first_row_.intface_name
+                     AND execute_seq  = first_row_.execute_seq;
+               END IF;
+            END IF;
+         ELSE
+            IF ( Is_New_Or_Modify(first_method_name_) ) THEN
+               on_new_    := Is_New_(first_method_name_);
+               on_modify_ := Is_Modify_(first_method_name_);
+               UPDATE intface_method_list_tab
+                  SET method_name = first_package_name_, on_modify = on_modify_, on_new = on_new_
+                WHERE intface_name = first_row_.intface_name
+                  AND execute_seq  = first_row_.execute_seq;
+            END IF;
+         END IF;
+         first_row_ := second_row_;
+      END LOOP;
+      CLOSE c1;
+   EXCEPTION
+      WHEN others THEN
+         IF ( c1%ISOPEN ) THEN
+            CLOSE c1;
+         END IF;
+   END Convert_Old_To_New;
+BEGIN
+   FOR rec_ IN intfaces LOOP
+      dbms_output.put_line('Convert old format Data Migration ' || rec_.intface_name || ' to new format');
+      Intface_Header_API.Build_Attrib_List(rec_.intface_name);
+      Convert_Old_To_New(rec_.intface_name);
+   END LOOP;
+END;
+/
+COMMIT;
